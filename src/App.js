@@ -1,21 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+const App = () => (
+  <Router>
+    <div className='app'>
+      <div className='navbar'>
+        <div className='container'>
+          <ul>
+            <li><a href='#'>Get started</a></li>
+            <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
+            <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>
+            <li><a className='github' href='https://github.com/tootsuite/mastodon' title='Fork on GitHub'><span /></a></li>
+          </ul>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
-    );
-  }
-}
+
+      <div className='hero'>
+        <div className='hero__container'>
+          <img src='/screenshot_full.png' draggable={false} className='hero__full' />
+          <img src='/screenshot_mobile.png' draggable={false} className='hero__mobile' />
+        </div>
+      </div>
+
+      <img src='/logo.svg' className='logo' />
+
+      <div className='intro container'>
+        <h1><strong>Mastodon</strong> is a federated social network</h1>
+      </div>
+    </div>
+  </Router>
+);
 
 export default App;

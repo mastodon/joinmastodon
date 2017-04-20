@@ -1,5 +1,179 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+::-webkit-scrollbar-thumb {
+  background: #313543;
+  border: 0px none #ffffff;
+  border-radius: 50px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #353a49; }
+
+::-webkit-scrollbar-thumb:active {
+  background: #313543; }
+
+::-webkit-scrollbar-track {
+  border: 0px none #ffffff;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1); }
+
+::-webkit-scrollbar-track:hover {
+  background: #282c37; }
+
+::-webkit-scrollbar-track:active {
+  background: #282c37; }
+
+::-webkit-scrollbar-corner {
+  background: transparent; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #282c37;
+  color: #606984;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  padding-bottom: 140px;
+  text-rendering: optimizelegibility;
+  font-feature-settings: "kern";
+  text-size-adjust: none; }
+
+.container {
+  max-width: 950px;
+  margin: 0 auto; }
+
+.navbar {
+  background: #17191f;
+  overflow: hidden; }
+
+.navbar ul {
+  list-style: none;
+  float: right; }
+
+.navbar ul li {
+  display: inline-block;
+  vertical-align: bottom; }
+
+.navbar ul a {
+  display: block;
+  color: #9baec8;
+  text-decoration: none;
+  padding: 12px 16px;
+  padding-bottom: 10px;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  transition: all 250ms linear; }
+
+.navbar ul a:hover {
+  color: #d9e1e8;
+  border-bottom-color: #2b90d9;
+  transition: all 100ms linear; }
+
+.github span {
+  display: block;
+  box-sizing: border-box;
+  background: #17191f url("/github.png") no-repeat 0 0;
+  width: 32px;
+  height: 32px;
+  background-blend-mode: lighten;
+  opacity: 0.5; }
+
+.github:hover span {
+  opacity: 0.8; }
+
+.intro {
+  text-align: center;
+  padding-top: 115px;
+  padding-bottom: 60px; }
+
+.intro h1 {
+  padding-top: 60px;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 60px; }
+
+.intro h1 strong {
+  font-weight: 500;
+  color: #d9e1e8; }
+
+.hero {
+  background: #1f232b;
+  padding: 30px 0;
+  text-align: center;
+  user-select: none; }
+
+.logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 230px;
+  margin-top: -115px; }
+
+.hero__container {
+  margin-top: 30px;
+  margin-bottom: -30px; }
+
+.hero__full, .hero__mobile {
+  overflow: hidden; }
+
+.hero__full {
+  max-width: 850px; }
+
+.hero__mobile {
+  max-width: 200px;
+  margin-left: -100px;
+  margin-bottom: 0px; }

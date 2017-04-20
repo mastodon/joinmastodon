@@ -4,12 +4,17 @@
   "private": true,
   "dependencies": {
     "react": "^15.5.3",
-    "react-dom": "^15.5.3"
+    "react-dom": "^15.5.3",
+    "react-motion": "^0.4.7",
+    "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
+    "node-sass": "^4.5.2",
     "react-scripts": "0.9.5"
   },
   "scripts": {
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
