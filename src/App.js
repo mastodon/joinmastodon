@@ -21,10 +21,7 @@ const App = () => (
 
       <div className='hero'>
         <div className='hero__container'>
-          <div className='hero__floats'>
-            <img src='/cloud1.png' className='float-1' alt='' />
-            <img src='/cloud2.png' className='float-2 delayed' alt='' />
-          </div>
+          <div className='hero__floats' />
 
           <img src='/screenshot_full.png' draggable={false} className='hero__full' alt='' />
           <img src='/screenshot_mobile.png' draggable={false} className='hero__mobile' alt='' />
@@ -36,6 +33,7 @@ const App = () => (
       <div className='intro container'>
         <h1><strong>Mastodon</strong> is a federated social network</h1>
         <p>Free, open-source and decentralized, Mastodon gives back the power to build communities to the people.</p>
+        <a href='#' className='btn'>Get started</a>
       </div>
     </div>
   </Router>

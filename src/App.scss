@@ -78,6 +78,7 @@
 .intro {
   text-align: center;
   padding-top: 115px;
+  max-width: 600px;
 
   h1 {
     padding-top: 60px;
@@ -95,6 +96,11 @@
   p {
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    margin: 0 auto;
   }
 }
 
@@ -135,7 +141,7 @@
 }
 
 .hero__full {
-  max-width: 850px;
+  max-width: 800px;
 }
 
 .hero__mobile {
@@ -157,26 +163,33 @@
     width: auto;
     transition: all 0.1s linear;
     animation-name: floating;
-    animation-duration: 6s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
   }
 
   .delayed img {
-    animation-delay: .4s;
+    animation-delay: 0.2s;
   }
 
   .float-2 {
     position: absolute;
-    left: -170px;
-    top: 150px;
+    left: -110px;
+    top: 50px;
+    opacity: 0.8;
   }
 
   .float-1 {
     position: absolute;
-    right: -170px;
-    top: 220px;
+    right: -120px;
+    top: 120px;
+  }
+
+  .float-3 {
+    position: absolute;
+    left: -60px;
+    top: 130px;
   }
 }
 
@@ -186,10 +199,23 @@
   }
 
   65% {
-    transform: translate(0, 8px);
+    transform: translate(0, 4px);
   }
 
   to {
     transform: translate(0, -0px);
   }
+}
+
+.btn {
+  display: block;
+  width: 200px;
+  font-size: 14px;
+  color: $color1;
+  background: $color2;
+  text-decoration: none;
+  border-radius: 4px;
+  line-height: 36px;
+  padding: 6px 16px;
+  box-shadow: 0 2px 6px rgba($color8, 0.3);
 }
