@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .app {
 
 }
@@ -151,26 +153,40 @@
   z-index: -1;
 
   img {
+    height: 200px;
+    width: auto;
+    transition: all 0.1s linear;
     animation-name: floating;
-    animation-duration: 3.5s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
   }
 
+  .delayed img {
+    animation-delay: .4s;
+  }
+
+  .float-2 {
+    position: absolute;
+    left: -170px;
+    top: 150px;
+  }
+
   .float-1 {
     position: absolute;
-    left: -70px;
+    right: -170px;
+    top: 220px;
   }
 }
 
 @keyframes floating {
   from {
-    transform:translate(0, 0px);
+    transform: translate(0, 0px);
   }
 
   65% {
-    transform:translate(0, 15px);
+    transform: translate(0, 8px);
   }
 
   to {

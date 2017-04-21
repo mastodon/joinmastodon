@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
+  BrowserRouter as Router
 } from 'react-router-dom';
 
 const App = () => (
@@ -24,15 +22,16 @@ const App = () => (
       <div className='hero'>
         <div className='hero__container'>
           <div className='hero__floats'>
-            <img src='/elephant-friend.png' className='float-1' />
+            <img src='/cloud1.png' className='float-1' alt='' />
+            <img src='/cloud2.png' className='float-2 delayed' alt='' />
           </div>
 
-          <img src='/screenshot_full.png' draggable={false} className='hero__full' />
-          <img src='/screenshot_mobile.png' draggable={false} className='hero__mobile' />
+          <img src='/screenshot_full.png' draggable={false} className='hero__full' alt='' />
+          <img src='/screenshot_mobile.png' draggable={false} className='hero__mobile' alt='' />
         </div>
       </div>
 
-      <div className='logo'><img src='/logo.svg' /></div>
+      <div className='logo'><img src='/logo.svg' alt='Mastodon' /></div>
 
       <div className='intro container'>
         <h1><strong>Mastodon</strong> is a federated social network</h1>

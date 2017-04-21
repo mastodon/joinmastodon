@@ -17,4 +17,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # no CSSerino
-src/*.css
+src/**/*.css
