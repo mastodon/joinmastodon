@@ -3,6 +3,11 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom';
 
+import githubLogo from './assets/github-logo.svg';
+import mastodonLogo from './assets/mastodon-logo.svg';
+import screenshotFull from './assets/screenshot_full.png';
+import screenshotMobile from './assets/screenshot_mobile.png';
+
 const App = () => (
   <Router>
     <div className='app'>
@@ -14,7 +19,11 @@ const App = () => (
             <li><a href='#'>Get started</a></li>
             <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
             <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>
-            <li><a className='github' href='https://github.com/tootsuite/mastodon'>Fork on <span /></a></li>
+            <li>
+              <a className='github' href='https://github.com/tootsuite/mastodon'>
+                Fork on Github <img className='github-logo' src={githubLogo} alt='Github Logo'/>
+              </a>
+          </li>
           </ul>
         </div>
       </div>
@@ -23,12 +32,12 @@ const App = () => (
         <div className='hero__container'>
           <div className='hero__floats' />
 
-          <img src='/screenshot_full.png' draggable={false} className='hero__full' alt='' />
-          <img src='/screenshot_mobile.png' draggable={false} className='hero__mobile' alt='' />
+          <img src={screenshotFull} draggable={false} className='hero__full' alt='' />
+          <img src={screenshotMobile} draggable={false} className='hero__mobile' alt='' />
         </div>
       </div>
 
-      <div className='logo'><img src='/logo.svg' alt='Mastodon' /></div>
+      <div className='logo'><img src={mastodonLogo} alt='Mastodon logo' /></div>
 
       <div className='intro container'>
         <h1><strong>Mastodon</strong> is a federated social network</h1>

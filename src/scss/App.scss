@@ -56,21 +56,19 @@
 }
 
 .github {
-  span {
-    display: inline-block;
+  img.github-logo {
     vertical-align: bottom;
-    box-sizing: border-box;
-    background: darken($color1, 8%) url('/github.png') no-repeat 0 0;
     width: 32px;
     height: 32px;
-    background-blend-mode: lighten;
-    opacity: 0.5;
     margin-left: 5px;
+    opacity: 0.5;
+    transition: all 250ms linear;
   }
 
   &:hover {
-    span {
+    img.github-logo {
       opacity: 0.8;
+      transition: all 100ms linear;
     }
   }
 }
