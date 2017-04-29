@@ -13,17 +13,23 @@ const App = () => (
     <div className='app'>
       <div className='navbar'>
         <div className='container'>
-          <div className='brand'>Mastodon</div>
+          <ul className='left'>
+            <li>
+              <a className='active' href='https://github.com/tootsuite/mastodon'>
+                <img className='link-logo before' src={mastodonLogo} alt='Mastodon Logo'/> Mastodon
+              </a>
+            </li>
+          </ul>
 
-          <ul>
-            <li><a href='#'>Get started</a></li>
+          <ul className='right'>
+            <li><a href='https://instances.mastodon.xyz'>Get started</a></li>
             <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
             <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>
             <li>
-              <a className='github' href='https://github.com/tootsuite/mastodon'>
-                Fork on Github <img className='github-logo' src={githubLogo} alt='Github Logo'/>
+              <a href='https://github.com/tootsuite/mastodon'>
+                Fork on Github <img className='link-logo after' src={githubLogo} alt='Github Logo'/>
               </a>
-          </li>
+            </li>
           </ul>
         </div>
       </div>
@@ -37,12 +43,12 @@ const App = () => (
         </div>
       </div>
 
-      <div className='logo'><img src={mastodonLogo} alt='Mastodon logo' /></div>
+      <div className='hero-logo'><img src={mastodonLogo} alt='Mastodon logo' /></div>
 
       <div className='intro container'>
         <h1><strong>Mastodon</strong> is a federated social network</h1>
         <p>Free, open-source and decentralized, Mastodon gives back the power to build communities to the people.</p>
-        <a href='#' className='btn'>Get started</a>
+        <a href='https://instances.mastodon.xyz' className='btn'>Get started</a>
       </div>
     </div>
   </Router>
