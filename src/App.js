@@ -5,7 +5,7 @@ import {
 
 import githubLogo from './assets/github-logo.svg';
 import mastodonLogo from './assets/mastodon-logo.svg';
-import screenshotFull from './assets/screenshot_full.png';
+// import screenshotFull from './assets/screenshot_full.png';
 import screenshotMobile from './assets/screenshot_mobile.png';
 
 const App = () => (
@@ -34,22 +34,39 @@ const App = () => (
         </div>
       </div>
 
-      <div className='hero'>
-        <div className='hero__container'>
-          <div className='hero__floats' />
-
-          <img src={screenshotFull} draggable={false} className='hero__full' alt='' />
-          <img src={screenshotMobile} draggable={false} className='hero__mobile' alt='' />
+      <div className='intro'>
+        <div className='screenshot'/>
+        <div className='content'>
+          <h1>Giving social networking back to <strong>you</strong></h1>
+          <p>Free, open-source and decentralized, <strong>Mastodon</strong> lets people build the communities that matter to them.</p>
+          <a href='https://instances.mastodon.xyz' className='cta-button'>Get started</a>
         </div>
       </div>
 
       <div className='hero-logo'><img src={mastodonLogo} alt='Mastodon logo' /></div>
 
-      <div className='intro container'>
-        <h1><strong>Mastodon</strong> is a federated social network</h1>
-        <p>Free, open-source and decentralized, Mastodon gives back the power to build communities to the people.</p>
-        <a href='https://instances.mastodon.xyz' className='btn'>Get started</a>
+      <div className='feature container'>
+        <div className='text'>
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>Luke, we're ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we'll contact you. I'll meet you at the rendezvous point on Tatooine. Princess, we'll find Han. I promise. Chewie, I'll be waiting for your signal. Take care, you two. May the Force be with you. Ow!</p>
+        </div>
+        <img className='visual' src={screenshotMobile} draggable={false} alt='' />
       </div>
+      <div className='feature container'>
+        <img className='visual' src={screenshotMobile} draggable={false} alt='' />
+        <div className='text'>
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>Luke, we're ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we'll contact you. I'll meet you at the rendezvous point on Tatooine. Princess, we'll find Han. I promise. Chewie, I'll be waiting for your signal. Take care, you two. May the Force be with you. Ow!</p>
+        </div>
+      </div>
+      <div className='feature container'>
+        <div className='text'>
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>Luke, we're ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we'll contact you. I'll meet you at the rendezvous point on Tatooine. Princess, we'll find Han. I promise. Chewie, I'll be waiting for your signal. Take care, you two. May the Force be with you. Ow!</p>
+        </div>
+        <img className='visual' src={screenshotMobile} draggable={false} alt='' />
+      </div>
+      <a href='https://instances.mastodon.xyz' className='cta-button'>Get started</a>
     </div>
   </Router>
 );

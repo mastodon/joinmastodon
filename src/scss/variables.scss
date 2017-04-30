@@ -1,8 +1,10 @@
-$color1: #282c37 !default; // darkest
-$color2: #d9e1e8 !default; // lightest
-$color3: #9baec8 !default; // lighter
-$color4: #2b90d9 !default; // vibrant
-$color5: #ffffff !default; // white
-$color6: #df405a !default; // error red
-$color7: #79bd9a !default; // succ green
-$color8: #000000 !default; // black
+$white:    #fff    !default; // color5
+$lightest: #d9e1e8 !default; // color2
+$lighter:  #9baec8 !default; // color3
+$darkest:  #282c37 !default; // color1
+$black:    #000    !default; // color8
+$darker:   mix($lighter, $darkest);
+
+$vibrant:  #2b90d9 !default; // color4
+$error:    #df405a !default; // color6
+$success:  #79bd9a !default; // color7

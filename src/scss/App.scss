@@ -1,7 +1,8 @@
 @import './variables.scss';
 
 .app {
-
+  font-size: 16px;
+  line-height: 30px;
 }
 
 .container {
@@ -10,9 +11,8 @@
 }
 
 .navbar {
-  background: darken($color1, 8%);
   overflow: hidden;
-
+  background-color: mix($darkest, $black);
   ul {
     list-style: none;
 
@@ -26,7 +26,7 @@
       align-content: center;
       align-items: center;
 
-      color: $color3;
+      color: $lighter;
       text-decoration: none;
       padding: 12px 16px;
       padding-bottom: 10px;
@@ -52,8 +52,8 @@
       }
 
       &.active, &:hover {
-        color: $color2;
-        border-bottom-color: $color4;
+        color: $lightest;
+        border-bottom-color: $vibrant;
         transition: all 100ms linear;
 
         img.link-logo {
@@ -72,147 +72,96 @@
   }
 }
 
-.intro {
-  text-align: center;
-  padding-top: 115px;
-  max-width: 600px;
-
-  h1 {
-    padding-top: 60px;
-    font-size: 26px;
-    font-weight: 400;
-    margin-bottom: 30px;
-    color: $color3;
-
-    strong {
-      font-weight: 500;
-      color: $color2;
-    }
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 30px;
-  }
-
-  .btn {
-    margin: 0 auto 60px;
-  }
-}
-
-.hero {
-  background: darken($color1, 4%);
-  padding: 30px 0;
-  text-align: center;
-  user-select: none;
-}
-
-.hero-logo {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  max-width: 230px;
-  margin-top: -115px;
-  background: $color1;
-  border-radius: 100%;
-  padding: 10px;
-  z-index: 2;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.hero__container {
-  margin-top: 30px;
-  margin-bottom: -30px;
-  position: relative;
-  z-index: 1;
-}
-
-.hero__full, .hero__mobile {
-  overflow: hidden;
-}
-
-.hero__full {
-  max-width: 800px;
-}
-
-.hero__mobile {
-  max-width: 200px;
-  margin-left: -100px;
-  margin-bottom: 0px;
-}
-
-.hero__floats {
-  position: absolute;
-  max-width: 950px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: -1;
-
-  img {
-    height: 200px;
-    width: auto;
-    transition: all 0.1s linear;
-    animation-name: floating;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-  }
-
-  .delayed img {
-    animation-delay: 0.2s;
-  }
-
-  .float-2 {
-    position: absolute;
-    left: -110px;
-    top: 50px;
-    opacity: 0.8;
-  }
-
-  .float-1 {
-    position: absolute;
-    right: -120px;
-    top: 120px;
-  }
-
-  .float-3 {
-    position: absolute;
-    left: -60px;
-    top: 130px;
-  }
-}
-
-@keyframes floating {
-  from {
-    transform: translate(0, 0px);
-  }
-
-  65% {
-    transform: translate(0, 4px);
-  }
-
-  to {
-    transform: translate(0, -0px);
-  }
-}
-
-.btn {
+.cta-button {
   display: block;
+  text-align: center;
+  margin: 0 auto 30px;
   width: 300px;
   font-size: 14px;
-  color: $color1;
-  background: $color2;
+  color: $darkest;
+  background: $lightest;
   text-decoration: none;
   border-radius: 4px;
   line-height: 36px;
   padding: 6px 16px;
-  box-shadow: 0 2px 6px rgba($color8, 0.3);
+  box-shadow: 0 2px 6px rgba($black, 0.3);
+}
+
+.intro {
+  text-align: center;
+  padding: 30px 0 150px;
+  position: relative;
+
+  $bgBase:  mix($darker, $darkest, 20%);
+  background: linear-gradient( to bottom, $bgBase, $bgBase, $darkest);
+  color: $lighter;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-bottom: 60px;
+  }
+
+  strong {
+    font-weight: 500;
+    color: $lightest;
+  }
+
+  .screenshot {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/screenshot_full.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center 140px;
+    z-index: 0;
+    opacity: 0.3;
+    filter: blur(1px);
+  }
+
+  .content {
+    position: relative;
+  }
+}
+
+.hero-logo {
+  position: relative;
+  margin: -100px auto -20px;
+  text-align: center;
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.feature {
+  display: flex;
+  margin: 60px auto;
+  align-items: center;
+  justify-content: space-between;
+
+  .text, .visual {
+    margin: 0 30px;
+    overflow: hidden;
+  }
+
+  .text {
+    width: 60%;
+  }
+
+  .visual {
+    height: 300px;
+  }
+
+  h2 {
+    color: $vibrant;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
 }
