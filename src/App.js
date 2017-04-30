@@ -5,7 +5,7 @@ import {
 
 import githubLogo from './assets/github-logo.svg';
 import mastodonLogo from './assets/mastodon-logo.svg';
-// import screenshotFull from './assets/screenshot_full.png';
+import screenshotFull from './assets/screenshot_full.png';
 import screenshotMobile from './assets/screenshot_mobile.png';
 
 const App = () => (
@@ -35,15 +35,16 @@ const App = () => (
       </div>
 
       <div className='intro'>
-        <div className='screenshot'/>
-        <div className='content'>
-          <h1>Giving social networking back to <strong>you</strong></h1>
-          <p>Free, open-source and decentralized, <strong>Mastodon</strong> lets people build the communities that matter to them.</p>
-          <a href='https://instances.mastodon.xyz' className='cta-button'>Get started</a>
-        </div>
+        <h1>Giving social networking back to <strong>you</strong></h1>
+        <p>Free, open-source and decentralized, <strong>Mastodon</strong> lets people build the communities that matter to them.</p>
+        <a href='https://instances.mastodon.xyz' className='cta-button'>Get started</a>
       </div>
 
-      <div className='hero-logo'><img src={mastodonLogo} alt='Mastodon logo' /></div>
+      <div className='hero'>
+        <img className='desktop' src={screenshotFull} draggable={false} alt='Screenshot of Mastodon on desktop'/>
+        <img className='mobile' src={screenshotMobile} draggable={false} alt='Screenshot of Mastodon on desktop'/>
+        <img className='logo' src={mastodonLogo} draggable={false} alt='Mastodon logo' />
+      </div>
 
       <div className='feature container'>
         <div className='text'>
@@ -66,7 +67,9 @@ const App = () => (
         </div>
         <img className='visual' src={screenshotMobile} draggable={false} alt='' />
       </div>
-      <a href='https://instances.mastodon.xyz' className='cta-button'>Get started</a>
+      <div className='bottom-cta'>
+        <a href='https://instances.mastodon.xyz' className='cta-button'>Get started</a>
+      </div>
     </div>
   </Router>
 );
