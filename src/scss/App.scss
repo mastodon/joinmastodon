@@ -76,24 +76,45 @@ $transition-out: 250ms linear;
   }
 }
 
-.cta-button {
+.cta {
   display: inline-block;
   text-align: center;
   font-size: 18px;
-  font-weight: bold;
-  color: $darkest;
-  background: $lighter;
   text-decoration: none;
-  border-radius: 4px;
   line-height: 36px;
   padding: 6px 16px;
-  box-shadow: 0 -5px 10px 0px rgba(0, 0, 0, 0.5);
-  transition: background-color $transition-out;
+  margin-bottom: 10px;
 
-  &:hover {
-    background-color: $vibrant;
-    transition: background-color $transition-in;
+  &.button {
+    font-weight: bold;
+    color: $darkest;
+    background: $lighter;
+    border-radius: 4px;
+    box-shadow: 0 -5px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: background-color $transition-out;
+
+    &:hover {
+      background-color: $vibrant;
+      transition: background-color $transition-in;
+    }
   }
+
+  &.secondary {
+    color: $lighter;
+    transition: color $transition-out;
+
+    &:hover {
+      color: $lightest;
+      transition: color $transition-in;
+    }
+  }
+}
+
+.cta-secondary {
+  font-size: 18px;
+  line-height: 36px;
+  padding: 6px 16px;
+
 }
 
 .intro {

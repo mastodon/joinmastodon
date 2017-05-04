@@ -22,7 +22,7 @@ const App = () => (
           </ul>
 
           <ul className='right'>
-            <li><a href='https://instances.mastodon.xyz'>Get started</a></li>
+            <li><a href='https://instances.mastodon.xyz'>Find an instance</a></li>
             <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
             <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>
             <li>
@@ -36,8 +36,8 @@ const App = () => (
 
       <div className='intro'>
         <h1>Giving social networking back to <strong>you</strong></h1>
-        <p>Free, open-source and decentralized, <strong>Mastodon</strong> lets people build the communities that matter to them.</p>
-        <a href='https://instances.mastodon.xyz' className='cta-button'>Get started</a>
+        <p>With thousands of interconnected communities to choose from, and the tools to make your own, Mastodon is the world's largest free, open-source, decentralized micro-blogging network.</p>
+        <a href='https://instances.mastodon.xyz' className='cta button'>Get started</a>
       </div>
 
       <div className='hero'>
@@ -48,27 +48,36 @@ const App = () => (
 
       <div className='feature container'>
         <div className='text'>
-          <h2>Lorem ipsum dolor sit amet</h2>
-          <p>Luke, we're ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we'll contact you. I'll meet you at the rendezvous point on Tatooine. Princess, we'll find Han. I promise. Chewie, I'll be waiting for your signal. Take care, you two. May the Force be with you. Ow!</p>
+          <h2>You're a person, not a product</h2>
+          <p>Mastodon communities, or instances, are independently owned, hosted, and moderated. Instances can seamlessly connect to each other, but nobody can own or control them all. That means no big corporation owns your data and you aren't being spied on or sold to advertisers.</p>
         </div>
-        <img className='visual' src={screenshotMobile} draggable={false} alt='' />
+        <div className='visual'/>
       </div>
       <div className='feature container'>
-        <img className='visual' src={screenshotMobile} draggable={false} alt='' />
+        <div className='visual'/>
         <div className='text'>
-          <h2>Lorem ipsum dolor sit amet</h2>
-          <p>Luke, we're ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we'll contact you. I'll meet you at the rendezvous point on Tatooine. Princess, we'll find Han. I promise. Chewie, I'll be waiting for your signal. Take care, you two. May the Force be with you. Ow!</p>
+          <h2>Built for nuanced conversation</h2>
+          <p>Longer 500 character posts give you more space to get deep into a topic, not just surface-level quips, and built in support for content warnings, lets you share sensitive discussions and media with only those who want to see them.</p>
         </div>
       </div>
       <div className='feature container'>
         <div className='text'>
-          <h2>Lorem ipsum dolor sit amet</h2>
-          <p>Luke, we're ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we'll contact you. I'll meet you at the rendezvous point on Tatooine. Princess, we'll find Han. I promise. Chewie, I'll be waiting for your signal. Take care, you two. May the Force be with you. Ow!</p>
+          <h2>Find your perfect place</h2>
+          <p>Pick an instance that suits you, out of diverse options for all sorts of interests, needs, and languages. If you don't like how yours is being run, you can quickly and easily find another without losing any of the friends you've made. You can even make a new instance for the public, for your organisation, your friends, or even just yourself.</p>
         </div>
-        <img className='visual' src={screenshotMobile} draggable={false} alt='' />
+        <div className='visual'/>
+      </div>
+      <div className='feature container'>
+        <div className='visual'/>
+        <div className='text'>
+          <h2>Always within reach</h2>
+          <p>With multiple apps available iOS, Android, and every platform you can think of, Mastodon is easy to use everywhere you go, and just like with instances, anyone can develop an app</p>
+        </div>
       </div>
       <div className='bottom-cta'>
-        <a href='https://instances.mastodon.xyz' className='cta-button'>Get started</a>
+        <a href='https://instances.mastodon.xyz' className='cta button'>Find an instance</a>
+        <br/>
+        <a href='https://www.github.com/tootsuite/mastodon' className='cta secondary'>Start your own</a>
       </div>
     </div>
   </Router>
