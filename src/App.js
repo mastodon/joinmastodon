@@ -3,37 +3,81 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom';
 
+import githubLogo from './assets/github-logo.svg';
+import mastodonLogo from './assets/mastodon-logo.svg';
+import screenshotFull from './assets/screenshot_full.png';
+import screenshotMobile from './assets/screenshot_mobile.png';
+
 const App = () => (
   <Router>
     <div className='app'>
       <div className='navbar'>
         <div className='container'>
-          <div className='brand'>Mastodon</div>
+          <ul className='left'>
+            <li>
+              <a className='active' href='https://github.com/tootsuite/mastodon'>
+                <img className='link-logo before' src={mastodonLogo} alt='Mastodon Logo'/> Mastodon
+              </a>
+            </li>
+          </ul>
 
-          <ul>
-            <li><a href='#'>Get started</a></li>
+          <ul className='right'>
+            <li><a href='https://instances.mastodon.xyz'>Find an instance</a></li>
             <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
             <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>
-            <li><a className='github' href='https://github.com/tootsuite/mastodon'>Fork on <span /></a></li>
+            <li>
+              <a href='https://github.com/tootsuite/mastodon'>
+                Fork on Github <img className='link-logo after' src={githubLogo} alt='Github Logo'/>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
-      <div className='hero'>
-        <div className='hero__container'>
-          <div className='hero__floats' />
-
-          <img src='/screenshot_full.png' draggable={false} className='hero__full' alt='' />
-          <img src='/screenshot_mobile.png' draggable={false} className='hero__mobile' alt='' />
-        </div>
+      <div className='intro'>
+        <h1>Giving social networking back to <strong>you</strong></h1>
+        <p>With thousands of interconnected communities to choose from, and the tools to make your own, Mastodon is the world's largest free, open-source, decentralized micro-blogging network.</p>
+        <a href='https://instances.mastodon.xyz' className='cta button'>Get started</a>
       </div>
 
-      <div className='logo'><img src='/logo.svg' alt='Mastodon' /></div>
+      <div className='hero'>
+        <img className='desktop' src={screenshotFull} draggable={false} alt='Screenshot of Mastodon on desktop'/>
+        <img className='mobile' src={screenshotMobile} draggable={false} alt='Screenshot of Mastodon on desktop'/>
+        <img className='logo' src={mastodonLogo} draggable={false} alt='Mastodon logo' />
+      </div>
 
-      <div className='intro container'>
-        <h1><strong>Mastodon</strong> is a federated social network</h1>
-        <p>Free, open-source and decentralized, Mastodon gives back the power to build communities to the people.</p>
-        <a href='#' className='btn'>Get started</a>
+      <div className='feature container'>
+        <div className='text'>
+          <h2>You're a person, not a product</h2>
+          <p>Mastodon communities, or instances, are independently owned, hosted, and moderated. Instances can seamlessly connect to each other, but nobody can own or control them all. That means no big corporation owns your data and you aren't being spied on or sold to advertisers.</p>
+        </div>
+        <div className='visual'/>
+      </div>
+      <div className='feature container'>
+        <div className='visual'/>
+        <div className='text'>
+          <h2>Built for nuanced conversation</h2>
+          <p>Longer 500 character posts give you more space to get deep into a topic, not just surface-level quips, and built in support for content warnings, lets you share sensitive discussions and media with only those who want to see them.</p>
+        </div>
+      </div>
+      <div className='feature container'>
+        <div className='text'>
+          <h2>Find your perfect place</h2>
+          <p>Pick an instance that suits you, out of diverse options for all sorts of interests, needs, and languages. If you don't like how yours is being run, you can quickly and easily find another without losing any of the friends you've made. You can even make a new instance for the public, for your organisation, your friends, or even just yourself.</p>
+        </div>
+        <div className='visual'/>
+      </div>
+      <div className='feature container'>
+        <div className='visual'/>
+        <div className='text'>
+          <h2>Always within reach</h2>
+          <p>With multiple apps available iOS, Android, and every platform you can think of, Mastodon is easy to use everywhere you go, and just like with instances, anyone can develop an app</p>
+        </div>
+      </div>
+      <div className='bottom-cta'>
+        <a href='https://instances.mastodon.xyz' className='cta button'>Find an instance</a>
+        <br/>
+        <a href='https://www.github.com/tootsuite/mastodon' className='cta secondary'>Start your own</a>
       </div>
     </div>
   </Router>

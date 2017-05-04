@@ -1,0 +1,208 @@
+@import './variables.scss';
+
+$transition-in: 100ms linear;
+$transition-out: 250ms linear;
+
+.app {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: mix($darkest, $black);
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    a {
+      display: flex;
+      align-content: center;
+      align-items: center;
+
+      color: $lighter;
+      text-decoration: none;
+      padding: 12px 16px;
+      padding-bottom: 10px;
+      line-height: 32px;
+      font-weight: 500;
+      font-size: 14px;
+      border-bottom: 2px solid transparent;
+      transition: color $transition-out, border-bottom-color $transition-out;
+
+      img.link-logo {
+        width: 32px;
+        height: 32px;
+        opacity: 0.5;
+        transition: opacity $transition-out;
+
+        &.before {
+          margin-right: 10px;
+        }
+
+        &.after {
+          margin-left: 10px;
+        }
+      }
+
+      &.active, &:hover {
+        color: $lightest;
+        border-bottom-color: $vibrant;
+        transition: color $transition-in, border-bottom-color $transition-in;
+
+        img.link-logo {
+          opacity: 0.8;
+          transition: opacity $transition-in;
+        }
+      }
+    }
+  }
+
+  ul.left {
+    float: left;
+  }
+
+  ul.right {
+    float: right;
+  }
+}
+
+.cta {
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  line-height: 36px;
+  padding: 6px 16px;
+  margin-bottom: 10px;
+
+  &.button {
+    font-weight: bold;
+    color: $darkest;
+    background: $lighter;
+    border-radius: 4px;
+    box-shadow: 0 -5px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: background-color $transition-out;
+
+    &:hover {
+      background-color: $vibrant;
+      transition: background-color $transition-in;
+    }
+  }
+
+  &.secondary {
+    color: $lighter;
+    transition: color $transition-out;
+
+    &:hover {
+      color: $lightest;
+      transition: color $transition-in;
+    }
+  }
+}
+
+.cta-secondary {
+  font-size: 18px;
+  line-height: 36px;
+  padding: 6px 16px;
+
+}
+
+.intro {
+  text-align: center;
+  padding: 30px 0 140px;
+
+  $bgBase:  mix($darker, $darkest, 20%);
+  background: linear-gradient( to bottom, $bgBase, $bgBase, $darkest);
+  color: $lighter;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 30px 0;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  strong {
+    font-weight: 500;
+    color: $lightest;
+  }
+}
+
+.hero {
+  position: relative;
+  margin: -100px auto 0;
+  // outline: solid 1px red;
+  width: 800px;
+  height: 500px;
+
+  img {
+    position: absolute;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 -5px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .desktop {
+    max-width: 800px;
+    top: 0;
+    left: -50px;
+  }
+
+  .mobile {
+    max-width: 200px;
+    top: 100px;
+    right: -50px;
+  }
+
+  .logo {
+    width: 150px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.feature {
+  display: flex;
+  margin: 60px auto;
+  align-items: center;
+  justify-content: space-between;
+
+  .text, .visual {
+    margin: 0 30px;
+    overflow: hidden;
+  }
+
+  .text {
+    width: 60%;
+  }
+
+  .visual {
+    height: 300px;
+  }
+
+  h2 {
+    color: $vibrant;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+}
+
+.bottom-cta {
+  text-align: center;
+  margin-bottom: 50px;
+}
