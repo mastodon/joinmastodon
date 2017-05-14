@@ -43,12 +43,12 @@ const App = () => (
           <p>With thousands of interconnected communities to choose from, and the tools to make your own, Mastodon is the world's largest free, open-source, decentralized micro-blogging network.</p>
           <a href='https://instances.mastodon.xyz' className='cta button'>Get started</a>
         </div>
-      </div>
 
-      <div className='hero'>
-        <img className='desktop' src={screenshotFull} draggable={false} alt='Screenshot of Mastodon on desktop'/>
-        <img className='mobile' src={screenshotMobile} draggable={false} alt='Screenshot of Mastodon on desktop'/>
-        <img className='logo' src={mastodonLogo} draggable={false} alt='Mastodon logo' />
+        <div className='hero'>
+          <img className='desktop' src={screenshotFull} draggable={false} alt='Screenshot of Mastodon on desktop'/>
+          <img className='mobile' src={screenshotMobile} draggable={false} alt='Screenshot of Mastodon on desktop'/>
+          <img className='logo' src={mastodonLogo} draggable={false} alt='Mastodon logo' />
+        </div>
       </div>
 
       <div className='feature container'>

@@ -19,7 +19,7 @@ $phi: 1.6180339887498948482;
 
 .navbar {
   overflow: hidden;
-  background-color: mix($darkest, $black);
+  background-color: $black;
   ul {
     list-style: none;
 
@@ -123,10 +123,9 @@ $phi: 1.6180339887498948482;
 
 .intro {
   text-align: center;
-  padding: 30px 0 140px;
+  padding-top: 30px;
 
-  $bgBase:  mix($darker, $darkest, 20%);
-  background: linear-gradient( to bottom, $bgBase, $bgBase, $darkest);
+  background: $darkest;
   color: $lighter;
 
   .text {
@@ -152,8 +151,8 @@ $phi: 1.6180339887498948482;
 
 .hero {
   position: relative;
-  margin: -100px auto 0;
-  // outline: solid 1px red;
+  margin: 30px auto;
+  padding-bottom: 15px;
   width: 800px;
   height: 500px;
 
@@ -180,8 +179,10 @@ $phi: 1.6180339887498948482;
     width: 150px;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -75px;
     margin: auto;
+    background-color: $black;
+    border-radius: 75px;
   }
 }
 
