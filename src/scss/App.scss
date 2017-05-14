@@ -3,13 +3,17 @@
 $transition-in: 100ms linear;
 $transition-out: 250ms linear;
 
+$content-width: 950px;
+
+$phi: 1.6180339887498948482;
+
 .app {
   font-size: 16px;
   line-height: 30px;
 }
 
 .container {
-  max-width: 950px;
+  max-width: $content-width;
   margin: 0 auto;
 }
 
@@ -125,6 +129,11 @@ $transition-out: 250ms linear;
   background: linear-gradient( to bottom, $bgBase, $bgBase, $darkest);
   color: $lighter;
 
+  .text {
+    width: 800px;
+    margin: 0 auto;
+  }
+
   h1 {
     font-size: 36px;
     font-weight: 400;
@@ -182,16 +191,25 @@ $transition-out: 250ms linear;
   align-items: center;
   justify-content: space-between;
 
-  .text, .visual {
-    margin: 0 30px;
-    overflow: hidden;
+  .left {
+    margin-right: 20px;
+    order: 1;
+  }
+
+  .right {
+    margin-left: 20px;
+    order: 2;
   }
 
   .text {
-    width: 60%;
+    width: percentage(1/$phi);
   }
 
   .visual {
+    width: percentage(1 - (1/$phi));
+  }
+
+  div.visual {
     height: 300px;
   }
 
