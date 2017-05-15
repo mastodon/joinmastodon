@@ -15,26 +15,24 @@ const App = () => (
   <Router>
     <div className='app'>
       <div className='navbar'>
-        <div className='container'>
-          <ul className='left'>
-            <li>
-              <a className='active' href='https://github.com/tootsuite/mastodon'>
-                <img className='link-logo before' src={mastodonLogo} alt='Mastodon Logo'/> Mastodon
-              </a>
-            </li>
-          </ul>
+        <ul className='left'>
+          <li>
+            <a className='active' href='https://github.com/tootsuite/mastodon'>
+              <img className='link-logo before' src={mastodonLogo} alt='Mastodon Logo'/> Mastodon
+            </a>
+          </li>
+        </ul>
 
-          <ul className='right'>
-            <li><a href='https://instances.mastodon.xyz'>Find an instance</a></li>
-            <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
-            <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>
-            <li>
-              <a href='https://github.com/tootsuite/mastodon'>
-                Fork on Github <img className='link-logo after' src={githubLogo} alt='Github Logo'/>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul className='right'>
+          <li><a href='https://instances.mastodon.xyz'>Find an instance</a></li>
+          <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
+          <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>
+          <li>
+            <a href='https://github.com/tootsuite/mastodon'>
+              Fork on Github <img className='link-logo after' src={githubLogo} alt='Github Logo'/>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <div className='intro'>
@@ -73,11 +71,11 @@ const App = () => (
         </div>
       </div>
       <div className='feature container'>
+        <div className='left visual'/>
         <div className='right text'>
           <h2>Always within reach</h2>
           <p>With multiple apps available iOS, Android, and every platform you can think of, Mastodon is easy to use everywhere you go, and just like with instances, anyone can develop an app</p>
         </div>
-        <div className='left visual'/>
       </div>
       <div className='bottom-cta'>
         <a href='https://instances.mastodon.xyz' className='cta button'>Find an instance</a>
