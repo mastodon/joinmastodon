@@ -93,26 +93,23 @@ $phi: 1.6180339887498948482;
   margin-bottom: 10px;
 
   &.button {
-    font-weight: bold;
+    font-weight: 500;
     color: $darkest;
     background: $lighter;
     border-radius: 4px;
-    box-shadow: 0 -5px 10px 0px rgba(0, 0, 0, 0.5);
-    transition: background-color $transition-out;
 
     &:hover {
-      background-color: $vibrant;
-      transition: background-color $transition-in;
+      background-color: $lightest;
     }
   }
 
   &.secondary {
     color: $lighter;
-    transition: color $transition-out;
+    padding-left: 0;
+    padding-right: 0;
 
     &:hover {
       color: $lightest;
-      transition: color $transition-in;
     }
   }
 }
@@ -121,7 +118,6 @@ $phi: 1.6180339887498948482;
   font-size: 18px;
   line-height: 36px;
   padding: 6px 16px;
-
 }
 
 .intro {
@@ -186,8 +182,10 @@ $phi: 1.6180339887498948482;
     right: 0;
     bottom: -75px;
     margin: auto;
-    background-color: $black;
-    border-radius: 75px;
+    background: $darkest;
+    padding: 10px;
+    border-radius: 85px;
+    box-shadow: none;
   }
 }
 
