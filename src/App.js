@@ -24,6 +24,7 @@ const App = () => (
         </ul>
 
         <ul className='right'>
+          <li><a href='https://discourse.joinmastodon.org'>Community support</a></li>
           <li><a href='https://instances.mastodon.xyz'>Find an instance</a></li>
           <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
           <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>

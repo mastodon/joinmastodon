@@ -127,6 +127,7 @@ $phi: 1.6180339887498948482;
 .intro {
   text-align: center;
   padding-top: 30px;
+  margin-bottom: 120px;
 
   background: $darkest;
   color: $lighter;
@@ -192,30 +193,29 @@ $phi: 1.6180339887498948482;
 
 .feature {
   display: flex;
-  margin: 60px auto;
+  margin: 100px auto;
   align-items: center;
   justify-content: space-between;
 
   .left {
     margin-right: 20px;
     order: 1;
+    text-align: left;
   }
 
   .right {
     margin-left: 20px;
     order: 2;
+    text-align: right;
   }
 
   .text {
-    width: percentage(1/$phi);
+    width: 80%;
   }
 
   .visual {
-    width: percentage(1 - (1/$phi));
-  }
-
-  div.visual {
-    height: 300px;
+    width: 20%;
+    visibility: hidden;
   }
 
   h2 {
@@ -232,7 +232,7 @@ $phi: 1.6180339887498948482;
 
 @media only screen and (max-width: $content-width) {
   .intro {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     .text {
       width: 90%;
     }
@@ -263,14 +263,14 @@ $phi: 1.6180339887498948482;
 
   .feature {
     display: block;
-    text-align: center;
 
     .left, .right {
       margin: 30px auto;
+      text-align: center;
     }
 
-    div.visual {
-      height: 0;
+    .visual {
+      display: none;
     }
   }
 }
