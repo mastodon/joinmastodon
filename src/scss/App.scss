@@ -3,19 +3,26 @@
 $transition-in: 100ms linear;
 $transition-out: 250ms linear;
 
+$content-width: 800px;
+$screenshotScale: 0.9;
+
+$phi: 1.6180339887498948482;
+
 .app {
   font-size: 16px;
   line-height: 30px;
 }
 
 .container {
-  max-width: 950px;
+  max-width: $content-width;
   margin: 0 auto;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: mix($darkest, $black);
+  background-color: $black;
+  padding: 0 30px;
+
   ul {
     list-style: none;
 
@@ -119,16 +126,22 @@ $transition-out: 250ms linear;
 
 .intro {
   text-align: center;
-  padding: 30px 0 140px;
+  padding-top: 30px;
+  margin-bottom: 120px;
 
-  $bgBase:  mix($darker, $darkest, 20%);
-  background: linear-gradient( to bottom, $bgBase, $bgBase, $darkest);
+  background: $darkest;
   color: $lighter;
+
+  .text {
+    width: $content-width;
+    margin: 0 auto;
+  }
 
   h1 {
     font-size: 36px;
     font-weight: 400;
     margin: 30px 0;
+    line-height: 1.2em;
   }
 
   p {
@@ -143,10 +156,10 @@ $transition-out: 250ms linear;
 
 .hero {
   position: relative;
-  margin: -100px auto 0;
-  // outline: solid 1px red;
-  width: 800px;
-  height: 500px;
+  margin: 30px auto;
+  padding-bottom: 15px;
+  width: $content-width;
+  height: 450px;
 
   img {
     position: absolute;
@@ -156,43 +169,53 @@ $transition-out: 250ms linear;
   }
 
   .desktop {
-    max-width: 800px;
+    max-width: $content-width * $screenshotScale;
     top: 0;
-    left: -50px;
+    left: 0;
   }
 
   .mobile {
-    max-width: 200px;
-    top: 100px;
-    right: -50px;
+    max-width: ($content-width / 4) * $screenshotScale;
+    top: 90px;
+    right: 0;
   }
 
   .logo {
     width: 150px;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -75px;
     margin: auto;
+    background-color: $black;
+    border-radius: 75px;
   }
 }
 
 .feature {
   display: flex;
-  margin: 60px auto;
+  margin: 100px auto;
   align-items: center;
   justify-content: space-between;
 
-  .text, .visual {
-    margin: 0 30px;
-    overflow: hidden;
+  .left {
+    margin-right: 20px;
+    order: 1;
+    text-align: left;
+  }
+
+  .right {
+    margin-left: 20px;
+    order: 2;
+    text-align: right;
   }
 
   .text {
-    width: 60%;
+    width: 80%;
   }
 
   .visual {
-    height: 300px;
+    width: 20%;
+    visibility: hidden;
   }
 
   h2 {
@@ -205,4 +228,49 @@ $transition-out: 250ms linear;
 .bottom-cta {
   text-align: center;
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: $content-width) {
+  .intro {
+    margin-bottom: 150px;
+    .text {
+      width: 90%;
+    }
+
+    .hero {
+      width: 90%;
+      height: initial;
+      padding-bottom: 100px;
+    }
+
+    .desktop {
+      position: relative;
+      width: percentage($screenshotScale);
+      top: 0;
+      left: 0;
+    }
+
+    .mobile {
+      width: percentage($screenshotScale/4);
+      top: percentage($screenshotScale/8);
+      right: 0;
+    }
+
+    .logo {
+      width: percentage($screenshotScale/4);
+    }
+  }
+
+  .feature {
+    display: block;
+
+    .left, .right {
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .visual {
+      display: none;
+    }
+  }
 }

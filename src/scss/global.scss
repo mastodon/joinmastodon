@@ -1,8 +1,9 @@
 @import './variables.scss';
 
 body {
+  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  background: $darkest;
+  background-color: mix($darkest, $black, 75%);
   color: $darker;
   font-size: 13px;
   line-height: 18px;
