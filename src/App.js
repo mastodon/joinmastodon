@@ -54,7 +54,7 @@ const App = () => (
         <img className='right visual' src={elefriend} alt='Mastodon mascot'/>
         <div className='left text'>
           <h2>You're a person, not a product</h2>
-          <p>Mastodon communities, or instances, are independently owned, hosted, and moderated. Instances can seamlessly connect to each other, but nobody can own or control them all. That means no big corporation owns your data and you aren't being spied on or sold to advertisers.</p>
+          <p>Mastodon communities, or instances, are independently owned, hosted, and moderated. Instances can seamlessly connect to each other, but nobody can own or control them all. That means no big corporation owns your data, and you aren't being spied on or sold to advertisers.</p>
         </div>
       </div>
 
@@ -62,7 +62,7 @@ const App = () => (
         <img className='left visual' src={tootScreenshot} alt='Screenshot of toot interface'/>
         <div className='right text'>
           <h2>Built for real conversation</h2>
-          <p>With 500 characters per post, you get plenty of space to go deep into topics, instead of just making surface-level quips. Built in support for content warnings, lets you share sensitive discussions and media with only those who want to see them.</p>
+          <p>With 500 characters per post, you get plenty of space to go deep into topics, instead of just making surface-level quips. Built-in support for content warnings lets you share sensitive discussions and media with only those who want to see them.</p>
         </div>
       </div>
 
@@ -70,7 +70,7 @@ const App = () => (
         <div className='right visual'/>
         <div className='left text'>
           <h2>Find your perfect place</h2>
-          <p>Pick an instance that suits you, out of diverse options for all sorts of interests, needs, and languages. If you don't like how yours is being run, you can quickly and easily find another without losing any of the friends you've made. You can even make a new instance for the public, for your organisation, your friends, or even just yourself.</p>
+          <p>Pick an instance that suits you, out of diverse options for all sorts of interests, needs, and languages. If you don't like how yours is being run, you can quickly and easily find another without losing any of the friends you've made. You can even make a new instance for the public, your organisation, your friends, or even just yourself.</p>
         </div>
       </div>
 
@@ -78,7 +78,7 @@ const App = () => (
         <div className='left visual'/>
         <div className='right text'>
           <h2>Always within reach</h2>
-          <p>With multiple apps available iOS, Android, and every platform you can think of, Mastodon is easy to use everywhere you go, and just like with instances, anyone can develop an app</p>
+          <p>With multiple apps available for iOS, Android, and every platform you can think of, Mastodon is easy to use everywhere you go, and just like with instances, anyone can develop an app.</p>
         </div>
       </div>
 
