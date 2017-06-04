@@ -8,8 +8,12 @@ import mastodonLogo from './assets/mastodon-logo.svg';
 import screenshotFull from './assets/screenshot_full.png';
 import screenshotMobile from './assets/screenshot_mobile.png';
 
-import elefriend from './assets/fluffy-elephant-friend.png';
+import elefriend from './assets/elephant-friend.png';
 import tootScreenshot from './assets/toot-screenshot.png';
+
+import cloud2 from './assets/cloud2.png';
+import cloud3 from './assets/cloud3.png';
+import cloud4 from './assets/cloud4.png';
 
 const App = () => (
   <Router>
@@ -44,6 +48,12 @@ const App = () => (
         </div>
 
         <div className='hero'>
+          <div className='hero__floats'>
+            <img src={cloud2} draggable={false} className='float-1' alt='Cloud' />
+            <img src={cloud4} draggable={false} className='float-2' alt='Cloud' />
+            <img src={cloud3} draggable={false} className='float-3' alt='Cloud' />
+          </div>
+
           <img className='desktop' src={screenshotFull} draggable={false} alt='Screenshot of Mastodon on desktop'/>
           <img className='mobile' src={screenshotMobile} draggable={false} alt='Screenshot of Mastodon on desktop'/>
           <img className='logo' src={mastodonLogo} draggable={false} alt='Mastodon logo' />
@@ -59,7 +69,7 @@ const App = () => (
       </div>
 
       <div className='feature container'>
-        <img className='left visual' src={tootScreenshot} alt='Screenshot of toot interface'/>
+        <div className='left visual'/>
         <div className='right text'>
           <h2>Built for real conversation</h2>
           <p>With 500 characters per post, you get plenty of space to go deep into topics, instead of just making surface-level quips. Built-in support for content warnings lets you share sensitive discussions and media with only those who want to see them.</p>

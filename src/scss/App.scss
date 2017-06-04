@@ -212,14 +212,53 @@ $phi: 1.6180339887498948482;
   }
 
   .visual {
-    width: 20%;
-    visibility: hidden;
+    max-width: 20%;
   }
 
   h2 {
     color: $vibrant;
     font-size: 26px;
     margin-bottom: 10px;
+  }
+}
+
+.hero__floats {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  img {
+    position: absolute;
+    transition: all 0.1s linear;
+    animation-name: floating;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    box-shadow: none;
+    opacity: 0.2;
+  }
+
+  .float-1 {
+    left: -200px;
+    top: 100px;
+    height: 170px;
+  }
+
+  .float-2 {
+    right: -30px;
+    left: auto;
+    top: -90px;
+    height: 100px;
+    animation-delay: 0.2s;
+  }
+
+  .float-3 {
+    left: auto;
+    right: -240px;
+    top: 200px;
+    height: 140px;
+    animation-delay: 0.1s;
   }
 }
 
@@ -231,6 +270,7 @@ $phi: 1.6180339887498948482;
 @media only screen and (max-width: $content-width) {
   .intro {
     margin-bottom: 150px;
+
     .text {
       width: 90%;
     }
@@ -239,6 +279,10 @@ $phi: 1.6180339887498948482;
       width: 90%;
       height: initial;
       padding-bottom: 100px;
+    }
+
+    .hero__floats {
+      display: none;
     }
 
     .desktop {
@@ -270,5 +314,19 @@ $phi: 1.6180339887498948482;
     .visual {
       display: none;
     }
+  }
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+
+  65% {
+    transform: translate(0, 4px);
+  }
+
+  to {
+    transform: translate(0, -0px);
   }
 }
