@@ -48,7 +48,7 @@ const App = () => (
 
         <div className='text'>
           <h1>Giving social networking back to <strong>you</strong></h1>
-          <p>With thousands of interconnected communities to choose from, and the tools to make your own, Mastodon is the world&rsquo;s largest free, open-source, decentralized micro-blogging network.</p>
+          <p>With thousands of interconnected communities to choose from, and the tools to make your own, Mastodon is the world&rsquo;s largest free, open-source, decentralized microblogging network.</p>
 
           <a href='https://instances.mastodon.xyz' className='cta button'>Get started</a>
           <a href='#' className='cta button alt'>How it works</a>
