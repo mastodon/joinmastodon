@@ -20,8 +20,7 @@ $phi: 1.6180339887498948482;
 
 .navbar {
   overflow: hidden;
-  background-color: $black;
-  padding: 0 30px;
+  margin-bottom: 90px;
 
   ul {
     list-style: none;
@@ -39,12 +38,11 @@ $phi: 1.6180339887498948482;
       color: $lighter;
       text-decoration: none;
       padding: 12px 16px;
-      padding-bottom: 10px;
       line-height: 32px;
+      transition: color $transition-out;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       font-size: 14px;
-      border-bottom: 2px solid transparent;
-      transition: color $transition-out, border-bottom-color $transition-out;
 
       img.link-logo {
         width: 32px;
@@ -63,14 +61,37 @@ $phi: 1.6180339887498948482;
 
       &.active, &:hover {
         color: $lightest;
-        border-bottom-color: $vibrant;
-        transition: color $transition-in, border-bottom-color $transition-in;
+        transition: color $transition-in;
 
         img.link-logo {
           opacity: 0.8;
           transition: opacity $transition-in;
         }
       }
+
+      &.brand {
+        color: $vibrant;
+
+        img {
+          opacity: 1;
+        }
+
+        &:hover {
+          border-bottom-color: transparent;
+
+          img {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    li:first-child a {
+      padding-left: 0;
+    }
+
+    li:last-child a {
+      padding-right: 0;
     }
   }
 
@@ -86,10 +107,10 @@ $phi: 1.6180339887498948482;
 .cta {
   display: inline-block;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   line-height: 36px;
-  padding: 6px 16px;
+  padding: 4px 16px;
   margin-bottom: 10px;
 
   &.button {
@@ -97,9 +118,23 @@ $phi: 1.6180339887498948482;
     color: $darkest;
     background: $lighter;
     border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     &:hover {
-      background-color: $lightest;
+      background-color: lighten($lighter, 8%);
+    }
+
+    &.alt {
+      background: transparent;
+      border: 1px solid $lighter;
+      padding: 3px 15px;
+      color: $lighter;
+      margin-left: 4px;
+
+      &:hover {
+        color: lighten($lighter, 8%);
+        border-color: lighten($lighter, 8%);
+      }
     }
   }
 
@@ -122,10 +157,10 @@ $phi: 1.6180339887498948482;
 
 .intro {
   text-align: center;
-  padding-top: 30px;
-  margin-bottom: 120px;
-
-  background: $darkest;
+  padding-top: 15px;
+  overflow: hidden;
+  background: lighten($darkest, 4%);
+  background: linear-gradient(150deg, lighten($darkest, 10%), lighten($darkest, 4%));
   color: $lighter;
 
   .text {
@@ -134,19 +169,19 @@ $phi: 1.6180339887498948482;
   }
 
   h1 {
-    font-size: 36px;
-    font-weight: 400;
-    margin: 30px 0;
-    line-height: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+
+    strong {
+      color: $vibrant;
+    }
   }
 
   p {
-    margin-bottom: 30px;
-  }
-
-  strong {
-    font-weight: 500;
-    color: $lightest;
+    color: darken($lighter, 18%);
+    font-size: 18px;
+    margin-bottom: 26px;
   }
 }
 
@@ -155,7 +190,7 @@ $phi: 1.6180339887498948482;
   margin: 30px auto;
   padding-bottom: 15px;
   width: $content-width;
-  height: 450px;
+  height: 330px;
 
   img {
     position: absolute;
@@ -189,6 +224,64 @@ $phi: 1.6180339887498948482;
   }
 }
 
+.as-seen-on {
+  background: darken($darkest, 4%);
+  padding: 30px 0;
+  padding-bottom: 50px;
+
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: lighten($darkest, 30%);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .logo-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 0 10px;
+
+      img {
+        display: block;
+        margin: 0;
+        max-width: 200px;
+        opacity: 0.5;
+        transition: opacity $transition-in;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.8;
+          transition: opacity $transition-out;
+        }
+      }
+    }
+  }
+
+  .logo-product-hunt {
+    padding: 0;
+  }
+
+  .logo-the-verge {
+
+  }
+
+  .logo-wired {
+
+  }
+
+  .logo-motherboard {
+
+  }
+}
+
 .feature {
   display: flex;
   margin: 100px auto;
@@ -209,6 +302,8 @@ $phi: 1.6180339887498948482;
 
   .text {
     width: 80%;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .visual {
@@ -216,9 +311,10 @@ $phi: 1.6180339887498948482;
   }
 
   h2 {
-    color: $vibrant;
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    margin-bottom: 20px;
+    color: $lighter;
   }
 }
 
@@ -236,7 +332,6 @@ $phi: 1.6180339887498948482;
     animation-direction: alternate;
     animation-timing-function: linear;
     box-shadow: none;
-    opacity: 0.2;
   }
 
   .float-1 {

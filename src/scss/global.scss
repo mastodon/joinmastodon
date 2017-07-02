@@ -3,7 +3,7 @@
 body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  background-color: mix($darkest, $black, 75%);
+  background-color: $darkest;
   color: $darker;
   font-size: 13px;
   line-height: 18px;
