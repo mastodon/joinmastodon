@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import Features from './Features';
-import Wizard from './Wizard';
+import Wizard from './WizardContainer';
 
 import githubLogo from './assets/github-logo.svg';
 import mastodonLogo from './assets/mastodon-logo.svg';

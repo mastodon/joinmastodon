@@ -1,0 +1,126 @@
+@import './variables.scss';
+
+.wizard-page {
+  max-width: 800px;
+  margin: 100px auto;
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    margin-bottom: 20px;
+    color: $lighter;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.wizard {
+  margin: 50px auto;
+  border: 1px solid darken($darkest, 4%);
+  background: lighten($darkest, 8%);
+  border-radius: 10px;
+  max-width: 800px;
+
+  .wizard-header {
+    display: flex;
+    border-bottom: 1px solid $darkest;
+
+    .wizard-column {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: $lighter;
+      border-right: 1px solid $darkest;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  .wizard-row {
+    display: flex;
+    font-size: 14px;
+
+    &:nth-child(even) {
+      background: lighten($darkest, 2%);
+    }
+
+    &:hover {
+      color: $lightest;
+    }
+  }
+
+  .wizard-column {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:nth-child(1n) {
+      width: 20%;
+    }
+
+    &:nth-child(2n), &:nth-child(3n) {
+      width: 17%;
+    }
+
+    &:nth-child(4n) {
+      width: 100% - 2*17% - 20%;
+    }
+  }
+
+  .wizard-content {
+    height: 500px;
+    overflow-y: hidden;
+    background: lighten($darkest, 4%);
+    color: $lighter;
+
+    .wizard-column {
+      cursor: pointer;
+    }
+  }
+}
+
+.indicator-text {
+  font-weight: 500;
+
+  .indicator {
+    margin-right: 5px;
+  }
+
+  &.green {
+    color: $success;
+  }
+
+  &.yellow {
+    color: #ca8f04;
+  }
+
+  &.red {
+    color: $error;
+  }
+}
+
+.indicator {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+
+  &.green {
+    background: $success;
+  }
+
+  &.yellow {
+    background: #ca8f04;
+  }
+
+  &.red {
+    background: $error;
+  }
+}
