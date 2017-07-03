@@ -3,6 +3,7 @@
 .wizard-page {
   max-width: 800px;
   margin: 100px auto;
+  margin-bottom: 0;
 
   h2 {
     font-family: 'Montserrat', sans-serif;
@@ -45,6 +46,8 @@
   .wizard-row {
     display: flex;
     font-size: 14px;
+    text-decoration: none;
+    color: inherit;
 
     &:nth-child(even) {
       background: lighten($darkest, 2%);
@@ -52,6 +55,11 @@
 
     &:hover {
       color: $lightest;
+    }
+
+    &:focus {
+      background: mix($darkest, $vibrant);
+      color: $white;
     }
   }
 

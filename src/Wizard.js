@@ -13,7 +13,7 @@ export default class Wizard extends React.Component {
     const { instances } = this.props;
 
     return (
-      <div className='wizard-page'>
+      <div className='wizard-page' id='getting-started'>
         <h2>Instance picker</h2>
         <p>Each instance is a separate, independently owned gateway into the fediverse. You can talk to your friends regardless of which one you choose, but they have different moderation policies and interest groups.</p>
 
@@ -31,9 +31,6 @@ export default class Wizard extends React.Component {
             )}
           </Scrollbars>
         </div>
-
-        <p>If you are interested in running your own instance &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to.</p>
-        <p><a href='https://github.com/tootsuite/documentation#running-mastodon' className='cta button alt'>Read the docs</a></p>
       </div>
     );
   }

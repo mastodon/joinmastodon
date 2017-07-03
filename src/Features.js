@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Features = () => (
-  <div>
+  <div id='features'>
     <div className='feature container'>
       <div className='right visual'><i className='ion-android-globe' /></div>
       <div className='left text'>
@@ -33,12 +32,6 @@ const Features = () => (
         <h2>Always within reach</h2>
         <p>With <strong>multiple apps available for iOS, Android, and every platform you can think of</strong>, Mastodon is easy to use everywhere you go. An easy to use and open API ensures a rich ecosystem of 3rd party apps.</p>
       </div>
-    </div>
-
-    <div className='bottom-cta'>
-      <Link to='/wizard' className='cta button'>Find an instance</Link>
-      <br/>
-      or <a href='https://github.com/tootsuite/mastodon' className='cta secondary'>start your own</a>
     </div>
   </div>
 );

@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route,
   Link
 } from 'react-router-dom';
 
@@ -52,8 +51,8 @@ const App = () => (
           <h1>Giving social networking back to <strong>you</strong></h1>
           <p>With thousands of interconnected communities to choose from, and the tools to make your own, Mastodon is the world&rsquo;s largest free, open-source, decentralized microblogging network.</p>
 
-          <Link to='/wizard' className='cta button'>Get started</Link>
-          <a href='#' className='cta button alt'>How it works</a>
+          <a href='#getting-started' className='cta button'>Get started</a>
+          <a href='#how-it-works' className='cta button alt'>How it works</a>
         </div>
 
         <div className='hero'>
@@ -86,8 +85,15 @@ const App = () => (
         </div>
       </div>
 
-      <Route path='/' exact component={Features} />
-      <Route path='/wizard' component={Wizard} />
+      <Features />
+      <Wizard />
+
+      <div className='bottom-cta'>
+        <div className='container'>
+          <p>If you are interested in running your own instance &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to.</p>
+          <a href='https://github.com/tootsuite/documentation#running-mastodon' className='cta button alt'>Read the docs</a>
+        </div>
+      </div>
     </div>
   </Router>
 );

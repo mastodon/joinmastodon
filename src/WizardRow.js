@@ -6,7 +6,7 @@ const WizardRow = ({ instance }) => {
   let stabilityColor, stabilityLabel,
       populationColor, populationLabel;
 
-  if (instance.uptime > 0.98) {
+  if (instance.uptime > 0.95) {
     stabilityLabel = 'Stable';
     stabilityColor = 'green';
   } else if (instance.uptime > 0.50) {
@@ -29,12 +29,12 @@ const WizardRow = ({ instance }) => {
   }
 
   return (
-    <div className='wizard-row'>
+    <a href={`https://${instance.name}/about`} target='_blank' rel='noopener' className='wizard-row'>
       <div className='wizard-column'>{instance.name}</div>
       <div className='wizard-column'><span className={`indicator-text ${stabilityColor}`}><i className={`indicator ${stabilityColor}`} /> {stabilityLabel}</span></div>
       <div className='wizard-column'><span className={`indicator-text ${populationColor}`}><i className={`indicator ${populationColor}`} /> {populationLabel}</span></div>
       <div className='wizard-column'>{theme}</div>
-    </div>
+    </a>
   );
 };
 
