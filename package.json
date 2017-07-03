@@ -7,7 +7,8 @@
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-motion": "^0.4.7",
-    "react-router-dom": "^4.0.0"
+    "react-router-dom": "^4.0.0",
+    "react-snapshot": "^1.1.0"
   },
   "devDependencies": {
     "node-sass": "^4.5.2",
@@ -19,7 +20,7 @@
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
+    "build": "npm run build-css && react-scripts build && react-snapshot",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

@@ -19,8 +19,9 @@ $phi: 1.6180339887498948482;
 }
 
 .navbar {
-  overflow: hidden;
   margin-bottom: 90px;
+  display: flex;
+  justify-content: space-between;
 
   ul {
     list-style: none;
@@ -70,7 +71,7 @@ $phi: 1.6180339887498948482;
       }
 
       &.brand {
-        color: $vibrant;
+        color: $white;
 
         img {
           opacity: 1;
@@ -93,14 +94,6 @@ $phi: 1.6180339887498948482;
     li:last-child a {
       padding-right: 0;
     }
-  }
-
-  ul.left {
-    float: left;
-  }
-
-  ul.right {
-    float: right;
   }
 }
 
@@ -243,6 +236,13 @@ $phi: 1.6180339887498948482;
     justify-content: center;
     flex-direction: row;
 
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+
     a {
       display: inline-block;
       text-decoration: none;
@@ -282,6 +282,30 @@ $phi: 1.6180339887498948482;
   }
 }
 
+.brand {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    display: block;
+    background: url('assets/elephant-friend-top.png');
+    position: absolute;
+    width: 393px;
+    height: 176px;
+    z-index: -1;
+    top: -21px;
+    left: -28px;
+  }
+
+  &:hover {
+    &::before {
+      top: -20px;
+    }
+  }
+}
+
 .feature {
   display: flex;
   margin: 100px auto;
@@ -304,10 +328,20 @@ $phi: 1.6180339887498948482;
     width: 80%;
     font-size: 16px;
     line-height: 24px;
+
+    strong {
+      font-weight: 500;
+      color: $lighter;
+    }
   }
 
   .visual {
     max-width: 20%;
+
+    i {
+      font-size: 128px;
+      color: lighten($darkest, 30%);
+    }
   }
 
   h2 {
@@ -363,9 +397,25 @@ $phi: 1.6180339887498948482;
 }
 
 @media only screen and (max-width: $content-width) {
-  .intro {
-    margin-bottom: 150px;
+  .navbar {
+    padding: 0 20px;
+  }
 
+  .as-seen-on .logo-grid {
+    & > div {
+      flex-direction: column;
+
+      a {
+        padding: 10px;
+      }
+
+      .logo-product-hunt {
+        padding: 0;
+      }
+    }
+  }
+
+  .intro {
     .text {
       width: 90%;
     }
@@ -401,6 +451,10 @@ $phi: 1.6180339887498948482;
   .feature {
     display: block;
 
+    &:first-child {
+      margin-top: 50px;
+    }
+
     .left, .right {
       margin: 30px auto;
       text-align: center;
@@ -408,6 +462,27 @@ $phi: 1.6180339887498948482;
 
     .visual {
       display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: $content-width - 50px) {
+  .brand::before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .navbar {
+    display: block;
+    background: $darkest;
+    margin-top: -15px;
+    margin-bottom: 50px;
+  }
+
+  .intro {
+    .hero {
+      height: 120px;
     }
   }
 }
