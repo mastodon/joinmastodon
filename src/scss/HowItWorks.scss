@@ -26,9 +26,23 @@
 
   .specs {
     width: 40%;
+    margin-right: 30px;
   }
 
   .benefits {
     margin-top: 50px;
+  }
+
+  .network-grid {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 446px;
+
+    img {
+      display: block;
+    }
   }
 }
