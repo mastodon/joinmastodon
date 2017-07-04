@@ -1,0 +1,68 @@
+@import './variables.scss';
+
+.credits {
+  padding: 100px 0;
+  background: darken($darkest, 4%);
+
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: $lighter;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .branding {
+    width: 30%;
+  }
+
+  .funding {
+    margin-right: 15px;
+  }
+
+  .color-scheme {
+    margin-top: 50px;
+    padding: 10px;
+    padding-top: 36px;
+    border-radius: 4px;
+    color: $white;
+    flex: 1 1 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .color-1 {
+    background: #282c37;
+  }
+
+  .color-2 {
+    background: #9baec8;
+    color: $darkest;
+  }
+
+  .color-3 {
+    background: #d9e1e8;
+    color: $darkest;
+  }
+
+  .color-4 {
+    background: #2b90d9;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}

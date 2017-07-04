@@ -1,0 +1,34 @@
+@import './variables.scss';
+
+.how-it-works {
+  margin: 100px auto;
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    margin-bottom: 20px;
+    color: $lighter;
+  }
+
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: $lighter;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .specs {
+    width: 40%;
+  }
+
+  .benefits {
+    margin-top: 50px;
+  }
+}

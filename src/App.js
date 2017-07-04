@@ -6,6 +6,8 @@ import {
 
 import Features from './Features';
 import Wizard from './WizardContainer';
+import HowItWorks from './HowItWorks';
+import Credits from './Credits';
 
 import githubLogo from './assets/github-logo.svg';
 import mastodonLogo from './assets/mastodon-logo.svg';
@@ -90,10 +92,14 @@ const App = () => (
 
       <div className='bottom-cta'>
         <div className='container'>
+          <h3>Install your own</h3>
           <p>If you are interested in running your own instance &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to.</p>
           <a href='https://github.com/tootsuite/documentation#running-mastodon' className='cta button alt'>Read the docs</a>
         </div>
       </div>
+
+      <HowItWorks />
+      <Credits />
     </div>
   </Router>
 );

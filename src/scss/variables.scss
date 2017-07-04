@@ -3,7 +3,7 @@ $lightest: #d9e1e8 !default; // color2
 $lighter:  #9baec8 !default; // color3
 $darkest:  #1F232B !default; // color1
 $black:    #000    !default; // color8
-$darker:   mix($lighter, $darkest);
+$darker:   lighten($darkest, 30%);
 
 $vibrant:  #2b90d9 !default; // color4
 $error:    #df405a !default; // color6

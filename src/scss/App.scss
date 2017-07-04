@@ -393,7 +393,16 @@ $phi: 1.6180339887498948482;
 
 .bottom-cta {
   background: darken($darkest, 4%);
-  padding: 30px 0;
+  padding: 50px 0;
+  padding-top: 70px;
+
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: $lighter;
+  }
 
   p {
     margin-bottom: 30px;
