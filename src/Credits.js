@@ -2,7 +2,7 @@ import React from 'react';
 
 const Credits = () => (
   <div className='credits' id='credits'>
-    <div className='container row'>
+    <div className='container row optional-row'>
       <div className='funding'>
         <h3>Sponsors</h3>
         <p>Mastodon is free, open-source software. There is no advertising, monetizing, or venture capital. The development is crowdfunded.</p>

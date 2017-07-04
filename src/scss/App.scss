@@ -414,6 +414,11 @@ $phi: 1.6180339887498948482;
     padding: 0 20px;
   }
 
+  .bottom-cta {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .as-seen-on .logo-grid {
     & > div {
       flex-direction: column;
@@ -435,7 +440,7 @@ $phi: 1.6180339887498948482;
 
     .hero {
       width: 90%;
-      height: initial;
+      height: 190px;
       padding-bottom: 100px;
     }
 

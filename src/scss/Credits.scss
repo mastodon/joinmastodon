@@ -66,3 +66,22 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media only screen and (max-width: 800px) {
+  .credits {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .optional-row {
+      display: block;
+    }
+
+    .funding {
+      margin-bottom: 50px;
+    }
+
+    .branding {
+      width: 100%;
+    }
+  }
+}

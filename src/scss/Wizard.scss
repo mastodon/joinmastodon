@@ -225,3 +225,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .wizard-page {
+    padding: 0 20px;
+  }
+
+  .wizard {
+    max-height: 60vh;
+  }
+}

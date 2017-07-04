@@ -34,15 +34,38 @@
   }
 
   .network-grid {
-    overflow: hidden;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-height: 446px;
 
     img {
       display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .how-it-works {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .how-it-works {
+    .row {
+      display: block;
+    }
+
+    .specs {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 50px;
+    }
+
+    .network-grid {
+      margin-bottom: 50px;
     }
   }
 }
