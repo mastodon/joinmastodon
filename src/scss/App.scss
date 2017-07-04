@@ -489,6 +489,10 @@ $phi: 1.6180339887498948482;
       height: 120px;
     }
   }
+
+  .as-seen-on .logo-grid {
+    flex-direction: column;
+  }
 }
 
 @keyframes floating {

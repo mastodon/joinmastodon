@@ -1,16 +1,25 @@
 import React from 'react';
-import { fetchInstances } from './actions';
 import WizardRow from './WizardRow';
 import { Scrollbars } from 'react-custom-scrollbars';
 
-export default class Wizard extends React.Component {
+export default class Wizard extends React.PureComponent {
 
   componentDidMount () {
-    this.props.dispatch(fetchInstances());
+    this.props.onMount();
+  }
+
+  handleChange = e => {
+    this.props.onChange(e.target.value);
+  }
+
+  handleClear = e => {
+    e.preventDefault();
+    this.props.onClear();
   }
 
   render () {
-    const { instances } = this.props;
+    const { instances, searchValue } = this.props;
+    const hasValue = searchValue.length > 0;
 
     return (
       <div className='wizard-page' id='getting-started'>
@@ -30,6 +39,23 @@ export default class Wizard extends React.Component {
               <WizardRow key={item._id} instance={item} />
             )}
           </Scrollbars>
+        </div>
+
+        <div className='wizard-controls'>
+          <div className='search'>
+            <input
+              className='search__input'
+              type='text'
+              placeholder='Search'
+              value={searchValue}
+              onChange={this.handleChange}
+            />
+
+            <div role='button' tabIndex='0' className='search__icon' onClick={this.handleClear}>
+              <i className={`ion-android-search ${hasValue ? '' : 'active'}`} />
+              <i className={`ion-android-cancel ${hasValue ? 'active' : ''}`} />
+            </div>
+          </div>
         </div>
       </div>
     );
