@@ -1,6 +1,6 @@
 import React from 'react';
 
-import elephantGrid from './assets/instance_badges.png';
+import elephantGrid from './assets/instance_badges2.png';
 
 const HowItWorks = () => (
   <div className='how-it-works' id='how-it-works'>
