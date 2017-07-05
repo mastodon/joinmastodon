@@ -15,7 +15,7 @@ const HowItWorks = () => (
         </div>
 
         <div className='network-grid'>
-          <img src={elephantGrid} alt='Fediverse' />
+          <img src={elephantGrid} alt='Fediverse' width='100%' />
         </div>
       </div>
 
