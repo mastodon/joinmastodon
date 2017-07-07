@@ -59,19 +59,19 @@ const App = () => (
 
         <div className='hero'>
           <div className='hero__floats'>
-            <img src={cloud2} className='float-1' alt='Cloud' />
-            <img src={cloud4} className='float-2' alt='Cloud' />
-            <img src={cloud3} className='float-3' alt='Cloud' />
+            <img src={cloud2} className='float-1' alt='Cloud 1' />
+            <img src={cloud4} className='float-2' alt='Cloud 2' />
+            <img src={cloud3} className='float-3' alt='Cloud 3' />
           </div>
 
           <img className='desktop' src={screenshotFull} alt='Screenshot of Mastodon on desktop'/>
-          <img className='mobile' src={screenshotMobile} alt='Screenshot of Mastodon on desktop'/>
+          <img className='mobile' src={screenshotMobile} alt='Screenshot of Mastodon on mobile'/>
         </div>
       </div>
 
       <div className='as-seen-on'>
         <div className='container'>
-          <h3>As seen on</h3>
+          <h2>As seen on</h2>
 
           <div className='logo-grid'>
             <div>

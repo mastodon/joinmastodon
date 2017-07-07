@@ -12,15 +12,8 @@ const Credits = () => (
       <div className='branding'>
         <h3>Branding</h3>
         <p>Download logos, icons, and elephants</p>
-        <a href='#' className='cta button alt'>Download press kit</a>
+        <a href='#' className='cta button alt'>Get press kit</a>
       </div>
-    </div>
-
-    <div className='container row'>
-      <div className='color-scheme color-1'>#282c37</div>
-      <div className='color-scheme color-2'>#9baec8</div>
-      <div className='color-scheme color-3'>#d9e1e8</div>
-      <div className='color-scheme color-4'>#2b90d9</div>
     </div>
   </div>
 );

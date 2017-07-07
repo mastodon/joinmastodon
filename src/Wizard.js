@@ -23,9 +23,13 @@ export default class Wizard extends React.PureComponent {
 
     return (
       <div className='wizard-page' id='getting-started'>
-        <h2>Instance picker</h2>
+        <h2>Choose an instance picker</h2>
         <p>Each instance is a separate, independently owned gateway into the fediverse. You can talk to your friends regardless of which one you choose, but they have different moderation policies and interest groups.</p>
-
+        <p>You can choose an instance from the list below, or
+          <a className='inline' target='_blank' href="https://instances.mastodon.xyz">
+            answer a few questions to get a list of suggestions
+          </a>.
+        </p>
         <div className='wizard'>
           <div className='wizard-header'>
             <div className='wizard-column'>Server</div>
@@ -43,7 +47,9 @@ export default class Wizard extends React.PureComponent {
 
         <div className='wizard-controls'>
           <div className='search'>
+            <label for='instance-search' className='accessibly-hidden'>Search for an instance</label>
             <input
+              id='instance-search'
               className='search__input'
               type='text'
               placeholder='Search'

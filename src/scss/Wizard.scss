@@ -9,7 +9,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 21px;
     margin-bottom: 20px;
-    color: $lighter;
+    color: $lightest;
   }
 
   p {
@@ -151,7 +151,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   display: block;
-  width: 100%;
+  min-width: 10em;
   border: none;
   padding: 10px;
   padding-right: 30px;
