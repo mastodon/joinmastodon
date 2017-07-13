@@ -9,7 +9,7 @@ export function fetchInstances() {
       return;
     }
 
-    axios.get('https://instances.mastodon.xyz/instances.json')
+    axios.get('https://instances.social/instances.json')
       .then(response => dispatch(fetchInstancesSuccess(response.data)));
   };
 };
