@@ -4,8 +4,22 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   background-color: $darkest;
-  color: $darker;
+  color: $lighter;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+}
+
+label.accessibly-hidden {
+  float: left;
+  margin-left: -100000px;
+}
+
+a.inline, a.inline:visited {
+  color: $lightest;
+  text-decoration: none;
+}
+
+a.inline:hover {
+  text-decoration: underline;
 }
