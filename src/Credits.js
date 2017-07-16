@@ -15,6 +15,16 @@ const Credits = () => (
         <a href='#' className='cta button alt'>Get press kit</a>
       </div>
     </div>
+
+    <div className='container color-scheme'>
+      <h3>Mastodon color scheme</h3>
+      <div className='row'>
+        <div className='color-swatch color-1'>#282c37</div>
+        <div className='color-swatch color-2'>#9baec8</div>
+        <div className='color-swatch color-3'>#d9e1e8</div>
+        <div className='color-swatch color-4'>#2b90d9</div>
+      </div>
+    </div>
   </div>
 );
 

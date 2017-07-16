@@ -142,7 +142,15 @@
 .wizard-controls {
   margin-bottom: 50px;
   display: flex;
-  justify-content: flex-end;
+
+  .cta.button {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .spacer {
+    flex-grow: 1
+  }
 }
 
 .search__input {
