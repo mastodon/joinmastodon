@@ -10,7 +10,7 @@ import HowItWorks from './HowItWorks';
 import Credits from './Credits';
 
 import githubLogo from './assets/github-logo.svg';
-import mastodonLogo from './assets/mastodon-logo.svg';
+import mastodonLogo from './assets/logo_full.svg';
 
 import wiredLogo from './assets/wired-logo.svg';
 import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
@@ -32,7 +32,7 @@ const App = () => (
           <ul className='left'>
             <li>
               <Link className='brand' to='/'>
-                <img className='link-logo before' src={mastodonLogo} alt='Mastodon Logo'/> Mastodon
+                <img className='link-logo' src={mastodonLogo} alt='Mastodon'/>
               </Link>
             </li>
           </ul>

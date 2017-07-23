@@ -12,7 +12,7 @@ const Credits = () => (
       <div className='branding'>
         <h3>Branding</h3>
         <p>Download logos, icons, and elephants</p>
-        <a href='#' className='cta button alt'>Get press kit</a>
+        <a href='/press-kit.zip' className='cta button alt'>Get press kit</a>
       </div>
     </div>
 

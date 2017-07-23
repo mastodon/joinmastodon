@@ -74,7 +74,12 @@ $phi: 1.6180339887498948482;
         color: $white;
 
         img {
+          width: auto;
+          height: 32px;
           opacity: 1;
+          position: relative;
+          top: 4px;
+          left: -10px;
         }
 
         &:hover {
