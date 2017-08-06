@@ -42,7 +42,7 @@ export default class Wizard extends React.PureComponent {
 
         <div className='wizard-controls'>
           <div classname='external-wizard'>
-            <a className='cta button' target='_blank' href="https://instances.mastodon.xyz">
+            <a className='cta button' target='_blank' href="https://instances.social">
               Help me choose
             </a>
           </div>

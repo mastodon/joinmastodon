@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WizardRow = ({ instance }) => {
-  const theme = (instance.info && instance.info.theme) || 'General';
+  const theme = (instance.info && instance.info.topic) || 'General';
 
   let stabilityColor, stabilityLabel,
       populationColor, populationLabel;
