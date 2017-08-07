@@ -17,10 +17,10 @@ const WizardRow = ({ instance }) => {
     stabilityColor = 'red';
   }
 
-  if (!instance.openRegistrations) {
+  if (!instance.open_registrations) {
     populationLabel = 'Full';
     populationColor = 'red';
-  } else if (instance.users > 20000) {
+  } else if (instance.users > 10000) {
     populationLabel = 'Medium';
     populationColor = 'yellow';
   } else {
