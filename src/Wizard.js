@@ -23,7 +23,7 @@ export default class Wizard extends React.PureComponent {
 
     return (
       <div className='wizard-page' id='getting-started'>
-        <h2>Choose an instance picker</h2>
+        <h2>Choose an instance</h2>
         <p>Each instance is a separate, independently owned gateway into the fediverse. You can talk to your friends regardless of which one you choose, but they have different moderation policies and interest groups.</p>
         <div className='wizard'>
           <div className='wizard-header'>
