@@ -9,19 +9,40 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 21px;
     margin-bottom: 20px;
-    color: $lightest;
+    color: $lighter;
+
+    strong {
+      color: $lightest;
+    }
   }
 
   p {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
+
+    &.hint {
+      color: $lighter;
+      margin: 30px 0;
+      display: flex;
+
+      strong {
+        display: block;
+        flex: 0 0 auto;
+        font-weight: 700;
+        color: $lightest;
+        margin-right: 10px;
+      }
+
+      span {
+        display: block;
+      }
+    }
   }
 }
 
 .wizard {
-  margin: 50px auto;
-  margin-bottom: 15px;
+  margin: 15px auto;
   border: 1px solid darken($darkest, 4%);
   background: lighten($darkest, 8%);
   border-radius: 10px;
@@ -140,7 +161,7 @@
 }
 
 .wizard-controls {
-  margin-bottom: 50px;
+  margin-top: 20px;
   display: flex;
 
   .cta.button {

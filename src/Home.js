@@ -24,8 +24,8 @@ const Home = () => (
       <Navigation />
 
       <div className='text'>
-        <h1>Giving social networking back to <strong>you</strong></h1>
-        <p>With thousands of interconnected communities to choose from, and the tools to make your own, Mastodon is the world&rsquo;s largest free, open-source, decentralized microblogging network.</p>
+        <h1>Social networking, <strong>back in your hands</strong></h1>
+        <p>The world’s largest free, open-source, decentralized microblogging network</p>
 
         <a href='#getting-started' className='cta button'>Get started</a>
         <a href='#how-it-works' className='cta button alt'>How it works</a>

@@ -349,11 +349,36 @@ $phi: 1.6180339887498948482;
     }
   }
 
-  h2 {
+  h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 21px;
     margin-bottom: 20px;
     color: $lightest;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .additional-features {
+    width: 100%;
+
+    ul {
+      columns: 3;
+      column-gap: 15px;
+    }
+
+    li {
+      display: flex;
+
+      i {
+        display: block;
+        flex: 0 0 auto;
+        margin-right: 10px;
+        color: lighten($darkest, 30%);
+      }
+    }
   }
 }
 
@@ -485,6 +510,40 @@ $phi: 1.6180339887498948482;
 
     .visual {
       display: none;
+    }
+
+    .additional-features {
+      text-align: center;
+      box-sizing: border-box;
+      padding: 0 20px;
+
+      ul {
+        columns: 3;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .feature {
+    .additional-features {
+      ul {
+        columns: 2;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .feature {
+    .additional-features {
+      ul {
+        columns: 1;
+      }
+
+      li {
+        justify-content: center;
+      }
     }
   }
 }
