@@ -1,0 +1,30 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import githubLogo from './assets/github-logo.svg';
+import mastodonLogo from './assets/logo_full.svg';
+
+const Navigation = () => (
+  <div className='navbar container'>
+    <ul className='left'>
+      <li>
+        <Link className='brand' to='/'>
+          <img className='link-logo' src={mastodonLogo} alt='Mastodon'/>
+        </Link>
+      </li>
+    </ul>
+
+    <ul className='right'>
+      <li><a href='https://discourse.joinmastodon.org'>Support</a></li>
+      <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
+      <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>
+      <li>
+        <a href='https://github.com/tootsuite/mastodon'>
+          Source code <img className='link-logo after' src={githubLogo} alt='Github Logo'/>
+        </a>
+      </li>
+    </ul>
+  </div>
+);
+
+export default Navigation;

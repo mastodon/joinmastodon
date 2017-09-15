@@ -1,0 +1,209 @@
+@import './variables.scss';
+
+.sponsorship {
+  .text {
+    text-align: center;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .cta-text {
+    padding-top: 40px;
+  }
+
+  .final-cta {
+    background: darken($darkest, 4%);
+    padding: 40px 0;
+    padding-bottom: 100px;
+  }
+
+  h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    margin-bottom: 20px;
+    color: $lightest;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+
+    strong {
+      font-weight: 700;
+    }
+
+    &.lead {
+      margin-bottom: 40px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .tier {
+    margin: 40px 0;
+  }
+
+  .row .tier {
+    margin: 0;
+  }
+
+  .sponsor-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+    background: $vibrant;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: lighten($vibrant, 8%);
+    }
+
+    img,
+    strong,
+    span {
+      display: block;
+    }
+
+    img {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .sponsors-list--logos {
+    margin: 40px 0;
+    margin-bottom: -40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      margin: 0 40px;
+      margin-bottom: 40px;
+
+      img {
+        filter: grayscale(100%);
+        height: 40px;
+        width: auto;
+        transition: filter 200ms ease;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        img {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+
+  .sponsors-list--names {
+    margin-bottom: 15px;
+    border: 1px solid darken($darkest, 4%);
+    background: lighten($darkest, 8%);
+    border-radius: 4px;
+    font-size: 14px;
+    overflow: hidden;
+
+    ul {
+      background: lighten($darkest, 4%);
+      columns: 3;
+      column-gap: 0;
+
+      &.highlighted {
+        background: transparent;
+        color: $lightest;
+        font-weight: 700;
+      }
+    }
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid lighten($darkest, 2%);
+    }
+  }
+
+  hr {
+    background: transparent;
+    border: 0;
+    border-top: 1px solid lighten($darkest, 4%);
+    margin: 40px 0;
+  }
+
+  .sponsors-list--badges {
+    margin: 40px 0;
+
+    ul {
+      columns: 3;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    li > a {
+      display: flex;
+      background: lighten($darkest, 4%);
+      border-radius: 4px;
+      color: $lightest;
+      text-decoration: none;
+      line-height: 17px;
+      font-size: 14px;
+      padding: 6px 4px;
+
+      &:focus {
+        background: mix($darkest, $vibrant);
+        color: $white;
+      }
+
+      &:hover {
+        color: $white;
+        background: lighten($darkest, 8%);
+      }
+
+      img {
+        flex: 0 0 auto;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+
+      & > span {
+        flex: 1 1 auto;
+        padding-left: 10px;
+
+        strong {
+          display: block;
+          font-weight: 700;
+        }
+
+        span {
+          color: $lighter;
+        }
+      }
+    }
+  }
+}

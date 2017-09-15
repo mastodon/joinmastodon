@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Credits = () => (
   <div className='credits' id='credits'>
     <div className='container row optional-row'>
       <div className='funding'>
         <h3>Sponsors</h3>
-        <p>Mastodon is free, open-source software. There is no advertising, monetizing, or venture capital. The development is crowdfunded.</p>
-        <a href='https://patreon.com/mastodon' className='cta button'>Support on Patreon</a> <a href='https://github.com/tootsuite/documentation/blob/master/Contributing-to-Mastodon/Sponsors.md' className='cta button alt'>View sponsors</a>
+        <p>Mastodon is free, open-source software. There is no advertising, monetizing, or venture capital. Your donations directly support full-time development of the project.</p>
+        <a href='https://patreon.com/mastodon' className='cta button'>Support on Patreon</a> <Link to='/sponsors' className='cta button alt'>View sponsors</Link>
       </div>
 
       <div className='branding'>
