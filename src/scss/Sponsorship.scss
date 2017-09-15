@@ -1,6 +1,10 @@
 @import './variables.scss';
 
 .sponsorship {
+  .intro {
+    padding-bottom: 50px;
+  }
+
   .text {
     text-align: center;
 
@@ -15,8 +19,7 @@
 
   .final-cta {
     background: darken($darkest, 4%);
-    padding: 40px 0;
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
 
   h2, h3 {
@@ -36,7 +39,7 @@
     }
 
     &.lead {
-      margin-bottom: 40px;
+      margin-bottom: 0;
     }
   }
 
@@ -203,6 +206,35 @@
         span {
           color: $lighter;
         }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .tier, .final-cta {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .sponsors-list--names {
+      max-height: 60vh;
+    }
+  }
+
+  @media only screen and (max-width: 740px) {
+    .sponsors-list--badges,
+    .sponsors-list--names {
+      ul {
+        columns: 2;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .sponsors-list--badges,
+    .sponsors-list--names {
+      ul {
+        columns: 1;
       }
     }
   }

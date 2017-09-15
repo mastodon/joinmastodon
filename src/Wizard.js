@@ -17,6 +17,15 @@ export default class Wizard extends React.PureComponent {
     this.props.onClear();
   }
 
+  renderThumb ({ style, ...props }) {
+    const thumbStyle = {
+      backgroundColor: 'rgba(217, 225, 232, 0.7)',
+      borderRadius: '4px',
+    };
+
+    return <div style={{ ...style, ...thumbStyle }} />;
+  }
+
   render () {
     const { instances, searchValue } = this.props;
     const hasValue = searchValue.length > 0;
@@ -33,7 +42,7 @@ export default class Wizard extends React.PureComponent {
             <div className='wizard-column'>Theme</div>
           </div>
 
-          <Scrollbars className='wizard-content' style={{ height: 500 }}>
+          <Scrollbars className='wizard-content' style={{ height: 500 }} renderThumbVertical={this.renderThumb}>
             {instances.map(item =>
               <WizardRow key={item._id} instance={item} />
             )}

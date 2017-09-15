@@ -6,13 +6,16 @@ import {
 
 import Home from './Home';
 import Sponsorship from './Sponsorship';
+import ScrollToTop from './ScrollToTop';
 
 const App = () => (
   <Router>
-    <div className='app'>
-      <Route exact path='/' component={Home} />
-      <Route path='/sponsors' component={Sponsorship} />
-    </div>
+    <ScrollToTop>
+      <div className='app'>
+        <Route exact path='/' component={Home} />
+        <Route path='/sponsors' component={Sponsorship} />
+      </div>
+    </ScrollToTop>
   </Router>
 );
 

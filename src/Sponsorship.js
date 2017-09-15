@@ -9,23 +9,32 @@ import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
 import avatarSdf from './assets/sponsors/sdf.jpg';
 import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
 
+const renderThumb = ({ style, ...props }) => {
+  const thumbStyle = {
+    backgroundColor: 'rgba(217, 225, 232, 0.7)',
+    borderRadius: '4px',
+  };
+
+  return <div style={{ ...style, ...thumbStyle }} />;
+};
+
 const Sponsorship = () => (
   <div className='sponsorship' id='sponsorship'>
     <div className='intro'>
       <Navigation />
 
       <div className='text'>
-        <h2>Support the project</h2>
+        <h2>Sponsors of Mastodon</h2>
         <p className='lead'>Mastodon is <strong>free, open-source software</strong>. There is no advertising, monetizing, or venture capital. <strong>Your donations directly support full-time development of the project</strong>. Thank you to the following people and companies:</p>
       </div>
 
-      <div className='container'>
+      {/*<div className='container'>
         <div className='tier'>
           <div className='sponsors-list--logos'>
-            {/* None */}
+            None
           </div>
         </div>
-      </div>
+      </div>*/}
     </div>
 
     <div className='container'>
@@ -62,7 +71,7 @@ const Sponsorship = () => (
         <p><strong>Sponsors</strong> are those that pledged $10 to $39 to Mastodon.</p>
 
         <div className='sponsors-list--names'>
-          <Scrollbars style={{ height: 500 }}>
+          <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
               <li>Kit Redgrave</li>
               <li>Ke_Ga</li>
@@ -694,6 +703,7 @@ const Sponsorship = () => (
 
     <div className='final-cta'>
       <div className='container'>
+        <h3>Support the project</h3>
         <p>Every little bit helps, and we appreciate all contributions.</p>
         <a href='https://patreon.com/mastodon' className='cta button alt'>Become a sponsor</a>
       </div>

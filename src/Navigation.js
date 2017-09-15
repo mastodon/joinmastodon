@@ -17,7 +17,7 @@ const Navigation = () => (
     <ul className='right'>
       <li><a href='https://discourse.joinmastodon.org'>Support</a></li>
       <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
-      <li><a href='https://www.stickermule.com/marketplace/18010-mastodon-fluffy-elephant-friend'>Merch</a></li>
+      <li><Link to='/sponsors'>Sponsors</Link></li>
       <li>
         <a href='https://github.com/tootsuite/mastodon'>
           Source code <img className='link-logo after' src={githubLogo} alt='Github Logo'/>
