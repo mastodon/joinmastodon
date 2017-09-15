@@ -3,6 +3,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 import Navigation from './Navigation';
 
+import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
 import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
@@ -50,16 +51,16 @@ const Sponsorship = () => (
           <ul>
             <li><a href='https://mastodon.art'><img src={avatarGlocal} alt='' /> <span><strong>glocal</strong><span>https://mastodon.art</span></span></a></li>
             <li><a href='https://unburntwitch.com'><img src={avatarZoeQuinn} alt='' /> <span><strong>Zoë Quinn</strong><span>https://unburntwitch.com</span></span></a></li>
-            <li><a href='#'><img src='http://via.placeholder.com/32x32' alt='' /> <span><strong>Julie Moronuki</strong><span>http://example.com</span></span></a></li>
-            <li><a href='#'><img src='http://via.placeholder.com/32x32' alt='' /> <span><strong>Ted</strong><span>http://example.com</span></span></a></li>
+            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Julie Moronuki</strong><span>-</span></span></a></li>
+            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Ted</strong><span>-</span></span></a></li>
             <li><a href='https://cloudfleet.io'><img src={avatarCloudfleet} alt='' /> <span><strong>CloudFleet</strong><span>https://cloudfleet.io</span></span></a></li>
-            <li><a href='#'><img src='http://via.placeholder.com/32x32' alt='' /> <span><strong>David Hutchinson</strong><span>http://example.com</span></span></a></li>
-            <li><a href='#'><img src='http://via.placeholder.com/32x32' alt='' /> <span><strong>Martin Seeger</strong><span>http://example.com</span></span></a></li>
+            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>David Hutchinson</strong><span>-</span></span></a></li>
+            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Martin Seeger</strong><span>-</span></span></a></li>
             <li><a href='https://sudoJames.com'><img src={avatarJamesMWright} alt='' /> <span><strong>James Wright</strong><span>https://sudoJames.com</span></span></a></li>
-            <li><a href='#'><img src='http://via.placeholder.com/32x32' alt='' /> <span><strong>Jeff Elder</strong><span>http://example.com</span></span></a></li>
+            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Jeff Elder</strong><span>-</span></span></a></li>
             <li><a href='https://mastodon.sdf.org'><img src={avatarSdf} alt='' /> <span><strong>SDF.ORG</strong><span>https://mastodon.sdf.org</span></span></a></li>
-            <li><a href='#'><img src='http://via.placeholder.com/32x32' alt='' /> <span><strong>Andrea Valenti</strong><span>http://example.com</span></span></a></li>
-            <li><a href='#'><img src='http://via.placeholder.com/32x32' alt='' /> <span><strong>Styromaniac</strong><span>http://example.com</span></span></a></li>
+            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Andrea Valenti</strong><span>-</span></span></a></li>
+            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Styromaniac</strong><span>-</span></span></a></li>
           </ul>
         </div>
       </div>
