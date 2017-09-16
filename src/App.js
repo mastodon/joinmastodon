@@ -16,7 +16,7 @@ addLocaleData([...en, ...es]);
 
 const messages = require.context('./locales/', false, /\.json$/);
 
-const messagesForLocale = locale => messages[`./${locale}.json`];
+const messagesForLocale = locale => messages(`./${locale}.json`);
 
 const App = ({ usersLocale }) => (
   <IntlProvider locale={usersLocale} messages={messagesForLocale(usersLocale)}>
