@@ -10,12 +10,14 @@ import ScrollToTop from './ScrollToTop';
 
 import { addLocaleData, IntlProvider } from 'react-intl';
 import en from 'react-intl/locale-data/en';
+import fr from 'react-intl/locale-data/fr';
+import pl from 'react-intl/locale-data/pl';
 
-addLocaleData([...en]);
+addLocaleData([...en, ...pl, ...fr]);
 
 const messages = require.context('./locales/', false, /\.json$/);
 
-const messagesForLocale = locale => messages[`./${locale}.json`];
+const messagesForLocale = locale => messages(`./${locale}.json`);
 
 const App = ({ usersLocale }) => (
   <IntlProvider locale={usersLocale} messages={messagesForLocale(usersLocale)}>
