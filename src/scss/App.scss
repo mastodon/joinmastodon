@@ -48,7 +48,8 @@ $phi: 1.6180339887498948482;
       img.link-logo {
         width: 32px;
         height: 32px;
-        opacity: 0.5;
+        opacity: 0.8;
+        mix-blend-mode: overlay;
         transition: opacity $transition-out;
 
         &.before {
@@ -65,7 +66,7 @@ $phi: 1.6180339887498948482;
         transition: color $transition-in;
 
         img.link-logo {
-          opacity: 0.8;
+          opacity: 1;
           transition: opacity $transition-in;
         }
       }
@@ -78,6 +79,7 @@ $phi: 1.6180339887498948482;
           height: 32px;
           opacity: 1;
           position: relative;
+          mix-blend-mode: normal;
           top: 4px;
           left: -10px;
         }
@@ -596,7 +598,7 @@ $phi: 1.6180339887498948482;
   .intro {
     padding-bottom: 60px;
   }
-  
+
   .navbar ul li.optional-link-2 {
     display: none;
   }
