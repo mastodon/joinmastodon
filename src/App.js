@@ -10,8 +10,9 @@ import ScrollToTop from './ScrollToTop';
 
 import { addLocaleData, IntlProvider } from 'react-intl';
 import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
 
-addLocaleData([...en]);
+addLocaleData([...en, ...es]);
 
 const messages = require.context('./locales/', false, /\.json$/);
 
