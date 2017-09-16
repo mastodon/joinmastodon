@@ -31,9 +31,9 @@ const WizardRow = ({ instance }) => {
   return (
     <a href={`https://${instance.name}/about`} target='_blank' rel='noopener' className='wizard-row'>
       <div className='wizard-column'>{instance.name}</div>
-      <div className='wizard-column'><span className={`indicator-text ${stabilityColor}`}><i className={`indicator ${stabilityColor}`} /> {stabilityLabel}</span></div>
+      <div className='wizard-column optional-column'><span className={`indicator-text ${stabilityColor}`}><i className={`indicator ${stabilityColor}`} /> {stabilityLabel}</span></div>
       <div className='wizard-column'><span className={`indicator-text ${populationColor}`}><i className={`indicator ${populationColor}`} /> {populationLabel}</span></div>
-      <div className='wizard-column'>{theme}</div>
+      <div className='wizard-column optional-column'>{theme}</div>
     </a>
   );
 };

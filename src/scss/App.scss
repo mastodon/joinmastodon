@@ -117,6 +117,7 @@ $phi: 1.6180339887498948482;
     background: $lighter;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 4px;
 
     &:hover {
       background-color: lighten($lighter, 8%);
@@ -127,7 +128,6 @@ $phi: 1.6180339887498948482;
       border: 1px solid $lighter;
       padding: 3px 15px;
       color: $lighter;
-      margin-left: 4px;
 
       &:hover {
         color: lighten($lighter, 8%);
@@ -498,14 +498,18 @@ $phi: 1.6180339887498948482;
 
   .feature {
     display: block;
+    margin: 60px 0;
 
     &:first-child {
-      margin-top: 50px;
+      margin-top: 60px;
     }
 
     .left, .right {
-      margin: 30px auto;
-      text-align: center;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0 20px;
+      margin: 15px auto;
+      text-align: left;
     }
 
     .visual {
@@ -513,7 +517,6 @@ $phi: 1.6180339887498948482;
     }
 
     .additional-features {
-      text-align: center;
       box-sizing: border-box;
       padding: 0 20px;
 
@@ -540,10 +543,6 @@ $phi: 1.6180339887498948482;
       ul {
         columns: 1;
       }
-
-      li {
-        justify-content: center;
-      }
     }
   }
 }
@@ -562,6 +561,10 @@ $phi: 1.6180339887498948482;
     margin-bottom: 50px;
   }
 
+  .link-logo.after {
+    display: none;
+  }
+
   .intro {
     .hero {
       height: 120px;
@@ -569,7 +572,33 @@ $phi: 1.6180339887498948482;
   }
 
   .as-seen-on .logo-grid {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .navbar ul li.optional-link {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .as-seen-on .logo-grid {
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .hero {
+    display: none;
+  }
+
+  .intro {
+    padding-bottom: 60px;
+  }
+  
+  .navbar ul li.optional-link-2 {
+    display: none;
   }
 }
 

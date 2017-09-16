@@ -42,12 +42,14 @@
 
     img {
       display: block;
+      max-width: 100%;
     }
   }
 }
 
 @media only screen and (max-width: 800px) {
   .how-it-works {
+    margin: 60px 0;
     padding: 0 20px;
   }
 }
@@ -66,6 +68,11 @@
 
     .network-grid {
       margin-bottom: 50px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

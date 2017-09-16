@@ -257,10 +257,49 @@
 
 @media only screen and (max-width: 800px) {
   .wizard-page {
+    margin: 60px 0;
     padding: 0 20px;
+  }
+
+  .wizard-controls {
+    margin-top: 60px;
   }
 
   .wizard {
     max-height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .external-wizard {
+    width: 230px;
+    margin-right: 5px;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .search {
+    flex: 0 1 auto;
+  }
+
+  .search__input {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .search {
+    display: none;
+  }
+
+  .optional-column {
+    display: none;
+  }
+
+  .wizard-column {
+    width: 50% !important;
   }
 }

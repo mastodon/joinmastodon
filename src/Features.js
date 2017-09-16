@@ -30,7 +30,7 @@ const Features = () => (
       <div className='left visual'><i className='ion-bonfire' /></div>
       <div className='right text'>
         <h2>Feel safe in your community</h2>
-        <p>Mastodon comes with effective anti-abuse tools to help protect yourself from online abuse. With small, interconnected communities, it means that there are more moderators you can approach to help with a situation. This also means you can choose who sees your posts: friends, your community, or the entire fediverse.</p>
+        <p>Mastodon comes with <strong>effective anti-abuse tools</strong> to help protect yourself from online abuse. With small, interconnected communities, it means that there are <strong>more moderators</strong> you can approach to help with a situation. This also means you can choose who sees your posts: friends, your community, or the entire fediverse.</p>
       </div>
     </div>
 

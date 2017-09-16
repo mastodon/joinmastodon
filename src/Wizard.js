@@ -36,7 +36,7 @@ export default class Wizard extends React.PureComponent {
         <p>Each server is a separate, independently owned gateway into the fediverse. You can talk to your friends regardless of which one you choose, but each will have different moderation policies and interests, so choose the one that feels the most comfortable to you. </p>
 
         <div className='wizard-controls'>
-          <div classname='external-wizard'>
+          <div className='external-wizard'>
             <a className='cta button' target='_blank' href="https://instances.social">Help me choose</a>
           </div>
 
@@ -63,9 +63,9 @@ export default class Wizard extends React.PureComponent {
         <div className='wizard'>
           <div className='wizard-header'>
             <div className='wizard-column'>Server</div>
-            <div className='wizard-column'>Stability</div>
+            <div className='wizard-column optional-column'>Stability</div>
             <div className='wizard-column'>Population</div>
-            <div className='wizard-column'>Theme</div>
+            <div className='wizard-column optional-column'>Theme</div>
           </div>
 
           <Scrollbars className='wizard-content' style={{ height: 500 }} renderThumbVertical={this.renderThumb}>

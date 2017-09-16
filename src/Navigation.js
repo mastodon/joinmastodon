@@ -15,8 +15,8 @@ const Navigation = () => (
     </ul>
 
     <ul className='right'>
-      <li><a href='https://discourse.joinmastodon.org'>Support</a></li>
-      <li><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
+      <li className='optional-link'><a href='https://discourse.joinmastodon.org'>Support</a></li>
+      <li className='optional-link-2'><a href='https://github.com/tootsuite/documentation'>Documentation</a></li>
       <li><Link to='/sponsors'>Sponsors</Link></li>
       <li>
         <a href='https://github.com/tootsuite/mastodon'>
