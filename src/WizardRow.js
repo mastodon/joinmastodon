@@ -1,30 +1,40 @@
 import React from 'react';
+import { defineMessages, injectIntl } from 'react-intl';
 
-const WizardRow = ({ instance }) => {
+const messages = defineMessages({
+  stable: { id: 'wizard_row.stability.stable', defaultMessage: 'Stable' },
+  intermittent: { id: 'wizard_row.stability.intermittent', defaultMessage: 'Intermittent' },
+  awful: { id: 'wizard_row.stability.awful', defaultMessage: 'Awful' },
+  full: { id: 'wizard_row.population.full', defaultMessage: 'Full' },
+  medium: { id: 'wizard_row.population.medium', defaultMessage: 'Medium' },
+  new: { id: 'wizard_row.population.new', defaultMessage: 'New' }
+});
+
+const WizardRow = ({ instance, intl }) => {
   const theme = (instance.info && instance.info.topic) || 'General';
 
   let stabilityColor, stabilityLabel,
       populationColor, populationLabel;
 
   if (instance.uptime > 0.95) {
-    stabilityLabel = 'Stable';
+    stabilityLabel = intl.formatMessage(messages.stable);
     stabilityColor = 'green';
   } else if (instance.uptime > 0.50) {
-    stabilityLabel = 'Intermittent'
+    stabilityLabel = intl.formatMessage(messages.intermittent);
     stabilityColor = 'yellow';
   } else {
-    stabilityLabel = 'Awful'
+    stabilityLabel = intl.formatMessage(messages.awful);
     stabilityColor = 'red';
   }
 
   if (!instance.open_registrations) {
-    populationLabel = 'Full';
+    populationLabel = intl.formatMessage(messages.full);
     populationColor = 'red';
   } else if (instance.users > 10000) {
-    populationLabel = 'Medium';
+    populationLabel = intl.formatMessage(messages.medium);
     populationColor = 'yellow';
   } else {
-    populationLabel = 'New';
+    populationLabel = intl.formatMessage(messages.new);
     populationColor = 'green';
   }
 
@@ -38,4 +48,4 @@ const WizardRow = ({ instance }) => {
   );
 };
 
-export default WizardRow;
+export default injectIntl(WizardRow);

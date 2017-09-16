@@ -8,15 +8,26 @@ import Home from './Home';
 import Sponsorship from './Sponsorship';
 import ScrollToTop from './ScrollToTop';
 
-const App = () => (
-  <Router>
-    <ScrollToTop>
-      <div className='app'>
-        <Route exact path='/' component={Home} />
-        <Route path='/sponsors' component={Sponsorship} />
-      </div>
-    </ScrollToTop>
-  </Router>
+import { addLocaleData, IntlProvider } from 'react-intl';
+import en from 'react-intl/locale-data/en';
+
+addLocaleData([...en]);
+
+const messages = require.context('./locales/', false, /\.json$/);
+
+const messagesForLocale = locale => messages[`./${locale}.json`];
+
+const App = ({ usersLocale }) => (
+  <IntlProvider locale={usersLocale} messages={messagesForLocale(usersLocale)}>
+    <Router>
+      <ScrollToTop>
+        <div className='app'>
+          <Route exact path='/' component={Home} />
+          <Route path='/sponsors' component={Sponsorship} />
+        </div>
+      </ScrollToTop>
+    </Router>
+  </IntlProvider>
 );
 
 export default App;

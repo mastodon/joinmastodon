@@ -1,5 +1,6 @@
 import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
+import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 
 import Navigation from './Navigation';
 
@@ -25,8 +26,8 @@ const Sponsorship = () => (
       <Navigation />
 
       <div className='text'>
-        <h2>Sponsors of Mastodon</h2>
-        <p className='lead'>Mastodon is <strong>free, open-source software</strong>. There is no advertising, monetizing, or venture capital. <strong>Your donations directly support full-time development of the project</strong>. Thank you to the following people and companies:</p>
+        <h2><FormattedMessage id='sponsorship.sponsors_of_mastodon' defaultMessage='Sponsors of Mastodon' /></h2>
+        <p className='lead'><FormattedMessage id='sponsorship.thanks_to' defaultMessage='Mastodon is <strong>free, open-source software</strong>. There is no advertising, monetizing, or venture capital. <strong>Your donations directly support full-time development of the project</strong>. Thank you to the following people and companies:' /></p>
       </div>
 
       {/*<div className='container'>
@@ -40,12 +41,12 @@ const Sponsorship = () => (
 
     <div className='container'>
       <div className='text cta-text'>
-        <a href='https://patreon.com/mastodon' className='cta button'>Become a sponsor</a>
+        <a href='https://patreon.com/mastodon' className='cta button'><FormattedMessage id='sponsorship.become_a_sponsor' defaultMessage='Become a sponsor' /></a>
       </div>
 
       <div className='tier'>
-        <h3>Silver sponsors</h3>
-        <p><strong>Silver sponsors</strong> are those that have pledged $40 to $99 to Mastodon.</p>
+        <h3><FormattedMessage id='sponsorship.silver_sponsors' defaultMessage='Silver sponsors' /></h3>
+        <p><FormattedMessage id='sponsorship.silver_sponsors_text' defaultMessage='<strong>Silver sponsors</strong> are those that have pledged $40 to $99 to Mastodon.' /></p>
 
         <div className='sponsors-list--badges'>
           <ul>
@@ -68,8 +69,8 @@ const Sponsorship = () => (
       <hr />
 
       <div className='tier'>
-        <h3>Sponsors</h3>
-        <p><strong>Sponsors</strong> are those that pledged $10 to $39 to Mastodon.</p>
+        <h3><FormattedMessage id='sponsorship.sponsors' defaultMessage='Sponsors' /></h3>
+        <p><FormattedMessage id='sponsorship.sponsors_text' defaultMessage='<strong>Sponsors</strong> are those that pledged $10 to $39 to Mastodon.' /></p>
 
         <div className='sponsors-list--names'>
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
@@ -704,9 +705,9 @@ const Sponsorship = () => (
 
     <div className='final-cta'>
       <div className='container'>
-        <h3>Support the project</h3>
-        <p>Every little bit helps, and we appreciate all contributions.</p>
-        <a href='https://patreon.com/mastodon' className='cta button alt'>Become a sponsor</a>
+        <h3><FormattedMessage id='sponsorship.support_the_project' defaultMessage='Support the project' /></h3>
+        <p><FormattedMessage id='sponsorship.every_bit_helps' defaultMessage='Every little bit helps, and we appreciate all contributions.' /></p>
+        <a href='https://patreon.com/mastodon' className='cta button alt'><FormattedMessage id='sponsorship.become_a_sponsor' defaultMessage='Become a sponsor' /></a>
       </div>
     </div>
   </div>

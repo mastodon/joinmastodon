@@ -4,6 +4,7 @@ const INSTANCES_API_TOKEN = 'JEzPe4Ff5c5WA7k4IP5tx0rJMDzEMFxhmXXZvBG4LFSF0Almf0e
 
 export const INSTANCES_FETCH_SUCCESS = 'INSTANCES_FETCH_SUCCESS';
 export const SEARCH_VALUE_CHANGE     = 'SEARCH_VALUE_CHANGE';
+export const LOCALE_CHANGE           = 'LOCALE_CHANGE';
 
 export function fetchInstances() {
   return (dispatch, getState) => {
@@ -27,6 +28,13 @@ export function fetchInstancesSuccess(data) {
 export function changeSearchValue(data) {
   return {
     type: SEARCH_VALUE_CHANGE,
+    data,
+  };
+};
+
+export function changeLocale(data) {
+  return {
+    type: LOCALE_CHANGE,
     data,
   };
 };

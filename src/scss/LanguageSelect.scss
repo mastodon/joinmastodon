@@ -1,0 +1,93 @@
+@import './variables.scss';
+
+$transition-in: 100ms linear;
+$transition-out: 250ms linear;
+
+.Dropdown-root {
+  position: relative;
+
+  .emoji {
+    vertical-align: -0.15em;
+    margin-right: 0.1em;
+  }
+}
+
+.Dropdown-control {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: $lighter;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  padding: 12px 16px;
+  transition: color $transition-out;
+
+  &:hover {
+    color: $lightest;
+    transition: color $transition-in;
+  }
+}
+
+.Dropdown-arrow {
+  border-color: lighten($darkest, 30%) transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  content: ' ';
+  display: block;
+  height: 0;
+  margin-top: -ceil(2.5);
+  position: absolute;
+  right: 0;
+  top: 24px;
+  width: 0
+}
+
+.is-open {
+  .Dropdown-control {
+    color: $lightest;
+  }
+
+  .Dropdown-arrow {
+    border-color: $lightest transparent transparent;
+  }
+}
+
+.Dropdown-menu {
+  background-color: $lightest;
+  box-shadow: 0 1px 3px rgba($black, 0.1);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: -1px;
+  max-height: 200px;
+  width: 140px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  -webkit-overflow-scrolling: touch;
+}
+
+.Dropdown-option {
+  box-sizing: border-box;
+  color: $darkest;
+  cursor: pointer;
+  display: block;
+  padding: 4px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: left;
+
+  &:last-child {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+
+  &:hover,
+  &.is-selected {
+    background-color: $lighter;
+  }
+}

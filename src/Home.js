@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 
 import Features from './Features';
 import Wizard from './WizardContainer';
@@ -24,11 +25,11 @@ const Home = () => (
       <Navigation />
 
       <div className='text'>
-        <h1>Social networking, <strong>back in your hands</strong></h1>
-        <p>The world’s largest free, open-source, decentralized microblogging network</p>
+        <h1><FormattedMessage id='home.headline' defaultMessage='Social networking, <strong>back in your hands</strong>' /></h1>
+        <p><FormattedMessage id='home.tagline' defaultMessage='The world’s largest free, open-source, decentralized microblogging network' /></p>
 
-        <a href='#getting-started' className='cta button'>Get started</a>
-        <a href='#how-it-works' className='cta button alt'>How it works</a>
+        <a href='#getting-started' className='cta button'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></a>
+        <a href='#how-it-works' className='cta button alt'><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></a>
       </div>
 
       <div className='hero'>
@@ -45,7 +46,7 @@ const Home = () => (
 
     <div className='as-seen-on'>
       <div className='container'>
-        <h2>As seen on</h2>
+        <h2><FormattedMessage id='home.as_seen_on' defaultMessage='As seen on' /></h2>
 
         <div className='logo-grid'>
           <div>
@@ -66,9 +67,9 @@ const Home = () => (
 
     <div className='bottom-cta'>
       <div className='container'>
-        <h3>Install your own</h3>
-        <p>If you are interested in running your own instance &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to.</p>
-        <a href='https://github.com/tootsuite/documentation#running-mastodon' className='cta button alt'>Read the docs</a>
+        <h3><FormattedMessage id='home.install_your_own' defaultMessage='Install your own' /></h3>
+        <p><FormattedMessage id='home.install_your_own_text' defaultMessage='If you are interested in running your own instance &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to.' /></p>
+        <a href='https://github.com/tootsuite/documentation#running-mastodon' className='cta button alt'><FormattedMessage id='home.read_the_docs' defaultMessage='Read the docs' /></a>
       </div>
     </div>
 
