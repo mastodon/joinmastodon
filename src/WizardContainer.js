@@ -6,10 +6,11 @@ import fuzzysearch from 'fuzzysearch';
 
 const getInstances = createSelector(
   [
+    state => state.locale,
     state => state.searchValue,
     state => state.instances,
   ],
-  (searchValue, instances) => {
+  (_, searchValue, instances) => {
     searchValue = searchValue.toLowerCase();
 
     return instances.filter(item => {
