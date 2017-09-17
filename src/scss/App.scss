@@ -38,7 +38,7 @@ $phi: 1.6180339887498948482;
 
       color: $lighter;
       text-decoration: none;
-      padding: 12px 16px;
+      padding: 12px 14px;
       line-height: 32px;
       transition: color $transition-out;
       font-family: 'Montserrat', sans-serif;
@@ -304,6 +304,7 @@ $phi: 1.6180339887498948482;
     z-index: -1;
     top: -21px;
     left: -28px;
+    pointer-events: none;
   }
 
   &:hover {

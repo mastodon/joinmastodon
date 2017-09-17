@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onChange: option => dispatch(changeLocale(option.value))
+  onChange: value => dispatch(changeLocale(value))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanguageSelect);

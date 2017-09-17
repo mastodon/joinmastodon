@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
+import LanguageSelectContainer from './LanguageSelectContainer';
+
 import mastodonLogo from './assets/logo_full.svg';
 
 const Navigation = () => (
@@ -19,6 +21,7 @@ const Navigation = () => (
       <li className='optional-link-2'><a href='https://github.com/tootsuite/documentation'><FormattedMessage id='nav.docs' defaultMessage='Documentation' /></a></li>
       <li><Link to='/sponsors'><FormattedMessage id='nav.sponsors' defaultMessage='Sponsors' /></Link></li>
       <li><a href='https://github.com/tootsuite/mastodon'><FormattedMessage id='nav.code' defaultMessage='Source code' /></a></li>
+      <li><LanguageSelectContainer /></li>
     </ul>
   </div>
 );
