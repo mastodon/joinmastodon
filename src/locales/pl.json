@@ -59,13 +59,13 @@
   "wizard.get_started": "<strong>Rozpocznij:</strong> Wybierz instancję",
   "wizard.help_me_choose": "Pomóż mi wybrać",
   "wizard.search": "Szukaj instancji",
-  "wizard.text": "Każdy serwer jest oddzielną, niezależnie posiadaną bramą do społeczności. Możesz rozmawiać ze swoimi przyujaciółmi niezależnie od wybranego serwera, jednak każdy będzie miał inną politykę moderowania i zainteresowania, więc wybierz taki serwer, który będzie najbardziej komfortowy dla ciebie.",
+  "wizard.text": "Każdy serwer jest oddzielną, niezależnie posiadaną bramą do społeczności. Możesz rozmawiać ze swoimi przyujaciółmi niezależnie od wybranego serwera, jednak każdy będzie miał inną politykę moderowania i zainteresowania, więc wybierz taki serwer, który będzie najbardziej komfortowy dla Ciebie.",
   "wizard.tip": "Wskazówka:",
-  "wizard.tip_text": "To nie jest tylko twój dom, to również adres, po którym inni ludzie mogą cię znaleźć. Będzie podobny do <samp>@username@example.com</samp> niczym adres e-mail.",
+  "wizard.tip_text": "To nie jest tylko Twój dom, to również adres, po którym inni ludzie mogą Cię znaleźć. Będzie podobny do <samp>@username@example.com</samp> niczym adres e-mail.",
   "wizard_row.population.full": "Pełny",
   "wizard_row.population.medium": "Średni",
   "wizard_row.population.new": "Nowy serwer",
   "wizard_row.stability.awful": "Okropna",
-  "wizard_row.stability.intermittent": "Sporadyczna",
-  "wizard_row.stability.stable": "Stabilny"
+  "wizard_row.stability.intermittent": "Średnia",
+  "wizard_row.stability.stable": "Dobra"
 }
