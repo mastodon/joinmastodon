@@ -61,7 +61,7 @@
   "wizard.search": "Nach einer Instanz suchen",
   "wizard.text": "Jeder Server ist ein seperater und unabhängiger Weg in das Fediverse. Du kannst mit all deinen Freunden reden und dabei ist es egal, wo sie sich aufhalten, aber jeder Server hat seine eigenen Regeln und Interessen. Wähle also einen Server, wo du dich wohlfühlst.",
   "wizard.tip": "Tipp:",
-  "wizard.tip_text": "Dies ist nicht nur dein Zuhause, es ist auch eine Adresse für andere wo sie dich finden können. Ich bin <samp>@benutzername@beispiel.tld</samp>, wie bei einer E-Mail-Adresse.",
+  "wizard.tip_text": "Dies ist nicht nur dein Zuhause, es ist auch eine Adresse für andere, wo sie dich finden können. Ich bin <samp>@benutzername@beispiel.tld</samp>, wie bei einer E-Mail-Adresse.",
   "wizard_row.population.full": "Voll",
   "wizard_row.population.medium": "Mittel",
   "wizard_row.population.new": "Neu",
