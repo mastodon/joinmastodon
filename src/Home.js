@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import Features from './Features';
 import Wizard from './WizardContainer';
@@ -28,8 +29,8 @@ const Home = () => (
         <h1><FormattedMessage id='home.headline' defaultMessage='Social networking, <strong>back in your hands</strong>' /></h1>
         <p><FormattedMessage id='home.tagline' defaultMessage='The world’s largest free, open-source, decentralized microblogging network' /></p>
 
-        <a href='#getting-started' className='cta button'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></a>
-        <a href='#how-it-works' className='cta button alt'><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></a>
+        <Link to='/#getting-started' className='cta button'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></Link>
+        <Link to='/#how-it-works' className='cta button alt'><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></Link>
       </div>
 
       <div className='hero'>
