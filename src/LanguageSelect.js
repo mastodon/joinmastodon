@@ -11,11 +11,7 @@ const options = [
   { value: 'en', label: <span><img src={flagEn} className='emoji' alt='' /> English</span> },
   { value: 'fr', label: <span><img src={flagFr} className='emoji' alt='' /> Français</span> },
   { value: 'es', label: <span><img src={flagEs} className='emoji' alt='' /> Español</span> },
-<<<<<<< HEAD
-  { value: 'pl', label: <span><img src={flagPl} className='emoji' alt='' /> Polszczyzna</span> },
-=======
   { value: 'pl', label: <span><img src={flagPl} className='emoji' alt='' /> Polski</span> },
->>>>>>> upstream/master
   { value: 'ja', label: <span><img src={flagJa} className='emoji' alt='' /> 日本語</span> }
 ];
 
