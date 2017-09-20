@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+import classNames from 'classnames';
 
 import Home from './Home';
 import Sponsorship from './Sponsorship';
@@ -25,7 +26,7 @@ const App = ({ usersLocale }) => (
   <IntlProvider locale={usersLocale} messages={messagesForLocale(usersLocale)}>
     <Router>
       <ScrollToTop>
-        <div className='app'>
+        <div className={classNames('app', `lang-${usersLocale}`)}>
           <Route exact path='/' component={Home} />
           <Route path='/sponsors' component={Sponsorship} />
         </div>
