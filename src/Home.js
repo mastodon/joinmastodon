@@ -73,7 +73,7 @@ const Home = () => (
 
         <div className='logo-grid'>
           <div>
-            <a href='http://tootdon.club/' className='logo-sponsor-tootdon'><img src={sponsorTootdon} alt='Tootdon' /></a>
+            <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorTootdon} alt='Tootdon' /></Link>
           </div>
         </div>
       </div>

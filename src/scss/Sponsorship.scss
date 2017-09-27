@@ -111,18 +111,8 @@
       margin-bottom: 20px;
 
       img {
-        filter: grayscale(100%);
         height: 40px;
         width: auto;
-        transition: filter 200ms ease;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-        img {
-          filter: grayscale(0%);
-        }
       }
     }
   }
