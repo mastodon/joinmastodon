@@ -224,7 +224,7 @@ $phi: 1.6180339887498948482;
   }
 }
 
-.as-seen-on {
+.as-seen-on, .frontpage-sponsorship {
   background: darken($darkest, 4%);
   padding: 30px 0;
   padding-bottom: 50px;
@@ -260,13 +260,15 @@ $phi: 1.6180339887498948482;
         margin: 0;
         max-width: 200px;
         opacity: 0.5;
-        transition: opacity $transition-in;
+        transition: all $transition-in;
+        filter: grayscale(100%);
       }
 
       &:hover {
         img {
           opacity: 0.8;
-          transition: opacity $transition-out;
+          transition: all $transition-out;
+          filter: grayscale(0%);
         }
       }
     }

@@ -8,6 +8,8 @@ import HowItWorks from './HowItWorks';
 import Credits from './Credits';
 import Navigation from './Navigation';
 
+import sponsorTootdon from './assets/sponsors/tootdon.png';
+
 import wiredLogo from './assets/wired-logo.svg';
 import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -64,6 +66,19 @@ const Home = () => (
     </div>
 
     <Features />
+
+    <div className='frontpage-sponsorship'>
+      <div className='container'>
+        <h2><FormattedMessage id='home.sponsored_by' defaultMessage='Sponsored by' /></h2>
+
+        <div className='logo-grid'>
+          <div>
+            <a href='http://tootdon.club/' className='logo-sponsor-tootdon'><img src={sponsorTootdon} alt='Tootdon' /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <Wizard />
 
     <div className='bottom-cta'>
