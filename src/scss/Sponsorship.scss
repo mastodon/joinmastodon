@@ -3,6 +3,10 @@
 .sponsorship {
   .intro {
     padding-bottom: 50px;
+
+    .tier {
+      margin: 0;
+    }
   }
 
   .text {
@@ -104,7 +108,7 @@
       text-decoration: none;
       display: block;
       margin: 0 40px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
 
       img {
         filter: grayscale(100%);

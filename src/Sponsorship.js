@@ -4,6 +4,8 @@ import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 
 import Navigation from './Navigation';
 
+import sponsorTootdon from './assets/sponsors/tootdon.png';
+
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
@@ -31,13 +33,13 @@ const Sponsorship = () => (
         <p className='lead'><FormattedMessage id='sponsorship.thanks_to' defaultMessage='Mastodon is <strong>free, open-source software</strong>. There is no advertising, monetizing, or venture capital. <strong>Your donations directly support full-time development of the project</strong>. Thank you to the following people and companies:' /></p>
       </div>
 
-      {/*<div className='container'>
+      {<div className='container'>
         <div className='tier'>
           <div className='sponsors-list--logos'>
-            None
+            <a href='http://tootdon.club/'><img src={sponsorTootdon} alt='Tootdon' /></a>
           </div>
         </div>
-      </div>*/}
+      </div>}
     </div>
 
     <div className='container'>
