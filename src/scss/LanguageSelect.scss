@@ -37,10 +37,11 @@ $transition-out: 250ms linear;
     border-radius: 4px;
     margin-top: -1px;
     max-height: 300px;
-    width: 140px;
+    width: 180px;
     overflow-y: auto;
     position: absolute;
     top: 100%;
+    left: -95px;
     z-index: 1000;
     -webkit-overflow-scrolling: touch;
   }
@@ -53,7 +54,7 @@ $transition-out: 250ms linear;
     padding: 4px 16px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     text-align: left;
 
     &:last-child {

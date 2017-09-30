@@ -16,7 +16,7 @@ const options = [
   { value: 'fr', label: <span><img src={flagFr} className='emoji' alt='' /> Français</span> },
   { value: 'es', label: <span><img src={flagEs} className='emoji' alt='' /> Español</span> },
   { value: 'pl', label: <span><img src={flagPl} className='emoji' alt='' /> Polski</span> },
-  { value: 'pt-BR', label: <span><img src={flagBr} className='emoji' alt='' /> Português (Brasil)</span> },
+  { value: 'pt-BR', label: <span><img src={flagBr} className='emoji' alt='' /> Português do Brasil</span> },
   { value: 'ja', label: <span><img src={flagJa} className='emoji' alt='' /> 日本語</span> }
 ];
 
