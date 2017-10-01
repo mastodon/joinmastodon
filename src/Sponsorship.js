@@ -5,6 +5,7 @@ import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import Navigation from './Navigation';
 
 import sponsorTootdon from './assets/sponsors/tootdon.png';
+import sponsorKibousoft from './assets/sponsors/kibousoft.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
@@ -37,6 +38,7 @@ const Sponsorship = () => (
         <div className='tier'>
           <div className='sponsors-list--logos'>
             <a href='http://tootdon.club/'><img src={sponsorTootdon} alt='Tootdon' /></a>
+            <a href='http://kibousoft.co.jp/'><img src={sponsorKibousoft} alt='Kibousoft LLC' /></a>
           </div>
         </div>
       </div>
