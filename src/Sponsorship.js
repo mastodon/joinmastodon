@@ -14,6 +14,7 @@ import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
 import avatarSdf from './assets/sponsors/sdf.jpg';
 import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
 import avatarAndreaValenti from './assets/sponsors/andreavalenti.png';
+import avatarDavidHutchinson from './assets/sponsors/davidhutchinson.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -62,7 +63,7 @@ const Sponsorship = () => (
             <li><a href='https://cloudfleet.io'><img src={avatarCloudfleet} alt='' /> <span><strong>CloudFleet</strong><span>https://cloudfleet.io</span></span></a></li>
             <li><a href='https://sudoJames.com'><img src={avatarJamesMWright} alt='' /> <span><strong>James Wright</strong><span>https://sudoJames.com</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Martin Seeger</strong><span>-</span></span></a></li>
-            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>David Hutchinson</strong><span>-</span></span></a></li>
+            <li><a href='https://ozmedia.com.au/'><img src={avatarDavidHutchinson} alt='' /> <span><strong>David Hutchinson</strong><span>https://ozmedia.com.au</span></span></a></li>
             <li><a href='https://www.aislogic.com/'><img src={avatarAndreaValenti} alt='' /> <span><strong>Andrea Valenti</strong><span>https://www.aislogic.com/</span></span></a></li>
           </ul>
         </div>
