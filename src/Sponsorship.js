@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 
 import sponsorTootdon from './assets/sponsors/tootdon.png';
 import sponsorKibousoft from './assets/sponsors/kibousoft.png';
+import sponsorPixiv from './assets/sponsors/pixiv.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
@@ -40,6 +41,7 @@ const Sponsorship = () => (
           <div className='sponsors-list--logos'>
             <a href='http://tootdon.club/'><img src={sponsorTootdon} alt='Tootdon' /></a>
             <a href='http://kibousoft.co.jp/'><img src={sponsorKibousoft} alt='Kibousoft LLC' /></a>
+            <a href='https://pixiv.net/'><img src={sponsorPixiv} alt='pixiv Inc.' /></a>
           </div>
         </div>
       </div>
