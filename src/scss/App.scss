@@ -470,16 +470,19 @@ $phi: 1.6180339887498948482;
     padding-right: 20px;
   }
 
-  .as-seen-on .logo-grid {
-    & > div {
-      flex-direction: column;
+  .frontpage-sponsorship,
+  .as-seen-on {
+    .logo-grid {
+      & > div {
+        flex-direction: column;
 
-      a {
-        padding: 10px;
-      }
+        a {
+          padding: 10px;
+        }
 
-      .logo-product-hunt {
-        padding: 0;
+        .logo-product-hunt {
+          padding: 0;
+        }
       }
     }
   }
@@ -592,8 +595,11 @@ $phi: 1.6180339887498948482;
     }
   }
 
-  .as-seen-on .logo-grid {
-    flex-wrap: wrap;
+  .frontpage-sponsorship,
+  .as-seen-on {
+    .logo-grid {
+      flex-wrap: wrap;
+    }
   }
 }
 
