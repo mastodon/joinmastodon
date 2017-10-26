@@ -9,6 +9,8 @@ import Credits from './Credits';
 import Navigation from './Navigation';
 
 import sponsorTootdon from './assets/sponsors/tootdon.png';
+import sponsorKibousoft from './assets/sponsors/kibousoft.png';
+import sponsorPixiv from './assets/sponsors/pixiv.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
@@ -73,7 +75,9 @@ const Home = () => (
 
         <div className='logo-grid'>
           <div>
-            <a href='http://tootdon.club/' className='logo-sponsor-tootdon'><img src={sponsorTootdon} alt='Tootdon' /></a>
+            <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorTootdon} alt='Tootdon' /></Link>
+            <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorPixiv} alt='pixiv Inc.' /></Link>
+            <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorKibousoft} alt='Kibousoft LLC' /></Link>
           </div>
         </div>
       </div>
