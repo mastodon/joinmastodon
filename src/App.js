@@ -18,6 +18,7 @@ import de from 'react-intl/locale-data/de';
 import ja from 'react-intl/locale-data/ja';
 import pt from 'react-intl/locale-data/pt';
 import zh from 'react-intl/locale-data/zh';
+import ru from 'react-intl/locale-data/ru';
 
 addLocaleData([...en, ...pl, ...fr, ...es, ...ja, ...de, ...pt, ...zh, ...ru]);
 
