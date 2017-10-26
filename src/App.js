@@ -18,9 +18,10 @@ import de from 'react-intl/locale-data/de';
 import ja from 'react-intl/locale-data/ja';
 import pt from 'react-intl/locale-data/pt';
 import zh from 'react-intl/locale-data/zh';
+import ru from 'react-intl/locale-data/ru';
 import it from 'react-intl/locale-data/it';
 
-addLocaleData([...en, ...pl, ...fr, ...es, ...ja, ...de, ...pt, ...zh, ...it]);
+addLocaleData([...en, ...pl, ...fr, ...es, ...ja, ...de, ...pt, ...zh, ...ru, ...it]);
 
 const messages = require.context('./locales/', false, /\.json$/);
 
