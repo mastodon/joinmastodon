@@ -382,6 +382,11 @@ $phi: 1.6180339887498948482;
 
     li {
       display: flex;
+      line-height: 1.5em;
+      padding-bottom: .5em;
+      -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
 
       i {
         display: block;
