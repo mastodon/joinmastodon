@@ -14,7 +14,7 @@ const getInstances = createSelector(
     searchValue = searchValue.toLowerCase();
 
     return instances.filter(item => {
-      const eligible    = !item.dead && item.uptime > 0.70;
+      const eligible    = !item.dead && item.uptime > 0.70 && item.open_registrations;
       const isSearching = searchValue.length > 0;
 
       return eligible &&
