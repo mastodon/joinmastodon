@@ -1,20 +1,20 @@
 import React from 'react';
-import { defineMessages, injectIntl } from 'react-intl';
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
+import classNames from 'classnames';
 
 const messages = defineMessages({
   stable: { id: 'wizard_row.stability.stable', defaultMessage: 'Stable' },
   intermittent: { id: 'wizard_row.stability.intermittent', defaultMessage: 'Intermittent' },
   awful: { id: 'wizard_row.stability.awful', defaultMessage: 'Awful' },
-  full: { id: 'wizard_row.population.full', defaultMessage: 'Full' },
-  medium: { id: 'wizard_row.population.medium', defaultMessage: 'Medium' },
-  new: { id: 'wizard_row.population.new', defaultMessage: 'New' }
 });
 
 const WizardRow = ({ instance, intl }) => {
-  const theme = (instance.info && instance.info.topic) || 'General';
+  const theme = (instance.info && instance.info.theme) || 'General';
+  const description = (instance.info && instance.info.short_description) || theme;
+  const population = instance.users >= 1000 ? `${intl.formatNumber(instance.users / 1000, { maximumFractionDigits: 1 })}k` : instance.users;
 
   let stabilityColor, stabilityLabel,
-      populationColor, populationLabel;
+      populationColor;
 
   if (instance.uptime > 0.95) {
     stabilityLabel = intl.formatMessage(messages.stable);
@@ -27,23 +27,29 @@ const WizardRow = ({ instance, intl }) => {
     stabilityColor = 'red';
   }
 
-  if (!instance.open_registrations) {
-    populationLabel = intl.formatMessage(messages.full);
+  if (instance.users > 50000) {
     populationColor = 'red';
-  } else if (instance.users > 10000) {
-    populationLabel = intl.formatMessage(messages.medium);
+  } else if (instance.users > 5000) {
     populationColor = 'yellow';
   } else {
-    populationLabel = intl.formatMessage(messages.new);
     populationColor = 'green';
   }
 
   return (
-    <a href={`https://${instance.name}/about`} target='_blank' rel='noopener' className='wizard-row'>
-      <div className='wizard-column'>{instance.name}</div>
-      <div className='wizard-column optional-column'><span className={`indicator-text ${stabilityColor}`} title={`${intl.formatNumber(instance.uptime * 100)}%`}><i className={`indicator ${stabilityColor}`} /> {stabilityLabel}</span></div>
-      <div className='wizard-column'><span className={`indicator-text ${populationColor}`} title={intl.formatNumber(instance.users)}><i className={`indicator ${populationColor}`} /> {populationLabel}</span></div>
-      <div className='wizard-column optional-column'>{theme}</div>
+    <a href={`https://${instance.name}/about`} target='_blank' rel='noopener' className={classNames('wizard-row', { offline: !instance.up })}>
+      <div className='wizard-row__thumbnail'>
+        <div style={{ backgroundImage: `url(${instance.thumbnail})` }} />
+      </div>
+
+      <div className='wizard-row__details'>
+        <div className='wizard-row__name'>{instance.name}</div>
+        <div className='wizard-row__description'>{description}</div>
+      </div>
+
+      <div className='wizard-row__meta'>
+        <div className='wizard-row__stability'><span className={`indicator-text ${stabilityColor}`}><i className={`indicator ${stabilityColor}`} /> {stabilityLabel}</span></div>
+        <div className='wizard-row__population'><span className={`indicator-text ${populationColor}`}><i className={`indicator ${populationColor}`} /> <FormattedMessage id='wizard_row.user_count' defaultMessage='{population} {count, plural, one {person} other {people}}' values={{ population, count: instance.users }} /></span></div>
+      </div>
     </a>
   );
 };

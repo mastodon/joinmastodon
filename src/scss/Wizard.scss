@@ -71,18 +71,71 @@
     font-size: 14px;
     text-decoration: none;
     color: inherit;
+    justify-content: space-between;
+
+    &__details {
+      width: 75%;
+      padding: 10px 0;
+    }
+
+    &__meta {
+      width: 15%;
+      padding: 10px 0;
+    }
+
+    &__thumbnail {
+      width: 10%;
+      padding: 10px 0;
+      display: flex;
+
+      & > div {
+        margin: 0 10px;
+        margin-right: 0;
+        background-color: $darkest;
+        background-size: cover;
+        background-position: center;
+        border-radius: 4px;
+        width: 100%;
+      }
+    }
 
     &:nth-child(even) {
       background: lighten($darkest, 2%);
     }
 
     &:hover {
-      color: $lightest;
+      .wizard-row__name {
+        color: $lightest;
+      }
     }
 
     &:focus {
       background: mix($darkest, $vibrant);
       color: $white;
+    }
+
+    &.offline {
+      color: lighten($darkest, 26%);
+
+      .indicator-text {
+        color: lighten($darkest, 26%) !important;
+      }
+
+      .indicator {
+        background: lighten($darkest, 26%) !important;
+      }
+
+      &:focus {
+        color: $white;
+
+        .indicator-text {
+          color: $white !important;
+        }
+
+        .indicator {
+          background: $white !important;
+        }
+      }
     }
   }
 
@@ -115,6 +168,19 @@
       cursor: pointer;
     }
   }
+}
+
+.wizard-row__name {
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.wizard-row__description {
+  padding: 0 10px;
+  color: lighten($darkest, 34%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .indicator-text {
@@ -171,6 +237,26 @@
 
   .spacer {
     flex-grow: 1
+  }
+
+  .language-select {
+    margin-right: 15px;
+
+    .dropdown__control {
+      background: lighten($darkest, 8%);
+      transition: none;
+      border-radius: 4px;
+      line-height: 36px;
+      padding: 0 16px;
+
+      &:hover {
+        background-color: lighten($darkest, 12%);
+      }
+    }
+
+    .dropdown__option {
+      font-weight: 400;
+    }
   }
 }
 
@@ -255,6 +341,20 @@
   }
 }
 
+.wizard-controls {
+  .language-select {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .wizard-controls {
+    .language-select {
+      display: block;
+    }
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .wizard-page {
     margin: 60px 0;
@@ -287,6 +387,17 @@
   .search__input {
     width: 100%;
     min-width: 0;
+  }
+
+  .wizard {
+    .wizard-row__thumbnail,
+    .wizard-row__meta {
+      display: none;
+    }
+
+    .wizard-row__details {
+      width: 100%;
+    }
   }
 }
 

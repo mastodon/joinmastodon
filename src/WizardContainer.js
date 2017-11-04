@@ -8,9 +8,10 @@ const getInstances = createSelector(
   [
     state => state.locale,
     state => state.searchValue,
+    state => state.instancesLocale,
     state => state.instances,
   ],
-  (_, searchValue, instances) => {
+  (_, searchValue, locale, instances) => {
     searchValue = searchValue.toLowerCase();
 
     return instances.filter(item => {
@@ -18,6 +19,7 @@ const getInstances = createSelector(
       const isSearching = searchValue.length > 0;
 
       return eligible &&
+        (locale === null || (item.info && item.info.languages.indexOf(locale) !== -1)) &&
         (!isSearching || fuzzysearch(searchValue, item.searchable));
     });
   }

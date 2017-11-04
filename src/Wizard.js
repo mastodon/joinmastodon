@@ -2,6 +2,7 @@ import React from 'react';
 import WizardRow from './WizardRow';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { FormattedHTMLMessage as FormattedMessage, injectIntl, defineMessages } from 'react-intl';
+import WizardLanguageSelectContainer from './WizardLanguageSelectContainer';
 
 const messages = defineMessages({
   search: { id: 'wizard.search', defaultMessage: 'Search for an instance' }
@@ -47,6 +48,10 @@ class Wizard extends React.PureComponent {
 
           <div className='spacer'></div>
 
+          <div className='language-select'>
+            <WizardLanguageSelectContainer />
+          </div>
+
           <div className='search'>
             <label htmlFor='instance-search' className='accessibly-hidden'><FormattedMessage id='wizard.search' defaultMessage='Search for an instance' /></label>
 
@@ -67,13 +72,6 @@ class Wizard extends React.PureComponent {
         </div>
 
         <div className='wizard'>
-          <div className='wizard-header'>
-            <div className='wizard-column'><FormattedMessage id='wizard.column.server' defaultMessage='Server' /></div>
-            <div className='wizard-column optional-column'><FormattedMessage id='wizard.column.stability' defaultMessage='Stability' /></div>
-            <div className='wizard-column'><FormattedMessage id='wizard.column.population' defaultMessage='Population' /></div>
-            <div className='wizard-column optional-column'><FormattedMessage id='wizard.column.theme' defaultMessage='Theme' /></div>
-          </div>
-
           <Scrollbars className='wizard-content' style={{ height: 500 }} renderThumbVertical={this.renderThumb}>
             {instances.map(item =>
               <WizardRow key={item.id} instance={item} />

@@ -2,6 +2,7 @@ import {
   INSTANCES_FETCH_SUCCESS,
   SEARCH_VALUE_CHANGE,
   LOCALE_CHANGE,
+  INSTANCES_LOCALE_CHANGE,
 } from './actions';
 
 const supportedLocales = ['en', 'fr', 'pl', 'es', 'ja', 'de','pt-BR'];
@@ -20,6 +21,7 @@ const initialState = {
   instances: [],
   searchValue: '',
   locale: initialLocale(),
+  instancesLocale: null,
 };
 
 const createSearchable = item => {
@@ -37,11 +39,13 @@ const createSearchable = item => {
 export default function reducer(state = initialState, action) {
   switch(action.type) {
   case INSTANCES_FETCH_SUCCESS:
-    return { ...state, instances: action.data.map(createSearchable) };
+    return { ...state, instances: action.data.filter(item => !item.dead || !item.open_registrations).map(createSearchable) };
   case SEARCH_VALUE_CHANGE:
     return { ...state, searchValue: action.data };
   case LOCALE_CHANGE:
     return { ...state, locale: action.data };
+  case INSTANCES_LOCALE_CHANGE:
+    return { ...state, instancesLocale: action.data };
   default:
     return state;
   }

@@ -5,6 +5,7 @@ const INSTANCES_API_TOKEN = 'JEzPe4Ff5c5WA7k4IP5tx0rJMDzEMFxhmXXZvBG4LFSF0Almf0e
 export const INSTANCES_FETCH_SUCCESS = 'INSTANCES_FETCH_SUCCESS';
 export const SEARCH_VALUE_CHANGE     = 'SEARCH_VALUE_CHANGE';
 export const LOCALE_CHANGE           = 'LOCALE_CHANGE';
+export const INSTANCES_LOCALE_CHANGE = 'INSTANCES_LOCALE_CHANGE';
 
 export function fetchInstances() {
   return (dispatch, getState) => {
@@ -12,7 +13,7 @@ export function fetchInstances() {
       return;
     }
 
-    axios('https://instances.social/api/1.0/instances/list?count=500', {
+    axios('https://instances.social/api/1.0/instances/list?count=1000', {
         headers: {'Authorization': `Bearer ${INSTANCES_API_TOKEN}`},
     }).then(response => dispatch(fetchInstancesSuccess(response.data.instances)));
   };
@@ -35,6 +36,13 @@ export function changeSearchValue(data) {
 export function changeLocale(data) {
   return {
     type: LOCALE_CHANGE,
+    data,
+  };
+};
+
+export function changeInstancesLocale(data) {
+  return {
+    type: INSTANCES_LOCALE_CHANGE,
     data,
   };
 };
