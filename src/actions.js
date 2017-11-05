@@ -13,7 +13,7 @@ export function fetchInstances() {
       return;
     }
 
-    axios('https://instances.social/api/1.0/instances/list?count=1000', {
+    axios('https://instances.social/api/1.0/instances/list?count=0', {
         headers: {'Authorization': `Bearer ${INSTANCES_API_TOKEN}`},
     }).then(response => dispatch(fetchInstancesSuccess(response.data.instances)));
   };
