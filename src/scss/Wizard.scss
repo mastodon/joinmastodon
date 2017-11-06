@@ -91,11 +91,21 @@
       & > div {
         margin: 0 10px;
         margin-right: 0;
-        background-color: $darkest;
-        background-size: cover;
-        background-position: center;
+        overflow: hidden;
         border-radius: 4px;
         width: 100%;
+        position: relative;
+        background: $darkest;
+
+        img {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
 

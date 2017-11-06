@@ -38,7 +38,9 @@ const WizardRow = ({ instance, intl }) => {
   return (
     <a href={`https://${instance.name}/about`} target='_blank' rel='noopener' className={classNames('wizard-row', { offline: !instance.up })}>
       <div className='wizard-row__thumbnail'>
-        <div style={{ backgroundImage: `url(${instance.thumbnail})` }} />
+        <div>
+          <img src={instance.thumbnail} alt='' />
+        </div>
       </div>
 
       <div className='wizard-row__details'>
