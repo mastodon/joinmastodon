@@ -29,7 +29,7 @@ export function fetchInstances() {
     }
 
     const headers = { 'Authorization': `Bearer ${INSTANCES_API_TOKEN}` };
-    const params  = { count: 0, include_down: false, include_closed: false, sort_by: 'users', sort_order: 'desc' };
+    const params  = { count: 0, include_down: false, include_closed: false, sort_by: 'users', sort_order: 'desc', supported_features: 'mstdn_custom_emojis' };
 
     axios.get('https://instances.social/api/1.0/instances/list', { headers, params }).then(res => {
       let { instances } = res.data;
