@@ -32,6 +32,7 @@
   "home.install_your_own": "Zainstaluj u siebie",
   "home.install_your_own_text": "Jeśli jesteś zainteresowany uruchomieniem swojej własnej instancji — dla swoich przyjaciół, rodziny lub organizacji — możesz zacząć od zapoznania się z dokumentacją instalacji. Hostujesz tylko swoich użytkowników oraz treści, które subskrybują.",
   "home.read_the_docs": "Przeczytaj dokumentację",
+  "home.sponsored_by": "Projekt sponsorowany przez",
   "home.tagline": "Największa na świecie wolna i otwartoźródłowa sfederowana sieć społecznościowa",
   "how_it_works.how_it_works": "Jak to działa?",
   "how_it_works.how_it_works_text1": "Każdy może posiadać serwer Mastodona. Każdy serwer hostuje indywidualne konta użytkowników, treści przez nich produkowane, oraz treści przez nich obserwowane.",
@@ -67,5 +68,6 @@
   "wizard_row.population.new": "Nowy serwer",
   "wizard_row.stability.awful": "Okropna",
   "wizard_row.stability.intermittent": "Średnia",
-  "wizard_row.stability.stable": "Dobra"
+  "wizard_row.stability.stable": "Dobra",
+  "wizard_row.user_count": "{population} {count, plural, one {użytkownik}  other {użytkowników}}"
 }
