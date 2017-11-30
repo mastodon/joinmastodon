@@ -20,7 +20,7 @@ const options = [
   { value: 'pt-BR', label: <span><img src={flagBr} className='emoji' alt='' /> Português do Brasil</span> },
   { value: 'ru', label: <span><img src={flagRu} className='emoji' alt='' /> Русский</span> },
   { value: 'ja', label: <span><img src={flagJa} className='emoji' alt='' /> 日本語</span> },
-  { value: 'zh', label: <span><img src={flagCn} className='emoji' alt='' /> 简体中文</span> }
+  { value: 'zh-CN', label: <span><img src={flagCn} className='emoji' alt='' /> 简体中文</span> }
 ];
 
 export default class LanguageSelect extends PureComponent {
