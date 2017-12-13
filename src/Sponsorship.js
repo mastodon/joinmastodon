@@ -11,11 +11,12 @@ import sponsorPixiv from './assets/sponsors/pixiv.png';
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
-import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
+// import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
 import avatarSdf from './assets/sponsors/sdf.jpg';
 import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
 import avatarAndreaValenti from './assets/sponsors/andreavalenti.png';
-import avatarDavidHutchinson from './assets/sponsors/davidhutchinson.png';
+// import avatarDavidHutchinson from './assets/sponsors/davidhutchinson.png';
+import avatarIrick from './assets/sponsors/irick.gif';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -65,7 +66,7 @@ const Sponsorship = () => (
             <li><a href='https://sudoJames.com'><img src={avatarJamesMWright} alt='' /> <span><strong>James Wright</strong><span>https://sudoJames.com</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Martin Seeger</strong><span>-</span></span></a></li>
             <li><a href='https://www.aislogic.com/'><img src={avatarAndreaValenti} alt='' /> <span><strong>Andrea Valenti</strong><span>https://www.aislogic.com/</span></span></a></li>
-            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Irick Corwal</strong><span>-</span></span></a></li>
+            <li><a href='https://vulpine.club/@Irick'><img src={avatarIrick} alt='' /> <span><strong>Irick Corwal</strong><span>https://vulpine.club/@Irick</span></span></a></li>
             <li><a href='https://eightballoon.com/'><img src={noAvatar} alt='' /> <span><strong>Takanori Yamada</strong><span>https://eightballoon.com/</span></span></a></li>
           </ul>
         </div>
