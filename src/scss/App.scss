@@ -408,6 +408,16 @@ $phi: 1.6180339887498948482;
   }
 }
 
+.lang-zh {
+  .feature {
+    .text {
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
 .hero__floats {
   position: absolute;
   width: 100%;
