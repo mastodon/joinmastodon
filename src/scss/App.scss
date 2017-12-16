@@ -45,6 +45,10 @@ $phi: 1.6180339887498948482;
       font-weight: 500;
       font-size: 14px;
 
+      .lang-it & {
+        padding: 12px 10px;
+      }
+
       img.link-logo {
         width: 32px;
         height: 32px;

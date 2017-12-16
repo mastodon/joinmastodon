@@ -10,6 +10,8 @@ import flagDe from 'twemoji/2/svg/1f1e9-1f1ea.svg';
 import flagBr from 'twemoji/2/svg/1f1e7-1f1f7.svg';
 import flagCn from 'twemoji/2/svg/1f1e8-1f1f3.svg';
 import flagRu from 'twemoji/2/svg/1f1f7-1f1fa.svg';
+import flagIt from 'twemoji/2/svg/1f1ee-1f1f9.svg';
+
 
 const options = [
   { value: 'en', label: <span><img src={flagEn} className='emoji' alt='' /> English</span> },
@@ -20,7 +22,8 @@ const options = [
   { value: 'pt-BR', label: <span><img src={flagBr} className='emoji' alt='' /> Português do Brasil</span> },
   { value: 'ru', label: <span><img src={flagRu} className='emoji' alt='' /> Русский</span> },
   { value: 'ja', label: <span><img src={flagJa} className='emoji' alt='' /> 日本語</span> },
-  { value: 'zh', label: <span><img src={flagCn} className='emoji' alt='' /> 简体中文</span> }
+  { value: 'zh', label: <span><img src={flagCn} className='emoji' alt='' /> 简体中文</span> },
+  { value: 'it', label: <span><img src={flagIt} className='emoji' alt='' /> Italiano</span> }
 ];
 
 export default class LanguageSelect extends PureComponent {
