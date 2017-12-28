@@ -20,14 +20,26 @@
 
   .branding {
     width: 30%;
+
+    .lang-ar & {
+      text-align: right;
+    }
   }
 
   .funding {
     margin-right: 15px;
+
+    .lang-ar & {
+      text-align: right;
+    }
   }
 
   .color-scheme {
     margin-top: 50px;
+
+    .lang-ar & h3 {
+      text-align: right;
+    }
   }
 
   .color-swatch {

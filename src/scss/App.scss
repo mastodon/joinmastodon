@@ -336,12 +336,20 @@ $phi: 1.6180339887498948482;
     margin-right: 20px;
     order: 1;
     text-align: left;
+
+    .lang-ar & {
+      text-align: right;
+    }
   }
 
   .right {
     margin-left: 20px;
     order: 2;
     text-align: right;
+
+    .lang-ar & {
+      text-align: right;
+    }
   }
 
   .text {
@@ -378,6 +386,15 @@ $phi: 1.6180339887498948482;
 
   .additional-features {
     width: 100%;
+
+    .lang-ar & {
+      direction: rtl;
+
+      li i {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
 
     ul {
       columns: 3;
@@ -465,6 +482,10 @@ $phi: 1.6180339887498948482;
   background: darken($darkest, 4%);
   padding: 50px 0;
   padding-top: 70px;
+
+  .lang-ar & {
+    direction: rtl;
+  }
 
   h3 {
     font-family: 'Montserrat', sans-serif;

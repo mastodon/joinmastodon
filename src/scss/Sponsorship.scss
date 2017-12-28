@@ -24,6 +24,10 @@
   .final-cta {
     background: darken($darkest, 4%);
     padding: 100px 0;
+
+    .lang-ar & {
+      direction: rtl;
+    }
   }
 
   h2, h3 {
@@ -31,12 +35,20 @@
     font-size: 21px;
     margin-bottom: 20px;
     color: $lightest;
+
+    .lang-ar & {
+      direction: rtl;
+    }
   }
 
   p {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
+
+    .lang-ar & {
+      direction: rtl;
+    }
 
     strong {
       font-weight: 700;

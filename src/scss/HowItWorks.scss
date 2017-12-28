@@ -3,6 +3,15 @@
 .how-it-works {
   margin: 100px auto;
 
+  .lang-ar & {
+    direction: rtl;
+
+    .specs {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+
   h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 21px;

@@ -14,12 +14,20 @@
     strong {
       color: $lightest;
     }
+
+    .lang-ar & {
+      text-align: right;
+    }
   }
 
   p {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
+
+    .lang-ar & {
+      direction: rtl;
+    }
 
     &.hint {
       color: $lighter;
@@ -32,6 +40,11 @@
         font-weight: 700;
         color: $lightest;
         margin-right: 10px;
+
+        .lang-ar & {
+          margin-right: 0;
+          margin-left: 10px;
+        }
       }
 
       span {
