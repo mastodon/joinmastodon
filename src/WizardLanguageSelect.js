@@ -12,7 +12,8 @@ const options = [
   { value: 'pt', label: 'Português' },
   { value: 'ru', label: 'Русский' },
   { value: 'ja', label: '日本語' },
-  { value: 'zh', label: '中文' }
+  { value: 'zh', label: '中文' },
+  { value: 'ar', label: 'العربية' },
 ];
 
 export default class WizardLanguageSelect extends PureComponent {

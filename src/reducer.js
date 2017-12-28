@@ -5,7 +5,7 @@ import {
   INSTANCES_LOCALE_CHANGE,
 } from './actions';
 
-const supportedLocales = ['en', 'fr', 'pl', 'es', 'ja', 'de','pt-BR'];
+const supportedLocales = ['en', 'fr', 'pl', 'es', 'ja', 'de','pt-BR', 'ar'];
 
 const initialLocale = () => {
   const lang = navigator.language.split('-')[0];
