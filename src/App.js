@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import Home from './Home';
 import Sponsorship from './Sponsorship';
 import ScrollToTop from './ScrollToTop';
+import Title from './Title';
 
 import { addLocaleData, IntlProvider } from 'react-intl';
 import en from 'react-intl/locale-data/en';
@@ -35,6 +36,7 @@ const App = ({ usersLocale }) => (
         <div className={classNames('app', `lang-${usersLocale}`)}>
           <Route exact path='/' component={Home} />
           <Route path='/sponsors' component={Sponsorship} />
+          <Title />
         </div>
       </ScrollToTop>
     </Router>

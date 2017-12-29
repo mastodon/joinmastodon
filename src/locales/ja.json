@@ -52,6 +52,7 @@
   "sponsorship.sponsors_text": "<strong>スポンサー</strong>は10ドルから39ドルを拠出しているスポンサーです。",
   "sponsorship.support_the_project": "プロジェクトをサポートする",
   "sponsorship.thanks_to": "Mastodonは自由でオープンソースです。広告、マネタイジング、ベンチャーキャピタルなどはありません。あなたの寄付がプロジェクトのフルタイムの開発を直接サポートします。",
+  "title": "ソーシャルネットワーキングを、あなたの手の中に - Mastodonプロジェクト",
   "wizard.column.population": "人数",
   "wizard.column.server": "サーバー",
   "wizard.column.stability": "安定性",
