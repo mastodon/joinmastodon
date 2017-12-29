@@ -2,27 +2,27 @@ import React from 'react';
 import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import { HashLink as Link } from 'react-router-hash-link';
 
-import Features from './Features';
-import Wizard from './WizardContainer';
-import HowItWorks from './HowItWorks';
-import Credits from './Credits';
-import Navigation from './Navigation';
+import Features from '../Features';
+import Wizard from '../WizardContainer';
+import HowItWorks from '../HowItWorks';
+import Credits from '../Credits';
+import Navigation from '../Navigation';
 
-import sponsorTootdon from './assets/sponsors/tootdon.png';
-import sponsorKibousoft from './assets/sponsors/kibousoft.png';
-import sponsorPixiv from './assets/sponsors/pixiv.png';
+import sponsorTootdon from '../assets/sponsors/tootdon.png';
+import sponsorKibousoft from '../assets/sponsors/kibousoft.png';
+import sponsorPixiv from '../assets/sponsors/pixiv.png';
 
-import wiredLogo from './assets/wired-logo.svg';
-import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
-import theVergeLogo from './assets/the-verge-logo.svg';
-import motherboardLogo from './assets/motherboard-logo.svg';
+import wiredLogo from '../assets/wired-logo.svg';
+import productHuntLogo from '../assets/product-hunt-logo-horizontal-black.png';
+import theVergeLogo from '../assets/the-verge-logo.svg';
+import motherboardLogo from '../assets/motherboard-logo.svg';
 
-import screenshotFull from './assets/screenshot_full.png';
-import screenshotMobile from './assets/screenshot_mobile.png';
+import screenshotFull from '../assets/screenshot_full.png';
+import screenshotMobile from '../assets/screenshot_mobile.png';
 
-import cloud2 from './assets/cloud2.png';
-import cloud3 from './assets/cloud3.png';
-import cloud4 from './assets/cloud4.png';
+import cloud2 from '../assets/cloud2.png';
+import cloud3 from '../assets/cloud3.png';
+import cloud4 from '../assets/cloud4.png';
 
 const Home = () => (
   <div>

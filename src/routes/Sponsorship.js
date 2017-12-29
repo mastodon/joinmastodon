@@ -2,21 +2,21 @@ import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 
-import Navigation from './Navigation';
+import Navigation from '../Navigation';
 
-import sponsorTootdon from './assets/sponsors/tootdon.png';
-import sponsorKibousoft from './assets/sponsors/kibousoft.png';
-import sponsorPixiv from './assets/sponsors/pixiv.png';
+import sponsorTootdon from '../assets/sponsors/tootdon.png';
+import sponsorKibousoft from '../assets/sponsors/kibousoft.png';
+import sponsorPixiv from '../assets/sponsors/pixiv.png';
 
-import noAvatar from './assets/sponsors/32x32.png';
-import avatarGlocal from './assets/sponsors/glocal.png';
-import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
-// import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
-import avatarSdf from './assets/sponsors/sdf.jpg';
-import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
-import avatarAndreaValenti from './assets/sponsors/andreavalenti.png';
-// import avatarDavidHutchinson from './assets/sponsors/davidhutchinson.png';
-import avatarIrick from './assets/sponsors/irick.gif';
+import noAvatar from '../assets/sponsors/32x32.png';
+import avatarGlocal from '../assets/sponsors/glocal.png';
+import avatarCloudfleet from '../assets/sponsors/cloudfleet.png';
+// import avatarZoeQuinn from '../assets/sponsors/zoequinn.jpg';
+import avatarSdf from '../assets/sponsors/sdf.jpg';
+import avatarJamesMWright from '../assets/sponsors/jamesmwright.jpg';
+import avatarAndreaValenti from '../assets/sponsors/andreavalenti.png';
+// import avatarDavidHutchinson from '../assets/sponsors/davidhutchinson.png';
+import avatarIrick from '../assets/sponsors/irick.gif';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
