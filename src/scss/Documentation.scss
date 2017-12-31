@@ -1,0 +1,26 @@
+.documentation {
+  > a {
+    color: $lighter;
+    text-decoration: none;
+
+    .visual i {
+      color: $darker;
+    }
+
+    h2 {
+      color: $lightest;
+    }
+
+    &:hover {
+      color: $lightest;
+
+      .visual i {
+        color: $lighter;
+      }
+
+      h2 {
+        color: $white;
+      }
+    }
+  }
+}

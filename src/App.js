@@ -13,6 +13,7 @@ const App = ({ usersLocale }) => (
     <Router>
       <ScrollToTop>
         <div className={classNames('app', `lang-${usersLocale}`)}>
+          <AsyncDocumentationRoute exact path='/documentation' directory='index' />
           <AsyncDocumentationRoute exact path='/documentation/apps' directory='apps' />
           <AsyncDocumentationRoute exact path='/documentation/faq' directory='faq' />
           <AsyncDocumentationRoute exact path='/documentation/user-guide' directory='user-guide' />
