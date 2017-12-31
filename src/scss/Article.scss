@@ -1,0 +1,153 @@
+@import './variables.scss';
+
+.article {
+  max-width: 800px;
+  margin: 16px auto;
+
+  .heading--linkable {
+    > a {
+      left: -0.2ch;
+      padding: 0.2ch;
+      position: relative;
+    }
+
+    .heading--linkable__hash {
+      font-size: 1.5em;
+    }
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    margin-bottom: 16px;
+
+    .lang-ar & {
+      text-align: right;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+
+    .lang-ar & {
+      direction: rtl;
+    }
+
+    &.hint {
+      color: $lighter;
+      margin: 30px 0;
+      display: flex;
+
+      strong {
+        display: block;
+        flex: 0 0 auto;
+        color: $lightest;
+        margin-right: 10px;
+
+        .lang-ar & {
+          margin-right: 0;
+          margin-left: 10px;
+        }
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
+
+.article--text {
+  color: $lightest;
+
+  .heading--linkable {
+    color: $white;
+
+    .heading--linkable__hash {
+      color: $lighter;
+    }
+
+    &:hover {
+      > a {
+        background: #fff1;
+      }
+
+      .heading--linkable__hash {
+        color: $white;
+      }
+    }
+  }
+
+  code {
+    font-family: monospace;
+  }
+
+  dd {
+    margin-left: 32px;
+  }
+
+  ol {
+    list-style: url;
+    padding-left: 4ch;
+  }
+
+  p, dl, ol, table, ul {
+    a:link {
+      color: $vibrant;
+    }
+
+    a:visited {
+      color: $lighter;
+    }
+  }
+
+  td, th {
+    border: 1px solid $darker;
+    padding: 4px;
+  }
+}
+
+.article--text__center {
+  text-align: center;
+}
+
+.article--text__float-container {
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .article--text__flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bttom: 16px;
+
+    > p {
+      margin: auto 0;
+    }
+
+    img {
+      flex: 0 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .article {
+    padding: 0 16px;
+  }
+
+  .article--text__flex > img {
+    display: block;
+    margin: auto;
+  }
+}

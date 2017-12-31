@@ -162,7 +162,6 @@ $phi: 1.6180339887498948482;
 .intro {
   text-align: center;
   padding-top: 15px;
-  overflow: hidden;
   background: lighten($darkest, 4%);
   background: linear-gradient(150deg, lighten($darkest, 10%), lighten($darkest, 4%));
   color: $lighter;
@@ -175,7 +174,7 @@ $phi: 1.6180339887498948482;
   h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 26px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 
     strong {
       color: $lightest;

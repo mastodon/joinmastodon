@@ -37,7 +37,7 @@ class Wizard extends React.PureComponent {
     const hasValue = searchValue.length > 0;
 
     return (
-      <div className='wizard-page' id='getting-started'>
+      <div className='article wizard-page' id='getting-started'>
         <h2><FormattedMessage id='wizard.get_started' defaultMessage='<strong>Get started:</strong> Choose an instance' /></h2>
         <p><FormattedMessage id='wizard.text' defaultMessage='Each server is a separate, independently owned gateway into the fediverse. You can talk to your friends regardless of which one you choose, but each will have different moderation policies and interests, so choose the one that feels the most comfortable to you.' /></p>
 

@@ -1,55 +1,13 @@
 @import './variables.scss';
 
 .wizard-page {
-  max-width: 800px;
-  margin: 100px auto;
-  margin-bottom: 0;
+  margin-top: 100px;
 
   h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 21px;
-    margin-bottom: 20px;
     color: $lighter;
 
     strong {
       color: $lightest;
-    }
-
-    .lang-ar & {
-      text-align: right;
-    }
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 20px;
-
-    .lang-ar & {
-      direction: rtl;
-    }
-
-    &.hint {
-      color: $lighter;
-      margin: 30px 0;
-      display: flex;
-
-      strong {
-        display: block;
-        flex: 0 0 auto;
-        font-weight: 700;
-        color: $lightest;
-        margin-right: 10px;
-
-        .lang-ar & {
-          margin-right: 0;
-          margin-left: 10px;
-        }
-      }
-
-      span {
-        display: block;
-      }
     }
   }
 }
@@ -380,8 +338,7 @@
 
 @media only screen and (max-width: 800px) {
   .wizard-page {
-    margin: 60px 0;
-    padding: 0 20px;
+    margin-top: 60px;
   }
 
   .wizard-controls {

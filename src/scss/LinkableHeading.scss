@@ -1,0 +1,12 @@
+.heading--linkable {
+  > a {
+    display: block;
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .heading--linkable__hash {
+    padding-right: 0.5ch;
+    vertical-align: bottom;
+  }
+}
