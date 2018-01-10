@@ -44,6 +44,7 @@ class Wizard extends React.PureComponent {
         <div className='wizard-controls'>
           <div className='external-wizard'>
             <a className='cta button' target='_blank' href="https://instances.social"><FormattedMessage id='wizard.help_me_choose' defaultMessage='Help me choose' /></a>
+            <a className='cta button alt' target='_blank' href="https://bridge.joinmastodon.org"><FormattedMessage id='wizard.find_friends' defaultMessage='Find Twitter friends' /></a>
           </div>
 
           <div className='spacer'></div>
