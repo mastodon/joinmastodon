@@ -58,6 +58,7 @@
   "wizard.column.server": "实例地址",
   "wizard.column.stability": "网络质量",
   "wizard.column.theme": "内容主题",
+  "wizard.find_friends": "寻找 Twitter 好友",
   "wizard.get_started": "<strong>开始使用：</strong>选择一个实例",
   "wizard.help_me_choose": "帮助我选择",
   "wizard.search": "搜索实例",
