@@ -32,6 +32,7 @@
   "home.install_your_own": "Install your own",
   "home.install_your_own_text": "If you are interested in running your own instance — for your friends, family or organization — you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to.",
   "home.read_the_docs": "Read the docs",
+  "home.sponsored_by": "Sponsored by",
   "home.tagline": "The world’s largest free, open-source, decentralized microblogging network",
   "how_it_works.how_it_works": "How it works",
   "how_it_works.how_it_works_text1": "Anyone can run a server of Mastodon. Each server hosts individual user accounts, the content they produce, and the content they subscribe to.",
@@ -57,6 +58,7 @@
   "wizard.column.server": "Server",
   "wizard.column.stability": "Stability",
   "wizard.column.theme": "Theme",
+  "wizard.find_friends": "Find Twitter friends",
   "wizard.get_started": "<strong>Get started:</strong> Choose an instance",
   "wizard.help_me_choose": "Help me choose",
   "wizard.search": "Search for an instance",
@@ -68,5 +70,6 @@
   "wizard_row.population.new": "Small",
   "wizard_row.stability.awful": "Awful",
   "wizard_row.stability.intermittent": "Intermittent",
-  "wizard_row.stability.stable": "Stable"
+  "wizard_row.stability.stable": "Stable",
+  "wizard_row.user_count": "{population} {count, plural, one {person} other {people}}"
 }
