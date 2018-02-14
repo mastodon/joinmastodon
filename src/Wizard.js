@@ -2,11 +2,30 @@ import React from 'react';
 import WizardRow from './WizardRow';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { FormattedHTMLMessage as FormattedMessage, injectIntl, defineMessages } from 'react-intl';
-import WizardLanguageSelectContainer from './WizardLanguageSelectContainer';
+import ReactResponsiveSelect from 'react-responsive-select';
 
 const messages = defineMessages({
-  search: { id: 'wizard.search', defaultMessage: 'Search for an instance' }
+  i_am: { id: 'wizard.filters.i_am', defaultMessage: 'I am ' },
+  i_speak: { id: 'wizard.filters.i_speak', defaultMessage: 'I speak ' },
+  all_languages: { id: 'wizard.filters.all_languages', defaultMessage: 'all languages' },
+  everything: { id: 'wizard.filters.everything', defaultMessage: 'everything' },
+  artist: { id: 'wizard.filters.artist', defaultMessage: 'an artist' },
+  musician: { id: 'wizard.filters.musician', defaultMessage: 'a musician' },
+  writer: { id: 'wizard.filters.writer', defaultMessage: 'a writer' },
+  reader: { id: 'wizard.filters.reader', defaultMessage: 'a book lover' },
+  activist: { id: 'wizard.filters.activist', defaultMessage: 'an activist' },
+  sports_fan: { id: 'wizard.filters.sports_fan', defaultMessage: 'a sports fan' },
+  gamer: { id: 'wizard.filters.gamer', defaultMessage: 'a gamer' },
+  dev: { id: 'wizard.filters.dev', defaultMessage: 'a developer' },
+  sysadmin: { id: 'wizard.filters.sysadmin', defaultMessage: 'a sysadmin' },
+  academia: { id: 'wizard.filters.academia', defaultMessage: 'in academia' },
 });
+
+const caretIcon = (
+  <svg className="caret-icon" x="0px" y="0px" width="11.848px" height="6.338px" viewBox="351.584 2118.292 11.848 6.338">
+    <g><path d="M363.311,2118.414c-0.164-0.163-0.429-0.163-0.592,0l-5.205,5.216l-5.215-5.216c-0.163-0.163-0.429-0.163-0.592,0s-0.163,0.429,0,0.592l5.501,5.501c0.082,0.082,0.184,0.123,0.296,0.123c0.103,0,0.215-0.041,0.296-0.123l5.501-5.501C363.474,2118.843,363.474,2118.577,363.311,2118.414L363.311,2118.414z"/></g>
+  </svg>
+);
 
 class Wizard extends React.PureComponent {
 
@@ -14,13 +33,16 @@ class Wizard extends React.PureComponent {
     this.props.onMount();
   }
 
-  handleChange = e => {
-    this.props.onChange(e.target.value);
+  handleCategoryChange = ({ value }) => {
+    const { category } = this.props;
+    if (category === value) return;
+    this.props.onChangeCategory(value);
   }
 
-  handleClear = e => {
-    e.preventDefault();
-    this.props.onClear();
+  handleLanguageChange = ({ value }) => {
+    const { language } = this.props;
+    if (language === value) return;
+    this.props.onChangeLanguage(value);
   }
 
   renderThumb ({ style, ...props }) {
@@ -33,44 +55,59 @@ class Wizard extends React.PureComponent {
   }
 
   render () {
-    const { instances, searchValue, intl } = this.props;
-    const hasValue = searchValue.length > 0;
+    const { instances, category, language, intl } = this.props;
 
     return (
       <div className='wizard-page' id='getting-started'>
-        <h2><FormattedMessage id='wizard.get_started' defaultMessage='<strong>Get started:</strong> Choose an instance' /></h2>
-        <p><FormattedMessage id='wizard.text' defaultMessage='Each server is a separate, independently owned gateway into the fediverse. You can talk to your friends regardless of which one you choose, but each will have different moderation policies and interests, so choose the one that feels the most comfortable to you.' /></p>
+        <h1><i className='ion-person-add' /> <FormattedMessage id='wizard.sign_up' defaultMessage='Sign up' /></h1>
 
-        <div className='wizard-controls'>
-          <div className='external-wizard'>
-            <a className='cta button' target='_blank' href="https://instances.social"><FormattedMessage id='wizard.help_me_choose' defaultMessage='Help me choose' /></a>
-            <a className='cta button alt' target='_blank' href="https://bridge.joinmastodon.org"><FormattedMessage id='wizard.find_friends' defaultMessage='Find Twitter friends' /></a>
-          </div>
+        <form className='wizard-controls'>
+          <ReactResponsiveSelect
+            name="category"
+            options={[
+              { value: '', text: intl.formatMessage(messages.everything) },
+              { value: 'art', text: intl.formatMessage(messages.artist) },
+              { value: 'music', text: intl.formatMessage(messages.musician) },
+              { value: 'books', text: intl.formatMessage(messages.writer) },
+              { value: 'books', text: intl.formatMessage(messages.reader) },
+              { value: 'activism', text: intl.formatMessage(messages.activist) },
+              { value: 'sports', text: intl.formatMessage(messages.sports_fan) },
+              { value: 'games', text: intl.formatMessage(messages.gamer) },
+              { value: 'tech', text: intl.formatMessage(messages.dev) },
+              { value: 'tech', text: intl.formatMessage(messages.sysadmin) },
+              { value: 'academia', text: intl.formatMessage(messages.academia) },
+            ]}
+            caretIcon={caretIcon}
+            selectedValue={category}
+            prefix={intl.formatMessage(messages.i_am)}
+            onChange={this.handleCategoryChange}
+          />
 
-          <div className='spacer'></div>
+          <span className='wizard-controls__label'>,</span>
 
-          <div className='language-select'>
-            <WizardLanguageSelectContainer />
-          </div>
+          <ReactResponsiveSelect
+            name="language"
+            options={[
+              { value: '', text: intl.formatMessage(messages.all_languages) },
+              { value: 'en', text: 'English' },
+              { value: 'de', text: 'Deutsch' },
+              { value: 'fr', text: 'Français' },
+              { value: 'es', text: 'Español' },
+              { value: 'pl', text: 'Polski' },
+              { value: 'pt', text: 'Português' },
+              { value: 'ru', text: 'Русский' },
+              { value: 'ja', text: '日本語' },
+              { value: 'zh', text: '中文' },
+              { value: 'ar', text: 'العربية' },
+            ]}
+            caretIcon={caretIcon}
+            selectedValue={language}
+            prefix={intl.formatMessage(messages.i_speak)}
+            onChange={this.handleLanguageChange}
+          />
 
-          <div className='search'>
-            <label htmlFor='instance-search' className='accessibly-hidden'><FormattedMessage id='wizard.search' defaultMessage='Search for an instance' /></label>
-
-            <input
-              id='instance-search'
-              className='search__input'
-              type='text'
-              placeholder={intl.formatMessage(messages.search)}
-              value={searchValue}
-              onChange={this.handleChange}
-            />
-
-            <div role='button' tabIndex='0' className='search__icon' onClick={this.handleClear}>
-              <i className={`ion-android-search ${hasValue ? '' : 'active'}`} />
-              <i className={`ion-android-cancel ${hasValue ? 'active' : ''}`} />
-            </div>
-          </div>
-        </div>
+          <span className='wizard-controls__label'><FormattedMessage id='wizard.filters.results' defaultMessage='and here is where I can sign up:' /></span>
+        </form>
 
         <div className='wizard'>
           <Scrollbars className='wizard-content' style={{ height: 500 }} renderThumbVertical={this.renderThumb}>
@@ -80,7 +117,15 @@ class Wizard extends React.PureComponent {
           </Scrollbars>
         </div>
 
-        <p className='hint'><FormattedMessage tagName='strong' id='wizard.tip' defaultMessage='Tip:' /><FormattedMessage id='wizard.tip_text' defaultMessage='This isn’t just your home, it’s also the address that other people can find you by. It’ll be <samp>@username@example.com</samp> like choosing an email address.' /></p>
+        <div className='wizard-hint'>
+          <div className='wizard-hint__icon'>
+            <i className='ion-information-circled' />
+          </div>
+
+          <div className='wizard-hint__text'>
+            <FormattedMessage id='wizard.hint' defaultMessage="This is like picking an e-mail hosting provider, but more social since you'll see your neighbours. The domain will also be part of your username!" />
+          </div>
+        </div>
       </div>
     );
   }

@@ -116,6 +116,9 @@ $phi: 1.6180339887498948482;
   line-height: 36px;
   padding: 4px 16px;
   margin-bottom: 10px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 
   &.button {
     font-weight: 500;
