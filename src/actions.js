@@ -3,39 +3,32 @@ import axios from 'axios';
 const INSTANCES_API_TOKEN = 'JEzPe4Ff5c5WA7k4IP5tx0rJMDzEMFxhmXXZvBG4LFSF0Almf0ewfBAKtbPsqMWx1E0hYe6Wy2Zx6HJHP2LmSwUvKneZVOOnelmFaGB7yNeoCvWUxfM0WyVL0FODQPm7';
 
 export const INSTANCES_FETCH_SUCCESS = 'INSTANCES_FETCH_SUCCESS';
-export const SEARCH_VALUE_CHANGE     = 'SEARCH_VALUE_CHANGE';
 export const LOCALE_CHANGE           = 'LOCALE_CHANGE';
-export const INSTANCES_LOCALE_CHANGE = 'INSTANCES_LOCALE_CHANGE';
-
-const shuffle = array => {
-  let currentIndex = array.length, temporaryValue, randomIndex;
-
-  while (0 !== currentIndex) {
-    randomIndex   = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    temporaryValue      = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex]  = temporaryValue;
-  }
-
-  return array;
-};
+export const FILTER_LANGUAGE_CHANGE  = 'FILTER_LANGUAGE_CHANGE';
+export const FILTER_CATEGORY_CHANGE  = 'FILTER_CATEGORY_CHANGE';
 
 export function fetchInstances() {
   return (dispatch, getState) => {
-    if (getState().instances.length > 0) {
-      return;
-    }
+    const { category, language } = getState().filter;
 
     const headers = { 'Authorization': `Bearer ${INSTANCES_API_TOKEN}` };
-    const params  = { count: 0, include_down: false, include_closed: false, sort_by: 'users', sort_order: 'desc', supported_features: 'mstdn_custom_emojis' };
 
-    axios.get('https://instances.social/api/1.0/instances/list', { headers, params }).then(res => {
-      let { instances } = res.data;
-      shuffle(instances);
-      dispatch(fetchInstancesSuccess(instances));
-    });
+    const params = {
+      count: 60,
+      include_down: false,
+      include_closed: false,
+      min_version: '2.1.2',
+      min_active_users: '10',
+      category,
+      sort_by: 'active_users',
+      sort_order: 'desc',
+    };
+
+    if (language !== '') {
+      params.language = language;
+    }
+
+    axios.get('https://instances.social/api/1.0/instances/list', { headers, params }).then(({ data }) => dispatch(fetchInstancesSuccess(data.instances)));
   };
 };
 
@@ -46,9 +39,9 @@ export function fetchInstancesSuccess(data) {
   };
 };
 
-export function changeSearchValue(data) {
+export function changeFilterCategory(data) {
   return {
-    type: SEARCH_VALUE_CHANGE,
+    type: FILTER_CATEGORY_CHANGE,
     data,
   };
 };
@@ -60,9 +53,9 @@ export function changeLocale(data) {
   };
 };
 
-export function changeInstancesLocale(data) {
+export function changeFilterLanguage(data) {
   return {
-    type: INSTANCES_LOCALE_CHANGE,
+    type: FILTER_LANGUAGE_CHANGE,
     data,
   };
 };
