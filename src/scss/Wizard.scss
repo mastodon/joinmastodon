@@ -313,16 +313,30 @@
 
 @media only screen and (max-width: 800px) {
   .wizard-page {
-    margin: 60px 0;
-    padding: 0 20px;
+    margin: 0;
+    padding: 60px 20px;
+
+    &::before {
+      display: none;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
   }
 
   .wizard-controls {
-    margin-top: 60px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .rrs,
+  .wizard-controls__label {
+    margin-bottom: 10px;
   }
 
   .wizard {
-    max-height: 60vh;
+    max-height: 40vh;
   }
 }
 
