@@ -68,13 +68,13 @@ class Wizard extends React.PureComponent {
               { value: '', text: intl.formatMessage(messages.everything) },
               { value: 'art', text: intl.formatMessage(messages.artist) },
               { value: 'music', text: intl.formatMessage(messages.musician) },
-              { value: 'books', text: intl.formatMessage(messages.writer) },
-              { value: 'books', text: intl.formatMessage(messages.reader) },
+              { value: 'books-0', text: intl.formatMessage(messages.writer) },
+              { value: 'books-1', text: intl.formatMessage(messages.reader) },
               { value: 'activism', text: intl.formatMessage(messages.activist) },
               { value: 'sports', text: intl.formatMessage(messages.sports_fan) },
               { value: 'games', text: intl.formatMessage(messages.gamer) },
-              { value: 'tech', text: intl.formatMessage(messages.dev) },
-              { value: 'tech', text: intl.formatMessage(messages.sysadmin) },
+              { value: 'tech-0', text: intl.formatMessage(messages.dev) },
+              { value: 'tech-1', text: intl.formatMessage(messages.sysadmin) },
               { value: 'academia', text: intl.formatMessage(messages.academia) },
             ]}
             caretIcon={caretIcon}

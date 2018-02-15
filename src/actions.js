@@ -18,8 +18,8 @@ export function fetchInstances() {
       include_down: false,
       include_closed: false,
       min_version: '2.1.2',
-      min_active_users: '10',
-      category,
+      min_active_users: '1',
+      category: category.split('-')[0],
       sort_by: 'active_users',
       sort_order: 'desc',
     };
