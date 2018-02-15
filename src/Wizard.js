@@ -19,6 +19,8 @@ const messages = defineMessages({
   dev: { id: 'wizard.filters.dev', defaultMessage: 'a developer' },
   sysadmin: { id: 'wizard.filters.sysadmin', defaultMessage: 'a sysadmin' },
   academia: { id: 'wizard.filters.academia', defaultMessage: 'in academia' },
+  journalist: { id: 'wizard.filter.journalist', defaultMessage: 'a journalist' },
+  adult_content_creator: { id: 'wizard.filter.adult_content_creator', defaultMessage: 'an adult content creator' },
 });
 
 const caretIcon = (
@@ -70,12 +72,14 @@ class Wizard extends React.PureComponent {
               { value: 'music', text: intl.formatMessage(messages.musician) },
               { value: 'books-0', text: intl.formatMessage(messages.writer) },
               { value: 'books-1', text: intl.formatMessage(messages.reader) },
+              { value: 'journalism', text: intl.formatMessage(messages.journalist) },
               { value: 'activism', text: intl.formatMessage(messages.activist) },
               { value: 'sports', text: intl.formatMessage(messages.sports_fan) },
               { value: 'games', text: intl.formatMessage(messages.gamer) },
               { value: 'tech-0', text: intl.formatMessage(messages.dev) },
               { value: 'tech-1', text: intl.formatMessage(messages.sysadmin) },
               { value: 'academia', text: intl.formatMessage(messages.academia) },
+              { value: 'adult', text: intl.formatMessage(messages.adult_content_creator) },
             ]}
             caretIcon={caretIcon}
             selectedValue={category}
