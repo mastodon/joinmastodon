@@ -42,7 +42,7 @@ $phi: 1.6180339887498948482;
       line-height: 32px;
       transition: color $transition-out;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 14px;
 
       .lang-it & {
@@ -177,6 +177,7 @@ $phi: 1.6180339887498948482;
 
   h1 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 26px;
     margin-bottom: 20px;
 
@@ -238,6 +239,7 @@ $phi: 1.6180339887498948482;
 
   h2 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 16px;
     color: lighten($darkest, 40%);
     text-align: center;
@@ -377,6 +379,7 @@ $phi: 1.6180339887498948482;
 
   h2, h3 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 21px;
     margin-bottom: 20px;
     color: $lightest;
@@ -492,6 +495,7 @@ $phi: 1.6180339887498948482;
 
   h3 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
