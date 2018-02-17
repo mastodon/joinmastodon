@@ -2,17 +2,47 @@
 
 .wizard-page {
   max-width: 800px;
-  margin: 100px auto;
-  margin-bottom: 0;
+  margin: 0 auto;
+  padding: 60px 0;
+  position: relative;
 
-  h2 {
+  &::before {
+    content: "";
+    display: block;
+    background: url('assets/elephant-friend-top.png');
+    transform: scaleX(-1);
+    position: absolute;
+    width: 393px;
+    height: 176px;
+    z-index: -1;
+    top: 0;
+    right: -50px;
+  }
+
+  h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 21px;
-    margin-bottom: 20px;
-    color: $lighter;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 30px - 8px;
+    background: $darkest;
+    color: $vibrant;
+    display: inline-block;
+    padding: 8px 0;
 
-    strong {
-      color: $lightest;
+    .lang-ar & {
+      text-align: right;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 60px;
+      width: 0;
+      top: 0;
+      left: 50px;
+      border-left: 2px solid $vibrant;
+      z-index: -1;
     }
   }
 
@@ -20,6 +50,10 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
+
+    .lang-ar & {
+      direction: rtl;
+    }
 
     &.hint {
       color: $lighter;
@@ -32,6 +66,11 @@
         font-weight: 700;
         color: $lightest;
         margin-right: 10px;
+
+        .lang-ar & {
+          margin-right: 0;
+          margin-left: 10px;
+        }
       }
 
       span {
@@ -41,12 +80,35 @@
   }
 }
 
+.wizard-hint {
+  background: lighten($darkest, 14%);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  color: darken($lighter, 8%);
+  padding: 10px 16px;
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 21px;
+
+  &__icon {
+    font-size: 40px;
+    margin-right: 15px;
+  }
+
+  &__text {
+    color: $lighter;
+  }
+}
+
 .wizard {
   margin: 15px auto;
-  border: 1px solid darken($darkest, 4%);
   background: lighten($darkest, 8%);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   max-width: 800px;
+  max-height: 60vh;
   overflow: hidden;
 
   .wizard-header {
@@ -71,18 +133,81 @@
     font-size: 14px;
     text-decoration: none;
     color: inherit;
+    justify-content: space-between;
+
+    &__details {
+      width: 75%;
+      padding: 10px 0;
+    }
+
+    &__meta {
+      width: 15%;
+      padding: 10px 0;
+    }
+
+    &__thumbnail {
+      width: 10%;
+      padding: 10px 0;
+      display: flex;
+
+      & > div {
+        margin: 0 10px;
+        margin-right: 0;
+        overflow: hidden;
+        border-radius: 4px;
+        width: 100%;
+        position: relative;
+        background: $darkest;
+
+        img {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
 
     &:nth-child(even) {
       background: lighten($darkest, 2%);
     }
 
     &:hover {
-      color: $lightest;
+      .wizard-row__name {
+        color: $lightest;
+      }
     }
 
     &:focus {
       background: mix($darkest, $vibrant);
       color: $white;
+    }
+
+    &.offline {
+      color: lighten($darkest, 26%);
+
+      .indicator-text {
+        color: lighten($darkest, 26%) !important;
+      }
+
+      .indicator {
+        background: lighten($darkest, 26%) !important;
+      }
+
+      &:focus {
+        color: $white;
+
+        .indicator-text {
+          color: $white !important;
+        }
+
+        .indicator {
+          background: $white !important;
+        }
+      }
     }
   }
 
@@ -115,6 +240,19 @@
       cursor: pointer;
     }
   }
+}
+
+.wizard-row__name {
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.wizard-row__description {
+  padding: 0 10px;
+  color: lighten($darkest, 34%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .indicator-text {
@@ -156,145 +294,67 @@
   }
 }
 
-.search {
-  position: relative;
-}
-
 .wizard-controls {
   margin-top: 20px;
+  margin-bottom: 30px;
   display: flex;
+  align-items: center;
 
-  .cta.button {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .spacer {
-    flex-grow: 1
-  }
-}
-
-.search__input {
-  padding-right: 30px;
-  outline: 0;
-  box-sizing: border-box;
-  border-radius: 4px;
-  display: block;
-  min-width: 10em;
-  border: none;
-  padding: 10px;
-  padding-right: 30px;
-  font-family: inherit;
-  background: darken($darkest, 8%);
-  color: $lighter;
-  font-size: 14px;
-  margin: 0;
-
-  &::-moz-focus-inner {
-    border: 0;
-  }
-
-  &::-moz-focus-inner,
-  &:focus,
-  &:active {
-    outline: 0 !important;
-  }
-
-  &:focus {
-    background: darken($darkest, 4%);
-  }
-
-  @media screen and (max-width: 600px) {
-    font-size: 16px;
-  }
-}
-
-.search__icon {
-  .ion-android-search, .ion-android-cancel {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 2;
-    display: inline-block;
-    opacity: 0;
-    transition: all 100ms linear;
+  &__label {
     font-size: 18px;
-    width: 18px;
-    height: 18px;
-    line-height: 18px;
-    color: $lighter;
-    cursor: default;
-    pointer-events: none;
-
-    &.active {
-      pointer-events: auto;
-      opacity: 0.3;
-    }
+    font-weight: 500;
+    margin-right: 10px;
+    line-height: 44px;
   }
 
-  .ion-android-search {
-    transform: translateZ(0) rotate(90deg);
-
-    &.active {
-      pointer-events: none;
-      transform: translateZ(0) rotate(0deg);
-    }
-  }
-
-  .ion-android-cancel {
-    transform: translateZ(0) rotate(0deg);
-    cursor: pointer;
-
-    &.active {
-      transform: translateZ(0) rotate(90deg);
-    }
-
-    &:hover {
-      color: $lightest;
-    }
+  .rrs {
+    margin-right: 10px;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .wizard-page {
-    margin: 60px 0;
-    padding: 0 20px;
+    margin: 0;
+    padding: 60px 20px;
+
+    &::before {
+      display: none;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
   }
 
   .wizard-controls {
-    margin-top: 60px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .rrs,
+  .wizard-controls__label {
+    margin-bottom: 10px;
   }
 
   .wizard {
-    max-height: 60vh;
+    max-height: 40vh;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .external-wizard {
-    width: 230px;
-    margin-right: 5px;
-  }
+  .wizard {
+    .wizard-row__thumbnail,
+    .wizard-row__meta {
+      display: none;
+    }
 
-  .spacer {
-    display: none;
-  }
-
-  .search {
-    flex: 0 1 auto;
-  }
-
-  .search__input {
-    width: 100%;
-    min-width: 0;
+    .wizard-row__details {
+      width: 100%;
+    }
   }
 }
 
 @media only screen and (max-width: 380px) {
-  .search {
-    display: none;
-  }
-
   .optional-column {
     display: none;
   }
@@ -303,3 +363,176 @@
     width: 50% !important;
   }
 }
+
+/*
+  React Responsive Select - Default styles
+*/
+.rrs {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.rrs *,
+.rrs *:before,
+.rrs *:after {
+  box-sizing: border-box;
+}
+
+.rrs__button {
+  color: $lighter;
+  position: relative;
+  cursor: pointer;
+  height: 44px;
+  line-height: 44px;
+  background: darken($darkest, 4%);
+  border-radius: 4px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.rrs__button:focus {
+  outline: 0;
+}
+
+.rrs__button + .rrs__options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: darken($darkest, 4%);
+  position: absolute;
+  z-index: 2;
+  border-top: 1px solid $darkest;
+  border-radius: 0 0 4px 4px;
+  top: 44px;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rrs--options-visible .rrs__options {
+  height: auto;
+  visibility: visible;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  max-height: 230px;
+}
+
+.rrs__option {
+  cursor: pointer;
+  padding: 0 1rem;
+  height: 44px;
+  line-height: 44px;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.rrs__option * {
+  pointer-events: none;
+}
+
+.rrs__option:first-of-type {
+  border-top: 0;
+}
+
+.rrs__option:focus {
+  outline: 0;
+}
+
+.rrs__option:hover {
+  background: $darkest;
+  color: #fff;
+}
+
+.rrs__option:active {
+  background: $darkest;
+}
+
+.rrs__option.rrs__option--next-selection {
+  background: mix($darkest, $vibrant);
+  color: #fff;
+}
+
+.rrs__option.rrs__option--selected {
+  color: #fff;
+}
+
+.rrs__label {
+  padding: 0 2rem 0 1rem;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: transparent;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.rrs--options-visible .rrs__label,
+.rrs__button:focus .rrs__label {
+  outline: 0;
+}
+
+.rrs__label {
+  font-size: 18px;
+  background: transparent;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.caret-icon {
+  position: absolute;
+  right: 0.8rem;
+  top: 1.25rem;
+  fill: $lighter;
+}
+
+.rrs--options-visible .caret-icon {
+  transform: rotate(180deg);
+}
+
+.rrs__options {
+  transition: all .2s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-property: max-height, opacity;
+  max-height: 0;
+  opacity: 0;
+}
+
+.rrs--options-visible .rrs__options {
+  opacity: 1;
+}
+
+/*
+  Multiselect overrides
+*/
+/*
+.rrs__multiselect-label {
+  display: inline-flex;
+  max-width: 100%;
+  line-height: 1;
+}
+
+.rrs__multiselect-label__text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.rrs__multiselect-label__badge{
+  border: 1px solid #ccc;
+  padding: 1px 6px;
+  margin: 0 0 0 4px;
+  border-radius: 8px;
+  color: #666;
+  font-size: 11px;
+  vertical-align: middle;
+  display: inline-block;
+}
+*/

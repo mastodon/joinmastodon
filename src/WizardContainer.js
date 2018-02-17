@@ -1,37 +1,29 @@
 import Wizard from './Wizard';
 import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
-import { fetchInstances, changeSearchValue } from './actions';
-import fuzzysearch from 'fuzzysearch';
-
-const getInstances = createSelector(
-  [
-    state => state.locale,
-    state => state.searchValue,
-    state => state.instances,
-  ],
-  (_, searchValue, instances) => {
-    searchValue = searchValue.toLowerCase();
-
-    return instances.filter(item => {
-      const eligible    = !item.dead && item.uptime > 0.70;
-      const isSearching = searchValue.length > 0;
-
-      return eligible &&
-        (!isSearching || fuzzysearch(searchValue, item.searchable));
-    });
-  }
-);
+import { fetchInstances, changeFilterCategory, changeFilterLanguage } from './actions';
 
 const mapStateToProps = state => ({
-  instances: getInstances(state),
-  searchValue: state.searchValue,
+  instances: state.instances,
+  category: state.filter.category,
+  language: state.filter.language,
 });
 
 const mapDispatchToProps = dispatch => ({
-  onMount: () => dispatch(fetchInstances()),
-  onChange: value => dispatch(changeSearchValue(value)),
-  onClear: () => dispatch(changeSearchValue('')),
+
+  onMount: () => {
+    dispatch(fetchInstances());
+  },
+
+  onChangeCategory: value => {
+    dispatch(changeFilterCategory(value));
+    dispatch(fetchInstances());
+  },
+
+  onChangeLanguage: value => {
+    dispatch(changeFilterLanguage(value));
+    dispatch(fetchInstances());
+  },
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wizard);

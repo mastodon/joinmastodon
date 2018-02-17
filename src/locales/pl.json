@@ -32,6 +32,7 @@
   "home.install_your_own": "Zainstaluj u siebie",
   "home.install_your_own_text": "Jeśli jesteś zainteresowany uruchomieniem swojej własnej instancji — dla swoich przyjaciół, rodziny lub organizacji — możesz zacząć od zapoznania się z dokumentacją instalacji. Hostujesz tylko swoich użytkowników oraz treści, które subskrybują.",
   "home.read_the_docs": "Przeczytaj dokumentację",
+  "home.sponsored_by": "Projekt sponsorowany przez",
   "home.tagline": "Największa na świecie wolna i otwartoźródłowa sfederowana sieć społecznościowa",
   "how_it_works.how_it_works": "Jak to działa?",
   "how_it_works.how_it_works_text1": "Każdy może posiadać serwer Mastodona. Każdy serwer hostuje indywidualne konta użytkowników, treści przez nich produkowane, oraz treści przez nich obserwowane.",
@@ -52,10 +53,12 @@
   "sponsorship.sponsors_text": "<strong>Sponsorzy</strong> to osoby, które wpłaciły od $10 do $39 na rozwój Mastodona.",
   "sponsorship.support_the_project": "Wesprzyj projekt",
   "sponsorship.thanks_to": "Mastodon jest <strong>wolnym i otwartoźródłowym oprogramowaniem</strong>. Nie ma tu reklam ani monetyzacji. <strong>Dotacje pomagają w utrzymaniu projektu</strong>. Podziękowania dla następujących osób i firm:",
+  "title": "Sieć społecznościowa znowu w Twoich rękach – projekt Mastodon",
   "wizard.column.population": "Liczebność",
   "wizard.column.server": "Serwer",
   "wizard.column.stability": "Stabilność",
   "wizard.column.theme": "Motyw",
+  "wizard.find_friends": "Znajdź znajomych z Twittera",
   "wizard.get_started": "<strong>Rozpocznij:</strong> Wybierz instancję",
   "wizard.help_me_choose": "Pomóż mi wybrać",
   "wizard.search": "Szukaj instancji",
@@ -67,5 +70,6 @@
   "wizard_row.population.new": "Nowy serwer",
   "wizard_row.stability.awful": "Okropna",
   "wizard_row.stability.intermittent": "Średnia",
-  "wizard_row.stability.stable": "Dobra"
+  "wizard_row.stability.stable": "Dobra",
+  "wizard_row.user_count": "{population} {count, plural, one {użytkownik}  other {użytkowników}}"
 }

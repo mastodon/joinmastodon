@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import { HashLink as Link } from 'react-router-hash-link';
+import AnchorLink from './AnchorLink';
 
 import Features from './Features';
 import Wizard from './WizardContainer';
@@ -9,6 +10,8 @@ import Credits from './Credits';
 import Navigation from './Navigation';
 
 import sponsorTootdon from './assets/sponsors/tootdon.png';
+import sponsorKibousoft from './assets/sponsors/kibousoft.png';
+import sponsorPixiv from './assets/sponsors/pixiv.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
@@ -31,8 +34,8 @@ const Home = () => (
         <h1><FormattedMessage id='home.headline' defaultMessage='Social networking, <strong>back in your hands</strong>' /></h1>
         <p><FormattedMessage id='home.tagline' defaultMessage='The world’s largest free, open-source, decentralized microblogging network' /></p>
 
-        <Link to='/#getting-started' className='cta button'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></Link>
-        <Link to='/#how-it-works' className='cta button alt'><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></Link>
+        <AnchorLink href='#getting-started' className='cta button'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></AnchorLink>
+        <AnchorLink href='#how-it-works' className='cta button alt'><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></AnchorLink>
       </div>
 
       <div className='hero'>
@@ -73,7 +76,9 @@ const Home = () => (
 
         <div className='logo-grid'>
           <div>
-            <a href='http://tootdon.club/' className='logo-sponsor-tootdon'><img src={sponsorTootdon} alt='Tootdon' /></a>
+            <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorTootdon} alt='Tootdon' /></Link>
+            <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorPixiv} alt='pixiv Inc.' /></Link>
+            <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorKibousoft} alt='Kibousoft LLC' /></Link>
           </div>
         </div>
       </div>

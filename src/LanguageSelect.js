@@ -7,7 +7,11 @@ import flagPl from 'twemoji/2/svg/1f1f5-1f1f1.svg';
 import flagEs from 'twemoji/2/svg/1f1ea-1f1f8.svg';
 import flagJa from 'twemoji/2/svg/1f1ef-1f1f5.svg';
 import flagDe from 'twemoji/2/svg/1f1e9-1f1ea.svg';
-
+import flagBr from 'twemoji/2/svg/1f1e7-1f1f7.svg';
+import flagCn from 'twemoji/2/svg/1f1e8-1f1f3.svg';
+import flagRu from 'twemoji/2/svg/1f1f7-1f1fa.svg';
+import flagIt from 'twemoji/2/svg/1f1ee-1f1f9.svg';
+import flagAr from 'twemoji/2/svg/1f1e6-1f1ea.svg';
 
 const options = [
   { value: 'en', label: <span><img src={flagEn} className='emoji' alt='' /> English</span> },
@@ -15,7 +19,12 @@ const options = [
   { value: 'fr', label: <span><img src={flagFr} className='emoji' alt='' /> Français</span> },
   { value: 'es', label: <span><img src={flagEs} className='emoji' alt='' /> Español</span> },
   { value: 'pl', label: <span><img src={flagPl} className='emoji' alt='' /> Polski</span> },
-  { value: 'ja', label: <span><img src={flagJa} className='emoji' alt='' /> 日本語</span> }
+  { value: 'pt-BR', label: <span><img src={flagBr} className='emoji' alt='' /> Português do Brasil</span> },
+  { value: 'ru', label: <span><img src={flagRu} className='emoji' alt='' /> Русский</span> },
+  { value: 'ja', label: <span><img src={flagJa} className='emoji' alt='' /> 日本語</span> },
+  { value: 'zh', label: <span><img src={flagCn} className='emoji' alt='' /> 简体中文</span> },
+  { value: 'it', label: <span><img src={flagIt} className='emoji' alt='' /> Italiano</span> },
+  { value: 'ar', label: <span><img src={flagAr} className='emoji' alt='' /> العربية</span> },
 ];
 
 export default class LanguageSelect extends PureComponent {
