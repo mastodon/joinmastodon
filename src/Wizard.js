@@ -93,16 +93,17 @@ class Wizard extends React.PureComponent {
             name="language"
             options={[
               { value: '', text: intl.formatMessage(messages.all_languages) },
-              { value: 'en', text: 'English' },
+              { value: 'ar', text: 'العربية' },
               { value: 'de', text: 'Deutsch' },
-              { value: 'fr', text: 'Français' },
+              { value: 'en', text: 'English' },
               { value: 'es', text: 'Español' },
+              { value: 'fr', text: 'Français' },
+              { value: 'ja', text: '日本語' },
+              { value: 'nl', text: 'Nederlands' },
               { value: 'pl', text: 'Polski' },
               { value: 'pt', text: 'Português' },
               { value: 'ru', text: 'Русский' },
-              { value: 'ja', text: '日本語' },
               { value: 'zh', text: '中文' },
-              { value: 'ar', text: 'العربية' },
             ]}
             caretIcon={caretIcon}
             selectedValue={language}
