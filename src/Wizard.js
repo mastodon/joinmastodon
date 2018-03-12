@@ -21,7 +21,7 @@ const messages = defineMessages({
   academia: { id: 'wizard.filters.academia', defaultMessage: 'in academia' },
   journalist: { id: 'wizard.filter.journalist', defaultMessage: 'a journalist' },
   adult_content_creator: { id: 'wizard.filter.adult_content_creator', defaultMessage: 'an adult content creator' },
-  lgbt: { id: 'wizard.filter.lgbt', defaultMessage: 'interested in LGBT issues' },
+  lgbt: { id: 'wizard.filter.lgbt', defaultMessage: 'LGBTQ+' },
   poc_aa: { id: 'wizard.filter.poc_aa', defaultMessage: 'interested in Black American issues' },
 });
 
