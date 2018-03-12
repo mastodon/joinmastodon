@@ -21,6 +21,8 @@ const messages = defineMessages({
   academia: { id: 'wizard.filters.academia', defaultMessage: 'in academia' },
   journalist: { id: 'wizard.filter.journalist', defaultMessage: 'a journalist' },
   adult_content_creator: { id: 'wizard.filter.adult_content_creator', defaultMessage: 'an adult content creator' },
+  lgbt: { id: 'wizard.filter.lgbt', defaultMessage: 'interested in LGBT issues' },
+  poc_aa: { id: 'wizard.filter.poc_aa', defaultMessage: 'interested in Black American issues' },
 });
 
 const caretIcon = (
@@ -59,66 +61,75 @@ class Wizard extends React.PureComponent {
   render () {
     const { instances, category, language, intl } = this.props;
 
+    const content = instances.length > 0 ? (
+      instances.map(item => <WizardRow key={item.id} instance={item} />)
+    ) : (
+      <div className='empty'>
+        <FormattedMessage id='wizard.empty' defaultMessage='No results… for now!' />
+      </div>
+    );
     return (
       <div className='wizard-page' id='getting-started'>
         <h1><i className='ion-person-add' /> <FormattedMessage id='wizard.sign_up' defaultMessage='Sign up' /></h1>
 
         <form className='wizard-controls'>
-          <ReactResponsiveSelect
-            name="category"
-            options={[
-              { value: '', text: intl.formatMessage(messages.everything) },
-              { value: 'art', text: intl.formatMessage(messages.artist) },
-              { value: 'music', text: intl.formatMessage(messages.musician) },
-              { value: 'books-0', text: intl.formatMessage(messages.writer) },
-              { value: 'books-1', text: intl.formatMessage(messages.reader) },
-              { value: 'journalism', text: intl.formatMessage(messages.journalist) },
-              { value: 'activism', text: intl.formatMessage(messages.activist) },
-              { value: 'sports', text: intl.formatMessage(messages.sports_fan) },
-              { value: 'games', text: intl.formatMessage(messages.gamer) },
-              { value: 'tech-0', text: intl.formatMessage(messages.dev) },
-              { value: 'tech-1', text: intl.formatMessage(messages.sysadmin) },
-              { value: 'academia', text: intl.formatMessage(messages.academia) },
-              { value: 'adult', text: intl.formatMessage(messages.adult_content_creator) },
-            ]}
-            caretIcon={caretIcon}
-            selectedValue={category}
-            prefix={intl.formatMessage(messages.i_am)}
-            onChange={this.handleCategoryChange}
-          />
+          <div className='row'>
+            <ReactResponsiveSelect
+              name="category"
+              options={[
+                { value: '', text: intl.formatMessage(messages.everything) },
+                { value: 'art', text: intl.formatMessage(messages.artist) },
+                { value: 'music', text: intl.formatMessage(messages.musician) },
+                { value: 'books-0', text: intl.formatMessage(messages.writer) },
+                { value: 'books-1', text: intl.formatMessage(messages.reader) },
+                { value: 'journalism', text: intl.formatMessage(messages.journalist) },
+                { value: 'activism', text: intl.formatMessage(messages.activist) },
+                { value: 'lgbt', text: intl.formatMessage(messages.lgbt) },
+                { value: 'poc-0', text: intl.formatMessage(messages.poc_aa) },
+                { value: 'sports', text: intl.formatMessage(messages.sports_fan) },
+                { value: 'games', text: intl.formatMessage(messages.gamer) },
+                { value: 'tech-0', text: intl.formatMessage(messages.dev) },
+                { value: 'tech-1', text: intl.formatMessage(messages.sysadmin) },
+                { value: 'academia', text: intl.formatMessage(messages.academia) },
+                { value: 'adult', text: intl.formatMessage(messages.adult_content_creator) },
+              ]}
+              caretIcon={caretIcon}
+              selectedValue={category}
+              prefix={intl.formatMessage(messages.i_am)}
+              onChange={this.handleCategoryChange}
+            />
 
-          <span className='wizard-controls__label'>,</span>
+            <span className='wizard-controls__label'>,</span>
 
-          <ReactResponsiveSelect
-            name="language"
-            options={[
-              { value: '', text: intl.formatMessage(messages.all_languages) },
-              { value: 'ar', text: 'العربية' },
-              { value: 'de', text: 'Deutsch' },
-              { value: 'en', text: 'English' },
-              { value: 'es', text: 'Español' },
-              { value: 'fr', text: 'Français' },
-              { value: 'ja', text: '日本語' },
-              { value: 'nl', text: 'Nederlands' },
-              { value: 'pl', text: 'Polski' },
-              { value: 'pt', text: 'Português' },
-              { value: 'ru', text: 'Русский' },
-              { value: 'zh', text: '中文' },
-            ]}
-            caretIcon={caretIcon}
-            selectedValue={language}
-            prefix={intl.formatMessage(messages.i_speak)}
-            onChange={this.handleLanguageChange}
-          />
+            <ReactResponsiveSelect
+              name="language"
+              options={[
+                { value: '', text: intl.formatMessage(messages.all_languages) },
+                { value: 'ar', text: 'العربية' },
+                { value: 'de', text: 'Deutsch' },
+                { value: 'en', text: 'English' },
+                { value: 'es', text: 'Español' },
+                { value: 'fr', text: 'Français' },
+                { value: 'ja', text: '日本語' },
+                { value: 'nl', text: 'Nederlands' },
+                { value: 'pl', text: 'Polski' },
+                { value: 'pt', text: 'Português' },
+                { value: 'ru', text: 'Русский' },
+                { value: 'zh', text: '中文' },
+              ]}
+              caretIcon={caretIcon}
+              selectedValue={language}
+              prefix={intl.formatMessage(messages.i_speak)}
+              onChange={this.handleLanguageChange}
+            />
+          </div>
 
           <span className='wizard-controls__label'><FormattedMessage id='wizard.filters.results' defaultMessage='and here is where I can sign up:' /></span>
         </form>
 
         <div className='wizard'>
           <Scrollbars className='wizard-content' style={{ height: 500 }} renderThumbVertical={this.renderThumb}>
-            {instances.map(item =>
-              <WizardRow key={item.id} instance={item} />
-            )}
+            {content}
           </Scrollbars>
         </div>
 
