@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const INSTANCES_API_TOKEN = 'JEzPe4Ff5c5WA7k4IP5tx0rJMDzEMFxhmXXZvBG4LFSF0Almf0ewfBAKtbPsqMWx1E0hYe6Wy2Zx6HJHP2LmSwUvKneZVOOnelmFaGB7yNeoCvWUxfM0WyVL0FODQPm7';
+export const INSTANCES_API_TOKEN = 'JEzPe4Ff5c5WA7k4IP5tx0rJMDzEMFxhmXXZvBG4LFSF0Almf0ewfBAKtbPsqMWx1E0hYe6Wy2Zx6HJHP2LmSwUvKneZVOOnelmFaGB7yNeoCvWUxfM0WyVL0FODQPm7';
 
 export const INSTANCES_FETCH_SUCCESS = 'INSTANCES_FETCH_SUCCESS';
 export const LOCALE_CHANGE           = 'LOCALE_CHANGE';
@@ -28,7 +28,14 @@ export function fetchInstances() {
       params.language = language;
     }
 
-    axios.get('https://instances.social/api/1.0/instances/list', { headers, params }).then(({ data }) => dispatch(fetchInstancesSuccess(data.instances)));
+    axios.get('https://instances.social/api/1.0/instances/list', { headers, params })
+         .then(({ data }) => dispatch(fetchInstancesSuccess(data.instances)))
+         .catch(err => {
+           console.error(`Using cached fallback for (${params.category}, ${language}) because of: ${err.message}`);
+
+           axios.get(`/cache/list-${params.category}-${language}.json`)
+                .then(({ data }) => dispatch(fetchInstancesSuccess(data.instances)));
+         });
   };
 };
 
