@@ -29,7 +29,13 @@ export function fetchInstances() {
     }
 
     axios.get('https://instances.social/api/1.0/instances/list', { headers, params })
-         .then(({ data }) => dispatch(fetchInstancesSuccess(data.instances)))
+         .then(({ data }) => {
+            if (data.instances.length == 0) {
+              throw new Error("No data returned");
+            }
+
+            return dispatch(fetchInstancesSuccess(data.instances));
+         })
          .catch(err => {
            console.error(`Using cached fallback for (${params.category}, ${language}) because of: ${err.message}`);
 
