@@ -167,10 +167,16 @@
     margin: 40px 0;
 
     ul {
-      columns: 3;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -5px;
     }
 
     li {
+      box-sizing: border-box;
+      width: 33.3%;
+      flex: 0 0 auto;
+      padding: 0 5px;
       margin-bottom: 10px;
     }
 
