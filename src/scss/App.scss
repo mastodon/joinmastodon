@@ -127,6 +127,7 @@ $phi: 1.6180339887498948482;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-right: 4px;
+    font-family: inherit;
 
     &:hover {
       background-color: lighten($lighter, 8%);
