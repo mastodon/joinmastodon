@@ -16,7 +16,7 @@
   "features.media_embedding": "投稿にメディアを埋め込み",
   "features.open_standards": "オープンなWeb規格で開発",
   "features.post_filtering": "柔軟な公開範囲設定",
-  "features.relevancy": "関連のあるコミュニテイを設定可能",
+  "features.relevancy": "関連コミュニテイを設定可能",
   "features.safety": "あなたのコミュニティで安心して利用",
   "features.safety_text": "Mastodonは<strong>効果的な対荒らしツール</strong>が付属していて、オンライン上の荒らしからあなたを守ることができます。小規模な相互接続されたコミュニティでは、治安を守るために協力を募るための<strong>たくさんのモデレーター</strong>がいるということです。友達、あなたのコミュニティ、あるいはMastodon全体からあなたの投稿を誰に見せるかを選ぶこともできます。",
   "features.spoiler_warnings": "警告文を表示可能",
@@ -64,10 +64,10 @@
   "wizard.filter.poc_aa": "ブラックアメリカンです",
   "wizard.filters.academia": "学生です",
   "wizard.filters.activist": "活動家です",
-  "wizard.filters.all_languages": "全言語",
+  "wizard.filters.all_languages": "全言語です",
   "wizard.filters.artist": "アーティストです",
   "wizard.filters.dev": "ソフトウェア開発者です",
-  "wizard.filters.everything": "全て",
+  "wizard.filters.everything": "全てが好きです",
   "wizard.filters.gamer": "ゲーマーです",
   "wizard.filters.i_am": "私は",
   "wizard.filters.i_speak": "私の言語は",
@@ -82,5 +82,5 @@
   "wizard_row.stability.awful": "不安定",
   "wizard_row.stability.intermittent": "断続的",
   "wizard_row.stability.stable": "安定",
-  "wizard_row.user_count": "{population} {count, plural, one {person} other {people}}"
+  "wizard_row.user_count": "{population} 人"
 }
