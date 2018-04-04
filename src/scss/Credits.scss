@@ -6,6 +6,7 @@
 
   h3 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
@@ -20,14 +21,26 @@
 
   .branding {
     width: 30%;
+
+    .lang-ar & {
+      text-align: right;
+    }
   }
 
   .funding {
     margin-right: 15px;
+
+    .lang-ar & {
+      text-align: right;
+    }
   }
 
   .color-scheme {
     margin-top: 50px;
+
+    .lang-ar & h3 {
+      text-align: right;
+    }
   }
 
   .color-swatch {

@@ -3,7 +3,8 @@
 $transition-in: 100ms linear;
 $transition-out: 250ms linear;
 
-.dropdown {
+.dropdown,
+.navbar ul .dropdown {
   position: relative;
 
   .emoji {
@@ -17,7 +18,7 @@ $transition-out: 250ms linear;
     box-sizing: border-box;
     color: $lighter;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     cursor: pointer;
     outline: none;
@@ -36,11 +37,12 @@ $transition-out: 250ms linear;
     box-sizing: border-box;
     border-radius: 4px;
     margin-top: -1px;
-    max-height: 200px;
-    width: 140px;
+    max-height: 480px;
+    width: 200px;
     overflow-y: auto;
     position: absolute;
     top: 100%;
+    left: -95px;
     z-index: 1000;
     -webkit-overflow-scrolling: touch;
   }
@@ -52,9 +54,10 @@ $transition-out: 250ms linear;
     display: block;
     padding: 4px 16px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 13px;
     text-align: left;
+    transition: none;
 
     &:last-child {
       border-bottom-right-radius: 2px;
@@ -63,7 +66,9 @@ $transition-out: 250ms linear;
 
     &:hover,
     &.active {
+      color: $darkest;
       background-color: $lighter;
+      transition: none;
     }
   }
 

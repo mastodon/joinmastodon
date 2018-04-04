@@ -2,7 +2,11 @@
 
 .sponsorship {
   .intro {
-    padding-bottom: 50px;
+    padding-bottom: 90px;
+
+    .tier {
+      margin: 0;
+    }
   }
 
   .text {
@@ -20,19 +24,32 @@
   .final-cta {
     background: darken($darkest, 4%);
     padding: 100px 0;
+
+    .lang-ar & {
+      direction: rtl;
+    }
   }
 
   h2, h3 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 21px;
     margin-bottom: 20px;
     color: $lightest;
+
+    .lang-ar & {
+      direction: rtl;
+    }
   }
 
   p {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
+
+    .lang-ar & {
+      direction: rtl;
+    }
 
     strong {
       font-weight: 700;
@@ -103,22 +120,12 @@
       color: inherit;
       text-decoration: none;
       display: block;
-      margin: 0 40px;
-      margin-bottom: 40px;
+      margin: 0 20px;
+      margin-bottom: 20px;
 
       img {
-        filter: grayscale(100%);
         height: 40px;
         width: auto;
-        transition: filter 200ms ease;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-        img {
-          filter: grayscale(0%);
-        }
       }
     }
   }
@@ -160,10 +167,16 @@
     margin: 40px 0;
 
     ul {
-      columns: 3;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -5px;
     }
 
     li {
+      box-sizing: border-box;
+      width: 33.3%;
+      flex: 0 0 auto;
+      padding: 0 5px;
       margin-bottom: 10px;
     }
 

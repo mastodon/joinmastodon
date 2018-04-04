@@ -22,7 +22,7 @@ const Features = () => (
     <div className='feature container'>
       <div className='right visual'><i className='ion-ios-people' /></div>
       <div className='left text'>
-        <h2><FormattedMessage id='features.user_first' defaultMessage='Putting the user first' /></h2>
+        <h2><FormattedMessage id='features.user_first' defaultMessage='Putting people first' /></h2>
         <p><FormattedMessage id='features.user_first_text' defaultMessage='You’re a person, not a product. Mastodon is a free, open-source development that has been crowdfunded, not financed. All instances are <strong>independently owned, operated, and moderated</strong>. There is no monopoly by a single commercial company, no ads, and no tracking. <strong>Mastodon works for you</strong>, and not the other way around.' /></p>
       </div>
     </div>

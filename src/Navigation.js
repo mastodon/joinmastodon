@@ -3,8 +3,16 @@ import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
 import LanguageSelectContainer from './LanguageSelectContainer';
+import Dropdown from './Dropdown';
 
 import mastodonLogo from './assets/logo_full.svg';
+
+const options = [
+  { value: 'https://medium.com/tootsuite', label: <FormattedMessage id='nav.blog' defaultMessage='Blog' />},
+  { value: 'https://discourse.joinmastodon.org', label: <FormattedMessage id='nav.support' defaultMessage='Support' /> },
+  { value: 'https://github.com/tootsuite/documentation', label: <FormattedMessage id='nav.docs' defaultMessage='Documentation' /> },
+  { value: 'https://www.designbyhumans.com/shop/sticker/mastodon-logo-sticker/791326/', label: <FormattedMessage id='nav.merch' defaultMessage='Merch' /> },
+];
 
 const Navigation = () => (
   <div className='navbar container'>
@@ -17,10 +25,9 @@ const Navigation = () => (
     </ul>
 
     <ul className='right'>
-      <li className='optional-link'><a href='https://discourse.joinmastodon.org'><FormattedMessage id='nav.support' defaultMessage='Support' /></a></li>
-      <li className='optional-link-2'><a href='https://github.com/tootsuite/documentation'><FormattedMessage id='nav.docs' defaultMessage='Documentation' /></a></li>
       <li><Link to='/sponsors'><FormattedMessage id='nav.sponsors' defaultMessage='Sponsors' /></Link></li>
       <li><a href='https://github.com/tootsuite/mastodon'><FormattedMessage id='nav.code' defaultMessage='Source code' /></a></li>
+      <li><Dropdown asLinks label={<FormattedMessage id='nav.resources' defaultMessage='Resources' />} options={options} /></li>
       <li><LanguageSelectContainer /></li>
     </ul>
   </div>
