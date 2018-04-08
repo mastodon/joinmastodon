@@ -7,6 +7,7 @@ import Navigation from './Navigation';
 import sponsorTootdon from './assets/sponsors/tootdon.png';
 import sponsorKibousoft from './assets/sponsors/kibousoft.png';
 import sponsorPixiv from './assets/sponsors/pixiv.png';
+import sponsorFourthEstate from './assets/sponsors/FourthEstate-logo.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
@@ -14,7 +15,7 @@ import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
 // import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
 import avatarSdf from './assets/sponsors/sdf.jpg';
 import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
-import avatarAndreaValenti from './assets/sponsors/andreavalenti.png';
+//import avatarAndreaValenti from './assets/sponsors/andreavalenti.png';
 // import avatarDavidHutchinson from './assets/sponsors/davidhutchinson.png';
 import avatarIrick from './assets/sponsors/irick.gif';
 //import avatarSirTyrent from './assets/sponsors/sirtyrent.png';
@@ -46,6 +47,7 @@ const Sponsorship = () => (
             <a href='http://tootdon.club/'><img src={sponsorTootdon} alt='Tootdon' /></a>
             <a href='http://kibousoft.co.jp/'><img src={sponsorKibousoft} alt='Kibousoft LLC' /></a>
             <a href='https://pixiv.net/'><img src={sponsorPixiv} alt='pixiv Inc.' /></a>
+            <a href='http://www.fourthestate.co/'><img src={sponsorFourthEstate} alt='Fourth Estate' /></a>
           </div>
         </div>
       </div>
