@@ -23,7 +23,7 @@ const HowItWorks = () => (
 
       <div className='benefits'>
         <h3><FormattedMessage id='how_it_works.why_its_cool' defaultMessage='Why is that cool?' /></h3>
-        <p><FormattedMessage id='how_it_works.why_its_cool_text' defaultMessage='Servers are run independently by different people and organizations. They can apply wildly different moderation policies, so you can find or make one that fits your taste perfectly. A decentralized network is harder for governments to censor. If one server goes bankrupt or starts acting unethically, the network persists so you never have to worry about migrating your friends and audience to a yet another platform again.' /></p>
+        <p><FormattedMessage id='how_it_works.why_its_cool_text' defaultMessage='Servers are run independently by different people and organizations. They can apply wildly different moderation policies, so you can find or make one that fits your taste perfectly. A decentralized network is harder for governments to censor. If one server goes bankrupt or starts acting unethically, the network persists so you never have to worry about migrating your friends and audience to yet another platform.' /></p>
       </div>
 
       <Link to='/#getting-started' className='cta button alt'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></Link>
