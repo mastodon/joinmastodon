@@ -22,6 +22,7 @@ import avatarIrick from './assets/sponsors/irick.gif';
 import avatarVJ from './assets/sponsors/vj.png';
 import avatarFragbenny from './assets/sponsors/fragbenny.jpeg';
 import avatarIanna from './assets/sponsors/ianna.png';
+import avatarEvan from './assets/sponsors/evan.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -73,11 +74,11 @@ const Sponsorship = () => (
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Martin Seeger</strong><span>-</span></span></a></li>
             <li><a href='https://vulpine.club/@Irick'><img src={avatarIrick} alt='' /> <span><strong>Irick Corwal</strong><span>https://vulpine.club/@Irick</span></span></a></li>
             <li><a href='https://eightballoon.com/'><img src={noAvatar} alt='' /> <span><strong>Takanori Yamada</strong><span>https://eightballoon.com/</span></span></a></li>
-            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Evan Prodromou</strong><span>-</span></span></a></li>
+            <li><a href='https://identi.ca/evan'><img src={avatarEvan} alt='' /> <span><strong>Evan Prodromou</strong><span>https://identi.ca/evan</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Blaine Cook</strong><span>-</span></span></a></li>
             <li><a href='https://www.whatisseo.com/'><img src={avatarVJ} alt='' /> <span><strong>VJ</strong><span>https://www.whatisseo.com/</span></span></a></li>
             <li><a href='https://fragbenny.de/'><img src={avatarFragbenny} alt='' /> <span><strong>fragbenny</strong><span>https://fragbenny.de/</span></span></a></li>
-            <li><a href='http://inanna.xyz/'><img src={avatarIanna} alt='' /> <span><strong>Inanna</strong><span>http://inanna.xyz/</span></span></a></li>
+            <li><a href='https://inanna.xyz/'><img src={avatarIanna} alt='' /> <span><strong>Inanna</strong><span>https://inanna.xyz/</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Mark Atwood</strong><span>-</span></span></a></li>
           </ul>
         </div>
