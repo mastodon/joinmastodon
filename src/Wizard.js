@@ -72,6 +72,8 @@ class Wizard extends React.PureComponent {
       <div className='wizard-page' id='getting-started'>
         <h1><i className='ion-person-add' /> <FormattedMessage id='wizard.sign_up' defaultMessage='Sign up' /></h1>
 
+        <p><FormattedMessage id='wizard.dontpanic' defaultMessage='The Mastodon world, the fediverse, consists of many interconnected instances. No matter which instance you sign up from, you will be able to follow people from any server in the fediverse.' /></p>
+
         <form className='wizard-controls'>
           <div className='row'>
             <ReactResponsiveSelect
