@@ -23,6 +23,7 @@ import avatarVJ from './assets/sponsors/vj.png';
 import avatarFragbenny from './assets/sponsors/fragbenny.jpeg';
 import avatarIanna from './assets/sponsors/ianna.png';
 import avatarEvan from './assets/sponsors/evan.png';
+import avatarMarkAtwood from './assets/sponsors/markatwood.jpg';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -79,7 +80,7 @@ const Sponsorship = () => (
             <li><a href='https://www.whatisseo.com/'><img src={avatarVJ} alt='' /> <span><strong>VJ</strong><span>https://www.whatisseo.com/</span></span></a></li>
             <li><a href='https://fragbenny.de/'><img src={avatarFragbenny} alt='' /> <span><strong>fragbenny</strong><span>https://fragbenny.de/</span></span></a></li>
             <li><a href='https://inanna.xyz/'><img src={avatarIanna} alt='' /> <span><strong>Inanna</strong><span>https://inanna.xyz/</span></span></a></li>
-            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Mark Atwood</strong><span>-</span></span></a></li>
+            <li><a href='https://about.me/markatwood'><img src={avatarMarkAtwood} alt='' /> <span><strong>Mark Atwood</strong><span>https://about.me/markatwood</span></span></a></li>
           </ul>
         </div>
       </div>
