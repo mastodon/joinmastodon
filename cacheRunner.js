@@ -36,6 +36,7 @@ const languages = [
   'de',
   'en',
   'es',
+  'fi',
   'fr',
   'ja',
   'nl',
