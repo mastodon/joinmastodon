@@ -189,6 +189,9 @@
       line-height: 17px;
       font-size: 14px;
       padding: 6px 4px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
 
       &:focus {
         background: mix($darkest, $vibrant);
