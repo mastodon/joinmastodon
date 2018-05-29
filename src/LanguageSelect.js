@@ -12,6 +12,7 @@ import flagCn from 'twemoji/2/svg/1f1e8-1f1f3.svg';
 import flagRu from 'twemoji/2/svg/1f1f7-1f1fa.svg';
 import flagIt from 'twemoji/2/svg/1f1ee-1f1f9.svg';
 import flagAr from 'twemoji/2/svg/1f1e6-1f1ea.svg';
+import flagTr from 'twemoji/2/svg/1f1f9-1f1f7.svg';
 
 const options = [
   { value: 'en', label: <span><img src={flagEn} className='emoji' alt='' /> English</span> },
@@ -25,6 +26,7 @@ const options = [
   { value: 'zh', label: <span><img src={flagCn} className='emoji' alt='' /> 简体中文</span> },
   { value: 'it', label: <span><img src={flagIt} className='emoji' alt='' /> Italiano</span> },
   { value: 'ar', label: <span><img src={flagAr} className='emoji' alt='' /> العربية</span> },
+  { value: 'tr', label: <span><img src={flagTr} className='emoji' alt='' /> Türkçe</span> },
 ];
 
 export default ({ value, onChange }) => (
