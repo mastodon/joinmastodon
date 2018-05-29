@@ -268,7 +268,8 @@ $phi: 1.6180339887498948482;
       img {
         display: block;
         margin: 0;
-        max-width: 200px;
+        height: 28px;
+        width: auto;
         opacity: 0.5;
         transition: all $transition-in;
         filter: grayscale(100%);
@@ -296,8 +297,10 @@ $phi: 1.6180339887498948482;
 
   }
 
-  .logo-motherboard {
-
+  .logo-motherboard img {
+    height: 27px !important;
+    position: relative;
+    top: -2px;
   }
 }
 

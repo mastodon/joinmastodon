@@ -16,9 +16,11 @@ import sponsorKibousoft from './assets/sponsors/kibousoft.png';
 import sponsorPixiv from './assets/sponsors/pixiv.png';
 
 import wiredLogo from './assets/wired-logo.svg';
-import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
+//import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
 import theVergeLogo from './assets/the-verge-logo.svg';
 import motherboardLogo from './assets/motherboard-logo.svg';
+import nytLogo from './assets/nyt-logo.svg';
+import nprLogo from './assets/npr-logo.svg';
 
 import screenshotFull from './assets/screenshot_full.png';
 import screenshotMobile from './assets/screenshot_mobile.png';
@@ -116,12 +118,16 @@ export default class Home extends PureComponent {
             <div className='logo-grid'>
               <div>
                 <a href='https://motherboard.vice.com/en_us/article/mastodon-is-like-twitter-without-nazis-so-why-are-we-not-using-it' className='logo-motherboard'><img src={motherboardLogo} alt='Motherboard' /></a>
-                <a href='https://www.producthunt.com/posts/mastodon' className='logo-product-hunt'><img src={productHuntLogo} alt='Product Hunt' /></a>
+                <a href='https://www.nytimes.com/2018/03/28/technology/social-media-privacy.html' className='logo-new-york-times'><img src={nytLogo} alt='New York Times' /></a>
               </div>
 
               <div>
                 <a href='http://www.theverge.com/2017/4/4/15177856/mastodon-social-network-twitter-clone' className='logo-the-verge'><img src={theVergeLogo} alt='The Verge' /></a>
                 <a href='https://www.wired.com/2017/04/like-twitter-hate-trolls-try-mastodon/' className='logo-wired'><img src={wiredLogo} alt='Wired' /></a>
+              </div>
+
+              <div>
+                <a href='https://www.npr.org/sections/thetwo-way/2018/05/01/607361849/as-facebook-shows-its-flaws-what-might-a-better-social-network-look-like' className='logo-npr'><img src={nprLogo} alt='NPR' /></a>
               </div>
             </div>
           </div>
