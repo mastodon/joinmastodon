@@ -14,6 +14,7 @@ import Navigation from './Navigation';
 import sponsorTootdon from './assets/sponsors/tootdon.png';
 import sponsorKibousoft from './assets/sponsors/kibousoft.png';
 import sponsorPixiv from './assets/sponsors/pixiv.png';
+import sponsorPurism from './assets/sponsors/purism.svg';
 
 import wiredLogo from './assets/wired-logo.svg';
 //import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
@@ -144,6 +145,7 @@ export default class Home extends PureComponent {
                 <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorTootdon} alt='Tootdon' /></Link>
                 <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorPixiv} alt='pixiv Inc.' /></Link>
                 <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorKibousoft} alt='Kibousoft LLC' /></Link>
+                <Link to='/sponsors' className='logo-sponsor-purism'><img src={sponsorPurism} alt='Purism' /></Link>
               </div>
             </div>
           </div>

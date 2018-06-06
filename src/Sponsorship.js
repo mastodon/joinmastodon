@@ -8,6 +8,7 @@ import sponsorTootdon from './assets/sponsors/tootdon.png';
 import sponsorKibousoft from './assets/sponsors/kibousoft.png';
 import sponsorPixiv from './assets/sponsors/pixiv.png';
 import sponsorFourthEstate from './assets/sponsors/FourthEstate-logo.png';
+import sponsorPurism from './assets/sponsors/purism.svg';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
@@ -54,6 +55,7 @@ const Sponsorship = () => (
             <a href='http://kibousoft.co.jp/'><img src={sponsorKibousoft} alt='Kibousoft LLC' /></a>
             <a href='https://pixiv.net/'><img src={sponsorPixiv} alt='pixiv Inc.' /></a>
             <a href='http://www.fourthestate.co/'><img src={sponsorFourthEstate} alt='Fourth Estate' /></a>
+            <a href='https://puri.sm/'><img src={sponsorPurism} alt='Purism' /></a>
           </div>
         </div>
       </div>
