@@ -6,10 +6,11 @@ pages:
   script:
     - yarn install --pure-lockfile
     - yarn build
+    - rm -rf public && mv build public
 
   artifacts:
     paths:
-      - build
-        
+      - public
+
   only:
     - master
