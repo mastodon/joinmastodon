@@ -3,13 +3,13 @@ pages:
     paths:
       - node_modules
     
-    script:
-      - yarn install --pure-lockfile
-      - yarn build
+  script:
+    - yarn install --pure-lockfile
+    - yarn build
 
-    artifacts:
-      paths:
-        - build
+  artifacts:
+    paths:
+      - build
         
-    only:
-      - master
+  only:
+    - master
