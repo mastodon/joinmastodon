@@ -1,15 +1,15 @@
 pages:
   cache:
     paths:
-    - node_modules
+      - node_modules
     
     script:
-    - yarn install --pure-lockfile
-    - yarn build
+      - yarn install --pure-lockfile
+      - yarn build
 
     artifacts:
       paths:
-      - build
+        - build
         
     only:
-    - master
+      - master
