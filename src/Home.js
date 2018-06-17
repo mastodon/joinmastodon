@@ -94,10 +94,10 @@ export default class Home extends PureComponent {
 
           <div className='text'>
             <h1><FormattedMessage id='home.headline' defaultMessage='Social networking, <strong>back in your hands</strong>' /></h1>
-            <p><FormattedMessage id='home.tagline' defaultMessage='The world’s largest free, open-source, decentralized microblogging network' /></p>
+            <p><FormattedMessage id='home.tagline' defaultMessage='Your self-hosted, globally interconnected microblogging community' /></p>
 
             <AnchorLink href='#getting-started' className='cta button'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></AnchorLink>
-            <button className='cta button alt' onClick={this.handleHowItWorksClick}><span className='icon-circled'><span className='ion-play' /></span><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></button>
+            <button className='cta button alt' onClick={this.handleHowItWorksClick}><span className='icon-circled'><span className='ion-md-play' /></span><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></button>
           </div>
 
           <div className='hero'>
@@ -153,11 +153,12 @@ export default class Home extends PureComponent {
 
         <Wizard />
 
-        <div className='bottom-cta'>
+        <div className='bottom-cta' id='install'>
           <div className='container'>
             <h3><FormattedMessage id='home.install_your_own' defaultMessage='Install your own' /></h3>
-            <p><FormattedMessage id='home.install_your_own_text' defaultMessage='If you are interested in running your own instance &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to.' /></p>
-            <a href='https://github.com/tootsuite/documentation#running-mastodon' className='cta button alt'><FormattedMessage id='home.read_the_docs' defaultMessage='Read the docs' /></a>
+            <p><FormattedMessage id='home.install_your_own_text' defaultMessage='If you are interested in running your own instance &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to, which means it&apos;s quite scalable and resource-efficient.' /></p>
+            <a href='https://github.com/tootsuite/documentation#running-mastodon' className='cta button'><FormattedMessage id='home.read_the_docs' defaultMessage='Read the docs' /></a>
+            <a href='https://masto.host/' target='_blank' rel='nofollow' className='cta button alt'><FormattedMessage id='home.hosting' defaultMessage='Fully-managed Mastodon hosting' /></a>
           </div>
         </div>
 

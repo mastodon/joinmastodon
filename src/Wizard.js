@@ -70,7 +70,7 @@ class Wizard extends React.PureComponent {
     );
     return (
       <div className='wizard-page' id='getting-started'>
-        <h1><i className='ion-person-add' /> <FormattedMessage id='wizard.sign_up' defaultMessage='Sign up' /></h1>
+        <h1><i className='ion-md-person-add' /> <FormattedMessage id='wizard.sign_up' defaultMessage='Sign up' /></h1>
 
         <form className='wizard-controls'>
           <div className='row'>
@@ -134,13 +134,19 @@ class Wizard extends React.PureComponent {
           </Scrollbars>
         </div>
 
-        <div className='wizard-hint'>
-          <div className='wizard-hint__icon'>
-            <i className='ion-information-circled' />
+        <div style={{ display: 'flex' }}>
+          <div className='wizard-hint'>
+            <div className='wizard-hint__icon'>
+              <i className='ion-md-information-circle' />
+            </div>
+
+            <div className='wizard-hint__text'>
+              <FormattedMessage id='wizard.hint' defaultMessage="This is like picking an e-mail hosting provider, but more social since you'll see your neighbours. The domain will also be part of your username!" />
+            </div>
           </div>
 
-          <div className='wizard-hint__text'>
-            <FormattedMessage id='wizard.hint' defaultMessage="This is like picking an e-mail hosting provider, but more social since you'll see your neighbours. The domain will also be part of your username!" />
+          <div style={{ flex: '0 0 auto', marginLeft: 15, marginTop: 30 }}>
+            <a target='_blank' href='https://bridge.joinmastodon.org' className='cta button' style={{ marginBottom: 0 }}>Find Twitter friends</a>
           </div>
         </div>
       </div>
