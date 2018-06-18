@@ -27,9 +27,9 @@ const WizardRow = ({ instance, intl }) => {
     stabilityColor = 'red';
   }
 
-  if (instance.users > 50000) {
+  if (instance.users > 150000) {
     populationColor = 'red';
-  } else if (instance.users > 5000) {
+  } else if (instance.users > 50000) {
     populationColor = 'yellow';
   } else {
     populationColor = 'green';
