@@ -134,7 +134,7 @@ class Wizard extends React.PureComponent {
           </Scrollbars>
         </div>
 
-        <div style={{ display: 'flex' }}>
+        <div className='wizard-hint-container'>
           <div className='wizard-hint'>
             <div className='wizard-hint__icon'>
               <i className='ion-md-information-circle' />
@@ -145,7 +145,7 @@ class Wizard extends React.PureComponent {
             </div>
           </div>
 
-          <div style={{ flex: '0 0 auto', marginLeft: 15, marginTop: 30 }}>
+          <div>
             <a target='_blank' href='https://bridge.joinmastodon.org' className='cta button' style={{ marginBottom: 0 }}>Find Twitter friends</a>
           </div>
         </div>

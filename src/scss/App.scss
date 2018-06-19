@@ -364,7 +364,7 @@ $phi: 1.6180339887498948482;
   .text {
     width: 80%;
     font-size: 16px;
-    line-height: 24px;
+    //line-height: 24px;
 
     strong {
       font-weight: 500;
@@ -509,6 +509,15 @@ $phi: 1.6180339887498948482;
   p {
     margin-bottom: 30px;
   }
+
+
+  @media only screen and (max-width: 640px) {
+    .button {
+      box-sizing: border-box;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
 }
 
 @media only screen and (max-width: $content-width) {
@@ -523,10 +532,16 @@ $phi: 1.6180339887498948482;
 
   .frontpage-sponsorship,
   .as-seen-on {
-    .logo-grid {
-      & > div {
-        flex-direction: column;
+    & > .container {
+      overflow: hidden;
+    }
 
+    .logo-grid {
+      overflow-x: auto;
+      padding-bottom: 30px;
+      margin-bottom: -30px;
+
+      & > div {
         a {
           padding: 10px;
         }
@@ -628,12 +643,26 @@ $phi: 1.6180339887498948482;
   }
 }
 
+.xs-show {
+  display: none;
+}
+
 @media only screen and (max-width: 640px) {
+  .xs-show {
+    display: initial;
+  }
+
   .navbar {
     display: block;
     background: $darkest;
     margin-top: -15px;
-    margin-bottom: 50px;
+
+    ul a,
+    ul .dropdown__control {
+      color: lighten($darkest, 30%) !important;
+      padding-left: 7px !important;
+      padding-right: 7px !important;
+    }
   }
 
   .link-logo.after {
@@ -642,15 +671,20 @@ $phi: 1.6180339887498948482;
 
   .intro {
     .hero {
-      height: 120px;
+      margin-top: 60px;
+      height: 45px;
     }
   }
 
   .frontpage-sponsorship,
   .as-seen-on {
     .logo-grid {
-      flex-wrap: wrap;
+      //
     }
+  }
+
+  .feature h2 i {
+    margin-right: 10px;
   }
 }
 

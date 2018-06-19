@@ -41,21 +41,29 @@
     .lang-ar & h3 {
       text-align: right;
     }
+
+    .row {
+      margin: 0 -5px;
+
+      & > div {
+        flex: 1 1 auto;
+        padding: 0 5px;
+      }
+    }
   }
 
   .color-swatch {
+    box-sizing: border-box;
     padding: 10px;
     padding-top: 36px;
     border-radius: 4px;
     color: $white;
-    flex: 1 1 auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 24px;
-    margin-right: 15px;
 
-    &:last-child {
-      margin-right: 0;
+    @media only screen and (max-width: 640px) {
+      font-size: 14px;
     }
   }
 

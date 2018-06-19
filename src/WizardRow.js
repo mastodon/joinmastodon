@@ -35,6 +35,8 @@ const WizardRow = ({ instance, intl }) => {
     populationColor = 'green';
   }
 
+  const populationSpan = <FormattedMessage id='wizard_row.user_count' defaultMessage='{population} {count, plural, one {person} other {people}}' values={{ population, count: instance.users }} />;
+
   return (
     <a href={`https://${instance.name}/about`} target='_blank' rel='noopener' className={classNames('wizard-row', { offline: !instance.up })}>
       <div className='wizard-row__thumbnail'>
@@ -44,13 +46,13 @@ const WizardRow = ({ instance, intl }) => {
       </div>
 
       <div className='wizard-row__details'>
-        <div className='wizard-row__name'>{instance.name}</div>
+        <div className='wizard-row__name'>{instance.name}<span className={`xs-show indicator-text ${populationColor}`}>{populationSpan}</span></div>
         <div className='wizard-row__description'>{description}</div>
       </div>
 
       <div className='wizard-row__meta'>
         <div className='wizard-row__stability'><span className={`indicator-text ${stabilityColor}`}><i className={`indicator ${stabilityColor}`} /> {stabilityLabel}</span></div>
-        <div className='wizard-row__population'><span className={`indicator-text ${populationColor}`}><i className={`indicator ${populationColor}`} /> <FormattedMessage id='wizard_row.user_count' defaultMessage='{population} {count, plural, one {person} other {people}}' values={{ population, count: instance.users }} /></span></div>
+        <div className='wizard-row__population'><span className={`indicator-text ${populationColor}`}><i className={`indicator ${populationColor}`} /> {populationSpan}</span></div>
       </div>
     </a>
   );

@@ -180,6 +180,12 @@
       margin-bottom: 10px;
     }
 
+    @media only screen and (max-width: 640px) {
+      li {
+        width: 100%;
+      }
+    }
+
     li > a {
       display: flex;
       background: lighten($darkest, 4%);

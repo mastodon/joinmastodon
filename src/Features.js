@@ -27,7 +27,7 @@ const Features = () => (
     <div className='feature container'>
       <div className='right visual'><i className='ion-md-globe' /></div>
       <div className='left text'>
-        <h2><FormattedMessage id='features.find_your_community' defaultMessage='Find your perfect community' /></h2>
+        <h2><i className='xs-show ion-md-globe' /><FormattedMessage id='features.find_your_community' defaultMessage='Find your perfect community' /></h2>
         <p><FormattedMessage id='features.find_your_community_text' defaultMessage='Mastodon isn’t one place and one set of rules: it’s <strong>thousands of unique, interconnected communities</strong> to choose from, filled with different people, interests, languages, and needs. Don’t like the rules? You’re free to join any community you like, or better yet: you can host your own, on your own terms!' /></p>
       </div>
     </div>
@@ -35,7 +35,7 @@ const Features = () => (
     <div className='feature container'>
       <div className='left visual'><i className='ion-md-chatboxes' /></div>
       <div className='right text'>
-        <h2><FormattedMessage id='features.take_control' defaultMessage='Take control of your content' /></h2>
+        <h2><i className='xs-show ion-md-chatboxes' /><FormattedMessage id='features.take_control' defaultMessage='Take control of your content' /></h2>
         <p><FormattedMessage id='features.take_control_text' defaultMessage='With powerful tools to <strong>control who sees your posts</strong> and a <strong>500-character limit</strong>, Mastodon empowers you to share your ideas, unabridged.  The best part? <strong>All posts are in chronological order</strong>, not “optimized” to push ads into your timeline. With apps for iOS, Android, and every other platform imaginable, <strong>Mastodon is always at your fingertips</strong>.' /></p>
       </div>
     </div>
@@ -43,7 +43,7 @@ const Features = () => (
     <div className='feature container'>
       <div className='right visual'><i className='ion-ios-people' /></div>
       <div className='left text'>
-        <h2><FormattedMessage id='features.user_first' defaultMessage='Putting people first' /></h2>
+        <h2><i className='xs-show ion-ios-people' /><FormattedMessage id='features.user_first' defaultMessage='Putting people first' /></h2>
         <p><FormattedMessage id='features.user_first_text' defaultMessage='You’re a person, not a product. Mastodon is a free, open-source development that has been crowdfunded, not financed. All instances are <strong>independently owned, operated, and moderated</strong>. There is no monopoly by a single commercial company, no ads, and no tracking. <strong>Mastodon works for you</strong>, and not the other way around.' /></p>
       </div>
     </div>
@@ -51,7 +51,7 @@ const Features = () => (
     <div className='feature container'>
       <div className='left visual'><i className='ion-ios-bonfire' /></div>
       <div className='right text'>
-        <h2><FormattedMessage id='features.safety' defaultMessage='Feel safe in your community' /></h2>
+        <h2><i className='xs-show ion-ios-bonfire' /><FormattedMessage id='features.safety' defaultMessage='Feel safe in your community' /></h2>
         <p><FormattedMessage id='features.safety_text' defaultMessage='Mastodon comes with <strong>effective anti-abuse tools</strong> to help protect yourself from online abuse. With small, interconnected communities, it means that there are <strong>more moderators</strong> you can approach to help with a situation. This also means you can choose who sees your posts: friends, your community, or the entire fediverse.' /></p>
       </div>
     </div>
