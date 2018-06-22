@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import AnchorLink from './AnchorLink';
+import thinkhappy from './assets/thinkhappy.png';
 
 const Features = () => (
   <div id='features'>
@@ -71,7 +72,7 @@ const Features = () => (
           <li><i className='ion-md-checkbox' /><div><FormattedMessage id='features.open_standards' defaultMessage='Built on open web standards' /></div></li>
           <li><i className='ion-md-checkbox' /><div><FormattedMessage id='features.spoiler_warnings' defaultMessage='Spoiler warnings' /></div></li>
           <li><i className='ion-md-checkbox' /><div><FormattedMessage id='features.relevancy' defaultMessage='You decide what’s relevant' /></div></li>
-          <li><i className='ion-md-checkbox' /><div><FormattedMessage id='features.custom_emoji' defaultMessage='Custom emoji' /></div></li>
+          <li><i className='ion-md-checkbox' /><div><FormattedMessage id='features.custom_emoji' defaultMessage='Custom emoji' /> <img src={thinkhappy} className='emoji' alt=':polarbears:' /></div></li>
           <li><i className='ion-md-checkbox' /><div><FormattedMessage id='features.focal_points' defaultMessage='Focal points' /></div></li>
           <li><i className='ion-md-checkbox' /><div><FormattedMessage id='features.delete_redraft' defaultMessage='Delete & redraft' /></div></li>
         </ul>
