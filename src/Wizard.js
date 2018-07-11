@@ -146,7 +146,9 @@ class Wizard extends React.PureComponent {
           </div>
 
           <div>
-            <a target='_blank' href='https://bridge.joinmastodon.org' className='cta button' style={{ marginBottom: 0 }}>Find Twitter friends</a>
+            <a target='_blank' href='https://bridge.joinmastodon.org' className='cta button' style={{ marginBottom: 0 }}>
+              <FormattedMessage id='wizard.find_twitter_friends' defaultMessage='Find Twitter friends' />
+            </a>
           </div>
         </div>
       </div>

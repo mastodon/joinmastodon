@@ -93,6 +93,7 @@
   "wizard.filters.writer": "a writer",
   "wizard.hint": "This is like picking an e-mail hosting provider, but more social since you'll see your neighbours. The domain will also be part of your username!",
   "wizard.sign_up": "Sign up",
+  "wizard.find_twitter_friends": "Find Twitter friends",
   "wizard_row.stability.awful": "Awful",
   "wizard_row.stability.intermittent": "Intermittent",
   "wizard_row.stability.stable": "Stable",
