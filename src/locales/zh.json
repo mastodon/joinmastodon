@@ -89,6 +89,7 @@
   "wizard.filters.sports_fan": "是一个体育迷",
   "wizard.filters.sysadmin": "是一位系统管理员",
   "wizard.filters.writer": "是一位作家",
+  "wizard.find_twitter_friends": "Find Twitter friends",
   "wizard.hint": "正因为你能够看到你的邻居，所以与选择一家电子邮件服务提供商相比，选择一个 Mastodon 实例会更具社交性。这里显示的域名将会是你的用户名的一部分！",
   "wizard.sign_up": "立即注册",
   "wizard_row.stability.awful": "不稳定",

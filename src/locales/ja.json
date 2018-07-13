@@ -89,6 +89,7 @@
   "wizard.filters.sports_fan": "スポーツが好きです",
   "wizard.filters.sysadmin": "システム管理者です",
   "wizard.filters.writer": "執筆家です",
+  "wizard.find_twitter_friends": "Twitterの友達を探す",
   "wizard.hint": "これは電子メールのプロバイダーを選ぶのと似ていますが、同じサーバーのユーザーと交流できるのでもっと社交的です。 このドメインはあなたのユーザー名の一部になります！",
   "wizard.sign_up": "アカウントを登録する",
   "wizard_row.stability.awful": "不安定",
