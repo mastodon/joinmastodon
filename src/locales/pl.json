@@ -89,6 +89,7 @@
   "wizard.filters.sports_fan": "fanem sportu",
   "wizard.filters.sysadmin": "administratorem systemów",
   "wizard.filters.writer": "pisarzem",
+  "wizard.find_twitter_friends": "Find Twitter friends",
   "wizard.hint": "To tak jak wybór dostawcy poczty e-mail, ale ma wpływ na widok sąsiadów z instancji. Domena będzie też częścią Twojej nazwy użytkownika!",
   "wizard.sign_up": "Zarejestruj się",
   "wizard_row.stability.awful": "Okropna",
