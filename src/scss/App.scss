@@ -688,6 +688,15 @@ $phi: 1.6180339887498948482;
   }
 }
 
+.legal {
+  padding-top: 100px;
+
+  &,
+  a {
+    color: lighten($darkest, 30%);
+  }
+}
+
 @media only screen and (max-width: 460px) {
   .navbar ul li.optional-link {
     display: none;
