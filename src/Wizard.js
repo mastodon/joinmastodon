@@ -73,6 +73,8 @@ class Wizard extends React.PureComponent {
         <h1><i className='ion-md-person-add' /> <FormattedMessage id='wizard.sign_up' defaultMessage='Sign up' /></h1>
 
         <form className='wizard-controls'>
+          <p className='lead'><FormattedMessage id='wizard.hint2' defaultMessage='All you need to do to sign up is choose a server. Just like when signing up for an e-mail address, one server is going to be hosting your account and be part of your identity.' /></p>
+
           <div className='row'>
             <ReactResponsiveSelect
               name="category"
@@ -99,7 +101,7 @@ class Wizard extends React.PureComponent {
               onChange={this.handleCategoryChange}
             />
 
-            <span className='wizard-controls__label'>,</span>
+            <span className='wizard-controls__label'> </span>
 
             <ReactResponsiveSelect
               name="language"
@@ -124,8 +126,6 @@ class Wizard extends React.PureComponent {
               onChange={this.handleLanguageChange}
             />
           </div>
-
-          <span className='wizard-controls__label'><FormattedMessage id='wizard.filters.results' defaultMessage='and here is where I can sign up:' /></span>
         </form>
 
         <div className='wizard'>
@@ -141,7 +141,7 @@ class Wizard extends React.PureComponent {
             </div>
 
             <div className='wizard-hint__text'>
-              <FormattedMessage id='wizard.hint' defaultMessage="This is like picking an e-mail hosting provider, but more social since you'll see your neighbours. The domain will also be part of your username!" />
+              <FormattedMessage id='wizard.hint3' defaultMessage="These servers are operated by independent organizations and may have different moderation policies. If you are unsure what to pick, you can try the button on the right." />
             </div>
           </div>
 
