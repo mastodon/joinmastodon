@@ -192,6 +192,29 @@ $phi: 1.6180339887498948482;
     font-size: 18px;
     margin-bottom: 26px;
   }
+
+  .cta.button:not(.alt) {
+    background: lighten($vibrant, 4%);
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: lighten($vibrant, 8%);
+    }
+  }
+
+  .cta.button.alt {
+    border-color: lighten($vibrant, 4%);
+    color: lighten($vibrant, 4%);
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: lighten($vibrant, 8%);
+      color: lighten($vibrant, 8%);
+    }
+  }
 }
 
 .hero {
