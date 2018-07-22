@@ -7,8 +7,6 @@ import ReactResponsiveSelect from 'react-responsive-select';
 const messages = defineMessages({
   i_am: { id: 'wizard.filters.i_am', defaultMessage: 'I am ' },
   i_speak: { id: 'wizard.filters.i_speak', defaultMessage: 'I speak ' },
-  all_languages: { id: 'wizard.filters.all_languages', defaultMessage: 'all languages' },
-  everything: { id: 'wizard.filters.everything', defaultMessage: 'everything' },
   artist: { id: 'wizard.filters.artist', defaultMessage: 'an artist' },
   musician: { id: 'wizard.filters.musician', defaultMessage: 'a musician' },
   writer: { id: 'wizard.filters.writer', defaultMessage: 'a writer' },
@@ -72,14 +70,14 @@ class Wizard extends React.PureComponent {
       <div className='wizard-page' id='getting-started'>
         <h1><i className='ion-md-person-add' /> <FormattedMessage id='wizard.sign_up' defaultMessage='Sign up' /></h1>
 
-        <form className='wizard-controls'>
-          <p className='lead'><FormattedMessage id='wizard.hint2' defaultMessage='All you need to do to sign up is choose a server. Just like when signing up for an e-mail address, one server is going to be hosting your account and be part of your identity.' /></p>
+        <p className='lead'><FormattedMessage id='wizard.hint2' defaultMessage='All you need to do to sign up is choose a server. Just like when signing up for an e-mail address, one server is going to be hosting your account and be part of your identity.' /></p>
 
+        <form className='wizard-controls'>
           <div className='row'>
             <ReactResponsiveSelect
               name="category"
               options={[
-                { value: '', text: intl.formatMessage(messages.everything) },
+                { value: '', text: '…' },
                 { value: 'art', text: intl.formatMessage(messages.artist) },
                 { value: 'music', text: intl.formatMessage(messages.musician) },
                 { value: 'books-0', text: intl.formatMessage(messages.writer) },
@@ -101,12 +99,12 @@ class Wizard extends React.PureComponent {
               onChange={this.handleCategoryChange}
             />
 
-            <span className='wizard-controls__label'> </span>
+            <span className='wizard-controls__label'></span>
 
             <ReactResponsiveSelect
               name="language"
               options={[
-                { value: '', text: intl.formatMessage(messages.all_languages) },
+                { value: '', text: '…' },
                 { value: 'ar', text: 'العربية' },
                 { value: 'de', text: 'Deutsch' },
                 { value: 'en', text: 'English' },
