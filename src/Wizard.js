@@ -139,7 +139,7 @@ class Wizard extends React.PureComponent {
             </div>
 
             <div className='wizard-hint__text'>
-              <FormattedMessage id='wizard.hint3' defaultMessage="These servers are operated by independent organizations and may have different moderation policies. If you are unsure what to pick, you can try the button on the right." />
+              <FormattedMessage id='wizard.hint3' defaultMessage="These servers are operated by independent organizations and may have different moderation policies. If you are unsure what to pick, you can try this button." />
             </div>
           </div>
 
