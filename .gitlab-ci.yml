@@ -6,7 +6,7 @@ pages:
       - node_modules
     
   script:
-    - apk -U upgrade && apk add -t python 
+    - apk -U upgrade && apk add -t build-dependencies build-base python 
     - yarn install --pure-lockfile
     - yarn build
     - rm -rf public && mv build public
