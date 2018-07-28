@@ -1,3 +1,5 @@
+image: node:10-alpine
+
 pages:
   cache:
     paths:
