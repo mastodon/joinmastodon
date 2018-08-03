@@ -95,7 +95,7 @@ export default class Home extends PureComponent {
 
           <div className='text'>
             <h1><FormattedMessage id='home.headline' defaultMessage='Social networking, <strong>back in your hands</strong>' /></h1>
-            <p><FormattedMessage id='home.tagline' defaultMessage='Your self-hosted, globally interconnected microblogging community' /></p>
+            <p><FormattedMessage id='home.tagline2' defaultMessage='Follow friends and discover new ones. Publish anything you want: links, pictures, text, video. All on a platform that is community-owned and ad-free.' /></p>
 
             <AnchorLink href='#getting-started' className='cta button'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></AnchorLink>
             <button className='cta button alt' onClick={this.handleHowItWorksClick}><span className='icon-circled'><span className='ion-md-play' /></span><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></button>

@@ -44,7 +44,10 @@
     line-height: 1.38105;
     letter-spacing: .011em;
   }
+}
 
+.feature,
+.feature-angle {
   a.link-button {
     display: inline-block;
     margin-top: 20px;
@@ -60,6 +63,24 @@
     &:focus,
     &:active {
       text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .feature {
+    .text {
+      text-align: center;
+
+      h2 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      & > i {
+        display: block;
+        font-size: 44px;
+      }
     }
   }
 }

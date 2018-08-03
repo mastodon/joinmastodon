@@ -3,6 +3,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 
 import Navigation from './Navigation';
+import Legal from './Legal';
 
 import sponsorTootdon from './assets/sponsors/tootdon.png';
 import sponsorKibousoft from './assets/sponsors/kibousoft.png';
@@ -698,6 +699,8 @@ const Sponsorship = () => (
         <p><FormattedMessage id='sponsorship.every_bit_helps' defaultMessage='Every little bit helps, and we appreciate all contributions.' /></p>
         <a href='https://patreon.com/mastodon' className='cta button alt'><FormattedMessage id='sponsorship.become_a_sponsor' defaultMessage='Become a sponsor' /></a>
       </div>
+
+      <Legal />
     </div>
   </div>
 );

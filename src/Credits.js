@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
+import Legal from './Legal';
+
 const Credits = () => (
   <div className='credits' id='credits'>
     <div className='container row optional-row'>
@@ -27,6 +29,8 @@ const Credits = () => (
         <div><div className='color-swatch color-4'>#2b90d9</div></div>
       </div>
     </div>
+
+    <Legal />
   </div>
 );
 

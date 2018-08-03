@@ -180,6 +180,7 @@ $phi: 1.6180339887498948482;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 26px;
+    line-height: 1.5;
     margin-bottom: 20px;
 
     strong {
@@ -191,6 +192,29 @@ $phi: 1.6180339887498948482;
     color: $lighter;
     font-size: 18px;
     margin-bottom: 26px;
+  }
+
+  .cta.button:not(.alt) {
+    background: lighten($vibrant, 4%);
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: lighten($vibrant, 8%);
+    }
+  }
+
+  .cta.button.alt {
+    border-color: lighten($vibrant, 4%);
+    color: lighten($vibrant, 4%);
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: lighten($vibrant, 8%);
+      color: lighten($vibrant, 8%);
+    }
   }
 }
 
@@ -393,40 +417,6 @@ $phi: 1.6180339887498948482;
     font-size: 18px;
     line-height: 24px;
   }
-
-  .additional-features {
-    width: 100%;
-
-    .lang-ar & {
-      direction: rtl;
-
-      li i {
-        margin-right: 0;
-        margin-left: 10px;
-      }
-    }
-
-    ul {
-      columns: 3;
-      column-gap: 15px;
-    }
-
-    li {
-      display: flex;
-      line-height: 1.5em;
-      padding-bottom: .5em;
-      -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-          page-break-inside: avoid; /* Firefox */
-               break-inside: avoid; /* IE 10+ */
-
-      i {
-        display: block;
-        flex: 0 0 auto;
-        margin-right: 10px;
-        color: lighten($darkest, 30%);
-      }
-    }
-  }
 }
 
 .lang-ja {
@@ -522,7 +512,7 @@ $phi: 1.6180339887498948482;
 
 @media only screen and (max-width: $content-width) {
   .navbar {
-    padding: 0 20px;
+    padding: 10px 20px;
   }
 
   .bottom-cta {
@@ -605,35 +595,6 @@ $phi: 1.6180339887498948482;
     .visual {
       display: none;
     }
-
-    .additional-features {
-      box-sizing: border-box;
-      padding: 0 20px;
-
-      ul {
-        columns: 3;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 740px) {
-  .feature {
-    .additional-features {
-      ul {
-        columns: 2;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 510px) {
-  .feature {
-    .additional-features {
-      ul {
-        columns: 1;
-      }
-    }
   }
 }
 
@@ -663,6 +624,10 @@ $phi: 1.6180339887498948482;
       padding-left: 7px !important;
       padding-right: 7px !important;
     }
+
+    ul a.brand img {
+      left: 0;
+    }
   }
 
   .link-logo.after {
@@ -682,9 +647,14 @@ $phi: 1.6180339887498948482;
       //
     }
   }
+}
 
-  .feature h2 i {
-    margin-right: 10px;
+.legal {
+  padding-top: 100px;
+
+  &,
+  a {
+    color: lighten($darkest, 30%);
   }
 }
 

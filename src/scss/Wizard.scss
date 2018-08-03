@@ -15,7 +15,7 @@
     width: 393px;
     height: 176px;
     z-index: -1;
-    top: 0;
+    top: -32px;
     right: -50px;
   }
 
@@ -25,24 +25,12 @@
     font-size: 26px;
     margin-bottom: 30px - 8px;
     background: $darkest;
-    color: $vibrant;
+    color: lighten($vibrant, 8%);
     display: inline-block;
     padding: 8px 0;
 
     .lang-ar & {
       text-align: right;
-    }
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      height: 60px;
-      width: 0;
-      top: 0;
-      left: 50px;
-      border-left: 2px solid $vibrant;
-      z-index: -1;
     }
   }
 
@@ -403,7 +391,13 @@
     }
 
     h1 {
-      margin-bottom: 0;
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p.lead {
+      text-align: center;
     }
   }
 
@@ -418,7 +412,7 @@
   }
 
   .wizard {
-    max-height: 40vh;
+    max-height: 50vh;
   }
 }
 
