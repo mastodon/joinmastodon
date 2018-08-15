@@ -23,12 +23,12 @@ import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
 import avatarIrick from './assets/sponsors/irick.gif';
 //import avatarSirTyrent from './assets/sponsors/sirtyrent.png';
 import avatarVJ from './assets/sponsors/vj.png';
-import avatarFragbenny from './assets/sponsors/fragbenny.jpeg';
+//import avatarFragbenny from './assets/sponsors/fragbenny.jpeg';
 import avatarIanna from './assets/sponsors/ianna.png';
 import avatarEvan from './assets/sponsors/evan.png';
 import avatarMarkAtwood from './assets/sponsors/markatwood.jpg';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
-import avatarLevlaz from './assets/sponsors/levlaz.png';
+//import avatarLevlaz from './assets/sponsors/levlaz.png';
 import avatarDansup from './assets/sponsors/dansup.jpg';
 
 const renderThumb = ({ style, ...props }) => {
@@ -76,7 +76,6 @@ const Sponsorship = () => (
         <div className='sponsors-list--badges'>
           <ul>
             <li><a href='https://mastodon.art'><img src={avatarGlocal} alt='' /> <span><strong>glocal</strong><span>https://mastodon.art</span></span></a></li>
-            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Ted</strong><span>-</span></span></a></li>
             <li><a href='https://mastodon.sdf.org'><img src={avatarSdf} alt='' /> <span><strong>SDF.ORG</strong><span>https://mastodon.sdf.org</span></span></a></li>
             <li><a href='https://cloudfleet.io'><img src={avatarCloudfleet} alt='' /> <span><strong>CloudFleet</strong><span>https://cloudfleet.io</span></span></a></li>
             <li><a href='https://sudoJames.com'><img src={avatarJamesMWright} alt='' /> <span><strong>James Wright</strong><span>https://sudoJames.com</span></span></a></li>
@@ -84,17 +83,15 @@ const Sponsorship = () => (
             <li><a href='https://vulpine.club/@Irick'><img src={avatarIrick} alt='' /> <span><strong>Irick Corwal</strong><span>https://vulpine.club/@Irick</span></span></a></li>
             <li><a href='https://eightballoon.com/'><img src={noAvatar} alt='' /> <span><strong>Takanori Yamada</strong><span>https://eightballoon.com/</span></span></a></li>
             <li><a href='https://identi.ca/evan'><img src={avatarEvan} alt='' /> <span><strong>Evan Prodromou</strong><span>https://identi.ca/evan</span></span></a></li>
-            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Ben Werdmuller</strong><span>-</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Blaine Cook</strong><span>-</span></span></a></li>
             <li><a href='https://www.whatisseo.com/'><img src={avatarVJ} alt='' /> <span><strong>VJ</strong><span>https://www.whatisseo.com/</span></span></a></li>
-            <li><a href='https://fragbenny.de/'><img src={avatarFragbenny} alt='' /> <span><strong>fragbenny</strong><span>https://fragbenny.de/</span></span></a></li>
             <li><a href='https://inanna.xyz/'><img src={avatarIanna} alt='' /> <span><strong>Inanna</strong><span>https://inanna.xyz/</span></span></a></li>
             <li><a href='https://about.me/markatwood'><img src={avatarMarkAtwood} alt='' /> <span><strong>Mark Atwood</strong><span>https://about.me/markatwood</span></span></a></li>
             <li><a href='https://dtp-mstdn.jp'><img src={avatarNoellabo} alt='' /> <span><strong>noellabo</strong><span>https://dtp-mstdn.jp</span></span></a></li>
             <li><a href='https://pixelfed.org/'><img src={avatarDansup} alt='' /> <span><strong>dansup</strong><span>https://pixelfed.org/</span></span></a></li>
-            <li><a href='https://mastodon.social/@levlaz'><img src={avatarLevlaz} alt='' /> <span><strong>Lev Lazinskiy</strong><span>https://mastodon.social/@levlaz</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Ms Miller</strong><span>-</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Aras Pranckevicius</strong><span>-</span></span></a></li>
+            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Jonathan Wight</strong><span>-</span></span></a></li>
           </ul>
         </div>
       </div>
@@ -108,7 +105,7 @@ const Sponsorship = () => (
         <div className='sponsors-list--names'>
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
-              <li>Ke_Ga</li>
+              <li>Ted</li>
               <li>Julie Moronuki</li>
               <li>Great Scott Gadgets</li>
               <li>Moritz Heiber</li>
@@ -125,27 +122,24 @@ const Sponsorship = () => (
               <li>iliana weller</li>
               <li>Ken Naishtat</li>
               <li>Christopher Kruse</li>
-              <li>Philip James</li>
               <li>mayaeh</li>
               <li>Danny O'Brien</li>
-              <li>Jim Luke</li>
+              <li>Philip James</li>
               <li>Leif Halldor Asgeirsson</li>
               <li>Josef Kenny</li>
-              <li>Ellen Teapot</li>
-              <li>J. C. Holder</li>
-              <li>Austin Putman</li>
               <li>G Berton Latamore</li>
+              <li>Ellen Teapot</li>
+              <li>Austin Putman</li>
               <li>halcy</li>
+              <li>J. C. Holder</li>
               <li>David Yip</li>
-              <li>Matteo De Micheli</li>
               <li>ティン・ルーフ</li>
+              <li>Landy Manderson</li>
               <li>Paul Meier</li>
               <li>Hideki Yamamoto</li>
               <li>Kenneth Ken Sugar</li>
               <li>Miki Habryn</li>
               <li>3xv</li>
-              <li>Sajith Sasidharan</li>
-              <li>Shinnosuke Iwaki</li>
               <li>nobody</li>
               <li>Richard Minerich</li>
               <li>Paul Lindner</li>
@@ -157,84 +151,80 @@ const Sponsorship = () => (
               <li>Alexander Zillion</li>
               <li>Josephine Pedersen</li>
               <li>Nemecle</li>
-              <li>Brophey Wolf</li>
               <li>Nicolai Schwarz</li>
-              <li>Jacob Helwig</li>
               <li>Zaki</li>
               <li>C J Silverio</li>
               <li>Rufus</li>
               <li>Kevin Sonney</li>
               <li>Aaron Williamson</li>
               <li>Christopher James Halse Rogers</li>
-              <li>outofrange</li>
               <li>Chris Johnson</li>
               <li>Olivia Mossberg</li>
               <li>Matthieu Herrb</li>
               <li>Refuse the Order</li>
+              <li>Daniel M Crawford</li>
               <li>Charles Hutchins</li>
               <li>Laurent Joubert</li>
-              <li>fairenoughschroedinger</li>
               <li>Harukasan</li>
               <li>Yoshiki Kato</li>
               <li>Scott Honey</li>
-              <li>masklayer</li>
-              <li>Daniel M Crawford</li>
-              <li>Johannes Barre</li>
-              <li>USAMI Kenta; Zonu.EXE (@tadsan)</li>
-              <li>Effy Elden</li>
-              <li>Landy Manderson</li>
+              <li>Sajith Sasidharan</li>
+              <li>Matteo De Micheli</li>
               <li>Bram</li>
               <li>Osamu Miyake</li>
               <li>Koya Matsuo</li>
               <li>Lady Errant</li>
               <li>Sandro Hawke</li>
+              <li>fairenoughschroedinger</li>
               <li>Konosuke Furuhata</li>
               <li>Masaya Imai</li>
-              <li>Ryan Frederick</li>
+              <li>Johannes Barre</li>
+              <li>masklayer</li>
               <li>Bheesham Persaud</li>
               <li>Solar Anamnesis</li>
+              <li>Ryan Frederick</li>
               <li>Brion Vibber</li>
-              <li>Andrei Petcu</li>
-            </ul>
-
-            <ul>
+              <li>Zonu.EXE</li>
+              <li>Effy Elden</li>
+              <li>Niko Autio</li>
+              <li>Max</li>
               <li>Akihiko Odaki</li>
-              <li>Scott Hammack</li>
+              <li>jomo</li>
               <li>Jeremy Penner</li>
               <li>Todd Monotony</li>
               <li>Klara</li>
               <li>snorpey</li>
-              <li>Niko Autio</li>
-              <li>Max</li>
-              <li>jomo</li>
-              <li>James Valleroy</li>
-              <li>Christina Hendricks</li>
-              <li>Emma Humphries</li>
-              <li>Irene Knapp</li>
-              <li>hakoai</li>
-              <li>Niels Abildgaard</li>
+              <li>Andrei Petcu</li>
+            </ul>
+
+            <ul>
               <li>A bowl of creamy tomato soup</li>
               <li>Drew Williams</li>
               <li>Clinton Freeman</li>
               <li>Jérôme Choain</li>
-              <li>Renato dos Santos Cerqueira</li>
+              <li>James Valleroy</li>
+              <li>Christina Hendricks</li>
               <li>itsumonotakumi</li>
-              <li>Karen</li>
-              <li>h-izumi</li>
+              <li>Irene Knapp</li>
               <li>Owen Kahn</li>
               <li>_</li>
               <li>Spencer Alves</li>
               <li>Al</li>
               <li>peter hessler</li>
+              <li>Renato dos Santos Cerqueira</li>
+              <li>Emma Humphries</li>
+              <li>Karen</li>
+              <li>h-izumi</li>
+              <li>Niels Abildgaard</li>
+              <li>Damien Sirkis</li>
+              <li>Ruben</li>
               <li>Jason Rimmer</li>
               <li>Ash Furrow</li>
               <li>Wesley Moore</li>
-              <li>Parker Higgins</li>
               <li>Dave Lane</li>
               <li>William Hopkins</li>
               <li>Jay Shapiro</li>
               <li>August Bigelow</li>
-              <li>Jer Thorp</li>
               <li>vilmibm</li>
               <li>Justus Seifert</li>
               <li>Caelyn McAulay</li>
@@ -242,29 +232,29 @@ const Sponsorship = () => (
               <li>Tassels</li>
               <li>Damien Nicolas</li>
               <li>Alexandre Dufournet</li>
+              <li>Chris Garcia</li>
               <li>Colin Mahns</li>
               <li>Jonathan</li>
-              <li>Chris Garcia</li>
-              <li>Jessica Stokes</li>
-              <li>Damien Sirkis</li>
-              <li>Ruben</li>
               <li>Tom Harris</li>
-              <li>Emily Marigold Klassen</li>
-              <li>Michael Kosler</li>
-              <li>Nicole Bacon</li>
-              <li>Tim Ashley Jenkins</li>
+              <li>Szmozsánszky István "Flaki"</li>
               <li>mkatze</li>
+              <li>Nicole Bacon</li>
               <li>Michael Etzkorn</li>
               <li>Chris</li>
-              <li>Allen Varney</li>
-              <li>KinkyBoys Podcast</li>
-              <li>André Koot</li>
-              <li>Emmanuel Jacobs</li>
-              <li>Brody Brooks</li>
-              <li>Connor Olding</li>
+              <li>Michael Kosler</li>
+              <li>Jon Dubovsky</li>
+              <li>Lon Hohberger</li>
+              <li>Lily Yu</li>
+              <li>Tim Ashley Jenkins</li>
               <li>Alys Brooks</li>
-              <li>Szmozsánszky István "Flaki"</li>
-              <li>Trent AKA SirTyrent</li>
+              <li>Allen Varney</li>
+              <li>Emmanuel Jacobs</li>
+              <li>KinkyBoys Podcast</li>
+              <li>Waldo</li>
+              <li>Tim Wilde</li>
+              <li>Tango</li>
+              <li>André Koot</li>
+              <li>Connor Olding</li>
               <li>Moult</li>
               <li>Brent P. Newhall</li>
               <li>Dale Price</li>
@@ -274,40 +264,36 @@ const Sponsorship = () => (
               <li>Jack</li>
               <li>Nathan Howell</li>
               <li>Michael Myers</li>
-              <li>David Hayward</li>
               <li>Erika</li>
-              <li>Bjarni R. Einarsson</li>
-              <li>joshua anderson</li>
-              <li>Christopher Kuttruff</li>
-              <li>Jon Dubovsky</li>
-              <li>Lon Hohberger</li>
-              <li>Lily Yu</li>
-              <li>Tim Wilde</li>
-              <li>Tango</li>
+              <li>Trent AKA SirTyrent</li>
+              <li>tiansheng li</li>
+              <li>Daniel Lowe</li>
               <li>xanac</li>
               <li>Oliver Uvman</li>
               <li>Lee Starnes</li>
               <li>Mathieu Lecarme</li>
+              <li>Bjarni R. Einarsson</li>
+              <li>David Hayward</li>
+              <li>LoovtO</li>
+              <li>joshua anderson</li>
+              <li>Flake</li>
               <li>Giovanni Angoli</li>
               <li>Joel</li>
-              <li>LoovtO</li>
+              <li>Matija Han</li>
               <li>Hiroshi Seki</li>
-              <li>Flake</li>
+              <li>lrvick</li>
+              <li>Wolfgang '@vilbi</li>
+              <li>Sjef</li>
               <li>Ashanti Fortson</li>
               <li>Gergo Lippai</li>
-              <li>Daniel Lowe</li>
-              <li>Matija Han</li>
-              <li>Sjef</li>
-              <li>Jennie Schilling</li>
-              <li>B Cavello</li>
-              <li>Vivian L.</li>
-              <li>Brian</li>
               <li>Raphael Lullis</li>
-              <li>Maff</li>
-              <li>Rhys Powell</li>
-              <li>Waldo</li>
+              <li>Jennie Schilling</li>
+              <li>Frank Meeuwsen</li>
+              <li>B Cavello</li>
               <li>Ryan Littlefield</li>
-              <li>pinfort</li>
+              <li>Brian</li>
+              <li>Maff</li>
+              <li>Trace Evans</li>
               <li>Michael Castleman</li>
               <li>Derek Gonyeo</li>
               <li>Algot Runeman</li>
@@ -316,55 +302,58 @@ const Sponsorship = () => (
               <li></li>
               <li>Tom Liesenfeld</li>
               <li>colin mitchell</li>
-              <li>Mark Gordon</li>
               <li>Root</li>
               <li>Toby Pinder</li>
-              <li>Y G</li>
               <li>Jonathan Doda</li>
+              <li>Jim Newsome</li>
+              <li>Jacky</li>
+              <li>Jeremy Guillette</li>
+              <li>Casey Gollan</li>
+              <li>Kimmy</li>
+              <li>Merlot</li>
               <li>Wilhelm Fitzpatrick</li>
               <li>Beads Land-Trujillo</li>
               <li>Toootim</li>
-              <li>Cybrespace</li>
-              <li>Jeremy Stashewsky</li>
-              <li>Kimmy</li>
-              <li>Merlot</li>
-              <li>Jay H. Holloway</li>
-              <li>Trace Evans</li>
               <li>kDN4dkhsB</li>
               <li>Greg Pak</li>
+              <li>Cybrespace</li>
+              <li>Jeremy Stashewsky</li>
+              <li>DW</li>
+              <li>Judson Dunn</li>
+              <li>Christopher Greene</li>
+              <li>Lewis Perin</li>
               <li>Pierre BT</li>
               <li>Andrew Schmadel</li>
-              <li>lrvick</li>
-              <li>Wolfgang '@vilbi</li>
-              <li>ye735f</li>
-              <li>Christopher Greene</li>
-              <li>Jeremy Guillette</li>
-              <li>Casey Gollan</li>
               <li>Ted O'Neill</li>
-              <li>Lewis Perin</li>
-              <li>illuia</li>
               <li>Will</li>
               <li>Andrew Roach</li>
-              <li>T</li>
-              <li>Pablo Lopez Soriano</li>
-              <li>Snowflake</li>
-              <li>Hodge</li>
-              <li>Andrew Replogle</li>
-              <li>Jim Bradfield</li>
-              <li>Martin Tithonium</li>
-              <li>Sundi L Richard</li>
-              <li>Will Springer</li>
-              <li>Erik Bray</li>
-              <li>Fletcher Cole</li>
-              <li>Arielle Grimes</li>
-              <li>tarah</li>
-              <li>Liaizon Wakest</li>
-              <li>Simeon</li>
               <li>Michael Sieradzki</li>
               <li>Steve Felix</li>
               <li>[wolfe interval]</li>
               <li>Raphael Schweikert</li>
+              <li>illuia</li>
+              <li>Andrew Elliot</li>
+              <li>Padraic Harley</li>
+              <li>T</li>
+              <li>Pablo Lopez Soriano</li>
+              <li>Hodge</li>
+              <li>Andrew Replogle</li>
+              <li>Jim Bradfield</li>
+              <li>Martin Tithonium</li>
+              <li>Erik Bray</li>
+              <li>Fletcher Cole</li>
+              <li>Arielle Grimes</li>
+              <li>Liaizon Wakest</li>
+              <li>Simeon</li>
+              <li>Matt Ulman</li>
+              <li>Marie Martin</li>
+              <li>Brenda Salem</li>
+              <li>Blorg³</li>
+              <li>Melissa Avery-Weir</li>
               <li>Ickalo</li>
+              <li>Sundi L Richard</li>
+              <li>Johanna B</li>
+              <li>Horst Gutmann</li>
               <li>Vincent Sautter</li>
               <li>Calvin French</li>
               <li>pixelguff</li>
@@ -373,45 +362,30 @@ const Sponsorship = () => (
               <li>Lily</li>
               <li>Caitlin Collins</li>
               <li>Kris Jacque</li>
-              <li>Corbin Davenport</li>
-              <li>Laura Flores</li>
-              <li>Brenda Salem</li>
-              <li>Blorg³</li>
-              <li>Melissa Avery-Weir</li>
+              <li>Hywel Phillips</li>
+              <li>Tara Calishain</li>
+              <li>Andrew S</li>
               <li>Alex Dunn</li>
-              <li>tiansheng li</li>
-              <li>DW</li>
-              <li>Judson Dunn</li>
-              <li>Eelco Maljaars</li>
-              <li>Andrew Elliot</li>
-              <li>Johanna B</li>
-              <li>Horst Gutmann</li>
+              <li>Alexander Thompson</li>
               <li>Gareth Noyce</li>
               <li>Sara Haworth</li>
               <li>Ayla Ounce</li>
-              <li>belabor jaql</li>
+              <li>poetfox can deadlift 300lbs</li>
               <li>Andrea</li>
-              <li>Andrew Sherman</li>
+              <li>Kelson</li>
               <li>Felipe Martin</li>
               <li>Simon Tesla</li>
               <li>Sam Marshall</li>
-              <li>Michael Van Vleet</li>
               <li>Max</li>
-              <li>Angristan</li>
-              <li>Shinichi Sato</li>
-              <li>K466</li>
               <li>LM</li>
               <li>westantenna</li>
-              <li>Stephen Lovell</li>
               <li>Yoshitaka Kaneko</li>
               <li>tj</li>
               <li>Takahiro Fujiwara</li>
-              <li>neguse</li>
               <li>Artoria2e5</li>
               <li>Soshi Tamura</li>
               <li>Olivier Auber</li>
               <li>Tablesaw Tablesawsen</li>
-              <li>Pablo Defendini</li>
               <li>Naoki Kosaka</li>
               <li>Jon Pincus</li>
               <li>Neva Nevi</li>
@@ -423,13 +397,11 @@ const Sponsorship = () => (
               <li>Kazunori Shinozaki</li>
               <li>Tim and Alexandra Swast</li>
               <li>Decio</li>
-              <li>kanna</li>
               <li>HolyGrail</li>
               <li>Krzysztof Jankowski</li>
               <li>Nathan Wittstock</li>
               <li>Benjamin</li>
               <li>Andy</li>
-              <li>Willscire of the Many Tribes</li>
               <li>Bryan Lunduke</li>
               <li>codechemist</li>
               <li>Diego Islas Ocampo - Hyuchia</li>
@@ -441,7 +413,6 @@ const Sponsorship = () => (
               <li>Paul Houlihan</li>
               <li>Nitin Dahyabhai</li>
               <li>8zu</li>
-              <li>Stephanie Pakrul</li>
               <li>Alexander</li>
               <li>RW</li>
               <li>Roo Khan</li>
@@ -451,7 +422,6 @@ const Sponsorship = () => (
               <li>Frederick Doe</li>
               <li>Axel Terizaki</li>
               <li>Sud</li>
-              <li>D. Moonfire</li>
               <li>Christopher Armstrong</li>
               <li>Shivian Morgan</li>
               <li>Eric Mill</li>
@@ -461,7 +431,6 @@ const Sponsorship = () => (
               <li>Margaret Trauth</li>
               <li>James Smith</li>
               <li>t3sserakt</li>
-              <li>Dmitri Sotnikov</li>
               <li>Pierre-Emmanuel Guerton</li>
               <li>Alice Voidstar</li>
               <li>Alan Love</li>
@@ -471,7 +440,7 @@ const Sponsorship = () => (
               <li>Stefan Hayden</li>
               <li>Esteban Manchado Velázquez</li>
               <li>Larry Fine</li>
-              <li>Reilly Grant</li>
+              <li>binaryfox</li>
               <li>Allen Baker</li>
               <li>Mark Davis</li>
               <li>Christian Ternus</li>
@@ -479,7 +448,6 @@ const Sponsorship = () => (
               <li>Andrew Louis</li>
               <li>Syluban</li>
               <li>dreid</li>
-              <li>Tessa N</li>
               <li>Jam</li>
               <li>Casey Kolderup</li>
               <li>Nurelin</li>
@@ -507,6 +475,7 @@ const Sponsorship = () => (
               <li>Richard</li>
               <li>Satoshi KOJIMA</li>
               <li>Jacob Weisz</li>
+              <li>Michael Van Vleet</li>
               <li>Lilith Saintcrow</li>
               <li>Pablo Brasero</li>
               <li>James Harris</li>
@@ -515,24 +484,29 @@ const Sponsorship = () => (
               <li>Greg Sartucci</li>
               <li>Lyn Thorne-Alder</li>
               <li>Allison Parrish</li>
-              <li>Ben Bonfil</li>
               <li>unarist</li>
               <li>Matt Baer</li>
               <li>masarakki</li>
               <li>abcang</li>
               <li>Stefano Figura</li>
-              <li>Gabriele Lucci</li>
               <li>Joshua Demallistre</li>
               <li>0̸chroma</li>
               <li>Arkanosis</li>
+              <li>Angristan</li>
               <li>Andrew W</li>
               <li>Kyota Yasuda</li>
               <li>tateisu</li>
               <li>Satoshi Endo</li>
               <li>Sébastien Lalloué</li>
-              <li>Hywel Phillips</li>
-              <li>Tara Calishain</li>
-              <li>Kelson</li>
+              <li>Shinichi Sato</li>
+              <li>K466</li>
+              <li>neguse</li>
+              <li>Stephanie Pakrul</li>
+              <li>D. Moonfire</li>
+              <li>Dmitri Sotnikov</li>
+              <li>Tessa N</li>
+              <li>Sarah Hegeman</li>
+              <li>Bruce Tindall</li>
               <li>MitarashiDango</li>
               <li>Takuya Yoshida</li>
               <li>Drífa Jónsdóttir</li>
@@ -541,18 +515,13 @@ const Sponsorship = () => (
               <li>Clworld</li>
               <li>ぽむ</li>
               <li>Cathal Garvey</li>
-              <li>Sadiq Saif</li>
               <li>Eldan Goldenberg</li>
               <li>Matti Lattunen</li>
               <li>Tom Kenny</li>
               <li>David Wolfpaw</li>
               <li>Lertsenem</li>
-              <li>Jacky</li>
-              <li>François-Xavier Guillois</li>
-              <li>Padraic Harley</li>
-              <li>Marie Martin</li>
-              <li>Sarah Hegeman</li>
-              <li>Bruce Tindall</li>
+              <li>Rosemary Windsor</li>
+              <li>Xiyu Cai</li>
               <li>Bobby Moss</li>
               <li>Antoine Amarilli</li>
               <li>Gusk-ma</li>
@@ -560,7 +529,6 @@ const Sponsorship = () => (
               <li>Rafael</li>
               <li>Jan Jastrow</li>
               <li>Kazusa Okuda</li>
-              <li>Alexander Thompson</li>
               <li>Patrick L Archibald</li>
               <li>osapon</li>
               <li>Francois Bayart</li>
@@ -573,18 +541,21 @@ const Sponsorship = () => (
               <li>Karel P Kerezman</li>
               <li>JoYo</li>
               <li>Donna</li>
-              <li>Lan</li>
+              <li>Soroush Khanlou</li>
+              <li>Jeri Dansky</li>
+              <li>Andrew Pontious</li>
+              <li>Chris Hanson</li>
+              <li>Kevin Hoctor</li>
+              <li>Hendrik Mans</li>
+              <li>Erik Moeller</li>
+              <li>Jeremy Clark</li>
               <li>Matt</li>
               <li>infernalperson</li>
-              <li>liffy</li>
-              <li>Smut Lit Co.</li>
               <li>Antoine Jacques de Dixmude</li>
               <li>Matthew Bogart</li>
               <li>Lindsey B</li>
               <li>Ross Smith</li>
               <li>Manuel Bärenz</li>
-              <li>Shy Custis</li>
-              <li>new Object</li>
               <li>E. N. Tót</li>
               <li>Timothy Garris</li>
               <li>Jevon</li>
@@ -592,17 +563,16 @@ const Sponsorship = () => (
               <li>Max Kaehn</li>
               <li>mkreed</li>
               <li>Jeremy Putnam</li>
-              <li>Dave Hoffman</li>
               <li>Liz</li>
               <li>Josh Sutphin</li>
-              <li>M. Lane</li>
               <li>Kyle Cooper</li>
               <li>Ayhotte</li>
-              <li>OliveOilCorp</li>
               <li>Ryan Rix</li>
               <li>Tim Albers</li>
               <li>vpzomtrrfrt</li>
-              <li>David Underwood</li>
+              <li>Andrey Kurenkov</li>
+              <li>Matthias Weise</li>
+              <li>Adrian Hon</li>
               <li>Xavi Francisco</li>
               <li>Patrick Hogan</li>
               <li>A Peanut</li>
@@ -611,28 +581,28 @@ const Sponsorship = () => (
               <li>Colin Coghill</li>
               <li>Ian Cox</li>
               <li>Ronin wood</li>
-              <li>exo</li>
-              <li>Matthias Weise</li>
+              <li>Smut Lit Co.</li>
+              <li>Shy Custis</li>
+              <li>oriold</li>
+              <li>Craig Maloney</li>
               <li>Jennifer Barnes</li>
-              <li>jeremy</li>
               <li>Eleanor Konik</li>
               <li>Soliman</li>
               <li>Hugh Messenger</li>
-              <li>Zach Valenti</li>
               <li>Joel Wallis Jucá</li>
               <li>Jörg</li>
               <li>DoC</li>
               <li>Thaddeus Grey</li>
+              <li>David Underwood</li>
+              <li>exo</li>
+              <li>Toby</li>
+              <li>unasuke</li>
               <li>Alexander Murray-Watters</li>
               <li>Brook Peterson</li>
               <li>Spenser Isdahl</li>
-              <li>Church Turing</li>
-              <li>Xiyu Cai</li>
-              <li>oriold</li>
-              <li>Pam G</li>
-              <li>unasuke</li>
+              <li>Jason Friedrich</li>
+              <li>Jack Ketcham</li>
               <li>Stephen L.B.</li>
-              <li>Inkey</li>
               <li>Ryan</li>
               <li>Jeremiah C. Foster</li>
               <li>Richard K Schultz</li>
@@ -642,11 +612,8 @@ const Sponsorship = () => (
               <li>Thomas Baker</li>
               <li>Nathan Brown</li>
               <li>Ian Smith</li>
-              <li>Charles Childers</li>
               <li>Jonathan</li>
               <li>Bryan Rosander</li>
-              <li>caasi Huang</li>
-              <li>K.K. POON</li>
               <li>Benedikt Boeck</li>
               <li>bradsmith</li>
               <li>Sem</li>
@@ -654,39 +621,79 @@ const Sponsorship = () => (
               <li>Abby</li>
               <li>Thomas Chapeaux</li>
               <li>Chet Zar</li>
-              <li>Andrey Kurenkov</li>
+              <li>Daniel Hogan</li>
+              <li>Zachary Waldowski</li>
+              <li>bugrasan</li>
+              <li>Andrew Madsen</li>
+              <li>Matthew Flint</li>
+              <li>Evan DiBiase</li>
+              <li>Inkey</li>
               <li>Amalie McKee</li>
               <li>Michael Melanson</li>
               <li>Lukáš Lánský</li>
               <li>Mark</li>
               <li>Kevin O'Gorman</li>
               <li>Daniel Foré</li>
-              <li>Andrés Riveros</li>
               <li>Jonas Berlin</li>
               <li>shoyameow</li>
               <li>Dario Castañé</li>
               <li>Fabio Utzig</li>
-              <li>Jack Ketcham</li>
+              <li>caasi Huang</li>
+              <li>Marc Juul</li>
               <li>Miguel Garcia</li>
               <li>Jalmari Ikävalko</li>
               <li>Balkan Misirli</li>
               <li>Chris Snider</li>
-              <li>Jamie Gray</li>
               <li>Hinaloe Kl</li>
               <li>Hycon</li>
               <li>Rick Garcia</li>
               <li>Quinn Monk</li>
               <li>Samuel Maddock</li>
-              <li>Rosemary Windsor</li>
               <li>Ismael Acevedo</li>
               <li>Eric Rose</li>
               <li>Ashraf Rabi</li>
+              <li>Bingen Eguzkitza</li>
+              <li>Dan Peterson</li>
+              <li>FC</li>
               <li>Andrew Crouthamel</li>
               <li>Dross</li>
               <li>Eliot Lash</li>
               <li>Christoffer Bakken Tallerås</li>
               <li>trumpy</li>
               <li>Basix</li>
+              <li>Jamie Gray</li>
+              <li>Carlyn</li>
+              <li>alexg_k</li>
+              <li>Nicholas</li>
+              <li>Alis Franklin</li>
+              <li>SeeBeyond</li>
+              <li>Christian Pauly</li>
+              <li>Marcos</li>
+              <li>TOM WOR</li>
+              <li>Jonas Lingg</li>
+              <li>Siegfried Ehret</li>
+              <li>Maxim Böckelmann</li>
+              <li>Andreas Dantz</li>
+              <li>After Tommy</li>
+              <li>Ethan Hussong</li>
+              <li>Tom Grundy</li>
+              <li>Jay Tamboli</li>
+              <li>Dave Wood</li>
+              <li>Tom</li>
+              <li>Brian Jones</li>
+              <li>Dualhammers</li>
+              <li>Ray Ryan</li>
+              <li>Brentley Jones</li>
+              <li>John Ping</li>
+              <li>Jake LaCaze</li>
+              <li>Gathadair</li>
+              <li>Giuseppe Di Bella</li>
+              <li>Dinah Sanders</li>
+              <li>Jason Cosper</li>
+              <li>Jordan Brock</li>
+              <li>Kyree Spain</li>
+              <li>s q</li>
+              <li>mydarkstar</li>
             </ul>
           </Scrollbars>
         </div>
