@@ -22,6 +22,7 @@ export function fetchInstances() {
       category: category.split('-')[0],
       sort_by: 'active_users',
       sort_order: 'desc',
+      include_opt_out: 'false',
     };
 
     if (language !== '') {
