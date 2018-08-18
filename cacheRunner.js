@@ -11,6 +11,7 @@ const defaultParams = {
   min_active_users: '1',
   sort_by: 'active_users',
   sort_order: 'desc',
+  include_opt_out: 'false',
 };
 
 const categories = [

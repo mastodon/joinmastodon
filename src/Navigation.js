@@ -25,8 +25,9 @@ const Navigation = () => (
     </ul>
 
     <ul className='right'>
+      <li><Link to='/apps'><FormattedMessage id='nav.apps' defaultMessage='Apps' /></Link></li>
       <li><Link to='/sponsors'><FormattedMessage id='nav.sponsors' defaultMessage='Sponsors' /></Link></li>
-      <li><a href='https://github.com/tootsuite/mastodon'><FormattedMessage id='nav.code' defaultMessage='Source code' /></a></li>
+      <li><a href='https://github.com/tootsuite/mastodon'><FormattedMessage id='nav.code' defaultMessage='Code' /></a></li>
       <li><Dropdown asLinks label={<FormattedMessage id='nav.resources' defaultMessage='Resources' />} options={options} /></li>
       <li><LanguageSelectContainer /></li>
     </ul>

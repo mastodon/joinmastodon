@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import Home from './Home';
 import Sponsorship from './Sponsorship';
 import Imprint from './Imprint';
+import BrowseApps from './BrowseApps';
 import ScrollToTop from './ScrollToTop';
 import Title from './Title';
 
@@ -39,6 +40,7 @@ const App = ({ usersLocale }) => (
           <Route exact path='/' component={Home} />
           <Route path='/sponsors' component={Sponsorship} />
           <Route path='/imprint' component={Imprint} />
+          <Route path='/apps' component={BrowseApps} />
           <Title />
         </div>
       </ScrollToTop>
