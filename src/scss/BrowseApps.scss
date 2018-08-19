@@ -26,9 +26,26 @@
     margin: 20px 0;
   }
 
+  .legal {
+    padding-bottom: 60px;
+  }
+
   h2 {
     font-weight: 700;
     margin-bottom: 30px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .navbar {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -40,10 +57,23 @@
 
   &__item {
     box-sizing: border-box;
-    flex: 0 0 auto;
+    flex: 1 1 205px;
     padding: 0 5px;
     margin-bottom: 10px;
-    width: 205px;
+    max-width: 25%;
+
+    @media screen and (max-width: 800px) {
+      max-width: 33.3%;
+    }
+
+    @media screen and (max-width: 530px) {
+      max-width: 50%;
+    }
+
+    @media screen and (max-width: 400px) {
+      max-width: 100%;
+      width: 100%;
+    }
 
     a {
       display: block;
