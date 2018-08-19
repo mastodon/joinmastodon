@@ -21,6 +21,7 @@ const messages = defineMessages({
   adult_content_creator: { id: 'wizard.filter.adult_content_creator', defaultMessage: 'an adult content creator' },
   lgbt: { id: 'wizard.filter.lgbt', defaultMessage: 'LGBTQ+' },
   poc_aa: { id: 'wizard.filter.poc_aa', defaultMessage: 'Black American' },
+  humor: { id: 'wizard.filter.humor', defaultMessage: 'a humorist' },
 });
 
 const caretIcon = (
@@ -92,6 +93,7 @@ class Wizard extends React.PureComponent {
                 { value: 'tech-1', text: intl.formatMessage(messages.sysadmin) },
                 { value: 'academia', text: intl.formatMessage(messages.academia) },
                 { value: 'adult', text: intl.formatMessage(messages.adult_content_creator) },
+                { value: 'humor', text: intl.formatMessage(messages.humor) },
               ]}
               caretIcon={caretIcon}
               selectedValue={category}
