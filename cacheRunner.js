@@ -29,6 +29,7 @@ const categories = [
   'tech',
   'academia',
   'adult',
+  'humor'
 ];
 
 const languages = [
