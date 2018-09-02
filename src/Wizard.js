@@ -114,6 +114,7 @@ class Wizard extends React.PureComponent {
                 { value: 'fi', text: 'Suomi' },
                 { value: 'fr', text: 'Français' },
                 { value: 'ja', text: '日本語' },
+                { value: 'ko', text: '한국어' },
                 { value: 'nl', text: 'Nederlands' },
                 { value: 'pl', text: 'Polski' },
                 { value: 'pt', text: 'Português' },
