@@ -17,7 +17,7 @@ import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
 // import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
-import avatarSdf from './assets/sponsors/sdf.jpg';
+import sponsorSDF from './assets/sponsors/sdf.png';
 import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
 //import avatarAndreaValenti from './assets/sponsors/andreavalenti.png';
 // import avatarDavidHutchinson from './assets/sponsors/davidhutchinson.png';
@@ -60,6 +60,7 @@ const Sponsorship = () => (
             <a href='http://www.fourthestate.co/'><img src={sponsorFourthEstate} alt='Fourth Estate' /></a>
             <a href='https://getstream.io/try-the-api'><img src={sponsorStream} alt='Stream' /></a>
             <a href='http://www.rubymotion.com/'><img src={sponsorRubymotion} alt='RubyMotion' /></a>
+            <a href='https://mastodon.sdf.org'><img src={sponsorSDF} alt='Purism' /></a>
             <a href='https://puri.sm/'><img src={sponsorPurism} alt='Purism' /></a>
           </div>
         </div>
@@ -78,7 +79,6 @@ const Sponsorship = () => (
         <div className='sponsors-list--badges'>
           <ul>
             <li><a href='https://mastodon.art'><img src={avatarGlocal} alt='' /> <span><strong>glocal</strong><span>https://mastodon.art</span></span></a></li>
-            <li><a href='https://mastodon.sdf.org'><img src={avatarSdf} alt='' /> <span><strong>SDF.ORG</strong><span>https://mastodon.sdf.org</span></span></a></li>
             <li><a href='https://cloudfleet.io'><img src={avatarCloudfleet} alt='' /> <span><strong>CloudFleet</strong><span>https://cloudfleet.io</span></span></a></li>
             <li><a href='https://sudoJames.com'><img src={avatarJamesMWright} alt='' /> <span><strong>James Wright</strong><span>https://sudoJames.com</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Martin Seeger</strong><span>-</span></span></a></li>
