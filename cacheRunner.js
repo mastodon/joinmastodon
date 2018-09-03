@@ -41,6 +41,7 @@ const languages = [
   'fi',
   'fr',
   'ja',
+  'ko',
   'nl',
   'pl',
   'pt',
