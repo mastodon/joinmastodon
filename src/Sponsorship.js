@@ -12,6 +12,7 @@ import sponsorFourthEstate from './assets/sponsors/FourthEstate-logo.png';
 import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
+import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
@@ -61,6 +62,7 @@ const Sponsorship = () => (
             <a href='https://getstream.io/try-the-api'><img src={sponsorStream} alt='Stream' /></a>
             <a href='http://www.rubymotion.com/'><img src={sponsorRubymotion} alt='RubyMotion' /></a>
             <a href='https://mastodon.sdf.org'><img src={sponsorSDF} alt='Purism' /></a>
+            <a href='mailto:bamboo.how@gmail.com'><img src={sponsorBambooHow} alt='Bamboo How' /></a>
             <a href='https://puri.sm/'><img src={sponsorPurism} alt='Purism' /></a>
           </div>
         </div>
