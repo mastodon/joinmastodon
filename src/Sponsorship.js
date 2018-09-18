@@ -21,8 +21,8 @@ import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
 import sponsorSDF from './assets/sponsors/sdf.png';
 import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
 //import avatarAndreaValenti from './assets/sponsors/andreavalenti.png';
-// import avatarDavidHutchinson from './assets/sponsors/davidhutchinson.png';
-import avatarIrick from './assets/sponsors/irick.gif';
+//import avatarDavidHutchinson from './assets/sponsors/davidhutchinson.png';
+//import avatarIrick from './assets/sponsors/irick.gif';
 //import avatarSirTyrent from './assets/sponsors/sirtyrent.png';
 import avatarVJ from './assets/sponsors/vj.png';
 //import avatarFragbenny from './assets/sponsors/fragbenny.jpeg';
@@ -31,7 +31,7 @@ import avatarEvan from './assets/sponsors/evan.png';
 import avatarMarkAtwood from './assets/sponsors/markatwood.jpg';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
 //import avatarLevlaz from './assets/sponsors/levlaz.png';
-import avatarDansup from './assets/sponsors/dansup.jpg';
+//import avatarDansup from './assets/sponsors/dansup.jpg';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
