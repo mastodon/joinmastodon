@@ -33,6 +33,7 @@ import avatarNoellabo from './assets/sponsors/noellabo.png';
 //import avatarLevlaz from './assets/sponsors/levlaz.png';
 //import avatarDansup from './assets/sponsors/dansup.jpg';
 import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
+import avatarBenWerdmuller from './assets/sponsors/benwerdmuller.jpg';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -92,7 +93,7 @@ const Sponsorship = () => (
             <li><a href='https://inanna.xyz/'><img src={avatarIanna} alt='' /> <span><strong>Inanna</strong><span>https://inanna.xyz/</span></span></a></li>
             <li><a href='https://about.me/markatwood'><img src={avatarMarkAtwood} alt='' /> <span><strong>Mark Atwood</strong><span>https://about.me/markatwood</span></span></a></li>
             <li><a href='https://dtp-mstdn.jp'><img src={avatarNoellabo} alt='' /> <span><strong>noellabo</strong><span>https://dtp-mstdn.jp</span></span></a></li>
-            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Ben Werdmuller</strong><span>-</span></span></a></li>
+            <li><a href='https://werd.io'><img src={avatarBenWerdmuller} alt='' /> <span><strong>Ben Werdmuller</strong><span>https://werd.io</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Ms Miller</strong><span>-</span></span></a></li>
             <li><a href='https://mastodon.gamedev.place/@aras'><img src={avatarArasPranckevicius} alt='' /> <span><strong>Aras Pranckevicius</strong><span>https://mastodon.gamedev.place/@aras</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>PickFu</strong><span>-</span></span></a></li>
