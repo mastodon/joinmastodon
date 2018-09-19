@@ -34,6 +34,7 @@ import avatarNoellabo from './assets/sponsors/noellabo.png';
 //import avatarDansup from './assets/sponsors/dansup.jpg';
 import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
 import avatarBenWerdmuller from './assets/sponsors/benwerdmuller.jpg';
+import avatarPickfu from './assets/sponsors/pickfu.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -96,7 +97,7 @@ const Sponsorship = () => (
             <li><a href='https://werd.io'><img src={avatarBenWerdmuller} alt='' /> <span><strong>Ben Werdmuller</strong><span>https://werd.io</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Ms Miller</strong><span>-</span></span></a></li>
             <li><a href='https://mastodon.gamedev.place/@aras'><img src={avatarArasPranckevicius} alt='' /> <span><strong>Aras Pranckevicius</strong><span>https://mastodon.gamedev.place/@aras</span></span></a></li>
-            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>PickFu</strong><span>-</span></span></a></li>
+            <li><a href='https://www.pickfu.com/'><img src={avatarPickfu} alt='' /> <span><strong>PickFu</strong><span>https://www.pickfu.com/</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Igor Ferreira</strong><span>-</span></span></a></li>
             <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Look To The Right</strong><span>-</span></span></a></li>
           </ul>
