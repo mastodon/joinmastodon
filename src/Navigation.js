@@ -10,7 +10,7 @@ import mastodonLogo from './assets/logo_full.svg';
 const options = [
   { value: 'https://blog.joinmastodon.org/', label: <FormattedMessage id='nav.blog' defaultMessage='Blog' />},
   { value: 'https://discourse.joinmastodon.org', label: <FormattedMessage id='nav.support' defaultMessage='Support' /> },
-  { value: 'https://github.com/tootsuite/documentation', label: <FormattedMessage id='nav.docs' defaultMessage='Documentation' /> },
+  { value: 'https://docs.joinmastodon.org', label: <FormattedMessage id='nav.docs' defaultMessage='Documentation' /> },
   { value: 'https://www.designbyhumans.com/shop/mastodon/', label: <FormattedMessage id='nav.merch' defaultMessage='Merch' /> },
 ];
 
