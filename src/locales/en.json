@@ -38,7 +38,7 @@
   "how_it_works.future": "Mastodon is future-proof",
   "how_it_works.future_text": "Thanks to standard protocols, the network is not limited to Mastodon servers. If better software comes along, it can continue with the same social graph.",
   "how_it_works.network": "The network is interoperable",
-  "how_it_works.network_text": "Using a suit of standard protocols, Mastodon servers can exchange information with each other, allowing users to interact seamlessly.",
+  "how_it_works.network_text": "Using a suite of standard protocols, Mastodon servers can exchange information with each other, allowing users to interact seamlessly.",
   "how_it_works.robust": "Mastodon is robust",
   "how_it_works.robust_text": "The network is resistant to financial, technical and organizational issues, as well as government interference, due to its diversified nature.",
   "how_it_works.server": "Each server is independent",
