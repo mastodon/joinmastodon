@@ -36,6 +36,7 @@ import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
 import avatarBenWerdmuller from './assets/sponsors/benwerdmuller.jpg';
 import avatarPickfu from './assets/sponsors/pickfu.png';
 import avatarIgorFerreira from './assets/sponsors/igorferreira.jpeg';
+import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -100,7 +101,7 @@ const Sponsorship = () => (
             <li><a href='https://mastodon.gamedev.place/@aras'><img src={avatarArasPranckevicius} alt='' /> <span><strong>Aras Pranckevicius</strong><span>https://mastodon.gamedev.place/@aras</span></span></a></li>
             <li><a href='https://www.pickfu.com/'><img src={avatarPickfu} alt='' /> <span><strong>PickFu</strong><span>https://www.pickfu.com/</span></span></a></li>
             <li><a href='https://github.com/igorcferreira'><img src={avatarIgorFerreira} alt='' /> <span><strong>Igor Ferreira</strong><span>https://github.com/igorcferreira</span></span></a></li>
-            <li><a href='#'><img src={noAvatar} alt='' /> <span><strong>Look To The Right</strong><span>-</span></span></a></li>
+            <li><a href='https://www.looktotheright.com/'><img src={avatarLookToTheRight} alt='' /> <span><strong>Look To The Right</strong><span>https://www.looktotheright.com/</span></span></a></li>
           </ul>
         </div>
       </div>
