@@ -9,6 +9,8 @@ import subwayTooter from './assets/apps/subway-tooter.png';
 import pawoo from './assets/apps/pawoo.jpg';
 import mastalab from './assets/apps/mastalab.png';
 import amaroq from './assets/apps/amaroq.jpg';
+import mast from './assets/apps/mast.jpg';
+import toot from './assets/apps/toot.jpg';
 
 const apps = {
   android: [
@@ -38,6 +40,18 @@ const apps = {
   ],
 
   ios: [
+    {
+      name: 'Toot!',
+      icon: toot,
+      url: 'https://itunes.apple.com/app/toot/id1229021451?ls=1&mt=8',
+    },
+
+    {
+      name: 'Mast',
+      icon: mast,
+      url: 'https://itunes.apple.com/us/app/mast/id1437429129?mt=8',
+    },
+
     {
       name: 'Amaroq',
       icon: amaroq,
