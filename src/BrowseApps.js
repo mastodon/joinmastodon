@@ -44,12 +44,14 @@ const apps = {
       name: 'Toot!',
       icon: toot,
       url: 'https://itunes.apple.com/app/toot/id1229021451?ls=1&mt=8',
+      paid: true,
     },
 
     {
       name: 'Mast',
       icon: mast,
       url: 'https://itunes.apple.com/us/app/mast/id1437429129?mt=8',
+      paid: true,
     },
 
     {
