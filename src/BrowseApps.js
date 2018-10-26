@@ -31,12 +31,6 @@ const apps = {
       icon: mastalab,
       url: 'https://play.google.com/store/apps/details?id=fr.gouv.etalab.mastodon',
     },
-
-    {
-      name: 'Pawoo',
-      icon: pawoo,
-      url: 'https://play.google.com/store/apps/details?id=jp.pxv.pawoo',
-    },
   ],
 
   ios: [
@@ -58,12 +52,6 @@ const apps = {
       name: 'Amaroq',
       icon: amaroq,
       url: 'https://itunes.apple.com/us/app/amarok-for-mastodon/id1214116200?ls=1&mt=8',
-    },
-
-    {
-      name: 'Pawoo',
-      icon: pawoo,
-      url: 'https://itunes.apple.com/us/app/pawoo/id1229070679',
     },
   ],
 };
