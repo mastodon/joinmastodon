@@ -6,7 +6,6 @@ import Legal from './Legal';
 
 import tusky from './assets/apps/tusky.png';
 import subwayTooter from './assets/apps/subway-tooter.png';
-import pawoo from './assets/apps/pawoo.jpg';
 import mastalab from './assets/apps/mastalab.png';
 import amaroq from './assets/apps/amaroq.jpg';
 import mast from './assets/apps/mast.jpg';
