@@ -108,6 +108,7 @@ class Wizard extends React.PureComponent {
               options={[
                 { value: '', text: '…' },
                 { value: 'ar', text: 'العربية' },
+                { value: 'ca', text: 'Català' },
                 { value: 'de', text: 'Deutsch' },
                 { value: 'en', text: 'English' },
                 { value: 'es', text: 'Español' },
