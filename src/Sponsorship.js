@@ -13,6 +13,7 @@ import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
 import sponsorBambooHow from './assets/sponsors/bamboohow.png';
+import sponsorKeybase from './assets/sponsors/keybase.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
@@ -68,6 +69,7 @@ const Sponsorship = () => (
             <a href='http://www.rubymotion.com/'><img src={sponsorRubymotion} alt='RubyMotion' /></a>
             <a href='https://mastodon.sdf.org'><img src={sponsorSDF} alt='Purism' /></a>
             <a href='mailto:bamboo.how@gmail.com'><img src={sponsorBambooHow} alt='Bamboo How' /></a>
+            <a href='https://keybase.io/'><img src={sponsorKeybase} alt='Keybase' /></a>
             <a href='https://puri.sm/'><img src={sponsorPurism} alt='Purism' /></a>
           </div>
         </div>
