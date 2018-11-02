@@ -10,6 +10,9 @@ import mastalab from './assets/apps/mastalab.png';
 import amaroq from './assets/apps/amaroq.jpg';
 import mast from './assets/apps/mast.jpg';
 import toot from './assets/apps/toot.jpg';
+import tooter from './assets/apps/tooter.png';
+import tootle from './assets/apps/tootle.svg';
+import pinafore from './assets/apps/pinafore.png';
 
 const apps = {
   android: [
@@ -53,6 +56,30 @@ const apps = {
       url: 'https://itunes.apple.com/us/app/amarok-for-mastodon/id1214116200?ls=1&mt=8',
     },
   ],
+
+  web: [
+    {
+      name: 'Pinafore',
+      icon: pinafore,
+      url: 'https://pinafore.social',
+    },
+  ],
+
+  sailfish: [
+    {
+      name: 'Tooter',
+      icon: tooter,
+      url: 'https://openrepos.net/content/dysko/tooter',
+    },
+  ],
+
+  linux: [
+    {
+      name: 'Tootle',
+      icon: tootle,
+      url: 'https://appcenter.elementary.io/com.github.bleakgrey.tootle/',
+    },
+  ],
 };
 
 const renderApp = ({ name, icon, paid, url }) => (
@@ -88,6 +115,24 @@ const BrowseApps = () => (
 
       <div className='app-grid'>
         {apps.ios.map(renderApp)}
+      </div>
+
+      <h2>Web</h2>
+
+      <div className='app-grid'>
+        {apps.web.map(renderApp)}
+      </div>
+
+      <h2>Desktop (Linux)</h2>
+
+      <div className='app-grid'>
+        {apps.linux.map(renderApp)}
+      </div>
+
+      <h2>SailfishOS</h2>
+
+      <div className='app-grid'>
+        {apps.sailfish.map(renderApp)}
       </div>
 
       <Legal />
