@@ -16,7 +16,7 @@ import sponsorKibousoft from './assets/sponsors/kibousoft.png';
 import sponsorPixiv from './assets/sponsors/pixiv.png';
 import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
-import sponsorKeybase from './assets/sponsors/keybase.png';
+import sponsorKeybase from './assets/sponsors/keybase-logo.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 //import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';

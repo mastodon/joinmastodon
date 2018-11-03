@@ -13,7 +13,7 @@ import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
 import sponsorBambooHow from './assets/sponsors/bamboohow.png';
-import sponsorKeybase from './assets/sponsors/keybase.png';
+import sponsorKeybase from './assets/sponsors/keybase-logo.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
