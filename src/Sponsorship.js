@@ -104,6 +104,7 @@ const Sponsorship = () => (
             <li><a href='https://www.pickfu.com/'><img src={avatarPickfu} alt='' /> <span><strong>PickFu</strong><span>https://www.pickfu.com/</span></span></a></li>
             <li><a href='https://github.com/igorcferreira'><img src={avatarIgorFerreira} alt='' /> <span><strong>Igor Ferreira</strong><span>https://github.com/igorcferreira</span></span></a></li>
             <li><a href='https://www.looktotheright.com/'><img src={avatarLookToTheRight} alt='' /> <span><strong>Look To The Right</strong><span>https://www.looktotheright.com/</span></span></a></li>
+            <li><a href='https://sextoycollective.com/'><img src={noAvatar} alt='' /> <span><strong>Sex Toy Collective</strong><span>https://sextoycollective.com/</span></span></a></li>
           </ul>
         </div>
       </div>
