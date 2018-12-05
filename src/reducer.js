@@ -33,7 +33,7 @@ export default function reducer(state = initialState, action) {
   case LOCALE_CHANGE:
     return { ...state, locale: action.data };
   case INSTANCES_FETCH_SUCCESS:
-    return { ...state, instances: action.data };
+    return { ...state, instances: action.data.filter(instance => instance.name !== 'mastodon.social') };
   case FILTER_CATEGORY_CHANGE:
     return { ...state, filter: { ...state.filter, category: action.data } };
   case FILTER_LANGUAGE_CHANGE:
