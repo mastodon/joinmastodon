@@ -28,12 +28,21 @@ const initialState = {
   },
 };
 
+const DUNBAR = Math.log(300);
+
+const sortByDunbarsNumber = instances => instances.sort((a, b) => {
+  const aa = Math.abs(DUNBAR - Math.log(a.active_users));
+  const bb = Math.abs(DUNBAR - Math.log(b.active_users));
+
+  return aa > bb ? 1 : (aa < bb ? -1 : 0);
+});
+
 export default function reducer(state = initialState, action) {
   switch(action.type) {
   case LOCALE_CHANGE:
     return { ...state, locale: action.data };
   case INSTANCES_FETCH_SUCCESS:
-    return { ...state, instances: action.data };
+    return { ...state, instances: sortByDunbarsNumber(action.data) };
   case FILTER_CATEGORY_CHANGE:
     return { ...state, filter: { ...state.filter, category: action.data } };
   case FILTER_LANGUAGE_CHANGE:
