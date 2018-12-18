@@ -28,11 +28,11 @@ const initialState = {
   },
 };
 
-const DUNBAR = 150;
+const DUNBAR = Math.log(300);
 
 const sortByDunbarsNumber = instances => instances.sort((a, b) => {
-  const aa = Math.abs(DUNBAR - a.active_users);
-  const bb = Math.abs(DUNBAR - b.active_users);
+  const aa = Math.abs(DUNBAR - Math.log(a.active_users));
+  const bb = Math.abs(DUNBAR - Math.log(b.active_users));
 
   return aa > bb ? 1 : (aa < bb ? -1 : 0);
 });
