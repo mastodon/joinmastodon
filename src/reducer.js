@@ -28,17 +28,12 @@ const initialState = {
   },
 };
 
-const blacklist = [
-  'mastodon.social',
-  'abdl.link',
-];
-
 export default function reducer(state = initialState, action) {
   switch(action.type) {
   case LOCALE_CHANGE:
     return { ...state, locale: action.data };
   case INSTANCES_FETCH_SUCCESS:
-    return { ...state, instances: action.data.filter(instance => blacklist.indexOf(instance.name) === -1) };
+    return { ...state, instances: action.data };
   case FILTER_CATEGORY_CHANGE:
     return { ...state, filter: { ...state.filter, category: action.data } };
   case FILTER_LANGUAGE_CHANGE:
