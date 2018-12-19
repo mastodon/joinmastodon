@@ -84,7 +84,7 @@ const apps = {
 
 const renderApp = ({ name, icon, paid, url }) => (
   <div className='app-grid__item' key={name}>
-    <a href={url} target='_blank'>
+    <a href={url} target='_blank' rel='noopener noreferrer'>
       <img src={icon} alt={name} className='app-grid__item__icon' />
 
       <div className='app-grid__item__text'>

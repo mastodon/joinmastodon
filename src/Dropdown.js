@@ -12,7 +12,7 @@ export default class Dropdown extends PureComponent {
     return (
       <div className='dropdown__menu'>
         {options.map(option => asLinks ? (
-          <a href={option.value} className='dropdown__option' target='_blank'>
+          <a href={option.value} className='dropdown__option' target='_blank' rel='noopener noreferrer'>
             {option.label}
           </a>
         ) : (

@@ -38,7 +38,7 @@ const WizardRow = ({ instance, intl }) => {
   const populationSpan = <FormattedMessage id='wizard_row.user_count' defaultMessage='{population} {count, plural, one {person} other {people}}' values={{ population, count: instance.users }} />;
 
   return (
-    <a href={`https://${instance.name}/about`} target='_blank' rel='noopener' className={classNames('wizard-row', { offline: !instance.up })}>
+    <a href={`https://${instance.name}/about`} target='_blank' rel='noopener noreferrer' className={classNames('wizard-row', { offline: !instance.up })}>
       <div className='wizard-row__thumbnail'>
         <div>
           <img src={instance.thumbnail_proxy} alt='' />

@@ -20,7 +20,7 @@ const Features = () => (
         <i className='xs-show ion-md-lock' />
         <h2><FormattedMessage id='features.safety2' defaultMessage='Safer social media experience' /></h2>
         <p><FormattedMessage id='features.safety_text2' defaultMessage="Mastodon comes with <strong>effective anti-abuse tools</strong> to help protect yourself. Thanks to the network's spread out and independent nature there are <strong>more moderators</strong> who you can approach for personal help, and <strong>servers with strict codes of conduct</strong>." /></p>
-        <a href='https://blog.joinmastodon.org/2018/07/cage-the-mastodon/' className='link-button' target='_blank'><FormattedMessage id='features.read_more' defaultMessage='Read more' /> <i className='ion-ios-arrow-forward' /></a>
+        <a href='https://blog.joinmastodon.org/2018/07/cage-the-mastodon/' className='link-button' target='_blank' rel='noopener noreferrer'><FormattedMessage id='features.read_more' defaultMessage='Read more' /> <i className='ion-ios-arrow-forward' /></a>
       </div>
     </div>
 
