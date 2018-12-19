@@ -11,7 +11,7 @@ const messages = defineMessages({
 const WizardRow = ({ instance, intl }) => {
   const theme = (instance.info && instance.info.theme) || 'General';
   const description = (instance.info && instance.info.short_description) || theme;
-  const population = instance.users >= 1000 ? `${intl.formatNumber(instance.users / 1000, { maximumFractionDigits: 1 })}k` : instance.users;
+  const population = instance.users >= 1000 ? `${intl.formatNumber(instance.users / 1000, { maximumFractionDigits: 1 })}K` : instance.users;
 
   let stabilityColor, stabilityLabel,
       populationColor;
@@ -27,9 +27,9 @@ const WizardRow = ({ instance, intl }) => {
     stabilityColor = 'red';
   }
 
-  if (instance.users > 150000) {
+  if (instance.users > 200000) {
     populationColor = 'red';
-  } else if (instance.users > 50000) {
+  } else if (instance.users > 100000) {
     populationColor = 'yellow';
   } else {
     populationColor = 'green';

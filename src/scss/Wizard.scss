@@ -43,6 +43,11 @@
       direction: rtl;
     }
 
+    strong {
+      font-weight: 700;
+      color: $lightest;
+    }
+
     &.hint {
       color: $lighter;
       margin: 30px 0;

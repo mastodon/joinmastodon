@@ -72,7 +72,9 @@ class Wizard extends React.PureComponent {
       <div className='wizard-page' id='getting-started'>
         <h1><i className='ion-md-person-add' /> <FormattedMessage id='wizard.sign_up' defaultMessage='Sign up' /></h1>
 
-        <p className='lead'><FormattedMessage id='wizard.hint2' defaultMessage='All you need to do to sign up is choose a server. Just like when signing up for an e-mail address, one server is going to be hosting your account and be part of your identity.' /></p>
+        <p className='lead'>
+          <FormattedMessage id='wizard.hint2' defaultMessage='All you need to do to sign up is choose a server. Just like when signing up for an e-mail address, one server is going to be hosting your account and be part of your identity.' /> <strong><FormattedMessage id='wizard.hint5' defaultMessage='Remember, you can follow and talk to anyone from any server, regardless of your choice!' /></strong>
+        </p>
 
         <form className='wizard-controls'>
           <div className='row'>

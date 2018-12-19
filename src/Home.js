@@ -1,5 +1,6 @@
-import React, { PureComponent } from 'react';
-import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
+import React, { PureComponent, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { injectIntl, FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import { HashLink as Link } from 'react-router-hash-link';
 import AnchorLink from './AnchorLink';
 import Modal from 'react-responsive-modal';
@@ -32,6 +33,8 @@ import cloud2 from './assets/cloud2.png';
 import cloud3 from './assets/cloud3.png';
 import cloud4 from './assets/cloud4.png';
 
+const USERS_NUM_APPROX = 1571504;
+
 const styles = {
   modal: {
     padding: 0,
@@ -59,6 +62,10 @@ const playerOpts = {
 };
 
 export default class Home extends PureComponent {
+
+  static contextTypes = {
+    intl: PropTypes.object.isRequired,
+  };
 
   state = {
     open: false,
@@ -88,6 +95,7 @@ export default class Home extends PureComponent {
 
   render () {
     const { open } = this.state;
+    const { intl } = this.context;
 
     return (
       <div>
@@ -96,7 +104,7 @@ export default class Home extends PureComponent {
 
           <div className='text'>
             <h1><FormattedMessage id='home.headline' defaultMessage='Social networking, <strong>back in your hands</strong>' /></h1>
-            <p><FormattedMessage id='home.tagline2' defaultMessage='Follow friends and discover new ones. Publish anything you want: links, pictures, text, video. All on a platform that is community-owned and ad-free.' /></p>
+            <p><FormattedMessage id='home.tagline3' defaultMessage='Follow friends and discover new ones among more than {count}M people. Publish anything you want: links, pictures, text, video. All on a platform that is community-owned and ad-free.' values={{ count: intl.formatNumber(USERS_NUM_APPROX / (1000 * 1000), { maximumFractionDigits: 1 }) }} /></p>
 
             <AnchorLink href='#getting-started' className='cta button'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></AnchorLink>
             <button className='cta button alt' onClick={this.handleHowItWorksClick}><span className='icon-circled'><span className='ion-md-play' /></span><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></button>
