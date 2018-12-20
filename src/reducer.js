@@ -33,6 +33,7 @@ const DUNBAR = Math.log(300);
 const blacklist = [
   'cat.social', // Duplicate entry for quey.org
   'switter.co', // Duplicate entry for sinblr.com
+  'nudemy.com', // Duplicate entry for sinblr.com
 ];
 
 const sortByDunbarsNumber = instances => instances.sort((a, b) => {
