@@ -8,7 +8,7 @@ import Legal from './Legal';
 //import sponsorTootdon from './assets/sponsors/tootdon.png';
 //import sponsorKibousoft from './assets/sponsors/kibousoft.png';
 //import sponsorPixiv from './assets/sponsors/pixiv.png';
-import sponsorFourthEstate from './assets/sponsors/FourthEstate-logo.png';
+//import sponsorFourthEstate from './assets/sponsors/FourthEstate-logo.png';
 //import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
@@ -63,10 +63,9 @@ const Sponsorship = () => (
       <div className='container'>
         <div className='tier'>
           <div className='sponsors-list--logos'>
-            <a href='http://www.fourthestate.co/'><img src={sponsorFourthEstate} alt='Fourth Estate' /></a>
             <a href='https://getstream.io/try-the-api'><img src={sponsorStream} alt='Stream' /></a>
             <a href='http://www.rubymotion.com/'><img src={sponsorRubymotion} alt='RubyMotion' /></a>
-            <a href='https://mastodon.sdf.org'><img src={sponsorSDF} alt='Purism' /></a>
+            <a href='https://mastodon.sdf.org'><img src={sponsorSDF} alt='SDF' /></a>
             <a href='mailto:bamboo.how@gmail.com'><img src={sponsorBambooHow} alt='Bamboo How' /></a>
             <a href='https://keybase.io/'><img src={sponsorKeybase} alt='Keybase' /></a>
             <a href='https://www.lunanode.com/'><img src={sponsorLunanode} alt='Lunanode' /></a>
