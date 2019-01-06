@@ -17,7 +17,7 @@ import sponsorKeybase from './assets/sponsors/keybase-logo.png';
 import sponsorLunanode from './assets/sponsors/lunanode.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
-import avatarGlocal from './assets/sponsors/glocal.png';
+//import avatarGlocal from './assets/sponsors/glocal.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
 // import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
 import sponsorSDF from './assets/sponsors/sdf.png';
@@ -37,7 +37,7 @@ import avatarNoellabo from './assets/sponsors/noellabo.png';
 import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
 import avatarBenWerdmuller from './assets/sponsors/benwerdmuller.jpg';
 import avatarPickfu from './assets/sponsors/pickfu.png';
-import avatarIgorFerreira from './assets/sponsors/igorferreira.jpeg';
+//import avatarIgorFerreira from './assets/sponsors/igorferreira.jpeg';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
 
