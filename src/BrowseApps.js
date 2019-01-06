@@ -74,19 +74,17 @@ const apps = {
     },
   ],
 
-  linux: [
-    {
-      name: 'Tootle',
-      icon: tootle,
-      url: 'https://appcenter.elementary.io/com.github.bleakgrey.tootle/',
-    },
-  ],
-
   desktop: [
     {
       name: 'Whalebird',
       icon: whalebird,
       url: 'https://whalebird.org',
+    },
+    
+    {
+      name: 'Tootle (Linux)',
+      icon: tootle,
+      url: 'https://appcenter.elementary.io/com.github.bleakgrey.tootle/',
     },
   ],
 };
@@ -132,13 +130,7 @@ const BrowseApps = () => (
         {apps.web.map(renderApp)}
       </div>
 
-      <h2>Desktop (Linux)</h2>
-
-      <div className='app-grid'>
-        {apps.linux.map(renderApp)}
-      </div>
-
-      <h2>Desktop (Windows + Mac + Linux)</h2>
+      <h2>Desktop</h2>
 
       <div className='app-grid'>
         {apps.desktop.map(renderApp)}
