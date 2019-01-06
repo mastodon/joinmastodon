@@ -13,6 +13,7 @@ import toot from './assets/apps/toot.jpg';
 import tooter from './assets/apps/tooter.png';
 import tootle from './assets/apps/tootle.jpg';
 import pinafore from './assets/apps/pinafore.png';
+import whalebird from './assets/apps/whalebird.png';
 
 const apps = {
   android: [
@@ -73,9 +74,15 @@ const apps = {
     },
   ],
 
-  linux: [
+  desktop: [
     {
-      name: 'Tootle',
+      name: 'Whalebird',
+      icon: whalebird,
+      url: 'https://whalebird.org',
+    },
+    
+    {
+      name: 'Tootle (Linux)',
       icon: tootle,
       url: 'https://appcenter.elementary.io/com.github.bleakgrey.tootle/',
     },
@@ -123,10 +130,10 @@ const BrowseApps = () => (
         {apps.web.map(renderApp)}
       </div>
 
-      <h2>Desktop (Linux)</h2>
+      <h2>Desktop</h2>
 
       <div className='app-grid'>
-        {apps.linux.map(renderApp)}
+        {apps.desktop.map(renderApp)}
       </div>
 
       <h2>SailfishOS</h2>
