@@ -9,11 +9,12 @@ import sponsorTootdon from './assets/sponsors/tootdon.png';
 import sponsorKibousoft from './assets/sponsors/kibousoft.png';
 import sponsorPixiv from './assets/sponsors/pixiv.png';
 import sponsorFourthEstate from './assets/sponsors/FourthEstate-logo.png';
-import sponsorPurism from './assets/sponsors/purism.svg';
+//import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
 import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorKeybase from './assets/sponsors/keybase-logo.png';
+import sponsorLunanode from './assets/sponsors/lunanode.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarGlocal from './assets/sponsors/glocal.png';
@@ -38,6 +39,7 @@ import avatarBenWerdmuller from './assets/sponsors/benwerdmuller.jpg';
 import avatarPickfu from './assets/sponsors/pickfu.png';
 import avatarIgorFerreira from './assets/sponsors/igorferreira.jpeg';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
+import avatarEmpresso from './assets/sponsors/empresso.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -70,7 +72,7 @@ const Sponsorship = () => (
             <a href='https://mastodon.sdf.org'><img src={sponsorSDF} alt='Purism' /></a>
             <a href='mailto:bamboo.how@gmail.com'><img src={sponsorBambooHow} alt='Bamboo How' /></a>
             <a href='https://keybase.io/'><img src={sponsorKeybase} alt='Keybase' /></a>
-            <a href='https://puri.sm/'><img src={sponsorPurism} alt='Purism' /></a>
+            <a href='https://www.lunanode.com/'><img src={sponsorLunanode} alt='Lunanode' /></a>
           </div>
         </div>
       </div>
@@ -105,6 +107,7 @@ const Sponsorship = () => (
             <li><a href='https://github.com/igorcferreira'><img src={avatarIgorFerreira} alt='' /> <span><strong>Igor Ferreira</strong><span>https://github.com/igorcferreira</span></span></a></li>
             <li><a href='https://www.looktotheright.com/'><img src={avatarLookToTheRight} alt='' /> <span><strong>Look To The Right</strong><span>https://www.looktotheright.com/</span></span></a></li>
             <li><a href='https://sextoycollective.com/'><img src={noAvatar} alt='' /> <span><strong>Sex Toy Collective</strong><span>https://sextoycollective.com/</span></span></a></li>
+            <li><a href='https://empresso.ma'><img src={avatarEmpresso} alt='' /> <span><strong>Carte visite</strong><span>https://empresso.ma</span></span></a></li>
           </ul>
         </div>
       </div>

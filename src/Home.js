@@ -15,9 +15,10 @@ import Navigation from './Navigation';
 import sponsorTootdon from './assets/sponsors/tootdon.png';
 import sponsorKibousoft from './assets/sponsors/kibousoft.png';
 import sponsorPixiv from './assets/sponsors/pixiv.png';
-import sponsorPurism from './assets/sponsors/purism.svg';
+//import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
 import sponsorKeybase from './assets/sponsors/keybase-logo.png';
+import sponsorLunanode from './assets/sponsors/lunanode.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 //import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
@@ -157,7 +158,7 @@ export default class Home extends PureComponent {
                 <Link to='/sponsors' className='logo-sponsor-tootdon'><img src={sponsorKibousoft} alt='Kibousoft LLC' /></Link>
                 <Link to='/sponsors' className='logo-sponsor-stream'><img src={sponsorStream} alt='Stream' /></Link>
                 <Link to='/sponsors' className='logo-sponsor-keybase'><img src={sponsorKeybase} alt='Keybase' /></Link>
-                <Link to='/sponsors' className='logo-sponsor-purism'><img src={sponsorPurism} alt='Purism' /></Link>
+                <Link to='/sponsors' className='logo-sponsor-lunanode'><img src={sponsorLunanode} alt='Lunanode' /></Link>
               </div>
             </div>
           </div>
