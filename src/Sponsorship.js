@@ -116,104 +116,23 @@ const Sponsorship = () => (
         <div className='sponsors-list--names'>
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
-              <li>Ted</li>
               <li>Julie Moronuki</li>
-              <li>Irick Corwal</li>
-              <li>Great Scott Gadgets</li>
+              <li>Donald "Chronos" King</li>
               <li>Moritz Heiber</li>
-              <li>Paco Hope</li>
-              <li>Gen Knoxx</li>
-              <li>slipstream/RoL</li>
               <li>Nolan Lawson</li>
-              <li>Sean Linsley</li>
-              <li>nullkal</li>
-              <li>Masto.host</li>
+              <li>Paco Hope</li>
+              <li>Sean</li>
+              <li>Great Scott Gadgets</li>
+              <li>@mecab</li>
               <li>Sho Kusano / rosylilly</li>
-              <li>Masahito Zembutsu</li>
-              <li>'@mecab</li>
-              <li>iliana weller</li>
+              <li>Masto.host</li>
               <li>Ken Naishtat</li>
-              <li>Christopher Kruse</li>
-              <li>mayaeh</li>
               <li>Danny O'Brien</li>
-              <li>Philip James</li>
-              <li>G Berton Latamore</li>
-              <li>Leif Halldor Asgeirsson</li>
-              <li>Josef Kenny</li>
-              <li>Ellen Teapot</li>
-              <li>dansup</li>
-              <li>J. C. Holder</li>
-              <li>Austin Putman</li>
-              <li>halcy</li>
-              <li>David Yip</li>
-              <li>Landy Manderson</li>
-              <li>ティン・ルーフ</li>
-              <li>Paul Meier</li>
-              <li>Hideki Yamamoto</li>
-              <li>Kenneth Ken Sugar</li>
-              <li>Miki Habryn</li>
-              <li>3xv</li>
-              <li>Sajith Sasidharan</li>
-              <li>nobody</li>
-              <li>Richard Minerich</li>
-              <li>Paul Lindner</li>
-              <li>Jesse Olson</li>
-              <li>Manesh Pillai</li>
-              <li>Joe McLaughlin</li>
-              <li>Jonathan McDowell</li>
-              <li>Zac Anger</li>
-              <li>Alexander Zillion</li>
-              <li>Josephine Pedersen</li>
-              <li>Nemecle</li>
-              <li>Nicolai Schwarz</li>
-              <li>Zaki</li>
-              <li>C J Silverio</li>
-              <li>Rufus</li>
-              <li>Kevin Sonney</li>
-              <li>Aaron Williamson</li>
-              <li>Christopher James Halse Rogers</li>
-              <li>Chris Johnson</li>
-              <li>Olivia Mossberg</li>
-              <li>Matthieu Herrb</li>
-              <li>Daniel M Crawford</li>
-              <li>Charles Hutchins</li>
-              <li>Laurent Joubert</li>
-              <li>fairenoughschroedinger</li>
-              <li>Harukasan</li>
-              <li>Yoshiki Kato</li>
-              <li>Scott Honey</li>
               <li>Brion Vibber</li>
-              <li>Bram</li>
-              <li>Osamu Miyake</li>
-              <li>Koya Matsuo</li>
-              <li>Lady Errant</li>
-              <li>Sandro Hawke</li>
-              <li>Konosuke Furuhata</li>
-              <li>Masaya Imai</li>
-              <li>Matteo De Micheli</li>
-              <li>Bheesham Persaud</li>
-              <li>Solar Anamnesis</li>
-              <li>Johannes Barre</li>
-              <li>Ryan Frederick</li>
-              <li>masklayer</li>
-              <li>Akihiko Odaki</li>
-              <li>Zonu.EXE</li>
-              <li>Effy Elden</li>
-              <li>Niko Autio</li>
-              <li>Max</li>
-              <li>jomo</li>
-              <li>James Valleroy</li>
-              <li>A bowl of creamy tomato soup</li>
-              <li>Drew Williams</li>
-              <li>Clinton Freeman</li>
-              <li>Jeremy Penner</li>
-              <li>Klara</li>
-              <li>snorpey</li>
-              <li>jeremy gray</li>
-              <li>itsumonotakumi</li>
-              <li>Christina Hendricks</li>
-              <li>Peter Augerot</li>
-              <li>Jesse Marino</li>
+              <li>Landy Manderson</li>
+              <li>Andrei Petcu</li>
+              <li>Joyce Mayorga</li>
+              <li>Humblr Social</li>
             </ul>
 
             <ul>
