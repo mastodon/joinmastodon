@@ -5,9 +5,9 @@ import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import Navigation from './Navigation';
 import Legal from './Legal';
 
-import sponsorTootdon from './assets/sponsors/tootdon.png';
-import sponsorKibousoft from './assets/sponsors/kibousoft.png';
-import sponsorPixiv from './assets/sponsors/pixiv.png';
+//import sponsorTootdon from './assets/sponsors/tootdon.png';
+//import sponsorKibousoft from './assets/sponsors/kibousoft.png';
+//import sponsorPixiv from './assets/sponsors/pixiv.png';
 import sponsorFourthEstate from './assets/sponsors/FourthEstate-logo.png';
 //import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
@@ -63,9 +63,6 @@ const Sponsorship = () => (
       <div className='container'>
         <div className='tier'>
           <div className='sponsors-list--logos'>
-            <a href='http://tootdon.club/'><img src={sponsorTootdon} alt='Tootdon' /></a>
-            <a href='http://kibousoft.co.jp/'><img src={sponsorKibousoft} alt='Kibousoft LLC' /></a>
-            <a href='https://pixiv.net/'><img src={sponsorPixiv} alt='pixiv Inc.' /></a>
             <a href='http://www.fourthestate.co/'><img src={sponsorFourthEstate} alt='Fourth Estate' /></a>
             <a href='https://getstream.io/try-the-api'><img src={sponsorStream} alt='Stream' /></a>
             <a href='http://www.rubymotion.com/'><img src={sponsorRubymotion} alt='RubyMotion' /></a>
