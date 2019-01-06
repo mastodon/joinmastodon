@@ -14,7 +14,7 @@ import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
 import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorKeybase from './assets/sponsors/keybase-logo.png';
-import sponsorLunanode from './assets/sponsors/lunanode.png';
+import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 //import avatarGlocal from './assets/sponsors/glocal.png';
@@ -40,6 +40,7 @@ import avatarPickfu from './assets/sponsors/pickfu.png';
 //import avatarIgorFerreira from './assets/sponsors/igorferreira.jpeg';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
+import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -91,7 +92,7 @@ const Sponsorship = () => (
             <li><a href='https://cloudfleet.io'><img src={avatarCloudfleet} alt='' /> <span><strong>CloudFleet</strong><span>https://cloudfleet.io</span></span></a></li>
             <li><a href='https://identi.ca/evan'><img src={avatarEvan} alt='' /> <span><strong>Evan Prodromou</strong><span>https://identi.ca/evan</span></span></a></li>
             <li><a href='https://empresso.ma'><img src={avatarEmpresso} alt='' /> <span><strong>Carte visite</strong><span>https://empresso.ma</span></span></a></li>
-            <li><a href='https://sextoycollective.com'><img src={noAvatar} alt='' /> <span><strong>SexToyCollective</strong><span>https://sextoycollective.com</span></span></a></li>
+            <li><a href='https://sextoycollective.com'><img src={avatarSexToyCollective} alt='' /> <span><strong>SexToyCollective</strong><span>https://sextoycollective.com</span></span></a></li>
             <li><a href='https://inanna.xyz/'><img src={avatarIanna} alt='' /> <span><strong>Inanna</strong><span>https://inanna.xyz/</span></span></a></li>
             <li><a href='https://sudoJames.com'><img src={avatarJamesMWright} alt='' /> <span><strong>James Wright</strong><span>https://sudoJames.com</span></span></a></li>
             <li><a href='https://www.looktotheright.com/'><img src={avatarLookToTheRight} alt='' /> <span><strong>Look To The Right</strong><span>https://www.looktotheright.com/</span></span></a></li>
