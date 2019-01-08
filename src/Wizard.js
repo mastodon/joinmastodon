@@ -140,24 +140,6 @@ class Wizard extends React.PureComponent {
             {content}
           </Scrollbars>
         </div>
-
-        <div className='wizard-hint-container'>
-          <div className='wizard-hint'>
-            <div className='wizard-hint__icon'>
-              <i className='ion-md-information-circle' />
-            </div>
-
-            <div className='wizard-hint__text'>
-              <FormattedMessage id='wizard.hint3' defaultMessage="These servers are operated by independent organizations and may have different moderation policies. If you are unsure what to pick, you can try this button." />
-            </div>
-          </div>
-
-          <div>
-            <a target='_blank' rel='noopener noreferrer' href='https://bridge.joinmastodon.org' className='cta button' style={{ marginBottom: 0 }}>
-              <FormattedMessage id='wizard.find_twitter_friends' defaultMessage='Find Twitter friends' />
-            </a>
-          </div>
-        </div>
       </div>
     );
   }
