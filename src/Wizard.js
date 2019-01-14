@@ -126,6 +126,7 @@ class Wizard extends React.PureComponent {
                 { value: 'pt', text: 'Português' },
                 { value: 'ru', text: 'Русский' },
                 { value: 'zh', text: '中文' },
+                { value: 'nl', text: 'Nederlands' },
               ]}
               caretIcon={caretIcon}
               selectedValue={language}
