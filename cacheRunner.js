@@ -35,6 +35,7 @@ const categories = [
 const languages = [
   '',
   'ar',
+  'cs',
   'de',
   'en',
   'es',
