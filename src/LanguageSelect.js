@@ -4,6 +4,7 @@ import Dropdown from './Dropdown';
 import flagEn from 'twemoji/2/svg/1f1ec-1f1e7.svg';
 import flagFr from 'twemoji/2/svg/1f1eb-1f1f7.svg';
 import flagPl from 'twemoji/2/svg/1f1f5-1f1f1.svg';
+import flagCs from 'twemoji/2/svg/1f1e8-1f1ff.svg';
 import flagEs from 'twemoji/2/svg/1f1ea-1f1f8.svg';
 import flagJa from 'twemoji/2/svg/1f1ef-1f1f5.svg';
 import flagKo from 'twemoji/2/svg/1f1f0-1f1f7.svg';
@@ -21,6 +22,7 @@ const options = [
   { value: 'fr', label: <span><img src={flagFr} className='emoji' alt='' /> Français</span> },
   { value: 'es', label: <span><img src={flagEs} className='emoji' alt='' /> Español</span> },
   { value: 'pl', label: <span><img src={flagPl} className='emoji' alt='' /> Polski</span> },
+  { value: 'cs', label: <span><img src={flagCs} className='emoji' alt='' /> Čeština</span> },
   { value: 'pt-BR', label: <span><img src={flagBr} className='emoji' alt='' /> Português do Brasil</span> },
   { value: 'ru', label: <span><img src={flagRu} className='emoji' alt='' /> Русский</span> },
   { value: 'ja', label: <span><img src={flagJa} className='emoji' alt='' /> 日本語</span> },

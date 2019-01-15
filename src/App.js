@@ -16,6 +16,7 @@ import { addLocaleData, IntlProvider } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import fr from 'react-intl/locale-data/fr';
 import pl from 'react-intl/locale-data/pl';
+import cs from 'react-intl/locale-data/cs';
 import es from 'react-intl/locale-data/es';
 import de from 'react-intl/locale-data/de';
 import ja from 'react-intl/locale-data/ja';
@@ -27,7 +28,7 @@ import it from 'react-intl/locale-data/it';
 import ar from 'react-intl/locale-data/ar';
 import tr from 'react-intl/locale-data/tr';
 
-addLocaleData([...en, ...pl, ...fr, ...es, ...ja, ...ko, ...de, ...pt, ...zh, ...ru, ...it, ...ar, ...tr]);
+addLocaleData([...en, ...pl, ...cs, ...fr, ...es, ...ja, ...ko, ...de, ...pt, ...zh, ...ru, ...it, ...ar, ...tr]);
 
 const messages = require.context('./locales/', false, /\.json$/);
 
