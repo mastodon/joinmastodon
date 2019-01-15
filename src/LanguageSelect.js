@@ -19,20 +19,20 @@ import flagNL from 'twemoji/2/svg/1f1f3-1f1f1.svg';
 
 const options = [
   { value: 'en', label: <span><img src={flagEn} className='emoji' alt='' /> English</span> },
-  { value: 'de', label: <span><img src={flagDe} className='emoji' alt='' /> Deutsch</span> },
-  { value: 'fr', label: <span><img src={flagFr} className='emoji' alt='' /> Français</span> },
-  { value: 'es', label: <span><img src={flagEs} className='emoji' alt='' /> Español</span> },
-  { value: 'pl', label: <span><img src={flagPl} className='emoji' alt='' /> Polski</span> },
+  { value: 'ar', label: <span><img src={flagAr} className='emoji' alt='' /> العربية</span> },
   { value: 'cs', label: <span><img src={flagCs} className='emoji' alt='' /> Čeština</span> },
-  { value: 'pt-BR', label: <span><img src={flagBr} className='emoji' alt='' /> Português do Brasil</span> },
-  { value: 'ru', label: <span><img src={flagRu} className='emoji' alt='' /> Русский</span> },
+  { value: 'de', label: <span><img src={flagDe} className='emoji' alt='' /> Deutsch</span> },
+  { value: 'es', label: <span><img src={flagEs} className='emoji' alt='' /> Español</span> },
+  { value: 'fr', label: <span><img src={flagFr} className='emoji' alt='' /> Français</span> },
+  { value: 'it', label: <span><img src={flagIt} className='emoji' alt='' /> Italiano</span> },
   { value: 'ja', label: <span><img src={flagJa} className='emoji' alt='' /> 日本語</span> },
   { value: 'ko', label: <span><img src={flagKo} className='emoji' alt='' /> 한국어</span> },
-  { value: 'zh', label: <span><img src={flagCn} className='emoji' alt='' /> 简体中文</span> },
-  { value: 'it', label: <span><img src={flagIt} className='emoji' alt='' /> Italiano</span> },
-  { value: 'ar', label: <span><img src={flagAr} className='emoji' alt='' /> العربية</span> },
-  { value: 'tr', label: <span><img src={flagTr} className='emoji' alt='' /> Türkçe</span> },
   { value: 'nl-NL', label: <span><img src={flagNL} className='emoji' alt='' /> Nederlands</span> },
+  { value: 'pl', label: <span><img src={flagPl} className='emoji' alt='' /> Polski</span> },
+  { value: 'pt-BR', label: <span><img src={flagBr} className='emoji' alt='' /> Português do Brasil</span> },
+  { value: 'ru', label: <span><img src={flagRu} className='emoji' alt='' /> Русский</span> },
+  { value: 'tr', label: <span><img src={flagTr} className='emoji' alt='' /> Türkçe</span> },
+  { value: 'zh', label: <span><img src={flagCn} className='emoji' alt='' /> 简体中文</span> },
 ];
 
 export default ({ value, onChange }) => (
