@@ -14,6 +14,8 @@ import tooter from './assets/apps/tooter.png';
 import tootle from './assets/apps/tootle.jpg';
 import pinafore from './assets/apps/pinafore.png';
 import whalebird from './assets/apps/whalebird.png';
+import halcyon from './assets/apps/halcyon.png';
+import thedesk from './assets/apps/thedesk.png';
 
 const apps = {
   android: [
@@ -64,6 +66,11 @@ const apps = {
       icon: pinafore,
       url: 'https://pinafore.social',
     },
+    {
+      name: 'Halcyon',
+      icon: halcyon,
+      url: 'https://notabug.org/halcyon-suite/halcyon/wiki/Instances',
+    },
   ],
 
   sailfish: [
@@ -85,6 +92,11 @@ const apps = {
       name: 'Tootle (Linux)',
       icon: tootle,
       url: 'https://appcenter.elementary.io/com.github.bleakgrey.tootle/',
+    },
+    {
+      name: 'TheDesk',
+      icon: thedesk,
+      url: 'https://thedesk.top/en',
     },
   ],
 };
