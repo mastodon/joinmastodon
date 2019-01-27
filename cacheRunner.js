@@ -47,8 +47,8 @@ const languages = [
   'pl',
   'pt',
   'ru',
+  'sk',
   'zh',
-  'nl',
 ];
 
 categories.forEach(category => languages.forEach(language => {
