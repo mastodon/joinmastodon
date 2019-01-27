@@ -106,6 +106,7 @@ const Sponsorship = () => (
             <li><a href='https://eightballoon.com/'><img src={noAvatar} alt='' /> <span><strong>Takanori Yamada</strong><span>https://eightballoon.com/</span></span></a></li>
             <li><a href='https://www.whatisseo.com/'><img src={avatarVJ} alt='' /> <span><strong>VJ</strong><span>https://www.whatisseo.com/</span></span></a></li>
             <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>WAMPUM</strong><span>-</span></span></a></li>
+            <li><a href='https://spicedupaffairs.com/backpage-alternatives/'><img src={noAvatar} alt='' /> <span><strong>new sites like backpage</strong><span>https://spicedupaffairs.com/backpage-alternatives/</span></span></a></li>
           </ul>
         </div>
       </div>
