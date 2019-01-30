@@ -16,6 +16,7 @@ import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorKeybase from './assets/sponsors/keybase-logo.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorCodeFirst from './assets/sponsors/codefirst.png';
+import sponsorDatantify from './assets/sponsors/datantify.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 //import avatarGlocal from './assets/sponsors/glocal.png';
@@ -72,6 +73,7 @@ const Sponsorship = () => (
             <a href='https://keybase.io/'><img src={sponsorKeybase} alt='Keybase' /></a>
             <a href='https://www.lunanode.com/'><img src={sponsorLunanode} alt='Lunanode' /></a>
             <a href='https://www.codefirst.co.uk/'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
+            <a href='https://datantify.com/'><img src={sponsorDatantify} alt='Datantify' /></a>
           </div>
         </div>
       </div>
