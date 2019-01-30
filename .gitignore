@@ -18,3 +18,5 @@ yarn-error.log*
 
 # no CSSerino
 src/**/*.css
+!src/fonts/fonts.css
+!src/fonts/ionicons.min.css
