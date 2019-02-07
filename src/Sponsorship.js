@@ -16,7 +16,7 @@ import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorKeybase from './assets/sponsors/keybase-logo.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorCodeFirst from './assets/sponsors/codefirst.png';
-import sponsorDatantify from './assets/sponsors/datantify.png';
+import sponsorDatantify from './assets/sponsors/datantify_alt.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 //import avatarGlocal from './assets/sponsors/glocal.png';

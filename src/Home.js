@@ -20,7 +20,7 @@ import sponsorStream from './assets/sponsors/stream.png';
 import sponsorKeybase from './assets/sponsors/keybase-logo.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorCodeFirst from './assets/sponsors/codefirst.png';
-import sponsorDatantify from './assets/sponsors/datantify.png';
+import sponsorDatantify from './assets/sponsors/datantify_alt.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 //import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
