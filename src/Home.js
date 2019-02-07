@@ -158,7 +158,7 @@ export default class Home extends PureComponent {
                 <Link to='/sponsors' className='logo-sponsor-stream'><img src={sponsorStream} alt='Stream' /></Link>
                 <Link to='/sponsors' className='logo-sponsor-keybase'><img src={sponsorKeybase} alt='Keybase' /></Link>
                 <Link to='/sponsors' className='logo-sponsor-lunanode'><img src={sponsorLunanode} alt='Lunanode' /></Link>
-                <Link to='/sponsors' className='logo-sponsor-codefirst'><img src={sponsorCodeFirst} alt='CodeFirst' /></Link>
+                <a href='https://www.codefirst.co.uk/' className='logo-sponsor-codefirst'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
                 <a href='https://datantify.com/' className='logo-sponsor-datantify'><img src={sponsorDatantify} alt='Datantify' /></a>
               </div>
             </div>
