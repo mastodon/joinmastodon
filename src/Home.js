@@ -12,18 +12,12 @@ import HowItWorks from './HowItWorks';
 import Credits from './Credits';
 import Navigation from './Navigation';
 
-//import sponsorTootdon from './assets/sponsors/tootdon.png';
-//import sponsorKibousoft from './assets/sponsors/kibousoft.png';
-//import sponsorPixiv from './assets/sponsors/pixiv.png';
-//import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
-import sponsorKeybase from './assets/sponsors/keybase-logo.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorCodeFirst from './assets/sponsors/codefirst.png';
 import sponsorDatantify from './assets/sponsors/datantify_alt.png';
 
 import wiredLogo from './assets/wired-logo.svg';
-//import productHuntLogo from './assets/product-hunt-logo-horizontal-black.png';
 import theVergeLogo from './assets/the-verge-logo.svg';
 import motherboardLogo from './assets/motherboard-logo.svg';
 import nytLogo from './assets/nyt-logo.svg';
@@ -156,7 +150,6 @@ export default class Home extends PureComponent {
             <div className='logo-grid'>
               <div>
                 <Link to='/sponsors' className='logo-sponsor-stream'><img src={sponsorStream} alt='Stream' /></Link>
-                <Link to='/sponsors' className='logo-sponsor-keybase'><img src={sponsorKeybase} alt='Keybase' /></Link>
                 <Link to='/sponsors' className='logo-sponsor-lunanode'><img src={sponsorLunanode} alt='Lunanode' /></Link>
                 <a href='https://www.codefirst.co.uk/' className='logo-sponsor-codefirst'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
                 <a href='https://datantify.com/' className='logo-sponsor-datantify'><img src={sponsorDatantify} alt='Datantify' /></a>

@@ -5,41 +5,25 @@ import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import Navigation from './Navigation';
 import Legal from './Legal';
 
-//import sponsorTootdon from './assets/sponsors/tootdon.png';
-//import sponsorKibousoft from './assets/sponsors/kibousoft.png';
-//import sponsorPixiv from './assets/sponsors/pixiv.png';
-//import sponsorFourthEstate from './assets/sponsors/FourthEstate-logo.png';
-//import sponsorPurism from './assets/sponsors/purism.svg';
 import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
 import sponsorBambooHow from './assets/sponsors/bamboohow.png';
-import sponsorKeybase from './assets/sponsors/keybase-logo.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorCodeFirst from './assets/sponsors/codefirst.png';
 import sponsorDatantify from './assets/sponsors/datantify_alt.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
-//import avatarGlocal from './assets/sponsors/glocal.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
-// import avatarZoeQuinn from './assets/sponsors/zoequinn.jpg';
 import sponsorSDF from './assets/sponsors/sdf.png';
 import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
-//import avatarAndreaValenti from './assets/sponsors/andreavalenti.png';
-//import avatarDavidHutchinson from './assets/sponsors/davidhutchinson.png';
-//import avatarIrick from './assets/sponsors/irick.gif';
-//import avatarSirTyrent from './assets/sponsors/sirtyrent.png';
 import avatarVJ from './assets/sponsors/vj.png';
-//import avatarFragbenny from './assets/sponsors/fragbenny.jpeg';
 import avatarIanna from './assets/sponsors/ianna.png';
 import avatarEvan from './assets/sponsors/evan.png';
 import avatarMarkAtwood from './assets/sponsors/markatwood.jpg';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
-//import avatarLevlaz from './assets/sponsors/levlaz.png';
-//import avatarDansup from './assets/sponsors/dansup.jpg';
 import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
 import avatarBenWerdmuller from './assets/sponsors/benwerdmuller.jpg';
 import avatarPickfu from './assets/sponsors/pickfu.png';
-//import avatarIgorFerreira from './assets/sponsors/igorferreira.jpeg';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
@@ -70,7 +54,6 @@ const Sponsorship = () => (
             <a href='http://www.rubymotion.com/'><img src={sponsorRubymotion} alt='RubyMotion' /></a>
             <a href='https://mastodon.sdf.org'><img src={sponsorSDF} alt='SDF' /></a>
             <a href='mailto:bamboo.how@gmail.com'><img src={sponsorBambooHow} alt='Bamboo How' /></a>
-            <a href='https://keybase.io/'><img src={sponsorKeybase} alt='Keybase' /></a>
             <a href='https://www.lunanode.com/'><img src={sponsorLunanode} alt='Lunanode' /></a>
             <a href='https://www.codefirst.co.uk/'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
             <a href='https://datantify.com/'><img src={sponsorDatantify} alt='Datantify' /></a>
