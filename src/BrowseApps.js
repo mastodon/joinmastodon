@@ -6,7 +6,7 @@ import Legal from './Legal';
 
 import tusky from './assets/apps/tusky.png';
 import subwayTooter from './assets/apps/subway-tooter.png';
-import mastalab from './assets/apps/mastalab.png';
+import fedilab from './assets/apps/fedilab.png';
 import amaroq from './assets/apps/amaroq.jpg';
 import mast from './assets/apps/mast.jpg';
 import toot from './assets/apps/toot.jpg';
@@ -32,8 +32,8 @@ const apps = {
     },
 
     {
-      name: 'Mastalab',
-      icon: mastalab,
+      name: 'Fedilab',
+      icon: fedilab,
       url: 'https://play.google.com/store/apps/details?id=fr.gouv.etalab.mastodon',
     },
   ],
