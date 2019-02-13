@@ -27,6 +27,7 @@ import avatarPickfu from './assets/sponsors/pickfu.png';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
+import avatarTnzk from './assets/sponsors/tnzk.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -73,6 +74,7 @@ const Sponsorship = () => (
 
         <div className='sponsors-list--badges'>
           <ul>
+            <li><a href='https://ichiji.social/@tnzk'><img src={avatarTnzk} alt='' /> <span><strong>Kyohei Hamaguchi / @tnzk</strong><span>https://ichiji.social/@tnzk</span></span></a></li>
             <li><a href='https://mastodon.gamedev.place/@aras'><img src={avatarArasPranckevicius} alt='' /> <span><strong>Aras Pranckevicius</strong><span>https://mastodon.gamedev.place/@aras</span></span></a></li>
             <li><a href='https://werd.io'><img src={avatarBenWerdmuller} alt='' /> <span><strong>Ben Werdmuller</strong><span>https://werd.io</span></span></a></li>
             <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Blaine Cook</strong><span>-</span></span></a></li>
