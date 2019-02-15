@@ -28,8 +28,10 @@ import it from 'react-intl/locale-data/it';
 import ar from 'react-intl/locale-data/ar';
 import tr from 'react-intl/locale-data/tr';
 import nl from 'react-intl/locale-data/nl';
+import cy from 'react-intl/locale-data/cy';
+import sq from 'react-intl/locale-data/sq';
 
-addLocaleData([...en, ...pl, ...cs, ...fr, ...es, ...ja, ...ko, ...de, ...pt, ...zh, ...ru, ...it, ...ar, ...tr, ...nl]);
+addLocaleData([...en, ...pl, ...cs, ...fr, ...es, ...ja, ...ko, ...de, ...pt, ...zh, ...ru, ...it, ...ar, ...tr, ...nl, ...cy, ...sq]);
 
 const messages = require.context('./locales/', false, /\.json$/);
 

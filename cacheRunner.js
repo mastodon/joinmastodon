@@ -36,6 +36,7 @@ const languages = [
   '',
   'ar',
   'cs',
+  'cy',
   'de',
   'en',
   'es',
@@ -48,6 +49,8 @@ const languages = [
   'pt',
   'ru',
   'sk',
+  'sq',
+  'tr',
   'zh',
 ];
 
