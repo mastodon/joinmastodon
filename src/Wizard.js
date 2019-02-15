@@ -114,6 +114,7 @@ class Wizard extends React.PureComponent {
                 { value: 'ar', text: 'العربية' },
                 { value: 'ca', text: 'Català' },
                 { value: 'cs', text: 'Česky' },
+                { value: 'cy', text: 'Cymraeg' },
                 { value: 'de', text: 'Deutsch' },
                 { value: 'en', text: 'English' },
                 { value: 'es', text: 'Español' },
@@ -127,6 +128,8 @@ class Wizard extends React.PureComponent {
                 { value: 'pt', text: 'Português' },
                 { value: 'ru', text: 'Русский' },
                 { value: 'sk', text: 'Slovensky' },
+                { value: 'sq', text: 'Shqip' },
+                { value: 'tr', text: 'Türkçe' },
                 { value: 'zh', text: '中文' },
               ]}
               caretIcon={caretIcon}
