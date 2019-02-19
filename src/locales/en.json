@@ -31,7 +31,7 @@
   "home.hosting": "Fully-managed Mastodon hosting",
   "home.how_it_works": "How it works",
   "home.install_your_own": "Install your own",
-  "home.install_your_own_text": "If you are interested in running your own instance &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to, which means it&apos;s quite scalable and resource-efficient.",
+  "home.install_your_own_text": "If you are interested in running your own server &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to, which means it&apos;s quite scalable and resource-efficient.",
   "home.read_the_docs": "Read the docs",
   "home.sponsored_by": "Sponsored by",
   "home.tagline3": "Follow friends and discover new ones among more than {count}M people. Publish anything you want: links, pictures, text, video. All on a platform that is community-owned and ad-free.",

@@ -163,7 +163,7 @@ export default class Home extends PureComponent {
         <div className='bottom-cta' id='install'>
           <div className='container'>
             <h3><FormattedMessage id='home.install_your_own' defaultMessage='Install your own' /></h3>
-            <p><FormattedMessage id='home.install_your_own_text' defaultMessage='If you are interested in running your own instance &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to, which means it&apos;s quite scalable and resource-efficient.' /></p>
+            <p><FormattedMessage id='home.install_your_own_text' defaultMessage='If you are interested in running your own server &mdash; for your friends, family or organization &mdash; you can get started by reading the installation documentation. You only host your own users and the content that they subscribe to, which means it&apos;s quite scalable and resource-efficient.' /></p>
             <a href='https://github.com/tootsuite/documentation#running-mastodon' className='cta button'><FormattedMessage id='home.read_the_docs' defaultMessage='Read the docs' /></a>
             <a href='https://masto.host/' target='_blank' rel='noopener noreferrer' className='cta button alt'><FormattedMessage id='home.hosting' defaultMessage='Fully-managed Mastodon hosting' /></a>
           </div>
