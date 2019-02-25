@@ -69,7 +69,7 @@ const apps = {
     {
       name: 'Halcyon',
       icon: halcyon,
-      url: 'https://notabug.org/halcyon-suite/halcyon/wiki/Instances',
+      url: 'https://www.halcyon.social/',
     },
   ],
 
