@@ -16,6 +16,7 @@ import sponsorStream from './assets/sponsors/stream.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorCodeFirst from './assets/sponsors/codefirst.png';
 import sponsorDatantify from './assets/sponsors/datantify_alt.png';
+import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -153,6 +154,7 @@ export default class Home extends PureComponent {
                 <Link to='/sponsors' className='logo-sponsor-lunanode'><img src={sponsorLunanode} alt='Lunanode' /></Link>
                 <a href='https://www.codefirst.co.uk/' className='logo-sponsor-codefirst'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
                 <a href='https://datantify.com/' className='logo-sponsor-datantify'><img src={sponsorDatantify} alt='Datantify' /></a>
+                <Link to='/sponsors' className='logo-sponsor-pleroma'><img src={sponsorPleroma} alt='Pleroma' /></Link>
               </div>
             </div>
           </div>

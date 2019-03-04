@@ -11,6 +11,7 @@ import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorCodeFirst from './assets/sponsors/codefirst.png';
 import sponsorDatantify from './assets/sponsors/datantify_alt.png';
+import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
@@ -58,6 +59,7 @@ const Sponsorship = () => (
             <a href='https://www.lunanode.com/'><img src={sponsorLunanode} alt='Lunanode' /></a>
             <a href='https://www.codefirst.co.uk/'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
             <a href='https://datantify.com/'><img src={sponsorDatantify} alt='Datantify' /></a>
+            <a href='https://pleroma.social/'><img src={sponsorPleroma} alt='Pleroma' /></a>
           </div>
         </div>
       </div>
