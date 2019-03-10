@@ -16,6 +16,7 @@ import pinafore from './assets/apps/pinafore.png';
 import whalebird from './assets/apps/whalebird.png';
 import halcyon from './assets/apps/halcyon.png';
 import thedesk from './assets/apps/thedesk.png';
+import hyperspace from './assets/apps/hyperspace.png';
 
 const apps = {
   android: [
