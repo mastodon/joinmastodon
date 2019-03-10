@@ -156,7 +156,7 @@ export default class Home extends PureComponent {
                 <a href='https://www.codefirst.co.uk/' className='logo-sponsor-codefirst'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
                 <a href='https://datantify.com/' className='logo-sponsor-datantify'><img src={sponsorDatantify} alt='Datantify' /></a>
                 <Link to='/sponsors' className='logo-sponsor-pleroma'><img src={sponsorPleroma} alt='Pleroma' /></Link>
-                <Link to='/sponsors' className='logo-sponsor-truevendor'><img src={sponsorTrueVendor} alt='TrueVendor' /></Link>
+                <a href='https://uiuxagencies.top/' className='logo-sponsor-truevendor'><img src={sponsorTrueVendor} alt='TrueVendor' /></a>
               </div>
             </div>
           </div>
