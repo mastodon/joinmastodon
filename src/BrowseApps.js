@@ -98,6 +98,11 @@ const apps = {
       icon: thedesk,
       url: 'https://thedesk.top/en',
     },
+    {
+      name: 'Hyperspace',
+      icon: hyperspace,
+      url: 'https://hyperspace.marquiskurt.net/',
+    },
   ],
 };
 
