@@ -30,6 +30,7 @@ import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 import avatarTnzk from './assets/sponsors/tnzk.png';
+import avatarTakeShape from './assets/sponsors/takeshape.jpg';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -99,6 +100,7 @@ const Sponsorship = () => (
             <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>WAMPUM</strong><span>-</span></span></a></li>
             <li><a href='https://spicedupaffairs.com/backpage-alternatives/'><img src={noAvatar} alt='' /> <span><strong>new sites like backpage</strong><span>https://spicedupaffairs.com/backpage-alternatives/</span></span></a></li>
             <li><a href='https://www.slixa.com/'><img src={noAvatar} alt='' /> <span><strong>Slixa Escort Directory</strong><span>https://www.slixa.com/</span></span></a></li>
+            <li><a href='https://www.takeshape.io/'><img src={avatarTakeShape} alt='' /> <span><strong>TakeShape</strong><span>https://www.takeshape.io/</span></span></a></li>
           </ul>
         </div>
       </div>
