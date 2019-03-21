@@ -101,6 +101,7 @@ const Sponsorship = () => (
             <li><a href='https://spicedupaffairs.com/backpage-alternatives/'><img src={noAvatar} alt='' /> <span><strong>new sites like backpage</strong><span>https://spicedupaffairs.com/backpage-alternatives/</span></span></a></li>
             <li><a href='https://www.slixa.com/'><img src={noAvatar} alt='' /> <span><strong>Slixa Escort Directory</strong><span>https://www.slixa.com/</span></span></a></li>
             <li><a href='https://www.takeshape.io/'><img src={avatarTakeShape} alt='' /> <span><strong>TakeShape</strong><span>https://www.takeshape.io/</span></span></a></li>
+            <li><a href='https://www.signomatic.com.au/'><img src={noAvatar} alt='' /> <span><strong>Signomatic.com.au</strong><span>https://www.signomatic.com.au/</span></span></a></li>
           </ul>
         </div>
       </div>
