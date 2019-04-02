@@ -5,7 +5,7 @@ import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import Navigation from './Navigation';
 import Legal from './Legal';
 
-import sponsorStream from './assets/sponsors/stream.png';
+//import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
 import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
