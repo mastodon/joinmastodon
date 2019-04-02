@@ -55,7 +55,6 @@ const Sponsorship = () => (
       <div className='container'>
         <div className='tier'>
           <div className='sponsors-list--logos'>
-            <a href='https://getstream.io/try-the-api'><img src={sponsorStream} alt='Stream' /></a>
             <a href='http://www.rubymotion.com/'><img src={sponsorRubymotion} alt='RubyMotion' /></a>
             <a href='https://mastodon.sdf.org'><img src={sponsorSDF} alt='SDF' /></a>
             <a href='mailto:bamboo.how@gmail.com'><img src={sponsorBambooHow} alt='Bamboo How' /></a>
