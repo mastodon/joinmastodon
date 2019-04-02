@@ -18,6 +18,7 @@ import sponsorCodeFirst from './assets/sponsors/codefirst.png';
 import sponsorDatantify from './assets/sponsors/datantify_alt.png';
 import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 import sponsorTrueVendor from './assets/sponsors/truevendor.png';
+import sponsorBestVPN from './assets/sponsors/bestvpn.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -157,6 +158,7 @@ export default class Home extends PureComponent {
                 <a href='https://datantify.com/' className='logo-sponsor-datantify'><img src={sponsorDatantify} alt='Datantify' /></a>
                 <Link to='/sponsors' className='logo-sponsor-pleroma'><img src={sponsorPleroma} alt='Pleroma' /></Link>
                 <a href='https://uiuxagencies.top/' className='logo-sponsor-truevendor'><img src={sponsorTrueVendor} alt='TrueVendor' /></a>
+                <a href='https://www.bestvpn.co/' className='logo-sponsor-bestvpn'><img src={sponsorBestVPN} alt='BestVPN' /></a>
               </div>
             </div>
           </div>
