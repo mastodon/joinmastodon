@@ -14,6 +14,7 @@ import sponsorDatantify from './assets/sponsors/datantify_alt.png';
 import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 import sponsorTrueVendor from './assets/sponsors/truevendor.png';
 import sponsorBestVPN from './assets/sponsors/bestvpn.png';
+import sponsorVPNRanks from './assets/sponsors/vpnranks.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
@@ -64,6 +65,7 @@ const Sponsorship = () => (
             <a href='https://pleroma.social/'><img src={sponsorPleroma} alt='Pleroma' /></a>
             <a href='https://uiuxagencies.top/'><img src={sponsorTrueVendor} alt='TrueVendor' /></a>
             <a href='https://www.bestvpn.co/'><img src={sponsorBestVPN} alt='BestVPN' /></a>
+            <a href='https://www.vpnranks.com/'><img src={sponsorVPNRanks} alt='VPN Ranks' /></a>
           </div>
         </div>
       </div>
