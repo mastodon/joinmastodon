@@ -15,6 +15,7 @@ import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 import sponsorTrueVendor from './assets/sponsors/truevendor.png';
 import sponsorBestVPN from './assets/sponsors/bestvpn.png';
 import sponsorVPNRanks from './assets/sponsors/vpnranks.png';
+import sponsorLesjeudis from './assets/sponsors/lesjeudis.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
@@ -66,6 +67,7 @@ const Sponsorship = () => (
             <a href='https://uiuxagencies.top/'><img src={sponsorTrueVendor} alt='TrueVendor' /></a>
             <a href='https://www.bestvpn.co/'><img src={sponsorBestVPN} alt='BestVPN' /></a>
             <a href='https://www.vpnranks.com/'><img src={sponsorVPNRanks} alt='VPN Ranks' /></a>
+            <a href='https://www.lesjeudis.com/' className='logo-sponsor-lesjeudis'><img src={sponsorLesjeudis} alt='LesJeudis' /></a>
           </div>
         </div>
       </div>
@@ -105,6 +107,7 @@ const Sponsorship = () => (
             <li><a href='https://www.slixa.com/'><img src={noAvatar} alt='' /> <span><strong>Slixa Escort Directory</strong><span>https://www.slixa.com/</span></span></a></li>
             <li><a href='https://www.takeshape.io/'><img src={avatarTakeShape} alt='' /> <span><strong>TakeShape</strong><span>https://www.takeshape.io/</span></span></a></li>
             <li><a href='https://www.signomatic.com.au/'><img src={noAvatar} alt='' /> <span><strong>Signomatic.com.au</strong><span>https://www.signomatic.com.au/</span></span></a></li>
+            <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Hiroyuki Wakimoto (TOMOKI++)</strong><span>-</span></span></a></li>
           </ul>
         </div>
       </div>
