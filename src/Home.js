@@ -15,7 +15,7 @@ import Navigation from './Navigation';
 //import sponsorStream from './assets/sponsors/stream.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorCodeFirst from './assets/sponsors/codefirst.png';
-import sponsorDatantify from './assets/sponsors/datantify_alt.png';
+//import sponsorDatantify from './assets/sponsors/datantify_alt.png';
 import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 import sponsorTrueVendor from './assets/sponsors/truevendor.png';
 import sponsorBestVPN from './assets/sponsors/bestvpn.png';
@@ -158,7 +158,6 @@ export default class Home extends PureComponent {
               <div>
                 <Link to='/sponsors' className='logo-sponsor-lunanode'><img src={sponsorLunanode} alt='Lunanode' /></Link>
                 <a href='https://www.codefirst.co.uk/' className='logo-sponsor-codefirst'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
-                <a href='https://datantify.com/' className='logo-sponsor-datantify'><img src={sponsorDatantify} alt='Datantify' /></a>
                 <Link to='/sponsors' className='logo-sponsor-pleroma'><img src={sponsorPleroma} alt='Pleroma' /></Link>
                 <a href='https://uiuxagencies.top/' className='logo-sponsor-truevendor'><img src={sponsorTrueVendor} alt='TrueVendor' /></a>
                 <a href='https://www.bestvpn.co/' className='logo-sponsor-bestvpn'><img src={sponsorBestVPN} alt='BestVPN' /></a>
