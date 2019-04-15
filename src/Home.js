@@ -21,6 +21,7 @@ import sponsorTrueVendor from './assets/sponsors/truevendor.png';
 import sponsorBestVPN from './assets/sponsors/bestvpn.png';
 import sponsorVPNRanks from './assets/sponsors/vpnranks.png';
 import sponsorLesjeudis from './assets/sponsors/lesjeudis.png';
+import sponsorAirVPN from './assets/sponsors/airvpn.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -162,6 +163,7 @@ export default class Home extends PureComponent {
                 <a href='https://www.bestvpn.co/' className='logo-sponsor-bestvpn'><img src={sponsorBestVPN} alt='BestVPN' /></a>
                 <a href='https://www.vpnranks.com/' className='logo-sponsor-vpnranks'><img src={sponsorVPNRanks} alt='VPN Ranks' /></a>
                 <a href='https://www.lesjeudis.com/' className='logo-sponsor-lesjeudis'><img src={sponsorLesjeudis} alt='LesJeudis' /></a>
+                <a href='https://airvpn.org/landing/mastodon' className='logo-sponsor-airvpn'><img src={sponsorAirVPN} alt='AirVPN' /></a>
               </div>
             </div>
           </div>
