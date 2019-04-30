@@ -100,6 +100,7 @@ const Sponsorship = () => (
             <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Hiroyuki Wakimoto (TOMOKI++)</strong><span>-</span></span></a></li>
             <li><a href='https://spicedupaffairs.com/backpage-alternatives/'><img src={noAvatar} alt='' /> <span><strong>new sites like backpage</strong><span>https://spicedupaffairs.com/backpage-alternatives/</span></span></a></li>
             <li><a href='https://sextoycollective.com'><img src={avatarSexToyCollective} alt='' /> <span><strong>SexToyCollective</strong><span>https://sextoycollective.com</span></span></a></li>
+            <li><a href='https://www.slixa.com/'><img src={noAvatar} alt='' /> <span><strong>Slixa Escort Directory</strong><span>https://www.slixa.com/</span></span></a></li>
             <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Lee Ann</strong><span>-</span></span></a></li>
             <li><a href='https://www.looktotheright.com/'><img src={avatarLookToTheRight} alt='' /> <span><strong>Look To The Right</strong><span>https://www.looktotheright.com/</span></span></a></li>
             <li><a href='https://about.me/markatwood'><img src={avatarMarkAtwood} alt='' /> <span><strong>Mark Atwood</strong><span>https://about.me/markatwood</span></span></a></li>
