@@ -89,5 +89,5 @@
   "wizard_row.stability.awful": "不安定",
   "wizard_row.stability.intermittent": "断続的",
   "wizard_row.stability.stable": "安定",
-  "wizard_row.user_count": "{population} 人"
+  "wizard_row.user_count": "{label} 人"
 }

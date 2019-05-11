@@ -89,5 +89,5 @@
   "wizard_row.stability.awful": "Horrible",
   "wizard_row.stability.intermittent": "Intermittent",
   "wizard_row.stability.stable": "Stable",
-  "wizard_row.user_count": "{population} {count, plural, one {utilisateur·ice} other {utilisateur·ice·s}}"
+  "wizard_row.user_count": "{label} {count, plural, one {utilisateur·ice} other {utilisateur·ice·s}}"
 }

@@ -87,5 +87,5 @@
   "wizard_row.stability.awful": "不穩定",
   "wizard_row.stability.intermittent": "中等",
   "wizard_row.stability.stable": "穩定",
-  "wizard_row.user_count": "{population} 個使用者"
+  "wizard_row.user_count": "{label} 個使用者"
 }

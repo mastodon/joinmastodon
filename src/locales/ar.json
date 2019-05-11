@@ -89,5 +89,5 @@
   "wizard_row.stability.awful": "ممتلئ كفاية",
   "wizard_row.stability.intermittent": "غير منتظم",
   "wizard_row.stability.stable": "ثابت",
-  "wizard_row.user_count": "{population} {count, plural, one {person} other {people}}"
+  "wizard_row.user_count": "{label} {count, plural, one {person} other {people}}"
 }

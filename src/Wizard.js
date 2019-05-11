@@ -1,28 +1,29 @@
 import React from 'react';
 import WizardRow from './WizardRow';
-import { Scrollbars } from 'react-custom-scrollbars';
+import WizardCard from './WizardCard';
 import { FormattedHTMLMessage as FormattedMessage, injectIntl, defineMessages } from 'react-intl';
 import ReactResponsiveSelect from 'react-responsive-select';
+import { Link } from 'react-router-dom';
 
 const messages = defineMessages({
-  i_am: { id: 'wizard.filters.i_am', defaultMessage: 'I am ' },
-  i_speak: { id: 'wizard.filters.i_speak', defaultMessage: 'I speak ' },
-  artist: { id: 'wizard.filters.artist', defaultMessage: 'an artist' },
-  musician: { id: 'wizard.filters.musician', defaultMessage: 'a musician' },
-  writer: { id: 'wizard.filters.writer', defaultMessage: 'a writer' },
-  reader: { id: 'wizard.filters.reader', defaultMessage: 'a book lover' },
-  activist: { id: 'wizard.filters.activist', defaultMessage: 'an activist' },
-  sports_fan: { id: 'wizard.filters.sports_fan', defaultMessage: 'a sports fan' },
-  gamer: { id: 'wizard.filters.gamer', defaultMessage: 'a gamer' },
-  dev: { id: 'wizard.filters.dev', defaultMessage: 'a developer' },
-  sysadmin: { id: 'wizard.filters.sysadmin', defaultMessage: 'a sysadmin' },
-  academia: { id: 'wizard.filters.academia', defaultMessage: 'in academia' },
-  journalist: { id: 'wizard.filter.journalist', defaultMessage: 'a journalist' },
-  adult_content_creator: { id: 'wizard.filter.adult_content_creator', defaultMessage: 'an adult content creator' },
+  art: { id: 'wizard.filters.art', defaultMessage: 'Art' },
+  music: { id: 'wizard.filters.music', defaultMessage: 'Music' },
+  books: { id: 'wizard.filters.books', defaultMessage: 'Books' },
+  activism: { id: 'wizard.filters.activism', defaultMessage: 'Activism' },
+  sports: { id: 'wizard.filters.sports', defaultMessage: 'Sports' },
+  gaming: { id: 'wizard.filters.gaming', defaultMessage: 'Gaming' },
+  tech: { id: 'wizard.filters.technology', defaultMessage: 'Technology' },
+  academia: { id: 'wizard.filters.academia', defaultMessage: 'Academia' },
+  journalism: { id: 'wizard.filter.journalism', defaultMessage: 'Journalism' },
+  adult: { id: 'wizard.filter.adult_content', defaultMessage: 'Adult content' },
   lgbt: { id: 'wizard.filter.lgbt', defaultMessage: 'LGBTQ+' },
-  poc_aa: { id: 'wizard.filter.poc_aa', defaultMessage: 'Black American' },
-  humor: { id: 'wizard.filter.humor', defaultMessage: 'a humorist' },
-  furry: { id: 'wizard.filter.furry', defaultMessage: 'a furry' },
+  poc: { id: 'wizard.filter.poc_aa', defaultMessage: 'Black American' },
+  humor: { id: 'wizard.filter.humor', defaultMessage: 'Humour' },
+  furry: { id: 'wizard.filter.furry', defaultMessage: 'Furry' },
+  category: { id: 'wizard.filter.category', defaultMessage: 'Category: ' },
+  language: { id: 'wizard.filter.language', defaultMessage: 'Language: ' },
+  general: { id: 'wizard.filter.general', defaultMessage: 'General' },
+  all_languages: { id: 'wizard.filter.all_languages', defaultMessage: 'All languages' },
 });
 
 const caretIcon = (
@@ -62,12 +63,25 @@ class Wizard extends React.PureComponent {
     const { instances, category, language, intl } = this.props;
 
     const content = instances.length > 0 ? (
-      instances.map(item => <WizardRow key={item.id} instance={item} />)
+      <div>
+        <div className='wizard__row'>
+          {instances.slice(0, 3).map(item => <WizardCard key={item.id} instance={item} />)}
+        </div>
+
+        <div className='covenant-banner'>
+          <i className='ion-md-heart' /> <FormattedMessage id='covenant_banner.text' defaultMessage='We only list servers that are committed to active moderation against <strong>racism, sexism and transphobia</strong>.' /> <Link to='/covenant' className='link-button'><FormattedMessage id='covenant_banner.learn_more' defaultMessage='Learn more about this policy or how to submit your own server' /> <i className='ion-ios-arrow-forward' /></Link>
+        </div>
+
+        <div className='wizard__list'>
+          {instances.slice(3).map(item => <WizardRow key={item.id} instance={item} />)}
+        </div>
+      </div>
     ) : (
       <div className='empty'>
         <FormattedMessage id='wizard.empty' defaultMessage='No results… for now!' />
       </div>
     );
+
     return (
       <div className='wizard-page' id='getting-started'>
         <h1><i className='ion-md-person-add' /> <FormattedMessage id='wizard.sign_up' defaultMessage='Sign up' /></h1>
@@ -81,27 +95,25 @@ class Wizard extends React.PureComponent {
             <ReactResponsiveSelect
               name="category"
               options={[
-                { value: '', text: '…' },
-                { value: 'art', text: intl.formatMessage(messages.artist) },
-                { value: 'music', text: intl.formatMessage(messages.musician) },
-                { value: 'books-0', text: intl.formatMessage(messages.writer) },
-                { value: 'books-1', text: intl.formatMessage(messages.reader) },
-                { value: 'journalism', text: intl.formatMessage(messages.journalist) },
-                { value: 'activism', text: intl.formatMessage(messages.activist) },
+                { value: '', text: intl.formatMessage(messages.general) },
+                { value: 'art', text: intl.formatMessage(messages.art) },
+                { value: 'music', text: intl.formatMessage(messages.music) },
+                { value: 'books', text: intl.formatMessage(messages.books) },
+                { value: 'journalism', text: intl.formatMessage(messages.journalism) },
+                { value: 'activism', text: intl.formatMessage(messages.activism) },
                 { value: 'lgbt', text: intl.formatMessage(messages.lgbt) },
-                { value: 'poc-0', text: intl.formatMessage(messages.poc_aa) },
-                { value: 'sports', text: intl.formatMessage(messages.sports_fan) },
-                { value: 'games', text: intl.formatMessage(messages.gamer) },
-                { value: 'tech-0', text: intl.formatMessage(messages.dev) },
-                { value: 'tech-1', text: intl.formatMessage(messages.sysadmin) },
+                { value: 'poc', text: intl.formatMessage(messages.poc) },
+                { value: 'sports', text: intl.formatMessage(messages.sports) },
+                { value: 'games', text: intl.formatMessage(messages.gaming) },
+                { value: 'tech', text: intl.formatMessage(messages.tech) },
                 { value: 'academia', text: intl.formatMessage(messages.academia) },
-                { value: 'adult', text: intl.formatMessage(messages.adult_content_creator) },
+                { value: 'adult', text: intl.formatMessage(messages.adult) },
                 { value: 'humor', text: intl.formatMessage(messages.humor) },
                 { value: 'furry', text: intl.formatMessage(messages.furry) },
               ]}
               caretIcon={caretIcon}
               selectedValue={category}
-              prefix={intl.formatMessage(messages.i_am)}
+              prefix={intl.formatMessage(messages.category)}
               onChange={this.handleCategoryChange}
             />
 
@@ -110,7 +122,7 @@ class Wizard extends React.PureComponent {
             <ReactResponsiveSelect
               name="language"
               options={[
-                { value: '', text: '…' },
+                { value: '', text: intl.formatMessage(messages.all_languages) },
                 { value: 'ar', text: 'العربية' },
                 { value: 'ca', text: 'Català' },
                 { value: 'cs', text: 'Česky' },
@@ -135,16 +147,14 @@ class Wizard extends React.PureComponent {
               ]}
               caretIcon={caretIcon}
               selectedValue={language}
-              prefix={intl.formatMessage(messages.i_speak)}
+              prefix={intl.formatMessage(messages.language)}
               onChange={this.handleLanguageChange}
             />
           </div>
         </form>
 
         <div className='wizard'>
-          <Scrollbars className='wizard-content' style={{ height: 500 }} renderThumbVertical={this.renderThumb}>
-            {content}
-          </Scrollbars>
+          {content}
         </div>
       </div>
     );

@@ -15,7 +15,7 @@
   "features.find_your_community": "Vind de gemeenschap die bij je past",
   "features.find_your_community_text2": "Mastodon staat niet op zichzelf, maar maakt onderdeel uit van een gefedereerd netwerk. Dit netwerk bestaat uit duizenden onafhankelijke servers en gemeenschappen die samen een geheel vormen. Als je onderdeel bent van één van deze gemeenschappen ben je onderdeel van het hele netwerk.",
   "features.for_individual": "Mastodon voor jou",
-  "features.for_individual_text": "Omdat Mastodon geen winstoogmerk heeft, kun je ongestoord je berichten lezen en schrijven. Je tijdlijn is chronologisch, vrij van advertenties en niet gefilterd door algoritmes. Jij bepaalt want je wilt zien!", 
+  "features.for_individual_text": "Omdat Mastodon geen winstoogmerk heeft, kun je ongestoord je berichten lezen en schrijven. Je tijdlijn is chronologisch, vrij van advertenties en niet gefilterd door algoritmes. Jij bepaalt want je wilt zien!",
   "features.for_organization": "Mastodon voor jouw organisatie",
   "features.for_organization_text": "Beheer je eigen sociale media op je eigen infrastructuur. Laat je organisatie niet afhankelijk zijn van de grillen van grote softwarebedrijven. Bepaal je eigen regels!",
   "features.install_server": "Installeer een server",
@@ -89,5 +89,5 @@
   "wizard_row.stability.awful": "Vreselijk",
   "wizard_row.stability.intermittent": "Matig",
   "wizard_row.stability.stable": "Stabiel",
-  "wizard_row.user_count": "{population} {count, plural, one {gebruiker} other {gebruikers}}"
+  "wizard_row.user_count": "{label} {count, plural, one {gebruiker} other {gebruikers}}"
 }

@@ -89,5 +89,5 @@
   "wizard_row.stability.awful": "Otřesný",
   "wizard_row.stability.intermittent": "Nestabilní",
   "wizard_row.stability.stable": "Stabilní",
-  "wizard_row.user_count": "{population} {count, plural, one {člověk} few {lidé} many {lidí} other {lidí}}"
+  "wizard_row.user_count": "{label} {count, plural, one {člověk} few {lidé} many {lidí} other {lidí}}"
 }

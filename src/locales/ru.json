@@ -89,5 +89,5 @@
   "wizard_row.stability.awful": "Ужасно",
   "wizard_row.stability.intermittent": "Прерывисто",
   "wizard_row.stability.stable": "Стабильно",
-  "wizard_row.user_count": "{population} {count, plural, one {человек} other {человек}}"
+  "wizard_row.user_count": "{label} {count, plural, one {человек} other {человек}}"
 }

@@ -89,5 +89,5 @@
   "wizard_row.stability.awful": "Okropna",
   "wizard_row.stability.intermittent": "Średnia",
   "wizard_row.stability.stable": "Dobra",
-  "wizard_row.user_count": "{population} {count, plural, one {użytkownik} few {użytkownicy} many {użytkowników} other {użytkowników}}"
+  "wizard_row.user_count": "{label} {count, plural, one {użytkownik} few {użytkownicy} many {użytkowników} other {użytkowników}}"
 }

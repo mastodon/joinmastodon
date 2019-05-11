@@ -89,5 +89,5 @@
   "wizard_row.stability.awful": "Ofnadwy",
   "wizard_row.stability.intermittent": "Ysbeidiol",
   "wizard_row.stability.stable": "Dibynadwy",
-  "wizard_row.user_count": "{population} {count, plural, one {person} other {people}}"
+  "wizard_row.user_count": "{label} {count, plural, one {person} other {people}}"
 }

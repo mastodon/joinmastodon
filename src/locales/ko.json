@@ -89,5 +89,5 @@
   "wizard_row.stability.awful": "불안정",
   "wizard_row.stability.intermittent": "간헐적",
   "wizard_row.stability.stable": "안정",
-  "wizard_row.user_count": "{population} 명"
+  "wizard_row.user_count": "{label} 명"
 }

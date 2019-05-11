@@ -132,12 +132,7 @@
 
 .wizard {
   margin: 15px auto;
-  background: lighten($darkest, 8%);
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
   max-width: 800px;
-  max-height: 60vh;
-  overflow: hidden;
 
   .wizard-header {
     display: flex;
@@ -156,34 +151,144 @@
     }
   }
 
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .wizard-card {
+    background: lighten($darkest, 4%);
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+
+    &__description {
+      padding: 10px;
+      font-size: 13px;
+      line-height: 21px;
+      color: darken($lighter, 12%);
+    }
+
+    &__hero {
+      overflow: hidden;
+      height: 130px;
+      border-radius: 4px 4px 0 0;
+      background: darken($darkest, 4%);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__row {
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      background: lighten($darkest, 8%);
+    }
+
+    &__text {
+      flex: 1 1 auto;
+      font-size: 14px;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .button {
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    min-width: 60px;
+    background: darken($success, 8%);
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: darken($success, 4%);
+    }
+  }
+
   .empty {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: lighten($darkest, 4%);
+    color: $lighter;
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .wizard-row {
-    display: flex;
     font-size: 14px;
     text-decoration: none;
     color: inherit;
-    justify-content: space-between;
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__more {
+      padding: 10px;
+      padding-top: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 13px;
+      line-height: 21px;
+      color: darken($lighter, 12%);
+    }
 
     &__details {
-      width: 75%;
+      flex: 1 1 auto;
       padding: 10px 0;
     }
 
     &__meta {
-      width: 15%;
-      padding: 10px 0;
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      width: 126px;
+      padding: 10px;
+      padding-top: 18px;
+
+      .button {
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      .indicator-text {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+        top: 12px;
+      }
+    }
+
+    &__description {
+      &__sep {
+        display: inline-block;
+        width: 10px;
+      }
+    }
+
+    &__main {
+      flex: 1 1 auto;
+      max-width: calc(100% - 126px);
     }
 
     &__thumbnail {
-      width: 10%;
+      width: 90px;
+      flex: 0 0 auto;
       padding: 10px 0;
       display: flex;
 
@@ -193,6 +298,7 @@
         overflow: hidden;
         border-radius: 4px;
         width: 100%;
+        height: 60px;
         position: relative;
         background: $darkest;
 
@@ -211,81 +317,25 @@
     &:nth-child(even) {
       background: lighten($darkest, 2%);
     }
-
-    &:hover {
-      .wizard-row__name {
-        color: $lightest;
-      }
-    }
-
-    &:focus {
-      background: mix($darkest, $vibrant);
-      color: $white;
-    }
-
-    &.offline {
-      color: lighten($darkest, 26%);
-
-      .indicator-text {
-        color: lighten($darkest, 26%) !important;
-      }
-
-      .indicator {
-        background: lighten($darkest, 26%) !important;
-      }
-
-      &:focus {
-        color: $white;
-
-        .indicator-text {
-          color: $white !important;
-        }
-
-        .indicator {
-          background: $white !important;
-        }
-      }
-    }
   }
 
-  .wizard-column {
-    padding: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-    &:nth-child(1n) {
-      width: 20%;
-    }
-
-    &:nth-child(2n), &:nth-child(3n) {
-      width: 17%;
-    }
-
-    &:nth-child(4n) {
-      width: 100% - 2*17% - 20%;
-    }
-  }
-
-  .wizard-content {
-    height: 500px;
-    overflow-y: hidden;
+  .wizard__list {
     background: lighten($darkest, 4%);
     color: $lighter;
-
-    .wizard-column {
-      cursor: pointer;
-    }
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
   }
 }
 
 .wizard-row__name {
   font-weight: 500;
   padding: 0 10px;
+  padding-left: 13px;
 }
 
 .wizard-row__description {
   padding: 0 10px;
+  padding-left: 13px;
   color: lighten($darkest, 34%);
   white-space: nowrap;
   overflow: hidden;
@@ -296,7 +346,8 @@
   font-weight: 500;
 
   .indicator {
-    margin-right: 5px;
+    margin-right: 3px;
+    margin-bottom: -1.5px;
   }
 
   &.green {
@@ -593,3 +644,30 @@
   display: inline-block;
 }
 */
+
+.covenant-banner {
+  color: $success;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  strong {
+    font-weight: 700;
+  }
+
+  .link-button {
+    color: lighten($vibrant, 8%);
+    text-decoration: none;
+
+    i {
+      margin-left: 5px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
