@@ -1,6 +1,5 @@
 import React from 'react';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
-import classNames from 'classnames';
 import Counter from './Counter';
 
 const messages = defineMessages({
@@ -22,34 +21,32 @@ const messages = defineMessages({
 });
 
 const WizardRow = ({ instance, intl }) => {
-  const category = instance.info && instance.info.categories[0] ? instance.info.categories[0] : 'general';
-
   return (
-    <div className={classNames('wizard-row', { offline: !instance.up })}>
+    <div className='wizard-row'>
       <div className='wizard-row__row'>
         <div className='wizard-row__main'>
           <div className='wizard-row__row'>
             <div className='wizard-row__thumbnail'>
               <div>
-                <img src={instance.thumbnail_proxy} alt='' />
+                <img src={instance.proxied_thumbnail} alt='' />
               </div>
             </div>
 
             <div className='wizard-row__details'>
-              <div className='wizard-row__name'><strong>{instance.name}</strong></div>
-              <div className='wizard-row__description'>{intl.formatMessage(messages[category] || messages.general)}<span className='wizard-row__description__sep' />v{instance.version}</div>
+              <div className='wizard-row__name'><strong>{instance.domain}</strong></div>
+              <div className='wizard-row__description'>{intl.formatMessage(messages[instance.category] || messages.general)}<span className='wizard-row__description__sep' />v{instance.version}</div>
             </div>
           </div>
 
-          <div className='wizard-row__more'>{instance.info ? instance.info.short_description : 'Missing description'}</div>
+          <div className='wizard-row__more'>{instance.description}</div>
         </div>
 
         <div className='wizard-row__meta'>
-          <a href={`https://${instance.name}/about`} target='_blank' rel='noopener noreferrer' className='cta button'>
+          <a href={`https://${instance.domain}/about`} target='_blank' rel='noopener noreferrer' className='cta button'>
             <FormattedMessage id='wizard_card.join' defaultMessage='Join' />
           </a>
 
-          <Counter number={instance.users} id='wizard_row.user_count' defaultMessage='{label} {count, plural, one {person} other {people}}' />
+          <Counter number={instance.total_users} id='wizard_row.user_count' defaultMessage='{label} {count, plural, one {person} other {people}}' />
         </div>
       </div>
     </div>

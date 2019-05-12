@@ -65,7 +65,7 @@ class Wizard extends React.PureComponent {
     const content = instances.length > 0 ? (
       <div>
         <div className='wizard__row'>
-          {instances.slice(0, 3).map(item => <WizardCard key={item.id} instance={item} />)}
+          {instances.slice(0, 3).map(item => <WizardCard key={item.domain} instance={item} />)}
         </div>
 
         <div className='covenant-banner'>
@@ -73,7 +73,7 @@ class Wizard extends React.PureComponent {
         </div>
 
         <div className='wizard__list'>
-          {instances.slice(3).map(item => <WizardRow key={item.id} instance={item} />)}
+          {instances.slice(3).map(item => <WizardRow key={item.domain} instance={item} />)}
         </div>
       </div>
     ) : (
@@ -95,7 +95,7 @@ class Wizard extends React.PureComponent {
             <ReactResponsiveSelect
               name="category"
               options={[
-                { value: '', text: intl.formatMessage(messages.general) },
+                { value: 'general', text: intl.formatMessage(messages.general) },
                 { value: 'art', text: intl.formatMessage(messages.art) },
                 { value: 'music', text: intl.formatMessage(messages.music) },
                 { value: 'books', text: intl.formatMessage(messages.books) },

@@ -24,17 +24,11 @@ const initialState = {
 
   filter: {
     category: '',
-    language: '',
+    language: initialLocale(),
   },
 };
 
 const DUNBAR = Math.log(300);
-
-const blacklist = [
-  'cat.social', // Duplicate entry for quey.org
-  'switter.co', // Duplicate entry for sinblr.com
-  'nudemy.com', // Duplicate entry for sinblr.com
-];
 
 const sortByDunbarsNumber = instances => instances.sort((a, b) => {
   const aa = Math.abs(DUNBAR - Math.log(a.active_users));
@@ -48,7 +42,7 @@ export default function reducer(state = initialState, action) {
   case LOCALE_CHANGE:
     return { ...state, locale: action.data };
   case INSTANCES_FETCH_SUCCESS:
-    return { ...state, instances: sortByDunbarsNumber(action.data.filter(instance => blacklist.indexOf(instance.name) === -1)) };
+    return { ...state, instances: sortByDunbarsNumber(action.data) };
   case FILTER_CATEGORY_CHANGE:
     return { ...state, filter: { ...state.filter, category: action.data } };
   case FILTER_LANGUAGE_CHANGE:

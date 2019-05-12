@@ -43,8 +43,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "translate": "NODE_ENV=production babel ./src >/dev/null",
-    "manage:translations": "node ./translationRunner.js",
-    "build-cache": "node ./cacheRunner.js"
+    "manage:translations": "node ./translationRunner.js"
   },
   "eslintConfig": {
     "extends": "react-app"
