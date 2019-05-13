@@ -8,10 +8,11 @@ export const FILTER_CATEGORY_CHANGE  = 'FILTER_CATEGORY_CHANGE';
 export function fetchInstances() {
   return (dispatch, getState) => {
     const { category, language } = getState().filter;
+    const params = {};
 
-    const params = {
-      category: category.split('-')[0],
-    };
+    if (category !== '') {
+      params.category = category.split('-')[0];
+    }
 
     if (language !== '') {
       params.language = language;

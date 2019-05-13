@@ -1,7 +1,22 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export default class Dropdown extends PureComponent {
+
+  static propTypes = {
+    label: PropTypes.node.isRequired,
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+
+    options: PropTypes.arrayOf(PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.node.isRequired,
+    })).isRequired,
+
+    asLinks: PropTypes.bool,
+  };
+
   state = {
     opened: false
   };

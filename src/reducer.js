@@ -5,12 +5,31 @@ import {
   FILTER_LANGUAGE_CHANGE,
 } from './actions';
 
-const supportedLocales = ['en', 'fr', 'pl', 'cs', 'es', 'ja', 'ko', 'de','pt-BR', 'ar', 'tr', 'sq', 'nl-NL', 'cy', 'zh', 'zh-TW'];
+const supportedLocales = [
+  'ar',
+  'cs',
+  'cy',
+  'de',
+  'en',
+  'es',
+  'fr',
+  'ja',
+  'ko',
+  'nl-NL',
+  'pl',
+  'pt-BR',
+  'sq',
+  'tr',
+  'zh',
+  'zh-TW',
+];
 
 const initialLocale = () => {
   const lang = navigator.language.split('-')[0];
 
-  if (supportedLocales.indexOf(lang) !== -1) {
+  if (supportedLocales.indexOf(navigator.language) !== -1) {
+    return navigator.language;
+  } else if (supportedLocales.indexOf(lang) !== -1) {
     return lang;
   } else {
     return 'en';
@@ -24,15 +43,15 @@ const initialState = {
 
   filter: {
     category: '',
-    language: initialLocale(),
+    language: '',
   },
 };
 
-const DUNBAR = Math.log(300);
+const DUNBAR = Math.log(800);
 
 const sortByDunbarsNumber = instances => instances.sort((a, b) => {
-  const aa = Math.abs(DUNBAR - Math.log(a.active_users));
-  const bb = Math.abs(DUNBAR - Math.log(b.active_users));
+  const aa = Math.abs(DUNBAR - Math.log(a.last_week_users));
+  const bb = Math.abs(DUNBAR - Math.log(b.last_week_users));
 
   return aa > bb ? 1 : (aa < bb ? -1 : 0);
 });

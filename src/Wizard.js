@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import WizardRow from './WizardRow';
 import WizardCard from './WizardCard';
 import { FormattedHTMLMessage as FormattedMessage, injectIntl, defineMessages } from 'react-intl';
@@ -24,6 +25,7 @@ const messages = defineMessages({
   language: { id: 'wizard.filter.language', defaultMessage: 'Language: ' },
   general: { id: 'wizard.filter.general', defaultMessage: 'General' },
   all_languages: { id: 'wizard.filter.all_languages', defaultMessage: 'All languages' },
+  regional: { id: 'wizard.filter.regional', defaultMessage: 'Regional' },
 });
 
 const caretIcon = (
@@ -33,6 +35,13 @@ const caretIcon = (
 );
 
 class Wizard extends React.PureComponent {
+
+  static propTypes = {
+    category: PropTypes.string.isRequired,
+    language: PropTypes.string.isRequired,
+    intl: PropTypes.object.isRequired,
+    instances: PropTypes.arrayOf(PropTypes.object).isRequired,
+  };
 
   componentDidMount () {
     this.props.onMount();
@@ -96,20 +105,21 @@ class Wizard extends React.PureComponent {
               name="category"
               options={[
                 { value: 'general', text: intl.formatMessage(messages.general) },
+                { value: 'regional', text: intl.formatMessage(messages.regional) },
                 { value: 'art', text: intl.formatMessage(messages.art) },
-                { value: 'music', text: intl.formatMessage(messages.music) },
-                { value: 'books', text: intl.formatMessage(messages.books) },
-                { value: 'journalism', text: intl.formatMessage(messages.journalism) },
-                { value: 'activism', text: intl.formatMessage(messages.activism) },
-                { value: 'lgbt', text: intl.formatMessage(messages.lgbt) },
-                { value: 'poc', text: intl.formatMessage(messages.poc) },
-                { value: 'sports', text: intl.formatMessage(messages.sports) },
+                //{ value: 'music', text: intl.formatMessage(messages.music) },
+                //{ value: 'books', text: intl.formatMessage(messages.books) },
+                //{ value: 'journalism', text: intl.formatMessage(messages.journalism) },
+                //{ value: 'activism', text: intl.formatMessage(messages.activism) },
+                //{ value: 'lgbt', text: intl.formatMessage(messages.lgbt) },
+                //{ value: 'poc', text: intl.formatMessage(messages.poc) },
+                //{ value: 'sports', text: intl.formatMessage(messages.sports) },
                 { value: 'games', text: intl.formatMessage(messages.gaming) },
                 { value: 'tech', text: intl.formatMessage(messages.tech) },
-                { value: 'academia', text: intl.formatMessage(messages.academia) },
+                //{ value: 'academia', text: intl.formatMessage(messages.academia) },
                 { value: 'adult', text: intl.formatMessage(messages.adult) },
-                { value: 'humor', text: intl.formatMessage(messages.humor) },
-                { value: 'furry', text: intl.formatMessage(messages.furry) },
+                //{ value: 'humor', text: intl.formatMessage(messages.humor) },
+                //{ value: 'furry', text: intl.formatMessage(messages.furry) },
               ]}
               caretIcon={caretIcon}
               selectedValue={category}

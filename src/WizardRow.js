@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
 import Counter from './Counter';
 
@@ -51,6 +52,19 @@ const WizardRow = ({ instance, intl }) => {
       </div>
     </div>
   );
+};
+
+WizardRow.propTypes = {
+  instance: PropTypes.shape({
+    domain: PropTypes.string.isRequired,
+    total_users: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    proxied_thumbnail: PropTypes.string.isRequired,
+    version: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
+
+  intl: PropTypes.object.isRequired,
 };
 
 export default injectIntl(WizardRow);

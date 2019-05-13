@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Dropdown from './Dropdown';
 
 import flagEn from 'twemoji/2/svg/1f1ec-1f1e7.svg';
@@ -41,7 +42,7 @@ const options = [
   { value: 'zh-TW', label: <span><img src={flagTw} className='emoji' alt='' /> 繁體中文（臺灣）</span> },
 ];
 
-export default ({ value, onChange }) => (
+const LanguageSelect = ({ value, onChange }) => (
   <Dropdown
     options={options}
     value={value}
@@ -49,3 +50,10 @@ export default ({ value, onChange }) => (
     onChange={onChange}
   />
 );
+
+LanguageSelect.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
+
+export default LanguageSelect;

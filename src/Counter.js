@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { injectIntl, FormattedMessage } from 'react-intl';
 
 const Counter = ({ number, id, defaultMessage, intl }) => {
@@ -10,6 +11,13 @@ const Counter = ({ number, id, defaultMessage, intl }) => {
       <i className={`indicator ${color}`} /> <FormattedMessage id={id} defaultMessage={defaultMessage} values={{ label, count: number }} />
     </span>
   );
+};
+
+Counter.propTypes = {
+  number: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
+  defaultMessage: PropTypes.string.isRequired,
+  intl: PropTypes.object.isRequired,
 };
 
 export default injectIntl(Counter);

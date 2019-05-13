@@ -94,7 +94,10 @@ export default class Home extends PureComponent {
 
   onCloseModal = () => {
     this.setState({ open: false });
-    this.player.pauseVideo();
+
+    if (this.player) {
+      this.player.pauseVideo();
+    }
   }
 
   render () {

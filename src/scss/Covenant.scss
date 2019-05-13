@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+.covenant__terms {
+  margin: 60px 0;
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  p strong {
+    font-weight: 700;
+    color: $lightest;
+  }
+}
