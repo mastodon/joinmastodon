@@ -119,7 +119,7 @@ class Wizard extends React.PureComponent {
                 //{ value: 'academia', text: intl.formatMessage(messages.academia) },
                 { value: 'adult', text: intl.formatMessage(messages.adult) },
                 //{ value: 'humor', text: intl.formatMessage(messages.humor) },
-                //{ value: 'furry', text: intl.formatMessage(messages.furry) },
+                { value: 'furry', text: intl.formatMessage(messages.furry) },
               ]}
               caretIcon={caretIcon}
               selectedValue={category}
