@@ -42,7 +42,7 @@ const initialState = {
   instances: [],
 
   filter: {
-    category: '',
+    category: 'general',
     language: '',
   },
 };
