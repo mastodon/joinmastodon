@@ -55,15 +55,25 @@ const styles = {
 };
 
 const playerOpts = {
-
   width: 720,
   height: 405,
 
   playerVars: {
     autoplay: 1,
   },
-
 };
+
+const sponsors = [
+  { href: 'https://www.lunanode.com/', src: sponsorLunanode, alt: 'Lunanode' },
+  { href: 'https://www.codefirst.co.uk/', src: sponsorCodeFirst, alt: 'CodeFirst' },
+  { href: 'https://pleroma.social/', src: sponsorPleroma, alt: 'Pleroma' },
+  { href: 'https://uiuxagencies.top/', src: sponsorTrueVendor, alt: 'TrueVendor' },
+  { href: 'https://www.bestvpn.co/', src: sponsorBestVPN, alt: 'BestVPN' },
+  { href: 'https://www.vpnranks.com/', src: sponsorVPNRanks, alt: 'VPN Ranks' },
+  { href: 'https://www.lesjeudis.com/', src: sponsorLesjeudis, alt: 'LesJeudis' },
+  { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
+  { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' },
+];
 
 export default class Home extends PureComponent {
 
@@ -159,15 +169,7 @@ export default class Home extends PureComponent {
 
             <div className='logo-grid'>
               <div>
-                <Link to='/sponsors' className='logo-sponsor-lunanode'><img src={sponsorLunanode} alt='Lunanode' /></Link>
-                <a href='https://www.codefirst.co.uk/' className='logo-sponsor-codefirst'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
-                <Link to='/sponsors' className='logo-sponsor-pleroma'><img src={sponsorPleroma} alt='Pleroma' /></Link>
-                <a href='https://uiuxagencies.top/' className='logo-sponsor-truevendor'><img src={sponsorTrueVendor} alt='TrueVendor' /></a>
-                <a href='https://www.bestvpn.co/' className='logo-sponsor-bestvpn'><img src={sponsorBestVPN} alt='BestVPN' /></a>
-                <a href='https://www.vpnranks.com/' className='logo-sponsor-vpnranks'><img src={sponsorVPNRanks} alt='VPN Ranks' /></a>
-                <a href='https://www.lesjeudis.com/' className='logo-sponsor-lesjeudis'><img src={sponsorLesjeudis} alt='LesJeudis' /></a>
-                <a href='https://airvpn.org/landing/mastodon' className='logo-sponsor-airvpn'><img src={sponsorAirVPN} alt='AirVPN' /></a>
-                <a href='https://www.firesticktricks.com/' className='logo-sponsor-firesticktricks'><img src={sponsorFireStickTricks} alt='Fire Stick Tricks' /></a>
+                {sponsors.map(x => <a key={x.href} href={x.href}><img src={x.src} alt={x.alt} /></a>)}
               </div>
             </div>
           </div>
