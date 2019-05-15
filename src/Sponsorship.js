@@ -38,6 +38,8 @@ import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 import avatarTnzk from './assets/sponsors/tnzk.png';
 import avatarTakeShape from './assets/sponsors/takeshape.jpg';
 import avatarPaperLeaf from './assets/sponsors/paperleaf.jpg';
+import avatarClay from './assets/sponsors/clay.png';
+import avatarCraftResumes from './assets/sponsors/craftresumes.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -95,6 +97,7 @@ const Sponsorship = () => (
             <li><a href='https://mastodon.gamedev.place/@aras'><img src={avatarArasPranckevicius} alt='' /> <span><strong>Aras Pranckevicius</strong><span>https://mastodon.gamedev.place/@aras</span></span></a></li>
             <li><a href='https://werd.io'><img src={avatarBenWerdmuller} alt='' /> <span><strong>Ben Werdmuller</strong><span>https://werd.io</span></span></a></li>
             <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Blaine Cook</strong><span>-</span></span></a></li>
+            <li><a href='https://clay.global/'><img src={avatarClay} alt='' /> <span><strong>Clay</strong><span>https://clay.global/</span></span></a></li>
             <li><a href='https://cloudfleet.io'><img src={avatarCloudfleet} alt='' /> <span><strong>CloudFleet</strong><span>https://cloudfleet.io</span></span></a></li>
             <li><a href='https://www.signomatic.com.au/'><img src={noAvatar} alt='' /> <span><strong>Signomatic.com.au</strong><span>https://www.signomatic.com.au/</span></span></a></li>
             <li><a href='https://identi.ca/evan'><img src={avatarEvan} alt='' /> <span><strong>Evan Prodromou</strong><span>https://identi.ca/evan</span></span></a></li>
@@ -110,6 +113,7 @@ const Sponsorship = () => (
             <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Ms Miller</strong><span>-</span></span></a></li>
             <li><a href='https://dtp-mstdn.jp'><img src={avatarNoellabo} alt='' /> <span><strong>noellabo</strong><span>https://dtp-mstdn.jp</span></span></a></li>
             <li><a href='https://paperleaf.ca/'><img src={avatarPaperLeaf} alt='' /> <span><strong>PaperLeaf</strong><span>https://paperleaf.ca/</span></span></a></li>
+            <li><a href='https://craftresumes.com/'><img src={avatarCraftResumes} alt='' /> <span><strong>CraftResumes</strong><span>https://craftresumes.com/</span></span></a></li>
             <li><a href='https://www.pickfu.com/'><img src={avatarPickfu} alt='' /> <span><strong>PickFu</strong><span>https://www.pickfu.com/</span></span></a></li>
             <li><a href='https://www.whatisseo.com/'><img src={avatarVJ} alt='' /> <span><strong>VJ</strong><span>https://www.whatisseo.com/</span></span></a></li>
             <li><a href='https://www.takeshape.io/'><img src={avatarTakeShape} alt='' /> <span><strong>TakeShape</strong><span>https://www.takeshape.io/</span></span></a></li>
