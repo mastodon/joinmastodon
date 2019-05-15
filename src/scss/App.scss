@@ -269,6 +269,13 @@ $phi: 1.6180339887498948482;
     color: lighten($darkest, 40%);
     text-align: center;
     margin-bottom: 20px;
+
+    a {
+      font-family: 'Roboto', sans-serif;
+      color: $darker;
+      font-size: 14px;
+      font-weight: 400;
+    }
   }
 
   .logo-grid {
@@ -329,8 +336,26 @@ $phi: 1.6180339887498948482;
 }
 
 .frontpage-sponsorship {
+  .logo-grid > div {
+    flex-wrap: wrap;
+  }
+
   .logo-grid a {
-    padding: 0 20px;
+    padding: 20px;
+  }
+
+  .link-button {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+
+    i {
+      margin-left: 3px;
+    }
   }
 }
 

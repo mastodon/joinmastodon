@@ -165,7 +165,7 @@ export default class Home extends PureComponent {
 
         <div className='frontpage-sponsorship'>
           <div className='container'>
-            <h2><FormattedMessage id='home.sponsored_by' defaultMessage='Sponsored by' /></h2>
+            <h2><FormattedMessage id='home.sponsored_by' defaultMessage='Sponsored by' /> &bull; <Link to='/sponsors' className='link-button'><FormattedMessage id='home.view_all_sponsors' defaultMessage='View all' /> <i className='ion-ios-arrow-forward' /></Link></h2>
 
             <div className='logo-grid'>
               <div>
