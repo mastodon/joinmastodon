@@ -40,6 +40,7 @@ import avatarTakeShape from './assets/sponsors/takeshape.jpg';
 import avatarPaperLeaf from './assets/sponsors/paperleaf.jpg';
 import avatarClay from './assets/sponsors/clay.png';
 import avatarCraftResumes from './assets/sponsors/craftresumes.png';
+import avatarTomoki from './assets/sponsors/tomoki.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -102,7 +103,7 @@ const Sponsorship = () => (
             <li><a href='https://www.signomatic.com.au/'><img src={noAvatar} alt='' /> <span><strong>Signomatic.com.au</strong><span>https://www.signomatic.com.au/</span></span></a></li>
             <li><a href='https://identi.ca/evan'><img src={avatarEvan} alt='' /> <span><strong>Evan Prodromou</strong><span>https://identi.ca/evan</span></span></a></li>
             <li><a href='https://empresso.ma'><img src={avatarEmpresso} alt='' /> <span><strong>Carte visite</strong><span>https://empresso.ma</span></span></a></li>
-            <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Hiroyuki Wakimoto (TOMOKI++)</strong><span>-</span></span></a></li>
+            <li><a href='https://vocalodon.net/@tomoki'><img src={avatarTomoki} alt='' /> <span><strong>Hiroyuki Wakimoto (TOMOKI++)</strong><span>https://vocalodon.net/@tomoki</span></span></a></li>
             <li><a href='https://spicedupaffairs.com/'><img src={noAvatar} alt='' /> <span><strong>SUA</strong><span>https://spicedupaffairs.com/</span></span></a></li>
             <li><a href='https://sextoycollective.com'><img src={avatarSexToyCollective} alt='' /> <span><strong>SexToyCollective</strong><span>https://sextoycollective.com</span></span></a></li>
             <li><a href='https://www.slixa.com/'><img src={noAvatar} alt='' /> <span><strong>Slixa Escort Directory</strong><span>https://www.slixa.com/</span></span></a></li>
