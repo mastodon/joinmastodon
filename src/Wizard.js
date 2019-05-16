@@ -111,7 +111,7 @@ class Wizard extends React.PureComponent {
                 //{ value: 'books', text: intl.formatMessage(messages.books) },
                 //{ value: 'journalism', text: intl.formatMessage(messages.journalism) },
                 { value: 'activism', text: intl.formatMessage(messages.activism) },
-                //{ value: 'lgbt', text: intl.formatMessage(messages.lgbt) },
+                { value: 'lgbt', text: intl.formatMessage(messages.lgbt) },
                 //{ value: 'poc', text: intl.formatMessage(messages.poc) },
                 //{ value: 'sports', text: intl.formatMessage(messages.sports) },
                 { value: 'games', text: intl.formatMessage(messages.gaming) },
