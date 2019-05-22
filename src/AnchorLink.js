@@ -14,7 +14,9 @@ class AnchorLink extends Component {
   }
 
   smoothScroll(e) {
-    e.preventDefault()
+    if (e) {
+      e.preventDefault()
+    }
 
     let offset = 0
 
@@ -22,7 +24,7 @@ class AnchorLink extends Component {
       offset = parseInt(this.props.offset, 10)
     }
 
-    const id = e.currentTarget.getAttribute('href').slice(1)
+    const id = this.props.href.slice(1)
 
     window.scroll({
       top: document.getElementById(id).offsetTop - offset,

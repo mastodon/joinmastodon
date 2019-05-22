@@ -60,6 +60,7 @@ const App = ({ usersLocale }) => (
       <ScrollToTop>
         <div className={classNames('app', `lang-${usersLocale}`)}>
           <Route exact path='/' component={Home} />
+          <Route path='/category/:category/:language?' component={Home} />
           <Route path='/sponsors' component={Sponsorship} />
           <Route path='/imprint' component={Imprint} />
           <Route path='/apps' component={BrowseApps} />

@@ -56,7 +56,17 @@
   ],
   "reactSnapshot": {
     "include": [
-      "/covenant"
+      "/covenant",
+      "/category/art",
+      "/category/general",
+      "/category/regional",
+      "/category/art",
+      "/category/activism",
+      "/category/lgbt",
+      "/category/games",
+      "/category/tech",
+      "/category/adult",
+      "/category/furry",
     ],
     "snapshotDelay": 500
   }

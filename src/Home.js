@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import { HashLink as Link } from 'react-router-hash-link';
+import { connect } from 'react-redux';
+import { changeFilterCategory, changeFilterLanguage, changeLocale } from './actions';
 import AnchorLink from './AnchorLink';
 import Modal from 'react-responsive-modal';
 import YouTube from 'react-youtube';
@@ -75,10 +77,22 @@ const sponsors = [
   { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' },
 ];
 
-export default class Home extends PureComponent {
+
+export default connect()(
+class Home extends PureComponent {
 
   static contextTypes = {
     intl: PropTypes.object.isRequired,
+    router: PropTypes.object.isRequired,
+  };
+
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        category: PropTypes.string,
+        language: PropTypes.string,
+      }),
+    }),
   };
 
   state = {
@@ -110,6 +124,44 @@ export default class Home extends PureComponent {
     }
   }
 
+  componentWillMount () {
+    const { params } = this.props.match;
+
+    if (params && params.category) {
+      this.props.dispatch(changeFilterCategory(params.category));
+    }
+
+    if (params && params.language) {
+      this.props.dispatch(changeLocale(params.language));
+      this.props.dispatch(changeFilterLanguage(params.language));
+    }
+  }
+
+  componentDidMount () {
+    const { params } = this.props.match;
+
+    if (params && (params.category || params.language) && this.anchorLink) {
+      this.anchorLink.smoothScroll();
+    }
+  }
+
+  componentWillReceiveProps (nextProps) {
+    const { params } = nextProps.match;
+
+    if (params && params.category) {
+      this.props.dispatch(changeFilterCategory(params.category));
+    }
+
+    if (params && params.language) {
+      this.props.dispatch(changeLocale(params.language));
+      this.props.dispatch(changeFilterLanguage(params.language));
+    }
+  }
+
+  setAnchorLinkRef = c => {
+    this.anchorLink = c;
+  }
+
   render () {
     const { open } = this.state;
     const { intl } = this.context;
@@ -123,7 +175,7 @@ export default class Home extends PureComponent {
             <h1><FormattedMessage id='home.headline' defaultMessage='Social networking, <strong>back in your hands</strong>' /></h1>
             <p><FormattedMessage id='home.tagline3' defaultMessage='Follow friends and discover new ones among more than {count}M people. Publish anything you want: links, pictures, text, video. All on a platform that is community-owned and ad-free.' values={{ count: intl.formatNumber(USERS_NUM_APPROX / (1000 * 1000), { maximumFractionDigits: 1 }) }} /></p>
 
-            <AnchorLink href='#getting-started' className='cta button'><FormattedMessage id='home.get_started' defaultMessage='Get started' /></AnchorLink>
+            <AnchorLink href='#getting-started' className='cta button' ref={this.setAnchorLinkRef}><FormattedMessage id='home.get_started' defaultMessage='Get started' /></AnchorLink>
             <button className='cta button alt' onClick={this.handleHowItWorksClick}><span className='icon-circled'><span className='ion-md-play' /></span><FormattedMessage id='home.how_it_works' defaultMessage='How it works' /></button>
           </div>
 
@@ -196,4 +248,4 @@ export default class Home extends PureComponent {
     );
   }
 
-}
+});
