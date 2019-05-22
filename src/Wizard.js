@@ -26,6 +26,7 @@ const messages = defineMessages({
   general: { id: 'wizard.filter.general', defaultMessage: 'General' },
   all_languages: { id: 'wizard.filter.all_languages', defaultMessage: 'All languages' },
   regional: { id: 'wizard.filter.regional', defaultMessage: 'Regional' },
+  food: { id: 'wizard.filter.food', defaultMessage: 'Food' },
 });
 
 const caretIcon = (
@@ -120,6 +121,7 @@ class Wizard extends React.PureComponent {
                 { value: 'adult', text: intl.formatMessage(messages.adult) },
                 //{ value: 'humor', text: intl.formatMessage(messages.humor) },
                 { value: 'furry', text: intl.formatMessage(messages.furry) },
+                { value: 'food', text: intl.formatMessage(messages.food) },
               ]}
               caretIcon={caretIcon}
               selectedValue={category}
