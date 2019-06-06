@@ -41,6 +41,7 @@ import avatarPaperLeaf from './assets/sponsors/paperleaf.jpg';
 import avatarClay from './assets/sponsors/clay.png';
 import avatarCraftResumes from './assets/sponsors/craftresumes.png';
 import avatarTomoki from './assets/sponsors/tomoki.png';
+import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -100,7 +101,7 @@ const Sponsorship = () => (
             <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Blaine Cook</strong><span>-</span></span></a></li>
             <li><a href='https://clay.global/'><img src={avatarClay} alt='' /> <span><strong>Clay</strong><span>https://clay.global/</span></span></a></li>
             <li><a href='https://cloudfleet.io'><img src={avatarCloudfleet} alt='' /> <span><strong>CloudFleet</strong><span>https://cloudfleet.io</span></span></a></li>
-            <li><a href='https://edureviewer.com/'><img src={noAvatar} alt='' /> <span><strong>Edu Reviewer</strong><span>https://edureviewer.com/</span></span></a></li>
+            <li><a href='https://edureviewer.com/'><img src={avatarEduReviewer} alt='' /> <span><strong>Edu Reviewer</strong><span>https://edureviewer.com/</span></span></a></li>
             <li><a href='https://www.signomatic.com.au/'><img src={noAvatar} alt='' /> <span><strong>Signomatic.com.au</strong><span>https://www.signomatic.com.au/</span></span></a></li>
             <li><a href='https://identi.ca/evan'><img src={avatarEvan} alt='' /> <span><strong>Evan Prodromou</strong><span>https://identi.ca/evan</span></span></a></li>
             <li><a href='https://marozed.ma'><img src={avatarEmpresso} alt='' /> <span><strong>Agence web Marozed</strong><span>https://marozed.ma</span></span></a></li>
