@@ -100,9 +100,10 @@ const Sponsorship = () => (
             <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Blaine Cook</strong><span>-</span></span></a></li>
             <li><a href='https://clay.global/'><img src={avatarClay} alt='' /> <span><strong>Clay</strong><span>https://clay.global/</span></span></a></li>
             <li><a href='https://cloudfleet.io'><img src={avatarCloudfleet} alt='' /> <span><strong>CloudFleet</strong><span>https://cloudfleet.io</span></span></a></li>
+            <li><a href='https://edureviewer.com/'><img src={noAvatar} alt='' /> <span><strong>Edu Reviewer</strong><span>https://edureviewer.com/</span></span></a></li>
             <li><a href='https://www.signomatic.com.au/'><img src={noAvatar} alt='' /> <span><strong>Signomatic.com.au</strong><span>https://www.signomatic.com.au/</span></span></a></li>
             <li><a href='https://identi.ca/evan'><img src={avatarEvan} alt='' /> <span><strong>Evan Prodromou</strong><span>https://identi.ca/evan</span></span></a></li>
-            <li><a href='https://empresso.ma'><img src={avatarEmpresso} alt='' /> <span><strong>Carte visite</strong><span>https://empresso.ma</span></span></a></li>
+            <li><a href='https://marozed.ma'><img src={avatarEmpresso} alt='' /> <span><strong>Agence web Marozed</strong><span>https://marozed.ma</span></span></a></li>
             <li><a href='https://vocalodon.net/@tomoki'><img src={avatarTomoki} alt='' /> <span><strong>Hiroyuki Wakimoto (TOMOKI++)</strong><span>https://vocalodon.net/@tomoki</span></span></a></li>
             <li><a href='https://spicedupaffairs.com/'><img src={noAvatar} alt='' /> <span><strong>SUA</strong><span>https://spicedupaffairs.com/</span></span></a></li>
             <li><a href='https://sextoycollective.com'><img src={avatarSexToyCollective} alt='' /> <span><strong>SexToyCollective</strong><span>https://sextoycollective.com</span></span></a></li>
