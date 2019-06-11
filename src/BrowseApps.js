@@ -35,7 +35,8 @@ const apps = {
     {
       name: 'Fedilab',
       icon: fedilab,
-      url: 'https://play.google.com/store/apps/details?id=fr.gouv.etalab.mastodon',
+      url: 'https://play.google.com/store/apps/details?id=app.fedilab.android',
+      paid: true,
     },
   ],
 
