@@ -25,6 +25,7 @@ import sponsorVPNRanks from './assets/sponsors/vpnranks.png';
 import sponsorLesjeudis from './assets/sponsors/lesjeudis.png';
 import sponsorAirVPN from './assets/sponsors/airvpn.png';
 import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
+import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -75,6 +76,7 @@ const sponsors = [
   { href: 'https://www.lesjeudis.com/', src: sponsorLesjeudis, alt: 'LesJeudis' },
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
   { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' },
+  { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
 ];
 
 
