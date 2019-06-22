@@ -43,6 +43,7 @@ import avatarClay from './assets/sponsors/clay.png';
 import avatarCraftResumes from './assets/sponsors/craftresumes.png';
 import avatarTomoki from './assets/sponsors/tomoki.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
+import avatarTradersInsurance from './assets/sponsors/tradersinsurance.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -122,6 +123,7 @@ const Sponsorship = () => (
             <li><a href='https://www.pickfu.com/'><img src={avatarPickfu} alt='' /> <span><strong>PickFu</strong><span>https://www.pickfu.com/</span></span></a></li>
             <li><a href='https://www.whatisseo.com/'><img src={avatarVJ} alt='' /> <span><strong>VJ</strong><span>https://www.whatisseo.com/</span></span></a></li>
             <li><a href='https://www.takeshape.io/'><img src={avatarTakeShape} alt='' /> <span><strong>TakeShape</strong><span>https://www.takeshape.io/</span></span></a></li>
+            <li><a href='https://www.traders-insurance.com/'><img src={avatarTradersInsurance} alt='' /> <span><strong>Traders Insurance</strong><span>https://www.traders-insurance.com/</span></span></a></li>
           </ul>
         </div>
       </div>
