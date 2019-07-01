@@ -11,15 +11,11 @@ import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
 
 import noAvatar from './assets/sponsors/32x32.png';
-import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
-//import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
 import avatarVJ from './assets/sponsors/vj.png';
-//import avatarIanna from './assets/sponsors/ianna.png';
 import avatarEvan from './assets/sponsors/evan.png';
 import avatarMarkAtwood from './assets/sponsors/markatwood.jpg';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
 import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
-import avatarBenWerdmuller from './assets/sponsors/benwerdmuller.jpg';
 import avatarPickfu from './assets/sponsors/pickfu.png';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
@@ -51,10 +47,8 @@ const goldSponsors = [
 const silverSponsors = [
   { href: 'https://ichiji.social/@tnzk', src: avatarTnzk, name: 'Kyohei Hamaguchi / @tnzk' },
   { href: 'https://mastodon.gamedev.place/@aras', src: avatarArasPranckevicius, name: 'Aras Pranckevicius' },
-  { href: 'https://werd.io', src: avatarBenWerdmuller, name: 'Ben Werdmuller' },
   { name: 'Blaine Cook' },
   { href: 'https://clay.global/', src: avatarClay, name: 'Clay' },
-  { href: 'https://cloudfleet.io', src: avatarCloudfleet, name: 'CloudFleet' },
   { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
   { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
   { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },
@@ -63,7 +57,6 @@ const silverSponsors = [
   { href: 'https://spicedupaffairs.com/', name: 'SUA' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, name: 'SexToyCollective' },
   { href: 'https://www.slixa.com/', name: 'Slixa Escort Directory' },
-  { name: 'Lee Ann' },
   { href: 'https://www.looktotheright.com/', src: avatarLookToTheRight, name: 'Look To The Right' },
   { href: 'https://about.me/markatwood', src: avatarMarkAtwood, name: 'Mark Atwood' },
   { name: 'Martin Seeger' },
@@ -73,7 +66,7 @@ const silverSponsors = [
   { href: 'https://craftresumes.com/', src: avatarCraftResumes, name: 'CraftResumes' },
   { href: 'https://www.pickfu.com/', src: avatarPickfu, name: 'PickFu' },
   { href: 'https://www.whatisseo.com/', src: avatarVJ, name: 'VJ' },
-  { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' },
+  { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' }, // OpenCollective
   { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
 ];
 

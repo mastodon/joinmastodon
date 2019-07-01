@@ -69,14 +69,14 @@ const playerOpts = {
 
 export const sponsors = [
   { href: 'https://www.lunanode.com/', src: sponsorLunanode, alt: 'Lunanode' },
-  { href: 'https://www.codefirst.co.uk/', src: sponsorCodeFirst, alt: 'CodeFirst' },
+  { href: 'https://www.codefirst.co.uk/', src: sponsorCodeFirst, alt: 'CodeFirst' }, // OpenCollective
   { href: 'https://pleroma.social/', src: sponsorPleroma, alt: 'Pleroma' },
   { href: 'https://uiuxagencies.top/', src: sponsorTrueVendor, alt: 'TrueVendor' },
   { href: 'https://www.bestvpn.co/', src: sponsorBestVPN, alt: 'BestVPN' },
   { href: 'https://www.vpnranks.com/', src: sponsorVPNRanks, alt: 'VPN Ranks' },
   { href: 'https://www.lesjeudis.com/', src: sponsorLesjeudis, alt: 'LesJeudis' },
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
-  { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' },
+  { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' }, // OpenCollective
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
   { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
 ];
