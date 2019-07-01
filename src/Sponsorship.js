@@ -12,7 +12,6 @@ import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
-import sponsorSDF from './assets/sponsors/sdf.png';
 //import avatarJamesMWright from './assets/sponsors/jamesmwright.jpg';
 import avatarVJ from './assets/sponsors/vj.png';
 //import avatarIanna from './assets/sponsors/ianna.png';
