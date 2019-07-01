@@ -6,22 +6,9 @@ import Navigation from './Navigation';
 import Legal from './Legal';
 import { sponsors as platinumSponsors } from './Home';
 
-//import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
 import sponsorBambooHow from './assets/sponsors/bamboohow.png';
-import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
-import sponsorCodeFirst from './assets/sponsors/codefirst.png';
-import sponsorDatantify from './assets/sponsors/datantify_alt.png';
-import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
-import sponsorTrueVendor from './assets/sponsors/truevendor.png';
-import sponsorBestVPN from './assets/sponsors/bestvpn.png';
-import sponsorVPNRanks from './assets/sponsors/vpnranks.png';
-import sponsorLesjeudis from './assets/sponsors/lesjeudis.png';
-import sponsorAirVPN from './assets/sponsors/airvpn.png';
-import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
-import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
-import sponsorHostdon from './assets/sponsors/hostdon.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
