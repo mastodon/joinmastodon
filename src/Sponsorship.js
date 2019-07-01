@@ -114,23 +114,19 @@ const Sponsorship = () => (
         <div className='sponsors-list--names'>
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
-              <li>Julie Moronuki</li>
               <li>Donald "Chronos" King</li>
+              <li>Ken Naishtat</li>
               <li>Moritz Heiber</li>
               <li>Nolan Lawson</li>
-              <li>Paco Hope</li>
-              <li>Sean</li>
-              <li>Great Scott Gadgets</li>
               <li>@mecab</li>
+              <li>Great Scott Gadgets</li>
               <li>Sho Kusano / rosylilly</li>
               <li>Masto.host</li>
-              <li>Ken Naishtat</li>
               <li>Danny O'Brien</li>
               <li>Brion Vibber</li>
-              <li>Landy Manderson</li>
+              <li>G Berton Latamore</li>
               <li>Andrei Petcu</li>
               <li>Joyce Mayorga</li>
-              <li>Humblr Social</li>
             </ul>
 
             <ul>
