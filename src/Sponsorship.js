@@ -4,6 +4,7 @@ import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 
 import Navigation from './Navigation';
 import Legal from './Legal';
+import { sponsors as platinumSponsors } from './Home';
 
 //import sponsorStream from './assets/sponsors/stream.png';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
@@ -20,6 +21,7 @@ import sponsorAirVPN from './assets/sponsors/airvpn.png';
 import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
 import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
+import sponsorHostdon from './assets/sponsors/hostdon.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarCloudfleet from './assets/sponsors/cloudfleet.png';
@@ -54,6 +56,12 @@ const renderThumb = ({ style, ...props }) => {
   return <div style={{ ...style, ...thumbStyle }} />;
 };
 
+const goldSponsors = [
+  { href: 'http://www.rubymotion.com/', src: sponsorRubymotion, alt: 'RubyMotion' },
+  { href: 'mailto:bamboo.how@gmail.com', src: sponsorBambooHow, alt: 'Bamboo How' },
+  { href: 'https://write.as/', src: sponsorWriteAs, alt: 'Write.as' },
+];
+
 const Sponsorship = () => (
   <div className='sponsorship' id='sponsorship'>
     <div className='intro'>
@@ -67,21 +75,7 @@ const Sponsorship = () => (
       <div className='container'>
         <div className='tier'>
           <div className='sponsors-list--logos'>
-            <a href='http://www.rubymotion.com/'><img src={sponsorRubymotion} alt='RubyMotion' /></a>
-            <a href='https://mastodon.sdf.org'><img src={sponsorSDF} alt='SDF' /></a>
-            <a href='mailto:bamboo.how@gmail.com'><img src={sponsorBambooHow} alt='Bamboo How' /></a>
-            <a href='https://www.lunanode.com/'><img src={sponsorLunanode} alt='Lunanode' /></a>
-            <a href='https://www.codefirst.co.uk/'><img src={sponsorCodeFirst} alt='CodeFirst' /></a>
-            <a href='https://datantify.com/'><img src={sponsorDatantify} alt='Datantify' /></a>
-            <a href='https://pleroma.social/'><img src={sponsorPleroma} alt='Pleroma' /></a>
-            <a href='https://uiuxagencies.top/'><img src={sponsorTrueVendor} alt='TrueVendor' /></a>
-            <a href='https://www.bestvpn.co/'><img src={sponsorBestVPN} alt='BestVPN' /></a>
-            <a href='https://www.vpnranks.com/'><img src={sponsorVPNRanks} alt='VPN Ranks' /></a>
-            <a href='https://www.lesjeudis.com/' className='logo-sponsor-lesjeudis'><img src={sponsorLesjeudis} alt='LesJeudis' /></a>
-            <a href='https://airvpn.org/landing/mastodon' className='logo-sponsor-airvpn'><img src={sponsorAirVPN} alt='AirVPN' /></a>
-            <a href='https://www.firesticktricks.com/' className='logo-sponsor-firesticktricks'><img src={sponsorFireStickTricks} alt='Fire Stick Tricks' /></a>
-            <a href='https://write.as/' className='logo-sponsor-writeas'><img src={sponsorWriteAs} alt='Write.as' /></a>
-            <a href='https://sextoyeducation.com/' className='logo-sponsor-sextoyeducation'><img src={sponsorSexToyEducation} alt='Sex Toy Education' /></a>
+            {(platinumSponsors + goldSponsors).map(sponsor => <a key={sponsor.href} href={sponsor.href}><img src={sponsor.src} alt={sponsor.alt} /></a>)}
           </div>
         </div>
       </div>

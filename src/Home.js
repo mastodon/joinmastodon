@@ -26,6 +26,7 @@ import sponsorLesjeudis from './assets/sponsors/lesjeudis.png';
 import sponsorAirVPN from './assets/sponsors/airvpn.png';
 import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
+import sponsorHostdon from './assets/sponsors/hostdon.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -66,7 +67,7 @@ const playerOpts = {
   },
 };
 
-const sponsors = [
+export const sponsors = [
   { href: 'https://www.lunanode.com/', src: sponsorLunanode, alt: 'Lunanode' },
   { href: 'https://www.codefirst.co.uk/', src: sponsorCodeFirst, alt: 'CodeFirst' },
   { href: 'https://pleroma.social/', src: sponsorPleroma, alt: 'Pleroma' },
@@ -77,8 +78,8 @@ const sponsors = [
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
   { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' },
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
+  { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
 ];
-
 
 export default connect()(
 class Home extends PureComponent {
