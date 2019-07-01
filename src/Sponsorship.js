@@ -48,6 +48,35 @@ const goldSponsors = [
   { href: 'https://write.as/', src: sponsorWriteAs, alt: 'Write.as' },
 ];
 
+const silverSponsors = [
+  { href: 'https://ichiji.social/@tnzk', src: avatarTnzk, name: 'Kyohei Hamaguchi / @tnzk' },
+  { href: 'https://mastodon.gamedev.place/@aras', src: avatarArasPranckevicius, name: 'Aras Pranckevicius' },
+  { href: 'https://werd.io', src: avatarBenWerdmuller, name: 'Ben Werdmuller' },
+  { name: 'Blaine Cook' },
+  { href: 'https://clay.global/', src: avatarClay, name: 'Clay' },
+  { href: 'https://cloudfleet.io', src: avatarCloudfleet, name: 'CloudFleet' },
+  { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
+  { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
+  { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },
+  { href: 'https://marozed.ma', src: avatarEmpresso, name: 'Agence web Marozed' },
+  { href: 'https://vocalodon.net/@tomoki', src: avatarTomoki, name: 'Hiroyuki Wakimoto (TOMOKI++)' },
+  { href: 'https://spicedupaffairs.com/', name: 'SUA' },
+  { href: 'https://sextoycollective.com', src: avatarSexToyCollective, name: 'SexToyCollective' },
+  { href: 'https://www.slixa.com/', name: 'Slixa Escort Directory' },
+  { name: 'Lee Ann' },
+  { href: 'https://www.looktotheright.com/', src: avatarLookToTheRight, name: 'Look To The Right' },
+  { href: 'https://about.me/markatwood', src: avatarMarkAtwood, name: 'Mark Atwood' },
+  { name: 'Martin Seeger' },
+  { name: 'Ms Miller' },
+  { href: 'https://dtp-mstdn.jp', src: avatarNoellabo, name: 'noellabo' },
+  { href: 'https://paperleaf.ca/', src: avatarPaperLeaf, name: 'PaperLeaf' },
+  { href: 'https://craftresumes.com/', src: avatarCraftResumes, name: 'CraftResumes' },
+  { href: 'https://www.pickfu.com/', src: avatarPickfu, name: 'PickFu' },
+  { href: 'https://www.whatisseo.com/', src: avatarVJ, name: 'VJ' },
+  { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' },
+  { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
+];
+
 const Sponsorship = () => (
   <div className='sponsorship' id='sponsorship'>
     <div className='intro'>
@@ -78,32 +107,7 @@ const Sponsorship = () => (
 
         <div className='sponsors-list--badges'>
           <ul>
-            <li><a href='https://ichiji.social/@tnzk'><img src={avatarTnzk} alt='' /> <span><strong>Kyohei Hamaguchi / @tnzk</strong><span>https://ichiji.social/@tnzk</span></span></a></li>
-            <li><a href='https://mastodon.gamedev.place/@aras'><img src={avatarArasPranckevicius} alt='' /> <span><strong>Aras Pranckevicius</strong><span>https://mastodon.gamedev.place/@aras</span></span></a></li>
-            <li><a href='https://werd.io'><img src={avatarBenWerdmuller} alt='' /> <span><strong>Ben Werdmuller</strong><span>https://werd.io</span></span></a></li>
-            <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Blaine Cook</strong><span>-</span></span></a></li>
-            <li><a href='https://clay.global/'><img src={avatarClay} alt='' /> <span><strong>Clay</strong><span>https://clay.global/</span></span></a></li>
-            <li><a href='https://cloudfleet.io'><img src={avatarCloudfleet} alt='' /> <span><strong>CloudFleet</strong><span>https://cloudfleet.io</span></span></a></li>
-            <li><a href='https://edureviewer.com/'><img src={avatarEduReviewer} alt='' /> <span><strong>Edu Reviewer</strong><span>https://edureviewer.com/</span></span></a></li>
-            <li><a href='https://www.signomatic.com.au/'><img src={noAvatar} alt='' /> <span><strong>Signomatic.com.au</strong><span>https://www.signomatic.com.au/</span></span></a></li>
-            <li><a href='https://identi.ca/evan'><img src={avatarEvan} alt='' /> <span><strong>Evan Prodromou</strong><span>https://identi.ca/evan</span></span></a></li>
-            <li><a href='https://marozed.ma'><img src={avatarEmpresso} alt='' /> <span><strong>Agence web Marozed</strong><span>https://marozed.ma</span></span></a></li>
-            <li><a href='https://vocalodon.net/@tomoki'><img src={avatarTomoki} alt='' /> <span><strong>Hiroyuki Wakimoto (TOMOKI++)</strong><span>https://vocalodon.net/@tomoki</span></span></a></li>
-            <li><a href='https://spicedupaffairs.com/'><img src={noAvatar} alt='' /> <span><strong>SUA</strong><span>https://spicedupaffairs.com/</span></span></a></li>
-            <li><a href='https://sextoycollective.com'><img src={avatarSexToyCollective} alt='' /> <span><strong>SexToyCollective</strong><span>https://sextoycollective.com</span></span></a></li>
-            <li><a href='https://www.slixa.com/'><img src={noAvatar} alt='' /> <span><strong>Slixa Escort Directory</strong><span>https://www.slixa.com/</span></span></a></li>
-            <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Lee Ann</strong><span>-</span></span></a></li>
-            <li><a href='https://www.looktotheright.com/'><img src={avatarLookToTheRight} alt='' /> <span><strong>Look To The Right</strong><span>https://www.looktotheright.com/</span></span></a></li>
-            <li><a href='https://about.me/markatwood'><img src={avatarMarkAtwood} alt='' /> <span><strong>Mark Atwood</strong><span>https://about.me/markatwood</span></span></a></li>
-            <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Martin Seeger</strong><span>-</span></span></a></li>
-            <li><a href='https://joinmastodon.org/sponsors'><img src={noAvatar} alt='' /> <span><strong>Ms Miller</strong><span>-</span></span></a></li>
-            <li><a href='https://dtp-mstdn.jp'><img src={avatarNoellabo} alt='' /> <span><strong>noellabo</strong><span>https://dtp-mstdn.jp</span></span></a></li>
-            <li><a href='https://paperleaf.ca/'><img src={avatarPaperLeaf} alt='' /> <span><strong>PaperLeaf</strong><span>https://paperleaf.ca/</span></span></a></li>
-            <li><a href='https://craftresumes.com/'><img src={avatarCraftResumes} alt='' /> <span><strong>CraftResumes</strong><span>https://craftresumes.com/</span></span></a></li>
-            <li><a href='https://www.pickfu.com/'><img src={avatarPickfu} alt='' /> <span><strong>PickFu</strong><span>https://www.pickfu.com/</span></span></a></li>
-            <li><a href='https://www.whatisseo.com/'><img src={avatarVJ} alt='' /> <span><strong>VJ</strong><span>https://www.whatisseo.com/</span></span></a></li>
-            <li><a href='https://www.takeshape.io/'><img src={avatarTakeShape} alt='' /> <span><strong>TakeShape</strong><span>https://www.takeshape.io/</span></span></a></li>
-            <li><a href='https://www.traders-insurance.com/'><img src={avatarTradersInsurance} alt='' /> <span><strong>Traders Insurance</strong><span>https://www.traders-insurance.com/</span></span></a></li>
+            {silverSponsors.map(sponsor => <li key={sponsor.name}><a href={sponsor.href || 'https://joinmastodon.org/sponsors'}><img src={sponsor.src || noAvatar} alt='' /> <span><strong>{sponsor.name}</strong><span>{sponsor.href || '-'}</span></span></a></li>)}
           </ul>
         </div>
       </div>
