@@ -130,134 +130,105 @@ const Sponsorship = () => (
             </ul>
 
             <ul>
-              <li>Chris Zelenak</li>
-              <li>Ted</li>
-              <li>Irick Corwal</li>
-              <li>Christopher Kruse</li>
-              <li>Philip James</li>
-              <li>Josef Kenny</li>
-              <li>Leif Halldor Asgeirsson</li>
-              <li>Ellen Teapot</li>
-              <li>Austin Putman</li>
-              <li>halcy</li>
-              <li>David Yip</li>
-              <li>ティン・ルーフ</li>
-              <li>C J Silverio</li>
-              <li>Paul Meier</li>
-              <li>Miki Habryn</li>
-              <li>Matthieu Herrb</li>
-              <li>Igor Ferreira</li>
-              <li>Olivia Mossberg</li>
-              <li>Chris Johnson</li>
-              <li>Sajith Sasidharan</li>
-              <li>Aaron Williamson</li>
-              <li>Kenneth Ken Sugar</li>
-              <li>Joe McLaughlin</li>
-              <li>Hideki Yamamoto</li>
-              <li>Paul Lindner</li>
-              <li>Jesse Olson</li>
-              <li>Zaki</li>
-              <li>Richard Minerich</li>
-              <li>nobody</li>
-              <li>Nicolai Schwarz</li>
-              <li>Nemecle</li>
-              <li>Josephine Pedersen</li>
-              <li>Manesh Pillai</li>
-              <li>3xv</li>
-              <li>Alexander Zillion</li>
-              <li>fairenoughschroedinger</li>
-              <li>Yoshiki Kato</li>
-              <li>Rufus</li>
-              <li>Harukasan</li>
-              <li>Charles Hutchins</li>
-              <li>Laurent Joubert</li>
-              <li>Local Librarian</li>
-              <li>Kevin Sonney</li>
-              <li>Lady Errant</li>
-              <li>Bram</li>
-              <li>Masaya Imai</li>
-              <li>Konosuke Furuhata</li>
-              <li>Sandro Hawke</li>
-              <li>Koya Matsuo</li>
-              <li>Osamu Miyake</li>
-              <li>Solar Anamnesis</li>
-              <li>Bheesham Persaud</li>
-              <li>Akihiko Odaki</li>
-              <li>Max</li>
-              <li>Niko Autio</li>
-              <li>James Valleroy</li>
-              <li>Drew Williams</li>
-              <li>A bowl of creamy tomato soup</li>
-              <li>Clinton Freeman</li>
-              <li>jeremy gray</li>
-              <li>itsumonotakumi</li>
-              <li>Spencer Alves</li>
-              <li>Al</li>
-              <li>peter hessler</li>
-              <li>Ruben</li>
               <li>_</li>
-              <li>tiansheng li</li>
-              <li>Szmozsánszky István "Flaki"</li>
-              <li>Jon Dubovsky</li>
-              <li>Lon Hohberger</li>
-              <li>Waldo</li>
-              <li>Jen Savage</li>
-              <li>lrvick</li>
-              <li>Wolfgang @vilbi</li>
-              <li>Wladimir</li>
-              <li>Jonas Wisser</li>
-              <li>Matt Ulman</li>
-              <li>Deborah Goldsmith</li>
-              <li>Nicolas Morel</li>
-              <li>Timothy Wood</li>
-              <li>Laurie Voss</li>
-              <li>Philippe Hausler</li>
-              <li>Joe Rosensteel</li>
-              <li>Nate Borland</li>
-              <li>Jan Krutisch</li>
-              <li>Michael Lamers</li>
-              <li>Michael Ellis</li>
-              <li>Chris Hanson</li>
-              <li>Kimberly Horne</li>
-              <li>rootfs.ext2.gz</li>
-              <li>Grant Stavely</li>
-              <li>Evan DiBiase</li>
-              <li>Ben Cohen</li>
-              <li>Rob Napier</li>
-              <li>Steve Streza</li>
-              <li>Thijs van der Vossen</li>
-              <li>Tom Adriaenssen</li>
-              <li>Din of In</li>
-              <li>Jeff McLeman</li>
-              <li>Naomi Alderman</li>
-              <li>mangochutney</li>
-              <li>Aria Buckles</li>
-              <li>Walter Ebert</li>
-              <li>Wolfgang Dudda</li>
-              <li>Jonathan Cremin</li>
-              <li>Josh</li>
-              <li>nosuchbinary</li>
-              <li>Mikayla Hutchinson</li>
-              <li>Abraham Hmiel</li>
-              <li>Kevin Hoctor</li>
-              <li>Jonathan Gerlach</li>
-              <li>Patrick Quinn-Graham</li>
-              <li>John Newberger</li>
+              <li>Akihiko Odaki</li>
+              <li>Al</li>
               <li>Anticrisis</li>
-              <li>YUKIMOCHI</li>
-              <li>Nican</li>
-              <li>Tom Lowenthal</li>
-              <li>R</li>
-              <li>TARIK F AJAMI</li>
-              <li>twisterghost</li>
-              <li>Satsuki Yanagi</li>
-              <li>Baptiste Lemoine</li>
-              <li>Caroline Brix</li>
-              <li>John McAvey</li>
-              <li>Kevin Yank</li>
               <li>Ash</li>
-              <li>Gerriet Selent</li>
-              <li>Gabe Kangas</li>
+              <li>Austin Putman</li>
+              <li>Bal</li>
+              <li>Baptiste Lemoine</li>
+              <li>Bheesham Persaud</li>
+              <li>C J Silverio</li>
+              <li>Charles Hutchins</li>
+              <li>Chris Hanson</li>
+              <li>Chris Zelenak</li>
+              <li>Christopher Kruse</li>
+              <li>Clinton Freeman</li>
+              <li>danny.zukou</li>
+              <li>David Yip</li>
+              <li>Deborah Goldsmith</li>
+              <li>Drew Williams</li>
+              <li>Ellen Teapot</li>
+              <li>Evan DiBiase</li>
+              <li>Grant Stavely</li>
+              <li>Graywind</li>
+              <li>Hau Ngo</li>
+              <li>Hideki Yamamoto</li>
+              <li>Igor Ferreira</li>
+              <li>Irick Corwal</li>
+              <li>Isao Sugimoto</li>
+              <li>itsumonotakumi</li>
+              <li>James Valleroy</li>
+              <li>James Wright</li>
+              <li>Jan Krutisch</li>
+              <li>Jen Savage</li>
+              <li>Jesse Olson</li>
+              <li>Jin Shiiba</li>
+              <li>Joe McLaughlin</li>
+              <li>John Newberger</li>
+              <li>Jon Dubovsky</li>
+              <li>Jonas Wisser</li>
+              <li>Jonathan Cremin</li>
+              <li>Josef Kenny</li>
+              <li>Josephine Pedersen</li>
+              <li>Josh</li>
+              <li>Julie Moronuki</li>
+              <li>Kenneth Ken Sugar</li>
+              <li>Kevin Hoctor</li>
+              <li>Kevin Sonney</li>
+              <li>Kevin Yank</li>
+              <li>Konosuke Furuhata</li>
+              <li>Koya Matsuo</li>
+              <li>Landy Manderson</li>
+              <li>Laurent Joubert</li>
+              <li>Laurie Voss</li>
+              <li>Leif Halldor Asgeirsson</li>
+              <li>Local Librarian</li>
+              <li>Lon Hohberger</li>
+              <li>lrvick</li>
+              <li>Manesh Pillai</li>
+              <li>Masaya Imai</li>
+              <li>Matt Ulman</li>
+              <li>Matthieu Herrb</li>
+              <li>Mikayla Hutchinson</li>
+              <li>Miki Habryn</li>
+              <li>Mrpdub247</li>
+              <li>Naomi Alderman</li>
+              <li>Nate Borland</li>
+              <li>Nemecle</li>
+              <li>Nican</li>
+              <li>Nicolas Morel</li>
+              <li>nosuchbinary</li>
+              <li>Osamu Miyake</li>
+              <li>Pablo Meier</li>
+              <li>Patrick Quinn-Graham</li>
+              <li>Paul Lindner</li>
+              <li>peter hessler</li>
+              <li>Philip James</li>
+              <li>Philippe Hausler</li>
+              <li>Piotr Krygier</li>
+              <li>Richard Minerich</li>
+              <li>Ruben</li>
+              <li>Rufus</li>
+              <li>Sajith Sasidharan</li>
+              <li>Sam Herlapuut</li>
+              <li>Sandro Hawke</li>
+              <li>Satsuki Yanagi</li>
+              <li>Solar Anamnesis</li>
+              <li>Steve Streza</li>
+              <li>Szmozsánszky István "Flaki"</li>
+              <li>TARIK F AJAMI</li>
+              <li>Ted</li>
+              <li>tiansheng li</li>
+              <li>Timothy Wood</li>
+              <li>Tom Adriaenssen</li>
+              <li>Tom Lowenthal</li>
+              <li>Walter Ebert</li>
+              <li>Wladimir</li>
+              <li>Wolfgang @vilbi</li>
+              <li>Wolfgang Dudda</li>
+              <li>Zaki</li>
             </ul>
           </Scrollbars>
         </div>
