@@ -127,6 +127,7 @@ const Sponsorship = () => (
               <li>G Berton Latamore</li>
               <li>Andrei Petcu</li>
               <li>Joyce Mayorga</li>
+              <li>Dominic Hopf</li>
             </ul>
 
             <ul>
