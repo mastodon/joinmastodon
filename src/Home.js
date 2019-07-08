@@ -41,7 +41,7 @@ import cloud2 from './assets/cloud2.png';
 import cloud3 from './assets/cloud3.png';
 import cloud4 from './assets/cloud4.png';
 
-const USERS_NUM_APPROX = 2023737;
+const USERS_NUM_APPROX = 2230012;
 
 const styles = {
   modal: {
