@@ -28,6 +28,7 @@ import avatarCraftResumes from './assets/sponsors/craftresumes.png';
 import avatarTomoki from './assets/sponsors/tomoki.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 import avatarTradersInsurance from './assets/sponsors/tradersinsurance.png';
+import avatarSwitchVPN from './assets/sponsors/switchvpn.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
