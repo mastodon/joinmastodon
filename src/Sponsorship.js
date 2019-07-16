@@ -68,6 +68,7 @@ const silverSponsors = [
   { href: 'https://www.whatisseo.com/', src: avatarVJ, name: 'VJ' },
   { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' }, // OpenCollective
   { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
+  { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
 ];
 
 const Sponsorship = () => (
