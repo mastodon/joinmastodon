@@ -70,6 +70,7 @@ const silverSponsors = [
   { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' }, // OpenCollective
   { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
   { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
+  { href: 'https://www.minitool.com/', name: 'MiniTool' },
 ];
 
 const Sponsorship = () => (
