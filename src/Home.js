@@ -14,9 +14,10 @@ import HowItWorks from './HowItWorks';
 import Credits from './Credits';
 import Navigation from './Navigation';
 
+import sponsorFediverseNetwork from './assets/sponsors/fediversenetwork.svg';
 //import sponsorStream from './assets/sponsors/stream.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
-import sponsorCodeFirst from './assets/sponsors/codefirst.png';
+//import sponsorCodeFirst from './assets/sponsors/codefirst.png';
 //import sponsorDatantify from './assets/sponsors/datantify_alt.png';
 import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 import sponsorTrueVendor from './assets/sponsors/truevendor.png';
@@ -70,7 +71,6 @@ const playerOpts = {
 
 export const sponsors = [
   { href: 'https://www.lunanode.com/', src: sponsorLunanode, alt: 'Lunanode' },
-  { href: 'https://www.codefirst.co.uk/', src: sponsorCodeFirst, alt: 'CodeFirst' }, // OpenCollective
   { href: 'https://pleroma.social/', src: sponsorPleroma, alt: 'Pleroma' },
   { href: 'https://uiuxagencies.top/', src: sponsorTrueVendor, alt: 'TrueVendor' },
   { href: 'https://www.bestvpn.co/', src: sponsorBestVPN, alt: 'BestVPN' },
@@ -81,6 +81,7 @@ export const sponsors = [
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
   { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
   { href: 'https://tekhattan.com/blog/', src: sponsorTekHattan, alt: 'TekHattan Blog' },
+  { href: 'https://fediverse.network/', src: sponsorFediverseNetwork, alt: 'Fediverse network' },
 ];
 
 export default connect()(
