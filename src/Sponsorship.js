@@ -71,6 +71,7 @@ const silverSponsors = [
   { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
   { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
   { href: 'https://www.minitool.com/', name: 'MiniTool' },
+  { href: 'https://1234.as', name: '1234.as (中文实例)' },
 ];
 
 const Sponsorship = () => (
