@@ -29,6 +29,7 @@ import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
 import sponsorHostdon from './assets/sponsors/hostdon.png';
 import sponsorTekHattan from './assets/sponsors/tekhattan.png';
+import sponsorPapersOwl from './assets/sponsors/papersowl.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -82,6 +83,7 @@ export const sponsors = [
   { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
   { href: 'https://tekhattan.com/blog/', src: sponsorTekHattan, alt: 'TekHattan Blog' },
   { href: 'https://fediverse.network/', src: sponsorFediverseNetwork, alt: 'Fediverse network' },
+  { href: 'https://papersowl.com/free-plagiarism-checker', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
 ];
 
 export default connect()(
