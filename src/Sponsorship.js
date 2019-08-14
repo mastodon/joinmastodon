@@ -18,7 +18,6 @@ import avatarNoellabo from './assets/sponsors/noellabo.png';
 import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
 import avatarPickfu from './assets/sponsors/pickfu.png';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
-import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 import avatarTnzk from './assets/sponsors/tnzk.png';
 import avatarTakeShape from './assets/sponsors/takeshape.jpg';
