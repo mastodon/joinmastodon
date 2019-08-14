@@ -71,7 +71,8 @@ const silverSponsors = [
   { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
   { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
   { href: 'https://www.minitool.com/', name: 'MiniTool' },
-  { href: 'https://1234.as', name: '1234.as (中文实例)' },
+  { href: 'https://1234.as', name: '1234.as (中文实例)', nofollow: true },
+  { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
 ];
 
 const Sponsorship = () => (
@@ -104,7 +105,7 @@ const Sponsorship = () => (
 
         <div className='sponsors-list--badges'>
           <ul>
-            {silverSponsors.map(sponsor => <li key={sponsor.name}><a href={sponsor.href || 'https://joinmastodon.org/sponsors'}><img src={sponsor.src || noAvatar} alt='' /> <span><strong>{sponsor.name}</strong><span>{sponsor.href || '-'}</span></span></a></li>)}
+            {silverSponsors.map(sponsor => <li key={sponsor.name}><a href={sponsor.href || 'https://joinmastodon.org/sponsors'} rel={sponsor.nofollow ? 'nofollow' : null}><img src={sponsor.src || noAvatar} alt='' /> <span><strong>{sponsor.name}</strong><span>{sponsor.href || '-'}</span></span></a></li>)}
           </ul>
         </div>
       </div>
