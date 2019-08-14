@@ -53,7 +53,6 @@ const silverSponsors = [
   { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
   { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
   { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },
-  { href: 'https://marozed.ma', src: avatarEmpresso, name: 'Agence web Marozed' },
   { href: 'https://vocalodon.net/@tomoki', src: avatarTomoki, name: 'Hiroyuki Wakimoto (TOMOKI++)' },
   { href: 'https://spicedupaffairs.com/', name: 'SUA' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, name: 'SexToyCollective' },
@@ -119,7 +118,6 @@ const Sponsorship = () => (
         <div className='sponsors-list--names'>
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
-              <li>Donald "Chronos" King</li>
               <li>Ken Naishtat</li>
               <li>Moritz Heiber</li>
               <li>Nolan Lawson</li>
@@ -127,12 +125,11 @@ const Sponsorship = () => (
               <li>Great Scott Gadgets</li>
               <li>Sho Kusano / rosylilly</li>
               <li>Masto.host</li>
-              <li>Danny O'Brien</li>
               <li>Brion Vibber</li>
               <li>G Berton Latamore</li>
               <li>Andrei Petcu</li>
+              <li>Local Librarian</li>
               <li>Joyce Mayorga</li>
-              <li>Dominic Hopf</li>
             </ul>
 
             <ul>
