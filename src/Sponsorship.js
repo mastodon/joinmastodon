@@ -9,6 +9,7 @@ import { sponsors as platinumSponsors } from './Home';
 import sponsorRubymotion from './assets/sponsors/rubymotion.png';
 import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
+import sponsorThanksblock from './assets/sponsors/thanksblock.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarVJ from './assets/sponsors/vj.png';
@@ -42,6 +43,7 @@ const goldSponsors = [
   { href: 'http://www.rubymotion.com/', src: sponsorRubymotion, alt: 'RubyMotion' },
   { href: 'mailto:bamboo.how@gmail.com', src: sponsorBambooHow, alt: 'Bamboo How' },
   { href: 'https://write.as/', src: sponsorWriteAs, alt: 'Write.as' },
+  { href: 'https://www.justhanks.com/', src: sponsorThanksblock, alt: 'THANKSBLOCK' },
 ];
 
 const silverSponsors = [
