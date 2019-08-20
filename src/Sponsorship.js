@@ -11,6 +11,7 @@ import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
 import sponsorThanksblock from './assets/sponsors/thanksblock.png';
 import sponsorEasyDNS from './assets/sponsors/easydns.png';
+import sponsorVPSServer from './assets/sponsors/vpsserver.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarVJ from './assets/sponsors/vj.png';
@@ -46,6 +47,7 @@ const goldSponsors = [
   { href: 'https://write.as/', src: sponsorWriteAs, alt: 'Write.as' },
   { href: 'https://www.justhanks.com/', src: sponsorThanksblock, alt: 'THANKSBLOCK' },
   { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' },
+  { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
 ];
 
 const silverSponsors = [
