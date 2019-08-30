@@ -31,6 +31,7 @@ import avatarTomoki from './assets/sponsors/tomoki.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 import avatarTradersInsurance from './assets/sponsors/tradersinsurance.png';
 import avatarSwitchVPN from './assets/sponsors/switchvpn.png';
+import avatarEmpresso from './assets/sponsors/empresso.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -58,6 +59,7 @@ const silverSponsors = [
   { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
   { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
   { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },
+  { href: 'https://marozed.ma', src: avatarEmpresso, name: 'Agence web Marozed' },
   { href: 'https://vocalodon.net/@tomoki', src: avatarTomoki, name: 'Hiroyuki Wakimoto (TOMOKI++)' },
   { href: 'https://spicedupaffairs.com/', name: 'SUA' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, name: 'SexToyCollective' },
