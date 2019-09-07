@@ -6,7 +6,8 @@ import Navigation from './Navigation';
 import Legal from './Legal';
 import { sponsors as platinumSponsors } from './Home';
 
-import sponsorRubymotion from './assets/sponsors/rubymotion.png';
+//import sponsorRubymotion from './assets/sponsors/rubymotion.png';
+import sponsorADarkRoom from './assets/sponsors/adarkroom.jpg';
 import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
 import sponsorThanksblock from './assets/sponsors/thanksblock.png';
@@ -43,7 +44,7 @@ const renderThumb = ({ style, ...props }) => {
 };
 
 const goldSponsors = [
-  { href: 'http://www.rubymotion.com/', src: sponsorRubymotion, alt: 'RubyMotion' },
+  { href: 'https://www.nintendo.com/games/detail/a-dark-room-switch/', src: sponsorADarkRoom, alt: 'A Dark Room' },
   { href: 'mailto:bamboo.how@gmail.com', src: sponsorBambooHow, alt: 'Bamboo How' },
   { href: 'https://write.as/', src: sponsorWriteAs, alt: 'Write.as' },
   { href: 'https://www.justhanks.com/', src: sponsorThanksblock, alt: 'THANKSBLOCK' },
