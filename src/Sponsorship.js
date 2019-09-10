@@ -34,6 +34,7 @@ import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 import avatarTradersInsurance from './assets/sponsors/tradersinsurance.png';
 import avatarSwitchVPN from './assets/sponsors/switchvpn.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
+import avatarVashio from './assets/sponsors/vashio.jpg';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -82,6 +83,7 @@ const silverSponsors = [
   { href: 'https://www.minitool.com/', name: 'MiniTool' },
   { href: 'https://1234.as', name: '1234.as (中文实例)', nofollow: true },
   { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
+  { href: 'https://mastodon.social/@vashio', name: '@vashio', src: avatarVashio, nofollow: true },
 ];
 
 const Sponsorship = () => (
