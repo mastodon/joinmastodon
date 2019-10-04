@@ -131,12 +131,12 @@ const Sponsorship = () => (
         <div className='sponsors-list--names'>
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
-              <li>Ken Naishtat</li>
               <li>Moritz Heiber</li>
               <li>Nolan Lawson</li>
-              <li>@mecab</li>
+              <li>Ken Naishtat</li>
               <li>Great Scott Gadgets</li>
-              <li>Sho Kusano / rosylilly</li>
+              <li>@mecab</li>
+              <li>Sho Kusano</li>
               <li>Masto.host</li>
               <li>Brion Vibber</li>
               <li>G Berton Latamore</li>
