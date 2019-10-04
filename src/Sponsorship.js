@@ -150,7 +150,6 @@ const Sponsorship = () => (
               <li>Akihiko Odaki</li>
               <li>Al</li>
               <li>Anticrisis</li>
-              <li>Ash</li>
               <li>Austin Putman</li>
               <li>Bal</li>
               <li>Baptiste Lemoine</li>
@@ -161,9 +160,10 @@ const Sponsorship = () => (
               <li>Chris Zelenak</li>
               <li>Christopher Kruse</li>
               <li>Clinton Freeman</li>
-              <li>danny.zukou</li>
               <li>David Yip</li>
               <li>Deborah Goldsmith</li>
+              <li>Dominic Hopf</li>
+              <li>Donovan Finch</li>
               <li>Drew Williams</li>
               <li>Ellen Teapot</li>
               <li>Evan DiBiase</li>
@@ -173,14 +173,11 @@ const Sponsorship = () => (
               <li>Hideki Yamamoto</li>
               <li>Igor Ferreira</li>
               <li>Irick Corwal</li>
-              <li>Isao Sugimoto</li>
               <li>itsumonotakumi</li>
               <li>James Valleroy</li>
-              <li>James Wright</li>
               <li>Jan Krutisch</li>
-              <li>Jen Savage</li>
+              <li>Jean-Luc Geering</li>
               <li>Jesse Olson</li>
-              <li>Jin Shiiba</li>
               <li>Joe McLaughlin</li>
               <li>John Newberger</li>
               <li>Jon Dubovsky</li>
@@ -191,31 +188,25 @@ const Sponsorship = () => (
               <li>Josh</li>
               <li>Julie Moronuki</li>
               <li>Kenneth Ken Sugar</li>
-              <li>Kevin Hoctor</li>
               <li>Kevin Sonney</li>
               <li>Kevin Yank</li>
-              <li>Konosuke Furuhata</li>
               <li>Koya Matsuo</li>
               <li>Landy Manderson</li>
               <li>Laurent Joubert</li>
               <li>Laurie Voss</li>
               <li>Leif Halldor Asgeirsson</li>
-              <li>Local Librarian</li>
-              <li>Lon Hohberger</li>
+              <li>Little James</li>
               <li>lrvick</li>
               <li>Manesh Pillai</li>
               <li>Masaya Imai</li>
+              <li>Matt Meier</li>
               <li>Matt Ulman</li>
               <li>Matthieu Herrb</li>
               <li>Mikayla Hutchinson</li>
               <li>Miki Habryn</li>
-              <li>Mrpdub247</li>
               <li>Naomi Alderman</li>
               <li>Nate Borland</li>
-              <li>Nemecle</li>
-              <li>Nican</li>
               <li>Nicolas Morel</li>
-              <li>nosuchbinary</li>
               <li>Osamu Miyake</li>
               <li>Pablo Meier</li>
               <li>Patrick Quinn-Graham</li>
@@ -223,9 +214,7 @@ const Sponsorship = () => (
               <li>peter hessler</li>
               <li>Philip James</li>
               <li>Philippe Hausler</li>
-              <li>Piotr Krygier</li>
               <li>Richard Minerich</li>
-              <li>Ruben</li>
               <li>Rufus</li>
               <li>Sajith Sasidharan</li>
               <li>Sam Herlapuut</li>
@@ -243,7 +232,6 @@ const Sponsorship = () => (
               <li>Walter Ebert</li>
               <li>Wladimir</li>
               <li>Wolfgang @vilbi</li>
-              <li>Wolfgang Dudda</li>
               <li>Zaki</li>
             </ul>
           </Scrollbars>
