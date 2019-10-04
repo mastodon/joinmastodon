@@ -61,7 +61,9 @@ const silverSponsors = [
   { href: 'https://ichiji.social/@tnzk', src: avatarTnzk, name: 'Kyohei Hamaguchi / @tnzk' },
   { href: 'https://mastodon.gamedev.place/@aras', src: avatarArasPranckevicius, name: 'Aras Pranckevicius' },
   { name: 'Blaine Cook' },
+  { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
   { href: 'https://clay.global/', src: avatarClay, name: 'Clay' },
+  { href: 'https://www.minitool.com/', name: 'MiniTool' },
   { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
   { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
   { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },
@@ -73,19 +75,16 @@ const silverSponsors = [
   { href: 'https://www.looktotheright.com/', src: avatarLookToTheRight, name: 'Look To The Right' },
   { href: 'https://about.me/markatwood', src: avatarMarkAtwood, name: 'Mark Atwood' },
   { name: 'Martin Seeger' },
-  { name: 'Ms Miller' },
   { href: 'https://dtp-mstdn.jp', src: avatarNoellabo, name: 'noellabo' },
   { href: 'https://paperleaf.ca/', src: avatarPaperLeaf, name: 'PaperLeaf' },
   { href: 'https://craftresumes.com/', src: avatarCraftResumes, name: 'CraftResumes' },
   { href: 'https://www.pickfu.com/', src: avatarPickfu, name: 'PickFu' },
+  { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
   { href: 'https://www.whatisseo.com/', src: avatarVJ, name: 'VJ' },
   { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' }, // OpenCollective
-  { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
-  { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
-  { href: 'https://www.minitool.com/', name: 'MiniTool' },
-  { href: 'https://1234.as', name: '1234.as (中文实例)', nofollow: true },
-  { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
   { href: 'https://mastodon.social/@vashio', name: '@vashio', src: avatarVashio, nofollow: true },
+  { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
+  { href: 'https://1234.as', name: '1234.as (中文实例)', nofollow: true },
 ];
 
 const Sponsorship = () => (
