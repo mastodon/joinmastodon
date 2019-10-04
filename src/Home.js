@@ -15,21 +15,15 @@ import Credits from './Credits';
 import Navigation from './Navigation';
 
 import sponsorFediverseNetwork from './assets/sponsors/fediversenetwork.svg';
-//import sponsorStream from './assets/sponsors/stream.png';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
-//import sponsorCodeFirst from './assets/sponsors/codefirst.png';
-//import sponsorDatantify from './assets/sponsors/datantify_alt.png';
 import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 import sponsorTrueVendor from './assets/sponsors/truevendor.png';
 import sponsorBestVPN from './assets/sponsors/bestvpn.png';
 import sponsorVPNRanks from './assets/sponsors/vpnranks.png';
-import sponsorLesjeudis from './assets/sponsors/lesjeudis.png';
 import sponsorAirVPN from './assets/sponsors/airvpn.png';
 import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
-import sponsorHostdon from './assets/sponsors/hostdon.png';
 import sponsorTekHattan from './assets/sponsors/tekhattan.png';
-import sponsorPapersOwl from './assets/sponsors/papersowl.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -76,14 +70,11 @@ export const sponsors = [
   { href: 'https://uiuxagencies.top/', src: sponsorTrueVendor, alt: 'TrueVendor' },
   { href: 'https://www.bestvpn.co/', src: sponsorBestVPN, alt: 'BestVPN' },
   { href: 'https://www.vpnranks.com/', src: sponsorVPNRanks, alt: 'VPN Ranks' },
-  { href: 'https://www.lesjeudis.com/', src: sponsorLesjeudis, alt: 'LesJeudis' },
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
   { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' }, // OpenCollective
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
-  { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
   { href: 'https://tekhattan.com/blog/', src: sponsorTekHattan, alt: 'TekHattan Blog' },
-  { href: 'https://fediverse.network/', src: sponsorFediverseNetwork, alt: 'Fediverse network' },
-  { href: 'https://papersowl.com/free-plagiarism-checker', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
+  { href: 'https://fediverse.network/', src: sponsorFediverseNetwork, alt: 'Fediverse network' }, // OpenCollective
 ];
 
 export default connect()(

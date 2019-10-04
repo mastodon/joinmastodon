@@ -14,6 +14,7 @@ import sponsorThanksblock from './assets/sponsors/thanksblock.png';
 import sponsorEasyDNS from './assets/sponsors/easydns.png';
 import sponsorVPSServer from './assets/sponsors/vpsserver.png';
 import sponsorMoneyPug from './assets/sponsors/moneypug.png';
+import sponsorHostdon from './assets/sponsors/hostdon.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarVJ from './assets/sponsors/vj.png';
@@ -53,6 +54,7 @@ const goldSponsors = [
   { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' },
   { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
   { href: 'https://moneypug.co.uk/', src: sponsorMoneyPug, alt: 'Money Pug' },
+  { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
 ];
 
 const silverSponsors = [
