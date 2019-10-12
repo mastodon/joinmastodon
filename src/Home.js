@@ -24,6 +24,7 @@ import sponsorAirVPN from './assets/sponsors/airvpn.png';
 import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
 import sponsorTekHattan from './assets/sponsors/tekhattan.png';
+import sponsorPapersOwl from './assets/sponsors/papersowl.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -75,6 +76,7 @@ export const sponsors = [
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
   { href: 'https://tekhattan.com/blog/', src: sponsorTekHattan, alt: 'TekHattan Blog' },
   { href: 'https://fediverse.network/', src: sponsorFediverseNetwork, alt: 'Fediverse network' }, // OpenCollective
+  { href: 'https://papersowl.com/free-plagiarism-checker', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
 ];
 
 export default connect()(
