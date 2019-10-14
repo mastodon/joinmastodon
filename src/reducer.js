@@ -3,6 +3,7 @@ import {
   LOCALE_CHANGE,
   FILTER_CATEGORY_CHANGE,
   FILTER_LANGUAGE_CHANGE,
+  LANGUAGES_FETCH_SUCCESS,
 } from './actions';
 
 const supportedLocales = [
@@ -24,6 +25,34 @@ const supportedLocales = [
   'zh-TW',
 ];
 
+const defaultLanguages = [
+  { locale: 'ar', language: 'العربية' },
+  { locale: 'ca', language: 'Català' },
+  { locale: 'cs', language: 'Čeština' },
+  { locale: 'cy', language: 'Cymraeg' },
+  { locale: 'de', language: 'Deutsch' },
+  { locale: 'en', language: 'English' },
+  { locale: 'es', language: 'Español' },
+  { locale: 'eu', language: 'Euskara' },
+  { locale: 'fi', language: 'Suomi' },
+  { locale: 'fr', language: 'Français' },
+  { locale: 'he', language: 'עברית' },
+  { locale: 'it', language: 'Italiano' },
+  { locale: 'ja', language: '日本語' },
+  { locale: 'ko', language: '한국어' },
+  { locale: 'nl', language: 'Nederlands' },
+  { locale: 'no', language: 'Norsk' },
+  { locale: 'pl', language: 'Polski' },
+  { locale: 'pt', language: 'Português' },
+  { locale: 'ru', language: 'Русский' },
+  { locale: 'sk', language: 'Slovenčina' },
+  { locale: 'sq', language: 'Shqip' },
+  { locale: 'sv', language: 'Svenska' },
+  { locale: 'tr', language: 'Türkçe' },
+  { locale: 'uk', language: 'Українська' },
+  { locale: 'zh', language: '中文' },
+];
+
 const initialLocale = () => {
   const lang = navigator.language.split('-')[0];
 
@@ -40,6 +69,7 @@ const initialState = {
   locale: initialLocale(),
 
   instances: [],
+  languages: defaultLanguages,
 
   filter: {
     category: 'general',
@@ -66,6 +96,8 @@ export default function reducer(state = initialState, action) {
     return { ...state, filter: { ...state.filter, category: action.data } };
   case FILTER_LANGUAGE_CHANGE:
     return { ...state, filter: { ...state.filter, language: action.data } };
+  case LANGUAGES_FETCH_SUCCESS:
+    return { ...state, languages: action.data };
   default:
     return state;
   }

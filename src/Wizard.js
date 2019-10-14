@@ -42,6 +42,7 @@ class Wizard extends React.PureComponent {
     language: PropTypes.string.isRequired,
     intl: PropTypes.object.isRequired,
     instances: PropTypes.arrayOf(PropTypes.object).isRequired,
+    languages: PropTypes.arrayOf(PropTypes.object).isRequired,
   };
 
   componentDidMount () {
@@ -70,7 +71,7 @@ class Wizard extends React.PureComponent {
   }
 
   render () {
-    const { instances, category, language, intl } = this.props;
+    const { instances, category, language, languages, intl } = this.props;
 
     const content = instances.length > 0 ? (
       <div>
@@ -135,31 +136,11 @@ class Wizard extends React.PureComponent {
               name="language"
               options={[
                 { value: '', text: intl.formatMessage(messages.all_languages) },
-                //{ value: 'ar', text: 'العربية' },
-                { value: 'ca', text: 'Català' },
-                //{ value: 'cs', text: 'Čeština' },
-                //{ value: 'cy', text: 'Cymraeg' },
-                { value: 'de', text: 'Deutsch' },
-                { value: 'en', text: 'English' },
-                //{ value: 'es', text: 'Español' },
-                { value: 'eu', text: 'Euskara' },
-                { value: 'fi', text: 'Suomi' },
-                { value: 'fr', text: 'Français' },
-                { value: 'he', text: 'עברית' },
-                { value: 'it', text: 'Italiano' },
-                { value: 'ja', text: '日本語' },
-                { value: 'ko', text: '한국어' },
-                //{ value: 'nl', text: 'Nederlands' },
-                { value: 'no', text: 'Norsk' },
-                { value: 'pl', text: 'Polski' },
-                { value: 'pt', text: 'Português' },
-                //{ value: 'ru', text: 'Русский' },
-                { value: 'sk', text: 'Slovenčina' },
-                //{ value: 'sq', text: 'Shqip' },
-                { value: 'sv', text: 'Svenska' },
-                //{ value: 'tr', text: 'Türkçe' },
-                { value: 'uk', text: 'Українська' },
-                { value: 'zh', text: '中文' },
+
+                ...languages.map(x => ({
+                  value: x.locale,
+                  text: x.servers_count ? <span><bdi>{x.language}</bdi> ({x.servers_count})</span> : <bdi>x.language</bdi>,
+                })),
               ]}
               caretIcon={caretIcon}
               selectedValue={language}
