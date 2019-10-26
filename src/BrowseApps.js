@@ -109,6 +109,7 @@ const apps = {
       name: 'Mastonaut',
       icon: mastonaut,
       url: 'https://itunes.apple.com/us/app/mastonaut/id1450757574',
+      paid: true
     },
   ],
 };
