@@ -105,6 +105,11 @@ const apps = {
       icon: hyperspace,
       url: 'https://hyperspace.marquiskurt.net/',
     },
+    {
+      name: 'Mastonaut',
+      icon: mastonaut,
+      url: 'https://itunes.apple.com/us/app/mastonaut/id1450757574',
+    },
   ],
 };
 
