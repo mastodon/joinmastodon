@@ -16,6 +16,7 @@ import sponsorVPSServer from './assets/sponsors/vpsserver.png';
 import sponsorMoneyPug from './assets/sponsors/moneypug.png';
 import sponsorHostdon from './assets/sponsors/hostdon.png';
 import sponsorWritersPerHour from './assets/sponsors/writersperhour.jpg';
+import sponsorBoosta from './assets/sponsors/boosta.svg';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarVJ from './assets/sponsors/vj.png';
@@ -57,6 +58,7 @@ const goldSponsors = [
   { href: 'https://moneypug.co.uk/', src: sponsorMoneyPug, alt: 'Money Pug' },
   { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
   { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
+  { href: 'https://boosta.biz/', src: sponsorBoosta, alt: 'Boosta' },
 ];
 
 const silverSponsors = [
@@ -65,7 +67,6 @@ const silverSponsors = [
   { name: 'Blaine Cook' },
   { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
   { href: 'https://clay.global/', src: avatarClay, name: 'Clay' },
-  { href: 'https://www.minitool.com/', name: 'MiniTool' },
   { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
   { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
   { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },

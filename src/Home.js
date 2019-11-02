@@ -26,6 +26,7 @@ import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
 import sponsorTekHattan from './assets/sponsors/tekhattan.png';
 import sponsorPapersOwl from './assets/sponsors/papersowl.png';
 import sponsorFinanstopp from './assets/sponsors/finanstopp.png';
+import sponsorMiniTool from './assets/sponsors/minitool.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -73,12 +74,12 @@ export const sponsors = [
   { href: 'https://www.bestvpn.co/', src: sponsorBestVPN, alt: 'BestVPN' },
   { href: 'https://www.vpnranks.com/', src: sponsorVPNRanks, alt: 'VPN Ranks' },
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
-  { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' }, // OpenCollective
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
   { href: 'https://tekhattan.com/blog/', src: sponsorTekHattan, alt: 'TekHattan Blog' },
   { href: 'https://fediverse.network/', src: sponsorFediverseNetwork, alt: 'Fediverse network' }, // OpenCollective
   { href: 'https://papersowl.com/free-plagiarism-checker', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
   { href: 'https://www.finanstopp.no/forbrukslan/', src: sponsorFinanstopp, alt: 'Finanstopp' },
+  { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
 ];
 
 export default connect()(
