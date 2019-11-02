@@ -21,7 +21,6 @@ import sponsorTrueVendor from './assets/sponsors/truevendor.png';
 import sponsorBestVPN from './assets/sponsors/bestvpn.png';
 import sponsorVPNRanks from './assets/sponsors/vpnranks.png';
 import sponsorAirVPN from './assets/sponsors/airvpn.png';
-import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
 import sponsorTekHattan from './assets/sponsors/tekhattan.png';
 import sponsorPapersOwl from './assets/sponsors/papersowl.png';
