@@ -58,7 +58,7 @@ const goldSponsors = [
   { href: 'https://moneypug.co.uk/', src: sponsorMoneyPug, alt: 'Money Pug' },
   { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
   { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
-  { href: 'https://boosta.biz/', src: sponsorBoosta, alt: 'Boosta' },
+  { href: 'https://boosta.co/', src: sponsorBoosta, alt: 'Boosta' },
 ];
 
 const silverSponsors = [
