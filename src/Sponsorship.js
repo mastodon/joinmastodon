@@ -16,7 +16,7 @@ import sponsorVPSServer from './assets/sponsors/vpsserver.png';
 import sponsorMoneyPug from './assets/sponsors/moneypug.png';
 import sponsorHostdon from './assets/sponsors/hostdon.png';
 import sponsorWritersPerHour from './assets/sponsors/writersperhour.jpg';
-import sponsorBoosta from './assets/sponsors/boosta.svg';
+import sponsorEdusson from './assets/sponsors/edusson.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarVJ from './assets/sponsors/vj.png';
@@ -26,7 +26,6 @@ import avatarNoellabo from './assets/sponsors/noellabo.png';
 import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
 import avatarPickfu from './assets/sponsors/pickfu.png';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
-import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 import avatarTnzk from './assets/sponsors/tnzk.png';
 import avatarTakeShape from './assets/sponsors/takeshape.jpg';
 import avatarPaperLeaf from './assets/sponsors/paperleaf.jpg';
@@ -58,7 +57,7 @@ const goldSponsors = [
   { href: 'https://moneypug.co.uk/', src: sponsorMoneyPug, alt: 'Money Pug' },
   { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
   { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
-  { href: 'https://boosta.co/', src: sponsorBoosta, alt: 'Boosta' },
+  { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' },
 ];
 
 const silverSponsors = [
@@ -73,7 +72,6 @@ const silverSponsors = [
   { href: 'https://marozed.ma', src: avatarEmpresso, name: 'Agence web Marozed' },
   { href: 'https://vocalodon.net/@tomoki', src: avatarTomoki, name: 'Hiroyuki Wakimoto (TOMOKI++)' },
   { href: 'https://spicedupaffairs.com/', name: 'SUA' },
-  { href: 'https://sextoycollective.com', src: avatarSexToyCollective, name: 'SexToyCollective' },
   { href: 'https://www.slixa.com/', name: 'Slixa Escort Directory' },
   { href: 'https://www.looktotheright.com/', src: avatarLookToTheRight, name: 'Look To The Right' },
   { href: 'https://about.me/markatwood', src: avatarMarkAtwood, name: 'Mark Atwood' },

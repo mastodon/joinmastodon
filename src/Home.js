@@ -26,6 +26,7 @@ import sponsorTekHattan from './assets/sponsors/tekhattan.png';
 import sponsorPapersOwl from './assets/sponsors/papersowl.png';
 import sponsorFinanstopp from './assets/sponsors/finanstopp.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
+import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -79,6 +80,7 @@ export const sponsors = [
   { href: 'https://papersowl.com/free-plagiarism-checker', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
   { href: 'https://www.finanstopp.no/forbrukslan/', src: sponsorFinanstopp, alt: 'Finanstopp' },
   { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
+  { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
 ];
 
 export default connect()(
