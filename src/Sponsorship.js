@@ -17,6 +17,7 @@ import sponsorMoneyPug from './assets/sponsors/moneypug.png';
 import sponsorHostdon from './assets/sponsors/hostdon.png';
 import sponsorWritersPerHour from './assets/sponsors/writersperhour.jpg';
 import sponsorEdusson from './assets/sponsors/edusson.png';
+import sponsorMiniTool from './assets/sponsors/minitool.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarVJ from './assets/sponsors/vj.png';
@@ -55,9 +56,9 @@ const goldSponsors = [
   { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' },
   { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
   { href: 'https://moneypug.co.uk/', src: sponsorMoneyPug, alt: 'Money Pug' },
-  { href: 'https://hostdon.jp', src: sponsorHostdon, alt: 'Hostdon.jp' },
   { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
   { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' },
+  { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
 ];
 
 const silverSponsors = [
@@ -66,7 +67,6 @@ const silverSponsors = [
   { name: 'Blaine Cook' },
   { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
   { href: 'https://clay.global/', src: avatarClay, name: 'Clay' },
-  { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
   { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
   { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },
   { href: 'https://marozed.ma', src: avatarEmpresso, name: 'Agence web Marozed' },
@@ -78,14 +78,11 @@ const silverSponsors = [
   { name: 'Martin Seeger' },
   { href: 'https://dtp-mstdn.jp', src: avatarNoellabo, name: 'noellabo' },
   { href: 'https://paperleaf.ca/', src: avatarPaperLeaf, name: 'PaperLeaf' },
-  { href: 'https://craftresumes.com/', src: avatarCraftResumes, name: 'CraftResumes' },
-  { href: 'https://www.pickfu.com/', src: avatarPickfu, name: 'PickFu' },
   { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
   { href: 'https://www.whatisseo.com/', src: avatarVJ, name: 'VJ' },
   { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' }, // OpenCollective
   { href: 'https://mastodon.social/@vashio', name: '@vashio', src: avatarVashio, nofollow: true },
   { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
-  { href: 'https://1234.as', name: '1234.as (中文实例)', nofollow: true },
 ];
 
 const Sponsorship = () => (
@@ -132,28 +129,27 @@ const Sponsorship = () => (
         <div className='sponsors-list--names'>
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
-              <li>Moritz Heiber</li>
-              <li>Nolan Lawson</li>
-              <li>Ken Naishtat</li>
-              <li>Great Scott Gadgets</li>
-              <li>@mecab</li>
-              <li>Sho Kusano</li>
-              <li>Masto.host</li>
+              <li>'@mecab</li>
               <li>Brion Vibber</li>
               <li>G Berton Latamore</li>
-              <li>Andrei Petcu</li>
-              <li>Local Librarian</li>
+              <li>Great Scott Gadgets</li>
               <li>Joyce Mayorga</li>
+              <li>Ken Naishtat</li>
+              <li>Local Librarian</li>
+              <li>Masto.host</li>
+              <li>Moritz Heiber</li>
+              <li>Nolan Lawson</li>
+              <li>Sho Kusano</li>
             </ul>
 
             <ul>
               <li>_</li>
+              <li>Abdul Rahman</li>
               <li>Akihiko Odaki</li>
               <li>Al</li>
               <li>Anticrisis</li>
               <li>Austin Putman</li>
               <li>Bal</li>
-              <li>Baptiste Lemoine</li>
               <li>Bheesham Persaud</li>
               <li>C J Silverio</li>
               <li>Charles Hutchins</li>
@@ -165,7 +161,6 @@ const Sponsorship = () => (
               <li>Deborah Goldsmith</li>
               <li>Dominic Hopf</li>
               <li>Donovan Finch</li>
-              <li>Drew Williams</li>
               <li>Ellen Teapot</li>
               <li>Evan DiBiase</li>
               <li>Grant Stavely</li>
@@ -175,6 +170,7 @@ const Sponsorship = () => (
               <li>Igor Ferreira</li>
               <li>Irick Corwal</li>
               <li>itsumonotakumi</li>
+              <li>Jacqueline Button</li>
               <li>James Valleroy</li>
               <li>Jan Krutisch</li>
               <li>Jean-Luc Geering</li>
@@ -188,6 +184,7 @@ const Sponsorship = () => (
               <li>Josephine Pedersen</li>
               <li>Josh</li>
               <li>Julie Moronuki</li>
+              <li>kalyan</li>
               <li>Kenneth Ken Sugar</li>
               <li>Kevin Sonney</li>
               <li>Kevin Yank</li>
@@ -203,7 +200,7 @@ const Sponsorship = () => (
               <li>Matt Meier</li>
               <li>Matt Ulman</li>
               <li>Matthieu Herrb</li>
-              <li>Mikayla Hutchinson</li>
+              <li>Mikayla</li>
               <li>Miki Habryn</li>
               <li>Naomi Alderman</li>
               <li>Nate Borland</li>
@@ -221,16 +218,16 @@ const Sponsorship = () => (
               <li>Sam Herlapuut</li>
               <li>Sandro Hawke</li>
               <li>Satsuki Yanagi</li>
-              <li>Solar Anamnesis</li>
+              <li>Soundrapandian Ravichandran</li>
               <li>Steve Streza</li>
               <li>Szmozsánszky István "Flaki"</li>
               <li>TARIK F AJAMI</li>
               <li>Ted</li>
-              <li>tiansheng li</li>
               <li>Timothy Wood</li>
               <li>Tom Adriaenssen</li>
               <li>Tom Lowenthal</li>
               <li>Walter Ebert</li>
+              <li>Wil Kie</li>
               <li>Wladimir</li>
               <li>Wolfgang @vilbi</li>
               <li>Zaki</li>
