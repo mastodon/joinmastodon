@@ -41,6 +41,16 @@ for (let i = 0, l = defaultLanguages.length; i < l; i++) {
 }
 
 const initialLocale = () => {
+  if (window.URLSearchParams) {
+    const params = new URLSearchParams(window.location.search);
+
+    const lang = params.get('lang');
+
+    if (supportedLocales.indexOf(lang) !== -1) {
+      return lang;
+    }
+  }
+
   const lang = navigator.language.split('-')[0];
 
   if (supportedLocales.indexOf(navigator.language) !== -1) {
