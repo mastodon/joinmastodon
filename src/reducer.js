@@ -6,25 +6,6 @@ import {
   LANGUAGES_FETCH_SUCCESS,
 } from './actions';
 
-const supportedLocales = [
-  'ar',
-  'cs',
-  'cy',
-  'de',
-  'en',
-  'es',
-  'fr',
-  'ja',
-  'ko',
-  'nl-NL',
-  'pl',
-  'pt-BR',
-  'sq',
-  'tr',
-  'zh',
-  'zh-TW',
-];
-
 const defaultLanguages = [
   { locale: 'ar', language: 'العربية' },
   { locale: 'ca', language: 'Català' },
@@ -52,6 +33,12 @@ const defaultLanguages = [
   { locale: 'uk', language: 'Українська' },
   { locale: 'zh', language: '中文' },
 ];
+
+const supportedLocales = [];
+
+for (let i = 0, l = defaultLanguages.length; i < l; i++) {
+  supportedLocales.push(defaultLanguages[i].locale);
+}
 
 const initialLocale = () => {
   const lang = navigator.language.split('-')[0];
