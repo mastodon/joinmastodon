@@ -468,6 +468,14 @@ $phi: 1.6180339887498948482;
   word-break: keep-all;
 }
 
+.lang-ru {
+  .credits {
+    .branding {
+      min-width: 195px;
+    }
+  }
+}
+
 .hero__floats {
   position: absolute;
   width: 100%;
