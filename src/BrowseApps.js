@@ -9,6 +9,7 @@ import subwayTooter from './assets/apps/subway-tooter.png';
 import fedilab from './assets/apps/fedilab.png';
 import amaroq from './assets/apps/amaroq.jpg';
 import mast from './assets/apps/mast.jpg';
+import mastonaut from './assets/apps/mastonaut.png';
 import toot from './assets/apps/toot.jpg';
 import tooter from './assets/apps/tooter.png';
 import tootle from './assets/apps/tootle.jpg';
