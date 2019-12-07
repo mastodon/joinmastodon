@@ -53,8 +53,7 @@ const apps = {
     {
       name: 'Mast',
       icon: mast,
-      url: 'https://itunes.apple.com/us/app/mast/id1437429129?mt=8',
-      paid: true,
+      url: 'https://apps.apple.com/us/app/mast-for-mastodon/id1437429129',
     },
 
     {
@@ -104,22 +103,26 @@ const apps = {
       icon: tootle,
       url: 'https://appcenter.elementary.io/com.github.bleakgrey.tootle/',
     },
+
     {
       name: 'TheDesk',
       icon: thedesk,
       url: 'https://thedesk.top/en',
     },
+
     {
       name: 'Hyperspace',
       icon: hyperspace,
       url: 'https://hyperspace.marquiskurt.net/',
     },
+
     {
       name: 'Mast (Mac)',
       icon: mast,
       url: 'https://apps.apple.com/us/app/mast/id1489861544',
       paid: true
     },
+    
     {
       name: 'Mastonaut (Mac)',
       icon: mastonaut,
