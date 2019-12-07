@@ -16,6 +16,7 @@ import pinafore from './assets/apps/pinafore.png';
 import whalebird from './assets/apps/whalebird.png';
 import halcyon from './assets/apps/halcyon.png';
 import thedesk from './assets/apps/thedesk.png';
+import cuckooPlus from '/assets/apps/cuckoo-plus.png';
 import hyperspace from './assets/apps/hyperspace.png';
 
 const apps = {
@@ -68,10 +69,17 @@ const apps = {
       icon: pinafore,
       url: 'https://pinafore.social',
     },
+
     {
       name: 'Halcyon',
       icon: halcyon,
       url: 'https://www.halcyon.social/',
+    },
+
+    {
+      name: 'Cuckoo+',
+      icon: cuckooPlus,
+      url: 'https://www.cuckoo.social',
     },
   ],
 
