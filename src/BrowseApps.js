@@ -115,7 +115,13 @@ const apps = {
       url: 'https://hyperspace.marquiskurt.net/',
     },
     {
-      name: 'Mastonaut',
+      name: 'Mast (Mac)',
+      icon: mast,
+      url: 'https://apps.apple.com/us/app/mast/id1489861544',
+      paid: true
+    },
+    {
+      name: 'Mastonaut (Mac)',
       icon: mastonaut,
       url: 'https://itunes.apple.com/us/app/mastonaut/id1450757574',
       paid: true
