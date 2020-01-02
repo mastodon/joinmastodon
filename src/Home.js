@@ -25,7 +25,7 @@ import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
 import sponsorTekHattan from './assets/sponsors/tekhattan.png';
 import sponsorPapersOwl from './assets/sponsors/papersowl.png';
-import sponsorFinanstopp from './assets/sponsors/finanstopp.png';
+import sponsorValueMarke from './assets/sponsors/valuemarke.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 
@@ -80,7 +80,7 @@ export const sponsors = [
   { href: 'https://tekhattan.com/blog/', src: sponsorTekHattan, alt: 'TekHattan Blog' },
   { href: 'https://fediverse.network/', src: sponsorFediverseNetwork, alt: 'Fediverse network' }, // OpenCollective
   { href: 'https://papersowl.com/free-plagiarism-checker', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
-  { href: 'https://www.finanstopp.no/forbrukslan/', src: sponsorFinanstopp, alt: 'Finanstopp' },
+  { href: 'https://www.valuemarke.com/', src: sponsorValueMarke, alt: 'ValueMarke' },
   { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
 ];
