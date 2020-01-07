@@ -6,7 +6,7 @@ import Counter from './Counter';
 const WizardCard = ({ instance, intl }) => (
   <div className='wizard-card'>
     <div className='wizard-card__hero'>
-      <img src={instance.proxied_thumbnail} alt='' />
+      <img src={`${instance.proxied_thumbnail}/300`} alt='' />
     </div>
 
     <div className='wizard-card__row'>
