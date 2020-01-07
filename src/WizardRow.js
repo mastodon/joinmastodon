@@ -29,7 +29,7 @@ const WizardRow = ({ instance, intl }) => {
           <div className='wizard-row__row'>
             <div className='wizard-row__thumbnail'>
               <div>
-                <img src={instance.proxied_thumbnail} alt='' />
+                <img src={`${instance.proxied_thumbnail}/300`} alt='' />
               </div>
             </div>
 
