@@ -3,5 +3,32 @@ const manageTranslations = require('react-intl-translations-manager').default;
 manageTranslations({
   messagesDirectory: 'build/messages',
   translationsDirectory: 'src/locales/',
-  languages: ['en', 'fr', 'pl', 'cs', 'es', 'ja', 'ko', 'de', 'pt-BR', 'zh', 'zh-TW', 'ru', 'it', 'ar', 'tr', 'sq', 'nl-NL', 'cy']
+  languages: [
+    'ar',
+    'ca',
+    'cs',
+    'cy',
+    'de',
+    'en',
+    'es',
+    'eu',
+    'fi',
+    'fr',
+    'he',
+    'it',
+    'ja',
+    'ko',
+    'nl-NL',
+    'no',
+    'pl',
+    'pt-BR',
+    'ru',
+    'sk',
+    'sq',
+    'sv',
+    'tr',
+    'uk',
+    'zh',
+    'zh-TW',
+  ]
 });

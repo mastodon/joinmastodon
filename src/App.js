@@ -12,42 +12,58 @@ import Title from './Title';
 import Covenant from './Covenant';
 
 import { addLocaleData, IntlProvider } from 'react-intl';
-import en from 'react-intl/locale-data/en';
-import fr from 'react-intl/locale-data/fr';
-import pl from 'react-intl/locale-data/pl';
+import ar from 'react-intl/locale-data/ar';
+import ca from 'react-intl/locale-data/ca';
 import cs from 'react-intl/locale-data/cs';
-import es from 'react-intl/locale-data/es';
+import cy from 'react-intl/locale-data/cy';
 import de from 'react-intl/locale-data/de';
+import en from 'react-intl/locale-data/en';
+import es from 'react-intl/locale-data/es';
+import eu from 'react-intl/locale-data/eu';
+import fi from 'react-intl/locale-data/fi';
+import fr from 'react-intl/locale-data/fr';
+import he from 'react-intl/locale-data/he';
+import it from 'react-intl/locale-data/it';
 import ja from 'react-intl/locale-data/ja';
 import ko from 'react-intl/locale-data/ko';
-import pt from 'react-intl/locale-data/pt';
-import zh from 'react-intl/locale-data/zh';
-import ru from 'react-intl/locale-data/ru';
-import it from 'react-intl/locale-data/it';
-import ar from 'react-intl/locale-data/ar';
-import tr from 'react-intl/locale-data/tr';
 import nl from 'react-intl/locale-data/nl';
-import cy from 'react-intl/locale-data/cy';
+import no from 'react-intl/locale-data/no';
+import pl from 'react-intl/locale-data/pl';
+import pt from 'react-intl/locale-data/pt';
+import ru from 'react-intl/locale-data/ru';
+import sk from 'react-intl/locale-data/sk';
 import sq from 'react-intl/locale-data/sq';
+import sv from 'react-intl/locale-data/sv';
+import tr from 'react-intl/locale-data/tr';
+import uk from 'react-intl/locale-data/uk';
+import zh from 'react-intl/locale-data/zh';
 
 addLocaleData([
-  ...en,
-  ...pl,
+  ...ar,
+  ...ca,
   ...cs,
-  ...fr,
+  ...cy,
+  ...de,
+  ...en,
   ...es,
+  ...eu,
+  ...fi,
+  ...fr,
+  ...he,
+  ...it,
   ...ja,
   ...ko,
-  ...de,
-  ...pt,
-  ...zh,
-  ...ru,
-  ...it,
-  ...ar,
-  ...tr,
   ...nl,
-  ...cy,
+  ...no,
+  ...pl,
+  ...pt,
+  ...ru,
+  ...sk,
   ...sq,
+  ...sv,
+  ...tr,
+  ...uk,
+  ...zh,
 ]);
 
 const messages = require.context('./locales/', false, /\.json$/);
