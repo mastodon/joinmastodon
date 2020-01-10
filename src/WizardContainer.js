@@ -1,13 +1,15 @@
 import Wizard from './Wizard';
 import { connect } from 'react-redux';
 import { fetchInstances, changeFilterCategory, changeFilterLanguage, fetchLanguages, showAllInstances } from './actions';
+import { injectIntl } from 'react-intl';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, { intl }) => ({
   instances: state.instances,
   languages: state.languages,
   category: state.filter.category,
   language: state.filter.language,
   showAll: state.filter.showAll,
+  intl,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -34,4 +36,4 @@ const mapDispatchToProps = dispatch => ({
 
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Wizard);
+export default injectIntl(connect(mapStateToProps, mapDispatchToProps)(Wizard));

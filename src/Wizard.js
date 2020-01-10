@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WizardRow from './WizardRow';
 import WizardCard from './WizardCard';
-import { FormattedHTMLMessage as FormattedMessage, injectIntl, defineMessages } from 'react-intl';
+import { FormattedHTMLMessage as FormattedMessage, defineMessages } from 'react-intl';
 import ReactResponsiveSelect from 'react-responsive-select';
 import { Link } from 'react-router-dom';
 
@@ -35,7 +35,7 @@ const caretIcon = (
   </svg>
 );
 
-class Wizard extends React.PureComponent {
+class Wizard extends React.Component {
 
   static propTypes = {
     category: PropTypes.string.isRequired,
@@ -165,4 +165,4 @@ class Wizard extends React.PureComponent {
   }
 }
 
-export default injectIntl(Wizard);
+export default Wizard;
