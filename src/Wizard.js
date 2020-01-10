@@ -43,6 +43,11 @@ class Wizard extends React.PureComponent {
     intl: PropTypes.object.isRequired,
     instances: PropTypes.arrayOf(PropTypes.object).isRequired,
     languages: PropTypes.arrayOf(PropTypes.object).isRequired,
+    showAll: PropTypes.bool.isRequired,
+    onMount: PropTypes.func.isRequired,
+    onChangeCategory: PropTypes.func.isRequired,
+    onChangeLanguage: PropTypes.func.isRequired,
+    onShowAll: PropTypes.func.isRequired,
   };
 
   componentDidMount () {
@@ -71,7 +76,7 @@ class Wizard extends React.PureComponent {
   }
 
   render () {
-    const { instances, category, language, languages, intl } = this.props;
+    const { instances, category, language, languages, intl, showAll, onShowAll } = this.props;
 
     const content = instances.length > 0 ? (
       <div>
@@ -84,8 +89,10 @@ class Wizard extends React.PureComponent {
         </div>
 
         <div className='wizard__list'>
-          {instances.slice(3).map(item => <WizardRow key={item.domain} instance={item} />)}
+          {instances.slice(3, showAll ? undefined : 10).map(item => <WizardRow key={item.domain} instance={item} />)}
         </div>
+
+        {(instances.length > 10 && !showAll) && <button className='cta button wizard__show-more' onClick={onShowAll}><FormattedMessage id='wizard.show_more' defaultMessage='Show {count, number} more' values={{ count: instances.length - 10 }}/></button>}
       </div>
     ) : (
       <div className='empty'>

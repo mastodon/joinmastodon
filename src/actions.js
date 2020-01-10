@@ -5,6 +5,7 @@ export const LOCALE_CHANGE           = 'LOCALE_CHANGE';
 export const FILTER_LANGUAGE_CHANGE  = 'FILTER_LANGUAGE_CHANGE';
 export const FILTER_CATEGORY_CHANGE  = 'FILTER_CATEGORY_CHANGE';
 export const LANGUAGES_FETCH_SUCCESS = 'LANGUAGES_FETCH_SUCCESS';
+export const INSTANCES_SHOW_ALL      = 'INSTANCES_SHOW_ALL';
 
 export function fetchInstances() {
   return (dispatch, getState) => {
@@ -28,6 +29,12 @@ export function fetchInstancesSuccess(data) {
   return {
     type: INSTANCES_FETCH_SUCCESS,
     data,
+  };
+};
+
+export function showAllInstances() {
+  return {
+    type: INSTANCES_SHOW_ALL,
   };
 };
 

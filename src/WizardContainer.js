@@ -1,12 +1,13 @@
 import Wizard from './Wizard';
 import { connect } from 'react-redux';
-import { fetchInstances, changeFilterCategory, changeFilterLanguage, fetchLanguages } from './actions';
+import { fetchInstances, changeFilterCategory, changeFilterLanguage, fetchLanguages, showAllInstances } from './actions';
 
 const mapStateToProps = state => ({
   instances: state.instances,
   languages: state.languages,
   category: state.filter.category,
   language: state.filter.language,
+  showAll: state.filter.showAll,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -25,6 +26,10 @@ const mapDispatchToProps = dispatch => ({
   onChangeLanguage: value => {
     dispatch(changeFilterLanguage(value));
     dispatch(fetchInstances());
+  },
+
+  onShowAll: () => {
+    dispatch(showAllInstances());
   },
 
 });

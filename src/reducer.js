@@ -1,5 +1,6 @@
 import {
   INSTANCES_FETCH_SUCCESS,
+  INSTANCES_SHOW_ALL,
   LOCALE_CHANGE,
   FILTER_CATEGORY_CHANGE,
   FILTER_LANGUAGE_CHANGE,
@@ -71,6 +72,7 @@ const initialState = {
   filter: {
     category: 'general',
     language: '',
+    showAll: false,
   },
 };
 
@@ -90,11 +92,13 @@ export default function reducer(state = initialState, action) {
   case INSTANCES_FETCH_SUCCESS:
     return { ...state, instances: sortByDunbarsNumber(action.data) };
   case FILTER_CATEGORY_CHANGE:
-    return { ...state, filter: { ...state.filter, category: action.data } };
+    return { ...state, filter: { ...state.filter, category: action.data, showAll: false } };
   case FILTER_LANGUAGE_CHANGE:
-    return { ...state, filter: { ...state.filter, language: action.data } };
+    return { ...state, filter: { ...state.filter, language: action.data, showAll: false } };
   case LANGUAGES_FETCH_SUCCESS:
     return { ...state, languages: action.data };
+  case INSTANCES_SHOW_ALL:
+    return { ...state, filter: { ...state.filter, showAll: true } };
   default:
     return state;
   }

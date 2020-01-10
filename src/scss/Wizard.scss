@@ -136,7 +136,7 @@
 
   &__row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     grid-column-gap: 10px;
     margin-bottom: 20px;
   }
@@ -176,6 +176,8 @@
     &__text {
       flex: 1 1 auto;
       font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       strong {
         font-weight: 700;
@@ -195,6 +197,19 @@
     &:focus,
     &:active {
       background: darken($success, 4%);
+    }
+  }
+
+  &__show-more.button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    background: $vibrant;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: darken($vibrant, 4%);
     }
   }
 
