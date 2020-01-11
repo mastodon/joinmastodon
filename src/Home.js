@@ -71,7 +71,7 @@ const playerOpts = {
 export const sponsors = [
   { href: 'https://www.lunanode.com/', src: sponsorLunanode, alt: 'Lunanode' },
   { href: 'https://pleroma.social/', src: sponsorPleroma, alt: 'Pleroma' },
-  { href: 'https://uiuxagencies.top/', src: sponsorTrueVendor, alt: 'TrueVendor' },
+  { href: 'https://www.ramotion.com/agency/ui-ux-design', src: sponsorTrueVendor, alt: 'UI/UX Designer' },
   { href: 'https://www.bestvpn.co/', src: sponsorBestVPN, alt: 'BestVPN' },
   { href: 'https://www.vpnranks.com/', src: sponsorVPNRanks, alt: 'VPN Ranks' },
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
