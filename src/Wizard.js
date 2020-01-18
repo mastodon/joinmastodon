@@ -133,7 +133,7 @@ class Wizard extends React.Component {
               ]}
               caretIcon={caretIcon}
               selectedValue={category}
-              prefix={intl.formatMessage(messages.category)}
+              prefix={intl.formatMessage(messages.category) + ' '}
               onChange={this.handleCategoryChange}
             />
 
@@ -151,7 +151,7 @@ class Wizard extends React.Component {
               ]}
               caretIcon={caretIcon}
               selectedValue={language}
-              prefix={intl.formatMessage(messages.language)}
+              prefix={intl.formatMessage(messages.language) + ' '}
               onChange={this.handleLanguageChange}
             />
           </div>
