@@ -116,7 +116,7 @@ class Wizard extends React.Component {
                 { value: 'general', text: intl.formatMessage(messages.general) },
                 { value: 'regional', text: intl.formatMessage(messages.regional) },
                 { value: 'art', text: intl.formatMessage(messages.art) },
-                //{ value: 'music', text: intl.formatMessage(messages.music) },
+                { value: 'music', text: intl.formatMessage(messages.music) },
                 //{ value: 'books', text: intl.formatMessage(messages.books) },
                 { value: 'journalism', text: intl.formatMessage(messages.journalism) },
                 { value: 'activism', text: intl.formatMessage(messages.activism) },
