@@ -79,6 +79,8 @@ const silverSponsors = [
   { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' }, // OpenCollective
   { href: 'https://mastodon.social/@vashio', name: '@vashio', src: avatarVashio, nofollow: true },
   { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
+  { href: 'https://www.allthat3d.com/', name: 'AllThat3D.com', nofollow: true },
+  { href: 'https://www.fullextend.com/', name: 'FullExtend.com', nofollow: true },
 ];
 
 const Sponsorship = () => (
