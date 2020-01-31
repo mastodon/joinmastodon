@@ -8,7 +8,6 @@ import { sponsors as platinumSponsors } from './Home';
 
 //import sponsorRubymotion from './assets/sponsors/rubymotion.png';
 import sponsorADarkRoom from './assets/sponsors/adarkroom.jpg';
-import sponsorBambooHow from './assets/sponsors/bamboohow.png';
 import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
 import sponsorThanksblock from './assets/sponsors/thanksblock.png';
 import sponsorEasyDNS from './assets/sponsors/easydns.png';
