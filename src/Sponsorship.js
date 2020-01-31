@@ -19,7 +19,6 @@ import sponsorEdusson from './assets/sponsors/edusson.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
-import avatarVJ from './assets/sponsors/vj.png';
 import avatarEvan from './assets/sponsors/evan.png';
 import avatarMarkAtwood from './assets/sponsors/markatwood.jpg';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
@@ -34,6 +33,8 @@ import avatarTradersInsurance from './assets/sponsors/tradersinsurance.png';
 import avatarSwitchVPN from './assets/sponsors/switchvpn.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarVashio from './assets/sponsors/vashio.jpg';
+import avatarCraftResumes from './assets/sponsors/craftresumes.png';
+import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -46,7 +47,6 @@ const renderThumb = ({ style, ...props }) => {
 
 const goldSponsors = [
   { href: 'https://www.nintendo.com/games/detail/a-dark-room-switch/', src: sponsorADarkRoom, alt: 'A Dark Room' },
-  { href: 'mailto:bamboo.how@gmail.com', src: sponsorBambooHow, alt: 'Bamboo How' },
   { href: 'https://write.as/', src: sponsorWriteAs, alt: 'Write.as' },
   { href: 'https://www.justhanks.com/', src: sponsorThanksblock, alt: 'THANKSBLOCK' },
   { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' },
@@ -60,9 +60,9 @@ const goldSponsors = [
 const silverSponsors = [
   { href: 'https://ichiji.social/@tnzk', src: avatarTnzk, name: 'Kyohei Hamaguchi / @tnzk' },
   { href: 'https://mastodon.gamedev.place/@aras', src: avatarArasPranckevicius, name: 'Aras Pranckevicius' },
-  { name: 'Blaine Cook' },
   { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
   { href: 'https://clay.global/', src: avatarClay, name: 'Clay' },
+  { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
   { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
   { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },
   { href: 'https://marozed.ma', src: avatarEmpresso, name: 'Agence web Marozed' },
@@ -74,11 +74,12 @@ const silverSponsors = [
   { name: 'Martin Seeger' },
   { href: 'https://dtp-mstdn.jp', src: avatarNoellabo, name: 'noellabo' },
   { href: 'https://paperleaf.ca/', src: avatarPaperLeaf, name: 'PaperLeaf' },
+  { href: 'https://craftresumes.com/', src: avatarCraftResumes, name: 'CraftResumes' },
   { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
-  { href: 'https://www.whatisseo.com/', src: avatarVJ, name: 'VJ' },
   { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' }, // OpenCollective
   { href: 'https://mastodon.social/@vashio', name: '@vashio', src: avatarVashio, nofollow: true },
   { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
+  { name: 'Donald Robb', nofollow: true },
   { href: 'https://www.allthat3d.com/', name: 'AllThat3D.com', nofollow: true },
   { href: 'https://www.fullextend.com/', name: 'FullExtend.com', nofollow: true },
 ];
@@ -128,9 +129,11 @@ const Sponsorship = () => (
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
               <li>'@mecab</li>
+              <li>Andrei Petcu</li>
               <li>Brion Vibber</li>
               <li>G Berton Latamore</li>
               <li>Great Scott Gadgets</li>
+              <li>John</li>
               <li>Joyce Mayorga</li>
               <li>Ken Naishtat</li>
               <li>Local Librarian</li>
@@ -145,7 +148,6 @@ const Sponsorship = () => (
               <li>Abdul Rahman</li>
               <li>Akihiko Odaki</li>
               <li>Al</li>
-              <li>Anticrisis</li>
               <li>Austin Putman</li>
               <li>Bal</li>
               <li>Bheesham Persaud</li>
@@ -155,12 +157,14 @@ const Sponsorship = () => (
               <li>Chris Zelenak</li>
               <li>Christopher Kruse</li>
               <li>Clinton Freeman</li>
+              <li>Damien Sirkis</li>
+              <li>Dan Ståhlberg</li>
+              <li>David Bailey</li>
               <li>David Yip</li>
               <li>Deborah Goldsmith</li>
               <li>Dominic Hopf</li>
               <li>Donovan Finch</li>
               <li>Ellen Teapot</li>
-              <li>Evan DiBiase</li>
               <li>Grant Stavely</li>
               <li>Graywind</li>
               <li>Hau Ngo</li>
@@ -180,18 +184,18 @@ const Sponsorship = () => (
               <li>Jonathan Cremin</li>
               <li>Josef Kenny</li>
               <li>Josephine Pedersen</li>
-              <li>Josh</li>
               <li>Julie Moronuki</li>
-              <li>kalyan</li>
               <li>Kenneth Ken Sugar</li>
               <li>Kevin Sonney</li>
               <li>Kevin Yank</li>
               <li>Koya Matsuo</li>
+              <li>Kyle R Kingsbury</li>
               <li>Landy Manderson</li>
               <li>Laurent Joubert</li>
               <li>Laurie Voss</li>
               <li>Leif Halldor Asgeirsson</li>
               <li>Little James</li>
+              <li>localyouser</li>
               <li>lrvick</li>
               <li>Manesh Pillai</li>
               <li>Masaya Imai</li>
@@ -211,12 +215,12 @@ const Sponsorship = () => (
               <li>Philip James</li>
               <li>Philippe Hausler</li>
               <li>Richard Minerich</li>
+              <li>roschaefer</li>
               <li>Rufus</li>
               <li>Sajith Sasidharan</li>
               <li>Sam Herlapuut</li>
               <li>Sandro Hawke</li>
               <li>Satsuki Yanagi</li>
-              <li>Soundrapandian Ravichandran</li>
               <li>Steve Streza</li>
               <li>Szmozsánszky István "Flaki"</li>
               <li>TARIK F AJAMI</li>
@@ -228,7 +232,6 @@ const Sponsorship = () => (
               <li>Wil Kie</li>
               <li>Wladimir</li>
               <li>Wolfgang @vilbi</li>
-              <li>Zaki</li>
             </ul>
           </Scrollbars>
         </div>
