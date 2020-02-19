@@ -16,6 +16,7 @@ import sponsorMoneyPug from './assets/sponsors/moneypug.png';
 import sponsorWritersPerHour from './assets/sponsors/writersperhour.jpg';
 import sponsorEdusson from './assets/sponsors/edusson.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
+import sponsorYourDoll from './assets/sponsors/yourdoll.jpg';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -54,6 +55,7 @@ const goldSponsors = [
   { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
   { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' },
   { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
+  { href: 'https://www.yourdoll.com/', src: sponsorYourDoll, alt: 'Your Doll' },
 ];
 
 const silverSponsors = [
