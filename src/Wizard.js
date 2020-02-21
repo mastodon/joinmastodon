@@ -125,7 +125,7 @@ class Wizard extends React.Component {
                 //{ value: 'sports', text: intl.formatMessage(messages.sports) },
                 { value: 'games', text: intl.formatMessage(messages.gaming) },
                 { value: 'tech', text: intl.formatMessage(messages.tech) },
-                //{ value: 'academia', text: intl.formatMessage(messages.academia) },
+                { value: 'academia', text: intl.formatMessage(messages.academia) },
                 { value: 'adult', text: intl.formatMessage(messages.adult) },
                 { value: 'humor', text: intl.formatMessage(messages.humor) },
                 { value: 'furry', text: intl.formatMessage(messages.furry) },
