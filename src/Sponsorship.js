@@ -142,6 +142,8 @@ const Sponsorship = () => (
               <li>Moritz Heiber</li>
               <li>Nolan Lawson</li>
               <li>Sho Kusano</li>
+              <li>Marcus Brito</li>
+              <li>Cody Knuble</li>
             </ul>
 
             <ul>
