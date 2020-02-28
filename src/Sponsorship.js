@@ -144,6 +144,7 @@ const Sponsorship = () => (
               <li>Sho Kusano</li>
               <li>Marcus Brito</li>
               <li>Cody Knuble</li>
+              <li>Alice Bloom</li>
             </ul>
 
             <ul>
