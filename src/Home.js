@@ -19,7 +19,7 @@ import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 import sponsorTrueVendor from './assets/sponsors/truevendor.png';
 import sponsorBestVPN from './assets/sponsors/bestvpn.png';
-import sponsorVPNRanks from './assets/sponsors/vpnranks.png';
+import sponsorVPNRanks from './assets/sponsors/vpnranks-v2.png';
 import sponsorAirVPN from './assets/sponsors/airvpn.png';
 import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
