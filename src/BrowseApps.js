@@ -19,6 +19,7 @@ import halcyon from './assets/apps/halcyon.png';
 import thedesk from './assets/apps/thedesk.png';
 import cuckooPlus from './assets/apps/cuckoo-plus.png';
 import hyperspace from './assets/apps/hyperspace.png';
+import imast from './assets/apps/imast_icon.png';
 
 const apps = {
   android: [
@@ -60,6 +61,12 @@ const apps = {
       name: 'Amaroq',
       icon: amaroq,
       url: 'https://itunes.apple.com/us/app/amarok-for-mastodon/id1214116200?ls=1&mt=8',
+    },
+
+    {
+      name: 'iMast',
+      icon: imast,
+      url: 'https://apps.apple.com/us/app/imast/id1229461703',
     },
   ],
 
