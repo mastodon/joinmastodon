@@ -37,6 +37,7 @@ import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarVashio from './assets/sponsors/vashio.jpg';
 import avatarCraftResumes from './assets/sponsors/craftresumes.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
+import avatarSextopedia from './assets/sponsors/sextopedia.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -87,6 +88,7 @@ const silverSponsors = [
   { name: 'Donald Robb', nofollow: true },
   { href: 'https://www.allthat3d.com/', name: 'AllThat3D.com', nofollow: true },
   { href: 'https://www.fullextend.com/', name: 'FullExtend.com', nofollow: true },
+  { href: 'https://sextopedia.com/', src: avatarSextopedia, name: 'Sextopedia', nofollow: true },
 ];
 
 const Sponsorship = () => (
