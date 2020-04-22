@@ -19,11 +19,11 @@ const Imprint = () => (
       <p style={{ flex: '0 0 auto' }}>
         Eugen Rochko
         <br />
-        c/o Postflex #92
+        c/o Grosch Postflex #92
         <br />
-        Helmers Kamp 74
+        Emsdettener Straße 10
         <br />
-        48249 Dülmen
+        48268 Greven
         <br />
         Germany
         <br />
