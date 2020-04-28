@@ -91,6 +91,7 @@ const silverSponsors = [
   { href: 'https://www.allthat3d.com/', name: 'AllThat3D.com', nofollow: true },
   { href: 'https://www.fullextend.com/', name: 'FullExtend.com', nofollow: true },
   { href: 'https://sextopedia.com/', src: avatarSextopedia, name: 'Sextopedia', nofollow: true },
+  { href: 'https://thebeastreviews.com/', name: 'TheBeastReviews', nofollow: true },
 ];
 
 const Sponsorship = () => (
