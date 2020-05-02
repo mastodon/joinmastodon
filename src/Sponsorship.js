@@ -39,6 +39,7 @@ import avatarVashio from './assets/sponsors/vashio.jpg';
 import avatarCraftResumes from './assets/sponsors/craftresumes.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 import avatarSextopedia from './assets/sponsors/sextopedia.png';
+import avatarFeels from './assets/sponsors/feels.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -92,6 +93,7 @@ const silverSponsors = [
   { href: 'https://www.fullextend.com/', name: 'FullExtend.com', nofollow: true },
   { href: 'https://sextopedia.com/', src: avatarSextopedia, name: 'Sextopedia', nofollow: true },
   { href: 'https://thebeastreviews.com/', name: 'TheBeastReviews', nofollow: true },
+  { href: 'https://fee.ls/', src: avatarFeels, name: 'feels', nofollow: true },
 ];
 
 const Sponsorship = () => (
