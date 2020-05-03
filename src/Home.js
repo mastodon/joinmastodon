@@ -28,6 +28,7 @@ import sponsorPapersOwl from './assets/sponsors/papersowl.png';
 import sponsorValueMarke from './assets/sponsors/valuemarke.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
+import sponsorCoolTechZone from './assets/sponsors/cooltechzone.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -83,6 +84,7 @@ export const sponsors = [
   { href: 'https://www.valuemarke.com/', src: sponsorValueMarke, alt: 'ValueMarke' },
   { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
+  { href: 'https://cooltechzone.com/netflix-vpn', src: sponsorCoolTechZone, alt: 'VPN Netflix' },
 ];
 
 export default connect()(
