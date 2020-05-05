@@ -84,7 +84,7 @@ export const sponsors = [
   { href: 'https://www.valuemarke.com/', src: sponsorValueMarke, alt: 'ValueMarke' },
   { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
-  { href: 'https://cooltechzone.com/netflix-vpn', src: sponsorCoolTechZone, alt: 'VPN Netflix' },
+  { href: 'https://cooltechzone.com/netflix-vpn', src: sponsorCoolTechZone, alt: 'Cooltechzone' },
 ];
 
 export default connect()(
