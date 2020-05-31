@@ -20,6 +20,7 @@ import thedesk from './assets/apps/thedesk.png';
 import cuckooPlus from './assets/apps/cuckoo-plus.png';
 import hyperspace from './assets/apps/hyperspace.png';
 import imast from './assets/apps/imast_icon.png';
+import mercury from './assets/apps/mercury.png';
 
 const apps = {
   android: [
@@ -68,6 +69,12 @@ const apps = {
       icon: imast,
       url: 'https://apps.apple.com/us/app/imast/id1229461703',
     },
+
+    {
+      name: 'Mercury',
+      icon: mercury,
+      url: 'https://apps.apple.com/us/app/mercury-for-mastodon/id1486749200?ls=1&mt1=8',
+    },
   ],
 
   web: [
@@ -104,7 +111,7 @@ const apps = {
       icon: whalebird,
       url: 'https://whalebird.org',
     },
-    
+
     {
       name: 'Tootle (Linux)',
       icon: tootle,
@@ -129,7 +136,7 @@ const apps = {
       url: 'https://apps.apple.com/us/app/mast/id1489861544',
       paid: true
     },
-    
+
     {
       name: 'Mastonaut (Mac)',
       icon: mastonaut,
