@@ -66,7 +66,7 @@
   "sponsorship.thanks_to": "Mastodon jest <strong>wolnym i otwartoźródłowym oprogramowaniem</strong>. Nie ma tu reklam ani monetyzacji. <strong>Dotacje pomagają w utrzymaniu projektu</strong>. Podziękowania dla następujących osób i firm:",
   "title": "Sieć społecznościowa znowu w Twoich rękach – projekt Mastodon",
   "wizard.empty": "Brak wyników… przynajmniej na razie!",
-  "wizard.filter.adult_content": "Adult content",
+  "wizard.filter.adult_content": "Treści dla dorosłych",
   "wizard.filter.all_languages": "Wszystkie języki",
   "wizard.filter.category": "Kategoria: ",
   "wizard.filter.food": "Jedzenie",
@@ -88,7 +88,7 @@
   "wizard.filters.technology": "Technologie",
   "wizard.hint2": "Aby zarejestrować się, wystarczy wybrać serwer. To tak jak rejestracja adresu e-mail, jeden serwer będzie hostował Twoje konto i zostanie częścią Twojej nazwy.",
   "wizard.hint5": "Pamiętaj – niezależnie od wyboru, możesz śledzić i rozmawiać z osobami z dowolnego serwera!",
-  "wizard.show_more": "Show {count, number} more",
+  "wizard.show_more": "Pokaż {count, number} więcej",
   "wizard.sign_up": "Zarejestruj się",
   "wizard_card.join": "Dołącz"
 }
