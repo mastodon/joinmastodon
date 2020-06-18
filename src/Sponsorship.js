@@ -41,6 +41,7 @@ import avatarCraftResumes from './assets/sponsors/craftresumes.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 import avatarSextopedia from './assets/sponsors/sextopedia.png';
 import avatarFeels from './assets/sponsors/feels.png';
+import avatarKikuzuki from './assets/sponsors/kikuzuki.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -96,6 +97,7 @@ const silverSponsors = [
   { href: 'https://sextopedia.com/', src: avatarSextopedia, name: 'Sextopedia', nofollow: true },
   { href: 'https://thebeastreviews.com/', name: 'TheBeastReviews', nofollow: true },
   { href: 'https://fee.ls/', src: avatarFeels, name: 'feels', nofollow: true },
+  { href: 'https://mastodon.social/@kikuzukikai', src: avatarKikuzuki, name: 'Association of Kikuzuki', nofollow: true },
 ];
 
 const Sponsorship = () => (
