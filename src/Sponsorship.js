@@ -160,6 +160,7 @@ const Sponsorship = () => (
               <li>Marcus Brito</li>
               <li>Cody Knuble</li>
               <li>Alice Bloom</li>
+              <li>ThePhotoApp</li>
             </ul>
 
             <ul>
