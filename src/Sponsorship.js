@@ -21,6 +21,7 @@ import sponsorLoginLockdown from './assets/sponsors/login-lockdown.png';
 import sponsorMyPassportPhotos from './assets/sponsors/mypassportphotos.png';
 import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
 import sponsorTootWales from './assets/sponsors/tootwales.png';
+import sponsorSpyic from './assets/sponsors/spyic.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -67,6 +68,7 @@ const goldSponsors = [
   { href: 'https://www.mypassportphotos.com/', src: sponsorMyPassportPhotos, alt: 'MyPassportPhotos' },
   { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
   { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' },
+  { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' },
 ];
 
 const silverSponsors = [
