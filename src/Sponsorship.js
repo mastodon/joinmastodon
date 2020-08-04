@@ -23,6 +23,7 @@ import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
 import sponsorTootWales from './assets/sponsors/tootwales.png';
 import sponsorSpyic from './assets/sponsors/spyic.png';
 import sponsorCocofax from './assets/sponsors/cocofax500.png';
+import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -71,6 +72,7 @@ const goldSponsors = [
   { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' },
   { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' },
   { href: 'https://cocofax.com/', src: sponsorCocofax, alt: 'Cocofax' },
+  { href: 'https://www.tensornetworks.net/', src: sponsorTensorNetworks, alt: 'Tensor Networks' },
 ];
 
 const silverSponsors = [
