@@ -82,6 +82,7 @@
   "wizard_card.browse_directory": "Browse directory",
   "wizard_card.join": "Join",
   "wizard_card.no_instant_sign_up": "No instant sign-up",
+  "wizard_card.people_count": "{label} {count, plural, one {person} other {people}}",
   "wizard_card.request_invite": "Request invite",
   "wizard_navigation.categories": "Categories:",
   "wizard_navigation.choosing_a_community": "Choosing a community"

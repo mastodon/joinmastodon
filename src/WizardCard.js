@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, defineMessages } from 'react-intl';
 import Counter from './Counter';
 import classNames from 'classnames';
+
+const messages = defineMessages({
+  peopleCount: { id: 'wizard_card.people_count', defaultMessage: '{label} {count, plural, one {person} other {people}}' },
+});
 
 class WizardCard extends React.PureComponent {
 
@@ -22,7 +26,7 @@ class WizardCard extends React.PureComponent {
       <div className='wizard-card'>
         <div className='wizard-card__row' style={{ justifyContent: 'space-between' }}>
           <strong className='wizard-card__title'>{instance.domain}</strong>
-          <Counter number={instance.total_users} id='wizard_row.user_count' defaultMessage='{label} {count, plural, one {person} other {people}}' />
+          <Counter number={instance.total_users} {...messages.peopleCount} />
         </div>
 
         <div className='wizard-card__hero'>
