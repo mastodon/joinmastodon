@@ -9,7 +9,7 @@ const Features = () => (
       <div className='left text'>
         <i className='xs-show ion-md-globe' />
         <h2><FormattedMessage id='features.find_your_community' defaultMessage='Find your perfect community' /></h2>
-        <p><FormattedMessage id='features.find_your_community_text3' defaultMessage="Mastodon isn’t a single website like Twitter or Facebook, it's a network of thousands of communities operated by different organizations and individuals that provide a seamless social media experience." /></p>
+        <p><FormattedMessage id='features.find_your_community_text' defaultMessage="Mastodon isn’t a single website like Twitter or Facebook, it's a network of thousands of communities operated by different organizations and individuals that provide a seamless social media experience." /></p>
       </div>
     </div>
 
@@ -17,8 +17,8 @@ const Features = () => (
       <div className='left visual'><i className='ion-md-lock' /></div>
       <div className='right text'>
         <i className='xs-show ion-md-lock' />
-        <h2><FormattedMessage id='features.safety2' defaultMessage='Safer social media experience' /></h2>
-        <p><FormattedMessage id='features.safety_text3' defaultMessage="Mastodon comes with <strong>effective anti-abuse tools</strong> to help protect yourself. Thanks to the network's spread out and independent nature there are <strong>more moderators</strong> who you can approach for personal help, and <strong>communities with strict codes of conduct</strong>." /></p>
+        <h2><FormattedMessage id='features.safer_social_media' defaultMessage='Safer social media experience' /></h2>
+        <p><FormattedMessage id='features.safer_social_media_text' defaultMessage="Mastodon comes with <strong>effective anti-abuse tools</strong> to help protect yourself. Thanks to the network's spread out and independent nature there are <strong>more moderators</strong> who you can approach for personal help, and <strong>communities with strict codes of conduct</strong>." /></p>
       </div>
     </div>
 
