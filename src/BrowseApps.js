@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import Navigation from './Navigation';
-import Legal from './Legal';
+import BottomNavigation from './BottomNavigation';
 
 import tusky from './assets/apps/tusky.png';
 import subwayTooter from './assets/apps/subway-tooter.png';
@@ -198,9 +198,9 @@ const BrowseApps = () => (
       <div className='app-grid'>
         {apps.sailfish.map(renderApp)}
       </div>
-
-      <Legal />
     </div>
+
+    <BottomNavigation />
   </div>
 );
 

@@ -23,6 +23,7 @@ $transition-out: 250ms linear;
     cursor: pointer;
     outline: none;
     padding: 12px 16px;
+    line-height: 32px;
     transition: color $transition-out;
 
     &:hover {

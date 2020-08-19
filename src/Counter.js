@@ -8,7 +8,7 @@ const Counter = ({ number, id, defaultMessage, intl }) => {
 
   return (
     <span className={`indicator-text ${color}`}>
-      <i className={`indicator ${color}`} /> <FormattedMessage id={id} defaultMessage={defaultMessage} values={{ label, count: number }} />
+      <i className={`indicator ${color}`} /> {intl.formatMessage({ id, defaultMessage }, { label, count: number })}
     </span>
   );
 };

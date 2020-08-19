@@ -1,10 +1,13 @@
 import {
+  INSTANCES_FETCH_REQUEST,
   INSTANCES_FETCH_SUCCESS,
+  INSTANCES_FETCH_FAIL,
   INSTANCES_SHOW_ALL,
   LOCALE_CHANGE,
   FILTER_CATEGORY_CHANGE,
   FILTER_LANGUAGE_CHANGE,
   LANGUAGES_FETCH_SUCCESS,
+  CATEGORIES_FETCH_SUCCESS,
 } from './actions';
 
 const defaultLanguages = [
@@ -66,14 +69,18 @@ const initialLocale = () => {
 const initialState = {
   locale: initialLocale(),
 
+  loading: false,
   instances: [],
   languages: defaultLanguages,
+  categories: [],
 
   filter: {
     category: 'general',
     language: '',
     showAll: false,
   },
+
+  selectedLanguageData: null,
 };
 
 const DUNBAR = Math.log(800);
@@ -89,14 +96,20 @@ export default function reducer(state = initialState, action) {
   switch(action.type) {
   case LOCALE_CHANGE:
     return { ...state, locale: action.data };
+  case INSTANCES_FETCH_REQUEST:
+    return { ...state, loading: true };
   case INSTANCES_FETCH_SUCCESS:
-    return { ...state, instances: sortByDunbarsNumber(action.data) };
+    return { ...state, instances: sortByDunbarsNumber(action.data), loading: false };
+  case INSTANCES_FETCH_FAIL:
+    return { ...state, loading: false };
   case FILTER_CATEGORY_CHANGE:
-    return { ...state, filter: { ...state.filter, category: action.data, showAll: false } };
+    return { ...state, instances: [], filter: { ...state.filter, category: action.data, showAll: false } };
   case FILTER_LANGUAGE_CHANGE:
-    return { ...state, filter: { ...state.filter, language: action.data, showAll: false } };
+    return { ...state, filter: { ...state.filter, language: action.data || '', showAll: false }, selectedLanguageData: state.languages.find(x => x.locale === action.data) || null };
   case LANGUAGES_FETCH_SUCCESS:
     return { ...state, languages: action.data };
+  case CATEGORIES_FETCH_SUCCESS:
+    return { ...state, categories: action.data };
   case INSTANCES_SHOW_ALL:
     return { ...state, filter: { ...state.filter, showAll: true } };
   default:

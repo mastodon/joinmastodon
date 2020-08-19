@@ -2,6 +2,7 @@
 
 .how-it-works {
   margin: 100px auto;
+  border-top: 1px solid lighten($darkest, 8%);
 
   .lang-ar & {
     direction: rtl;

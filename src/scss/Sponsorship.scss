@@ -22,12 +22,9 @@
   }
 
   .final-cta {
-    background: darken($darkest, 4%);
-    padding: 100px 0;
-
-    .lang-ar & {
-      direction: rtl;
-    }
+    text-align: center;
+    padding: 60px 0;
+    padding-bottom: 20px;
   }
 
   h2, h3 {
@@ -36,20 +33,12 @@
     font-size: 21px;
     margin-bottom: 20px;
     color: $lightest;
-
-    .lang-ar & {
-      direction: rtl;
-    }
   }
 
   p {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
-
-    .lang-ar & {
-      direction: rtl;
-    }
 
     strong {
       font-weight: 700;
@@ -67,6 +56,17 @@
 
   .tier {
     margin: 40px 0;
+
+    &__name {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      img {
+        display: block;
+        order: 2;
+      }
+    }
   }
 
   .row .tier {

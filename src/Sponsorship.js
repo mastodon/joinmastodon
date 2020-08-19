@@ -3,7 +3,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 
 import Navigation from './Navigation';
-import Legal from './Legal';
+import BottomNavigation from './BottomNavigation';
 import { sponsors as platinumSponsors } from './Home';
 
 //import sponsorRubymotion from './assets/sponsors/rubymotion.png';
@@ -45,6 +45,10 @@ import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 import avatarSextopedia from './assets/sponsors/sextopedia.png';
 import avatarFeels from './assets/sponsors/feels.png';
 import avatarKikuzuki from './assets/sponsors/kikuzuki.png';
+
+import mastodonBit from './assets/bit.png';
+import mastodonSilver from './assets/silver.png';
+import mastodonHighlight from './assets/highlight.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -125,14 +129,25 @@ const Sponsorship = () => (
       </div>
     </div>
 
-    <div className='container'>
-      <div className='text cta-text'>
-        <a href='https://patreon.com/mastodon' className='cta button'><FormattedMessage id='sponsorship.become_a_sponsor' defaultMessage='Become a sponsor' /></a>
+    <div className='final-cta'>
+      <div className='container'>
+        <h3><FormattedMessage id='sponsorship.become_a_sponsor' defaultMessage='Become a sponsor' /></h3>
+        <img src={mastodonBit} alt='' />
+        <p><FormattedMessage id='sponsorship.every_bit_helps' defaultMessage='Every little bit helps, and we appreciate all contributions.' /></p>
+        <a href='https://patreon.com/mastodon' className='cta button alt'><FormattedMessage id='credits.support_on_patreon' defaultMessage='Support on Patreon' /></a>
       </div>
+    </div>
 
+    <div className='container'>
       <div className='tier'>
-        <h3><FormattedMessage id='sponsorship.silver_sponsors' defaultMessage='Silver sponsors' /></h3>
-        <p><FormattedMessage id='sponsorship.silver_sponsors_text' defaultMessage='<strong>Silver sponsors</strong> are those that have pledged $40 to $99 to Mastodon.' /></p>
+        <div className='tier__name'>
+          <img src={mastodonSilver} alt='' />
+
+          <div>
+            <h3><FormattedMessage id='sponsorship.silver_sponsors' defaultMessage='Silver sponsors' /></h3>
+            <p><FormattedMessage id='sponsorship.silver_sponsors_text' defaultMessage='<strong>Silver sponsors</strong> are those that have pledged $40 to $99 to Mastodon.' /></p>
+          </div>
+        </div>
 
         <div className='sponsors-list--badges'>
           <ul>
@@ -141,11 +156,15 @@ const Sponsorship = () => (
         </div>
       </div>
 
-      <hr />
-
       <div className='tier'>
-        <h3><FormattedMessage id='sponsorship.sponsors' defaultMessage='Sponsors' /></h3>
-        <p><FormattedMessage id='sponsorship.sponsors_text' defaultMessage='<strong>Sponsors</strong> are those that pledged $10 to $39 to Mastodon.' /></p>
+        <div className='tier__name'>
+          <img src={mastodonHighlight} alt='' />
+
+          <div>
+            <h3><FormattedMessage id='sponsorship.sponsors' defaultMessage='Sponsors' /></h3>
+            <p><FormattedMessage id='sponsorship.sponsors_text' defaultMessage='<strong>Sponsors</strong> are those that pledged $10 to $39 to Mastodon.' /></p>
+          </div>
+        </div>
 
         <div className='sponsors-list--names'>
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
@@ -264,15 +283,7 @@ const Sponsorship = () => (
       </div>
     </div>
 
-    <div className='final-cta'>
-      <div className='container'>
-        <h3><FormattedMessage id='sponsorship.support_the_project' defaultMessage='Support the project' /></h3>
-        <p><FormattedMessage id='sponsorship.every_bit_helps' defaultMessage='Every little bit helps, and we appreciate all contributions.' /></p>
-        <a href='https://patreon.com/mastodon' className='cta button alt'><FormattedMessage id='sponsorship.become_a_sponsor' defaultMessage='Become a sponsor' /></a>
-      </div>
-
-      <Legal />
-    </div>
+    <BottomNavigation />
   </div>
 );
 

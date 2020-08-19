@@ -10,6 +10,7 @@ import BrowseApps from './BrowseApps';
 import ScrollToTop from './ScrollToTop';
 import Title from './Title';
 import Covenant from './Covenant';
+import BrowseCommunities from './BrowseCommunities';
 
 import { addLocaleData, IntlProvider } from 'react-intl';
 import ar from 'react-intl/locale-data/ar';
@@ -76,7 +77,8 @@ const App = ({ usersLocale }) => (
       <ScrollToTop>
         <div className={classNames('app', `lang-${usersLocale}`)}>
           <Route exact path='/' component={Home} />
-          <Route path='/category/:category/:language?' component={Home} />
+          <Route exact path='/communities' component={BrowseCommunities} />
+          <Route path='/communities/:category' component={BrowseCommunities} />
           <Route path='/sponsors' component={Sponsorship} />
           <Route path='/imprint' component={Imprint} />
           <Route path='/apps' component={BrowseApps} />

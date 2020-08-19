@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 .credits {
-  padding: 100px 0;
+  padding-top: 40px;
   background: darken($darkest, 4%);
 
   h3 {
@@ -19,71 +19,28 @@
     margin-bottom: 20px;
   }
 
-  .branding {
-    width: 30%;
-    min-width: 165px;
-
-    .lang-ar & {
-      text-align: right;
-    }
-  }
-
   .funding {
-    margin-right: 15px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
 
-    .lang-ar & {
-      text-align: right;
-    }
-  }
-
-  .color-scheme {
-    margin-top: 50px;
-
-    .lang-ar & h3 {
-      text-align: right;
+    @media only screen and (max-width: 640px) {
+      width: auto;
     }
 
-    .row {
-      margin: 0 -5px;
+    p {
+      text-align: left;
+      margin-bottom: 30px;
 
-      & > div {
-        flex: 1 1 auto;
-        padding: 0 5px;
+      .lang-ar & {
+        text-align: right;
       }
     }
   }
 
-  .color-swatch {
-    box-sizing: border-box;
-    padding: 10px;
-    padding-top: 36px;
-    border-radius: 4px;
-    color: $white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-
-    @media only screen and (max-width: 640px) {
-      font-size: 14px;
-    }
-  }
-
-  .color-1 {
-    background: #282c37;
-  }
-
-  .color-2 {
-    background: #9baec8;
-    color: $darkest;
-  }
-
-  .color-3 {
-    background: #d9e1e8;
-    color: $darkest;
-  }
-
-  .color-4 {
-    background: #2b90d9;
+  @media only screen and (max-width: 640px) {
+    padding-top: 0px;
   }
 }
 
@@ -94,7 +51,6 @@
 
 @media only screen and (max-width: 800px) {
   .credits {
-    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -105,24 +61,51 @@
     .funding {
       margin-bottom: 50px;
     }
-
-    .branding {
-      width: 100%;
-    }
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .color-scheme {
-    .row {
-      display: block;
-    }
+.footer {
+  border-top: 1px solid lighten($darkest, 8%);
+}
 
-    .color-swatch {
-      box-sizing: border-box;
-      width: 100%;
-      margin: 0;
-      margin-bottom: 15px;
+.footer-grid {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-column-gap: 40px;
+
+  @media only screen and (max-width: 800px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (max-width: 640px) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    & > div:first-child {
+      display: none;
+    }
+  }
+
+  &__brand {
+    width: 48px;
+  }
+
+  h4 {
+    font-weight: 700;
+    color: $lightest;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: $lighter;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
     }
   }
 }

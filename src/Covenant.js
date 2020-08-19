@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Navigation from './Navigation';
-import Legal from './Legal';
+import BottomNavigation from './BottomNavigation';
 
 const Covenant = () => (
   <div className='browse-apps covenant'>
@@ -32,9 +32,9 @@ const Covenant = () => (
       </div>
 
       <p>If you are a server owner, and your server passes these requirements, you can send an e-mail to hello@joinmastodon.org with the subject "Server submission" to be listed on this website. Only servers that accept registrations (including approval-based registrations) are shown.</p>
-
-      <Legal />
     </div>
+
+    <BottomNavigation />
   </div>
 );
 
