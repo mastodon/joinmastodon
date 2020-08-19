@@ -56,17 +56,20 @@
   "reactSnapshot": {
     "include": [
       "/covenant",
-      "/category/art",
-      "/category/general",
-      "/category/regional",
-      "/category/art",
-      "/category/activism",
-      "/category/lgbt",
-      "/category/games",
-      "/category/tech",
-      "/category/adult",
-      "/category/furry",
-      "/category/food"
+      "/communities/general",
+      "/communities/regional",
+      "/communities/art",
+      "/communities/music",
+      "/communities/journalism",
+      "/communities/activism",
+      "/communities/lgbt",
+      "/communities/games",
+      "/communities/tech",
+      "/communities/academia",
+      "/communities/adult",
+      "/communities/humor",
+      "/communities/furry",
+      "/communities/food"
     ],
     "snapshotDelay": 500
   }
