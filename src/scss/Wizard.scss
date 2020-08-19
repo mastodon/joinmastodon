@@ -159,9 +159,10 @@
     flex-direction: column;
 
     &--placeholder {
+      box-sizing: border-box;
       background: lighten($darkest, 4%);
       background: linear-gradient(to right, lighten($darkest, 4%) 8%, lighten($darkest, 5%) 38%, lighten($darkest, 4%) 54%);
-      height: 357px;
+      height: 315px;
       animation-duration: 1.8s;
       animation-fill-mode: forwards;
       animation-iteration-count: infinite;

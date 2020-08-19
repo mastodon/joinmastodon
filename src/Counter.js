@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, FormattedMessage } from 'react-intl';
+import { injectIntl } from 'react-intl';
 
 const Counter = ({ number, id, defaultMessage, intl }) => {
   const label = number >= 1000 ? `${intl.formatNumber(number / 1000, { maximumFractionDigits: 1 })}K` : number;
