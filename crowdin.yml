@@ -1,3 +1,5 @@
+commit_message: '[ci skip]'
 files:
   - source: /src/locales/en.json
     translation: /src/locales/%two_letters_code%.json
+    update_option: update_as_unapproved
