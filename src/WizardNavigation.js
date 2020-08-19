@@ -15,7 +15,6 @@ export const categoriesMessages = defineMessages({
   journalism: { id: 'wizard.filter.journalism', defaultMessage: 'Journalism' },
   adult: { id: 'wizard.filter.adult_content', defaultMessage: 'Adult content' },
   lgbt: { id: 'wizard.filter.lgbt', defaultMessage: 'LGBTQ+' },
-  poc: { id: 'wizard.filter.poc_aa', defaultMessage: 'Black American' },
   humor: { id: 'wizard.filter.humor', defaultMessage: 'Humour' },
   furry: { id: 'wizard.filter.furry', defaultMessage: 'Furry' },
   regional: { id: 'wizard.filter.regional', defaultMessage: 'Regional' },
