@@ -15,7 +15,7 @@ const HowItWorks = () => (
         <div className='feature-angle'>
           <i className='ion-md-git-network' />
           <h3><FormattedMessage id='how_it_works.network' defaultMessage='The network is interoperable' /></h3>
-          <p><FormattedMessage id='how_it_works.network_text' defaultMessage='Using a suit of standard protocols, Mastodon communities can exchange information with each other, allowing users to interact seamlessly.' /></p>
+          <p><FormattedMessage id='how_it_works.network_text' defaultMessage='Using a suite of standard protocols, Mastodon communities can exchange information with each other, allowing users to interact seamlessly.' /></p>
         </div>
       </div>
     </div>
