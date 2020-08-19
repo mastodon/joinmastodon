@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { changeLocale } from './actions';
 
 const mapStateToProps = state => ({
-  value: state.locale
+  options: state.supportedLanguages,
+  value: state.locale,
 });
 
 const mapDispatchToProps = dispatch => ({

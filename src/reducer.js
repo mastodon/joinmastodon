@@ -10,7 +10,7 @@ import {
   CATEGORIES_FETCH_SUCCESS,
 } from './actions';
 
-const defaultLanguages = [
+const supportedLanguages = [
   { locale: 'ar', language: 'العربية' },
   { locale: 'ca', language: 'Català' },
   { locale: 'cs', language: 'Čeština' },
@@ -36,13 +36,10 @@ const defaultLanguages = [
   { locale: 'tr', language: 'Türkçe' },
   { locale: 'uk', language: 'Українська' },
   { locale: 'zh', language: '中文' },
+  { locale: 'zh-TW', language: '繁體中文（臺灣' },
 ];
 
-const supportedLocales = [];
-
-for (let i = 0, l = defaultLanguages.length; i < l; i++) {
-  supportedLocales.push(defaultLanguages[i].locale);
-}
+const supportedLocales = supportedLanguages.map(x => x.locale);
 
 const initialLocale = () => {
   if (window.URLSearchParams) {
@@ -67,11 +64,13 @@ const initialLocale = () => {
 };
 
 const initialState = {
+  supportedLanguages,
+
   locale: initialLocale(),
 
   loading: false,
   instances: [],
-  languages: defaultLanguages,
+  languages: [],
   categories: [],
 
   filter: {

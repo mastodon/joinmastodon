@@ -29,6 +29,6 @@ manageTranslations({
     'tr',
     'uk',
     'zh',
-    'zh-TW',
+    'zh-TW'
   ]
 });
