@@ -104,7 +104,7 @@ export default function reducer(state = initialState, action) {
   case FILTER_CATEGORY_CHANGE:
     return { ...state, instances: [], filter: { ...state.filter, category: action.data, showAll: false } };
   case FILTER_LANGUAGE_CHANGE:
-    return { ...state, filter: { ...state.filter, language: action.data || '', showAll: false }, selectedLanguageData: state.languages.find(x => x.locale === action.data) || null };
+    return { ...state, filter: { ...state.filter, language: action.data, showAll: false }, selectedLanguageData: state.languages.find(x => x.locale === action.data) || null };
   case LANGUAGES_FETCH_SUCCESS:
     return { ...state, languages: action.data };
   case CATEGORIES_FETCH_SUCCESS:

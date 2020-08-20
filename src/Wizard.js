@@ -37,10 +37,13 @@ class Wizard extends React.PureComponent {
     }
   }
 
-  handleLanguageChange = ({ value }) => {
+  handleLanguageChange = ({ altered, value }) => {
     const { language, onChangeLanguage } = this.props;
-    if (language === value) return;
-    onChangeLanguage(value);
+    const normalizedValue = value === 'null' ? '' : value;
+
+    if (altered && language !== normalizedValue) {
+      onChangeLanguage(normalizedValue);
+    }
   }
 
   render () {
@@ -64,7 +67,7 @@ class Wizard extends React.PureComponent {
             <Select
               name="language"
               options={[
-                { value: '', text: intl.formatMessage(messages.allLanguages) },
+                { value: 'null', text: intl.formatMessage(messages.allLanguages) },
 
                 ...languages.map(x => ({
                   value: x.locale,

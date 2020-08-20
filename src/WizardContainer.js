@@ -49,11 +49,11 @@ const languagesWithSelectedLanguageSelector = createSelector(
   state => state.selectedLanguageData,
 
   (languages, selectedLanguageData) => {
-    if (selectedLanguageData === null || languages.find(x => x.locale === selectedLanguageData.locale)) {
+    if (selectedLanguageData === null || languages.some(x => x.locale === selectedLanguageData.locale)) {
       return languages;
     }
 
-    return languages.concat([{ ...selectedLanguageData, servers_count: 0 }]);
+    return [{ ...selectedLanguageData, servers_count: 0 }].concat(languages);
   }
 );
 

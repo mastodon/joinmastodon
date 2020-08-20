@@ -15,11 +15,11 @@ export function fetchInstances() {
     const { category, language } = getState().filter;
     const params = {};
 
-    if (category !== '') {
+    if (category && category !== '') {
       params.category = category.split('-')[0];
     }
 
-    if (language !== '') {
+    if (language && language !== 'null') {
       params.language = language;
     }
 
