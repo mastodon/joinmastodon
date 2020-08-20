@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import WizardCard from './WizardCard';
 import { FormattedMessage, defineMessages } from 'react-intl';
 import { Select, CaretIcon } from 'react-responsive-select';
@@ -110,6 +111,10 @@ class Wizard extends React.PureComponent {
             </div>
           </div>
         ))}
+
+        <Helmet>
+          <title>{intl.formatMessage(categoriesMessages[category])} - Mastodon</title>
+        </Helmet>
       </div>
     );
   }

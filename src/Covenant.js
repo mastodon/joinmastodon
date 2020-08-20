@@ -1,7 +1,10 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import Navigation from './Navigation';
 import BottomNavigation from './BottomNavigation';
+
+// This page does not require translations
 
 const Covenant = () => (
   <div className='browse-apps covenant'>
@@ -35,6 +38,10 @@ const Covenant = () => (
     </div>
 
     <BottomNavigation />
+
+    <Helmet>
+      <title>Mastodon Server Covenant - Mastodon</title>
+    </Helmet>
   </div>
 );
 

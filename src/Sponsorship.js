@@ -1,6 +1,7 @@
 import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
-import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
+import { FormattedHTMLMessage as FormattedMessage, injectIntl } from 'react-intl';
+import Helmet from 'react-helmet';
 
 import Navigation from './Navigation';
 import BottomNavigation from './BottomNavigation';
@@ -110,7 +111,7 @@ const silverSponsors = [
   { href: 'https://mastodon.social/@kikuzukikai', src: avatarKikuzuki, name: 'Association of Kikuzuki', nofollow: true },
 ];
 
-const Sponsorship = () => (
+const Sponsorship = ({ intl }) => (
   <div className='sponsorship' id='sponsorship'>
     <div className='intro'>
       <Navigation />
@@ -284,7 +285,11 @@ const Sponsorship = () => (
     </div>
 
     <BottomNavigation />
+
+    <Helmet>
+      <title>{intl.formatMessage({ id: 'sponsorship.sponsors_of_mastodon', defaultMessage: 'Sponsors of Mastodon' })} - Mastodon</title>
+    </Helmet>
   </div>
 );
 
-export default Sponsorship;
+export default injectIntl(Sponsorship);

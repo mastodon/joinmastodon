@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import Navigation from './Navigation';
 
@@ -29,9 +30,15 @@ const Imprint = () => (
         <br />
         E-mail: hello@joinmastodon.org
         <br />
+        Tel: (+49) 61312766257
+        <br />
         VAT ID: DE316095554
       </p>
     </div>
+
+    <Helmet>
+      <title>Imprint - Mastodon</title>
+    </Helmet>
   </div>
 );
 

@@ -8,7 +8,6 @@ import Sponsorship from './Sponsorship';
 import Imprint from './Imprint';
 import BrowseApps from './BrowseApps';
 import ScrollToTop from './ScrollToTop';
-import Title from './Title';
 import Covenant from './Covenant';
 import BrowseCommunities from './BrowseCommunities';
 
@@ -83,7 +82,6 @@ const App = ({ usersLocale }) => (
           <Route path='/imprint' component={Imprint} />
           <Route path='/apps' component={BrowseApps} />
           <Route path='/covenant' component={Covenant} />
-          <Title />
         </div>
       </ScrollToTop>
     </Router>

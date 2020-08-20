@@ -1,7 +1,8 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
+import Helmet from 'react-helmet';
 
-const ChoosingACommunity = () => (
+const ChoosingACommunity = ({ intl }) => (
   <div>
     <div className='wizard__header'>
       <strong className='wizard__header__title'>
@@ -32,7 +33,11 @@ const ChoosingACommunity = () => (
         <p><FormattedMessage id='choosing_a_community.we_only_list_communities' defaultMessage='We only list communities that are committed to active moderation against racism, sexism and transphobia.' /></p>
       </div>
     </div>
+
+    <Helmet>
+      <title>{intl.formatMessage({ id: 'wizard_navigation.choosing_a_community', defaultMessage: 'Choosing a community' })} - Mastodon</title>
+    </Helmet>
   </div>
 );
 
-export default ChoosingACommunity;
+export default injectIntl(ChoosingACommunity);

@@ -8,6 +8,7 @@ import YouTube from 'react-youtube';
 import Features from './Features';
 import Credits from './Credits';
 import Navigation from './Navigation';
+import Title from './Title';
 
 import sponsorFediverseNetwork from './assets/sponsors/fediversenetwork.svg';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
@@ -188,6 +189,8 @@ export default class Home extends PureComponent {
         <Modal open={open} onClose={this.onCloseModal} little showCloseIcon styles={styles}>
           <YouTube videoId='IPSbNdBmWKE' onReady={this.setPlayerRef} opts={playerOpts} />
         </Modal>
+
+        <Title />
       </div>
     );
   }

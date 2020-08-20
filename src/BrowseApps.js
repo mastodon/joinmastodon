@@ -1,5 +1,6 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
+import Helmet from 'react-helmet';
 
 import Navigation from './Navigation';
 import BottomNavigation from './BottomNavigation';
@@ -159,7 +160,7 @@ const renderApp = ({ name, icon, paid, url }) => (
   </div>
 );
 
-const BrowseApps = () => (
+const BrowseApps = ({ intl }) => (
   <div className='browse-apps'>
     <Navigation />
 
@@ -201,7 +202,11 @@ const BrowseApps = () => (
     </div>
 
     <BottomNavigation />
+
+    <Helmet>
+      <title>{intl.formatMessage({ id: 'browse_apps.title', defaultMessage: 'Browse apps' })} - Mastodon</title>
+    </Helmet>
   </div>
 );
 
-export default BrowseApps;
+export default injectIntl(BrowseApps);
