@@ -88,7 +88,7 @@ const silverSponsors = [
   { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
   { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
   { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },
-  { href: 'https://marozed.ma', src: avatarEmpresso, name: 'Agence web Marozed' },
+  { href: 'https://marozed.com', src: avatarEmpresso, name: 'Agence web Marozed' },
   { href: 'https://vocalodon.net/@tomoki', src: avatarTomoki, name: 'Hiroyuki Wakimoto (TOMOKI++)' },
   { href: 'https://spicedupaffairs.com/', name: 'SUA' },
   { href: 'https://www.slixa.com/', name: 'Slixa Escort Directory' },
