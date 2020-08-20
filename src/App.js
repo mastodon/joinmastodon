@@ -75,7 +75,7 @@ const App = ({ usersLocale }) => (
   <IntlProvider locale={usersLocale} messages={messagesForLocale(usersLocale)}>
     <Router>
       <ScrollToTop>
-        <div className={classNames('app', `lang-${usersLocale}`)}>
+        <div className={classNames('app', `lang-${usersLocale}`)} lang={usersLocale} dir={usersLocale === 'ar' ? 'rtl' : 'ltr'}>
           <Route exact path='/' component={Home} />
           <Route exact path='/communities' component={BrowseCommunities} />
           <Route path='/communities/:category' component={BrowseCommunities} />

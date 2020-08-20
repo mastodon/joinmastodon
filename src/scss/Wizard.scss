@@ -268,6 +268,11 @@
   .indicator {
     margin-right: 3px;
     margin-bottom: -1.5px;
+
+    .lang-ar & {
+      margin-right: 0;
+      margin-left: 3px;
+    }
   }
 
   &.green {

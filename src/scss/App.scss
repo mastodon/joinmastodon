@@ -402,6 +402,12 @@ $phi: 1.6180339887498948482;
     top: -21px;
     left: -28px;
     pointer-events: none;
+
+    .lang-ar & {
+      transform: scaleX(-1);
+      left: auto;
+      right: -28px;
+    }
   }
 
   &:hover {
@@ -424,6 +430,7 @@ $phi: 1.6180339887498948482;
 
     .lang-ar & {
       text-align: right;
+      order: 2;
     }
   }
 
@@ -434,6 +441,7 @@ $phi: 1.6180339887498948482;
 
     .lang-ar & {
       text-align: right;
+      order: 1;
     }
   }
 
@@ -728,6 +736,11 @@ $phi: 1.6180339887498948482;
 .icon-circled {
   display: inline-block;
   margin-right: 10px;
+
+  .lang-ar & {
+    margin-right: 0;
+    margin-left: 10px;
+  }
 }
 
 iframe {

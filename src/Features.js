@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedHTMLMessage as FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
+import ArrowLink from './ArrowLink';
 
 const Features = () => (
   <div id='features'>
@@ -43,14 +44,14 @@ const Features = () => (
           <i className='ion-md-book' />
           <h3><FormattedMessage id='features.for_individual' defaultMessage='Mastodon for the individual' /></h3>
           <p><FormattedMessage id='features.for_individual_text' defaultMessage='Without an incentive to sell you things, Mastodon allows you to consume content you enjoy uninterrupted. Your feed is chronological, ad-free and non-algorithmic—you decide who you want to see!' /></p>
-          <Link to='/communities' className='link-button'><FormattedMessage id='features.join_community' defaultMessage='Join a community' /> <i className='ion-ios-arrow-forward' /></Link>
+          <ArrowLink to='/communities' className='link-button'><FormattedMessage id='features.join_community' defaultMessage='Join a community' /></ArrowLink>
         </div>
 
         <div className='feature-angle'>
           <i className='ion-md-business' />
           <h3><FormattedMessage id='features.for_organization' defaultMessage='Mastodon for the organization' /></h3>
           <p><FormattedMessage id='features.for_organization_text' defaultMessage='Host your own social media platform on your own infrastructure. Don&apos;t let your business or non-profit depend on a company that could change the rules of the game—write your own rules!' /></p>
-          <a href='https://docs.joinmastodon.org/user/run-your-own/' className='link-button'><FormattedMessage id='features.install_server' defaultMessage='Install a server' /> <i className='ion-ios-arrow-forward' /></a>
+          <ArrowLink href='https://docs.joinmastodon.org/user/run-your-own/' target='_blank' rel='noopener noreferrer' className='link-button'><FormattedMessage id='features.install_server' defaultMessage='Install a server' /></ArrowLink>
         </div>
       </div>
     </div>

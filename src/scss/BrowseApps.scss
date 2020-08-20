@@ -60,6 +60,7 @@
   margin-bottom: 20px;
 
   &__item {
+    direction: ltr;
     box-sizing: border-box;
     flex: 1 1 205px;
     padding: 0 5px;
