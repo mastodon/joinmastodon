@@ -80,7 +80,7 @@
   "wizard.no_results": "Il semble qu'il n'y ait actuellement aucune communauté qui corresponde à vos critères. Essayez une catégorie différente ou un filtre de langue différent !",
   "wizard_card.browse_directory": "Parcourir l'annuaire",
   "wizard_card.join": "Se joindre",
-  "wizard_card.no_instant_sign_up": "No instant sign-up",
+  "wizard_card.no_instant_sign_up": "Inscription restreinte",
   "wizard_card.people_count": "{label} {count, plural, one {person} other {people}}",
   "wizard_card.request_invite": "Demander une invitation",
   "wizard_navigation.categories": "Catégories :",
