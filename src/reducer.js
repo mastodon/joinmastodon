@@ -12,7 +12,7 @@ import {
 
 const supportedLanguages = [
   { locale: 'ar', language: 'العربية' },
-  //{ locale: 'ca', language: 'Català' },
+  { locale: 'ca', language: 'Català' },
   { locale: 'cs', language: 'Čeština' },
   { locale: 'cy', language: 'Cymraeg' },
   { locale: 'de', language: 'Deutsch' },
