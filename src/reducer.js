@@ -18,7 +18,7 @@ const supportedLanguages = [
   { locale: 'de', language: 'Deutsch' },
   { locale: 'en', language: 'English' },
   { locale: 'es', language: 'Español' },
-  //{ locale: 'eu', language: 'Euskara' },
+  { locale: 'eu', language: 'Euskara' },
   //{ locale: 'fi', language: 'Suomi' },
   { locale: 'fr', language: 'Français' },
   //{ locale: 'he', language: 'עברית' },
