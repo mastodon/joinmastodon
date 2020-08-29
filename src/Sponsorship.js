@@ -25,7 +25,7 @@ import sponsorTootWales from './assets/sponsors/tootwales.png';
 import sponsorSpyic from './assets/sponsors/spyic.png';
 import sponsorCocofax from './assets/sponsors/cocofax500.png';
 import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
-import sponsorZenscrape from './assets/sponsors/zenscrape-logo-dark.svg';
+import sponsorZenscrape from './assets/sponsors/zenscrape-logo-light.svg';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
