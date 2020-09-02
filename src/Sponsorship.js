@@ -23,7 +23,7 @@ import sponsorMyPassportPhotos from './assets/sponsors/mypassportphotos.png';
 import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
 import sponsorTootWales from './assets/sponsors/tootwales.png';
 import sponsorSpyic from './assets/sponsors/spyic.png';
-import sponsorCocofax from './assets/sponsors/cocofax500.png';
+import sponsorCocosign from './assets/sponsors/cocosign.png';
 import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
 import sponsorZenscrape from './assets/sponsors/zenscrape-logo-light.svg';
 
@@ -77,7 +77,7 @@ const goldSponsors = [
   { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
   { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' },
   { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' },
-  { href: 'https://cocofax.com/', src: sponsorCocofax, alt: 'Cocofax' },
+  { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' },
   { href: 'https://www.tensornetworks.net/', src: sponsorTensorNetworks, alt: 'Tensor Networks' },
   { href: 'https://zenscrape.com/', src: sponsorZenscrape, alt: 'Zenscrape' },
 ];
