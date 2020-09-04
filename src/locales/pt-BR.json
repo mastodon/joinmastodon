@@ -77,12 +77,12 @@
   "wizard.filters.sports": "Esportes",
   "wizard.filters.technology": "Tecnologia",
   "wizard.loading": "Carregando…",
-  "wizard.no_results": "Seems like there are currently no communities that fit your criteria. Try a different category or a different language filter!",
-  "wizard_card.browse_directory": "Browse directory",
-  "wizard_card.join": "Join",
-  "wizard_card.no_instant_sign_up": "No instant sign-up",
-  "wizard_card.people_count": "{label} {count, plural, one {person} other {people}}",
-  "wizard_card.request_invite": "Request invite",
+  "wizard.no_results": "Parece que atualmente não existem comunidades que se encaixem com seus critérios. Tente uma categoria diferente ou um filtro de idioma diferente!",
+  "wizard_card.browse_directory": "Navegar no diretório",
+  "wizard_card.join": "Juntar-se",
+  "wizard_card.no_instant_sign_up": "Sem registro instantâneo",
+  "wizard_card.people_count": "{label} {count, plural, one {pessoa} other {pessoas}}",
+  "wizard_card.request_invite": "Solicitar convite",
   "wizard_navigation.categories": "Categorias:",
   "wizard_navigation.choosing_a_community": "Escolhendo uma comunidade"
 }
