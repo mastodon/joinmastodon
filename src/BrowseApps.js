@@ -57,6 +57,7 @@ const apps = {
       name: 'Mast',
       icon: mast,
       url: 'https://apps.apple.com/us/app/mast-for-mastodon/id1437429129',
+      paid: true,
     },
 
     {
