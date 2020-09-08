@@ -1,6 +1,6 @@
 {
-  "apps.free": "Free",
-  "apps.paid": "Paid",
+  "apps.free": "ฟรี",
+  "apps.paid": "เสียเงิน",
   "browse_apps.lead": "You can use Mastodon with any of these apps!",
   "browse_apps.title": "Browse apps",
   "choosing_a_community.all_you_need_to_sign_up": "All you need to do to sign-up is choose a community. Just like when signing up for an e-mail address, one community is going to be hosting your account and be part of your online identity.",
