@@ -80,7 +80,7 @@
   "wizard.no_results": "Seems like there are currently no communities that fit your criteria. Try a different category or a different language filter!",
   "wizard_card.browse_directory": "ดูไดเรกทอรี",
   "wizard_card.join": "เข้าร่วม",
-  "wizard_card.no_instant_sign_up": "No instant sign-up",
+  "wizard_card.no_instant_sign_up": "ไม่สามารถลงทะเบียนทันที",
   "wizard_card.people_count": "{label} {count, plural, other {คน}}",
   "wizard_card.request_invite": "ขอคำเชิญ",
   "wizard_navigation.categories": "ประเภท:",
