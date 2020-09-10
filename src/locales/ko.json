@@ -58,7 +58,7 @@
   "sponsorship.sponsors_text": "<strong>스폰서</strong>는 Mastodon에 10달러에서 39달러 사이로 기부하는 후원자입니다.",
   "sponsorship.thanks_to": "Mastodon은 <strong>자유-오픈 소스 소프트웨어</strong>입니다. 광고나 상업화, 벤처 캐피털은 없습니다. <strong>여러분의 기부는 이 프로젝트의 전업 개발을 직접 지원합니다</strong>. 다음 사람들과 기업들에 감사를 표합니다.",
   "title": "소셜 네트워킹을 다시 여러분의 손에 - Mastodon 프로젝트",
-  "wizard.filter.adult_content": "Adult content",
+  "wizard.filter.adult_content": "성인물",
   "wizard.filter.all_languages": "All languages",
   "wizard.filter.food": "Food",
   "wizard.filter.furry": "수인물(furry) 팬입니다",
