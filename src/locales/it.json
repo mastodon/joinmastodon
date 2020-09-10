@@ -6,7 +6,7 @@
   "choosing_a_community.all_you_need_to_sign_up": "Per effettuare la registrazione basta selezionare una community. Esattamente come succede durante la registrazione di un indirizzo e-mail, la community prescelta ospiterà il tuo account e farà parte della tua identità online.",
   "choosing_a_community.every_community_is_independent": "Ogni community è gestita da un'organizzazione o un individuo completamente indipendenti.",
   "choosing_a_community.we_only_list_communities": "Nella nostra lista sono incluse solo le community che si impegnano a moderare qualsiasi forma di razzismo, sessismo o transfobia.",
-  "choosing_a_community.you_can_follow_anyone": "Da un account, potrai seguire e parlare con persone appartenenti ad altre community.",
+  "choosing_a_community.you_can_follow_anyone": "Dal tuo account, potrai seguire e parlare con persone appartenenti ad altre community senza alcun problema.",
   "choosing_a_community.you_can_move_account": "In seguito sarà possibile spostare il tuo account in un'altra community senza perdere i follower.",
   "credits.get_press_kit": "Ottieni il kit per la stampa",
   "credits.support_on_patreon": "Supporta su Patreon",
@@ -42,7 +42,7 @@
   "nav.apps": "App",
   "nav.blog": "Blog",
   "nav.code": "Codice sorgente",
-  "nav.company": "Azienda",
+  "nav.company": "Organizzazione",
   "nav.docs": "Documentazione",
   "nav.merch": "Merce",
   "nav.product": "Prodotto",
@@ -72,7 +72,7 @@
   "wizard.filters.activism": "Attivismo",
   "wizard.filters.art": "Arte",
   "wizard.filters.books": "Libri",
-  "wizard.filters.gaming": "Giochi",
+  "wizard.filters.gaming": "Videogiochi",
   "wizard.filters.music": "Musica",
   "wizard.filters.sports": "Sport",
   "wizard.filters.technology": "Tecnologia",
@@ -84,5 +84,5 @@
   "wizard_card.people_count": "{label} {count, plural, one {persona} other {persone}}",
   "wizard_card.request_invite": "Chiedi un invito",
   "wizard_navigation.categories": "Categorie:",
-  "wizard_navigation.choosing_a_community": "Selezione della community"
+  "wizard_navigation.choosing_a_community": "Selezione di una community"
 }
