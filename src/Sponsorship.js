@@ -73,7 +73,7 @@ const goldSponsors = [
   { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
   { href: 'https://www.yourdoll.com/', src: sponsorYourDoll, alt: 'Your Doll' },
   { href: 'https://loginlockdown.com/', src: sponsorLoginLockdown, alt: 'Login Lockdown' },
-  { href: 'https://www.mypassportphotos.com/', src: sponsorMyPassportPhotos, alt: 'MyPassportPhotos' },
+  { href: 'https://www.ivisa.com/photos', src: sponsorMyPassportPhotos, alt: 'MyPassportPhotos' },
   { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
   { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' },
   { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' },
