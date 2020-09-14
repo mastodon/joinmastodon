@@ -19,7 +19,7 @@ import sponsorEdusson from './assets/sponsors/edusson.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
 import sponsorYourDoll from './assets/sponsors/yourdoll.jpg';
 import sponsorLoginLockdown from './assets/sponsors/login-lockdown.png';
-import sponsorMyPassportPhotos from './assets/sponsors/mypassportphotos.png';
+import sponsorIVisa from './assets/sponsors/ivisa.png';
 import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
 import sponsorTootWales from './assets/sponsors/tootwales.png';
 import sponsorSpyic from './assets/sponsors/spyic.png';
@@ -73,7 +73,7 @@ const goldSponsors = [
   { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
   { href: 'https://www.yourdoll.com/', src: sponsorYourDoll, alt: 'Your Doll' },
   { href: 'https://loginlockdown.com/', src: sponsorLoginLockdown, alt: 'Login Lockdown' },
-  { href: 'https://www.ivisa.com/photos', src: sponsorMyPassportPhotos, alt: 'MyPassportPhotos' },
+  { href: 'https://www.ivisa.com/photos', src: sponsorIVisa, alt: 'iVisa' },
   { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
   { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' },
   { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' },
