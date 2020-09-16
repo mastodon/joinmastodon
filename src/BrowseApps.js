@@ -22,6 +22,7 @@ import cuckooPlus from './assets/apps/cuckoo-plus.png';
 import hyperspace from './assets/apps/hyperspace.png';
 import imast from './assets/apps/imast_icon.png';
 import mercury from './assets/apps/mercury.png';
+import sengi from './assets/apps/sengi.png';
 
 const apps = {
   android: [
@@ -144,6 +145,12 @@ const apps = {
       icon: mastonaut,
       url: 'https://itunes.apple.com/us/app/mastonaut/id1450757574',
       paid: true
+    },
+
+    {
+      name: 'Sengi',
+      icon: sengi,
+      url: 'https://nicolasconstant.github.io/sengi/',
     },
   ],
 };
