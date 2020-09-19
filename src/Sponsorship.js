@@ -22,7 +22,7 @@ import sponsorLoginLockdown from './assets/sponsors/login-lockdown.png';
 import sponsorIVisa from './assets/sponsors/ivisa.png';
 import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
 import sponsorTootWales from './assets/sponsors/tootwales.png';
-import sponsorSpyic from './assets/sponsors/spyic.png';
+import sponsorSpyic from './assets/sponsors/spyic2.png';
 import sponsorCocosign from './assets/sponsors/cocosign2.png';
 import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
 import sponsorZenscrape from './assets/sponsors/zenscrape-logo-light.svg';
