@@ -33,10 +33,11 @@ const supportedLanguages = [
   //{ locale: 'sk', language: 'Slovenčina' },
   { locale: 'sq', language: 'Shqip' },
   //{ locale: 'sv', language: 'Svenska' },
+  { locale: 'th', language: 'ภาษาไทย' },
   { locale: 'tr', language: 'Türkçe' },
   //{ locale: 'uk', language: 'Українська' },
   { locale: 'zh', language: '中文' },
-  { locale: 'zh-TW', language: '繁體中文（臺灣' },
+  { locale: 'zh-TW', language: '繁體中文' },
 ];
 
 const supportedLocales = supportedLanguages.map(x => x.locale);

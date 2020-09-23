@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import Helmet from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 import Navigation from './Navigation';
 import BottomNavigation from './BottomNavigation';
@@ -23,6 +24,11 @@ import hyperspace from './assets/apps/hyperspace.png';
 import imast from './assets/apps/imast_icon.png';
 import mercury from './assets/apps/mercury.png';
 import sengi from './assets/apps/sengi.png';
+
+import sponsorDotcomMonitor from './assets/sponsors/dotcom-monitor-logo.png';
+import sponsorLoadView from './assets/sponsors/LoadView-logo.png';
+import sponsorWebHostingBuddy from './assets/sponsors/web-hosting-buddy-logo.png';
+import sponsorDrivenCoffee from './assets/sponsors/driven-coffee-logo.png';
 
 const apps = {
   android: [
@@ -168,6 +174,13 @@ const renderApp = ({ name, icon, paid, url }) => (
   </div>
 );
 
+const sponsors = [
+  { href: 'https://www.dotcom-monitor.com/es/', src: sponsorDotcomMonitor, alt: 'Dotcom-Monitor' },
+  { href: 'https://www.loadview-testing.com/api-testing/', src: sponsorLoadView, alt: 'LoadView' },
+  { href: 'https://webhostingbuddy.com/wordpress-hosting/', src: sponsorWebHostingBuddy, alt: 'Web Hosting Buddy' },
+  { href: 'https://www.drivencoffee.com/', src: sponsorDrivenCoffee, alt: 'Driven Coffee' },
+];
+
 const BrowseApps = ({ intl }) => (
   <div className='browse-apps'>
     <Navigation />
@@ -206,6 +219,18 @@ const BrowseApps = ({ intl }) => (
 
       <div className='app-grid'>
         {apps.sailfish.map(renderApp)}
+      </div>
+    </div>
+
+    <div className='frontpage-sponsorship frontpage-sponsorship--no-background'>
+      <div className='container'>
+        <h2><FormattedMessage id='home.sponsored_by' defaultMessage='Sponsored by' /> &bull; <Link to='/sponsors' className='link-button'><FormattedMessage id='credits.view_sponsors' defaultMessage='View sponsors' /> <i className='ion-ios-arrow-forward' /></Link></h2>
+
+        <div className='logo-grid'>
+          <div>
+            {sponsors.map(x => <a key={x.href} href={x.href}><img src={x.src} alt={x.alt} /></a>)}
+          </div>
+        </div>
       </div>
     </div>
 

@@ -26,6 +26,7 @@ manageTranslations({
     'sk',
     'sq',
     'sv',
+    'th',
     'tr',
     'uk',
     'zh',

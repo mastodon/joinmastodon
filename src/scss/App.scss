@@ -359,6 +359,13 @@ $phi: 1.6180339887498948482;
 }
 
 .frontpage-sponsorship {
+  &--no-background {
+    background: transparent;
+    border-top: 1px solid lighten($darkest, 8%);
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
   h2 {
     color: $lightest;
   }
