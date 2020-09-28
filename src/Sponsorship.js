@@ -111,6 +111,7 @@ const silverSponsors = [
   { href: 'https://thebeastreviews.com/', name: 'TheBeastReviews', nofollow: true },
   { href: 'https://fee.ls/', src: avatarFeels, name: 'feels', nofollow: true },
   { href: 'https://mastodon.social/@kikuzukikai', src: avatarKikuzuki, name: 'Association of Kikuzuki', nofollow: true },
+  { href: 'https://ivypanda.com/online-thesis-generator', name: 'Sergey', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
