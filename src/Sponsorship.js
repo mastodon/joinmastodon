@@ -190,6 +190,7 @@ const Sponsorship = ({ intl }) => (
               <li>Alice Bloom</li>
               <li>ThePhotoApp</li>
               <li>Ivan Braun</li>
+              <li>Sergey</li>
             </ul>
 
             <ul>
