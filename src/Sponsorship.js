@@ -12,7 +12,6 @@ import sponsorADarkRoom from './assets/sponsors/adarkroom.jpg';
 import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
 import sponsorThanksblock from './assets/sponsors/thanksblock.png';
 import sponsorEasyDNS from './assets/sponsors/easydns.png';
-import sponsorVPSServer from './assets/sponsors/vpsserver.png';
 import sponsorMoneyPug from './assets/sponsors/moneypug.png';
 import sponsorWritersPerHour from './assets/sponsors/writersperhour.jpg';
 import sponsorEdusson from './assets/sponsors/edusson.png';
@@ -66,7 +65,6 @@ const goldSponsors = [
   { href: 'https://write.as/', src: sponsorWriteAs, alt: 'Write.as' },
   { href: 'https://www.justhanks.com/', src: sponsorThanksblock, alt: 'THANKSBLOCK' },
   { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' },
-  { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
   { href: 'https://moneypug.co.uk/', src: sponsorMoneyPug, alt: 'Money Pug' },
   { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
   { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' },
