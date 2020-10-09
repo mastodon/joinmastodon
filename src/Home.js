@@ -25,7 +25,7 @@ import sponsorValueMarke from './assets/sponsors/valuemarke.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 import sponsorCoolTechZone from './assets/sponsors/cooltechzone.png';
-import sponsorVPSServer from './assets/sponsors/vpsserver.png';
+import sponsorVPSServer from './assets/sponsors/vpsserver2.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
