@@ -25,6 +25,7 @@ import sponsorSpyic from './assets/sponsors/spyic2.png';
 import sponsorCocosign from './assets/sponsors/cocosign2.png';
 import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
 import sponsorZenscrape from './assets/sponsors/zenscrape-logo-light.svg';
+import sponsorSujitech from './assets/sponsors/sujitech.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -78,6 +79,7 @@ const goldSponsors = [
   { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' },
   { href: 'https://www.tensornetworks.net/', src: sponsorTensorNetworks, alt: 'Tensor Networks' },
   { href: 'https://zenscrape.com/', src: sponsorZenscrape, alt: 'Zenscrape' },
+  { href: 'http://sujitech.com/', src: sponsorSujitech, alt: 'Sujitech' },
 ];
 
 const silverSponsors = [
