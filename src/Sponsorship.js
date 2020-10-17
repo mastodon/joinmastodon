@@ -113,7 +113,8 @@ const silverSponsors = [
   { href: 'https://fee.ls/', src: avatarFeels, name: 'feels', nofollow: true },
   { href: 'https://mastodon.social/@kikuzukikai', src: avatarKikuzuki, name: 'Association of Kikuzuki', nofollow: true },
   { href: 'https://ivypanda.com/online-thesis-generator', name: 'Sergey', nofollow: true },
-  { href: 'https://buy.fineproxy.org/eng/', src: avatarFineproxy, name: 'Fineproxy', nofollow: true }
+  { href: 'https://buy.fineproxy.org/eng/', src: avatarFineproxy, name: 'Fineproxy', nofollow: true },
+  { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
