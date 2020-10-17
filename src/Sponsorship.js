@@ -47,6 +47,7 @@ import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 import avatarSextopedia from './assets/sponsors/sextopedia.png';
 import avatarFeels from './assets/sponsors/feels.png';
 import avatarKikuzuki from './assets/sponsors/kikuzuki.png';
+import avatarFineproxy from './assets/sponsors/fineproxy.png';
 
 import mastodonBit from './assets/bit.png';
 import mastodonSilver from './assets/silver.png';
@@ -112,6 +113,7 @@ const silverSponsors = [
   { href: 'https://fee.ls/', src: avatarFeels, name: 'feels', nofollow: true },
   { href: 'https://mastodon.social/@kikuzukikai', src: avatarKikuzuki, name: 'Association of Kikuzuki', nofollow: true },
   { href: 'https://ivypanda.com/online-thesis-generator', name: 'Sergey', nofollow: true },
+  { href: 'https://buy.fineproxy.org/eng/', src: avatarFineproxy, name: 'Fineproxy', nofollow: true }
 ];
 
 const Sponsorship = ({ intl }) => (
