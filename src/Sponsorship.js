@@ -26,6 +26,7 @@ import sponsorCocosign from './assets/sponsors/cocosign2.png';
 import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
 import sponsorZenscrape from './assets/sponsors/zenscrape-logo-light.svg';
 import sponsorSujitech from './assets/sponsors/sujitech.png';
+import sponsorNextiva from './assets/sponsors/nextiva.svg';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -81,6 +82,7 @@ const goldSponsors = [
   { href: 'https://www.tensornetworks.net/', src: sponsorTensorNetworks, alt: 'Tensor Networks' },
   { href: 'https://zenscrape.com/', src: sponsorZenscrape, alt: 'Zenscrape' },
   { href: 'http://sujitech.com/', src: sponsorSujitech, alt: 'Sujitech' },
+  { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
 ];
 
 const silverSponsors = [
@@ -115,6 +117,7 @@ const silverSponsors = [
   { href: 'https://ivypanda.com/online-thesis-generator', name: 'Sergey', nofollow: true },
   { href: 'https://buy.fineproxy.org/eng/', src: avatarFineproxy, name: 'Fineproxy', nofollow: true },
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
+  { name: 'Alex B.', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
