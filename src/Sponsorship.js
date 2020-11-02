@@ -53,6 +53,7 @@ import avatarFineproxy from './assets/sponsors/fineproxy.png';
 import mastodonBit from './assets/bit.png';
 import mastodonSilver from './assets/silver.png';
 import mastodonHighlight from './assets/highlight.png';
+import mastodonGold from './assets/gold.png';
 
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
@@ -117,7 +118,6 @@ const silverSponsors = [
   { href: 'https://ivypanda.com/online-thesis-generator', name: 'Sergey', nofollow: true },
   { href: 'https://buy.fineproxy.org/eng/', src: avatarFineproxy, name: 'Fineproxy', nofollow: true },
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
-  { name: 'Alex B.', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
@@ -142,9 +142,20 @@ const Sponsorship = ({ intl }) => (
     <div className='final-cta'>
       <div className='container'>
         <h3><FormattedMessage id='sponsorship.become_a_sponsor' defaultMessage='Become a sponsor' /></h3>
-        <img src={mastodonBit} alt='' />
         <p><FormattedMessage id='sponsorship.every_bit_helps' defaultMessage='Every little bit helps, and we appreciate all contributions.' /></p>
-        <a href='https://patreon.com/mastodon' className='cta button alt'><FormattedMessage id='credits.support_on_patreon' defaultMessage='Support on Patreon' /></a>
+        <div className='feature-angle-container'>
+          <div className='feature-angle' style={{ width: '50%' }}>
+            <img src={mastodonBit} alt='' />
+            <p><FormattedMessage id='sponsorship.sponsoring_through_patreon' defaultMessage='If you want to support our project and get rewards like access to our development Discord or your name listed on this page, you can back us on Patreon!' /></p>
+            <a href='https://patreon.com/mastodon' className='cta button'><FormattedMessage id='credits.support_on_patreon' defaultMessage='Support on Patreon' /></a>
+          </div>
+
+          <div className='feature-angle' style={{ width: '50%' }}>
+            <img src={mastodonGold} alt='' />
+            <p><FormattedMessage id='sponsorship.sponsoring_higher_tiers' defaultMessage="If you want to see your company's logo with a do-follow link on this website, you can become a Gold or Platinum tier sponsor using our own platform!" /></p>
+            <a href='https://sponsor.joinmastodon.org/' className='cta button alt'><FormattedMessage id='sponsorship.become_a_sponsor' defaultMessage='Become a sponsor' /></a>
+          </div>
+        </div>
       </div>
     </div>
 
