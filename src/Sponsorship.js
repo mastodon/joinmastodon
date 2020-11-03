@@ -27,6 +27,7 @@ import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
 import sponsorZenscrape from './assets/sponsors/zenscrape-logo-light.svg';
 import sponsorSujitech from './assets/sponsors/sujitech.png';
 import sponsorNextiva from './assets/sponsors/nextiva.svg';
+import sponsorLevvvel from './assets/sponsors/levvvel.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -84,6 +85,7 @@ const goldSponsors = [
   { href: 'https://zenscrape.com/', src: sponsorZenscrape, alt: 'Zenscrape' },
   { href: 'http://sujitech.com/', src: sponsorSujitech, alt: 'Sujitech' },
   { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
+  { href: 'https://levvvel.com/', src: sponsorLevvvel, alt: 'Levvvel' },
 ];
 
 const silverSponsors = [
