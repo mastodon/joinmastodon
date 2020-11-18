@@ -87,7 +87,7 @@ const goldSponsors = [
   { href: 'http://sujitech.com/', src: sponsorSujitech, alt: 'Sujitech' },
   { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
   { href: 'https://levvvel.com/', src: sponsorLevvvel, alt: 'Levvvel' },
-  { href: 'https://goread.io/buy-instagram-followers', alt: 'Goread.io' },
+  { href: 'https://goread.io/buy-instagram-followers', src: sponsorGoRead, alt: 'Goread.io' },
 ];
 
 const silverSponsors = [
