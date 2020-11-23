@@ -137,7 +137,7 @@ const Sponsorship = ({ intl }) => (
       <div className='container'>
         <div className='tier'>
           <div className='sponsors-list--logos'>
-            {[...platinumSponsors, ...goldSponsors].map(sponsor => <a key={sponsor.href} href={sponsor.href}><img src={sponsor.src} alt={sponsor.alt} /></a>)}
+            {[...platinumSponsors.filter(sponsor => sponsor.href !== 'https://www.cibdol.com/'), ...goldSponsors].map(sponsor => <a key={sponsor.href} href={sponsor.href}><img src={sponsor.src} alt={sponsor.alt} /></a>)}
           </div>
         </div>
       </div>

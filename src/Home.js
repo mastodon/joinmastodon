@@ -26,6 +26,7 @@ import sponsorMiniTool from './assets/sponsors/minitool.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 import sponsorCoolTechZone from './assets/sponsors/cooltechzone.png';
 import sponsorVPSServer from './assets/sponsors/vpsserver2.png';
+import sponsorCibdol from './assets/sponsors/cibdol.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -83,6 +84,7 @@ export const sponsors = [
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
   { href: 'https://cooltechzone.com/netflix-vpn', src: sponsorCoolTechZone, alt: 'Cooltechzone' },
   { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
+  { href: 'https://www.cibdol.com/', src: sponsorCibdol, alt: 'cibdol cbd oil' },
 ];
 
 export default class Home extends PureComponent {
