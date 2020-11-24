@@ -118,7 +118,7 @@ const apps = {
     {
       name: 'Whalebird',
       icon: whalebird,
-      url: 'https://whalebird.org',
+      url: 'https://whalebird.social',
     },
 
     {
