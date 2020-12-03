@@ -84,7 +84,7 @@ const goldSponsors = [
   { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' },
   { href: 'https://www.tensornetworks.net/', src: sponsorTensorNetworks, alt: 'Tensor Networks' },
   { href: 'https://zenscrape.com/', src: sponsorZenscrape, alt: 'Zenscrape' },
-  { href: 'http://mask.io/', src: sponsorSujitech, alt: 'Mask.io' },
+  { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask.io' },
   { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
   { href: 'https://levvvel.com/', src: sponsorLevvvel, alt: 'Levvvel' },
   { href: 'https://goread.io/buy-instagram-followers', src: sponsorGoRead, alt: 'Goread.io' },
