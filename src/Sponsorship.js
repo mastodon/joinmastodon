@@ -25,7 +25,7 @@ import sponsorSpyic from './assets/sponsors/spyic2.png';
 import sponsorCocosign from './assets/sponsors/cocosign2.png';
 import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
 import sponsorZenscrape from './assets/sponsors/zenscrape-logo-light.svg';
-import sponsorSujitech from './assets/sponsors/sujitech.png';
+import sponsorSujitech from './assets/sponsors/maskio.png';
 import sponsorNextiva from './assets/sponsors/nextiva.svg';
 import sponsorLevvvel from './assets/sponsors/levvvel.png';
 import sponsorGoRead from './assets/sponsors/goread.png';
@@ -84,7 +84,7 @@ const goldSponsors = [
   { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' },
   { href: 'https://www.tensornetworks.net/', src: sponsorTensorNetworks, alt: 'Tensor Networks' },
   { href: 'https://zenscrape.com/', src: sponsorZenscrape, alt: 'Zenscrape' },
-  { href: 'http://sujitech.com/', src: sponsorSujitech, alt: 'Sujitech' },
+  { href: 'http://mask.io/', src: sponsorSujitech, alt: 'Mask.io' },
   { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
   { href: 'https://levvvel.com/', src: sponsorLevvvel, alt: 'Levvvel' },
   { href: 'https://goread.io/buy-instagram-followers', src: sponsorGoRead, alt: 'Goread.io' },
