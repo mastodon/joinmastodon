@@ -122,6 +122,7 @@ const silverSponsors = [
   { href: 'https://ivypanda.com/online-thesis-generator', name: 'Sergey', nofollow: true },
   { href: 'https://buy.fineproxy.org/eng/', src: avatarFineproxy, name: 'Fineproxy', nofollow: true },
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
+  { href: 'https://reviewscon.com/', name: 'ReviewsCon', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
