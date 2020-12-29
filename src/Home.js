@@ -28,7 +28,7 @@ import sponsorCoolTechZone from './assets/sponsors/cooltechzone.png';
 import sponsorVPSServer from './assets/sponsors/vpsserver2.png';
 import sponsorCibdol from './assets/sponsors/cibdol.png';
 import sponsorBetrugstest from './assets/sponsors/betrugstest-com.png';
-import sponsorSujitech from './assets/sponsors/maskio.png';
+import sponsorSujitech from './assets/sponsors/mask-network.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
