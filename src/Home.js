@@ -88,7 +88,7 @@ export const sponsors = [
   { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
   { href: 'https://www.cibdol.com/', src: sponsorCibdol, alt: 'cibdol cbd oil' },
   { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' },
-  { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask.io' },
+  { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' },
 ];
 
 export default class Home extends PureComponent {
