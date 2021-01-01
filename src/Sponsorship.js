@@ -25,7 +25,7 @@ import sponsorSpyic from './assets/sponsors/spyic2.png';
 import sponsorCocosign from './assets/sponsors/cocosign2.png';
 import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
 import sponsorZenscrape from './assets/sponsors/zenscrape-logo-light.svg';
-
+import sponsorQuarterless from './assets/sponsors/quarterless.png';
 import sponsorNextiva from './assets/sponsors/nextiva.svg';
 import sponsorLevvvel from './assets/sponsors/levvvel.png';
 import sponsorGoRead from './assets/sponsors/goread.png';
@@ -87,6 +87,7 @@ const goldSponsors = [
   { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
   { href: 'https://levvvel.com/', src: sponsorLevvvel, alt: 'Levvvel' },
   { href: 'https://goread.io/buy-instagram-followers', src: sponsorGoRead, alt: 'Goread.io' },
+  { href: 'https://quarterless.com/', src: sponsorQuarterless, alt: 'Quarterless' },
 ];
 
 const silverSponsors = [
