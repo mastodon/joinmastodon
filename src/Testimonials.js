@@ -53,6 +53,7 @@ const Testimonials = () => (
     </div>
 
     <Scrollbars
+      universal
       style={{ height: 681 }}
       renderTrackHorizontal={props => <div {...props} className='testimonials__scrollbars__track' />}
       renderThumbHorizontal={props => <div {...props} className='testimonials__scrollbars__thumb' tabIndex='0' />}
