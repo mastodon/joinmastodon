@@ -7,6 +7,7 @@ import YouTube from 'react-youtube';
 
 import Features from './Features';
 import Credits from './Credits';
+import Testimonials from './Testimonials';
 import Navigation from './Navigation';
 import Title from './Title';
 
@@ -179,6 +180,7 @@ export default class Home extends PureComponent {
         </div>
 
         <Features />
+        <Testimonials />
 
         <div className='frontpage-sponsorship'>
           <div className='container'>
