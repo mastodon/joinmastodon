@@ -67,27 +67,18 @@ const renderThumb = ({ style, ...props }) => {
 };
 
 const goldSponsors = [
-  { href: 'https://www.nintendo.com/games/detail/a-dark-room-switch/', src: sponsorADarkRoom, alt: 'A Dark Room' },
-  { href: 'https://write.as/', src: sponsorWriteAs, alt: 'Write.as' },
-  { href: 'https://www.justhanks.com/', src: sponsorThanksblock, alt: 'THANKSBLOCK' },
-  { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' },
-  { href: 'https://moneypug.co.uk/', src: sponsorMoneyPug, alt: 'Money Pug' },
-  { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
-  { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' },
-  { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
-  { href: 'https://www.yourdoll.com/', src: sponsorYourDoll, alt: 'Your Doll' },
-  { href: 'https://loginlockdown.com/', src: sponsorLoginLockdown, alt: 'Login Lockdown' },
-  { href: 'https://www.ivisa.com/photos', src: sponsorIVisa, alt: 'iVisa' },
-  { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
-  { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' },
-  { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' },
-  { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' },
-  { href: 'https://www.tensornetworks.net/', src: sponsorTensorNetworks, alt: 'Tensor Networks' },
-  { href: 'https://zenscrape.com/', src: sponsorZenscrape, alt: 'Zenscrape' },
-  { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
-  { href: 'https://levvvel.com/', src: sponsorLevvvel, alt: 'Levvvel' },
-  { href: 'https://goread.io/buy-instagram-followers', src: sponsorGoRead, alt: 'Goread.io' },
-  { href: 'https://quarterless.com/', src: sponsorQuarterless, alt: 'Quarterless' },
+  { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' }, // OK
+  { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' }, // OK
+  { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' }, // OK
+  { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' }, // OK
+  { href: 'https://loginlockdown.com/', src: sponsorLoginLockdown, alt: 'Login Lockdown' }, // OK
+  { href: 'https://www.ivisa.com/photos', src: sponsorIVisa, alt: 'iVisa' }, // OK
+  { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' }, // OK
+  { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' }, // OK
+  { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' }, // OK
+  { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' }, // OK
+  { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' }, // OK
+  { href: 'https://quarterless.com/', src: sponsorQuarterless, alt: 'Quarterless' }, // Custom
 ];
 
 const silverSponsors = [
