@@ -11,21 +11,17 @@ import Testimonials from './Testimonials';
 import Navigation from './Navigation';
 import Title from './Title';
 
-import sponsorFediverseNetwork from './assets/sponsors/fediversenetwork.svg';
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
 import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 import sponsorTrueVendor from './assets/sponsors/truevendor.png';
-import sponsorBestVPN from './assets/sponsors/bestvpn.png';
 import sponsorVPNRanks from './assets/sponsors/vpnranks-v2.png';
 import sponsorAirVPN from './assets/sponsors/airvpn.png';
 import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorSexToyEducation from './assets/sponsors/sextoyeducation.jpg';
-import sponsorTekHattan from './assets/sponsors/tekhattan.png';
 import sponsorPapersOwl from './assets/sponsors/papersowl.png';
 import sponsorValueMarke from './assets/sponsors/valuemarke.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
-import sponsorCoolTechZone from './assets/sponsors/cooltechzone.png';
 import sponsorVPSServer from './assets/sponsors/vpsserver2.png';
 import sponsorCibdol from './assets/sponsors/cibdol.png';
 import sponsorBetrugstest from './assets/sponsors/betrugstest-com.png';
@@ -74,22 +70,18 @@ export const sponsors = [
   { href: 'https://www.lunanode.com/', src: sponsorLunanode, alt: 'Lunanode' },
   { href: 'https://pleroma.social/', src: sponsorPleroma, alt: 'Pleroma' },
   { href: 'https://www.ramotion.com/agency/ui-ux-design', src: sponsorTrueVendor, alt: 'UI/UX Designer' },
-  { href: 'https://www.bestvpn.co/', src: sponsorBestVPN, alt: 'BestVPN' },
   { href: 'https://www.vpnranks.com/', src: sponsorVPNRanks, alt: 'VPN Ranks' },
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
   { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' }, // OpenCollective
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
-  { href: 'https://tekhattan.com/blog/', src: sponsorTekHattan, alt: 'TekHattan Blog' },
-  { href: 'https://fediverse.network/', src: sponsorFediverseNetwork, alt: 'Fediverse network' }, // OpenCollective
   { href: 'https://papersowl.com/free-plagiarism-checker', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
   { href: 'https://www.valuemarke.com/', src: sponsorValueMarke, alt: 'ValueMarke' },
   { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
-  { href: 'https://cooltechzone.com/netflix-vpn', src: sponsorCoolTechZone, alt: 'Cooltechzone' },
   { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
-  { href: 'https://www.cibdol.com/', src: sponsorCibdol, alt: 'cibdol cbd oil' },
-  { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' },
-  { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' },
+  { href: 'https://www.cibdol.com/', src: sponsorCibdol, alt: 'cibdol cbd oil' }, // Custom
+  { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' }, // Custom
+  { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' }, // Custom
 ];
 
 export default class Home extends PureComponent {
