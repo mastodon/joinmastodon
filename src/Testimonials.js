@@ -15,6 +15,7 @@ import avatarTrwnh from './assets/testimonials/avatar_trwnh.png';
 import avatarUlrichKelber from './assets/testimonials/avatar_ulrichkelber.png';
 import avatarVopo from './assets/testimonials/avatar_vopo.jpg';
 import avatarHalcy from './assets/testimonials/avatar_halcy.jpg';
+import avatarJennSchiffer from './assets/testimonials/avatar_jennschiffer.jpeg';
 
 const data = [
   [
@@ -24,8 +25,7 @@ const data = [
 
   [
     { text: "<p>I've been on federated platforms since 2008. Mastodon is the best iteration of federated platforms with a user interface that is pleasant to use and a community of folks that I consider friends.</p>", name: 'Craig Maloney', username: 'craigmaloney@octodon.social', avatar: avatarCraigMaloney },
-    { text: "<p>Great community, friendly atmosphere, and free software! What else would you possibly need?</p>", name: 'autumncheney', username: 'AutumnCheney@mastodon.social', avatar: avatarAutumnCheney },
-    { text: "<p>It's social media with moderation that actually works.</p>", name: 'voronoi potato', username: 'Vopo@mastodon.social', avatar: avatarVopo },
+    { text: "<p>Mastodon does an amazing job at giving communities the autonomy necessary to thrive by giving them the keys to federate and moderate their own servers. But don't let that alone overshadow the fact that it simply does features that the major social networks try to do (e.g. image captioning, content warnings) astoundingly better.</p>", name: 'Jenn Schiffer', username: 'jenn@toot.cafe', avatar: avatarJennSchiffer },
   ],
 
   [
@@ -36,13 +36,17 @@ const data = [
   [
     { text: "<p>I've made so many friends on Mastodon because I can actually talk to people instead of getting buried by algorithms that reward meaningless numbers over actual interaction.</p>", name: 'infinite love ⴳ', username: 'trwnh@mastodon.social', avatar: avatarTrwnh },
     { text: "<p>Mastodon is a well-moderated fully-functional microblogging service with some great features!</p>", name: '해파리', username: 'jarm@qdon.space', avatar: avatarJarm },
-    { text: "<p>It's good software</p>", name: 'halcy', username: 'halcy@icosahedron.website', avatar: avatarHalcy },
+    { text: "<p>It's social media with moderation that actually works.</p>", name: 'voronoi potato', username: 'Vopo@mastodon.social', avatar: avatarVopo },
   ],
 
   [
     { text: "<p>I could have joined an existing community, but I decided to self-host Mastodon.</p><p>My posts to the world are replicated from my own servers and can be traced back to their originals. Since I own it, the platform will not be terminated or removed at the platform's discretion, and I can provide a long and stable service. I finally have this. Yay!</p>", name: 'のえる', username: 'noellabo@fedibird.com', avatar: avatarNoellabo },
-
+    { text: "<p>It's good software</p>", name: 'halcy', username: 'halcy@icosahedron.website', avatar: avatarHalcy },
   ],
+
+  [
+    { text: "<p>Great community, friendly atmosphere, and free software! What else would you possibly need?</p>", name: 'autumncheney', username: 'AutumnCheney@mastodon.social', avatar: avatarAutumnCheney },
+  ]
 ];
 
 const Testimonials = () => (
