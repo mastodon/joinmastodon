@@ -7,28 +7,18 @@ import Navigation from './Navigation';
 import BottomNavigation from './BottomNavigation';
 import { sponsors as platinumSponsors } from './Home';
 
-//import sponsorRubymotion from './assets/sponsors/rubymotion.png';
-import sponsorADarkRoom from './assets/sponsors/adarkroom.jpg';
-import sponsorWriteAs from './assets/sponsors/writeas-logo-dark.svg';
-import sponsorThanksblock from './assets/sponsors/thanksblock.png';
 import sponsorEasyDNS from './assets/sponsors/easydns.png';
-import sponsorMoneyPug from './assets/sponsors/moneypug.png';
 import sponsorWritersPerHour from './assets/sponsors/writersperhour.jpg';
 import sponsorEdusson from './assets/sponsors/edusson.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
-import sponsorYourDoll from './assets/sponsors/yourdoll.jpg';
 import sponsorLoginLockdown from './assets/sponsors/login-lockdown.png';
 import sponsorIVisa from './assets/sponsors/ivisa.png';
 import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
 import sponsorTootWales from './assets/sponsors/tootwales.png';
 import sponsorSpyic from './assets/sponsors/spyic2.png';
 import sponsorCocosign from './assets/sponsors/cocosign2.png';
-import sponsorTensorNetworks from './assets/sponsors/tensornetworks.png';
-import sponsorZenscrape from './assets/sponsors/zenscrape-logo-light.svg';
 import sponsorQuarterless from './assets/sponsors/quarterless.png';
 import sponsorNextiva from './assets/sponsors/nextiva.svg';
-import sponsorLevvvel from './assets/sponsors/levvvel.png';
-import sponsorGoRead from './assets/sponsors/goread.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
