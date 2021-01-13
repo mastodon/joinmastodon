@@ -22,24 +22,18 @@ import sponsorNextiva from './assets/sponsors/nextiva.svg';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
-import avatarMarkAtwood from './assets/sponsors/markatwood.jpg';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
 import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 import avatarTnzk from './assets/sponsors/tnzk.png';
 import avatarTakeShape from './assets/sponsors/takeshape.jpg';
-import avatarPaperLeaf from './assets/sponsors/paperleaf.jpg';
 import avatarClay from './assets/sponsors/clay.png';
 import avatarTomoki from './assets/sponsors/tomoki.png';
 import avatarTradersInsurance from './assets/sponsors/tradersinsurance.png';
 import avatarSwitchVPN from './assets/sponsors/switchvpn.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarVashio from './assets/sponsors/vashio.jpg';
-import avatarCraftResumes from './assets/sponsors/craftresumes.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
-import avatarSextopedia from './assets/sponsors/sextopedia.png';
-import avatarFeels from './assets/sponsors/feels.png';
-import avatarKikuzuki from './assets/sponsors/kikuzuki.png';
 import avatarFineproxy from './assets/sponsors/fineproxy.png';
 
 import mastodonBit from './assets/bit.png';
@@ -57,17 +51,17 @@ const renderThumb = ({ style, ...props }) => {
 };
 
 const goldSponsors = [
-  { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' }, // OK
-  { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' }, // OK
-  { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' }, // OK
-  { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' }, // OK
-  { href: 'https://loginlockdown.com/', src: sponsorLoginLockdown, alt: 'Login Lockdown' }, // OK
-  { href: 'https://www.ivisa.com/photos', src: sponsorIVisa, alt: 'iVisa' }, // OK
-  { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' }, // OK
-  { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' }, // OK
-  { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' }, // OK
-  { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' }, // OK
-  { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' }, // OK
+  { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' },
+  { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
+  { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' },
+  { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
+  { href: 'https://loginlockdown.com/', src: sponsorLoginLockdown, alt: 'Login Lockdown' },
+  { href: 'https://www.ivisa.com/photos', src: sponsorIVisa, alt: 'iVisa' },
+  { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
+  { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' },
+  { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' },
+  { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' },
+  { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
   { href: 'https://quarterless.com/', src: sponsorQuarterless, alt: 'Quarterless' }, // Custom
 ];
 
@@ -82,25 +76,15 @@ const silverSponsors = [
   { href: 'https://marozed.com', src: avatarEmpresso, name: 'Agence web Marozed' },
   { href: 'https://vocalodon.net/@tomoki', src: avatarTomoki, name: 'Hiroyuki Wakimoto (TOMOKI++)' },
   { href: 'https://spicedupaffairs.com/', name: 'SUA' },
-  { href: 'https://www.slixa.com/', name: 'Slixa Escort Directory' },
   { href: 'https://www.looktotheright.com/', src: avatarLookToTheRight, name: 'Look To The Right' },
-  { href: 'https://about.me/markatwood', src: avatarMarkAtwood, name: 'Mark Atwood' },
   { name: 'Martin Seeger' },
   { href: 'https://dtp-mstdn.jp', src: avatarNoellabo, name: 'noellabo' },
-  { href: 'https://paperleaf.ca/', src: avatarPaperLeaf, name: 'PaperLeaf' },
-  { href: 'https://craftresumes.com/', src: avatarCraftResumes, name: 'CraftResumes' },
   { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
   { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' }, // OpenCollective
   { href: 'https://mastodon.social/@vashio', name: '@vashio', src: avatarVashio, nofollow: true },
   { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
   { name: 'Donald Robb', nofollow: true },
-  { href: 'https://www.allthat3d.com/', name: 'AllThat3D.com', nofollow: true },
-  { href: 'https://www.fullextend.com/', name: 'FullExtend.com', nofollow: true },
-  { href: 'https://sextopedia.com/', src: avatarSextopedia, name: 'Sextopedia', nofollow: true },
-  { href: 'https://thebeastreviews.com/', name: 'TheBeastReviews', nofollow: true },
-  { href: 'https://fee.ls/', src: avatarFeels, name: 'feels', nofollow: true },
-  { href: 'https://mastodon.social/@kikuzukikai', src: avatarKikuzuki, name: 'Association of Kikuzuki', nofollow: true },
-  { href: 'https://ivypanda.com/online-thesis-generator', name: 'Sergey', nofollow: true },
+  { href: 'https://ivypanda.com/online-thesis-generator', name: 'IvyPanda', nofollow: true },
   { href: 'https://buy.fineproxy.org/eng/', src: avatarFineproxy, name: 'Fineproxy', nofollow: true },
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
   { href: 'https://reviewscon.com/', name: 'ReviewsCon', nofollow: true },
