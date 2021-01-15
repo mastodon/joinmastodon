@@ -26,6 +26,7 @@ import sponsorVPSServer from './assets/sponsors/vpsserver2.png';
 import sponsorCibdol from './assets/sponsors/cibdol.png';
 import sponsorBetrugstest from './assets/sponsors/betrugstest-com.png';
 import sponsorSujitech from './assets/sponsors/mask-network.png';
+import sponsorBCS from './assets/sponsors/bcs-white.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -82,6 +83,7 @@ export const sponsors = [
   { href: 'https://www.cibdol.com/', src: sponsorCibdol, alt: 'cibdol cbd oil' }, // Custom
   { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' }, // Custom
   { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' }, // Custom
+  { href: 'https://bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom
 ];
 
 export default class Home extends PureComponent {
