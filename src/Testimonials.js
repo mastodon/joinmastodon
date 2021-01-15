@@ -16,6 +16,7 @@ import avatarUlrichKelber from './assets/testimonials/avatar_ulrichkelber.png';
 import avatarVopo from './assets/testimonials/avatar_vopo.jpg';
 import avatarHalcy from './assets/testimonials/avatar_halcy.jpg';
 import avatarJennSchiffer from './assets/testimonials/avatar_jennschiffer.jpeg';
+import avatarKoyu from './assets/testimonials/avatar_koyu.png';
 
 const data = [
   [
@@ -46,6 +47,10 @@ const data = [
 
   [
     { text: "<p>Great community, friendly atmosphere, and free software! What else would you possibly need?</p>", name: 'autumncheney', username: 'AutumnCheney@mastodon.social', avatar: avatarAutumnCheney },
+  ],
+
+  [
+    { text: "<p>I wanted to have a federated social network since 2013 that looked and felt great and where I can connect to like-minded people. Mastodon just gave me the last puzzle piece and I absolutely love it! Probably spend more than five hours a day on my own little space with a friendly community that truly cares.</p>", name: 'Leonie', username: 'koyu@koyu.space', avatar: avatarKoyu },
   ]
 ];
 
