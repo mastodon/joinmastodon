@@ -83,7 +83,7 @@ export const sponsors = [
   { href: 'https://www.cibdol.com/', src: sponsorCibdol, alt: 'cibdol cbd oil' }, // Custom
   { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' }, // Custom
   { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' }, // Custom
-  { href: 'https://bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom
+  { href: 'https://www.bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom
 ];
 
 export default class Home extends PureComponent {
