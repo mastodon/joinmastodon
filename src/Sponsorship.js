@@ -19,6 +19,7 @@ import sponsorSpyic from './assets/sponsors/spyic2.png';
 import sponsorCocosign from './assets/sponsors/cocosign2.png';
 import sponsorQuarterless from './assets/sponsors/quarterless.png';
 import sponsorNextiva from './assets/sponsors/nextiva.svg';
+import sponsorSchnellNode from './assets/sponsors/schnellnode.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -63,6 +64,7 @@ const goldSponsors = [
   { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' },
   { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
   { href: 'https://quarterless.com/', src: sponsorQuarterless, alt: 'Quarterless' }, // Custom
+  { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' },
 ];
 
 const silverSponsors = [
