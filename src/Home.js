@@ -28,6 +28,7 @@ import sponsorBetrugstest from './assets/sponsors/betrugstest-com.png';
 import sponsorSujitech from './assets/sponsors/mask-network.png';
 import sponsorBCS from './assets/sponsors/bcs-white.png';
 import sponsorBCO from './assets/sponsors/BesteCasinosOnline.png';
+import sponsorSisterSites from './assets/sponsors/sistersites-logo.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -86,6 +87,7 @@ export const sponsors = [
   { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' }, // Custom
   { href: 'https://www.bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom
   { href: 'https://www.bestecasinosonline.at/', src: sponsorBCO, alt: 'bestecasinosonline.at' }, // Custom
+  { href: 'https://www.sister-sites.co.uk/', src: sponsorSisterSites, alt: 'sister-sites.co.uk' }, // Custom
 ];
 
 export default class Home extends PureComponent {
