@@ -31,6 +31,7 @@ import sponsorBCO from './assets/sponsors/BesteCasinosOnline.png';
 import sponsorSisterSites from './assets/sponsors/sistersites-logo.png';
 import sponsorWHSR from './assets/sponsors/whsr.png';
 import sponsorLeoBoost from './assets/sponsors/leoboost-logo.png';
+import sponsorSchnellNode from './assets/sponsors/schnellnode.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -92,6 +93,7 @@ export const sponsors = [
   { href: 'https://www.sister-sites.co.uk/', src: sponsorSisterSites, alt: 'sister-sites.co.uk' }, // Custom
   { href: 'https://www.webhostingsecretrevealed.net/', src: sponsorWHSR, alt: 'Web Hosting Secret Revealed (WHSR)' }, // Custom
   { href: 'https://www.leoboost.com', src: sponsorLeoBoost, alt: 'Leo Boost' }, // Custom
+  { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' }, // Custom
 ];
 
 export default class Home extends PureComponent {
