@@ -30,7 +30,7 @@ import sponsorBCS from './assets/sponsors/bcs-white.png';
 import sponsorBCO from './assets/sponsors/BesteCasinosOnline.png';
 import sponsorSisterSites from './assets/sponsors/sistersites-logo.png';
 import sponsorWHSR from './assets/sponsors/whsr.png';
-import sponsorLeoBoost from './assets/sponsors/leoboost-logo.png';
+import sponsorLeoBoost from './assets/sponsors/leoboost-logo-white.png';
 import sponsorSchnellNode from './assets/sponsors/schnellnode.png';
 
 import wiredLogo from './assets/wired-logo.svg';
