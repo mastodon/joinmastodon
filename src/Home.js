@@ -30,6 +30,7 @@ import sponsorBCS from './assets/sponsors/bcs-white.png';
 import sponsorBCO from './assets/sponsors/BesteCasinosOnline.png';
 import sponsorSisterSites from './assets/sponsors/sistersites-logo.png';
 import sponsorWHSR from './assets/sponsors/whsr.png';
+import sponsorLeoBoost from './assets/sponsors/leoboost-logo.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -90,6 +91,7 @@ export const sponsors = [
   { href: 'https://www.bestecasinosonline.at/', src: sponsorBCO, alt: 'bestecasinosonline.at' }, // Custom
   { href: 'https://www.sister-sites.co.uk/', src: sponsorSisterSites, alt: 'sister-sites.co.uk' }, // Custom
   { href: 'https://www.webhostingsecretrevealed.net/', src: sponsorWHSR, alt: 'Web Hosting Secret Revealed (WHSR)' }, // Custom
+  { href: 'https://www.leoboost.com', src: sponsorLeoBoost, alt: 'Leo Boost' }, // Custom
 ];
 
 export default class Home extends PureComponent {
