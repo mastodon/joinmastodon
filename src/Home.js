@@ -33,6 +33,7 @@ import sponsorWHSR from './assets/sponsors/whsr.png';
 import sponsorLeoBoost from './assets/sponsors/leoboost-logo-white.png';
 import sponsorSchnellNode from './assets/sponsors/schnellnode.png';
 import sponsor5SS from './assets/sponsors/5ss-logo-53h.png';
+import sponsorAusCasinos from './assets/sponsors/auscasinos.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -96,6 +97,7 @@ export const sponsors = [
   { href: 'https://www.leoboost.com', src: sponsorLeoBoost, alt: 'Leo Boost' }, // Custom
   { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' }, // Custom
   { href: 'https://www.5slotsites.com/', src: sponsor5SS, alt: 'https://www.5slotsites.com/' }, // Custom
+  { href: 'https://www.auscasinos.com/new/', src: sponsorAusCasinos, alt: 'AusCasinos.com New Site Section' }, // Custom 
 ];
 
 export default class Home extends PureComponent {
