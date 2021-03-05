@@ -90,6 +90,7 @@ const silverSponsors = [
   { href: 'https://buy.fineproxy.org/eng/', src: avatarFineproxy, name: 'Fineproxy', nofollow: true },
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
   { href: 'https://reviewscon.com/', name: 'ReviewsCon', nofollow: true },
+  { href: 'https://anbefaltcasino.com/', name: 'Beste Casino', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
