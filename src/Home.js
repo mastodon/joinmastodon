@@ -34,6 +34,7 @@ import sponsorLeoBoost from './assets/sponsors/leoboost-logo-white.png';
 import sponsorSchnellNode from './assets/sponsors/schnellnode.png';
 import sponsor5SS from './assets/sponsors/5ss-logo-53h.png';
 import sponsorAusCasinos from './assets/sponsors/auscasinos.png';
+import sponsorMastoHost from './assets/sponsors/MH-horizontal-white.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -96,6 +97,7 @@ export const sponsors = [
   { href: 'https://www.webhostingsecretrevealed.net/', src: sponsorWHSR, alt: 'Web Hosting Secret Revealed (WHSR)' }, // Custom
   { href: 'https://www.leoboost.com', src: sponsorLeoBoost, alt: 'Leo Boost' }, // Custom
   { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' }, // Custom
+  { href: 'https://masto.host/', src: sponsorMastoHost, alt: 'Masto.host - Fully managed Mastodon hosting' }, // Custom
   { href: 'https://www.5slotsites.com/', src: sponsor5SS, alt: 'https://www.5slotsites.com/' }, // Custom
   { href: 'https://www.auscasinos.com/new/', src: sponsorAusCasinos, alt: 'AusCasinos.com New Site Section' }, // Custom 
 ];
