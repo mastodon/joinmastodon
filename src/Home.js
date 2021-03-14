@@ -97,7 +97,7 @@ export const sponsors = [
   { href: 'https://www.bestecasinosonline.at/', src: sponsorBCO, alt: 'bestecasinosonline.at' }, // Custom
   { href: 'https://www.sister-sites.co.uk/', src: sponsorSisterSites, alt: 'sister-sites.co.uk' }, // Custom
   { href: 'https://www.webhostingsecretrevealed.net/', src: sponsorWHSR, alt: 'Web Hosting Secret Revealed (WHSR)' }, // Custom
-  { href: 'https://www.leoboost.com', src: sponsorLeoBoost, alt: 'Leo Boost' }, // Custom
+  { href: 'https://www.leoboost.com/buy-instagram-followers', src: sponsorLeoBoost, alt: 'Buy Instagram Followers' }, // Custom
   { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' }, // Custom
   { href: 'https://masto.host/', src: sponsorMastoHost, alt: 'Masto.host - Fully managed Mastodon hosting' }, // Custom
   { href: 'https://www.5slotsites.com/', src: sponsor5SS, alt: 'https://www.5slotsites.com/' }, // Custom
