@@ -24,6 +24,7 @@ import hyperspace from './assets/apps/hyperspace.png';
 import imast from './assets/apps/imast_icon.png';
 import mercury from './assets/apps/mercury.png';
 import sengi from './assets/apps/sengi.png';
+import metatext from './assets/apps/metatext.png';
 
 import sponsorDotcomMonitor from './assets/sponsors/dotcom-monitor-logo.png';
 import sponsorLoadView from './assets/sponsors/LoadView-logo.png';
@@ -83,6 +84,12 @@ const apps = {
       name: 'Mercury',
       icon: mercury,
       url: 'https://apps.apple.com/us/app/mercury-for-mastodon/id1486749200?ls=1&mt1=8',
+    },
+
+    {
+      name: 'Metatext',
+      icon: metatext,
+      url: 'https://apps.apple.com/us/app/metatext/id1523996615?mt=8',
     },
   ],
 
