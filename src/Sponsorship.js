@@ -167,115 +167,91 @@ const Sponsorship = ({ intl }) => (
         <div className='sponsors-list--names'>
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
-              <li>'@mecab</li>
-              <li>Andrei Petcu</li>
-              <li>Brion Vibber</li>
-              <li>G Berton Latamore</li>
-              <li>Great Scott Gadgets</li>
-              <li>John</li>
-              <li>Joyce Mayorga</li>
               <li>Ken Naishtat</li>
-              <li>Local Librarian</li>
-              <li>Masto.host</li>
               <li>Moritz Heiber</li>
               <li>Nolan Lawson</li>
+              <li>Masto.host</li>
               <li>Sho Kusano</li>
-              <li>Marcus Brito</li>
-              <li>Cody Knuble</li>
-              <li>Alice Bloom</li>
-              <li>ThePhotoApp</li>
+              <li>'@mecab</li>
+              <li>Brion Vibber</li>
+              <li>G Berton Latamore</li>
+              <li>Andrei Petcu</li>
+              <li>Local Librarian</li>
+              <li>Robin Mayorga</li>
+              <li>John</li>
+              <li>akyoz</li>
+              <li>Ivan Sagalaev</li>
               <li>Ivan Braun</li>
+              <li>JC Andrever</li>
+              <li>Shane Raynor</li>
+              <li>Michelle Merendino</li>
+              <li>Ramsey Stone</li>
+              <li>estpls</li>
             </ul>
 
             <ul>
-              <li>_</li>
-              <li>Abdul Rahman</li>
-              <li>Akihiko Odaki</li>
-              <li>Al</li>
-              <li>Austin Putman</li>
-              <li>Bal</li>
-              <li>Bheesham Persaud</li>
-              <li>C J Silverio</li>
-              <li>Charles Hutchins</li>
-              <li>Chris Hanson</li>
-              <li>Chris Zelenak</li>
+              <li>Ted </li>
               <li>Christopher Kruse</li>
-              <li>Clinton Freeman</li>
-              <li>Damien Sirkis</li>
-              <li>Dan Ståhlberg</li>
-              <li>David Bailey</li>
+              <li>Leif Halldor Asgeirsson</li>
+              <li>Josef Kenny</li>
+              <li>Austin Putman</li>
               <li>David Yip</li>
-              <li>Deborah Goldsmith</li>
-              <li>Dominic Hopf</li>
-              <li>Donovan Finch</li>
-              <li>Ellen Teapot</li>
-              <li>Grant Stavely</li>
-              <li>Graywind</li>
-              <li>Hau Ngo</li>
-              <li>Hideki Yamamoto</li>
-              <li>Igor Ferreira</li>
-              <li>Irick Corwal</li>
-              <li>itsumonotakumi</li>
-              <li>Jacqueline Button</li>
-              <li>James Valleroy</li>
-              <li>Jan Krutisch</li>
-              <li>Jean-Luc Geering</li>
+              <li>Kenneth Ken Sugar</li>
+              <li>Miki Habryn</li>
+              <li>Richard Minerich</li>
+              <li>Paul Lindner</li>
               <li>Jesse Olson</li>
               <li>Joe McLaughlin</li>
-              <li>John Newberger</li>
-              <li>Jon Dubovsky</li>
-              <li>Jonas Wisser</li>
-              <li>Jonathan Cremin</li>
-              <li>Josef Kenny</li>
               <li>Josephine Pedersen</li>
-              <li>Julie Moronuki</li>
-              <li>Kenneth Ken Sugar</li>
-              <li>Kevin Sonney</li>
-              <li>Kevin Yank</li>
-              <li>Koya Matsuo</li>
-              <li>Kyle R Kingsbury</li>
-              <li>Landy Manderson</li>
-              <li>Laurent Joubert</li>
-              <li>Laurie Voss</li>
-              <li>Leif Halldor Asgeirsson</li>
-              <li>Little James</li>
-              <li>localyouser</li>
-              <li>lrvick</li>
-              <li>Manesh Pillai</li>
-              <li>Masaya Imai</li>
-              <li>Matt Meier</li>
-              <li>Matt Ulman</li>
+              <li>C J Silverio</li>
+              <li>Rufus </li>
               <li>Matthieu Herrb</li>
-              <li>Mikayla</li>
-              <li>Miki Habryn</li>
-              <li>Naomi Alderman</li>
-              <li>Nate Borland</li>
-              <li>Nicolas Morel</li>
-              <li>Osamu Miyake</li>
-              <li>Pablo Meier</li>
-              <li>Patrick Quinn-Graham</li>
-              <li>Paul Lindner</li>
-              <li>peter hessler</li>
-              <li>Philip James</li>
-              <li>Philippe Hausler</li>
-              <li>Richard Minerich</li>
-              <li>roschaefer</li>
-              <li>Rufus</li>
-              <li>Sajith Sasidharan</li>
-              <li>Sam Herlapuut</li>
-              <li>Sandro Hawke</li>
-              <li>Satsuki Yanagi</li>
-              <li>Steve Streza</li>
-              <li>Szmozsánszky István "Flaki"</li>
-              <li>TARIK F AJAMI</li>
-              <li>Ted</li>
-              <li>Timothy Wood</li>
-              <li>Tom Adriaenssen</li>
-              <li>Tom Lowenthal</li>
-              <li>Walter Ebert</li>
-              <li>Wil Kie</li>
-              <li>Wladimir</li>
+              <li>Charles Hutchins</li>
+              <li>Koya Matsuo</li>
+              <li>Bheesham Persaud</li>
+              <li>Akihiko Odaki</li>
+              <li>James Valleroy</li>
+              <li>Clinton Freeman</li>
+              <li>itsumonotakumi </li>
+              <li>_</li>
+              <li>Flaki</li>
               <li>Wolfgang @vilbi</li>
+              <li>Wladimir</li>
+              <li>Matt Ulman</li>
+              <li>Deborah Goldsmith</li>
+              <li>Nicolas Morel</li>
+              <li>Jan Krutisch</li>
+              <li>Jonathan Cremin</li>
+              <li>Grant Stavely</li>
+              <li>TARIK F AJAMI</li>
+              <li>Naomi Alderman</li>
+              <li>Patrick Quinn-Graham</li>
+              <li>John Newberger</li>
+              <li>Steve Streza</li>
+              <li>Mikayla </li>
+              <li>Chris Hanson</li>
+              <li>Kevin Yank</li>
+              <li>Boris Jamot</li>
+              <li>Donovan Finch</li>
+              <li>Tyr Mactire</li>
+              <li>Jacqueline Button</li>
+              <li>Wil Kie</li>
+              <li>Jean-Luc Geering</li>
+              <li>Aaron </li>
+              <li>Kyle R Kingsbury</li>
+              <li>John McAvey</li>
+              <li>Captain Jingle Pants</li>
+              <li>KANEKO Yoshitaka</li>
+              <li>Jeremy Clark</li>
+              <li>Jordan </li>
+              <li>Ryan</li>
+              <li>zunda</li>
+              <li>Julia Dąbrowska</li>
+              <li>Reubdog53</li>
+              <li>James Brown</li>
+              <li>Manu Gomez</li>
+              <li>Tomoyuki Sato</li>
+              <li>DignifiedSilence</li>
             </ul>
           </Scrollbars>
         </div>
