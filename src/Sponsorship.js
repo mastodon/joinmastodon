@@ -21,6 +21,7 @@ import sponsorQuarterless from './assets/sponsors/quarterless.png';
 import sponsorNextiva from './assets/sponsors/nextiva.svg';
 import sponsorKevani from './assets/sponsors/KEVANI_LOGO.png';
 import sponsorDoggieToys from './assets/sponsors/doggie-toys.png';
+import sponsorOnlineCasinoSat from './assets/sponsors/onlinecasinosat.svg';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -67,6 +68,7 @@ const goldSponsors = [
   { href: 'https://quarterless.com/', src: sponsorQuarterless, alt: 'Quarterless' }, // Custom
   { href: 'https://www.kevani.com/', src: sponsorKevani, alt: 'Kevani' },
   { href: 'https://www.doggietoys.deals/', src: sponsorDoggieToys, alt: 'Doggie Toys' }, // Custom
+  { href: 'https://www.onlinecasinosat.com/', src: sponsorOnlineCasinoSat, alt: 'onlinecasinosat.com' },
 ];
 
 const silverSponsors = [
