@@ -38,6 +38,7 @@ import sponsorMastoHost from './assets/sponsors/MH-horizontal-white.png';
 import sponsorQuickBooksToolHub from './assets/sponsors/QuickBooks-Tool-Hub-logo-1.png';
 import sponsorKajino from './assets/sponsors/kajino-logo.png';
 import sponsorAussieCasinoHex from './assets/sponsors/aussiecasinohex.png';
+import sponsorAssemblyFour from './assets/sponsors/a4.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -101,6 +102,7 @@ export const sponsors = [
   { href: 'https://www.leoboost.com/buy-instagram-followers', src: sponsorLeoBoost, alt: 'Buy Instagram Followers' }, // Custom
   { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' }, // Custom
   { href: 'https://masto.host/', src: sponsorMastoHost, alt: 'Masto.host - Fully managed Mastodon hosting' }, // Custom
+  { href: 'https://assemblyfour.com/', src: sponsorAssemblyFour, alt: 'Assembly Four' }, // Custom
   { href: 'https://www.5slotsites.com/', src: sponsor5SS, alt: 'https://www.5slotsites.com/' }, // Custom
   { href: 'https://www.auscasinos.com/new/', src: sponsorAusCasinos, alt: 'AusCasinos.com New Site Section' }, // Custom 
   { href: 'http://quickbookstoolhub.com/', src: sponsorQuickBooksToolHub, alt: 'Quickbooks Tool Hub' },
