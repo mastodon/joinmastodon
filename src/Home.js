@@ -39,6 +39,7 @@ import sponsorQuickBooksToolHub from './assets/sponsors/QuickBooks-Tool-Hub-logo
 import sponsorKajino from './assets/sponsors/kajino-logo.png';
 import sponsorAussieCasinoHex from './assets/sponsors/aussiecasinohex.png';
 import sponsorAssemblyFour from './assets/sponsors/a4.png';
+import sponsorPoprey from './assets/sponsors/logo-poprey-com-white.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -108,6 +109,7 @@ export const sponsors = [
   { href: 'http://quickbookstoolhub.com/', src: sponsorQuickBooksToolHub, alt: 'Quickbooks Tool Hub' },
   { href: 'https://kajino.com/', src: sponsorKajino, alt: 'Kajino' }, // Custom
   { href: 'https://aussiecasinohex.com', src: sponsorAussieCasinoHex, alt: 'CasinoHEX Australia' },
+  { href: 'https://poprey.com/', src: sponsorPoprey, alt: 'Instagram Likes' }, // Custom
 ];
 
 export default class Home extends PureComponent {
