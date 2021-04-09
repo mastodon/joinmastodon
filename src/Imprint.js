@@ -18,13 +18,11 @@ const Imprint = () => (
 
     <div className='container' style={{ marginTop: 40, display: 'flex', justifyContent: 'center' }}>
       <p style={{ flex: '0 0 auto' }}>
-        Eugen Rochko
+        Mastodon gGmbH
         <br />
-        c/o Grosch Postflex #92
+        Mühlenstraße 8a
         <br />
-        Emsdettener Straße 10
-        <br />
-        48268 Greven
+        14167 Berlin
         <br />
         Germany
         <br />
