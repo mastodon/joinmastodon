@@ -23,6 +23,7 @@ import sponsorKevani from './assets/sponsors/KEVANI_LOGO.png';
 import sponsorDoggieToys from './assets/sponsors/doggie-toys.png';
 import sponsorOnlineCasinoSat from './assets/sponsors/onlinecasinosat.svg';
 import sponsorLaatukasinot from './assets/sponsors/Laatulogo.png';
+import sponsorBesturate from './assets/sponsors/besturate.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -71,6 +72,7 @@ const goldSponsors = [
   { href: 'https://www.doggietoys.deals/', src: sponsorDoggieToys, alt: 'Doggie Toys' }, // Custom
   { href: 'https://www.onlinecasinosat.com/', src: sponsorOnlineCasinoSat, alt: 'onlinecasinosat.com' },
   { href: 'https://laatukasinot.com/kasinobonukset/', src: sponsorLaatukasinot, alt: 'Parhaat kasinobonukset' }, // Custom
+  { href: 'https://besturate.com/best-vpn/', src: sponsorBesturate, alt: 'Besturate Best VPN' },
 ];
 
 const silverSponsors = [
