@@ -24,7 +24,7 @@ import sponsorDoggieToys from './assets/sponsors/doggie-toys.png';
 import sponsorOnlineCasinoSat from './assets/sponsors/onlinecasinosat.svg';
 import sponsorLaatukasinot from './assets/sponsors/Laatulogo.png';
 import sponsorBesturate from './assets/sponsors/besturate.png';
-
+import sponsorJLD from './assets/sponsors/jld_psd_logo_orig_black.png'
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
@@ -73,6 +73,7 @@ const goldSponsors = [
   { href: 'https://www.onlinecasinosat.com/', src: sponsorOnlineCasinoSat, alt: 'onlinecasinosat.com' },
   { href: 'https://laatukasinot.com/kasinobonukset/', src: sponsorLaatukasinot, alt: 'Parhaat kasinobonukset' }, // Custom
   { href: 'https://besturate.com/best-vpn/', src: sponsorBesturate, alt: 'Besturate Best VPN' },
+  { href: 'https://www.joylovedolls.com/', src: sponsorJLD, alt: 'Joy Love Dolls' }, // Custom
 ];
 
 const silverSponsors = [
