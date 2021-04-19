@@ -36,7 +36,7 @@ import sponsor5SS from './assets/sponsors/5ss-logo-53h.png';
 import sponsorAusCasinos from './assets/sponsors/auscasinos.png';
 import sponsorMastoHost from './assets/sponsors/MH-horizontal-white.png';
 import sponsorQuickBooksToolHub from './assets/sponsors/QuickBooks-Tool-Hub-logo-1.png';
-import sponsorKajino from './assets/sponsors/kajino-logo.png';
+//import sponsorKajino from './assets/sponsors/kajino-logo.png';
 import sponsorAussieCasinoHex from './assets/sponsors/aussiecasinohex.png';
 import sponsorAssemblyFour from './assets/sponsors/a4.png';
 import sponsorPoprey from './assets/sponsors/logo-poprey-com-white.png';
@@ -107,7 +107,7 @@ export const sponsors = [
   { href: 'https://www.5slotsites.com/', src: sponsor5SS, alt: 'https://www.5slotsites.com/' }, // Custom
   { href: 'https://www.auscasinos.com/new/', src: sponsorAusCasinos, alt: 'AusCasinos.com New Site Section' }, // Custom 
   { href: 'http://quickbookstoolhub.com/', src: sponsorQuickBooksToolHub, alt: 'Quickbooks Tool Hub' },
-  { href: 'https://kajino.com/', src: sponsorKajino, alt: 'Kajino' }, // Custom
+  //{ href: 'https://kajino.com/', src: sponsorKajino, alt: 'Kajino' }, // Custom
   { href: 'https://aussiecasinohex.com', src: sponsorAussieCasinoHex, alt: 'CasinoHEX Australia' },
   { href: 'https://poprey.com/', src: sponsorPoprey, alt: 'Instagram Likes' }, // Custom
 ];
