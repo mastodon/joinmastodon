@@ -1,7 +1,7 @@
 {
-  "apps.free": "Free",
-  "apps.paid": "Paid",
-  "browse_apps.lead": "You can use Mastodon with any of these apps!",
+  "apps.free": "Gratis",
+  "apps.paid": "Betalt",
+  "browse_apps.lead": "Du kan bruke Mastodon med alle disse appene!",
   "browse_apps.title": "Browse apps",
   "choosing_a_community.all_you_need_to_sign_up": "All you need to do to sign-up is choose a community. Just like when signing up for an e-mail address, one community is going to be hosting your account and be part of your online identity.",
   "choosing_a_community.every_community_is_independent": "Every community is operated by an entirely independent organization or individual",
