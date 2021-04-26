@@ -40,6 +40,7 @@ import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarVashio from './assets/sponsors/vashio.jpg';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 import avatarFineproxy from './assets/sponsors/fineproxy.png';
+import avatarBitvape from './assets/sponsors/bitvape.png';
 
 import mastodonBit from './assets/bit.png';
 import mastodonSilver from './assets/silver.png';
@@ -100,6 +101,7 @@ const silverSponsors = [
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
   { href: 'https://reviewscon.com/', name: 'ReviewsCon', nofollow: true },
   { href: 'https://anbefaltcasino.com/', name: 'Beste Casino', nofollow: true },
+  { href: 'https://bitvape.com.au/', src: avatarBitvape, name: 'Bitvape', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
