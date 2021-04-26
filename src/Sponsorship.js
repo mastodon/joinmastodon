@@ -74,7 +74,6 @@ const goldSponsors = [
   { href: 'https://www.onlinecasinosat.com/', src: sponsorOnlineCasinoSat, alt: 'onlinecasinosat.com' },
   { href: 'https://laatukasinot.com/kasinobonukset/', src: sponsorLaatukasinot, alt: 'Parhaat kasinobonukset' }, // Custom
   { href: 'https://besturate.com/best-vpn/', src: sponsorBesturate, alt: 'Besturate Best VPN' },
-  { href: 'https://www.joylovedolls.com/', src: sponsorJLD, alt: 'Joy Love Dolls' }, // Custom
 ];
 
 const silverSponsors = [
@@ -101,6 +100,7 @@ const silverSponsors = [
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
   { href: 'https://reviewscon.com/', name: 'ReviewsCon', nofollow: true },
   { href: 'https://anbefaltcasino.com/', name: 'Beste Casino', nofollow: true },
+  { href: 'https://www.joylovedolls.com/', src: sponsorJLD, name: 'Joy Love Dolls' }, // Custom
   { href: 'https://bitvape.com.au/', src: avatarBitvape, name: 'Bitvape', nofollow: true },
 ];
 
