@@ -86,7 +86,7 @@
   "wizard_card.join": "Připojit se",
   "wizard_card.no_instant_sign_up": "Žádná okamžitá registrace",
   "wizard_card.people_count": "{label} {count, plural, one {člověk} few {lidé} many {lidí} other {lidí}}",
-  "wizard_card.request_invite": "Request invite",
+  "wizard_card.request_invite": "Požádat o pozvánku",
   "wizard_navigation.categories": "Kategorie:",
   "wizard_navigation.choosing_a_community": "Výběr komunity"
 }
