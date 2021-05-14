@@ -107,7 +107,7 @@ export const sponsors = [
   { href: 'http://quickbookstoolhub.com/', src: sponsorQuickBooksToolHub, alt: 'Quickbooks Tool Hub' },
   //{ href: 'https://kajino.com/', src: sponsorKajino, alt: 'Kajino' }, // Custom
   { href: 'https://aussiecasinohex.com', src: sponsorAussieCasinoHex, alt: 'CasinoHEX Australia' },
-  { href: 'https://poprey.com/', src: sponsorPoprey, alt: 'Instagram Likes' }, // Custom
+  //{ href: 'https://poprey.com/', src: sponsorPoprey, alt: 'Instagram Likes' }, // Custom
 ];
 
 export default class Home extends PureComponent {
