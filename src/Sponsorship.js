@@ -26,6 +26,7 @@ import sponsorLaatukasinot from './assets/sponsors/Laatulogo.png';
 import sponsorBesturate from './assets/sponsors/besturate.png';
 import sponsorJLD from './assets/sponsors/jld_psd_logo_orig_black.png'
 import sponsorCanadaRealCasino from './assets/sponsors/canada-real-casino.png';
+import sponsorLionCasinos from './assets/sponsors/lioncasinos.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -77,6 +78,7 @@ const goldSponsors = [
   { href: 'https://laatukasinot.com/kasinobonukset/', src: sponsorLaatukasinot, alt: 'Parhaat kasinobonukset' }, // Custom
   { href: 'https://besturate.com/best-vpn/', src: sponsorBesturate, alt: 'Besturate Best VPN' },
   { href: 'https://realcasinoscanada.com/best-online-casinos', src: sponsorCanadaRealCasino, alt: 'Best online casinos' },
+  { href: 'https://mtltimes.ca/life/11-best-real-money-canadian-online-casinos-revealed-after-months-of-testing/', src: sponsorLionCasinos, alt: 'canadian online casino study' }, // Custom
 ];
 
 const silverSponsors = [
