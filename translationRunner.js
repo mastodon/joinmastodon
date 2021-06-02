@@ -14,6 +14,7 @@ manageTranslations({
     'eu',
     'fi',
     'fr',
+    'gd',
     'he',
     'it',
     'ja',

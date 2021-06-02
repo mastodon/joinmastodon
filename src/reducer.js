@@ -21,6 +21,7 @@ const supportedLanguages = [
   { locale: 'eu', language: 'Euskara' },
   //{ locale: 'fi', language: 'Suomi' },
   { locale: 'fr', language: 'Français' },
+  { locale: 'gd', language: 'Gàidhlig' },
   //{ locale: 'he', language: 'עברית' },
   { locale: 'it', language: 'Italiano' },
   { locale: 'ja', language: '日本語' },
