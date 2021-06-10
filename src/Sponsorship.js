@@ -24,7 +24,6 @@ import sponsorDoggieToys from './assets/sponsors/doggie-toys.png';
 import sponsorOnlineCasinoSat from './assets/sponsors/onlinecasinosat.svg';
 import sponsorLaatukasinot from './assets/sponsors/Laatulogo.png';
 import sponsorBesturate from './assets/sponsors/besturate.png';
-import sponsorJLD from './assets/sponsors/jld_psd_logo_orig_black.png'
 import sponsorCanadaRealCasino from './assets/sponsors/canada-real-casino.png';
 import sponsorLionCasinos from './assets/sponsors/lioncasinos.png';
 import sponsorBitlaunch from './assets/sponsors/bitlaunch.svg';
@@ -107,7 +106,6 @@ const silverSponsors = [
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
   { href: 'https://reviewscon.com/', name: 'ReviewsCon', nofollow: true },
   { href: 'https://anbefaltcasino.com/', name: 'Beste Casino', nofollow: true },
-  { href: 'https://www.joylovedolls.com/', src: sponsorJLD, name: 'Joy Love Dolls' }, // Custom
   { href: 'https://bitvape.com.au/', src: avatarBitvape, name: 'Bitvape', nofollow: true },
 ];
 
