@@ -109,7 +109,7 @@ const silverSponsors = [
   { href: 'https://reviewscon.com/', name: 'ReviewsCon', nofollow: true },
   { href: 'https://anbefaltcasino.com/', name: 'Beste Casino', nofollow: true },
   { href: 'https://bitvape.com.au/', src: avatarBitvape, name: 'Bitvape', nofollow: true },
-  { href: 'https://vpntesting.com/', name: 'VPN Test', nofollow: true },
+  //{ href: 'https://vpntesting.com/', name: 'VPN Test', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
