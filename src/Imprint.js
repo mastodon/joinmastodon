@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import Navigation from './Navigation';
+import BottomNavigation from './BottomNavigation';
 
 // This page does not require translations
 
@@ -33,6 +34,8 @@ const Imprint = () => (
         VAT ID: DE316095554
       </p>
     </div>
+
+    <BottomNavigation />
 
     <Helmet>
       <title>Imprint - Mastodon</title>

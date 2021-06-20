@@ -10,6 +10,7 @@ import BrowseApps from './BrowseApps';
 import ScrollToTop from './ScrollToTop';
 import Covenant from './Covenant';
 import BrowseCommunities from './BrowseCommunities';
+import PrivacyPolicy from './PrivacyPolicy';
 
 import { addLocaleData, IntlProvider } from 'react-intl';
 import ar from 'react-intl/locale-data/ar';
@@ -84,6 +85,7 @@ const App = ({ usersLocale }) => (
           <Route path='/imprint' component={Imprint} />
           <Route path='/apps' component={BrowseApps} />
           <Route path='/covenant' component={Covenant} />
+          <Route path='/ios/privacy' component={PrivacyPolicy} />
         </div>
       </ScrollToTop>
     </Router>
