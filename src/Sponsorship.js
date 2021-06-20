@@ -24,7 +24,11 @@ import sponsorDoggieToys from './assets/sponsors/doggie-toys.png';
 import sponsorOnlineCasinoSat from './assets/sponsors/onlinecasinosat.svg';
 import sponsorLaatukasinot from './assets/sponsors/Laatulogo.png';
 import sponsorBesturate from './assets/sponsors/besturate.png';
-import sponsorJLD from './assets/sponsors/jld_psd_logo_orig_black.png'
+import sponsorCanadaRealCasino from './assets/sponsors/canada-real-casino.png';
+import sponsorLionCasinos from './assets/sponsors/lioncasinos.png';
+import sponsorBitlaunch from './assets/sponsors/bitlaunch.svg';
+import sponsorInkedin from './assets/sponsors/inkedin-logo-small-2.webp';
+
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
@@ -74,6 +78,10 @@ const goldSponsors = [
   { href: 'https://www.onlinecasinosat.com/', src: sponsorOnlineCasinoSat, alt: 'onlinecasinosat.com' },
   { href: 'https://laatukasinot.com/kasinobonukset/', src: sponsorLaatukasinot, alt: 'Parhaat kasinobonukset' }, // Custom
   { href: 'https://besturate.com/best-vpn/', src: sponsorBesturate, alt: 'Besturate Best VPN' },
+  { href: 'https://realcasinoscanada.com/best-online-casinos', src: sponsorCanadaRealCasino, alt: 'Best online casinos' },
+  { href: 'https://mtltimes.ca/life/11-best-real-money-canadian-online-casinos-revealed-after-months-of-testing/', src: sponsorLionCasinos, alt: 'canadian online casino study' }, // Custom
+  { href: 'https://bitlaunch.io/', src: sponsorBitlaunch, alt: 'Bitcoin VPS' }, // Custom
+  { href: 'http://inkedin.com/', src: sponsorInkedin, alt: 'inkedin.com' },
 ];
 
 const silverSponsors = [
@@ -100,8 +108,8 @@ const silverSponsors = [
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
   { href: 'https://reviewscon.com/', name: 'ReviewsCon', nofollow: true },
   { href: 'https://anbefaltcasino.com/', name: 'Beste Casino', nofollow: true },
-  { href: 'https://www.joylovedolls.com/', src: sponsorJLD, name: 'Joy Love Dolls' }, // Custom
   { href: 'https://bitvape.com.au/', src: avatarBitvape, name: 'Bitvape', nofollow: true },
+  //{ href: 'https://vpntesting.com/', name: 'VPN Test', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (

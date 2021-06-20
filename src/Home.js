@@ -39,6 +39,8 @@ import sponsorQuickBooksToolHub from './assets/sponsors/QuickBooks-Tool-Hub-logo
 import sponsorAussieCasinoHex from './assets/sponsors/aussiecasinohex.png';
 import sponsorAssemblyFour from './assets/sponsors/a4.png';
 //import sponsorPoprey from './assets/sponsors/logo-poprey-com-white.png';
+import sponsorHexCa from './assets/sponsors/hex-ca.png';
+import sponsorJLD from './assets/sponsors/jld_psd_logo_orig_black.png'
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -87,7 +89,7 @@ export const sponsors = [
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
   { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' }, // OpenCollective
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
-  { href: 'https://papersowl.com/free-plagiarism-checker', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
+  { href: 'https://papersowl.com/write-my-essay-please', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
   { href: 'https://www.valuemarke.com/', src: sponsorValueMarke, alt: 'ValueMarke' },
   { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
@@ -108,6 +110,8 @@ export const sponsors = [
   //{ href: 'https://kajino.com/', src: sponsorKajino, alt: 'Kajino' }, // Custom
   { href: 'https://aussiecasinohex.com', src: sponsorAussieCasinoHex, alt: 'CasinoHEX Australia' },
   //{ href: 'https://poprey.com/', src: sponsorPoprey, alt: 'Instagram Likes' }, // Custom
+  { href: 'https://onlinecasinohex.ca/', src: sponsorHexCa, alt: 'OnlineCasinoHEX.ca' }, // Custom
+  { href: 'https://www.joylovedolls.com/', src: sponsorJLD, name: 'Joy Love Dolls' }, // Custom
 ];
 
 export default class Home extends PureComponent {
