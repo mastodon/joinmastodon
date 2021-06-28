@@ -39,6 +39,7 @@ const BottomNavigation = () => (
             <li><Link to='/imprint'><FormattedMessage id='contact_us' defaultMessage='Contact us' /></Link></li>
             <li><a target='_blank' rel='noopener noreferrer' href='https://blog.joinmastodon.org/'><FormattedMessage id='nav.blog' defaultMessage='Blog' /></a></li>
             <li><a href='/press-kit.zip'><FormattedMessage id='credits.press_kit' defaultMessage='Press kit' /></a></li>
+            <li><Link to='/privacy-policy'><FormattedMessage id='privacy_policy' defaultMessage='Privacy policy' /></Link></li>
           </ul>
         </div>
       </div>

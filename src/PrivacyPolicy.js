@@ -9,10 +9,17 @@ const PrivacyPolicy = () => (
     <Navigation />
 
     <div className='container'>
-      <h1>Mastodon for iOS Privacy Policy</h1>
-      <p className='lead'>Last updated June 20, 2021</p>
+      <h1>Privacy Policy</h1>
+      <p className='lead'>Last updated June 28, 2021</p>
       <hr />
-      <p className='lead'>The Mastodon for iOS app does not collect or process any personal information from its users. The app is used to connect to third-party Mastodon servers that may or may not collect personal information and are not covered by this privacy policy. Each third-party Mastodon server comes equipped with its own privacy policy that can be viewed through the app or through that server's website.</p>
+
+      <div className='covenant__terms' style={{ marginTop: 0 }}>
+        <p className='lead'><strong>This is the privacy policy for the joinmastodon.org website and related services.</strong> It is not the privacy policy for Mastodon the social network. Mastodon is made up of third-party servers that are not covered by this privacy policy. You can view an individual Mastodon server's privacy policy through its website.</p>
+        <hr />
+        <p className='lead'><strong>If you sign up to one of our newsletters by submitting a form on joinmastodon.org or its subdomains</strong>, we collect your e-mail address as well as the time and date of the sign up.</p>
+        <p className='lead'>You give us consent to send you e-mails when you sign up for our newsletters.</p>
+        <p className='lead'>You can unsubscribe from the newsletters by using the "unsubscribe" link provided in the footer of each e-mail. When you unsubscribe, your e-mail address remains in our system by default. You can delete all of your data through that link.</p>
+      </div>
     </div>
 
     <BottomNavigation />
