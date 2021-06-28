@@ -7,19 +7,15 @@ import BottomNavigation from './BottomNavigation';
 // This page does not require translations
 
 const Imprint = () => (
-  <div className='sponsorship imprint' id='imprint'>
-    <div className='intro'>
-      <Navigation />
+  <div className='browse-apps covenant'>
+    <Navigation />
 
-      <div className='text'>
-        <h2>Imprint</h2>
-        <p className='lead'>For the pages under joinmastodon.org and its subdomains:</p>
-      </div>
-    </div>
-
-    <div className='container' style={{ marginTop: 40, display: 'flex', justifyContent: 'center' }}>
-      <p style={{ flex: '0 0 auto' }}>
-        Mastodon gGmbH
+    <div className='container'>
+      <h1>Contact us / Impressum</h1>
+      <p className='lead'>For the pages under joinmastodon.org and its subdomains:</p>
+      <hr />
+      <p>
+        Mastodon gGmbH (HRB 230086 B)
         <br />
         Mühlenstraße 8a
         <br />
@@ -28,17 +24,13 @@ const Imprint = () => (
         Germany
         <br />
         E-mail: hello@joinmastodon.org
-        <br />
-        Tel: (+49) 61312766257
-        <br />
-        VAT ID: DE316095554
       </p>
     </div>
 
     <BottomNavigation />
 
     <Helmet>
-      <title>Imprint - Mastodon</title>
+      <title>Contact us / Impressum - Mastodon</title>
     </Helmet>
   </div>
 );
