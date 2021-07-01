@@ -10,6 +10,10 @@ const messages = defineMessages({
 const Title = ({ intl }) => (
   <Helmet>
     <title>{intl.formatMessage(messages.title)}</title>
+
+    <meta property='og:title' content='Mastodon' />
+    <meta name='description' content='Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!' />
+    <meta property='og:description' content='Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!' />
   </Helmet>
 );
 
