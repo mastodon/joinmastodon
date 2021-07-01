@@ -199,6 +199,21 @@
   }
 }
 
+@media only screen and (max-width: $content-width) {
+  .app-intro .app-intro__hero {
+    flex-wrap: wrap;
+  }
+
+  .app-intro .app-intro__hero__unit {
+    text-align: center;
+    margin-bottom: 30px;
+
+    form {
+      justify-content: center;
+    }
+  }
+}
+
 .app-store-badge {
   height: 50px;
 }
