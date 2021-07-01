@@ -41,6 +41,7 @@ const Covenant = () => (
 
     <Helmet>
       <title>Mastodon Server Covenant - Mastodon</title>
+      <meta property='og:title' content='Mastodon Server Covenant' />
     </Helmet>
   </div>
 );

@@ -114,6 +114,7 @@ class Wizard extends React.PureComponent {
 
         <Helmet>
           <title>{intl.formatMessage(categoriesMessages[category])} - Mastodon</title>
+          <meta property='og:title' content={intl.formatMessage(categoriesMessages[category])} />
         </Helmet>
       </div>
     );

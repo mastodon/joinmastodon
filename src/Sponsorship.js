@@ -277,6 +277,7 @@ const Sponsorship = ({ intl }) => (
 
     <Helmet>
       <title>{intl.formatMessage({ id: 'sponsorship.sponsors_of_mastodon', defaultMessage: 'Sponsors of Mastodon' })} - Mastodon</title>
+      <meta property='og:title' content={intl.formatMessage({ id: 'sponsorship.sponsors_of_mastodon', defaultMessage: 'Sponsors of Mastodon' })} />
     </Helmet>
   </div>
 );

@@ -176,7 +176,7 @@ $phi: 1.6180339887498948482;
   padding-top: 15px;
   overflow: hidden;
   background: lighten($darkest, 4%);
-  background: linear-gradient(150deg, lighten($darkest, 10%), lighten($darkest, 4%));
+  //background: linear-gradient(150deg, lighten($darkest, 10%), lighten($darkest, 4%));
   color: $lighter;
 
   .text {

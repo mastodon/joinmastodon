@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 
 import Navigation from './Navigation';
 import BottomNavigation from './BottomNavigation';
+import ArrowLink from './ArrowLink';
+
+import iphone12 from './assets/iphone12.png';
+//import downloadOnAppStore from './assets/download-on-app-store.svg';
 
 import tusky from './assets/apps/tusky.png';
 import subwayTooter from './assets/apps/subway-tooter.png';
@@ -188,41 +192,90 @@ const sponsors = [
   { href: 'https://www.drivencoffee.com/', src: sponsorDrivenCoffee, alt: 'Driven Coffee' },
 ];
 
+const WaitingListForm = () => (
+  <form method='post' action='https://newsroom.joinmastodon.org/subscription/form' className='listmonk-form'>
+    <input id='8b9d9' type='hidden' name='l' value='8b9d90ad-9997-4ef9-92df-c1941a1da492' />
+
+    <div className='input-with-button'>
+      <input type='email' name='email' placeholder='Your e-mail address' required='required' />
+      <button type='submit'>Join the list</button>
+    </div>
+  </form>
+);
+
 const BrowseApps = ({ intl }) => (
   <div className='browse-apps'>
-    <Navigation />
+    <div className='app-intro'>
+      <Navigation />
 
-    <div className='container'>
-      <h1><FormattedMessage id='browse_apps.title' defaultMessage='Browse apps' /></h1>
-      <p className='lead'><FormattedMessage id='browse_apps.lead' defaultMessage='You can use Mastodon with any of these apps!' /></p>
+      <div className='container'>
+        <div className='app-intro__hero'>
+          <div className='app-intro__hero__unit'>
+            <h1>
+              <small><FormattedMessage id='ios.introducing' defaultMessage='Introducing' /></small>
+              <br />
+              <FormattedMessage id='ios.app_name' defaultMessage='Mastodon for iOS' />
+            </h1>
 
-      <hr />
+            <p><FormattedMessage id='ios.in_progress' defaultMessage="We're working on an official app for Mastodon on iOS, in addition to the web version and all the third-party apps available below." /></p>
 
-      <h2>Android</h2>
+            {/*<img src={downloadOnAppStore} alt='' className='app-store-badge' />*/}
+
+            <WaitingListForm />
+          </div>
+
+          <img className='app-intro__hero__screenshot' src={iphone12} alt='' />
+        </div>
+      </div>
+    </div>
+
+    <div className='container feature'>
+      <div className='feature-angle-container'>
+        <div className='feature-angle'>
+          <i className='ion-md-browsers' />
+          <h3><FormattedMessage id='browse_apps.progressive_web_app' defaultMessage="Progressive Web App" /></h3>
+          <p><FormattedMessage id='browse_apps.you_can_use_it_from_desktop' defaultMessage="You can always use Mastodon from the browser on your desktop or phone! It can be added to your home screen and some browsers even support push notifications, just like a native app!" /></p>
+          <ArrowLink to='/communities' className='link-button'><FormattedMessage id='features.join_community' defaultMessage='Join a community' /></ArrowLink>
+        </div>
+
+        <div className='feature-angle'>
+          <i className='ion-md-code' />
+          <h3><FormattedMessage id='browse_apps.open_api' defaultMessage='Open API' /></h3>
+          <p><FormattedMessage id='browse_apps.make_your_own' defaultMessage="Mastodon is open-source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!" /></p>
+          <ArrowLink href='https://docs.joinmastodon.org/client/intro/' target='_blank' rel='noopener noreferrer' className='link-button'><FormattedMessage id='browse_apps.api_docs' defaultMessage='API documentation' /></ArrowLink>
+        </div>
+      </div>
+    </div>
+
+    <div className='testimonials container'>
+      <h2><FormattedMessage id='browse_apps.title2' defaultMessage='Browse third-party apps' /></h2>
+      <p className='lead'><FormattedMessage id='browse_apps.lead2' defaultMessage="Thanks to Mastodon's open API, you can use it from any of these apps developed by third-party developers" /></p>
+
+      <h3>Android</h3>
 
       <div className='app-grid'>
         {apps.android.map(renderApp)}
       </div>
 
-      <h2>iOS</h2>
+      <h3>iOS</h3>
 
       <div className='app-grid'>
         {apps.ios.map(renderApp)}
       </div>
 
-      <h2>Web</h2>
+      <h3><FormattedMessage id='browse_apps.web' defaultMessage='Web' /></h3>
 
       <div className='app-grid'>
         {apps.web.map(renderApp)}
       </div>
 
-      <h2>Desktop</h2>
+      <h3><FormattedMessage id='browse_apps.desktop' defaultMessage='Desktop' /></h3>
 
       <div className='app-grid'>
         {apps.desktop.map(renderApp)}
       </div>
 
-      <h2>SailfishOS</h2>
+      <h3>SailfishOS</h3>
 
       <div className='app-grid'>
         {apps.sailfish.map(renderApp)}
@@ -244,7 +297,10 @@ const BrowseApps = ({ intl }) => (
     <BottomNavigation />
 
     <Helmet>
-      <title>{intl.formatMessage({ id: 'browse_apps.title', defaultMessage: 'Browse apps' })} - Mastodon</title>
+      <title>{intl.formatMessage({ id: 'browse_apps.page_title', defaultMessage: 'Get the Mastodon app' })} - Mastodon</title>
+      <meta property="og:title" content={intl.formatMessage({ id: 'browse_apps.page_title', defaultMessage: 'Get the Mastodon app' })} />
+      <meta name="description" content={intl.formatMessage({ id: 'browse_apps.page_description', defaultMessage: 'Browse official and third-party apps for the decentralized social network Mastodon' })} />
+      <meta property="og:description" content={intl.formatMessage({ id: 'browse_apps.page_description', defaultMessage: 'Browse official and third-party apps for the decentralized social network Mastodon' })} />
     </Helmet>
   </div>
 );

@@ -36,6 +36,7 @@ const ChoosingACommunity = ({ intl }) => (
 
     <Helmet>
       <title>{intl.formatMessage({ id: 'wizard_navigation.choosing_a_community', defaultMessage: 'Choosing a community' })} - Mastodon</title>
+      <meta property='og:title' content={intl.formatMessage({ id: 'wizard_navigation.choosing_a_community', defaultMessage: 'Choosing a community' })} />
     </Helmet>
   </div>
 );

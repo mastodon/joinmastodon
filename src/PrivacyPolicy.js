@@ -26,6 +26,7 @@ const PrivacyPolicy = () => (
 
     <Helmet>
       <title>Privacy Policy - Mastodon</title>
+      <meta property='og:title' content='Privacy Policy for joinmastodon.org' />
     </Helmet>
   </div>
 );

@@ -19,6 +19,7 @@ const IOSPrivacyPolicy = () => (
 
     <Helmet>
       <title>Privacy Policy - Mastodon for iOS</title>
+      <meta property='og:title' content='Privacy Policy for Mastodon for iOS' />
     </Helmet>
   </div>
 );

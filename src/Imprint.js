@@ -31,6 +31,7 @@ const Imprint = () => (
 
     <Helmet>
       <title>Contact us / Impressum - Mastodon</title>
+      <meta property='og:title' content='Contact us / Impressum' />
     </Helmet>
   </div>
 );
