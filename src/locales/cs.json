@@ -1,9 +1,9 @@
 {
   "apps.free": "Bezplatná",
   "apps.paid": "Placená",
-  "browse_apps.api_docs": "API documentation",
+  "browse_apps.api_docs": "Dokumentace API",
   "browse_apps.desktop": "Desktop",
-  "browse_apps.lead2": "Thanks to Mastodon's open API, you can use it from any of these apps developed by third-party developers",
+  "browse_apps.lead2": "Díky otevřenému API můžete Mastodon používat z kterékoliv z těchto aplikací vyvinutých vývojáři třetích stran",
   "browse_apps.make_your_own": "Mastodon is open-source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!",
   "browse_apps.open_api": "Otevřené API",
   "browse_apps.progressive_web_app": "Progresivní Webová Aplikace",
