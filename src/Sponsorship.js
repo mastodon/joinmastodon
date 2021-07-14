@@ -28,6 +28,7 @@ import sponsorCanadaRealCasino from './assets/sponsors/canada-real-casino.png';
 import sponsorBitlaunch from './assets/sponsors/bitlaunch.svg';
 import sponsorInkedin from './assets/sponsors/inkedin-logo-small-2.webp';
 import sponsorCasinoFiables from './assets/sponsors/logo-fiables.png';
+import sponsorCodeCrafters from './assets/sponsors/codecrafters.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -82,6 +83,7 @@ const goldSponsors = [
   { href: 'https://bitlaunch.io/', src: sponsorBitlaunch, alt: 'Bitcoin VPS' }, // Custom
   { href: 'http://inkedin.com/', src: sponsorInkedin, alt: 'inkedin.com' },
   { href: 'https://casinofiables.com/', src: sponsorCasinoFiables, alt: 'Casino Fiables' },
+  { href: 'https://codecrafters.io/', src: sponsorCodeCrafters, alt: 'CodeCrafters' }, // Custom
 ];
 
 const silverSponsors = [
