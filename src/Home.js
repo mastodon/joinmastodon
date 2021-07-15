@@ -41,6 +41,7 @@ import sponsorAssemblyFour from './assets/sponsors/a4.png';
 //import sponsorPoprey from './assets/sponsors/logo-poprey-com-white.png';
 import sponsorHexCa from './assets/sponsors/hex-ca.png';
 import sponsorJLD from './assets/sponsors/jld_psd_logo_orig_black.png'
+import sponsorKasynoHex from './assets/sponsors/kasynohex.svg';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -112,6 +113,7 @@ export const sponsors = [
   //{ href: 'https://poprey.com/', src: sponsorPoprey, alt: 'Instagram Likes' }, // Custom
   { href: 'https://onlinecasinohex.ca/', src: sponsorHexCa, alt: 'OnlineCasinoHEX.ca' }, // Custom
   { href: 'https://www.joylovedolls.com/', src: sponsorJLD, name: 'Joy Love Dolls' }, // Custom
+  { href: 'https://kasynohex.com/kasyna-online/', src: sponsorKasynoHex, alt: 'Casino online PL' }, // Custom
 ];
 
 export default class Home extends PureComponent {
