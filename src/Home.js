@@ -42,6 +42,7 @@ import sponsorAssemblyFour from './assets/sponsors/a4.png';
 import sponsorHexCa from './assets/sponsors/hex-ca.png';
 import sponsorJLD from './assets/sponsors/jld_psd_logo_orig_black.png'
 import sponsorKasynoHex from './assets/sponsors/kasynohex.svg';
+import sponsorAltCasino from './assets/sponsors/alt-casino-1.png';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -114,6 +115,7 @@ export const sponsors = [
   { href: 'https://onlinecasinohex.ca/', src: sponsorHexCa, alt: 'OnlineCasinoHEX.ca' }, // Custom
   { href: 'https://www.joylovedolls.com/', src: sponsorJLD, name: 'Joy Love Dolls' }, // Custom
   { href: 'https://kasynohex.com/kasyna-online/', src: sponsorKasynoHex, alt: 'Casino online PL' }, // Custom
+  { href: 'https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html', src: sponsorAltCasino, alt: 'Online Casinos Australia' }, // Custom
 ];
 
 export default class Home extends PureComponent {
