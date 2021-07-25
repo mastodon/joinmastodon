@@ -30,6 +30,7 @@ import sponsorInkedin from './assets/sponsors/inkedin-logo-small-2.webp';
 import sponsorCasinoFiables from './assets/sponsors/logo-fiables.png';
 import sponsorCodeCrafters from './assets/sponsors/codecrafters.png';
 import sponsorRapidEssay from './assets/sponsors/rapidessay_logo.png';
+import sponsorCasinoHexNL from './assets/sponsors/casino-hex-nl.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -86,6 +87,7 @@ const goldSponsors = [
   { href: 'https://casinofiables.com/', src: sponsorCasinoFiables, alt: 'Casino Fiables' },
   { href: 'https://codecrafters.io/', src: sponsorCodeCrafters, alt: 'CodeCrafters' }, // Custom
   { href: 'https://rapidessay.com/', src: sponsorRapidEssay, alt: 'Rapid Essay' },
+  { href: 'https://onlinecasinohex.nl/', src: sponsorCasinoHexNL, alt: 'CasinoHEX Nederland' },
 ];
 
 const silverSponsors = [
