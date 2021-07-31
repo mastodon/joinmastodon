@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage, injectIntl, defineMessages } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ import BottomNavigation from './BottomNavigation';
 import ArrowLink from './ArrowLink';
 
 import iphone12 from './assets/iphone12.png';
-//import downloadOnAppStore from './assets/download-on-app-store.svg';
+import downloadOnAppStore from './assets/download-on-app-store.svg';
 
 import tusky from './assets/apps/tusky.png';
 import subwayTooter from './assets/apps/subway-tooter.png';
@@ -192,6 +192,7 @@ const sponsors = [
   { href: 'https://www.drivencoffee.com/', src: sponsorDrivenCoffee, alt: 'Driven Coffee' },
 ];
 
+/*
 const messages = defineMessages({
   email: { id: 'ios.email', defaultMessage: 'Your e-mail address' },
 });
@@ -206,6 +207,7 @@ const WaitingListForm = injectIntl(({ intl }) => (
     </div>
   </form>
 ));
+*/
 
 const BrowseApps = ({ intl }) => (
   <div className='browse-apps'>
@@ -221,11 +223,9 @@ const BrowseApps = ({ intl }) => (
               <FormattedMessage id='ios.app_name' defaultMessage='Mastodon for iOS' />
             </h1>
 
-            <p><FormattedMessage id='ios.in_progress' defaultMessage="We're working on an official app for Mastodon on iOS, in addition to the web version and all the third-party apps available below. Join the waiting list to get an e-mail when it launches:" /></p>
+            <p><FormattedMessage id='ios.download' defaultMessage="We've released an official app for Mastodon on iOS, in addition to the web version and all the third-party apps available below." /></p>
 
-            {/*<img src={downloadOnAppStore} alt='' className='app-store-badge' />*/}
-
-            <WaitingListForm />
+            <a href='https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974'><img src={downloadOnAppStore} alt='Download on the App Store' className='app-store-badge' /></a>
           </div>
 
           <img className='app-intro__hero__screenshot' src={iphone12} alt='' />
