@@ -17,7 +17,6 @@ import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
 import sponsorTootWales from './assets/sponsors/tootwales.png';
 import sponsorSpyic from './assets/sponsors/spyic2.png';
 import sponsorCocosign from './assets/sponsors/cocosign2.png';
-import sponsorQuarterless from './assets/sponsors/quarterless.png';
 import sponsorNextiva from './assets/sponsors/nextiva.svg';
 import sponsorKevani from './assets/sponsors/KEVANI_LOGO.png';
 import sponsorDoggieToys from './assets/sponsors/doggie-toys.png';
@@ -75,7 +74,6 @@ const goldSponsors = [
   { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' },
   { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' },
   { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
-  { href: 'https://quarterless.com/', src: sponsorQuarterless, alt: 'Quarterless' }, // Custom
   { href: 'https://www.kevani.com/', src: sponsorKevani, alt: 'Kevani' },
   { href: 'https://www.doggietoys.deals/', src: sponsorDoggieToys, alt: 'Doggie Toys' }, // Custom
   { href: 'https://www.onlinecasinosat.com/', src: sponsorOnlineCasinoSat, alt: 'onlinecasinosat.com' },
