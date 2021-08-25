@@ -32,16 +32,12 @@ import avatarNoellabo from './assets/sponsors/noellabo.png';
 import avatarArasPranckevicius from './assets/sponsors/araspranckevicius.jpeg';
 import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 import avatarTnzk from './assets/sponsors/tnzk.png';
-import avatarTakeShape from './assets/sponsors/takeshape.jpg';
 import avatarClay from './assets/sponsors/clay.png';
 import avatarTomoki from './assets/sponsors/tomoki.png';
 import avatarTradersInsurance from './assets/sponsors/tradersinsurance.png';
 import avatarSwitchVPN from './assets/sponsors/switchvpn.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
-import avatarVashio from './assets/sponsors/vashio.jpg';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
-import avatarFineproxy from './assets/sponsors/fineproxy.png';
-import avatarBitvape from './assets/sponsors/bitvape.png';
 
 import mastodonBit from './assets/bit.png';
 import mastodonSilver from './assets/silver.png';
