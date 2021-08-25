@@ -85,7 +85,7 @@ export const sponsors = [
   { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' }, // OpenCollective
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
   { href: 'https://papersowl.com/write-my-essay-please', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
-  { href: 'https://www.valuemarke.com/', src: sponsorValueMarke, alt: 'ValueMarke' }
+  { href: 'https://www.valuemarke.com/', src: sponsorValueMarke, alt: 'ValueMarke' },
   { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
   { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
