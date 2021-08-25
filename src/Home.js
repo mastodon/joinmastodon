@@ -29,16 +29,13 @@ import sponsorSujitech from './assets/sponsors/mask-network.png';
 import sponsorBCS from './assets/sponsors/bcs-white.png';
 import sponsorBCO from './assets/sponsors/BesteCasinosOnline.png';
 import sponsorSisterSites from './assets/sponsors/sistersites-logo.png';
-import sponsorWHSR from './assets/sponsors/whsr.png';
 import sponsorLeoBoost from './assets/sponsors/leoboost-logo-white.png';
 import sponsorSchnellNode from './assets/sponsors/schnellnode.png';
 import sponsorAusCasinos from './assets/sponsors/auscasinos.png';
 import sponsorMastoHost from './assets/sponsors/MH-horizontal-white.png';
 import sponsorQuickBooksToolHub from './assets/sponsors/QuickBooks-Tool-Hub-logo-1.png';
-//import sponsorKajino from './assets/sponsors/kajino-logo.png';
 import sponsorAussieCasinoHex from './assets/sponsors/aussiecasinohex.png';
 import sponsorAssemblyFour from './assets/sponsors/a4.png';
-//import sponsorPoprey from './assets/sponsors/logo-poprey-com-white.png';
 import sponsorHexCa from './assets/sponsors/hex-ca.png';
 import sponsorJLD from './assets/sponsors/jld_psd_logo_orig_black.png'
 import sponsorKasynoHex from './assets/sponsors/kasynohex.svg';
@@ -102,16 +99,13 @@ export const sponsors = [
   { href: 'https://www.bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom
   { href: 'https://www.bestecasinosonline.at/', src: sponsorBCO, alt: 'bestecasinosonline.at' }, // Custom
   { href: 'https://www.sister-sites.co.uk/', src: sponsorSisterSites, alt: 'sister-sites.co.uk' }, // Custom
-  { href: 'https://www.webhostingsecretrevealed.net/', src: sponsorWHSR, alt: 'Web Hosting Secret Revealed (WHSR)' }, // Custom
   { href: 'https://www.leoboost.com/buy-instagram-followers', src: sponsorLeoBoost, alt: 'Buy Instagram Followers' }, // Custom
   { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' }, // Custom
   { href: 'https://masto.host/', src: sponsorMastoHost, alt: 'Masto.host - Fully managed Mastodon hosting' }, // Custom
   { href: 'https://assemblyfour.com/', src: sponsorAssemblyFour, alt: 'Assembly Four' }, // Custom
   { href: 'https://www.auscasinos.com/new/', src: sponsorAusCasinos, alt: 'AusCasinos.com New Site Section' }, // Custom 
   { href: 'http://quickbookstoolhub.com/', src: sponsorQuickBooksToolHub, alt: 'Quickbooks Tool Hub' },
-  //{ href: 'https://kajino.com/', src: sponsorKajino, alt: 'Kajino' }, // Custom
   { href: 'https://aussiecasinohex.com', src: sponsorAussieCasinoHex, alt: 'CasinoHEX Australia' },
-  //{ href: 'https://poprey.com/', src: sponsorPoprey, alt: 'Instagram Likes' }, // Custom
   { href: 'https://onlinecasinohex.ca/', src: sponsorHexCa, alt: 'OnlineCasinoHEX.ca' }, // Custom
   { href: 'https://www.joylovedolls.com/', src: sponsorJLD, name: 'Joy Love Dolls' }, // Custom
   { href: 'https://kasynohex.com/kasyna-online/', src: sponsorKasynoHex, alt: 'Casino online PL' }, // Custom
