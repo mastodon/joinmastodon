@@ -30,6 +30,7 @@ import sponsorCasinoFiables from './assets/sponsors/logo-fiables.png';
 import sponsorCodeCrafters from './assets/sponsors/codecrafters.png';
 import sponsorRapidEssay from './assets/sponsors/rapidessay_logo.png';
 import sponsorCasinoHexNL from './assets/sponsors/casino-hex-nl.png';
+import sponsorHostNoc from './assets/sponsors/hostnoc.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -67,25 +68,20 @@ const goldSponsors = [
   { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
   { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' },
   { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
-  { href: 'https://loginlockdown.com/', src: sponsorLoginLockdown, alt: 'Login Lockdown' },
   { href: 'https://www.ivisa.com/photos', src: sponsorIVisa, alt: 'iVisa' },
   { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
-  { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' },
-  { href: 'https://spyic.com/', src: sponsorSpyic, alt: 'Spyic' },
-  { href: 'https://cocosign.com/', src: sponsorCocosign, alt: 'CocoSign' },
-  { href: 'https://www.nextiva.com/', src: sponsorNextiva, alt: 'Nextiva' },
+  { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' }, // Custom
   { href: 'https://www.kevani.com/', src: sponsorKevani, alt: 'Kevani' },
   { href: 'https://www.doggietoys.deals/', src: sponsorDoggieToys, alt: 'Doggie Toys' }, // Custom
-  { href: 'https://www.onlinecasinosat.com/', src: sponsorOnlineCasinoSat, alt: 'onlinecasinosat.com' },
   { href: 'https://laatukasinot.com/kasinobonukset/', src: sponsorLaatukasinot, alt: 'Parhaat kasinobonukset' }, // Custom
   { href: 'https://besturate.com/best-vpn/', src: sponsorBesturate, alt: 'Besturate Best VPN' },
-  { href: 'https://realcasinoscanada.com/best-online-casinos', src: sponsorCanadaRealCasino, alt: 'Best online casinos' },
   { href: 'https://bitlaunch.io/', src: sponsorBitlaunch, alt: 'Bitcoin VPS' }, // Custom
   { href: 'http://inkedin.com/', src: sponsorInkedin, alt: 'inkedin.com' },
   { href: 'https://casinofiables.com/', src: sponsorCasinoFiables, alt: 'Casino Fiables' },
   { href: 'https://codecrafters.io/', src: sponsorCodeCrafters, alt: 'CodeCrafters' }, // Custom
   { href: 'https://rapidessay.com/', src: sponsorRapidEssay, alt: 'Rapid Essay' },
   { href: 'https://onlinecasinohex.nl/', src: sponsorCasinoHexNL, alt: 'CasinoHEX Nederland' },
+  { href: 'https://hostnoc.com', src: sponsorHostNoc, alt: 'HostNoc Dedicated Server' }, // Custom
 ];
 
 const silverSponsors = [
