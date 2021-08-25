@@ -84,7 +84,6 @@ const silverSponsors = [
   { href: 'https://switchvpn.net/', src: avatarSwitchVPN, name: 'Switch VPN' },
   { href: 'https://clay.global/', src: avatarClay, name: 'Clay' },
   { href: 'https://edureviewer.com/', src: avatarEduReviewer, name: 'Edu Reviewer' },
-  { href: 'https://www.signomatic.com.au/', name: 'Signomatic.com.au' },
   { href: 'https://identi.ca/evan', src: avatarEvan, name: 'Evan Prodromou' },
   { href: 'https://marozed.com', src: avatarEmpresso, name: 'Agence web Marozed' },
   { href: 'https://vocalodon.net/@tomoki', src: avatarTomoki, name: 'Hiroyuki Wakimoto (TOMOKI++)' },
@@ -93,17 +92,12 @@ const silverSponsors = [
   { name: 'Martin Seeger' },
   { href: 'https://dtp-mstdn.jp', src: avatarNoellabo, name: 'noellabo' },
   { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
-  { href: 'https://www.takeshape.io/', src: avatarTakeShape, name: 'TakeShape' }, // OpenCollective
-  { href: 'https://mastodon.social/@vashio', name: '@vashio', src: avatarVashio, nofollow: true },
   { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
   { name: 'Donald Robb', nofollow: true },
   { href: 'https://ivypanda.com/online-thesis-generator', name: 'IvyPanda', nofollow: true },
-  { href: 'https://buy.fineproxy.org/eng/', src: avatarFineproxy, name: 'Fineproxy', nofollow: true },
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
-  { href: 'https://reviewscon.com/', name: 'ReviewsCon', nofollow: true },
   { href: 'https://anbefaltcasino.com/', name: 'Beste Casino', nofollow: true },
-  { href: 'https://bitvape.com.au/', src: avatarBitvape, name: 'Bitvape', nofollow: true },
-  //{ href: 'https://vpntesting.com/', name: 'VPN Test', nofollow: true },
+  { name: 'Andy Michael', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
