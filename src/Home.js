@@ -12,7 +12,6 @@ import Navigation from './Navigation';
 import Title from './Title';
 
 import sponsorLunanode from './assets/sponsors/lunanode_alt.png';
-import sponsorPleroma from './assets/sponsors/pleroma_banner.png';
 import sponsorTrueVendor from './assets/sponsors/truevendor.png';
 import sponsorVPNRanks from './assets/sponsors/vpnranks-v2.png';
 import sponsorAirVPN from './assets/sponsors/airvpn.png';
@@ -29,17 +28,15 @@ import sponsorSujitech from './assets/sponsors/mask-network.png';
 import sponsorBCS from './assets/sponsors/bcs-white.png';
 import sponsorBCO from './assets/sponsors/BesteCasinosOnline.png';
 import sponsorSisterSites from './assets/sponsors/sistersites-logo.png';
-import sponsorLeoBoost from './assets/sponsors/leoboost-logo-white.png';
 import sponsorSchnellNode from './assets/sponsors/schnellnode.png';
 import sponsorAusCasinos from './assets/sponsors/auscasinos.png';
 import sponsorMastoHost from './assets/sponsors/MH-horizontal-white.png';
-import sponsorQuickBooksToolHub from './assets/sponsors/QuickBooks-Tool-Hub-logo-1.png';
-import sponsorAussieCasinoHex from './assets/sponsors/aussiecasinohex.png';
 import sponsorAssemblyFour from './assets/sponsors/a4.png';
 import sponsorHexCa from './assets/sponsors/hex-ca.png';
 import sponsorJLD from './assets/sponsors/jld_psd_logo_orig_black.png'
 import sponsorKasynoHex from './assets/sponsors/kasynohex.svg';
 import sponsorAltCasino from './assets/sponsors/alt-casino-1.png';
+import sponsorNettikasinot from './assets/sponsors/nettikasinot.svg';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -82,34 +79,31 @@ const playerOpts = {
 
 export const sponsors = [
   { href: 'https://www.lunanode.com/', src: sponsorLunanode, alt: 'Lunanode' },
-  { href: 'https://pleroma.social/', src: sponsorPleroma, alt: 'Pleroma' },
   { href: 'https://www.ramotion.com/agency/ui-ux-design', src: sponsorTrueVendor, alt: 'UI/UX Designer' },
   { href: 'https://www.vpnranks.com/', src: sponsorVPNRanks, alt: 'VPN Ranks' },
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },
   { href: 'https://www.firesticktricks.com/', src: sponsorFireStickTricks, alt: 'Fire Stick Tricks' }, // OpenCollective
   { href: 'https://sextoyeducation.com/', src: sponsorSexToyEducation, alt: 'Sex Toy Education' },
   { href: 'https://papersowl.com/write-my-essay-please', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
-  { href: 'https://www.valuemarke.com/', src: sponsorValueMarke, alt: 'ValueMarke' },
+  { href: 'https://www.valuemarke.com/', src: sponsorValueMarke, alt: 'ValueMarke' }
   { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
   { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
-  { href: 'https://www.cibdol.com/', src: sponsorCibdol, alt: 'cibdol cbd oil' }, // Custom
-  { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' }, // Custom
+  { href: 'https://www.cibdol.com/', src: sponsorCibdol, alt: 'cibdol cbd oil' }, // Custom/other
+  { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' }, // Custom/other
   { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' }, // Custom
-  { href: 'https://www.bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom
+  { href: 'https://www.bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom/other
   { href: 'https://www.bestecasinosonline.at/', src: sponsorBCO, alt: 'bestecasinosonline.at' }, // Custom
   { href: 'https://www.sister-sites.co.uk/', src: sponsorSisterSites, alt: 'sister-sites.co.uk' }, // Custom
-  { href: 'https://www.leoboost.com/buy-instagram-followers', src: sponsorLeoBoost, alt: 'Buy Instagram Followers' }, // Custom
   { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' }, // Custom
   { href: 'https://masto.host/', src: sponsorMastoHost, alt: 'Masto.host - Fully managed Mastodon hosting' }, // Custom
   { href: 'https://assemblyfour.com/', src: sponsorAssemblyFour, alt: 'Assembly Four' }, // Custom
-  { href: 'https://www.auscasinos.com/new/', src: sponsorAusCasinos, alt: 'AusCasinos.com New Site Section' }, // Custom 
-  { href: 'http://quickbookstoolhub.com/', src: sponsorQuickBooksToolHub, alt: 'Quickbooks Tool Hub' },
-  { href: 'https://aussiecasinohex.com', src: sponsorAussieCasinoHex, alt: 'CasinoHEX Australia' },
+  { href: 'https://www.auscasinos.com/new/', src: sponsorAusCasinos, alt: 'AusCasinos.com New Site Section' }, // Custom
   { href: 'https://onlinecasinohex.ca/', src: sponsorHexCa, alt: 'OnlineCasinoHEX.ca' }, // Custom
   { href: 'https://www.joylovedolls.com/', src: sponsorJLD, name: 'Joy Love Dolls' }, // Custom
   { href: 'https://kasynohex.com/kasyna-online/', src: sponsorKasynoHex, alt: 'Casino online PL' }, // Custom
   { href: 'https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html', src: sponsorAltCasino, alt: 'Online Casinos Australia' }, // Custom
+  { href: 'https://www.nettikasinot.org/', src: sponsorNettikasinot, alt: 'Nettikasinot' },
 ];
 
 export default class Home extends PureComponent {
