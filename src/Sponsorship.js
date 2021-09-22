@@ -21,7 +21,6 @@ import sponsorBesturate from './assets/sponsors/besturate.png';
 import sponsorBitlaunch from './assets/sponsors/bitlaunch.svg';
 import sponsorInkedin from './assets/sponsors/inkedin-logo-small-2.webp';
 import sponsorCasinoFiables from './assets/sponsors/logo-fiables.png';
-import sponsorCodeCrafters from './assets/sponsors/codecrafters.png';
 import sponsorRapidEssay from './assets/sponsors/rapidessay_logo.png';
 import sponsorCasinoHexNL from './assets/sponsors/casino-hex-nl.png';
 import sponsorHostNoc from './assets/sponsors/hostnoc.png';
@@ -68,7 +67,6 @@ const goldSponsors = [
   { href: 'https://bitlaunch.io/', src: sponsorBitlaunch, alt: 'Bitcoin VPS' }, // Custom
   { href: 'http://inkedin.com/', src: sponsorInkedin, alt: 'inkedin.com' },
   { href: 'https://casinofiables.com/', src: sponsorCasinoFiables, alt: 'Casino Fiables' },
-  { href: 'https://codecrafters.io/', src: sponsorCodeCrafters, alt: 'CodeCrafters' }, // Custom
   { href: 'https://rapidessay.com/', src: sponsorRapidEssay, alt: 'Rapid Essay' },
   { href: 'https://onlinecasinohex.nl/', src: sponsorCasinoHexNL, alt: 'CasinoHEX Nederland' },
   { href: 'https://hostnoc.com', src: sponsorHostNoc, alt: 'HostNoc Dedicated Server' }, // Custom
