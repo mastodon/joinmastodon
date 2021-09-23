@@ -24,6 +24,7 @@ import sponsorCasinoFiables from './assets/sponsors/logo-fiables.png';
 import sponsorRapidEssay from './assets/sponsors/rapidessay_logo.png';
 import sponsorCasinoHexNL from './assets/sponsors/casino-hex-nl.png';
 import sponsorHostNoc from './assets/sponsors/hostnoc.png';
+import sponsorCasinoHexAU from './assets/sponsors/casino-hex-au.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -70,6 +71,7 @@ const goldSponsors = [
   { href: 'https://rapidessay.com/', src: sponsorRapidEssay, alt: 'Rapid Essay' },
   { href: 'https://onlinecasinohex.nl/', src: sponsorCasinoHexNL, alt: 'CasinoHEX Nederland' },
   { href: 'https://hostnoc.com', src: sponsorHostNoc, alt: 'HostNoc Dedicated Server' }, // Custom
+  { href: 'https://topaussiecasinos.com/', src: sponsorCasinoHexAU, alt: 'CasinoHEX Australia' }, // Custom
 ];
 
 const silverSponsors = [
