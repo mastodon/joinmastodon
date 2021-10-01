@@ -39,6 +39,7 @@ import sponsorAltCasino from './assets/sponsors/alt-casino-1.png';
 import sponsorNettikasinot from './assets/sponsors/nettikasinot.svg';
 import sponsorOnlineCasinos from './assets/sponsors/onlinecasinos.a2791b0.png';
 import sponsorCasinoHexAU from './assets/sponsors/casino-hex-au.png';
+import sponsorPrototypeFund from './assets/sponsors/prototype-fund.jpg';
 
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
@@ -108,6 +109,7 @@ export const sponsors = [
   { href: 'https://www.nettikasinot.org/', src: sponsorNettikasinot, alt: 'Nettikasinot' },
   { href: 'https://www.onlinecasinos.net/', src: sponsorOnlineCasinos, alt: 'OnlineCasinos.net' }, // Custom
   { href: 'https://topaussiecasinos.com/', src: sponsorCasinoHexAU, alt: 'CasinoHEX Australia' }, // Custom
+  { href: 'https://prototypefund.de/en/', src: sponsorPrototypeFund, alt: 'Federal Ministry of Education and Research' }, // Prototype Fund
 ];
 
 export default class Home extends PureComponent {
