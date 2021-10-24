@@ -14,16 +14,25 @@ const Imprint = () => (
       <h1>Contact us / Impressum</h1>
       <p className='lead'>For the pages under joinmastodon.org and its subdomains:</p>
       <hr />
+
       <p>
-        Mastodon gGmbH (HRB 230086 B)
+        Mastodon gGmbH
         <br />
         Mühlenstraße 8a
         <br />
         14167 Berlin
         <br />
         Germany
+      </p>
+      <p>E-Mail-Adresse: <a href="mailto:hello@joinmastodon.org">hello@joinmastodon.org</a></p>
+      <p>Vertretungsberechtigt: Eugen Rochko (Geschäftsführer)</p>
+      <p>Umsatzsteuer Identifikationsnummer (USt-ID): DE344258260</p>
+      <p>
+        Handelsregister
         <br />
-        E-mail: hello@joinmastodon.org
+        Geführt bei: Amtsgericht Charlottenburg
+        <br />
+        Nummer: HRB 230086 B
       </p>
     </div>
 
