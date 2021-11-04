@@ -135,7 +135,7 @@ const apps = {
     {
       name: 'Tootle (Linux)',
       icon: tootle,
-      url: 'https://appcenter.elementary.io/com.github.bleakgrey.tootle/',
+      url: 'https://flathub.org/apps/details/com.github.bleakgrey.tootle',
     },
 
     {
