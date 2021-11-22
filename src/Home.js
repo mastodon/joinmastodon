@@ -22,7 +22,6 @@ import sponsorValueMarke from './assets/sponsors/valuemarke.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 import sponsorVPSServer from './assets/sponsors/vpsserver2.png';
-import sponsorCibdol from './assets/sponsors/cibdol.png';
 import sponsorBetrugstest from './assets/sponsors/betrugstest-com.png';
 import sponsorSujitech from './assets/sponsors/mask-network.png';
 import sponsorBCS from './assets/sponsors/bcs-white.png';
@@ -92,7 +91,6 @@ export const sponsors = [
   { href: 'https://www.minitool.com/', src: sponsorMiniTool, alt: 'MiniTool' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
   { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
-  { href: 'https://www.cibdol.com/', src: sponsorCibdol, alt: 'cibdol cbd oil' }, // Custom/other
   { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' }, // Custom/other
   { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' }, // Custom
   { href: 'https://www.bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom/other
