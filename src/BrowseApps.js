@@ -186,10 +186,10 @@ const renderApp = ({ name, icon, paid, url }) => (
 );
 
 const sponsors = [
-  { href: 'https://www.dotcom-monitor.com/es/', src: sponsorDotcomMonitor, alt: 'Dotcom-Monitor' },
-  { href: 'https://www.loadview-testing.com/api-testing/', src: sponsorLoadView, alt: 'LoadView' },
-  { href: 'https://webhostingbuddy.com/wordpress-hosting/', src: sponsorWebHostingBuddy, alt: 'Web Hosting Buddy' },
-  { href: 'https://www.drivencoffee.com/', src: sponsorDrivenCoffee, alt: 'Driven Coffee' },
+  //{ href: 'https://www.dotcom-monitor.com/es/', src: sponsorDotcomMonitor, alt: 'Dotcom-Monitor' },
+  //{ href: 'https://www.loadview-testing.com/api-testing/', src: sponsorLoadView, alt: 'LoadView' },
+  //{ href: 'https://webhostingbuddy.com/wordpress-hosting/', src: sponsorWebHostingBuddy, alt: 'Web Hosting Buddy' },
+  //{ href: 'https://www.drivencoffee.com/', src: sponsorDrivenCoffee, alt: 'Driven Coffee' },
 ];
 
 /*
