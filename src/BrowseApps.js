@@ -30,10 +30,10 @@ import mercury from './assets/apps/mercury.png';
 import sengi from './assets/apps/sengi.png';
 import metatext from './assets/apps/metatext.png';
 
-import sponsorDotcomMonitor from './assets/sponsors/dotcom-monitor-logo.png';
-import sponsorLoadView from './assets/sponsors/LoadView-logo.png';
-import sponsorWebHostingBuddy from './assets/sponsors/web-hosting-buddy-logo.png';
-import sponsorDrivenCoffee from './assets/sponsors/driven-coffee-logo.png';
+//import sponsorDotcomMonitor from './assets/sponsors/dotcom-monitor-logo.png';
+//import sponsorLoadView from './assets/sponsors/LoadView-logo.png';
+//import sponsorWebHostingBuddy from './assets/sponsors/web-hosting-buddy-logo.png';
+//import sponsorDrivenCoffee from './assets/sponsors/driven-coffee-logo.png';
 
 const apps = {
   android: [
