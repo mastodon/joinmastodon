@@ -24,7 +24,7 @@ import sponsorCasinoFiables from './assets/sponsors/logo-fiables.png';
 import sponsorRapidEssay from './assets/sponsors/rapidessay_logo.png';
 import sponsorCasinoHexNL from './assets/sponsors/casino-hex-nl.png';
 import sponsorHostNoc from './assets/sponsors/hostnoc.png';
-import sponsorIBoysoft from './assets/iboysoft-logo-dark.png';
+import sponsorIBoysoft from './assets/sponsors/iboysoft-logo-dark.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
