@@ -30,8 +30,8 @@ import mercury from './assets/apps/mercury.png';
 import sengi from './assets/apps/sengi.png';
 import metatext from './assets/apps/metatext.png';
 
-//import sponsorDotcomMonitor from './assets/sponsors/dotcom-monitor-logo.png';
-//import sponsorLoadView from './assets/sponsors/LoadView-logo.png';
+import sponsorDotcomMonitor from './assets/sponsors/dotcom-monitor-logo.png';
+import sponsorLoadView from './assets/sponsors/LoadView-logo.png';
 //import sponsorWebHostingBuddy from './assets/sponsors/web-hosting-buddy-logo.png';
 //import sponsorDrivenCoffee from './assets/sponsors/driven-coffee-logo.png';
 
@@ -186,8 +186,8 @@ const renderApp = ({ name, icon, paid, url }) => (
 );
 
 const sponsors = [
-  //{ href: 'https://www.dotcom-monitor.com/es/', src: sponsorDotcomMonitor, alt: 'Dotcom-Monitor' },
-  //{ href: 'https://www.loadview-testing.com/api-testing/', src: sponsorLoadView, alt: 'LoadView' },
+  { href: 'https://www.dotcom-monitor.com/es/', src: sponsorDotcomMonitor, alt: 'Dotcom-Monitor' },
+  { href: 'https://www.loadview-testing.com/api-testing/', src: sponsorLoadView, alt: 'LoadView' },
   //{ href: 'https://webhostingbuddy.com/wordpress-hosting/', src: sponsorWebHostingBuddy, alt: 'Web Hosting Buddy' },
   //{ href: 'https://www.drivencoffee.com/', src: sponsorDrivenCoffee, alt: 'Driven Coffee' },
 ];
