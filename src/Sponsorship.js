@@ -25,6 +25,7 @@ import sponsorRapidEssay from './assets/sponsors/rapidessay_logo.png';
 import sponsorCasinoHexNL from './assets/sponsors/casino-hex-nl.png';
 import sponsorHostNoc from './assets/sponsors/hostnoc.png';
 import sponsorIBoysoft from './assets/sponsors/iboysoft-logo-dark2.png';
+import sponsorNettikasino from './assets/sponsors/nettikasinolista-mv.png';
 
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
@@ -72,6 +73,7 @@ const goldSponsors = [
   { href: 'https://onlinecasinohex.nl/', src: sponsorCasinoHexNL, alt: 'CasinoHEX Nederland' },
   { href: 'https://hostnoc.com', src: sponsorHostNoc, alt: 'HostNoc Dedicated Server' }, // Custom
   { href: 'https://iboysoft.com/', src: sponsorIBoysoft, alt: 'iBoysoft Data Recovery' }, // Custom
+  { href: 'https://nettikasinolista.com/', src: sponsorNettikasino, alt: 'Nettikasino' }, // Custom
 ];
 
 const silverSponsors = [
