@@ -101,6 +101,6 @@
   "wizard_card.no_instant_sign_up": "ไม่สามารถลงทะเบียนทันที",
   "wizard_card.people_count": "{label} {count, plural, other {คน}}",
   "wizard_card.request_invite": "ขอคำเชิญ",
-  "wizard_navigation.categories": "ประเภท:",
+  "wizard_navigation.categories": "หมวดหมู่:",
   "wizard_navigation.choosing_a_community": "การเลือกชุมชน"
 }
