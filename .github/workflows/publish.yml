@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - name: Install system dependencies
-      run: apt-get install build-essential
+      run: sudo apt-get install build-essential
     - uses: actions/checkout@v1
     - name: Setup environment
       uses: borales/actions-yarn@v2.3.0
