@@ -21,7 +21,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         ARGS: "-rltgoDzvO"
-        SOURCE: ./public/
+        SOURCE: ./build/
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
