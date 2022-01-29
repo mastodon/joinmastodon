@@ -9,8 +9,9 @@ jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
+    - name: Install system dependencies
+      run: apk -U upgrade && apk add -t build-dependencies build-base python
     - uses: actions/checkout@v1
-
     - name: Setup environment
       uses: borales/actions-yarn@v2.3.0
       with:
