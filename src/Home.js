@@ -94,7 +94,7 @@ export const sponsors = [
   { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' }, // Custom/other
   { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' }, // Custom
   { href: 'https://www.bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom/other
-  { href: 'https://www.bestecasinosonline.at/', src: sponsorBCO, alt: 'bestecasinosonline.at' }, // Custom
+  { href: 'https://www.bestecasinosonline.at/', src: sponsorBCO, alt: 'Online Casino Österreich' }, // Custom
   { href: 'https://www.sister-sites.co.uk/', src: sponsorSisterSites, alt: 'sister-sites.co.uk' }, // Custom
   { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' }, // Custom
   { href: 'https://masto.host/', src: sponsorMastoHost, alt: 'Masto.host - Fully managed Mastodon hosting' }, // Custom
