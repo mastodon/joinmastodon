@@ -1,9 +1,9 @@
 {
   "apps.free": "免費",
   "apps.paid": "付費",
-  "browse_apps.api_docs": "API documentation",
-  "browse_apps.desktop": "Desktop",
-  "browse_apps.lead2": "Thanks to Mastodon's open API, you can use it from any of these apps developed by third-party developers",
+  "browse_apps.api_docs": "API 文件",
+  "browse_apps.desktop": "桌面",
+  "browse_apps.lead2": "歸功於 Mastodon 的開放 API，您可以從第三方開發者開發的這些應用程式中隨意選取使用",
   "browse_apps.make_your_own": "Mastodon is open-source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!",
   "browse_apps.open_api": "Open API",
   "browse_apps.progressive_web_app": "Progressive Web App",
