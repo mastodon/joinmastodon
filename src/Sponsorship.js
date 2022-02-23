@@ -13,7 +13,6 @@ import sponsorEdusson from './assets/sponsors/edusson.png';
 import sponsorMiniTool from './assets/sponsors/minitool.png';
 import sponsorIVisa from './assets/sponsors/ivisa.png';
 import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
-import sponsorTootWales from './assets/sponsors/tootwales.png';
 import sponsorKevani from './assets/sponsors/KEVANI_LOGO.png';
 import sponsorDoggieToys from './assets/sponsors/doggie-toys.png';
 import sponsorLaatukasinot from './assets/sponsors/Laatulogo.png';
@@ -26,7 +25,7 @@ import sponsorCasinoHexNL from './assets/sponsors/casino-hex-nl.png';
 import sponsorHostNoc from './assets/sponsors/hostnoc.png';
 import sponsorIBoysoft from './assets/sponsors/iboysoft-logo-dark2.png';
 import sponsorNettikasino from './assets/sponsors/nettikasinolista-mv.png';
-
+import sponsorDoshFunding from './assets/sponsors/doshfunding.svg';
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
@@ -61,7 +60,6 @@ const goldSponsors = [
   { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
   { href: 'https://www.ivisa.com/photos', src: sponsorIVisa, alt: 'iVisa' },
   { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
-  { href: 'https://toot.wales/', src: sponsorTootWales, alt: 'Tŵt Cymru | Toot Wales' }, // Custom
   { href: 'https://www.kevani.com/', src: sponsorKevani, alt: 'Kevani' },
   { href: 'https://www.doggietoys.deals/', src: sponsorDoggieToys, alt: 'Doggie Toys' }, // Custom
   { href: 'https://laatukasinot.com/kasinobonukset/', src: sponsorLaatukasinot, alt: 'Parhaat kasinobonukset' }, // Custom
@@ -74,6 +72,7 @@ const goldSponsors = [
   { href: 'https://hostnoc.com', src: sponsorHostNoc, alt: 'HostNoc Dedicated Server' }, // Custom
   { href: 'https://iboysoft.com/', src: sponsorIBoysoft, alt: 'iBoysoft Data Recovery' }, // Custom
   { href: 'https://nettikasinolista.com/', src: sponsorNettikasino, alt: 'Nettikasino' }, // Custom
+  { href: 'http://doshfunding.com/', src: sponsorDoshFunding, alt: 'Funding Solutions for Businesses' }, // Custom
 ];
 
 const silverSponsors = [
