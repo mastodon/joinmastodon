@@ -9,9 +9,8 @@ import mastodonLogo from './assets/logo_full.svg';
 
 const options = [
   { value: 'https://blog.joinmastodon.org/', label: <FormattedMessage id='nav.blog' defaultMessage='Blog' />},
-  { value: 'https://discourse.joinmastodon.org', label: <FormattedMessage id='nav.support' defaultMessage='Support' /> },
+  { value: 'https://github.com/mastodon/mastodon/discussions', label: <FormattedMessage id='nav.support' defaultMessage='Support' /> },
   { value: 'https://docs.joinmastodon.org', label: <FormattedMessage id='nav.docs' defaultMessage='Documentation' /> },
-  { value: 'https://www.designbyhumans.com/shop/mastodon/', label: <FormattedMessage id='nav.merch' defaultMessage='Merch' /> },
 ];
 
 const Navigation = () => (
@@ -27,7 +26,7 @@ const Navigation = () => (
     <ul className='right'>
       <li><Link to='/apps'><FormattedMessage id='nav.apps' defaultMessage='Apps' /></Link></li>
       <li><Link to='/sponsors'><FormattedMessage id='nav.sponsors' defaultMessage='Sponsors' /></Link></li>
-      <li><a href='https://github.com/tootsuite/mastodon'><FormattedMessage id='nav.code' defaultMessage='Code' /></a></li>
+      <li><a href='https://github.com/mastodon/mastodon'><FormattedMessage id='nav.code' defaultMessage='Code' /></a></li>
       <li><Dropdown asLinks label={<FormattedMessage id='nav.resources' defaultMessage='Resources' />} options={options} /></li>
       <li><LanguageSelectContainer /></li>
     </ul>

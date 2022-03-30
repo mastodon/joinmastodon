@@ -25,10 +25,9 @@ const BottomNavigation = () => (
           <h4><FormattedMessage id='nav.resources' defaultMessage='Resources' /></h4>
 
           <ul>
-            <li><a target='_blank' rel='noopener noreferrer' href='https://github.com/tootsuite/mastodon'><FormattedMessage id='nav.code' defaultMessage='Code' /></a></li>
+            <li><a target='_blank' rel='noopener noreferrer' href='https://github.com/mastodon/mastodon'><FormattedMessage id='nav.code' defaultMessage='Code' /></a></li>
             <li><a target='_blank' rel='noopener noreferrer' href='https://docs.joinmastodon.org'><FormattedMessage id='nav.docs' defaultMessage='Documentation' /></a></li>
-            <li><a target='_blank' rel='noopener noreferrer' href='https://discourse.joinmastodon.org'><FormattedMessage id='nav.support' defaultMessage='Support' /></a></li>
-            <li><a target='_blank' rel='noopener noreferrer' href='https://www.designbyhumans.com/shop/mastodon/'><FormattedMessage id='nav.merch' defaultMessage='Merch' /></a></li>
+            <li><a target='_blank' rel='noopener noreferrer' href='https://github.com/mastodon/mastodon/discussions'><FormattedMessage id='nav.support' defaultMessage='Support' /></a></li>
           </ul>
         </div>
 
