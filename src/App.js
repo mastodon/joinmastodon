@@ -12,6 +12,7 @@ import Covenant from './Covenant';
 import BrowseCommunities from './BrowseCommunities';
 import PrivacyPolicy from './PrivacyPolicy';
 import IOSPrivacyPolicy from './IOSPrivacyPolicy';
+import AndroidPrivacyPolicy from './AndroidPrivacyPolicy';
 
 import { addLocaleData, IntlProvider } from 'react-intl';
 import ar from 'react-intl/locale-data/ar';
@@ -88,6 +89,7 @@ const App = ({ usersLocale }) => (
           <Route path='/covenant' component={Covenant} />
           <Route path='/privacy-policy' component={PrivacyPolicy} />
           <Route path='/ios/privacy' component={IOSPrivacyPolicy} />
+          <Route path='/android/privacy' component={AndroidPrivacyPolicy} />
         </div>
       </ScrollToTop>
     </Router>

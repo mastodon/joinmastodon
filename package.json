@@ -68,7 +68,8 @@
       "/communities/furry",
       "/communities/food",
       "/privacy-policy",
-      "/ios/privacy"
+      "/ios/privacy",
+      "/android/privacy"
     ],
     "snapshotDelay": 500
   }
