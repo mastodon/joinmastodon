@@ -7,8 +7,9 @@ import Navigation from './Navigation';
 import BottomNavigation from './BottomNavigation';
 import ArrowLink from './ArrowLink';
 
-import iphone12 from './assets/iphone12.png';
+import iphone12 from './assets/iphone-and-android.png';
 import downloadOnAppStore from './assets/download-on-app-store.svg';
+import downloadOnGooglePlay from './assets/google-play-badge.png';
 
 import tusky from './assets/apps/tusky.png';
 import subwayTooter from './assets/apps/subway-tooter.png';
@@ -220,12 +221,13 @@ const BrowseApps = ({ intl }) => (
             <h1>
               <small><FormattedMessage id='ios.introducing' defaultMessage='Introducing' /></small>
               <br />
-              <FormattedMessage id='ios.app_name' defaultMessage='Mastodon for iOS' />
+              <FormattedMessage id='ios_and_android.app_name' defaultMessage='Official apps' />
             </h1>
 
-            <p><FormattedMessage id='ios.download' defaultMessage="We've released an official app for Mastodon on iOS, in addition to the web version and all the third-party apps available below." /></p>
+            <p><FormattedMessage id='ios_and_android.download' defaultMessage="We've released official apps for Mastodon on iOS and Android, in addition to the web version and all the third-party apps available below." /></p>
 
             <a href='https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974'><img src={downloadOnAppStore} alt='Download on the App Store' className='app-store-badge' /></a>
+            <a href='https://play.google.com/store/apps/details?id=org.joinmastodon.android'><img src={downloadOnGooglePlay} alt='Get it on Google Play' className='app-store-badge' style={{ height: 70, margin: '-10px 0' }} /></a>
           </div>
 
           <img className='app-intro__hero__screenshot' src={iphone12} alt='' />
