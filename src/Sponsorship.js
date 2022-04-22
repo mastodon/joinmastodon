@@ -168,48 +168,37 @@ const Sponsorship = ({ intl }) => (
           <Scrollbars style={{ height: 500 }} renderThumbVertical={renderThumb}>
             <ul className='highlighted'>
               <li>Moritz Heiber</li>
-              <li>Nolan Lawson</li>
               <li>Masto.host </li>
               <li>Sho Kusano</li>
               <li>'@mecab </li>
-              <li>G Berton Latamore</li>
-              <li>Andrei Petcu</li>
-              <li>Robin Mayorga</li>
               <li>John </li>
               <li>akyoz</li>
               <li>Ivan Sagalaev</li>
-              <li>Ivan Braun</li>
               <li>JC Andrever</li>
               <li>Michelle Merendino</li>
-              <li>estpls </li>
               <li>David Sterry</li>
+              <li>zunda</li>
               <li>Claire Eckelman</li>
-              <li>TROYPOINT</li>
+              <li>Sevendosha</li>
+              <li>codemoz</li>
             </ul>
 
             <ul>
-              <li>Steven D Lovell</li>
+              <li>Nolan Lawson</li>
               <li>Ted </li>
-              <li>Local Librarian</li>
-              <li>Christopher Kruse</li>
               <li>Leif Halldor Asgeirsson</li>
               <li>Josef Kenny</li>
               <li>Austin Putman</li>
-              <li>David Yip</li>
+              <li>Hannah Yip</li>
               <li>Kenneth Ken Sugar</li>
-              <li>Miki Habryn</li>
               <li>Paul Lindner</li>
               <li>mark</li>
               <li>Joe McLaughlin</li>
               <li>C J Silverio</li>
-              <li>Rufus </li>
               <li>Matthieu Herrb</li>
-              <li>Charles Hutchins</li>
               <li>Koya Matsuo</li>
-              <li>Bheesham Persaud</li>
               <li>Akihiko Odaki</li>
               <li>James Valleroy</li>
-              <li>_</li>
               <li>Flaki</li>
               <li>Wolfgang @vilbi</li>
               <li>Wladimir</li>
@@ -219,7 +208,6 @@ const Sponsorship = ({ intl }) => (
               <li>Jan Krutisch</li>
               <li>Jonathan Cremin</li>
               <li>TARIK F AJAMI</li>
-              <li>Patrick Quinn-Graham</li>
               <li>John Newberger</li>
               <li>Mikayla </li>
               <li>Chris Hanson</li>
@@ -228,28 +216,36 @@ const Sponsorship = ({ intl }) => (
               <li>Jon Dubovsky</li>
               <li>Donovan Finch</li>
               <li>Tyr Mactire</li>
+              <li>まっちゃとーにゅ</li>
               <li>Jacqueline Button</li>
-              <li>Wil Kie</li>
+              <li>Wilkie</li>
               <li>Jean-Luc Geering</li>
               <li>Aaron Harpole</li>
               <li>Kyle R Kingsbury</li>
-              <li>John McAvey</li>
               <li>Captain Jingle Pants</li>
-              <li>KANEKO Yoshitaka</li>
+              <li>spla</li>
+              <li>Lee Starnes</li>
               <li>Martin Tithonium</li>
               <li>Jordan </li>
-              <li>Ryan</li>
-              <li>zunda</li>
-              <li>spla</li>
               <li>James Brown</li>
-              <li>Theodore</li>
+              <li>Ryan</li>
               <li>Manu Gomez</li>
               <li>Tomoyuki Sato</li>
-              <li>Rubujeto</li>
-              <li>Sarah Pratt</li>
               <li>Ray</li>
-              <li>axel@mumintroll.org</li>
+              <li>Theodore</li>
               <li>yawnbox</li>
+              <li>Niko</li>
+              <li>Jonas Möller</li>
+              <li>Wes Hurd</li>
+              <li>l-laura</li>
+              <li>Kai </li>
+              <li>Maciej Solecki</li>
+              <li>David Walluscheck</li>
+              <li>esmuellerthier</li>
+              <li>Adam Bradley</li>
+              <li>Matt Michaliszyn</li>
+              <li>Konstantin Kostov</li>
+              <li>Ulrich Wrede</li>
             </ul>
           </Scrollbars>
         </div>
