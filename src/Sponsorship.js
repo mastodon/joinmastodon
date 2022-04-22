@@ -88,13 +88,13 @@ const silverSponsors = [
   { href: 'https://www.looktotheright.com/', src: avatarLookToTheRight, name: 'Look To The Right' },
   { name: 'Martin Seeger' },
   { href: 'https://dtp-mstdn.jp', src: avatarNoellabo, name: 'noellabo' },
-  { href: 'https://www.traders-insurance.com/', src: avatarTradersInsurance, name: 'Traders Insurance' },
-  { href: 'https://theenhancedmale.com', name: 'The Enhanced Male', nofollow: true },
   { name: 'Donald Robb', nofollow: true },
   { href: 'https://ivypanda.com/online-thesis-generator', name: 'IvyPanda', nofollow: true },
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
-  { href: 'https://anbefaltcasino.com/', name: 'Beste Casino', nofollow: true },
-  { name: 'Andy Michael', nofollow: true },
+  { name: 'John Bean', nofollow: true },
+  { href: 'https://correctcasinos.com', name: 'Stanimir Zhelev', nofollow: true },
+  { href: 'https://bourbonbyte.com/@lucas', name: 'Lucas Freeman', nofollow: true },
+  { href: 'https://coywolf.com/', name: 'Coywolf', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
