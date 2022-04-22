@@ -56,14 +56,11 @@ const renderThumb = ({ style, ...props }) => {
 const goldSponsors = [
   { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' },
   { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
-  { href: 'https://edusson.com/write-my-essay-online', src: sponsorEdusson, alt: 'write my essay for me' },
   { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
   { href: 'https://www.ivisa.com/photos', src: sponsorIVisa, alt: 'iVisa' },
   { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
   { href: 'https://www.kevani.com/', src: sponsorKevani, alt: 'Kevani' },
   { href: 'https://www.doggietoys.deals/', src: sponsorDoggieToys, alt: 'Doggie Toys' }, // Custom
-  { href: 'https://laatukasinot.com/kasinobonukset/', src: sponsorLaatukasinot, alt: 'Parhaat kasinobonukset' }, // Custom
-  { href: 'https://besturate.com/best-vpn/', src: sponsorBesturate, alt: 'Besturate Best VPN' },
   { href: 'https://bitlaunch.io/', src: sponsorBitlaunch, alt: 'Bitcoin VPS' }, // Custom
   { href: 'http://inkedin.com/', src: sponsorInkedin, alt: 'inkedin.com' },
   { href: 'https://casinofiables.com/', src: sponsorCasinoFiables, alt: 'Casino Fiables' },
