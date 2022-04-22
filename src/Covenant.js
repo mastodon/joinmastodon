@@ -57,6 +57,9 @@ const Covenant = () => (
 
         <p>4. <strong>Rules</strong></p>
         <p>Make sure to create server rules &mdash; free-text rules in extended server description are not enough. Server rules are an integral part of onboarding. They must be kept short and to the point (you can elaborate in the extended server description). As a rule they should fit on a typical phone screen without having to scroll through. You want the visitor to be able to read them quickly. Do not include items that are covered by hardcoded report reasons, such as spam.</p>
+
+        <p>5. <strong>Contact information</strong></p>
+        <p>Have a valid and reachable e-mail address for inquiries ("business e-mail"). We may contact you through that address. And in cases of legal matters, it is generally preferable to receive e-mails through your own address rather than through your web host's abuse contact. You shoud also have a contact account ("Contact username") though it does not have to be your personal account.</p>
       </div>
 
       <div className='covenant__terms'>
