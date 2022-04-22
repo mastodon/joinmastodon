@@ -58,6 +58,20 @@
   }
 }
 
+.wizard__footer{
+  margin-top: 20px;
+
+  a {
+    color: $darker;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
 .wizard-navigation {
   font-size: 18px;
   min-width: 187px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
 const ChoosingACommunity = ({ intl }) => (
@@ -33,6 +34,8 @@ const ChoosingACommunity = ({ intl }) => (
         <p><FormattedMessage id='choosing_a_community.we_only_list_communities' defaultMessage='We only list communities that are committed to active moderation against racism, sexism and transphobia.' /></p>
       </div>
     </div>
+
+    <p className='wizard__footer'><Link to='/covenant'><i className='ion-md-information-circle-outline' /> <FormattedMessage id='choosing_a_community.more_about_requirements' defaultMessage='Learn more about the requirements for having your community listed on this page' /></Link></p>
 
     <Helmet>
       <title>{intl.formatMessage({ id: 'wizard_navigation.choosing_a_community', defaultMessage: 'Choosing a community' })} - Mastodon</title>
