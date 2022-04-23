@@ -9,14 +9,12 @@ import { sponsors as platinumSponsors } from './Home';
 
 import sponsorEasyDNS from './assets/sponsors/easydns.png';
 import sponsorWritersPerHour from './assets/sponsors/writersperhour.jpg';
-import sponsorEdusson from './assets/sponsors/edusson.png';
+
 import sponsorMiniTool from './assets/sponsors/minitool.png';
 import sponsorIVisa from './assets/sponsors/ivisa.png';
 import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
 import sponsorKevani from './assets/sponsors/KEVANI_LOGO.png';
 import sponsorDoggieToys from './assets/sponsors/doggie-toys.png';
-import sponsorLaatukasinot from './assets/sponsors/Laatulogo.png';
-import sponsorBesturate from './assets/sponsors/besturate.png';
 import sponsorBitlaunch from './assets/sponsors/bitlaunch.svg';
 import sponsorInkedin from './assets/sponsors/inkedin-logo-small-2.webp';
 import sponsorCasinoFiables from './assets/sponsors/logo-fiables.png';
@@ -34,7 +32,6 @@ import avatarLookToTheRight from './assets/sponsors/looktotheright.png';
 import avatarTnzk from './assets/sponsors/tnzk.png';
 import avatarClay from './assets/sponsors/clay.png';
 import avatarTomoki from './assets/sponsors/tomoki.png';
-import avatarTradersInsurance from './assets/sponsors/tradersinsurance.png';
 import avatarSwitchVPN from './assets/sponsors/switchvpn.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
