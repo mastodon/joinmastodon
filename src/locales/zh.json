@@ -79,7 +79,7 @@
   "wizard.filter.adult_content": "成人内容",
   "wizard.filter.all_languages": "所有语言",
   "wizard.filter.food": "美食",
-  "wizard.filter.furry": "a furry",
+  "wizard.filter.furry": "兽迷",
   "wizard.filter.general": "通用",
   "wizard.filter.humor": "趣味社区",
   "wizard.filter.journalism": "新闻",
@@ -100,7 +100,7 @@
   "wizard_card.join": "加入",
   "wizard_card.no_instant_sign_up": "非即时注册",
   "wizard_card.people_count": "{label} {count, plural, one {person} other {people}}",
-  "wizard_card.request_invite": "需邀请加入",
+  "wizard_card.request_invite": "请求邀请",
   "wizard_navigation.categories": "分类：",
   "wizard_navigation.choosing_a_community": "选择一个社区"
 }
