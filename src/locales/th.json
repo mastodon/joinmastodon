@@ -1,7 +1,7 @@
 {
   "apps.free": "ฟรี",
-  "apps.paid": "เสียเงิน",
-  "browse_apps.api_docs": "เอกสารประกอบ API",
+  "apps.paid": "ชำระแล้ว",
+  "browse_apps.api_docs": "เอกสารประกอบของ API",
   "browse_apps.desktop": "เดสก์ท็อป",
   "browse_apps.lead2": "Thanks to Mastodon's open API, you can use it from any of these apps developed by third-party developers",
   "browse_apps.make_your_own": "Mastodon is open-source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!",
@@ -10,7 +10,7 @@
   "browse_apps.title2": "Browse third-party apps",
   "browse_apps.web": "เว็บ",
   "browse_apps.you_can_use_it_from_desktop": "You can always use Mastodon from the browser on your desktop or phone! It can be added to your home screen and some browsers even support push notifications, just like a native app!",
-  "choosing_a_community.all_you_need_to_sign_up": "All you need to do to sign-up is choose a severs. Just like when signing up for an e-mail address, one server is going to be hosting your account and be part of your online identity.",
+  "choosing_a_community.all_you_need_to_sign_up": "All you need to do to sign-up is choose a server. Just like when signing up for an e-mail address, one server is going to be hosting your account and be part of your online identity.",
   "choosing_a_community.every_community_is_independent": "ทุกชุมชนดำเนินการโดยองค์กรหรือบุคคลอิสระทั้งหมด",
   "choosing_a_community.more_about_requirements": "Learn more about the requirements for having your server listed on this page",
   "choosing_a_community.we_only_list_communities": "We only list servers that are committed to active moderation against racism, sexism and transphobia.",
