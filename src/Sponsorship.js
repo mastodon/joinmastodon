@@ -24,6 +24,8 @@ import sponsorHostNoc from './assets/sponsors/hostnoc.png';
 import sponsorIBoysoft from './assets/sponsors/iboysoft-logo-dark2.png';
 import sponsorNettikasino from './assets/sponsors/nettikasinolista-mv.png';
 import sponsorDoshFunding from './assets/sponsors/doshfunding.svg';
+import sponsorFarbridge from './assets/sponsors/farbridge.png';
+
 import noAvatar from './assets/sponsors/32x32.png';
 import avatarEvan from './assets/sponsors/evan.png';
 import avatarNoellabo from './assets/sponsors/noellabo.png';
@@ -35,6 +37,8 @@ import avatarTomoki from './assets/sponsors/tomoki.png';
 import avatarSwitchVPN from './assets/sponsors/switchvpn.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
+import avatarLucasFreeman from './assets/sponsors/lucasfreeman.jpg';
+import avatarCoywolf from './assets/sponsors/coywolf-logo-white.svg';
 
 import mastodonBit from './assets/bit.png';
 import mastodonSilver from './assets/silver.png';
@@ -67,6 +71,7 @@ const goldSponsors = [
   { href: 'https://iboysoft.com/', src: sponsorIBoysoft, alt: 'iBoysoft Data Recovery' }, // Custom
   { href: 'https://nettikasinolista.com/', src: sponsorNettikasino, alt: 'Nettikasino' }, // Custom
   { href: 'http://doshfunding.com/', src: sponsorDoshFunding, alt: 'Funding Solutions for Businesses' }, // Custom
+  { href: 'https://farbridge.com/', src: sponsorFarbridge, alt: 'Farbridge' },
 ];
 
 const silverSponsors = [
@@ -87,8 +92,8 @@ const silverSponsors = [
   { href: 'https://www.bestblowjobmachines.com/', name: 'Mark Mitchell', nofollow: true },
   { name: 'John Bean', nofollow: true },
   { href: 'https://correctcasinos.com', name: 'Stanimir Zhelev', nofollow: true },
-  { href: 'https://bourbonbyte.com/@lucas', name: 'Lucas Freeman', nofollow: true },
-  { href: 'https://coywolf.com/', name: 'Coywolf', nofollow: true },
+  { href: 'https://bourbonbyte.com/@lucas', src: avatarLucasFreeman, name: 'Lucas Freeman', nofollow: true },
+  { href: 'https://coywolf.com/', src: avatarCoywolf, name: 'Coywolf', nofollow: true },
 ];
 
 const Sponsorship = ({ intl }) => (
