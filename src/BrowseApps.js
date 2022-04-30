@@ -154,7 +154,7 @@ const apps = {
     {
       name: 'Mast (Mac)',
       icon: mast,
-      url: 'https://apps.apple.com/us/app/mast/id1489861544',
+      url: 'https://apps.apple.com/app/mast-for-mastodon/id1437429129',
       paid: true
     },
 
