@@ -294,7 +294,7 @@ const BrowseApps = ({ intl }) => (
 
         <div className='logo-grid'>
           <div>
-            {sponsors.map(x => <a key={x.href} href={x.href}><img src={x.src} alt={x.alt} /></a>)}
+            {sponsors.map(x => <a key={x.href} href={x.href} rel='sponsored'><img src={x.src} alt={x.alt}  /></a>)}
           </div>
         </div>
       </div>
