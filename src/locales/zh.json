@@ -3,7 +3,7 @@
   "apps.paid": "付费",
   "browse_apps.api_docs": "API 文档",
   "browse_apps.desktop": "电脑端",
-  "browse_apps.lead2": "正由于 Mastodon 使用了开放的 API ，你可以使用第三方开发者开发的任意应用浏览 Mastodon",
+  "browse_apps.lead2": "得益于 Mastodon 使用了开放的 API ，你可以使用第三方开发者开发的任意应用浏览 Mastodon",
   "browse_apps.make_your_own": "Mastodon 的源代码开放，并且有着工整简洁的 API 文档可供开发。你可选择开发你自己的程序来使用 Mastodon，或者使用其他数不胜数由第三方开发者开发的应用",
   "browse_apps.open_api": "开放的 API",
   "browse_apps.progressive_web_app": "渐进式网页应用 PWA",
