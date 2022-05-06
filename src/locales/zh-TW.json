@@ -39,6 +39,7 @@
   "home.how_it_works": "運作方式",
   "home.sponsored_by": "贊助由",
   "home.tagline3": "在超過 {count}M 名使用者的社群網絡中關注舊友新知，隨心發佈網址連結、圖片、文字、影片，享用這個社群擁有、免除廣告的自由社交空間。",
+  "home.with_additional_funding_from": "With additional funding from",
   "how_it_works.future": "Mastodon 正遠望未來",
   "how_it_works.future_text": "歸功於標準協定，網路不限於 Mastodon 伺服器。如果有更好的軟體出現，它就可以沿用先前的社交圖譜。",
   "how_it_works.network": "網路有互通性",
