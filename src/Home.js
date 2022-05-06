@@ -35,6 +35,9 @@ import sponsorOnlineCasinos from './assets/sponsors/onlinecasinos.a2791b0.png';
 import sponsorCasinoHexAU from './assets/sponsors/casino-hex-au.png';
 import sponsorWideAngleAnalytics from './assets/sponsors/wide-angle-analytics.png';
 
+import nlnetFoundation from './assets/sponsors/nlnet.png';
+import ngiZeroDiscovery from './assets/sponsors/NGI0Discovery_tag.svg';
+
 import wiredLogo from './assets/wired-logo.svg';
 import theVergeLogo from './assets/the-verge-logo.svg';
 import motherboardLogo from './assets/motherboard-logo.svg';
@@ -194,9 +197,18 @@ export default class Home extends PureComponent {
           <div className='container'>
             <h2><FormattedMessage id='home.sponsored_by' defaultMessage='Sponsored by' /></h2>
 
-            <div className='logo-grid'>
+            <div className='logo-grid' style={{ marginBottom: 30 }}>
               <div>
                 {sponsors.map(x => <a key={x.href} href={x.href}><img src={x.src} alt={x.alt} /></a>)}
+              </div>
+            </div>
+
+            <h2><FormattedMessage id='home.with_additional_funding_from' defaultMessage='With additional funding from' /></h2>
+
+            <div className='logo-grid'>
+              <div>
+                <a href='https://nlnet.nl/'><img src={nlnetFoundation} alt='NLNet Foundation' /></a>
+                <a href='https://nlnet.nl/NGI0'><img src={ngiZeroDiscovery} alt='NGI Zero Discovery' /></a>
               </div>
             </div>
           </div>

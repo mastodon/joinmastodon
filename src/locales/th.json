@@ -39,6 +39,7 @@
   "home.how_it_works": "ดูวิธีการทำงาน",
   "home.sponsored_by": "สนับสนุนโดย",
   "home.tagline3": "ติดตามเพื่อน ๆ และค้นพบเพื่อนใหม่ ๆ กว่า {count} ล้านคน เผยแพร่ได้ทุกอย่างที่คุณต้องการ ไม่ว่าจะเป็นลิงก์ รูปภาพ ข้อความ วิดีโอ บนแพลตฟอร์มที่เป็นเจ้าของโดยชุมชนและไม่มีโฆษณา",
+  "home.with_additional_funding_from": "With additional funding from",
   "how_it_works.future": "Mastodon is future-proof",
   "how_it_works.future_text": "Thanks to standard protocols, the network is not limited to Mastodon-based servers. If better software comes along, it can continue with the same social graph.",
   "how_it_works.network": "The network is interoperable",
