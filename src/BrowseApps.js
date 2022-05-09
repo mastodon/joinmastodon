@@ -30,6 +30,7 @@ import imast from './assets/apps/imast_icon.png';
 import mercury from './assets/apps/mercury.png';
 import sengi from './assets/apps/sengi.png';
 import metatext from './assets/apps/metatext.png';
+import mastodon from './assets/apps/mastodon.png';
 
 import sponsorDotcomMonitor from './assets/sponsors/dotcom-monitor-logo.png';
 import sponsorLoadView from './assets/sponsors/LoadView-logo.png';
@@ -95,6 +96,11 @@ const apps = {
       name: 'Metatext',
       icon: metatext,
       url: 'https://apps.apple.com/us/app/metatext/id1523996615?mt=8',
+    },
+    {
+      name: 'Mastodon for iPhone and iPad',
+      icon: mastodon,
+      url: 'https://apps.apple.com/app/mastodon-for-iphone-and-ipad/id1571998974',
     },
   ],
 
