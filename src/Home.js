@@ -34,6 +34,7 @@ import sponsorNettikasinot from './assets/sponsors/nettikasinot.svg';
 import sponsorOnlineCasinos from './assets/sponsors/onlinecasinos.a2791b0.png';
 import sponsorCasinoHexAU from './assets/sponsors/casino-hex-au.png';
 import sponsorWideAngleAnalytics from './assets/sponsors/wide-angle-analytics.png';
+import sponsorGoread from './assets/sponsors/goread.png';
 
 import nlnetFoundation from './assets/sponsors/nlnet.png';
 import ngiZeroDiscovery from './assets/sponsors/NGI0Discovery_tag.svg';
@@ -101,6 +102,7 @@ export const sponsors = [
   { href: 'https://www.onlinecasinos.net/', src: sponsorOnlineCasinos, alt: 'OnlineCasinos.net' }, // Custom
   { href: 'https://topaussiecasinos.com/', src: sponsorCasinoHexAU, alt: 'CasinoHEX Australia' }, // Custom
   { href: 'https://wideangle.co', src: sponsorWideAngleAnalytics, alt: 'Wide Angle Analytics' }, // Custom
+  { href: 'https://goread.io/buy-instagram-followers', src: sponsorGoread, alt: 'Goread.io' },
 ];
 
 export default class Home extends PureComponent {
