@@ -35,6 +35,7 @@ import sponsorOnlineCasinos from './assets/sponsors/onlinecasinos.a2791b0.png';
 import sponsorCasinoHexAU from './assets/sponsors/casino-hex-au.png';
 import sponsorWideAngleAnalytics from './assets/sponsors/wide-angle-analytics.png';
 import sponsorGoread from './assets/sponsors/goread.png';
+import sponsorOak from './assets/sponsors/oak.svg';
 
 import nlnetFoundation from './assets/sponsors/nlnet.png';
 import ngiZeroDiscovery from './assets/sponsors/NGI0Discovery_tag.svg';
@@ -79,6 +80,7 @@ const playerOpts = {
 };
 
 export const sponsors = [
+  { href: 'https://oak.is/', src: sponsorOak, alt: 'Oak Studios' },
   { href: 'https://www.lunanode.com/', src: sponsorLunanode, alt: 'Lunanode' },
   { href: 'https://www.ramotion.com/agency/ui-ux-design', src: sponsorTrueVendor, alt: 'UI/UX Designer' },
   { href: 'https://airvpn.org/landing/mastodon', src: sponsorAirVPN, alt: 'AirVPN' },

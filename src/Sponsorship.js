@@ -38,7 +38,7 @@ import avatarSwitchVPN from './assets/sponsors/switchvpn.png';
 import avatarEmpresso from './assets/sponsors/empresso.png';
 import avatarEduReviewer from './assets/sponsors/edureviewer.jpg';
 import avatarLucasFreeman from './assets/sponsors/lucasfreeman.jpg';
-import avatarCoywolf from './assets/sponsors/coywolf-logo-white.svg';
+import avatarCoywolf from './assets/sponsors/coywolf.jpg';
 
 import mastodonBit from './assets/bit.png';
 import mastodonSilver from './assets/silver.png';
@@ -85,7 +85,7 @@ const silverSponsors = [
   { href: 'https://vocalodon.net/@tomoki', src: avatarTomoki, name: 'Hiroyuki Wakimoto (TOMOKI++)' },
   { href: 'https://spicedupaffairs.com/', name: 'SUA' },
   { href: 'https://www.looktotheright.com/', src: avatarLookToTheRight, name: 'Look To The Right' },
-  { name: 'Martin Seeger' },
+  { href: 'https://octodon.social/@Masek', name: 'Martin Seeger' },
   { href: 'https://dtp-mstdn.jp', src: avatarNoellabo, name: 'noellabo' },
   { name: 'Donald Robb', nofollow: true },
   { href: 'https://ivypanda.com/online-thesis-generator', name: 'IvyPanda', nofollow: true },
