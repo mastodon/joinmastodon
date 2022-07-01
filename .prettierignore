@@ -1,1 +1,4 @@
 z_archive
+node_modules
+.next
+.swc
