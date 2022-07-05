@@ -1,7 +1,7 @@
 import { FormattedMessage } from "react-intl"
 import loadIntlMessages from "../utils/loadIntlMessages"
 
-function Home(props) {
+function Home() {
   return (
     <div>
       <h1>
