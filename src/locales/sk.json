@@ -22,7 +22,7 @@
   "credits.support_text": "Mastodon is free, open-source software. There is no advertising, monetizing, or venture capital. Your donations directly support full-time development of the project.",
   "credits.view_sponsors": "View sponsors",
   "features.find_your_community": "Find your perfect community",
-  "features.find_your_community_text": "Mastodon isn’t a single website like Twitter or Facebook, it's a network of thousands of servers operated by different organizations and individuals that provide a seamless social media experience.",
+  "features.find_your_community_text": "Mastodon isn’t a single website like Twitter or Facebook, it's a network of thousands of servers, some running different software, operated by different organizations and individuals that provide a seamless social media experience. On top of other Mastodon servers (called 'instances'), Mastodon communicates with other social media services like Misskey, Pleroma, WriteFreely, PeerTube, and much more to provide a cross-compatible experience on what's known as the Fediverse.",
   "features.for_individual": "Mastodon for the individual",
   "features.for_individual_text": "Without an incentive to sell you things, Mastodon allows you to consume content you enjoy uninterrupted. Your feed is chronological, ad-free and non-algorithmic—you decide who you want to see!",
   "features.for_organization": "Mastodon for the organization",
