@@ -10,7 +10,7 @@ const Features = () => (
       <div className='left text'>
         <i className='xs-show ion-md-globe' />
         <h2><FormattedMessage id='features.find_your_community' defaultMessage='Find your perfect community' /></h2>
-        <p><FormattedMessage id='features.find_your_community_text' defaultMessage="Mastodon isn’t a single website like Twitter or Facebook, it's a network of thousands of communities operated by different organizations and individuals that provide a seamless social media experience." /></p>
+        <p><FormattedMessage id='features.find_your_community_text' defaultMessage="Mastodon isn’t a single website like Twitter or Facebook, it's a network of thousands of servers, some running different software, operated by different organizations and individuals that provide a seamless social media experience. On top of other Mastodon servers (called 'instances'), Mastodon communicates with other social media services like Misskey, Pleroma, WriteFreely, PeerTube, and much more to provide a cross-compatible experience on what's known as the Fediverse." /></p>
       </div>
     </div>
 
