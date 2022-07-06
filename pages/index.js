@@ -6,7 +6,7 @@ function Home() {
     <div>
       <h1>
         <FormattedMessage
-          id="home.headline"
+          id="home.hero.headline"
           defaultMessage="Social networking that's not for sale."
         />
       </h1>
