@@ -1,0 +1,235 @@
+:root {
+  --black: #000000;
+  --gray-1: #555555;
+  --gray-2: #9b9b9b;
+  --gray-3: #d4d4d4;
+  --gray-4: #f3f3f3;
+  --gray-5: #f6f6f6;
+  --white: #ffffff;
+
+  --blurple-gradient: linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%);
+
+  --eggplant: #17063b;
+  --dark-blurple: #2f0c7a;
+  --main-blurple: #563acc;
+  --accent-blurple: #6364ff;
+  --blurple-text-on-black: #858afa;
+  --lime: #baff3b;
+  --goldenrod: #ffbe2e;
+}
+
+// adapted from https://getbootstrap.com/docs/5.0/layout/breakpoints/
+$xs: 390px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin min-width($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@function rem($px) {
+  @return calc($px / 16 * 1rem);
+}
+
+@mixin h1 {
+  font-size: rem(68);
+  font-weight: 800;
+  line-height: calc(90 / 68);
+  letter-spacing: 0em;
+}
+
+@mixin h2 {
+  font-size: rem(50);
+  font-weight: 800;
+  line-height: calc(60 / 50);
+  letter-spacing: 0em;
+}
+
+@mixin h3 {
+  font-size: rem(42);
+  font-weight: 800;
+  line-height: calc(55 / 42);
+  letter-spacing: 0em;
+}
+
+@mixin h4 {
+  font-size: rem(38);
+  font-weight: 800;
+  line-height: calc(50 / 38);
+  letter-spacing: 0em;
+}
+
+@mixin h5 {
+  font-size: rem(28);
+  font-weight: 800;
+  line-height: calc(38 / 28);
+  letter-spacing: 0.01em;
+}
+
+@mixin h6 {
+  font-size: rem(22);
+  font-weight: 800;
+  line-height: calc(30 / 22);
+  letter-spacing: 0.01em;
+}
+
+@mixin sh1 {
+  font-size: rem(22);
+  font-weight: 450;
+  line-height: calc(30 / 22);
+  letter-spacing: 0.01em;
+}
+
+@mixin b1 {
+  font-size: rem(20);
+  font-weight: 450;
+  line-height: calc(30 / 20);
+  letter-spacing: 0.01em;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+@mixin b2 {
+  font-size: rem(16);
+  font-weight: 450;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.01em;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+@mixin b3 {
+  font-size: rem(14);
+  font-weight: 450;
+  line-height: calc(17 / 14);
+  letter-spacing: 0.01em;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+@mixin b4 {
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: calc(17 / 12);
+  letter-spacing: 0.01em;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+@mixin c2 {
+  font-size: rem(9);
+  font-weight: 600;
+  line-height: calc(19 / 9);
+  letter-spacing: 0.01em;
+}
+
+@mixin c3 {
+  font-size: rem(6);
+  font-weight: 450;
+  line-height: calc(17 / 6);
+  letter-spacing: 0.01em;
+}
+
+.h1 {
+  @include h3;
+  @include min-width ($md) {
+    @include h1;
+  }
+}
+
+.h2 {
+  @include h4;
+  @include min-width ($md) {
+    @include h2;
+  }
+}
+
+.h3 {
+  @include h4;
+  @include min-width ($md) {
+    @include h3;
+  }
+}
+
+.h4 {
+  @include h5;
+  @include min-width ($md) {
+    @include h4;
+  }
+}
+
+.h5 {
+  @include h6;
+  @include min-width ($md) {
+    @include h5;
+  }
+}
+
+.h6 {
+  @include h6;
+}
+
+.sh1 {
+  @include b1;
+  @include min-width ($md) {
+    @include sh1;
+  }
+}
+
+.b1 {
+  @include b1;
+}
+
+.b2 {
+  @include b2;
+}
+
+.b3 {
+  @include b3;
+}
+
+.b4 {
+  @include b4;
+}
+
+.c2 {
+  @include c2;
+}
+
+.c3 {
+  @include c3;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
