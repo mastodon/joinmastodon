@@ -20,22 +20,69 @@ function Home(props) {
           "b4",
           "c2",
           "c3",
-        ].map(name => (
-          <div key={name} style={{
-            display: "flex",
-            gap: "1rem",
-            alignItems: "baseline",
-          }}>
-            <div className="b4"  style={{width: "1rem"}}>{name}</div>
+        ].map((name) => (
+          <div
+            key={name}
+            style={{
+              display: "flex",
+              gap: "1rem",
+              alignItems: "baseline",
+            }}
+          >
+            <div className="b4" style={{ width: "1rem" }}>
+              {name}
+            </div>
             <div className={name}>Find your perfect community</div>
           </div>
         ))}
       </section>
 
       <section>
+        <h2 className="h5">Colors</h2>
+
+        <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))" }}>
+          {[
+            "black",
+            "gray-1",
+            "gray-2",
+            "gray-3",
+            "gray-4",
+            "gray-5",
+            "white",
+            "blurple-gradient",
+            "eggplant",
+            "dark-blurple",
+            "main-blurple",
+            "accent-blurple",
+            "blurple-text-on-black",
+            "lime",
+            "goldenrod",
+          ].map((color) => (
+            <div
+              key={color}
+              style={{
+                display: "flex",
+                gap: "1rem",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  width: "3rem",
+                  height: "3rem",
+                  background: `var(--${color})`,
+                }}
+              ></div>
+              <div className="b2">{color}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
         <h2 className="h5">Icons</h2>
 
-        <div style={{display: "flex", flexWrap: "wrap"}}>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
           {[
             `api-gear`,
             `api-window`,
@@ -56,14 +103,17 @@ function Home(props) {
             `screen`,
             `servers`,
           ].map((name) => (
-            <figure key={name} style={{
-              display: "flex",
-              gap: "1rem",
-              flexDirection: "column",
-              alignItems: "baseline",
-            }}>
+            <figure
+              key={name}
+              style={{
+                display: "flex",
+                gap: "1rem",
+                flexDirection: "column",
+                alignItems: "baseline",
+              }}
+            >
               <SVG src={`/icons/${name}.svg`} />
-              <figcaption>{name}</figcaption>
+              <figcaption className="b2">{name}</figcaption>
             </figure>
           ))}
         </div>
