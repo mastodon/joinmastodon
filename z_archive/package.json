@@ -1,0 +1,76 @@
+{
+  "name": "joinmastodon",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.21.1",
+    "classnames": "^2.2.5",
+    "node-sass": "^4.14.1",
+    "react": "^16.0.1",
+    "react-custom-scrollbars": "^4.1.2",
+    "react-dom": "^16.0.1",
+    "react-helmet": "^6.1.0",
+    "react-intl": "^2.4.0",
+    "react-redux": "^5.0.5",
+    "react-responsive-modal": "^2.0.1",
+    "react-responsive-select": "6.0.0",
+    "react-router-dom": "^4.0.0",
+    "react-snapshot": "^1.1.0",
+    "react-youtube": "^7.5.0",
+    "redux": "^3.7.1",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "smoothscroll-polyfill": "^0.4.0",
+    "twemoji": "^2.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-react-intl": "^2.3.1",
+    "babel-preset-react-app": "^3.0.2",
+    "npm-run-all": "^4.1.1",
+    "react-intl-translations-manager": "^5.0.0",
+    "react-scripts": "2.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && react-snapshot",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "translate": "NODE_ENV=production babel ./src >/dev/null",
+    "manage:translations": "node ./translationRunner.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "reactSnapshot": {
+    "include": [
+      "/covenant",
+      "/communities/general",
+      "/communities/regional",
+      "/communities/art",
+      "/communities/music",
+      "/communities/journalism",
+      "/communities/activism",
+      "/communities/lgbt",
+      "/communities/games",
+      "/communities/tech",
+      "/communities/academia",
+      "/communities/adult",
+      "/communities/humor",
+      "/communities/furry",
+      "/communities/food",
+      "/privacy-policy",
+      "/ios/privacy",
+      "/android/privacy"
+    ],
+    "snapshotDelay": 500
+  }
+}

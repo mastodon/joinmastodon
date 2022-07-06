@@ -1,0 +1,18 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="11" y="17" width="98" height="22" rx="3" stroke="#6364FF" stroke-width="2"/>
+<rect x="11" y="49" width="98" height="22" rx="3" stroke="#6364FF" stroke-width="2"/>
+<rect x="11" y="79" width="98" height="22" rx="3" stroke="#6364FF" stroke-width="2"/>
+<line x1="59" y1="79" x2="59" y2="70" stroke="#6364FF" stroke-width="2"/>
+<line x1="101" y1="28" x2="67" y2="28" stroke="#6364FF" stroke-width="4" stroke-linecap="round"/>
+<circle cx="21" cy="28" r="4" fill="#6364FF"/>
+<circle cx="33" cy="28" r="4" fill="#6364FF"/>
+<circle cx="45" cy="28" r="4" fill="#6364FF"/>
+<line x1="101" y1="60" x2="67" y2="60" stroke="#6364FF" stroke-width="4" stroke-linecap="round"/>
+<circle cx="21" cy="60" r="4" fill="#6364FF"/>
+<circle cx="33" cy="60" r="4" fill="#6364FF"/>
+<circle cx="45" cy="60" r="4" fill="#6364FF"/>
+<line x1="101" y1="90" x2="67" y2="90" stroke="#6364FF" stroke-width="4" stroke-linecap="round"/>
+<circle cx="21" cy="90" r="4" fill="#6364FF"/>
+<circle cx="33" cy="90" r="4" fill="#6364FF"/>
+<circle cx="45" cy="90" r="4" fill="#6364FF"/>
+</svg>
