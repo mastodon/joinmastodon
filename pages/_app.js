@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import { IntlProvider } from "react-intl"
+import "../styles/globals.scss"
 
 function MyApp({ Component, pageProps }) {
   const { locale, defaultLocale } = useRouter()
