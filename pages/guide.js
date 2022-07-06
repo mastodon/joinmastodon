@@ -13,6 +13,7 @@ function Home(props) {
           "h3",
           "h4",
           "h5",
+          "h6",
           "sh1",
           "b1",
           "b2",
@@ -29,7 +30,7 @@ function Home(props) {
               alignItems: "baseline",
             }}
           >
-            <div className="b4" style={{ width: "1rem" }}>
+            <div className="b4" style={{ width: "1rem", flex: "0 0 auto" }}>
               {name}
             </div>
             <div className={name}>Find your perfect community</div>

@@ -182,6 +182,10 @@ $xxl: 1400px;
   }
 }
 
+.h6 {
+  @include h6;
+}
+
 .sh1 {
   @include b1;
   @include min-width ($md) {
