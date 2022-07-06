@@ -7,7 +7,7 @@
   --gray-5: #f6f6f6;
   --white: #ffffff;
 
-  --blurple-gradient: linear-gradient(0deg, #563ACC 12.87%, #6364FF 88.62%);
+  --blurple-gradient: linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%);
 
   --eggplant: #17063b;
   --dark-blurple: #2f0c7a;
@@ -18,110 +18,207 @@
   --goldenrod: #ffbe2e;
 }
 
+// adapted from https://getbootstrap.com/docs/5.0/layout/breakpoints/
+$xs: 390px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin min-width($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
 @function rem($px) {
   @return calc($px / 16 * 1rem);
 }
 
 @mixin h1 {
-  font-size: rem(90);
-  line-height: calc(115 / 90);
-  font-weight: 800;
-}
-@mixin h2 {
   font-size: rem(68);
+  font-weight: 800;
   line-height: calc(90 / 68);
-  font-weight: 800;
+  letter-spacing: 0em;
 }
-@mixin h3 {
+
+@mixin h2 {
   font-size: rem(50);
-  line-height: calc(60 / 50);
   font-weight: 800;
+  line-height: calc(60 / 50);
+  letter-spacing: 0em;
 }
+
+@mixin h3 {
+  font-size: rem(42);
+  font-weight: 800;
+  line-height: calc(55 / 42);
+  letter-spacing: 0em;
+}
+
 @mixin h4 {
   font-size: rem(38);
-  line-height: calc(50 / 38);
   font-weight: 800;
+  line-height: calc(50 / 38);
+  letter-spacing: 0em;
 }
+
 @mixin h5 {
   font-size: rem(28);
-  line-height: calc(38 / 28);
   font-weight: 800;
-  letter-spacing: 0.01em;
-}
-@mixin sh1 {
-  font-size: rem(22);
-  line-height: calc(30 / 22);
-  font-weight: 450;
-  letter-spacing: 0.01em;
-}
-@mixin b1 {
-  font-size: rem(20);
-  line-height: calc(30 / 20);
-  font-weight: 450;
-  letter-spacing: 0.01em;
-  b, strong {
-    font-weight: 600;
-  }
-}
-@mixin b2 {
-  font-size: rem(16);
-  line-height: calc(24 / 16);
-  font-weight: 450;
-  letter-spacing: 0.01em;
-  b, strong {
-    font-weight: 600;
-  }
-}
-@mixin b3 {
-  font-size: rem(14);
-  line-height: calc(17 / 14);
-  font-weight: 450;
-  letter-spacing: 0.01em;
-  b, strong {
-    font-weight: 600;
-  }
-}
-@mixin b4 {
-  font-size: rem(12);
-  line-height: calc(17 / 12);
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  b, strong {
-    font-weight: 600;
-  }
-}
-@mixin c2 {
-  font-size: rem(9);
-  line-height: calc(19 / 9);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-@mixin c3 {
-  font-size: rem(6);
-  line-height: calc(17 / 6);
-  font-weight: 450;
+  line-height: calc(38 / 28);
   letter-spacing: 0.01em;
 }
 
-.h1 { @include h1 }
-.h2 { @include h2 }
-.h3 { @include h3 }
-.h4 { @include h4 }
-.h5 { @include h5 }
-.sh1 { @include sh1 }
-.b1 { @include b1 }
-.b2 { @include b2 }
-.b3 { @include b3 }
-.b4 { @include b4 }
-.c2 { @include c2 }
-.c3 { @include c3 }
+@mixin h6 {
+  font-size: rem(22);
+  font-weight: 800;
+  line-height: calc(30 / 22);
+  letter-spacing: 0.01em;
+}
+
+@mixin sh1 {
+  font-size: rem(22);
+  font-weight: 450;
+  line-height: calc(30 / 22);
+  letter-spacing: 0.01em;
+}
+
+@mixin b1 {
+  font-size: rem(20);
+  font-weight: 450;
+  line-height: calc(30 / 20);
+  letter-spacing: 0.01em;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+@mixin b2 {
+  font-size: rem(16);
+  font-weight: 450;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.01em;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+@mixin b3 {
+  font-size: rem(14);
+  font-weight: 450;
+  line-height: calc(17 / 14);
+  letter-spacing: 0.01em;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+@mixin b4 {
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: calc(17 / 12);
+  letter-spacing: 0.01em;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+@mixin c2 {
+  font-size: rem(9);
+  font-weight: 600;
+  line-height: calc(19 / 9);
+  letter-spacing: 0.01em;
+}
+
+@mixin c3 {
+  font-size: rem(6);
+  font-weight: 450;
+  line-height: calc(17 / 6);
+  letter-spacing: 0.01em;
+}
+
+.h1 {
+  @include h3;
+  @include min-width ($md) {
+    @include h1;
+  }
+}
+
+.h2 {
+  @include h4;
+  @include min-width ($md) {
+    @include h2;
+  }
+}
+
+.h3 {
+  @include h4;
+  @include min-width ($md) {
+    @include h3;
+  }
+}
+
+.h4 {
+  @include h5;
+  @include min-width ($md) {
+    @include h4;
+  }
+}
+
+.h5 {
+  @include h6;
+  @include min-width ($md) {
+    @include h5;
+  }
+}
+
+.sh1 {
+  @include b1;
+  @include min-width ($md) {
+    @include sh1;
+  }
+}
+
+.b1 {
+  @include b1;
+}
+
+.b2 {
+  @include b2;
+}
+
+.b3 {
+  @include b3;
+}
+
+.b4 {
+  @include b4;
+}
+
+.c2 {
+  @include c2;
+}
+
+.c3 {
+  @include c3;
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Manrope", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
