@@ -1,16 +1,23 @@
 import { FormattedMessage } from "react-intl"
 import fsPromises from "fs/promises"
 import path from "path"
+
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
+import TestimonialCard from "../components/TestimonialCard"
 
-function Home() {
-  return <HomeHero />
+function Home({ testimonials }) {
+  return (
+    <>
+      <HomeHero />
+      <Testimonials testimonials={testimonials} />
+    </>
+  )
 }
 
 export default Home
 
-function HomeHero() {
+const HomeHero = () => {
   return (
     <section className="grid hero">
       <h1 className="h1">
@@ -66,6 +73,18 @@ function HomeHero() {
           justify-content: center;
         }
       `}</style>
+    </section>
+  )
+}
+
+const Testimonials = ({ testimonials }) => {
+  return (
+    <section className="grid">
+      {testimonials.map((testimonial) => {
+        return (
+          <TestimonialCard key={testimonial.name} testimonial={testimonial} />
+        )
+      })}
     </section>
   )
 }
