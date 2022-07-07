@@ -32,8 +32,12 @@ $xxl: 1400px;
   }
 }
 
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
 @function rem($px) {
-  @return calc($px / 16 * 1rem);
+  @return calc(stripUnit($px) / 16 * 1rem);
 }
 
 @mixin h1 {
