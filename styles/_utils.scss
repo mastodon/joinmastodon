@@ -30,20 +30,6 @@
     padding: 0;
     width: 100%;
   }
-
-  .col-center-10 {
-    @include min-width($md) {
-      grid-column: 2 / -2;
-    }
-  }
-
-  .col-span-3 {
-    grid-column: span 3;
-  }
-
-  .col-span-4 {
-    grid-column: span 4;
-  }
 }
 
 .rounded {
