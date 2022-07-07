@@ -1,0 +1,67 @@
+.bg-accent-blurple {
+  background-color: var(--accent-blurple);
+}
+
+.bg-gray-5 {
+  background-color: var(--gray-5);
+}
+
+.border-2 {
+  border: 2px solid var(--accent-blurple);
+}
+
+.grid {
+  display: grid;
+  gap: rem(16px);
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  max-width: rem(1312px);
+  padding: 0 rem(24px);
+  @include min-width($md) {
+    gap: rem(20px);
+    grid-template-columns: repeat(12, 1fr);
+    padding: 0 rem(64px);
+  }
+
+  > * {
+    grid-column: span 4;
+    @include min-width($md) {
+      grid-column: span 12;
+    }
+  }
+
+  > .grid {
+    padding: 0;
+    width: 100%;
+  }
+
+  .col-center-10 {
+    @include min-width($md) {
+      grid-column: 2 / -2;
+    }
+  }
+
+  .col-span-3 {
+    grid-column: span 3;
+  }
+
+  .col-span-4 {
+    grid-column: span 4;
+  }
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-accent-blurple {
+  color: var(--accent-blurple);
+}
+
+.text-white {
+  color: var(--white);
+}
