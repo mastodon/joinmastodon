@@ -10,21 +10,6 @@ function Home() {
           defaultMessage="Social networking that's not for sale."
         />
       </h1>
-
-      <div className="grid">
-        <h2>This is an inner grid</h2>
-        <div className="col-span-4">Spanning 4 columns</div>
-        <div className="col-span-4">Spanning 4 columns</div>
-        <div className="col-span-4">Spanning 4 columns</div>
-
-        <div className="grid">
-          <h2>This is an inner inner grid</h2>
-          <div className="col-span-3">Spanning 3 columns</div>
-          <div className="col-span-3">Spanning 3 columns</div>
-          <div className="col-span-3">Spanning 3 columns</div>
-          <div className="col-span-3">Spanning 3 columns</div>
-        </div>
-      </div>
     </div>
   )
 }
