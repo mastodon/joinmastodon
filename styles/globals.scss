@@ -153,35 +153,35 @@ $xxl: 1400px;
 
 .h1 {
   @include h3;
-  @include min-width ($md) {
+  @include min-width($md) {
     @include h1;
   }
 }
 
 .h2 {
   @include h4;
-  @include min-width ($md) {
+  @include min-width($md) {
     @include h2;
   }
 }
 
 .h3 {
   @include h4;
-  @include min-width ($md) {
+  @include min-width($md) {
     @include h3;
   }
 }
 
 .h4 {
   @include h5;
-  @include min-width ($md) {
+  @include min-width($md) {
     @include h4;
   }
 }
 
 .h5 {
   @include h6;
-  @include min-width ($md) {
+  @include min-width($md) {
     @include h5;
   }
 }
@@ -192,7 +192,7 @@ $xxl: 1400px;
 
 .sh1 {
   @include b1;
-  @include min-width ($md) {
+  @include min-width($md) {
     @include sh1;
   }
 }
@@ -237,3 +237,5 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@import "_utils";
