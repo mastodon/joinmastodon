@@ -18,6 +18,7 @@ const LinkButton = ({ borderless, children, fullWidth, light, href }) => {
             border: var(--border-width) solid var(--accent-blurple);
             border-radius: var(--border-radius);
             display: block;
+            font-weight: 600;
             padding: 1rem;
             width: max-content;
           }
