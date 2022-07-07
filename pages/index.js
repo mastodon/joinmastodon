@@ -1,4 +1,6 @@
 import { FormattedMessage } from "react-intl"
+import fsPromises from "fs/promises"
+import path from "path"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 
@@ -69,7 +71,12 @@ function HomeHero() {
 }
 
 export async function getStaticProps(ctx) {
+  const jsonData = await fsPromises.readFile(
+    path.join(process.cwd(), "data/testimonials.json")
+  )
+  const testimonials = JSON.parse(jsonData)
+
   return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
+    props: { intlMessages: await loadIntlMessages(ctx), testimonials },
   }
 }
