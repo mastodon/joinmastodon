@@ -18,7 +18,7 @@ export const Footer = () => (
           </div>
           <div className="Footer__menus">
             <div className="Footer__menu">
-              <h4 className="h6">
+              <h4 className="Footer__menu-heading h6">
                 <FormattedMessage id="nav.product" defaultMessage="Product" />
               </h4>
               <ul className="b2">
@@ -52,7 +52,7 @@ export const Footer = () => (
               </ul>
             </div>
             <div className="Footer__menu">
-              <h4 className="h6">
+              <h4 className="Footer__menu-heading h6">
                 <FormattedMessage
                   id="nav.resources"
                   defaultMessage="Resources"
@@ -95,7 +95,7 @@ export const Footer = () => (
               </ul>
             </div>
             <div className="Footer__menu">
-              <h4 className="h6">
+              <h4 className="Footer__menu-heading h6">
                 <FormattedMessage id="nav.company" defaultMessage="Company" />
               </h4>
               <ul className="b2">
@@ -149,12 +149,20 @@ export const Footer = () => (
         padding: 6rem 0;
         text-align: center;
       }
+      .Footer__menu-heading {
+        line-height: 1.5rem;
+        padding: 0.5rem 0;
+      }
       .Footer__grid {
         row-gap: 2.5rem;
       }
-      .Footer ul {
+      .Footer__menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
         list-style: none;
         padding: 0;
+        margin: 0;
       }
       .Footer__menus {
         display: grid;
