@@ -1,28 +1,6 @@
-:root {
-  --black: #000000;
-  --gray-1: #555555;
-  --gray-2: #9b9b9b;
-  --gray-3: #d4d4d4;
-  --gray-4: #f3f3f3;
-  --gray-5: #f6f6f6;
-  --white: #ffffff;
-
-  --blurple-gradient: linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%);
-
-  --eggplant: #17063b;
-  --dark-blurple: #2f0c7a;
-  --main-blurple: #563acc;
-  --accent-blurple: #6364ff;
-  --blurple-text-on-black: #858afa;
-  --lime: #baff3b;
-  --goldenrod: #ffbe2e;
-
-  --border-radius: 4px;
-  --border-width: 2px;
-
-  --shadow-1: 0px 4px 15px rgba(0, 0, 0, 0.1);
-
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 // adapted from https://getbootstrap.com/docs/5.0/layout/breakpoints/
 $xs: 390px;
@@ -46,185 +24,122 @@ $xxl: 1400px;
   @return calc(stripUnit($px) / 16 * 1rem);
 }
 
-@mixin h1 {
-  font-size: rem(68);
-  font-weight: 800;
-  line-height: calc(90 / 68);
-  letter-spacing: 0em;
-}
+:root {
+  --black: #000000;
+  --gray-1: #555555;
+  --gray-2: #9b9b9b;
+  --gray-3: #d4d4d4;
+  --gray-4: #f3f3f3;
+  --gray-5: #f6f6f6;
+  --white: #ffffff;
 
-@mixin h2 {
-  font-size: rem(50);
-  font-weight: 800;
-  line-height: calc(60 / 50);
-  letter-spacing: 0em;
-}
+  --blurple-gradient: linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%);
 
-@mixin h3 {
-  font-size: rem(42);
-  font-weight: 800;
-  line-height: calc(55 / 42);
-  letter-spacing: 0em;
-}
+  --eggplant: #17063b;
+  --dark-blurple: #2f0c7a;
+  --main-blurple: #563acc;
+  --accent-blurple: #6364ff;
+  --blurple-text-on-black: #858afa;
+  --lime: #baff3b;
+  --goldenrod: #ffbe2e;
 
-@mixin h4 {
-  font-size: rem(38);
-  font-weight: 800;
-  line-height: calc(50 / 38);
-  letter-spacing: 0em;
-}
+  --border-radius: 4px;
+  --border-width: 2px;
 
-@mixin h5 {
-  font-size: rem(28);
-  font-weight: 800;
-  line-height: calc(38 / 28);
-  letter-spacing: 0.01em;
-}
-
-@mixin h6 {
-  font-size: rem(22);
-  font-weight: 800;
-  line-height: calc(30 / 22);
-  letter-spacing: 0.01em;
-}
-
-@mixin sh1 {
-  font-size: rem(22);
-  font-weight: 450;
-  line-height: calc(30 / 22);
-  letter-spacing: 0.01em;
-}
-
-@mixin b1 {
-  font-size: rem(20);
-  font-weight: 450;
-  line-height: calc(30 / 20);
-  letter-spacing: 0.01em;
-
-  b,
-  strong {
-    font-weight: 600;
-  }
-}
-
-@mixin b2 {
-  font-size: rem(16);
-  font-weight: 450;
-  line-height: calc(24 / 16);
-  letter-spacing: 0.01em;
-
-  b,
-  strong {
-    font-weight: 600;
-  }
-}
-
-@mixin b3 {
-  font-size: rem(14);
-  font-weight: 450;
-  line-height: calc(17 / 14);
-  letter-spacing: 0.01em;
-
-  b,
-  strong {
-    font-weight: 600;
-  }
-}
-
-@mixin b4 {
-  font-size: rem(12);
-  font-weight: 400;
-  line-height: calc(17 / 12);
-  letter-spacing: 0.01em;
-
-  b,
-  strong {
-    font-weight: 600;
-  }
-}
-
-@mixin c2 {
-  font-size: rem(9);
-  font-weight: 600;
-  line-height: calc(19 / 9);
-  letter-spacing: 0.01em;
-}
-
-@mixin c3 {
-  font-size: rem(6);
-  font-weight: 450;
-  line-height: calc(17 / 6);
-  letter-spacing: 0.01em;
-}
-
-.h1 {
-  @include h3;
+  --gutter-width: #{rem(16px)};
   @include min-width($md) {
-    @include h1;
+    --gutter-width: #{rem(20px)};
   }
 }
 
-.h2 {
-  @include h4;
-  @include min-width($md) {
-    @include h2;
+@layer utilities {
+  .h1 {
+    @apply text-h3 md:text-h1;
+    @apply leading-h3 md:leading-h1;
+    @apply font-800 tracking-heading;
   }
-}
 
-.h3 {
-  @include h4;
-  @include min-width($md) {
-    @include h3;
+  .h2 {
+    @apply text-h4 md:text-h2;
+    @apply leading-h4 md:leading-h2;
+    @apply font-800 tracking-heading;
   }
-}
 
-.h4 {
-  @include h5;
-  @include min-width($md) {
-    @include h4;
+  .h3 {
+    @apply text-h4 md:text-h3;
+    @apply leading-h4 md:leading-h3;
+    @apply font-800 tracking-heading;
   }
-}
 
-.h5 {
-  @include h6;
-  @include min-width($md) {
-    @include h5;
+  .h4 {
+    @apply text-h5 md:text-h4;
+    @apply leading-h5 md:leading-h4;
+    @apply font-800 tracking-copy md:tracking-heading;
   }
-}
 
-.h6 {
-  @include h6;
-}
-
-.sh1 {
-  @include b1;
-  @include min-width($md) {
-    @include sh1;
+  .h5 {
+    @apply text-h6 md:text-h5;
+    @apply leading-h6 md:leading-h5;
+    @apply font-800 tracking-copy;
   }
-}
 
-.b1 {
-  @include b1;
-}
+  .h6 {
+    @apply text-h6;
+    @apply leading-h6;
+    @apply font-800 tracking-copy;
+  }
 
-.b2 {
-  @include b2;
-}
+  .sh1 {
+    @apply text-b1 md:text-sh1;
+    @apply leading-b1 md:leading-sh1;
+    @apply font-450 tracking-copy;
+  }
 
-.b3 {
-  @include b3;
-}
+  .b1,
+  .b2,
+  .b3,
+  .b4 {
+    b,
+    strong {
+      @apply font-600;
+    }
+  }
 
-.b4 {
-  @include b4;
-}
+  .b1 {
+    @apply text-b1;
+    @apply leading-b1;
+    @apply font-450 tracking-copy;
+  }
 
-.c2 {
-  @include c2;
-}
+  .b2 {
+    @apply text-b2;
+    @apply leading-b2;
+    @apply font-450 tracking-copy;
+  }
 
-.c3 {
-  @include c3;
+  .b3 {
+    @apply text-b3;
+    @apply leading-b3;
+    @apply font-450 tracking-copy;
+  }
+
+  .b4 {
+    @apply text-b4;
+    @apply leading-b4;
+    @apply font-400 tracking-copy;
+  }
+
+  .c2 {
+    @apply text-c2;
+    @apply leading-c2;
+    @apply font-600 tracking-copy;
+  }
+
+  .c3 {
+    @apply text-c3;
+    @apply leading-c3;
+    @apply font-450 tracking-copy;
+  }
 }
 
 html,
@@ -234,31 +149,3 @@ body {
   font-family: "Manrope", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-@import "_utils";

@@ -4,7 +4,7 @@ import { IconCard } from "../components/IconCard"
 
 function Home(props) {
   return (
-    <div>
+    <div className="flex flex-col gap-16 [padding-block:4rem]">
       <section>
         <h2 className="h5">Type Scale</h2>
 
@@ -25,13 +25,9 @@ function Home(props) {
         ].map((name) => (
           <div
             key={name}
-            style={{
-              display: "flex",
-              gap: "1rem",
-              alignItems: "baseline",
-            }}
+            className="flex gap-4 items-baseline"
           >
-            <div className="b4" style={{ width: "1rem", flex: "0 0 auto" }}>
+            <div className="b4 w-4 flex-0">
               {name}
             </div>
             <div className={name}>Find your perfect community</div>
@@ -42,46 +38,32 @@ function Home(props) {
       <section>
         <h2 className="h5">Colors</h2>
 
-        <div
-          style={{
-            display: "grid",
-            gap: "1rem",
-            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-          }}
-        >
+        <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
           {[
-            "black",
-            "gray-1",
-            "gray-2",
-            "gray-3",
-            "gray-4",
-            "gray-5",
-            "white",
-            "blurple-gradient",
-            "eggplant",
-            "dark-blurple",
-            "main-blurple",
-            "accent-blurple",
-            "blurple-text-on-black",
-            "lime",
-            "goldenrod",
+            "bg-black",
+            "bg-gray-1",
+            "bg-gray-2",
+            "bg-gray-3",
+            "bg-gray-4",
+            "bg-gray-5",
+            "bg-white",
+            "bg-blurple-gradient",
+            "bg-eggplant",
+            "bg-dark-blurple",
+            "bg-main-blurple",
+            "bg-accent-blurple",
+            "bg-blurple-text-on-black",
+            "bg-lime",
+            "bg-goldenrod",
           ].map((color) => (
             <div
               key={color}
-              style={{
-                display: "flex",
-                gap: "1rem",
-                alignItems: "center",
-              }}
+              className="flex gap-4 items-center"
             >
               <div
-                style={{
-                  width: "3rem",
-                  height: "3rem",
-                  background: `var(--${color})`,
-                }}
-              ></div>
-              <div className="b2">{color}</div>
+                className={`w-12 h-12 ${color}`}
+              />
+              <div className="b2">{color.replace("bg-", "")}</div>
             </div>
           ))}
         </div>
@@ -90,7 +72,7 @@ function Home(props) {
       <section>
         <h2 className="h5">Icons</h2>
 
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div className="flex flex-wrap">
           {[
             `api-gear`,
             `api-window`,
@@ -113,12 +95,7 @@ function Home(props) {
           ].map((name) => (
             <figure
               key={name}
-              style={{
-                display: "flex",
-                gap: "1rem",
-                flexDirection: "column",
-                alignItems: "baseline",
-              }}
+              className="flex gap-4 flex-col items-baseline"
             >
               <SVG src={`/icons/${name}.svg`} />
               <figcaption className="b2">{name}</figcaption>
