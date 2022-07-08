@@ -1,16 +1,16 @@
 import { FormattedMessage } from "react-intl"
-import fsPromises from "fs/promises"
-import path from "path"
 
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
 
+import testimonialsData from "../data/testimonials.json"
+
 function Home({ testimonials }) {
   return (
     <>
       <HomeHero />
-      <Testimonials testimonials={testimonials} />
+      <Testimonials testimonials={testimonialsData} />
     </>
   )
 }
@@ -90,12 +90,7 @@ const Testimonials = ({ testimonials }) => {
 }
 
 export async function getStaticProps(ctx) {
-  const jsonData = await fsPromises.readFile(
-    path.join(process.cwd(), "data/testimonials.json")
-  )
-  const testimonials = JSON.parse(jsonData)
-
   return {
-    props: { intlMessages: await loadIntlMessages(ctx), testimonials },
+    props: { intlMessages: await loadIntlMessages(ctx) },
   }
 }
