@@ -149,6 +149,9 @@ export const Footer = () => (
         padding: 6rem 0;
         text-align: center;
       }
+      .Footer__grid {
+        row-gap: 2.5rem;
+      }
       .Footer ul {
         list-style: none;
         padding: 0;
@@ -166,6 +169,11 @@ export const Footer = () => (
         display: inline-block;
         padding-block: 0.5rem;
       }
+      .Footer__logo {
+        width: 5.5rem;
+        max-width: 100%;
+        justify-self: center;
+      }
       @media (min-width: 576px) {
         .Footer {
           text-align: left;
@@ -173,7 +181,6 @@ export const Footer = () => (
         .Footer__logo {
           grid-column: 1 / 2;
           justify-self: center;
-          padding: 0 1rem;
         }
         .Footer__menus {
           grid-column: 2 / 5;
@@ -182,6 +189,14 @@ export const Footer = () => (
         }
       }
       @media (min-width: 768px) {
+        .Footer__logo {
+          grid-column: 1 / 4;
+        }
+        .Footer__menus {
+          grid-column: 4 / 13;
+        }
+      }
+      @media (min-width: 992px) {
         .Footer__logo {
           grid-column: 2 / 5;
         }
