@@ -8,6 +8,7 @@ export const Footer = () => (
   <>
     <footer className="relative text-white pb-24 md:pt-24 mt-72 text-center md:text-left">
       <div className="full-width-bg bg-nightshade">
+        {/* TODO(daniel): tighten up sizing of swoosh */}
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 w-full h-48 md:h-72 translate-y-[1px] [background-position:90%_bottom] [background-size:MAX(64rem,100vw)_auto] bg-no-repeat bg-[url(/illustrations/swoosh.svg)]"></div>
       </div>
       <nav>
