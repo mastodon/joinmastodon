@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import { IntlProvider } from "react-intl"
+import Layout from "../components/Layout"
 import "../styles/globals.scss"
 import Footer from "../components/Footer"
 
@@ -11,8 +12,10 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={pageProps.intlMessages}
     >
-      <Component {...pageProps} />
-      <Footer></Footer>
+      <Layout>
+        <Component {...pageProps} />
+        <Footer></Footer>
+      </Layout>
     </IntlProvider>
   )
 }
