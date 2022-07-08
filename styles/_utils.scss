@@ -8,13 +8,12 @@
 
 .grid {
   display: grid;
-  gap: rem(16px);
+  gap: var(--gutter-width);
   grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
-  max-width: rem(1312px);
+  max-width: calc(rem(1312px) + 2 * rem(64px));
   padding: 0 rem(24px);
   @include min-width($md) {
-    gap: rem(20px);
     grid-template-columns: repeat(12, 1fr);
     padding: 0 rem(64px);
   }

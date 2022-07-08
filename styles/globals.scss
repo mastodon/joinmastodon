@@ -1,3 +1,25 @@
+// adapted from https://getbootstrap.com/docs/5.0/layout/breakpoints/
+$xs: 390px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin min-width($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($px) {
+  @return calc(stripUnit($px) / 16 * 1rem);
+}
+
 :root {
   --black: #000000;
   --gray-1: #555555;
@@ -19,28 +41,11 @@
 
   --border-radius: 4px;
   --border-width: 2px;
-}
-
-// adapted from https://getbootstrap.com/docs/5.0/layout/breakpoints/
-$xs: 390px;
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
-
-@mixin min-width($breakpoint) {
-  @media (min-width: $breakpoint) {
-    @content;
+  
+  --gutter-width: #{rem(16px)};
+  @include min-width($md) {
+    --gutter-width: #{rem(20px)};
   }
-}
-
-@function stripUnit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@function rem($px) {
-  @return calc(stripUnit($px) / 16 * 1rem);
 }
 
 @mixin h1 {
