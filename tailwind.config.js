@@ -21,7 +21,11 @@ module.exports = {
       "gray-4": "#f3f3f3",
       "gray-5": "#f6f6f6",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "blurple-gradient": `linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%)`,
+      },
+    },
   },
   plugins: [],
 }
