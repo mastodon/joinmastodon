@@ -10,7 +10,7 @@ export default Home
 
 function HomeHero() {
   return (
-    <section className="text-center hero">
+    <section className="hero text-center">
       <h1 className="h1 ">
         <FormattedMessage
           id="home.hero.headline"
@@ -25,7 +25,7 @@ function HomeHero() {
         />
       </p>
 
-      <div className="flex gap-12 justify-center">
+      <div className="flex justify-center gap-12">
         <LinkButton href="/">
           <FormattedMessage
             id="home.how_it_works"
