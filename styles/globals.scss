@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // adapted from https://getbootstrap.com/docs/5.0/layout/breakpoints/
 $xs: 390px;
 $sm: 576px;
@@ -41,7 +45,7 @@ $xxl: 1400px;
 
   --border-radius: 4px;
   --border-width: 2px;
-  
+
   --gutter-width: #{rem(16px)};
   @include min-width($md) {
     --gutter-width: #{rem(20px)};
