@@ -10,8 +10,8 @@ export default Home
 
 function HomeHero() {
   return (
-    <section className="grid hero">
-      <h1 className="h1">
+    <section className="text-center hero">
+      <h1 className="h1 ">
         <FormattedMessage
           id="home.hero.headline"
           defaultMessage="Social networking that's not for sale."
@@ -25,7 +25,7 @@ function HomeHero() {
         />
       </p>
 
-      <div className="hero__button-row">
+      <div className="flex gap-12 justify-center">
         <LinkButton href="/">
           <FormattedMessage
             id="home.how_it_works"
@@ -40,30 +40,6 @@ function HomeHero() {
           />
         </LinkButton>
       </div>
-      <style jsx>{`
-        h1 {
-          max-width: 15ch;
-        }
-
-        p {
-          max-width: 45ch;
-        }
-
-        h1,
-        p {
-          justify-self: center;
-        }
-
-        .hero {
-          text-align: center;
-        }
-
-        .hero__button-row {
-          display: flex;
-          gap: 3rem;
-          justify-content: center;
-        }
-      `}</style>
     </section>
   )
 }
