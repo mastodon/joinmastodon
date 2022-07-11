@@ -14,7 +14,7 @@ const LinkButton = ({ borderless, children, fullWidth, href, light }) => {
     <Link href={href}>
       <a
         className={classnames(
-          "b3 block rounded border-2 p-4 !font-600 transition-all hover:border-dark-blurple hover:bg-dark-blurple",
+          "b3 block rounded border-2 p-4 text-center !font-600 transition-all hover:border-dark-blurple hover:bg-dark-blurple",
           borderless ? "border-white" : "border-accent-blurple",
           fullWidth ? "w-full" : "w-max",
           light
