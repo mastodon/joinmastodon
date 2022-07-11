@@ -33,7 +33,7 @@ module.exports = {
       b3: "calc(17 / 14)",
       b4: "calc(17 / 12)",
       c2: "calc(19 / 9)",
-      c3: "calc(17 / 6)"
+      c3: "calc(17 / 6)",
     },
     letterSpacing: {
       heading: "0em",
@@ -43,30 +43,30 @@ module.exports = {
       400: 400,
       450: 450,
       600: 600,
-      800: 800
+      800: 800,
     },
     boxShadow: {
-      "default": "0px 4px 15px rgba(0, 0, 0, 0.1);",
+      DEFAULT: "0px 4px 15px rgba(0, 0, 0, 0.1);",
     },
     borderRadius: {
-      "default": "4px",
+      DEFAULT: "4px",
     },
     colors: {
-      black: "#000000",
-      white: "#ffffff",
-      nightshade: "#1D0023",
-      eggplant: "#17063b",
-      "dark-blurple": "#2f0c7a",
-      "main-blurple": "#563acc",
-      "accent-blurple": "#6364ff",
-      "blurple-text-on-black": "#858afa",
-      lime: "#baff3b",
-      goldenrod: "#ffbe2e",
-      "gray-1": "#555555",
-      "gray-2": "#9b9b9b",
-      "gray-3": "#d4d4d4",
-      "gray-4": "#f3f3f3",
-      "gray-5": "#f6f6f6",
+      black: "var(--black)",
+      white: "var(--white)",
+      nightshade: "var(--nightshade)",
+      eggplant: "var(--eggplant)",
+      "dark-blurple": "var(--dark-blurple)",
+      "main-blurple": "var(--main-blurple)",
+      "accent-blurple": "var(--accent-blurple)",
+      "blurple-text-on-black": "var(--blurple-text-on-black)",
+      lime: "var(--lime)",
+      goldenrod: "var(--goldenrod)",
+      "gray-1": "var(--gray-1)",
+      "gray-2": "var(--gray-2)",
+      "gray-3": "var(--gray-3)",
+      "gray-4": "var(--gray-4)",
+      "gray-5": "var(--gray-5)",
     },
 
     extend: {
@@ -81,5 +81,5 @@ module.exports = {
   plugins: [],
 }
 function rem(px) {
-  return `${px / 16}rem`;
+  return `${px / 16}rem`
 }
