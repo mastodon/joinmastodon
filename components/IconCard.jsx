@@ -12,7 +12,7 @@ import SVG from "react-inlinesvg"
  */
 export const IconCard = ({ title, icon, copy }) => {
   return (
-    <div className="flex flex-col items-center text-center gap-8 justify-start p-8 pt-3rem bg-white shadow-default radius-default">
+    <div className="flex flex-col items-center text-center gap-8 justify-start p-8 pt-3rem bg-white shadow rounded">
       <div className="w-[7.5rem] h-[7.5rem]">
         <SVG src={`/icons/${icon}.svg`} />
       </div>

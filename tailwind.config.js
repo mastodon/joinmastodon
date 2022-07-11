@@ -46,10 +46,10 @@ module.exports = {
       800: 800
     },
     boxShadow: {
-      "default": "0px 4px 15px rgba(0, 0, 0, 0.1);",
+      DEFAULT: "0px 4px 15px rgba(0, 0, 0, 0.1);",
     },
     borderRadius: {
-      "default": "4px",
+      DEFAULT: "4px",
     },
     colors: {
       black: "#000000",
