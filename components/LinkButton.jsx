@@ -1,51 +1,21 @@
 import Link from "next/link"
 import classnames from "classnames"
 
-const LinkButton = ({ borderless, children, fullWidth, light, href }) => {
+const LinkButton = ({ borderless, children, fullWidth, href, light }) => {
   return (
     <Link href={href}>
       <a
-        className={classnames("b3", {
-          borderless,
-          full: fullWidth,
-          light,
-          primary: !light,
-        })}
+        className={classnames(
+          "b3 block w-max rounded border-2 border-accent-blurple  p-4 !font-600  transition-all hover:border-dark-blurple hover:bg-dark-blurple",
+          {
+            "border-white": borderless,
+            "w-full": fullWidth,
+            "bg-accent-blurple text-white": !light,
+            "bg-white text-accent-blurple hover:text-white": light,
+          }
+        )}
       >
         {children}
-        <style jsx>{`
-          a {
-            border: var(--border-width) solid var(--accent-blurple);
-            border-radius: var(--border-radius);
-            display: block;
-            font-weight: 600;
-            padding: 1rem;
-            width: max-content;
-          }
-
-          a:hover {
-            background-color: var(--accent-blurple);
-            border-color: var(--accent-blurple);
-            color: white;
-          }
-
-          .borderless {
-            border: 0;
-          }
-
-          .full {
-            width: 100%;
-          }
-
-          .light {
-            color: var(--accent-blurple);
-          }
-
-          .primary {
-            background-color: var(--accent-blurple);
-            color: var(--white);
-          }
-        `}</style>
       </a>
     </Link>
   )

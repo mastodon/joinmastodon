@@ -19,8 +19,8 @@ export default Home
 
 const HomeHero = () => {
   return (
-    <section className="grid hero">
-      <h1 className="h1">
+    <section className="hero text-center">
+      <h1 className="h1 ">
         <FormattedMessage
           id="home.hero.headline"
           defaultMessage="Social networking that's not for sale."
@@ -34,7 +34,7 @@ const HomeHero = () => {
         />
       </p>
 
-      <div className="hero__button-row">
+      <div className="flex justify-center gap-12">
         <LinkButton href="/">
           <FormattedMessage
             id="home.how_it_works"
@@ -49,30 +49,6 @@ const HomeHero = () => {
           />
         </LinkButton>
       </div>
-      <style jsx>{`
-        h1 {
-          max-width: 15ch;
-        }
-
-        p {
-          max-width: 45ch;
-        }
-
-        h1,
-        p {
-          justify-self: center;
-        }
-
-        .hero {
-          text-align: center;
-        }
-
-        .hero__button-row {
-          display: flex;
-          gap: 3rem;
-          justify-content: center;
-        }
-      `}</style>
     </section>
   )
 }
