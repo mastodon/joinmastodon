@@ -153,6 +153,10 @@ $xxl: 1400px;
     @apply font-450 tracking-copy;
   }
 
+  .full-width {
+    @apply ml-[50%] w-screen -translate-x-1/2;
+  }
+
   .full-width-bg {
     @apply absolute top-0 bottom-0 left-1/2 -z-10 w-[100vw] -translate-x-1/2;
   }
