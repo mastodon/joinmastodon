@@ -2,6 +2,14 @@ import Link from "next/link"
 import classnames from "classnames"
 
 const LinkButton = ({ borderless, children, fullWidth, href, light }) => {
+  const isExternalURL = (url) => {
+    try {
+      return new URL(url).origin !== location.origin
+    } catch (_) {
+      return false
+    }
+  }
+
   return (
     <Link href={href}>
       <a
@@ -14,6 +22,8 @@ const LinkButton = ({ borderless, children, fullWidth, href, light }) => {
             "bg-white text-accent-blurple hover:text-white": light,
           }
         )}
+        target={isExternalURL(href) && "_blank"}
+        rel={isExternalURL(href) && "noopener noreferrer"}
       >
         {children}
       </a>
