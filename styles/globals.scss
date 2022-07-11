@@ -140,6 +140,10 @@ $xxl: 1400px;
     @apply leading-c3;
     @apply font-450 tracking-copy;
   }
+  
+  .full-width-bg {
+    @apply top-0 bottom-0 absolute left-1/2 -translate-x-1/2 w-[100vw] -z-10;
+  }
 }
 
 html,
