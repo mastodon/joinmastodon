@@ -2,13 +2,27 @@ import { FormattedMessage } from "react-intl"
 import Image from "next/image"
 import LinkButton from "./LinkButton"
 
+/**
+ * TestimonialCard component.
+ * Layout (width, height, positioning) can be set from the parent.
+ * @param {{
+ *  testimonial: {
+ *    avatar: string,
+ *    name: string,
+ *    username: string,
+ *    text: string,
+ *    profile_url: string,
+ *  }
+ * }} props
+ */
+
 export const TestimonialCard = ({ testimonial }) => {
   return (
     <div className="h-max space-y-6 rounded bg-white py-8 px-6 shadow">
       <div className="flex flex-wrap gap-x-6 ">
         <div className="shrink-0">
           <Image
-            className=" rounded"
+            className="rounded"
             src={testimonial.avatar}
             alt=""
             width="56"
