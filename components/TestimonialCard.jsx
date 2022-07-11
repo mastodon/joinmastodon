@@ -4,20 +4,20 @@ import LinkButton from "./LinkButton"
 
 export const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="shadow space-y-6 rounded bg-white py-8 px-6">
-      <div className="flex gap-6">
-        <Image
-          className="rounded"
-          src={testimonial.avatar}
-          alt=""
-          width="56"
-          height="56"
-        />
+    <div className="h-max space-y-6 rounded bg-white py-8 px-6 shadow">
+      <div className="flex flex-wrap gap-x-6 ">
+        <div className="shrink-0">
+          <Image
+            className=" rounded"
+            src={testimonial.avatar}
+            alt=""
+            width="56"
+            height="56"
+          />
+        </div>
         <div className="flex flex-col justify-center">
           <p class="sh1 !font-800">{testimonial.name}</p>
-          <p href="testimonial.profile_url" class="b3 text-gray-1">
-            {testimonial.username}
-          </p>
+          <p class="b3 truncate text-gray-1">{testimonial.username}</p>
         </div>
       </div>
       <p class="b3">{testimonial.text}</p>
