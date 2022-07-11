@@ -68,13 +68,15 @@ module.exports = {
       "gray-4": "var(--gray-4)",
       "gray-5": "var(--gray-5)",
     },
-
     extend: {
       backgroundImage: {
         "blurple-gradient": `linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%)`,
       },
       gap: {
         gutter: "var(--gutter-width)",
+      },
+      maxWidth: {
+        site: "90rem",
       },
     },
   },
