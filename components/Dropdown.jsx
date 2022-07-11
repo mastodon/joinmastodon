@@ -1,30 +1,44 @@
 import React, { PureComponent } from "react"
 import PropTypes from "prop-types"
 import classNames from "classnames"
+import { useEffect } from "react"
+import { useCallback } from "react"
+/**
+ *  static propTypes = {
+ *    label: PropTypes.node.isRequired,
+ *    value: PropTypes.string,
+ *    onChange: PropTypes.func,
+ *
+ *    options: PropTypes.arrayOf(PropTypes.shape({
+ *      value: PropTypes.string.isRequired,
+ *      label: PropTypes.node.isRequired,
+ *    })).isRequired,
+ *
+ *    asLinks: PropTypes.bool,
+ *  };
+ */
+export const Dropdown = ({ label, value, onChange, options, asLinks }) => {
+  const [opened, setOpened] = React.useState(false)
+  const root = React.useRef(null)
 
-export default class Dropdown extends PureComponent {
-  static propTypes = {
-    label: PropTypes.node.isRequired,
-    value: PropTypes.string,
-    onChange: PropTypes.func,
-
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        value: PropTypes.string.isRequired,
-        label: PropTypes.node.isRequired,
-      })
-    ).isRequired,
-
-    asLinks: PropTypes.bool,
+  const handleOptionClick = (value) => {
+    if (onChange) {
+      onChange(value)
+    }
+    setOpened(false)
   }
 
-  state = {
-    opened: false,
+  const handleClick = () => {
+    setOpened(!opened)
   }
 
-  renderMenu() {
-    const { value, options, asLinks } = this.props
+  const handleDocumentClick = (e) => {
+    if (root.current && !root.current.contains(e.target)) {
+      setOpened(false)
+    }
+  }
 
+  const renderMenu = () => {
     return (
       <div className="dropdown__menu">
         {options.map((option) =>
@@ -43,7 +57,7 @@ export default class Dropdown extends PureComponent {
               className={classNames("dropdown__option", {
                 active: option.value === value,
               })}
-              onClick={this.handleOptionClick.bind(this, option.value)}
+              onClick={handleOptionClick(option.value)}
             >
               {option.label}
             </div>
@@ -53,57 +67,27 @@ export default class Dropdown extends PureComponent {
     )
   }
 
-  handleOptionClick = (value) => {
-    if (this.props.onChange) {
-      this.props.onChange(value)
+  // Mount / Unmount event handlers
+  useEffect(() => {
+    document.addEventListener("click", handleDocumentClick, false)
+    document.addEventListener("touchend", handleDocumentClick, false)
+    return () => {
+      document.removeEventListener("click", handleDocumentClick, false)
+      document.removeEventListener("touchend", handleDocumentClick, false)
     }
+  })
 
-    this.setState({ opened: false })
-  }
-
-  handleClick = () => {
-    this.setState({ opened: !this.state.opened })
-  }
-
-  handleDocumentClick = (e) => {
-    if (this.node && !this.node.contains(e.target)) {
-      this.setState({ opened: false })
-    }
-  }
-
-  componentDidMount() {
-    document.addEventListener("click", this.handleDocumentClick, false)
-    document.addEventListener("touchend", this.handleDocumentClick, false)
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("click", this.handleDocumentClick, false)
-    document.removeEventListener("touchend", this.handleDocumentClick, false)
-  }
-
-  setRef = (c) => {
-    this.node = c
-  }
-
-  render() {
-    const { opened } = this.state
-    const { label } = this.props
-
-    return (
+  return (
+    <div className={classNames("dropdown", { active: opened })} ref={root}>
       <div
-        className={classNames("dropdown", { active: opened })}
-        ref={this.setRef}
+        className="dropdown__control"
+        tabIndex="0"
+        role="button"
+        onClick={handleClick}
       >
-        <div
-          className="dropdown__control"
-          tabIndex="0"
-          role="button"
-          onClick={this.handleClick}
-        >
-          {label} <i className="dropdown__arrow ion-ios-arrow-down" />
-        </div>
-        {opened && this.renderMenu()}
+        {label} <i className="dropdown__arrow ion-ios-arrow-down" />
       </div>
-    )
-  }
+      {opened && renderMenu()}
+    </div>
+  )
 }

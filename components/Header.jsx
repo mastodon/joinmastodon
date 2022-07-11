@@ -7,6 +7,7 @@ import { FormattedMessage } from "react-intl"
 
 import mastodonLogo from "../public/logos/logo-full-purple.svg"
 import Image from "next/image"
+import { Dropdown } from "./Dropdown"
 
 const options = [
   {
@@ -54,13 +55,13 @@ const Header = () => (
         </a>
       </li>
       <li>
-        {/* <Dropdown
+        <Dropdown
           asLinks
           label={
             <FormattedMessage id="nav.resources" defaultMessage="Resources" />
           }
           options={options}
-        /> */}
+        />
       </li>
       <li>{/* <LanguageSelectContainer /> */}</li>
     </ul>
