@@ -45,6 +45,12 @@ module.exports = {
       600: 600,
       800: 800
     },
+    boxShadow: {
+      "default": "0px 4px 15px rgba(0, 0, 0, 0.1);",
+    },
+    borderRadius: {
+      "default": "4px",
+    },
     colors: {
       black: "#000000",
       white: "#ffffff",

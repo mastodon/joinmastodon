@@ -12,39 +12,14 @@ import SVG from "react-inlinesvg"
  */
 export const IconCard = ({ title, icon, copy }) => {
   return (
-    <>
-      <div className="IconCard">
-        <div className="IconCard__icon">
-          <SVG src={`/icons/${icon}.svg`} />
-        </div>
-        <div className="IconCard__content">
-          <h3 className="h5">{title}</h3>
-          <p className="b2">{copy}</p>
-        </div>
+    <div className="flex flex-col items-center text-center gap-8 justify-start p-8 pt-3rem bg-white shadow-default radius-default">
+      <div className="w-[7.5rem] h-[7.5rem]">
+        <SVG src={`/icons/${icon}.svg`} />
       </div>
-      <style jsx>{`
-        .IconCard {
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-          align-items: center;
-          text-align: center;
-          padding: 3rem 2rem 2rem;
-          gap: 2rem;
-          background: var(--white);
-          box-shadow: var(--shadow-1);
-          border-radius: var(--border-radius);
-        }
-        .IconCard__icon {
-          width: 7.5rem;
-          height: 7.5rem;
-        }
-        .IconCard__content {
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-      `}</style>
-    </>
+      <div className="flex flex-col gap-2">
+        <h3 className="h5">{title}</h3>
+        <p className="b2">{copy}</p>
+      </div>
+    </div>
   )
 }
