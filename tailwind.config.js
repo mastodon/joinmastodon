@@ -48,6 +48,7 @@ module.exports = {
     colors: {
       black: "#000000",
       white: "#ffffff",
+      nightshade: "#1D0023",
       eggplant: "#17063b",
       "dark-blurple": "#2f0c7a",
       "main-blurple": "#563acc",
