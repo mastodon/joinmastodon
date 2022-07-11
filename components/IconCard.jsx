@@ -8,12 +8,12 @@ import SVG from "react-inlinesvg"
  *  title: React.ReactNode,
  *  icon: string,
  *  copy: React.ReactNode
- * }} props
+ * }} props 
  */
 export const IconCard = ({ title, icon, copy }) => {
   return (
-    <div className="pt-3rem flex flex-col items-center justify-start gap-8 rounded bg-white p-8 text-center shadow">
-      <div className="h-[7.5rem] w-[7.5rem]">
+    <div className="flex flex-col items-center text-center gap-8 justify-start p-8 pt-3rem bg-white shadow rounded">
+      <div className="w-[7.5rem] h-[7.5rem]">
         <SVG src={`/icons/${icon}.svg`} />
       </div>
       <div className="flex flex-col gap-2">
