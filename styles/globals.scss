@@ -52,6 +52,16 @@ $xxl: 1400px;
   }
 }
 
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+}
+
 @layer utilities {
   .h1 {
     @apply text-h3 md:text-h1;
@@ -144,12 +154,4 @@ $xxl: 1400px;
   .full-width-bg {
     @apply top-0 bottom-0 absolute left-1/2 -translate-x-1/2 w-[100vw] -z-10;
   }
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Manrope", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
