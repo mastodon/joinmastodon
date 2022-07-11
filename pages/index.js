@@ -10,7 +10,7 @@ function Home({ testimonials }) {
   return (
     <>
       <HomeHero />
-      <Testimonials testimonials={testimonialsData} />
+      <Testimonials testimonials={testimonialsData.slice(0, 3)} />
     </>
   )
 }
@@ -56,6 +56,7 @@ const HomeHero = () => {
 const Testimonials = ({ testimonials }) => {
   return (
     <section className="grid">
+      {/* TODO(mika): these cards should be rendered in a carousel*/}
       {testimonials.map((testimonial) => {
         return (
           <TestimonialCard key={testimonial.name} testimonial={testimonial} />
