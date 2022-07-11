@@ -4,7 +4,7 @@ import LinkButton from "./LinkButton"
 
 export const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="space-y-6 rounded bg-white py-8 px-6 drop-shadow">
+    <div className="shadow space-y-6 rounded bg-white py-8 px-6">
       <div className="flex gap-6">
         <Image
           className="rounded"
