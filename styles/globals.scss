@@ -40,6 +40,7 @@ $xxl: 1400px;
   --main-blurple: #563acc;
   --accent-blurple: #6364ff;
   --blurple-text-on-black: #858afa;
+  --nightshade: #1d0023;
   --lime: #baff3b;
   --goldenrod: #ffbe2e;
 
@@ -58,7 +59,8 @@ $xxl: 1400px;
     padding: 0;
     margin: 0;
     font-family: "Manrope", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
   }
 }
 
@@ -150,8 +152,8 @@ $xxl: 1400px;
     @apply leading-c3;
     @apply font-450 tracking-copy;
   }
-  
+
   .full-width-bg {
-    @apply top-0 bottom-0 absolute left-1/2 -translate-x-1/2 w-[100vw] -z-10;
+    @apply absolute top-0 bottom-0 left-1/2 -z-10 w-[100vw] -translate-x-1/2;
   }
 }
