@@ -73,6 +73,9 @@ module.exports = {
       backgroundImage: {
         "blurple-gradient": `linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%)`,
       },
+      gap: {
+        gutter: "var(--gutter-width)",
+      },
     },
   },
   plugins: [],
