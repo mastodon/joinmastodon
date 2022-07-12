@@ -2,22 +2,12 @@ import Link from "next/link"
 import classnames from "classnames"
 
 const LinkButton = ({ borderless, children, fullWidth, href, light }) => {
-  const isExternalURL = (url) => {
-    try {
-      return new URL(url).origin !== location.origin
-    } catch (_) {
-      return false
-    }
-  }
+  let linkAttrs = {}
 
-  let linkAttrs
-
-  // check if we're on the client side + check if it's an external url
-  if (typeof window && isExternalURL(href)) {
-    linkAttrs = {
-      target: "_blank",
-      rel: "noopener noreferrer",
-    }
+  // check if absolute url
+  if (href.indexOf("http://") === 0 || href.indexOf("https://") === 0) {
+    linkAttrs.target = "_blank"
+    linkAttrs.rel = "noopener noreferrer"
   }
 
   return (
