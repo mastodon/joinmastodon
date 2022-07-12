@@ -175,7 +175,7 @@ const Features = () => {
               <div
                 className={classnames(
                   "row-span-full xl:col-span-5",
-                  isOdd ? "xl:col-start-2" : "xl:col-start-8"
+                  isOdd ? "xl:col-start-2" : "order-2 xl:col-start-8"
                 )}
               >
                 <Image src={block.image} alt="" />
