@@ -162,7 +162,10 @@ const Features = () => {
       ].map((block, i) => {
         const isOdd = i % 2 != 0
         return (
-          <div className={classnames(isOdd && "full-width-bg bg-gray-5")}>
+          <div
+            className={classnames(isOdd && "full-width-bg bg-gray-5")}
+            key={i}
+          >
             <div
               className={classnames(
                 "pt-14 pb-[4.5rem] md:grid md:grid-cols-2 md:items-center md:gap-gutter xl:grid-cols-12",
