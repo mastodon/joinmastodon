@@ -1,14 +1,23 @@
 import { FormattedMessage } from "react-intl"
+
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
+import TestimonialCard from "../components/TestimonialCard"
 
-function Home() {
-  return <HomeHero />
+import testimonialsData from "../data/testimonials.json"
+
+function Home({ testimonials }) {
+  return (
+    <>
+      <HomeHero />
+      <Testimonials testimonials={testimonialsData.slice(0, 3)} />
+    </>
+  )
 }
 
 export default Home
 
-function HomeHero() {
+const HomeHero = () => {
   return (
     <section className="hero text-center">
       <h1 className="h1 ">
@@ -39,6 +48,27 @@ function HomeHero() {
             defaultMessage="Get started"
           />
         </LinkButton>
+      </div>
+    </section>
+  )
+}
+
+const Testimonials = ({ testimonials }) => {
+  return (
+    <section className="full-width-bg bg-gray-5 pt-20 pb-28">
+      <h2 className="h3 pb-16 text-center">
+        <FormattedMessage
+          id="home.testimonials.title"
+          defaultMessage="What our users are saying"
+        />
+      </h2>
+      <div className="m-auto grid max-w-site gap-gutter px-6 md:grid-cols-3 lg:px-16">
+        {/* TODO(mika): these cards should be rendered in a carousel*/}
+        {testimonials.map((testimonial) => {
+          return (
+            <TestimonialCard key={testimonial.name} testimonial={testimonial} />
+          )
+        })}
       </div>
     </section>
   )
