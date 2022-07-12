@@ -55,7 +55,7 @@ const HomeHero = () => {
 
 const Testimonials = ({ testimonials }) => {
   return (
-    <section className="full-width bg-gray-5 pt-20 pb-28">
+    <section className="full-width-bg bg-gray-5 pt-20 pb-28">
       <h2 className="h3 pb-16 text-center">
         <FormattedMessage
           id="home.testimonials.title"
