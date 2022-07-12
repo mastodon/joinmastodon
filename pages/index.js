@@ -165,14 +165,14 @@ const Features = () => {
           <div className={classnames(isOdd && "full-width-bg bg-gray-5")}>
             <div
               className={classnames(
-                "pt-14 pb-[4.5rem] lg:grid lg:grid-cols-12 lg:gap-gutter",
+                "pt-14 pb-[4.5rem] md:grid md:grid-cols-2 md:items-center md:gap-gutter xl:grid-cols-12",
                 isOdd && "full-width-bg__inner"
               )}
             >
               <div
                 className={classnames(
-                  "row-start-1",
-                  isOdd ? "lg:col-[8_/_span_5]" : "lg:col-[2_/_span_5]"
+                  "row-span-full xl:col-span-5",
+                  isOdd ? "xl:col-start-2" : "xl:col-start-8"
                 )}
               >
                 <Image src={block.image} alt="" />
@@ -180,11 +180,11 @@ const Features = () => {
 
               <div
                 className={classnames(
-                  "row-start-1",
-                  isOdd ? "lg:col-[2_/_span_5]" : "lg:col-[8_/_span_5]"
+                  "row-span-full xl:col-span-5",
+                  isOdd ? "xl:col-start-8" : "xl:col-start-2"
                 )}
               >
-                <h2 className="h4 lg:h2 mb-2">{block.title}</h2>
+                <h2 className="h4 md:h2 mb-2">{block.title}</h2>
                 <p className="b1 mb-8">{block.body}</p>
                 {block.button}
               </div>
