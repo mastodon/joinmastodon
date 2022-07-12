@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import classNames from "classnames"
 import { useEffect } from "react"
 import { useCallback } from "react"
+import SVG from "react-inlinesvg"
 /**
  *  static propTypes = {
  *    label: PropTypes.node.isRequired,
@@ -38,35 +39,6 @@ export const Dropdown = ({ label, value, onChange, options, asLinks }) => {
     }
   }
 
-  const renderMenu = () => {
-    return (
-      <div className="dropdown__menu">
-        {options.map((option) =>
-          asLinks ? (
-            <a
-              href={option.value}
-              className="dropdown__option"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {option.label}
-            </a>
-          ) : (
-            <div
-              key={option.value}
-              className={classNames("dropdown__option", {
-                active: option.value === value,
-              })}
-              onClick={handleOptionClick(option.value)}
-            >
-              {option.label}
-            </div>
-          )
-        )}
-      </div>
-    )
-  }
-
   // Mount / Unmount event handlers
   useEffect(() => {
     document.addEventListener("click", handleDocumentClick, false)
@@ -78,16 +50,47 @@ export const Dropdown = ({ label, value, onChange, options, asLinks }) => {
   })
 
   return (
-    <div className={classNames("dropdown", { active: opened })} ref={root}>
+    <div className={classNames("relative")} ref={root}>
       <div
-        className="dropdown__control"
+        className="flex items-center gap-[0.125rem]"
         tabIndex="0"
         role="button"
         onClick={handleClick}
       >
-        {label} <i className="dropdown__arrow ion-ios-arrow-down" />
+        <span>{label}</span>
+        <SVG
+          src={"/ui/disclosure-arrow.svg"}
+          className={classNames({
+            "rotate-180": opened,
+          })}
+        />
       </div>
-      {opened && renderMenu()}
+      {opened && (
+        <div className="absolute top-[100%] -right-4 flex flex-col rounded bg-dark-blurple p-4">
+          {options.map((option) =>
+            asLinks ? (
+              <a
+                href={option.value}
+                className="dropdown__option"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {option.label}
+              </a>
+            ) : (
+              <div
+                key={option.value}
+                className={classNames("dropdown__option", {
+                  active: option.value === value,
+                })}
+                onClick={handleOptionClick(option.value)}
+              >
+                {option.label}
+              </div>
+            )
+          )}
+        </div>
+      )}
     </div>
   )
 }
