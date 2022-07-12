@@ -10,6 +10,16 @@ const LinkButton = ({ borderless, children, fullWidth, href, light }) => {
     }
   }
 
+  let linkAttrs
+
+  // check if we're on the client side + check if it's an external url
+  if (typeof window && isExternalURL(href)) {
+    linkAttrs = {
+      target: "_blank",
+      rel: "noopener noreferrer",
+    }
+  }
+
   return (
     <Link href={href}>
       <a
@@ -21,8 +31,7 @@ const LinkButton = ({ borderless, children, fullWidth, href, light }) => {
             ? "bg-white text-accent-blurple hover:text-white"
             : "bg-accent-blurple text-white"
         )}
-        target={isExternalURL(href) && "_blank"}
-        rel={isExternalURL(href) && "noopener noreferrer"}
+        {...linkAttrs}
       >
         {children}
       </a>
