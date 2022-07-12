@@ -155,5 +155,9 @@ $xxl: 1400px;
 
   .full-width-bg {
     @apply ml-[50%] w-screen -translate-x-1/2;
+
+    &__inner {
+      @apply mx-auto max-w-site px-6 lg:px-16;
+    }
   }
 }
