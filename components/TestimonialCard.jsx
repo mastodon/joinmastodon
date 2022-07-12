@@ -30,11 +30,11 @@ export const TestimonialCard = ({ testimonial }) => {
           />
         </div>
         <div className="flex flex-col justify-center">
-          <p class="sh1 !font-800">{testimonial.name}</p>
-          <p class="b3 truncate text-gray-1">{testimonial.username}</p>
+          <p className="sh1 !font-800">{testimonial.name}</p>
+          <p className="b3 truncate text-gray-1">{testimonial.username}</p>
         </div>
       </div>
-      <p class="b3">{testimonial.text}</p>
+      <p className="b3">{testimonial.text}</p>
 
       <LinkButton href={testimonial.profile_url} light fullWidth>
         <FormattedMessage id="view_profile" defaultMessage="View profile" />

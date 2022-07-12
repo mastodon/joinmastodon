@@ -56,13 +56,13 @@ const HomeHero = () => {
 const Testimonials = ({ testimonials }) => {
   return (
     <section className="full-width bg-gray-5 pt-20 pb-28">
-      <h2 class="h3 pb-16 text-center">
+      <h2 className="h3 pb-16 text-center">
         <FormattedMessage
           id="home.testimonials.title"
           defaultMessage="What our users are saying"
         />
       </h2>
-      <div class="m-auto grid max-w-site gap-gutter px-6 md:grid-cols-3 lg:px-16">
+      <div className="m-auto grid max-w-site gap-gutter px-6 md:grid-cols-3 lg:px-16">
         {/* TODO(mika): these cards should be rendered in a carousel*/}
         {testimonials.map((testimonial) => {
           return (
