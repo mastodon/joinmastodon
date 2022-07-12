@@ -135,8 +135,8 @@ export const Footer = () => (
                   </Link>,
                 ],
               },
-            ].map((menu) => (
-              <div className="flex flex-col gap-2" key={menu.heading}>
+            ].map((menu, i) => (
+              <div className="flex flex-col gap-2" key={i}>
                 <h4 className="h6 py-1">{menu.heading}</h4>
                 <ul className="b2 m-0 flex flex-col gap-2 p-0">
                   {menu.links.map((link) => (
