@@ -206,10 +206,9 @@ const Sponsors = ({ sponsors }) => {
   return (
     <section>
       <div className="flex flex-wrap items-center justify-center gap-5 bg-white">
-        {sponsors.map((sponsor) => {
-          console.log(sponsor.logo)
+        {sponsors.map((sponsor, i) => {
           return (
-            <Link href={sponsor.url}>
+            <Link href={sponsor.url} key={i}>
               <a
                 className="relative max-h-[90px] max-w-[200px]"
                 target="_blank"
