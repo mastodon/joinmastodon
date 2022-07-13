@@ -7,17 +7,20 @@ import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
 
 import testimonialsData from "../data/testimonials.json"
+import sponsorsData from "../data/sponsors.js"
 
 import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
 import illoModeration from "../public/illustrations/features_moderation.png"
+import Link from "next/link"
 
-function Home({ testimonials }) {
+function Home() {
   return (
     <>
       <HomeHero />
       <Testimonials testimonials={testimonialsData.slice(0, 3)} />
       <Features />
+      <Sponsors sponsors={sponsorsData} />
     </>
   )
 }
@@ -195,6 +198,36 @@ const Features = () => {
           </div>
         )
       })}
+    </section>
+  )
+}
+
+const Sponsors = ({ sponsors }) => {
+  return (
+    <section>
+      <div className="flex flex-wrap items-center justify-center gap-5 bg-white">
+        {sponsors.map((sponsor) => {
+          console.log(sponsor.logo)
+          return (
+            <Link href={sponsor.url}>
+              <a
+                className="relative max-h-[90px] max-w-[200px]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className={`max-h-[90px] max-w-[200px] object-contain mix-blend-luminosity ${
+                    sponsor.light && "invert"
+                  }`}
+                  alt={`${sponsor.name} logo`}
+                  loading="lazy"
+                  src={sponsor.logo.src}
+                />
+              </a>
+            </Link>
+          )
+        })}
+      </div>
     </section>
   )
 }
