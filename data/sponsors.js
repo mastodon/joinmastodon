@@ -144,71 +144,95 @@ const sponsors = {
       name: "Goread.io",
     },
   ],
+  gold: [
+    {
+      url: "https://easydns.com/",
+      logo: require("../public/sponsors/easydns.png"),
+      name: "easyDNS",
+    },
+    {
+      url: "https://writersperhour.com/",
+      logo: require("../public/sponsors/writersperhour.jpg"),
+      name: "Writers Per Hour",
+    },
+    {
+      url: "https://www.partitionwizard.com/",
+      logo: require("../public/sponsors/minitool.png"),
+      name: "MiniTool Partition Wizard",
+    },
+    {
+      url: "https://www.ivisa.com/photos",
+      logo: require("../public/sponsors/ivisa.png"),
+      name: "iVisa",
+    },
+    ,
+    {
+      url: "https://www.mysextoyguide.com/",
+      logo: require("../public/sponsors/mysextoyguide.jpg"),
+      name: "MySexToyGuide",
+    },
+    {
+      url: "https://www.kevani.com/",
+      logo: require("../public/sponsors/KEVANI_LOGO.png"),
+      name: "Kevani",
+    },
+    {
+      url: "https://www.doggietoys.deals/",
+      logo: require("../public/sponsors/doggie-toys.png"),
+      name: "Doggie Toys",
+    }, // Custom
+    {
+      url: "https://bitlaunch.io/",
+      logo: require("../public/sponsors/bitlaunch.svg"),
+      name: "Bitcoin VPS",
+    }, // Custom
+    {
+      url: "http://inkedin.com/",
+      logo: require("../public/sponsors/inkedin-logo-small-2.webp"),
+      name: "inkedin.com",
+    },
+    {
+      url: "https://casinofiables.com/",
+      logo: require("../public/sponsors/logo-fiables.png"),
+      name: "Casino Fiables",
+    },
+    {
+      url: "https://rapidessay.com/",
+      logo: require("../public/sponsors/rapidessay_logo.png"),
+      name: "Rapid Essay",
+    },
+    {
+      url: "https://onlinecasinohex.nl/",
+      logo: require("../public/sponsors/casino-hex-nl.png"),
+      name: "CasinoHEX Nederland",
+    },
+    {
+      url: "https://hostnoc.com",
+      logo: require("../public/sponsors/hostnoc.png"),
+      name: "HostNoc Dedicated Server",
+    }, // Custom
+    {
+      url: "https://iboysoft.com/",
+      logo: require("../public/sponsors/iboysoft-logo-dark2.png"),
+      name: "iBoysoft Data Recovery",
+    }, // Custom
+    {
+      url: "https://nettikasinolista.com/",
+      logo: require("../public/sponsors/nettikasinolista-mv.png"),
+      name: "Nettikasino",
+    }, // Custom
+    {
+      url: "http://doshfunding.com/",
+      logo: require("../public/sponsors/doshfunding.svg"),
+      name: "Funding Solutions for Businesses",
+    }, // Custom
+    {
+      url: "https://farbridge.com/",
+      logo: require("../public/sponsors/farbridge.png"),
+      name: "Farbridge",
+    },
+  ],
 }
-
-// const goldSponsors = [
-//   { url: "https://easydns.com/", logo: require(sponsorEasyDNS, name: "easyDNS" }),
-//   {
-//     url: "https://writersperhour.com/",
-//     logo: sponsorWritersPerHour,
-//     name: "Writers Per Hour",
-//   },
-//   {
-//     url: "https://www.partitionwizard.com/",
-//     logo: sponsorMiniTool,
-//     name: "MiniTool Partition Wizard",
-//   },
-//   { url: "https://www.ivisa.com/photos", logo: sponsorIVisa, name: "iVisa" },
-//   {
-//     url: "https://www.mysextoyguide.com/",
-//     logo: sponsorMySexToyGuide,
-//     name: "MySexToyGuide",
-//   },
-//   { url: "https://www.kevani.com/", logo: sponsorKevani, name: "Kevani" },
-//   {
-//     url: "https://www.doggietoys.deals/",
-//     logo: sponsorDoggieToys,
-//     name: "Doggie Toys",
-//   }, // Custom
-//   { url: "https://bitlaunch.io/", logo: sponsorBitlaunch, name: "Bitcoin VPS" }, // Custom
-//   { url: "http://inkedin.com/", logo: sponsorInkedin, name: "inkedin.com" },
-//   {
-//     url: "https://casinofiables.com/",
-//     logo: sponsorCasinoFiables,
-//     name: "Casino Fiables",
-//   },
-//   {
-//     url: "https://rapidessay.com/",
-//     logo: sponsorRapidEssay,
-//     name: "Rapid Essay",
-//   },
-//   {
-//     url: "https://onlinecasinohex.nl/",
-//     logo: sponsorCasinoHexNL,
-//     name: "CasinoHEX Nederland",
-//   },
-//   {
-//     url: "https://hostnoc.com",
-//     logo: sponsorHostNoc,
-//     name: "HostNoc Dedicated Server",
-//   }, // Custom
-//   {
-//     url: "https://iboysoft.com/",
-//     logo: sponsorIBoysoft,
-//     name: "iBoysoft Data Recovery",
-//   }, // Custom
-//   {
-//     url: "https://nettikasinolista.com/",
-//     logo: sponsorNettikasino,
-//     name: "Nettikasino",
-//   }, // Custom
-//   {
-//     url: "http://doshfunding.com/",
-//     logo: sponsorDoshFunding,
-//     name: "Funding Solutions for Businesses",
-//   }, // Custom
-//   { url: "https://farbridge.com/", logo: sponsorFarbridge, name: "Farbridge" },
-// ]
 
 // const silverSponsors = [
 //   {
