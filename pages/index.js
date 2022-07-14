@@ -284,6 +284,7 @@ const SponsorGroup = ({ sponsors }) => {
               )}
               target="_blank"
               rel="noopener noreferrer"
+              style={{ aspectRatio: sponsor.logo.width / sponsor.logo.height }}
             >
               <img
                 className={classnames(
