@@ -1,5 +1,6 @@
 import { FormattedMessage } from "react-intl"
 import Image from "next/image"
+import Link from "next/link"
 import classnames from "classnames"
 
 import loadIntlMessages from "../utils/loadIntlMessages"
@@ -203,30 +204,91 @@ const Features = () => {
 
 const Sponsors = ({ sponsors }) => {
   return (
-    <section>
-      <div className="flex flex-wrap items-center justify-center gap-5 bg-white">
-        {sponsors.map((sponsor, i) => {
-          return (
-            <Link href={sponsor.url} key={i}>
-              <a
-                className="relative max-h-[90px] max-w-[200px]"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className={`max-h-[90px] max-w-[200px] object-contain mix-blend-luminosity ${
-                    sponsor.light && "invert"
-                  }`}
-                  alt={`${sponsor.name} logo`}
-                  loading="lazy"
-                  src={sponsor.logo.src}
-                />
-              </a>
-            </Link>
-          )
-        })}
+    <section className="text-center">
+      <div className="py-20">
+        <h2 className="h2 mb-4">
+          <FormattedMessage
+            id="home.sponsors.title"
+            defaultMessage="Independent and self made"
+          />
+        </h2>
+
+        <p className="b1 lg:sh1 mb-12">
+          <FormattedMessage
+            id="home.sponsors.body"
+            defaultMessage="Mastodon is free and open-source software developed by a non-profit organization. Public support directly affects development and evolution."
+          />
+        </p>
+
+        <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
+          <LinkButton href="https://sponsor.joinmastodon.org/" large>
+            <FormattedMessage
+              id="sponsorship.become_a_sponsor"
+              defaultMessage="Become a sponsor"
+            />
+          </LinkButton>
+
+          <LinkButton href="/sponsors" light large>
+            <FormattedMessage
+              id="credits.view_sponsors"
+              defaultMessage="View sponsors"
+            />
+          </LinkButton>
+        </div>
       </div>
+
+      <h3 className="h4 pb-4">
+        <FormattedMessage
+          id="home.sponsors.supported_by"
+          defaultMessage="Supported by"
+        />
+      </h3>
+
+      <SponsorGroup sponsors={sponsors.platinum} />
+
+      <h4 className="h5 pt-20 pb-4">
+        <FormattedMessage
+          id="home.additional_support_from"
+          defaultMessage="Additional support from"
+        />
+      </h4>
+
+      <SponsorGroup sponsors={sponsors.additionalFunding} />
     </section>
+  )
+}
+
+const SponsorGroup = ({ sponsors }) => {
+  return (
+    <div className="grid grid-cols-2 items-center justify-center gap-x-5 bg-white sm:flex sm:flex-wrap sm:gap-y-5">
+      {sponsors.map((sponsor, i) => {
+        let isLastItem = sponsors[i + 1] == undefined
+        let isUnevenItems = sponsors.length % 2 != 0
+
+        return (
+          <Link href={sponsor.url} key={i}>
+            <a
+              className={classnames(
+                "relative max-h-[90px] max-w-[200px] justify-self-center",
+                isLastItem && isUnevenItems && "col-span-2"
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className={classnames(
+                  "max-h-[90px] w-full max-w-[200px] object-contain py-4 mix-blend-luminosity",
+                  sponsor.light && "invert"
+                )}
+                alt={`${sponsor.name} logo`}
+                loading="lazy"
+                src={sponsor.logo.src}
+              />
+            </a>
+          </Link>
+        )
+      })}
+    </div>
   )
 }
 
