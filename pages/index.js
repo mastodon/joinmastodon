@@ -270,7 +270,7 @@ const Sponsors = ({ sponsors }) => {
 
 const SponsorGroup = ({ sponsors }) => {
   return (
-    <div className="grid grid-cols-2 items-center justify-center gap-x-5 bg-white sm:flex sm:flex-wrap sm:gap-y-5">
+    <div className="grid grid-cols-2 items-center justify-center gap-5 gap-x-5 bg-white sm:flex sm:flex-wrap">
       {sponsors.map((sponsor, i) => {
         let isLastItem = sponsors[i + 1] == undefined
         let isUnevenItems = sponsors.length % 2 != 0
@@ -279,21 +279,20 @@ const SponsorGroup = ({ sponsors }) => {
           <Link href={sponsor.url} key={i}>
             <a
               className={classnames(
-                "relative max-h-[90px] max-w-[200px] justify-self-center",
+                "relative inline-flex max-h-[90px] max-w-[200px] justify-self-center",
                 isLastItem && isUnevenItems && "col-span-2"
               )}
               target="_blank"
               rel="noopener noreferrer"
               style={{ aspectRatio: sponsor.logo.width / sponsor.logo.height }}
             >
-              <img
+              <Image
                 className={classnames(
-                  "max-h-[90px] w-full max-w-[200px] object-contain py-4 mix-blend-luminosity",
+                  "object-contain mix-blend-luminosity",
                   sponsor.light && "invert"
                 )}
-                alt={`${sponsor.name} logo`}
-                loading="lazy"
-                src={sponsor.logo.src}
+                src={sponsor.logo}
+                objectFit="contain"
               />
             </a>
           </Link>
