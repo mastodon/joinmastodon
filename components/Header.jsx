@@ -69,7 +69,10 @@ const Header = () => {
         .querySelectorAll(`[role="menubar"] > li`)
         .item(primaryMenuItemIndex)
       let targetItem = currentItem
-      if (currentItem.getAttribute("aria-haspopup") === "true") {
+      if (
+        secondaryMenuItemIndex !== null &&
+        currentItem.getAttribute("aria-haspopup") === "true"
+      ) {
         targetItem = currentItem
           .querySelectorAll(`li`)
           .item(secondaryMenuItemIndex)
@@ -89,10 +92,16 @@ const Header = () => {
   const navigateVertically = (direction) => {
     const secondaryItems = navigationItems[primaryMenuItemIndex].options
     if (secondaryItems) {
-      setSecondaryMenuItemIndex(
-        ((secondaryMenuItemIndex || 0) + direction + secondaryItems.length) %
-          secondaryItems.length
-      )
+      if (secondaryMenuItemIndex === null) {
+        setSecondaryMenuItemIndex(
+          direction === 1 ? 0 : secondaryItems.length - 1
+        )
+      } else {
+        setSecondaryMenuItemIndex(
+          ((secondaryMenuItemIndex || 0) + direction + secondaryItems.length) %
+            secondaryItems.length
+        )
+      }
     }
   }
 
@@ -119,6 +128,9 @@ const Header = () => {
           })}
           role="menubar"
           onKeyDown={(e) => {
+            if (e.key === "Escape") {
+              setMobileMenuOpen(false)
+            }
             if (
               ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(
                 e.key
@@ -149,13 +161,27 @@ const Header = () => {
               role="menuitem"
               aria-haspopup={Boolean(item.options)}
               aria-expanded={primaryMenuItemIndex === itemIndex}
+              onBlur={() => {
+                console.log("blurred")
+              }}
             >
               {Boolean(item.options) ? (
                 <>
                   <button
                     role="menuitem"
                     className="flex items-center gap-[0.125rem] focus:outline-2"
-                    tabIndex={primaryMenuItemIndex === itemIndex ? 0 : -1}
+                    tabIndex={
+                      primaryMenuItemIndex === itemIndex &&
+                      secondaryMenuItemIndex === null
+                        ? 0
+                        : -1
+                    }
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault()
+                        setSecondaryMenuItemIndex(0)
+                      }
+                    }}
                     onClick={() => setPrimaryMenuItemIndex(itemIndex)}
                   >
                     {item.label}
@@ -166,30 +192,41 @@ const Header = () => {
                       })}
                     />
                   </button>
-                  {primaryMenuItemIndex === itemIndex && (
-                    <ul className="absolute top-[100%] -right-4 flex flex-col rounded bg-dark-blurple p-4">
-                      {item.options.map((option, optionIndex) => (
-                        <li key={option.value}>
-                          <Link href={option.value}>
-                            <a
-                              tabIndex={
-                                primaryMenuItemIndex === optionIndex ? 0 : -1
+
+                  <ul
+                    className={classNames(
+                      "absolute top-[100%] -right-4 flex flex-col rounded bg-dark-blurple p-4",
+                      (primaryMenuItemIndex !== itemIndex ||
+                        secondaryMenuItemIndex === null) &&
+                        "md:sr-only"
+                    )}
+                  >
+                    {item.options.map((option, optionIndex) => (
+                      <li key={option.value}>
+                        <Link href={option.value}>
+                          <a
+                            tabIndex={
+                              secondaryMenuItemIndex === optionIndex ? 0 : -1
+                            }
+                            onKeyDown={(e) => {
+                              if (e.key === "Escape") {
+                                console.log("escaped")
+                                setSecondaryMenuItemIndex(null)
                               }
-                            >
-                              {option.label}
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                            }}
+                          >
+                            {option.label}
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </>
               ) : (
                 <Link href={item.value}>
                   <a
                     role="menuitem"
                     tabIndex={primaryMenuItemIndex === itemIndex ? 0 : -1}
-                    // onKeyUp
                   >
                     {item.label}
                   </a>
