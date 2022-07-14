@@ -1,3 +1,5 @@
+import nlnetFoundationLogo from "../public/sponsors/nlnet.png"
+import ngiZeroDiscoveryLogo from "../public/sponsors/NGI0Discovery_tag.svg"
 import oakLogo from "../public/sponsors/oak.svg"
 import lunaNodeLogo from "../public/sponsors/lunanode.png"
 import trueVendorLogo from "../public/sponsors/truevendor.png"
@@ -24,127 +26,145 @@ import casinoHexAULogo from "../public/sponsors/casino-hex-au.png"
 import wideAngleAnalyticsLogo from "../public/sponsors/wide-angle-analytics.webp"
 import goreadLogo from "../public/sponsors/goread.png"
 
-const sponsors = [
-  { url: "https://oak.is/", logo: oakLogo, name: "Oak Studios" },
-  { url: "https://www.lunanode.com/", logo: lunaNodeLogo, name: "Lunanode" },
-  {
-    url: "https://www.ramotion.com/agency/ui-ux-design",
-    logo: trueVendorLogo,
-    name: "Ramotion",
-  },
-  {
-    url: "https://airvpn.org/landing/mastodon",
-    logo: airVPNLogo,
-    name: "AirVPN",
-  },
-  {
-    url: "https://www.firesticktricks.com/",
-    logo: fireStickTricksLogo,
-    name: "Fire Stick Tricks",
-    light: true,
-  },
-  {
-    url: "https://papersowl.com/write-my-essay-please",
-    logo: papersOwlLogo,
-    name: "Papers Owl",
-  },
-  {
-    url: "https://sextoycollective.com",
-    logo: sexToyCollectiveLogo,
-    name: "Sex Toy Collective",
-  },
-  {
-    url: "https://www.vpsserver.com/",
-    logo: vpsServerLogo,
-    name: "VPS Server",
-    light: true,
-  },
-  {
-    url: "https://www.betrugstest.com/",
-    logo: betrugstestLogo,
-    name: "Betrugstest.com",
-    light: true,
-  }, // Custom/other
-  { url: "https://mask.io/", logo: sujitechLogo, name: "Mask Network" }, // Custom/other
-  {
-    url: "https://www.bestcasinosites.net",
-    logo: bcsLogo,
-    name: "bestcasinosites.net",
-    light: true,
-  }, // Custom/other
-  {
-    url: "https://www.bestecasinosonline.at/",
-    logo: bcoLogo,
-    name: "Online Casino Österreich",
-  }, // Custom
-  {
-    url: "https://www.sister-sites.co.uk/",
-    logo: sisterSitesLogo,
-    name: "sister-sites.co.uk",
-  }, // Custom
-  {
-    url: "https://schnellno.de/",
-    logo: schnellNodeLogo,
-    name: "Schnell Node",
-  }, // Custom
-  {
-    url: "https://masto.host/",
-    logo: mastoHostLogo,
-    name: "Masto.host - Fully managed Mastodon hosting",
-    light: true,
-  }, // Custom
-  {
-    url: "https://assemblyfour.com/",
-    logo: assemblyFourLogo,
-    name: "Assembly Four",
-  }, // Custom
-  {
-    url: "https://www.auscasinos.com/new/",
-    logo: ausCasinosLogo,
-    name: "AusCasinos.com New Site Section",
-  }, // Custom
-  {
-    url: "https://www.joylovedolls.com/",
-    logo: jldLogo,
-    name: "Joy Love Dolls",
-  }, // Custom
-  {
-    url: "https://kasynohex.com/kasyna-online/",
-    logo: kasynoHexLogo,
-    name: "Casino online PL",
-  }, // Custom
-  {
-    url: "https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html",
-    logo: altCasinoLogo,
-    name: "Online Casinos Australia",
-  }, // Custom
-  {
-    url: "https://www.nettikasinot.org/",
-    logo: nettikasinotLogo,
-    name: "Nettikasinot",
-    light: true,
-  },
-  {
-    url: "https://www.onlinecasinos.net/",
-    logo: onlineCasinosLogo,
-    name: "OnlineCasinos.net",
-  }, // Custom
-  {
-    url: "https://topaussiecasinos.com/",
-    logo: casinoHexAULogo,
-    name: "CasinoHEX Australia",
-  }, // Custom
-  {
-    url: "https://wideangle.co",
-    logo: wideAngleAnalyticsLogo,
-    name: "Wide Angle Analytics",
-  }, // Custom
-  {
-    url: "https://goread.io/buy-instagram-followers",
-    logo: goreadLogo,
-    name: "Goread.io",
-  },
-]
+const sponsors = {
+  additionalFunding: [
+    {
+      url: "https://nlnet.nl/",
+      logo: nlnetFoundationLogo,
+      name: "NLNet Foundation",
+    },
+    {
+      url: "https://nlnet.nl/NGI0",
+      logo: ngiZeroDiscoveryLogo,
+      name: "NGI Zero Discovery",
+    },
+  ],
+  platinum: [
+    { url: "https://oak.is/", logo: oakLogo, name: "Oak Studios" },
+    {
+      url: "https://www.lunanode.com/",
+      logo: lunaNodeLogo,
+      name: "Lunanode",
+    },
+    {
+      url: "https://www.ramotion.com/agency/ui-ux-design",
+      logo: trueVendorLogo,
+      name: "Ramotion",
+    },
+    {
+      url: "https://airvpn.org/landing/mastodon",
+      logo: airVPNLogo,
+      name: "AirVPN",
+    },
+    {
+      url: "https://www.firesticktricks.com/",
+      logo: fireStickTricksLogo,
+      name: "Fire Stick Tricks",
+      light: true,
+    },
+    {
+      url: "https://papersowl.com/write-my-essay-please",
+      logo: papersOwlLogo,
+      name: "Papers Owl",
+    },
+    {
+      url: "https://sextoycollective.com",
+      logo: sexToyCollectiveLogo,
+      name: "Sex Toy Collective",
+    },
+    {
+      url: "https://www.vpsserver.com/",
+      logo: vpsServerLogo,
+      name: "VPS Server",
+      light: true,
+    },
+    {
+      url: "https://www.betrugstest.com/",
+      logo: betrugstestLogo,
+      name: "Betrugstest.com",
+      light: true,
+    }, // Custom/other
+    { url: "https://mask.io/", logo: sujitechLogo, name: "Mask Network" }, // Custom/other
+    {
+      url: "https://www.bestcasinosites.net",
+      logo: bcsLogo,
+      name: "bestcasinosites.net",
+      light: true,
+    }, // Custom/other
+    {
+      url: "https://www.bestecasinosonline.at/",
+      logo: bcoLogo,
+      name: "Online Casino Österreich",
+    }, // Custom
+    {
+      url: "https://www.sister-sites.co.uk/",
+      logo: sisterSitesLogo,
+      name: "sister-sites.co.uk",
+    }, // Custom
+    {
+      url: "https://schnellno.de/",
+      logo: schnellNodeLogo,
+      name: "Schnell Node",
+    }, // Custom
+    {
+      url: "https://masto.host/",
+      logo: mastoHostLogo,
+      name: "Masto.host - Fully managed Mastodon hosting",
+      light: true,
+    }, // Custom
+    {
+      url: "https://assemblyfour.com/",
+      logo: assemblyFourLogo,
+      name: "Assembly Four",
+    }, // Custom
+    {
+      url: "https://www.auscasinos.com/new/",
+      logo: ausCasinosLogo,
+      name: "AusCasinos.com New Site Section",
+    }, // Custom
+    {
+      url: "https://www.joylovedolls.com/",
+      logo: jldLogo,
+      name: "Joy Love Dolls",
+    }, // Custom
+    {
+      url: "https://kasynohex.com/kasyna-online/",
+      logo: kasynoHexLogo,
+      name: "Casino online PL",
+    }, // Custom
+    {
+      url: "https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html",
+      logo: altCasinoLogo,
+      name: "Online Casinos Australia",
+    }, // Custom
+    {
+      url: "https://www.nettikasinot.org/",
+      logo: nettikasinotLogo,
+      name: "Nettikasinot",
+      light: true,
+    },
+    {
+      url: "https://www.onlinecasinos.net/",
+      logo: onlineCasinosLogo,
+      name: "OnlineCasinos.net",
+    }, // Custom
+    {
+      url: "https://topaussiecasinos.com/",
+      logo: casinoHexAULogo,
+      name: "CasinoHEX Australia",
+    }, // Custom
+    {
+      url: "https://wideangle.co",
+      logo: wideAngleAnalyticsLogo,
+      name: "Wide Angle Analytics",
+    }, // Custom
+    {
+      url: "https://goread.io/buy-instagram-followers",
+      logo: goreadLogo,
+      name: "Goread.io",
+    },
+  ],
+}
 
 // const goldSponsors = [
 //   { url: "https://easydns.com/", logo: sponsorEasyDNS, name: "easyDNS" },
@@ -278,4 +298,5 @@ const sponsors = [
 //   },
 // ]
 
+export const { platinum, additionalFunding } = sponsors
 export default sponsors

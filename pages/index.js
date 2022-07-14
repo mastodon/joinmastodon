@@ -6,21 +6,20 @@ import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
 
-import testimonialsData from "../data/testimonials.json"
-import sponsorsData from "../data/sponsors.js"
+import testimonials from "../data/testimonials.json"
+import { platinum, additionalFunding } from "../data/sponsors.js"
 
 import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
 import illoModeration from "../public/illustrations/features_moderation.png"
-import Link from "next/link"
 
 function Home() {
   return (
     <>
       <HomeHero />
-      <Testimonials testimonials={testimonialsData.slice(0, 3)} />
+      <Testimonials testimonials={testimonials.slice(0, 3)} />
       <Features />
-      <Sponsors sponsors={sponsorsData} />
+      <Sponsors sponsors={{ platinum, additionalFunding }} />
     </>
   )
 }
