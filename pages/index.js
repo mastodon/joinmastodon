@@ -206,7 +206,7 @@ const Features = () => {
 const Sponsors = ({ sponsors }) => {
   return (
     <section className="text-center">
-      <div className="py-20 lg:grid lg:grid-cols-12 lg:gap-x-gutter">
+      <div className="py-20 lg:grid lg:grid-cols-12 lg:gap-x-gutter lg:py-28">
         <div className="mx-auto mb-12 max-w-lg lg:col-span-4 lg:col-start-5 lg:mb-10 lg:w-full">
           <Image
             src={illoWorld}
@@ -214,7 +214,7 @@ const Sponsors = ({ sponsors }) => {
           />
         </div>
 
-        <div className=" lg:col-span-10 lg:col-start-2">
+        <div className=" lg:col-span-8 lg:col-start-3">
           <h2 className="h2 mb-4">
             <FormattedMessage
               id="home.sponsors.title"
