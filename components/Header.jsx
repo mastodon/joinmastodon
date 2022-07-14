@@ -122,8 +122,8 @@ const Header = () => {
     <div className="sticky top-0 z-10 mx-auto flex items-center justify-between py-4 text-white">
       <div
         className={classNames(
-          "full-width-bg absolute h-full transition-colors",
-          pageScrolled && "bg-nightshade"
+          "full-width-bg absolute -z-10 h-full transition-colors",
+          pageScrolled && "bg-black"
         )}
       />
       <div>
@@ -140,10 +140,13 @@ const Header = () => {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         />
         <ul
-          className={classNames("gap-4 md:gap-10", {
-            "hidden md:flex": !mobileMenuOpen,
-            flex: mobileMenuOpen,
-          })}
+          className={classNames(
+            "absolute w-screen gap-4 md:relative md:w-auto md:gap-10 md:p-4",
+            {
+              "hidden md:flex": !mobileMenuOpen,
+              flex: mobileMenuOpen,
+            }
+          )}
           role="menubar"
           onKeyDown={(e) => {
             if (e.key === "Escape") {
@@ -189,7 +192,7 @@ const Header = () => {
                       primaryMenuItemIndex !== itemIndex ||
                       secondaryMenuItemIndex === null
                     }
-                    className="flex items-center gap-[0.125rem] focus:outline-2"
+                    className="flex items-center gap-[0.125rem] whitespace-nowrap focus:outline-2"
                     tabIndex={
                       primaryMenuItemIndex === itemIndex &&
                       secondaryMenuItemIndex === null
@@ -224,7 +227,7 @@ const Header = () => {
 
                   <ul
                     className={classNames(
-                      "absolute top-[100%] -right-4 flex flex-col rounded bg-dark-blurple p-4",
+                      "absolute top-[100%] -right-4 flex flex-col rounded bg-eggplant p-4 md:shadow",
                       (primaryMenuItemIndex !== itemIndex ||
                         secondaryMenuItemIndex === null) &&
                         "md:sr-only"
@@ -240,7 +243,6 @@ const Header = () => {
                             }
                             onKeyDown={(e) => {
                               if (e.key === "Escape") {
-                                console.log("escaped")
                                 setSecondaryMenuItemIndex(null)
                               }
                             }}
@@ -256,6 +258,7 @@ const Header = () => {
               ) : (
                 <Link href={item.value}>
                   <a
+                    className={"whitespace-nowrap"}
                     role="menuitem"
                     tabIndex={primaryMenuItemIndex === itemIndex ? 0 : -1}
                   >
