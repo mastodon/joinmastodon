@@ -1,173 +1,153 @@
-import nlnetFoundationLogo from "../public/sponsors/nlnet.png"
-import ngiZeroDiscoveryLogo from "../public/sponsors/NGI0Discovery_tag.svg"
-import oakLogo from "../public/sponsors/oak.svg"
-import lunaNodeLogo from "../public/sponsors/lunanode.png"
-import trueVendorLogo from "../public/sponsors/truevendor.png"
-import airVPNLogo from "../public/sponsors/airvpn.webp"
-import fireStickTricksLogo from "../public/sponsors/firesticktricks-logo.png"
-import papersOwlLogo from "../public/sponsors/papersowl.png"
-import sexToyCollectiveLogo from "../public/sponsors/sextoycollective.webp"
-import vpsServerLogo from "../public/sponsors/vpsserver2.png"
-import betrugstestLogo from "../public/sponsors/betrugstest-com.png"
-import sujitechLogo from "../public/sponsors/mask-network.png"
-import bcsLogo from "../public/sponsors/bcs-white.png"
-import bcoLogo from "../public/sponsors/BesteCasinosOnline.webp"
-import sisterSitesLogo from "../public/sponsors/sistersites-logo.png"
-import schnellNodeLogo from "../public/sponsors/schnellnode.png"
-import ausCasinosLogo from "../public/sponsors/auscasinos.png"
-import mastoHostLogo from "../public/sponsors/MH-horizontal-white.png"
-import assemblyFourLogo from "../public/sponsors/a4.webp"
-import jldLogo from "../public/sponsors/jld_psd_logo_orig_black.png"
-import kasynoHexLogo from "../public/sponsors/kasynohex.svg"
-import altCasinoLogo from "../public/sponsors/alt-casino-1.png"
-import nettikasinotLogo from "../public/sponsors/nettikasinot.svg"
-import onlineCasinosLogo from "../public/sponsors/onlinecasinos.a2791b0.png"
-import casinoHexAULogo from "../public/sponsors/casino-hex-au.png"
-import wideAngleAnalyticsLogo from "../public/sponsors/wide-angle-analytics.webp"
-import goreadLogo from "../public/sponsors/goread.png"
-
 const sponsors = {
   additionalFunding: [
     {
       url: "https://nlnet.nl/",
-      logo: nlnetFoundationLogo,
+      logo: require("../public/sponsors/nlnet.png"),
       name: "NLNet Foundation",
     },
     {
       url: "https://nlnet.nl/NGI0",
-      logo: ngiZeroDiscoveryLogo,
+      logo: require("../public/sponsors/NGI0Discovery_tag.svg"),
       name: "NGI Zero Discovery",
     },
   ],
   platinum: [
-    { url: "https://oak.is/", logo: oakLogo, name: "Oak Studios" },
+    {
+      url: "https://oak.is/",
+      logo: require("../public/sponsors/oak.svg"),
+      name: "Oak Studios",
+    },
     {
       url: "https://www.lunanode.com/",
-      logo: lunaNodeLogo,
+      logo: require("../public/sponsors/lunanode.png"),
       name: "Lunanode",
     },
     {
       url: "https://www.ramotion.com/agency/ui-ux-design",
-      logo: trueVendorLogo,
+      logo: require("../public/sponsors/truevendor.png"),
       name: "Ramotion",
     },
     {
       url: "https://airvpn.org/landing/mastodon",
-      logo: airVPNLogo,
+      logo: require("../public/sponsors/airvpn.webp"),
       name: "AirVPN",
     },
     {
       url: "https://www.firesticktricks.com/",
-      logo: fireStickTricksLogo,
+      logo: require("../public/sponsors/firesticktricks-logo.png"),
       name: "Fire Stick Tricks",
       light: true,
     },
     {
       url: "https://papersowl.com/write-my-essay-please",
-      logo: papersOwlLogo,
+      logo: require("../public/sponsors/papersowl.png"),
       name: "Papers Owl",
     },
     {
       url: "https://sextoycollective.com",
-      logo: sexToyCollectiveLogo,
+      logo: require("../public/sponsors/sextoycollective.webp"),
       name: "Sex Toy Collective",
     },
     {
       url: "https://www.vpsserver.com/",
-      logo: vpsServerLogo,
+      logo: require("../public/sponsors/vpsserver2.png"),
       name: "VPS Server",
       light: true,
     },
     {
       url: "https://www.betrugstest.com/",
-      logo: betrugstestLogo,
+      logo: require("../public/sponsors/betrugstest-com.png"),
       name: "Betrugstest.com",
       light: true,
     }, // Custom/other
-    { url: "https://mask.io/", logo: sujitechLogo, name: "Mask Network" }, // Custom/other
+    {
+      url: "https://mask.io/",
+      logo: require("../public/sponsors/mask-network.png"),
+      name: "Mask Network",
+    }, // Custom/other
     {
       url: "https://www.bestcasinosites.net",
-      logo: bcsLogo,
+      logo: require("../public/sponsors/bcs-white.png"),
       name: "bestcasinosites.net",
       light: true,
     }, // Custom/other
     {
       url: "https://www.bestecasinosonline.at/",
-      logo: bcoLogo,
       name: "Online Casino Österreich",
+      logo: require("../public/sponsors/BesteCasinosOnline.webp"),
     }, // Custom
     {
       url: "https://www.sister-sites.co.uk/",
-      logo: sisterSitesLogo,
+      logo: require("../public/sponsors/sistersites-logo.png"),
       name: "sister-sites.co.uk",
     }, // Custom
     {
       url: "https://schnellno.de/",
-      logo: schnellNodeLogo,
+      logo: require("../public/sponsors/schnellnode.png"),
       name: "Schnell Node",
     }, // Custom
     {
       url: "https://masto.host/",
-      logo: mastoHostLogo,
+      logo: require("../public/sponsors/MH-horizontal-white.png"),
       name: "Masto.host - Fully managed Mastodon hosting",
       light: true,
     }, // Custom
     {
       url: "https://assemblyfour.com/",
-      logo: assemblyFourLogo,
+      logo: require("../public/sponsors/a4.webp"),
       name: "Assembly Four",
     }, // Custom
     {
       url: "https://www.auscasinos.com/new/",
-      logo: ausCasinosLogo,
+      logo: require("../public/sponsors/auscasinos.png"),
       name: "AusCasinos.com New Site Section",
     }, // Custom
     {
       url: "https://www.joylovedolls.com/",
-      logo: jldLogo,
+      logo: require("../public/sponsors/jld_psd_logo_orig_black.png"),
       name: "Joy Love Dolls",
     }, // Custom
     {
       url: "https://kasynohex.com/kasyna-online/",
-      logo: kasynoHexLogo,
+      logo: require("../public/sponsors/kasynohex.svg"),
       name: "Casino online PL",
     }, // Custom
     {
       url: "https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html",
-      logo: altCasinoLogo,
+      logo: require("../public/sponsors/alt-casino-1.png"),
       name: "Online Casinos Australia",
     }, // Custom
     {
       url: "https://www.nettikasinot.org/",
-      logo: nettikasinotLogo,
+      logo: require("../public/sponsors/nettikasinot.svg"),
       name: "Nettikasinot",
       light: true,
     },
     {
       url: "https://www.onlinecasinos.net/",
-      logo: onlineCasinosLogo,
       name: "OnlineCasinos.net",
+      logo: require("../public/sponsors/onlinecasinos.a2791b0.png"),
     }, // Custom
     {
       url: "https://topaussiecasinos.com/",
-      logo: casinoHexAULogo,
+      logo: require("../public/sponsors/casino-hex-au.png"),
       name: "CasinoHEX Australia",
     }, // Custom
     {
       url: "https://wideangle.co",
-      logo: wideAngleAnalyticsLogo,
+      logo: require("../public/sponsors/wide-angle-analytics.webp"),
       name: "Wide Angle Analytics",
     }, // Custom
     {
       url: "https://goread.io/buy-instagram-followers",
-      logo: goreadLogo,
+      logo: require("../public/sponsors/goread.png"),
       name: "Goread.io",
     },
   ],
 }
 
 // const goldSponsors = [
-//   { url: "https://easydns.com/", logo: sponsorEasyDNS, name: "easyDNS" },
+//   { url: "https://easydns.com/", logo: require(sponsorEasyDNS, name: "easyDNS" }),
 //   {
 //     url: "https://writersperhour.com/",
 //     logo: sponsorWritersPerHour,
