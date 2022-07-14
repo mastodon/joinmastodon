@@ -232,75 +232,90 @@ const sponsors = {
       name: "Farbridge",
     },
   ],
+  silver: [
+    {
+      url: "https://ichiji.social/@tnzk",
+      logo: require("../public/sponsors/tnzk.png"),
+      name: "Kyohei Hamaguchi / @tnzk",
+    },
+    {
+      url: "https://mastodon.gamedev.place/@aras",
+      logo: require("../public/sponsors/araspranckevicius.jpeg"),
+      name: "Aras Pranckevicius",
+    },
+    {
+      url: "https://switchvpn.net/",
+      logo: require("../public/sponsors/switchvpn.png"),
+      name: "Switch VPN",
+    },
+    {
+      url: "https://clay.global/",
+      logo: require("../public/sponsors/clay.png"),
+      name: "Clay",
+    },
+    {
+      url: "https://edureviewer.com/",
+      logo: require("../public/sponsors/edureviewer.jpg"),
+      name: "Edu Reviewer",
+    },
+    {
+      url: "https://identi.ca/evan",
+      logo: require("../public/sponsors/evan.png"),
+      name: "Evan Prodromou",
+    },
+    {
+      url: "https://marozed.com",
+      logo: require("../public/sponsors/empresso.png"),
+      name: "Agence web Marozed",
+    },
+    {
+      url: "https://vocalodon.net/@tomoki",
+      logo: require("../public/sponsors/tomoki.png"),
+      name: "Hiroyuki Wakimoto (TOMOKI++)",
+    },
+    { url: "https://spicedupaffairs.com/", name: "SUA" },
+    {
+      url: "https://www.looktotheright.com/",
+      logo: require("../public/sponsors/looktotheright.png"),
+      name: "Look To The Right",
+    },
+    { url: "https://octodon.social/@Masek", name: "Martin Seeger" },
+    {
+      url: "https://dtp-mstdn.jp",
+      logo: require("../public/sponsors/noellabo.png"),
+      name: "noellabo",
+    },
+    { name: "Donald Robb", nofollow: true },
+    {
+      url: "https://ivypanda.com/online-thesis-generator",
+      name: "IvyPanda",
+      nofollow: true,
+    },
+    {
+      url: "https://www.bestblowjobmachines.com/",
+      name: "Mark Mitchell",
+      nofollow: true,
+    },
+    { name: "John Bean", nofollow: true },
+    {
+      url: "https://correctcasinos.com",
+      name: "Stanimir Zhelev",
+      nofollow: true,
+    },
+    {
+      url: "https://bourbonbyte.com/@lucas",
+      logo: require("../public/sponsors/lucasfreeman.jpg"),
+      name: "Lucas Freeman",
+      nofollow: true,
+    },
+    {
+      url: "https://coywolf.com/",
+      logo: require("../public/sponsors/coywolf.jpg"),
+      name: "Coywolf",
+      nofollow: true,
+    },
+  ],
 }
-
-// const silverSponsors = [
-//   {
-//     url: "https://ichiji.social/@tnzk",
-//     logo: avatarTnzk,
-//     name: "Kyohei Hamaguchi / @tnzk",
-//   },
-//   {
-//     url: "https://mastodon.gamedev.place/@aras",
-//     logo: avatarArasPranckevicius,
-//     name: "Aras Pranckevicius",
-//   },
-//   { url: "https://switchvpn.net/", logo: avatarSwitchVPN, name: "Switch VPN" },
-//   { url: "https://clay.global/", logo: avatarClay, name: "Clay" },
-//   {
-//     url: "https://edureviewer.com/",
-//     logo: avatarEduReviewer,
-//     name: "Edu Reviewer",
-//   },
-//   { url: "https://identi.ca/evan", logo: avatarEvan, name: "Evan Prodromou" },
-//   {
-//     url: "https://marozed.com",
-//     logo: avatarEmpresso,
-//     name: "Agence web Marozed",
-//   },
-//   {
-//     url: "https://vocalodon.net/@tomoki",
-//     logo: avatarTomoki,
-//     name: "Hiroyuki Wakimoto (TOMOKI++)",
-//   },
-//   { url: "https://spicedupaffairs.com/", name: "SUA" },
-//   {
-//     url: "https://www.looktotheright.com/",
-//     logo: avatarLookToTheRight,
-//     name: "Look To The Right",
-//   },
-//   { url: "https://octodon.social/@Masek", name: "Martin Seeger" },
-//   { url: "https://dtp-mstdn.jp", logo: avatarNoellabo, name: "noellabo" },
-//   { name: "Donald Robb", nofollow: true },
-//   {
-//     url: "https://ivypanda.com/online-thesis-generator",
-//     name: "IvyPanda",
-//     nofollow: true,
-//   },
-//   {
-//     url: "https://www.bestblowjobmachines.com/",
-//     name: "Mark Mitchell",
-//     nofollow: true,
-//   },
-//   { name: "John Bean", nofollow: true },
-//   {
-//     url: "https://correctcasinos.com",
-//     name: "Stanimir Zhelev",
-//     nofollow: true,
-//   },
-//   {
-//     url: "https://bourbonbyte.com/@lucas",
-//     logo: avatarLucasFreeman,
-//     name: "Lucas Freeman",
-//     nofollow: true,
-//   },
-//   {
-//     url: "https://coywolf.com/",
-//     logo: avatarCoywolf,
-//     name: "Coywolf",
-//     nofollow: true,
-//   },
-// ]
 
 export const { platinum, additionalFunding } = sponsors
 export default sponsors
