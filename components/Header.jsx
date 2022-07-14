@@ -176,9 +176,6 @@ const Header = () => {
             <li
               className="relative"
               key={item.key || item.value}
-              role="menuitem"
-              aria-haspopup={Boolean(item.options)}
-              aria-expanded={primaryMenuItemIndex === itemIndex}
               onBlur={() => {
                 console.log("blurred")
               }}
@@ -187,6 +184,11 @@ const Header = () => {
                 <>
                   <button
                     role="menuitem"
+                    aria-haspopup
+                    aria-expanded={
+                      primaryMenuItemIndex !== itemIndex ||
+                      secondaryMenuItemIndex === null
+                    }
                     className="flex items-center gap-[0.125rem] focus:outline-2"
                     tabIndex={
                       primaryMenuItemIndex === itemIndex &&
@@ -227,6 +229,7 @@ const Header = () => {
                         secondaryMenuItemIndex === null) &&
                         "md:sr-only"
                     )}
+                    role="menu"
                   >
                     {item.options.map((option, optionIndex) => (
                       <li key={option.value}>
@@ -241,6 +244,7 @@ const Header = () => {
                                 setSecondaryMenuItemIndex(null)
                               }
                             }}
+                            role="menuitem"
                           >
                             {option.label}
                           </a>
