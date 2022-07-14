@@ -90,7 +90,7 @@ const Header = () => {
           .querySelectorAll(`li`)
           .item(secondaryMenuItemIndex)
       }
-      targetItem.querySelector("a, button").focus()
+      targetItem.querySelector("a, button").focus({ preventScroll: true })
     },
     [primaryMenuItemIndex, secondaryMenuItemIndex]
   )
