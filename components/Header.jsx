@@ -14,6 +14,7 @@ import { useEffect } from "react"
  * @see https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation-hybrid.html
  */
 const Header = () => {
+  const [pageScrolled, setPageScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [primaryMenuItemIndex, setPrimaryMenuItemIndex] = useState(0)
   const [secondaryMenuItemIndex, setSecondaryMenuItemIndex] = useState(null)
@@ -63,6 +64,18 @@ const Header = () => {
     },
   ]
 
+  const checkPageScroll = (e) => {
+    if (window.scrollY > 0) {
+      setPageScrolled(true)
+    } else {
+      setPageScrolled(false)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", checkPageScroll)
+    checkPageScroll()
+  }, [])
+
   useEffect(
     function updateFocus() {
       const currentItem = document
@@ -106,8 +119,13 @@ const Header = () => {
   }
 
   return (
-    <div className="sticky top-0 z-10 mx-auto mt-12 flex items-center justify-between py-4 text-white">
-      <div className="full-width-bg absolute h-full bg-nightshade" />
+    <div className="sticky top-0 z-10 mx-auto flex items-center justify-between py-4 text-white">
+      <div
+        className={classNames(
+          "full-width-bg absolute h-full transition-colors",
+          pageScrolled && "bg-nightshade"
+        )}
+      />
       <div>
         <Link className="brand" href="/">
           <a className="flex max-w-[11.375rem] md:max-w-[12.625rem]">
