@@ -97,8 +97,8 @@ const Header = () => {
   }
 
   return (
-    <div className="sticky top-0 mx-auto mt-12 flex items-center justify-between py-4 text-white">
-      <div className="full-width-bg bg-nightshade" />
+    <div className="sticky top-0 z-10 mx-auto mt-12 flex items-center justify-between py-4 text-white">
+      <div className="full-width-bg absolute h-full bg-nightshade" />
       <div>
         <Link className="brand" href="/">
           <a className="flex max-w-[11.375rem] md:max-w-[12.625rem]">
