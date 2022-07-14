@@ -200,7 +200,16 @@ const Header = () => {
                         setSecondaryMenuItemIndex(0)
                       }
                     }}
-                    onClick={() => setPrimaryMenuItemIndex(itemIndex)}
+                    onClick={() => {
+                      if (itemIndex === primaryMenuItemIndex) {
+                        setSecondaryMenuItemIndex(
+                          secondaryMenuItemIndex === null ? 0 : null
+                        )
+                      } else {
+                        setPrimaryMenuItemIndex(itemIndex)
+                        setSecondaryMenuItemIndex(0)
+                      }
+                    }}
                   >
                     {item.label}
                     <SVG
