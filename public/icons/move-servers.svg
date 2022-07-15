@@ -1,15 +1,15 @@
 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="11" y="12" width="98" height="22" rx="3" stroke="#6364FF" stroke-width="2"/>
-<rect x="11" y="57" width="98" height="22" rx="3" stroke="#6364FF" stroke-width="2" stroke-dasharray="4 4"/>
-<rect x="11" y="87" width="98" height="22" rx="3" stroke="#6364FF" stroke-width="2"/>
-<line x1="59" y1="87" x2="59" y2="78" stroke="#6364FF" stroke-width="2"/>
-<line x1="101" y1="23" x2="67" y2="23" stroke="#6364FF" stroke-width="4" stroke-linecap="round"/>
-<circle cx="21" cy="23" r="4" fill="#6364FF"/>
-<circle cx="33" cy="23" r="4" fill="#6364FF"/>
-<circle cx="45" cy="23" r="4" fill="#6364FF"/>
-<line x1="101" y1="98" x2="67" y2="98" stroke="#6364FF" stroke-width="4" stroke-linecap="round"/>
-<circle cx="21" cy="98" r="4" fill="#6364FF"/>
-<circle cx="33" cy="98" r="4" fill="#6364FF"/>
-<circle cx="45" cy="98" r="4" fill="#6364FF"/>
-<path d="M59.2929 51.7071C59.6834 52.0976 60.3166 52.0976 60.7071 51.7071L67.0711 45.3431C67.4616 44.9526 67.4616 44.3195 67.0711 43.9289C66.6805 43.5384 66.0474 43.5384 65.6569 43.9289L60 49.5858L54.3431 43.9289C53.9526 43.5384 53.3195 43.5384 52.9289 43.9289C52.5384 44.3195 52.5384 44.9526 52.9289 45.3431L59.2929 51.7071ZM61 35C61 34.4477 60.5523 34 60 34C59.4477 34 59 34.4477 59 35L61 35ZM61 51L61 35L59 35L59 51L61 51Z" fill="#6364FF"/>
+<rect x="11" y="12" width="98" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+<rect x="11" y="57" width="98" height="22" rx="3" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="11" y="87" width="98" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+<line x1="59" y1="87" x2="59" y2="78" stroke="currentColor" stroke-width="2"/>
+<line x1="101" y1="23" x2="67" y2="23" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+<circle cx="21" cy="23" r="4" fill="currentColor"/>
+<circle cx="33" cy="23" r="4" fill="currentColor"/>
+<circle cx="45" cy="23" r="4" fill="currentColor"/>
+<line x1="101" y1="98" x2="67" y2="98" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+<circle cx="21" cy="98" r="4" fill="currentColor"/>
+<circle cx="33" cy="98" r="4" fill="currentColor"/>
+<circle cx="45" cy="98" r="4" fill="currentColor"/>
+<path d="M59.2929 51.7071C59.6834 52.0976 60.3166 52.0976 60.7071 51.7071L67.0711 45.3431C67.4616 44.9526 67.4616 44.3195 67.0711 43.9289C66.6805 43.5384 66.0474 43.5384 65.6569 43.9289L60 49.5858L54.3431 43.9289C53.9526 43.5384 53.3195 43.5384 52.9289 43.9289C52.5384 44.3195 52.5384 44.9526 52.9289 45.3431L59.2929 51.7071ZM61 35C61 34.4477 60.5523 34 60 34C59.4477 34 59 34.4477 59 35L61 35ZM61 51L61 35L59 35L59 51L61 51Z" fill="currentColor"/>
 </svg>
