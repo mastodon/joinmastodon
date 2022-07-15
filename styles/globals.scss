@@ -164,4 +164,7 @@ $xxl: 1400px;
       @apply mx-auto max-w-site px-6 lg:px-16;
     }
   }
+  .header-pull {
+    @apply -mt-[var(--header-area)] pt-[var(--header-area)]
+  }
 }
