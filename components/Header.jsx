@@ -8,7 +8,6 @@ import classNames from "classnames"
 import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
 import SVG from "react-inlinesvg"
-import { useRouter } from "next/router"
 
 const useMenu = ({ navigationItems }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -140,7 +139,6 @@ const useMenu = ({ navigationItems }) => {
  */
 const Header = () => {
   const [pageScrolled, setPageScrolled] = useState(false)
-  const router = useRouter()
 
   const navigationItems = [
     {
@@ -181,7 +179,7 @@ const Header = () => {
       childItems: locales.map((locale) => ({
         key: locale.code,
         locale: locale.code,
-        value: router.asPath,
+        value: "", // current page
         label: locale.language,
       })),
     },
