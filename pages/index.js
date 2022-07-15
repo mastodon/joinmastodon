@@ -1,23 +1,27 @@
 import { FormattedMessage } from "react-intl"
 import Image from "next/image"
+import Link from "next/link"
 import classnames from "classnames"
 
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
 
-import testimonialsData from "../data/testimonials.json"
+import testimonials from "../data/testimonials.json"
+import { platinum, additionalFunding } from "../data/sponsors.js"
 
 import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
 import illoModeration from "../public/illustrations/features_moderation.png"
+import illoWorld from "../public/illustrations/home_sponsors_world.png"
 
-function Home({ testimonials }) {
+function Home() {
   return (
     <>
       <HomeHero />
-      <Testimonials testimonials={testimonialsData.slice(0, 3)} />
       <Features />
+      <Testimonials testimonials={testimonials.slice(0, 3)} />
+      <Sponsors sponsors={{ platinum, additionalFunding }} />
     </>
   )
 }
@@ -196,6 +200,107 @@ const Features = () => {
         )
       })}
     </section>
+  )
+}
+
+const Sponsors = ({ sponsors }) => {
+  return (
+    <section className="text-center">
+      <div className="py-20 lg:grid lg:grid-cols-12 lg:gap-x-gutter lg:py-28">
+        <div className="mx-auto mb-12 max-w-lg lg:col-span-4 lg:col-start-5 lg:mb-10 lg:w-full">
+          <Image
+            src={illoWorld}
+            alt="Illustration of elephant characters on a globe."
+          />
+        </div>
+
+        <div className=" lg:col-span-8 lg:col-start-3">
+          <h2 className="h2 mb-4">
+            <FormattedMessage
+              id="home.sponsors.title"
+              defaultMessage="Independent and self made"
+            />
+          </h2>
+
+          <p className="b1 lg:sh1 mb-12 lg:mb-10">
+            <FormattedMessage
+              id="home.sponsors.body"
+              defaultMessage="Mastodon is free and open-source software developed by a non-profit organization. Public support directly affects development and evolution."
+            />
+          </p>
+
+          <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
+            <LinkButton href="https://sponsor.joinmastodon.org/" large>
+              <FormattedMessage
+                id="sponsorship.become_a_sponsor"
+                defaultMessage="Become a sponsor"
+              />
+            </LinkButton>
+
+            <LinkButton href="/sponsors" light large>
+              <FormattedMessage
+                id="credits.view_sponsors"
+                defaultMessage="View sponsors"
+              />
+            </LinkButton>
+          </div>
+        </div>
+      </div>
+
+      <h3 className="h4 pb-4">
+        <FormattedMessage
+          id="home.sponsors.supported_by"
+          defaultMessage="Supported by"
+        />
+      </h3>
+
+      <SponsorGroup sponsors={sponsors.platinum} />
+
+      <h4 className="h5 pt-20 pb-4">
+        <FormattedMessage
+          id="home.additional_support_from"
+          defaultMessage="Additional support from"
+        />
+      </h4>
+
+      <SponsorGroup sponsors={sponsors.additionalFunding} />
+    </section>
+  )
+}
+
+const SponsorGroup = ({ sponsors }) => {
+  return (
+    <div className="grid grid-cols-2 items-center justify-center gap-5 gap-x-5 bg-white sm:flex sm:flex-wrap">
+      {sponsors.map((sponsor, i) => {
+        let isLastItem = sponsors[i + 1] == undefined
+        let isUnevenItems = sponsors.length % 2 != 0
+
+        return (
+          <Link href={sponsor.url} key={i}>
+            <a
+              className={classnames(
+                "relative inline-flex max-h-[90px] max-w-[200px] justify-self-center",
+                isLastItem && isUnevenItems && "col-span-2"
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                aspectRatio:
+                  sponsor.logo.default.width / sponsor.logo.default.height || 0,
+              }}
+            >
+              <Image
+                className={classnames(
+                  "object-contain mix-blend-luminosity",
+                  sponsor.light && "invert"
+                )}
+                src={sponsor.logo}
+              />
+            </a>
+          </Link>
+        )
+      })}
+    </div>
   )
 }
 
