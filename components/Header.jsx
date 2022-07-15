@@ -8,6 +8,7 @@ import classNames from "classnames"
 import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
 import SVG from "react-inlinesvg"
+import { useRouter } from "next/router"
 
 const useMenu = ({ navigationItems }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -139,6 +140,7 @@ const useMenu = ({ navigationItems }) => {
  */
 const Header = () => {
   const [pageScrolled, setPageScrolled] = useState(false)
+  const router = useRouter()
 
   const navigationItems = [
     {
@@ -176,12 +178,12 @@ const Header = () => {
     {
       key: "locale",
       label: <>文A</>,
-      childItems:
-        // TODO: append path
-        locales.map((locale) => ({
-          value: `/${locale.code}/path`,
-          label: locale.language,
-        })),
+      childItems: locales.map((locale) => ({
+        key: locale.code,
+        locale: locale.code,
+        value: router.asPath,
+        label: locale.language,
+      })),
     },
   ]
 
@@ -264,11 +266,11 @@ const Header = () => {
                         "md:sr-only"
                     )}
                   >
-                    {item.childItems.map((option, optionIndex) => (
-                      <li key={option.value}>
-                        <Link href={option.value}>
-                          <a {...bindSecondaryMenuItem(itemIndex, optionIndex)}>
-                            {option.label}
+                    {item.childItems.map((child, childIndex) => (
+                      <li key={child.key || child.value}>
+                        <Link href={child.value} locale={child.locale}>
+                          <a {...bindSecondaryMenuItem(itemIndex, childIndex)}>
+                            {child.label}
                           </a>
                         </Link>
                       </li>
