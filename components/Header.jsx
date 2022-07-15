@@ -24,7 +24,7 @@ const useMenu = ({ navigationItems }) => {
     setSecondaryMenuItemIndex(null)
   }
   const navigateVertically = (direction) => {
-    const secondaryItems = navigationItems[primaryMenuItemIndex].options
+    const secondaryItems = navigationItems[primaryMenuItemIndex].childItems
     if (secondaryItems) {
       if (secondaryMenuItemIndex === null) {
         setSecondaryMenuItemIndex(
@@ -163,7 +163,7 @@ const Header = () => {
     {
       key: "resources",
       label: <FormattedMessage id="nav.resources" defaultMessage="Resources" />,
-      options: [
+      childItems: [
         {
           value: "https://blog.joinmastodon.org/",
           label: <FormattedMessage id="nav.blog" defaultMessage="Blog" />,
@@ -183,7 +183,7 @@ const Header = () => {
     {
       key: "locale",
       label: <>文A</>,
-      options:
+      childItems:
         // TODO: append path
         locales.map((locale) => ({
           value: `/${locale.code}/path`,
@@ -245,7 +245,7 @@ const Header = () => {
         >
           {navigationItems.map((item, itemIndex) => (
             <li className="relative" key={item.key || item.value}>
-              {Boolean(item.options) ? (
+              {Boolean(item.childItems) ? (
                 <>
                   <button
                     {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
@@ -271,7 +271,7 @@ const Header = () => {
                         "md:sr-only"
                     )}
                   >
-                    {item.options.map((option, optionIndex) => (
+                    {item.childItems.map((option, optionIndex) => (
                       <li key={option.value}>
                         <Link href={option.value}>
                           <a {...bindSecondaryMenuItem(itemIndex, optionIndex)}>
