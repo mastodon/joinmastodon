@@ -295,7 +295,6 @@ const SponsorGroup = ({ sponsors }) => {
                   sponsor.light && "invert"
                 )}
                 src={sponsor.logo}
-                objectFit="contain"
               />
             </a>
           </Link>
