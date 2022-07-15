@@ -66,19 +66,12 @@ const useMenu = ({ navigationItems }) => {
           ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)
         ) {
           e.preventDefault()
+          // prettier-ignore
           switch (e.key) {
-            case "ArrowLeft":
-              navigateHorizontally(-1)
-              break
-            case "ArrowRight":
-              navigateHorizontally(+1)
-              break
-            case "ArrowUp":
-              navigateVertically(-1)
-              break
-            case "ArrowDown":
-              navigateVertically(+1)
-              break
+            case "ArrowLeft":  navigateHorizontally(-1); break;
+            case "ArrowRight": navigateHorizontally(+1); break;
+            case "ArrowUp":    navigateVertically(-1); break;
+            case "ArrowDown":  navigateVertically(+1); break;
           }
         }
       },
@@ -88,16 +81,15 @@ const useMenu = ({ navigationItems }) => {
     itemIndex,
     { hasPopup } = { hasPopup: false }
   ) => {
+    const isActive = itemIndex === primaryMenuItemIndex
+    const isDropdownClosed = secondaryMenuItemIndex === null
+    const isSelectable = isActive && isDropdownClosed
+    const isExpanded = hasPopup && isActive && !isDropdownClosed
     return {
       role: "menuitem",
       "aria-haspopup": hasPopup,
-      "aria-expanded":
-        hasPopup &&
-        (primaryMenuItemIndex !== itemIndex || secondaryMenuItemIndex === null),
-      tabIndex:
-        primaryMenuItemIndex === itemIndex && secondaryMenuItemIndex === null
-          ? 0
-          : -1,
+      "aria-expanded": isExpanded,
+      tabIndex: isSelectable ? 0 : -1,
       onKeyDown: (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault()
@@ -105,8 +97,8 @@ const useMenu = ({ navigationItems }) => {
         }
       },
       onClick: () => {
-        if (itemIndex === primaryMenuItemIndex) {
-          setSecondaryMenuItemIndex(secondaryMenuItemIndex === null ? 0 : null)
+        if (isActive) {
+          setSecondaryMenuItemIndex(isDropdownClosed ? 0 : null)
         } else {
           setPrimaryMenuItemIndex(itemIndex)
           setSecondaryMenuItemIndex(0)
@@ -115,19 +107,20 @@ const useMenu = ({ navigationItems }) => {
     }
   }
   const bindSecondaryMenu = () => ({ role: "menu" })
-  const bindSecondaryMenuItem = (parentIndex, itemIndex) => ({
-    tabIndex:
+  const bindSecondaryMenuItem = (parentIndex, itemIndex) => {
+    const isSelectable =
       parentIndex === primaryMenuItemIndex &&
       itemIndex === secondaryMenuItemIndex
-        ? 0
-        : -1,
-    onKeyDown: (e) => {
-      if (e.key === "Escape") {
-        setSecondaryMenuItemIndex(null)
-      }
-    },
-    role: "menuitem",
-  })
+    return {
+      tabIndex: isSelectable ? 0 : -1,
+      onKeyDown: (e) => {
+        if (e.key === "Escape") {
+          setSecondaryMenuItemIndex(null)
+        }
+      },
+      role: "menuitem",
+    }
+  }
 
   return {
     mobileMenuOpen,
