@@ -26,8 +26,9 @@ export default Home
 
 const HomeHero = () => {
   return (
-    <section className="hero text-center">
-      <h1 className="h1 ">
+    <section className="hero relative py-16 pt-[calc(var(--header-offset)_+_var(--header-height))] text-center text-white">
+      <div className="full-width-bg absolute inset-0 -z-10 bg-eggplant" />
+      <h1 className="h1">
         <FormattedMessage
           id="home.hero.headline"
           defaultMessage="Social networking that's not for sale."

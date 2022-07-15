@@ -46,9 +46,12 @@ $xxl: 1400px;
 
   --border-radius: 4px;
   --border-width: 2px;
-
+  
+  --header-offset: #{rem(24)};
+  --header-height: #{rem(90px)};
   --gutter-width: #{rem(16px)};
   @include min-width($md) {
+    --header-height: #{rem(96px)};
     --gutter-width: #{rem(20px)};
   }
 }

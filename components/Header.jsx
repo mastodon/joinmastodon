@@ -211,7 +211,7 @@ const Header = () => {
   }, [])
 
   return (
-    <div className="sticky top-0 z-10 mx-auto flex items-center justify-between py-4 text-white">
+    <header className="sticky top-[var(--header-offset)] z-10 mx-auto -mb-header-area flex h-[var(--header-height)] items-center justify-between text-white">
       <div
         className={classNames(
           "full-width-bg absolute -z-10 h-full transition-colors",
@@ -291,7 +291,7 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-    </div>
+    </header>
   )
 }
 export default Header
