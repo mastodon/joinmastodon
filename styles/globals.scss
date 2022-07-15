@@ -58,6 +58,9 @@ $xxl: 1400px;
 }
 
 @layer base {
+  html {
+    overflow-x: hidden;
+  }
   html,
   body {
     padding: 0;
