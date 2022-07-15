@@ -30,35 +30,37 @@ export default Home
 
 const HomeHero = () => {
   return (
-    <section className="hero text-center">
-      <h1 className="h1 ">
-        <FormattedMessage
-          id="home.hero.headline"
-          defaultMessage="Social networking that's not for sale."
-        />
-      </h1>
-
-      <p className="sh1">
-        <FormattedMessage
-          id="home.hero.body"
-          defaultMessage="Your home feed should be filled with what matters to you most, not what a corporation thinks you should see. Radically different social media, back in the hands of the people."
-        />
-      </p>
-
-      <div className="flex justify-center gap-12">
-        <LinkButton href="/">
+    <section className="full-width-bg hero h-[60vh] bg-main-blurple text-center text-white">
+      <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
+        <h1 className="h1 mb-2 max-w-[17ch]">
           <FormattedMessage
-            id="home.how_it_works"
-            defaultMessage="How it works"
+            id="home.hero.headline"
+            defaultMessage="Social networking that's not for sale."
           />
-        </LinkButton>
+        </h1>
 
-        <LinkButton href="/" light>
+        <p className="sh1 mb-14 max-w-[50ch]">
           <FormattedMessage
-            id="home.get_started"
-            defaultMessage="Get started"
+            id="home.hero.body"
+            defaultMessage="Your home feed should be filled with what matters to you most, not what a corporation thinks you should see. Radically different social media, back in the hands of the people."
           />
-        </LinkButton>
+        </p>
+
+        <div className="flex justify-center gap-12">
+          <LinkButton href="/">
+            <FormattedMessage
+              id="home.how_it_works"
+              defaultMessage="How it works"
+            />
+          </LinkButton>
+
+          <LinkButton href="/" light borderless>
+            <FormattedMessage
+              id="home.get_started"
+              defaultMessage="Get started"
+            />
+          </LinkButton>
+        </div>
       </div>
     </section>
   )
