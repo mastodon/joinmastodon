@@ -239,10 +239,7 @@ const Header = () => {
           {...bindPrimaryMenu()}
           className={classNames(
             "absolute w-screen gap-4 md:relative md:w-auto md:gap-10 md:p-4",
-            {
-              "hidden md:flex": !mobileMenuOpen,
-              flex: mobileMenuOpen,
-            }
+            mobileMenuOpen ? "flex" : "hidden md:flex"
           )}
         >
           {navigationItems.map((item, itemIndex) => (
