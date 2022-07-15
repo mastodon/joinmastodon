@@ -209,7 +209,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className="-mb-header-area sticky -top-[var(--header-offset)] z-10 mx-auto flex h-[var(--header-area)] items-center justify-between pt-[var(--header-offset)] text-white">
+    <header className="sticky -top-[var(--header-offset)] z-10 mx-auto -mb-[var(--header-area)] flex h-[var(--header-area)] items-center justify-between pt-[var(--header-offset)] text-white">
       <div
         className={classNames(
           "full-width-bg absolute inset-y-0 -z-10 h-full transition-colors",
