@@ -211,10 +211,10 @@ const Header = () => {
   }, [])
 
   return (
-    <header className="sticky top-[var(--header-offset)] z-10 mx-auto -mb-header-area flex h-[var(--header-height)] items-center justify-between text-white">
+    <header className="-mb-header-area sticky -top-[var(--header-offset)] z-10 mx-auto flex h-[var(--header-area)] items-center justify-between pt-[var(--header-offset)] text-white">
       <div
         className={classNames(
-          "full-width-bg absolute -z-10 h-full transition-colors",
+          "full-width-bg absolute inset-y-0 -z-10 h-full transition-colors",
           pageScrolled && "bg-black"
         )}
       />

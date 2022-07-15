@@ -69,12 +69,6 @@ module.exports = {
       "gray-5": "var(--gray-5)",
     },
     extend: {
-      space: {
-        "header-area": "calc(var(--header-offset) + var(--header-height))",
-      },
-      margin: {
-        "header-area": "calc(var(--header-offset) + var(--header-height))",
-      },
       backgroundImage: {
         "blurple-gradient": `linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%)`,
       },

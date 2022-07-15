@@ -50,6 +50,7 @@ $xxl: 1400px;
   --header-offset: #{rem(24)};
   --header-height: #{rem(90px)};
   --gutter-width: #{rem(16px)};
+  --header-area: calc(var(--header-offset) + var(--header-height));
   @include min-width($md) {
     --header-height: #{rem(96px)};
     --gutter-width: #{rem(20px)};
