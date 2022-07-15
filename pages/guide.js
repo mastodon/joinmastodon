@@ -23,13 +23,8 @@ function Home(props) {
           "c2",
           "c3",
         ].map((name) => (
-          <div
-            key={name}
-            className="flex gap-4 items-baseline"
-          >
-            <div className="b4 w-4 flex-0">
-              {name}
-            </div>
+          <div key={name} className="flex items-baseline gap-4">
+            <div className="b4 flex-0 w-4">{name}</div>
             <div className={name}>Find your perfect community</div>
           </div>
         ))}
@@ -38,7 +33,7 @@ function Home(props) {
       <section>
         <h2 className="h5">Colors</h2>
 
-        <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
           {[
             "bg-black",
             "bg-gray-1",
@@ -56,13 +51,8 @@ function Home(props) {
             "bg-lime",
             "bg-goldenrod",
           ].map((color) => (
-            <div
-              key={color}
-              className="flex gap-4 items-center"
-            >
-              <div
-                className={`w-12 h-12 ${color}`}
-              />
+            <div key={color} className="flex items-center gap-4">
+              <div className={`h-12 w-12 ${color}`} />
               <div className="b2">{color.replace("bg-", "")}</div>
             </div>
           ))}
@@ -85,6 +75,7 @@ function Home(props) {
             `move-servers`,
             `move`,
             `open-source`,
+            `price-tag`,
             `privacy`,
             `progressive-web`,
             `safe`,
@@ -93,10 +84,7 @@ function Home(props) {
             `screen`,
             `servers`,
           ].map((name) => (
-            <figure
-              key={name}
-              className="flex gap-4 flex-col items-baseline"
-            >
+            <figure key={name} className="flex flex-col items-baseline gap-4">
               <SVG src={`/icons/${name}.svg`} />
               <figcaption className="b2">{name}</figcaption>
             </figure>
@@ -107,7 +95,7 @@ function Home(props) {
         <h2 className="h5">Components</h2>
 
         <h3 className="h6">IconCard</h3>
-        <div className="grid gap-gutter grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-gutter">
           <IconCard
             title="Decentralized"
             icon="decentralized"
@@ -132,9 +120,7 @@ function Home(props) {
           <IconCard
             title="Privacy-Minded"
             icon="safety"
-            copy={
-              "You’re in control. Publish only what you choose."
-            }
+            copy={"You’re in control. Publish only what you choose."}
           />
         </div>
       </section>
