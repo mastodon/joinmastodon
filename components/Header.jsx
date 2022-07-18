@@ -101,7 +101,7 @@ const Header = () => {
         <ul
           {...bindPrimaryMenu()}
           className={classNames(
-            "absolute w-screen gap-4 md:relative md:w-auto md:gap-10 md:p-4",
+            "absolute w-screen gap-4 rounded focus-within:outline md:relative md:w-auto md:gap-10 md:p-4",
             mobileMenuOpen ? "flex" : "hidden md:flex"
           )}
         >
