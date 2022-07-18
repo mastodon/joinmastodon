@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "extract": "formatjs extract 'pages/**/*.js' 'components/**/*.jsx' --out-file 'locales/en.json'",
-    "compile": "formatjs compile 'locales/extracted/en.json' --out-file locales/compiled/en.json"
+    "extract": "formatjs extract 'pages/**/*.js' 'components/**/*.jsx' --out-file 'locales/en.json' --format 'locales/locale_format.js'"
   },
   "dependencies": {
     "classnames": "^2.3.1",

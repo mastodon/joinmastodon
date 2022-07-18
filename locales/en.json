@@ -1,98 +1,34 @@
 {
-  "contact_us": {
-    "defaultMessage": "Contact us"
-  },
-  "credits.press_kit": {
-    "defaultMessage": "Press kit"
-  },
-  "credits.view_sponsors": {
-    "defaultMessage": "View sponsors"
-  },
-  "home.additional_support_from": {
-    "defaultMessage": "Additional support from"
-  },
-  "home.features.audience.body": {
-    "defaultMessage": "Joining a server on Mastodon provides you with the power to communicate with any server across the globe. Meet like-minded people and make your corner of the internet a little more like you. Need more from Mastodon? Host your own server."
-  },
-  "home.features.audience.title": {
-    "defaultMessage": "Build your audience"
-  },
-  "home.features.button.find_a_server": {
-    "defaultMessage": "Find a server"
-  },
-  "home.features.button.learn_more": {
-    "defaultMessage": "Learn more"
-  },
-  "home.features.moderation.body": {
-    "defaultMessage": "Mastodon puts decision making back in the hands of the people. Each server creates their own rules and regulations, which are enforced locally and not top-down like corporate social media. Self-hosting grants even more control by letting you decide the rules."
-  },
-  "home.features.moderation.title": {
-    "defaultMessage": "Moderating the way it should be"
-  },
-  "home.features.timeline.body": {
-    "defaultMessage": "Decentralized social media is created and maintained by its users, making you the owner of your feed. You can be as public or as private as you like and curate your own experience."
-  },
-  "home.features.timeline.title": {
-    "defaultMessage": "Stay in control of your own timeline"
-  },
-  "home.get_started": {
-    "defaultMessage": "Get started"
-  },
-  "home.hero.body": {
-    "defaultMessage": "Your home feed should be filled with what matters to you most, not what a corporation thinks you should see. Radically different social media, back in the hands of the people."
-  },
-  "home.hero.headline": {
-    "defaultMessage": "Social networking that's not for sale."
-  },
-  "home.how_it_works": {
-    "defaultMessage": "How it works"
-  },
-  "home.sponsors.body": {
-    "defaultMessage": "Mastodon is free and open-source software developed by a non-profit organization. Public support directly affects development and evolution."
-  },
-  "home.sponsors.supported_by": {
-    "defaultMessage": "Supported by"
-  },
-  "home.sponsors.title": {
-    "defaultMessage": "Independent and self made"
-  },
-  "home.testimonials.title": {
-    "defaultMessage": "What our users are saying"
-  },
-  "nav.apps": {
-    "defaultMessage": "Apps"
-  },
-  "nav.blog": {
-    "defaultMessage": "Blog"
-  },
-  "nav.code": {
-    "defaultMessage": "Code"
-  },
-  "nav.company": {
-    "defaultMessage": "Company"
-  },
-  "nav.docs": {
-    "defaultMessage": "Documentation"
-  },
-  "nav.product": {
-    "defaultMessage": "Product"
-  },
-  "nav.resources": {
-    "defaultMessage": "Resources"
-  },
-  "nav.sponsors": {
-    "defaultMessage": "Sponsors"
-  },
-  "nav.support": {
-    "defaultMessage": "Support"
-  },
-  "privacy_policy": {
-    "defaultMessage": "Privacy policy"
-  },
-  "sponsorship.become_a_sponsor": {
-    "defaultMessage": "Become a sponsor"
-  },
-  "view_profile": {
-    "defaultMessage": "View profile"
-  }
+  "contact_us": "Contact us",
+  "credits.press_kit": "Press kit",
+  "credits.view_sponsors": "View sponsors",
+  "home.additional_support_from": "Additional support from",
+  "home.features.audience.body": "Joining a server on Mastodon provides you with the power to communicate with any server across the globe. Meet like-minded people and make your corner of the internet a little more like you. Need more from Mastodon? Host your own server.",
+  "home.features.audience.title": "Build your audience",
+  "home.features.button.find_a_server": "Find a server",
+  "home.features.button.learn_more": "Learn more",
+  "home.features.moderation.body": "Mastodon puts decision making back in the hands of the people. Each server creates their own rules and regulations, which are enforced locally and not top-down like corporate social media. Self-hosting grants even more control by letting you decide the rules.",
+  "home.features.moderation.title": "Moderating the way it should be",
+  "home.features.timeline.body": "Decentralized social media is created and maintained by its users, making you the owner of your feed. You can be as public or as private as you like and curate your own experience.",
+  "home.features.timeline.title": "Stay in control of your own timeline",
+  "home.get_started": "Get started",
+  "home.hero.body": "Your home feed should be filled with what matters to you most, not what a corporation thinks you should see. Radically different social media, back in the hands of the people.",
+  "home.hero.headline": "Social networking that's not for sale.",
+  "home.how_it_works": "How it works",
+  "home.sponsors.body": "Mastodon is free and open-source software developed by a non-profit organization. Public support directly affects development and evolution.",
+  "home.sponsors.supported_by": "Supported by",
+  "home.sponsors.title": "Independent and self made",
+  "home.testimonials.title": "What our users are saying",
+  "nav.apps": "Apps",
+  "nav.blog": "Blog",
+  "nav.code": "Code",
+  "nav.company": "Company",
+  "nav.docs": "Documentation",
+  "nav.product": "Product",
+  "nav.resources": "Resources",
+  "nav.sponsors": "Sponsors",
+  "nav.support": "Support",
+  "privacy_policy": "Privacy policy",
+  "sponsorship.become_a_sponsor": "Become a sponsor",
+  "view_profile": "View profile"
 }
