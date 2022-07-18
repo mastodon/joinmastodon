@@ -1,4 +1,4 @@
-export const locales = [
+const locales = [
   { code: "ar", language: "العربية" },
   { code: "ca", language: "Català" },
   { code: "cs", language: "Čeština" },
@@ -27,3 +27,7 @@ export const locales = [
   { code: "zh", language: "中文" },
   { code: "zh-TW", language: "繁體中文" },
 ]
+
+module.exports = {
+  locales,
+}
