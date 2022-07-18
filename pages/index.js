@@ -14,12 +14,14 @@ import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
 import illoModeration from "../public/illustrations/features_moderation.png"
 import illoWorld from "../public/illustrations/home_sponsors_world.png"
+import { IconCard } from "../components/IconCard"
 
 function Home() {
   return (
     <>
       <HomeHero />
       <Features />
+      <WhyMastodon />
       <Testimonials testimonials={testimonials.slice(0, 3)} />
       <Sponsors sponsors={{ platinum, additionalFunding }} />
     </>
@@ -201,6 +203,80 @@ const Features = () => {
           </div>
         )
       })}
+    </section>
+  )
+}
+
+const WhyMastodon = () => {
+  return (
+    <section className="py-20">
+      <h3 className="h3 pb-16 text-center">
+        <FormattedMessage id="home.why.title" defaultMessage="Why Mastodon?" />
+      </h3>
+      <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-4">
+        <IconCard
+          title={
+            <FormattedMessage
+              id="home.why.decentralized.title"
+              defaultMessage="Decentralized"
+            />
+          }
+          icon="decentralized"
+          copy={
+            <FormattedMessage
+              id="home.why.decentralized.copy"
+              defaultMessage="Not controlled by a 
+            single website or company, Mastodon is a network of completely independent service providers forming 
+            a global, cohesive social media platform. "
+            />
+          }
+        />
+        <IconCard
+          title={
+            <FormattedMessage
+              id="home.why.opensource.title"
+              defaultMessage="Open Source"
+            />
+          }
+          icon="open-source"
+          copy={
+            <FormattedMessage
+              id="home.why.opensource.copy"
+              defaultMessage="Mastodon is free and open-source software. We believe in your right to use, copy, study and change Mastodon as you see fit. Community collaboration helps us continually evolve Mastodon."
+            />
+          }
+        />
+        <IconCard
+          title={
+            <FormattedMessage
+              id="home.why.not_for_sale.title"
+              defaultMessage="Not for Sale"
+            />
+          }
+          icon="price-tag"
+          copy={
+            <FormattedMessage
+              id="home.why.not_for_sale.copy"
+              defaultMessage="No surprises. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data is yours and yours alone"
+            />
+          }
+        />
+        <IconCard
+          title={
+            <FormattedMessage
+              id="home.why.privacy_minded.title"
+              defaultMessage="Privacy-Minded"
+            />
+          }
+          icon="safety"
+          copy={
+            <FormattedMessage
+              id="home.why.privacy_minded.copy"
+              defaultMessage="You’re in control. Publish only what you choose and rest assured that your personal information is safe. Mastodon is not a platform for ads and respects your privacy."
+            />
+          }
+        />
+      </div>
     </section>
   )
 }
