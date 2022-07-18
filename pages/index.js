@@ -32,7 +32,7 @@ export default Home
 
 const HomeHero = () => {
   return (
-    <section className="full-width-bg hero h-[60vh] bg-main-blurple text-center text-white">
+    <section className="full-width-bg hero h-[80vh] bg-main-blurple pt-[var(--header-area)] text-center text-white">
       <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
         <h1 className="h1 mb-2 max-w-[17ch]">
           <FormattedMessage
