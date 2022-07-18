@@ -137,8 +137,17 @@ const Header = () => {
                   >
                     {item.childItems.map((child, childIndex) => (
                       <li key={child.key || child.value}>
-                        <Link href={child.value} locale={child.locale}>
-                          <a {...bindSecondaryMenuItem(itemIndex, childIndex)}>
+                        <Link
+                          href={child.value}
+                          locale={child.locale || undefined}
+                        >
+                          <a
+                            {...bindSecondaryMenuItem(
+                              itemIndex,
+                              childIndex,
+                              child
+                            )}
+                          >
                             {child.label}
                           </a>
                         </Link>
@@ -275,7 +284,7 @@ const useMenu = ({ navigationItems }) => {
     }
   }
   const bindSecondaryMenu = () => ({ role: "menu" })
-  const bindSecondaryMenuItem = (parentIndex, itemIndex) => {
+  const bindSecondaryMenuItem = (parentIndex, itemIndex, child) => {
     const isSelectable =
       parentIndex === primaryMenuItemIndex &&
       itemIndex === secondaryMenuItemIndex
@@ -286,6 +295,8 @@ const useMenu = ({ navigationItems }) => {
           setSecondaryMenuItemIndex(null)
         }
       },
+      hrefLang: child.locale || undefined,
+      lang: child.locale || undefined,
       role: "menuitem",
     }
   }
