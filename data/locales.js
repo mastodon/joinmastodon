@@ -1,5 +1,5 @@
 const locales = [
-  { code: "ar", language: "العربية" },
+  { code: "ar", language: "العربية", dir: "rtl" },
   { code: "ca", language: "Català" },
   { code: "cs", language: "Čeština" },
   { code: "cy", language: "Cymraeg" },
@@ -9,7 +9,7 @@ const locales = [
   { code: "eu", language: "Euskara" },
   //{ code: 'fi', language: 'Suomi' },
   { code: "fr", language: "Français" },
-  //{ code: 'he', language: 'עברית' },
+  //{ code: 'he', language: 'עברית' , dir: "rtl" },
   { code: "it", language: "Italiano" },
   { code: "ja", language: "日本語" },
   { code: "ko", language: "한국어" },
