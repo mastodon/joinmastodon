@@ -45,10 +45,12 @@ const useMenu = ({ navigationItems }) => {
 
   // Ensuring document.activeElement follows the menu's roving tabindex
   useEffect(() => {
-    rootElement.current
-      .querySelector(`[tabindex="0"]`)
-      .focus({ preventScroll: true })
-  }, [primaryMenuItemIndex, secondaryMenuItemIndex])
+    if (menuBarHasFocus) {
+      rootElement.current
+        .querySelector(`[tabindex="0"]`)
+        .focus({ preventScroll: true })
+    }
+  }, [menuBarHasFocus, primaryMenuItemIndex, secondaryMenuItemIndex])
 
   // Element attributes / listeners
   const bindToggle = () => ({
