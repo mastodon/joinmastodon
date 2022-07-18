@@ -9,145 +9,6 @@ import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
 import SVG from "react-inlinesvg"
 
-const useMenu = ({ navigationItems }) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [primaryMenuItemIndex, setPrimaryMenuItemIndex] = useState(0)
-  const [secondaryMenuItemIndex, setSecondaryMenuItemIndex] = useState(null)
-  const [menuBarHasFocus, setMenuBarHasFocus] = useState(false)
-  const rootElement = useRef(null)
-
-  // Navigation Callbacks
-  const navigateHorizontally = (direction) => {
-    setPrimaryMenuItemIndex(
-      (primaryMenuItemIndex + direction + navigationItems.length) %
-        navigationItems.length
-    )
-    setSecondaryMenuItemIndex(null)
-  }
-  const navigateVertically = (direction) => {
-    const secondaryItems = navigationItems[primaryMenuItemIndex].childItems
-    if (secondaryItems) {
-      const isDropdownOpen = secondaryMenuItemIndex !== null
-      if (isDropdownOpen) {
-        // Select the next/previous item
-        setSecondaryMenuItemIndex(
-          ((secondaryMenuItemIndex || 0) + direction + secondaryItems.length) %
-            secondaryItems.length
-        )
-      } else {
-        // Select the first/last item
-        setSecondaryMenuItemIndex(
-          direction === 1 ? 0 : secondaryItems.length - 1
-        )
-      }
-    }
-  }
-
-  // Ensuring document.activeElement follows the menu's roving tabindex
-  useEffect(() => {
-    if (menuBarHasFocus) {
-      rootElement.current
-        .querySelector(`[tabindex="0"]`)
-        .focus({ preventScroll: true })
-    }
-  }, [menuBarHasFocus, primaryMenuItemIndex, secondaryMenuItemIndex])
-
-  // Element attributes / listeners
-  const bindToggle = () => ({
-    open: mobileMenuOpen,
-    onClick: () => setMobileMenuOpen(!mobileMenuOpen),
-  })
-  const bindPrimaryMenu = () => {
-    return {
-      role: "menubar",
-      ref: rootElement,
-      onFocus: (e) => {
-        setMenuBarHasFocus(true)
-      },
-      onBlur: (e) => {
-        const focusLeftMenu = !rootElement.current.contains(e.relatedTarget)
-        if (focusLeftMenu) {
-          setMenuBarHasFocus(false)
-        }
-      },
-      onKeyDown: (e) => {
-        if (e.key === "Escape") {
-          setMobileMenuOpen(false)
-        }
-        if (
-          ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)
-        ) {
-          e.preventDefault()
-          // prettier-ignore
-          switch (e.key) {
-            case "ArrowLeft":  navigateHorizontally(-1); break;
-            case "ArrowRight": navigateHorizontally(+1); break;
-            case "ArrowUp":    navigateVertically(-1); break;
-            case "ArrowDown":  navigateVertically(+1); break;
-          }
-        }
-      },
-    }
-  }
-  const bindPrimaryMenuItem = (
-    itemIndex,
-    { hasPopup } = { hasPopup: false }
-  ) => {
-    const isActive = itemIndex === primaryMenuItemIndex
-    const isDropdownClosed = secondaryMenuItemIndex === null
-    const isSelectable = isActive && isDropdownClosed
-    const isExpanded =
-      hasPopup && isActive && !isDropdownClosed && menuBarHasFocus
-    return {
-      role: "menuitem",
-      "aria-haspopup": hasPopup,
-      "aria-expanded": isExpanded,
-      tabIndex: isSelectable ? 0 : -1,
-      onKeyDown: (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault()
-          setSecondaryMenuItemIndex(0)
-        }
-      },
-      onClick: () => {
-        if (isActive) {
-          setSecondaryMenuItemIndex(isDropdownClosed ? 0 : null)
-        } else {
-          setPrimaryMenuItemIndex(itemIndex)
-          setSecondaryMenuItemIndex(0)
-        }
-      },
-    }
-  }
-  const bindSecondaryMenu = () => ({ role: "menu" })
-  const bindSecondaryMenuItem = (parentIndex, itemIndex) => {
-    const isSelectable =
-      parentIndex === primaryMenuItemIndex &&
-      itemIndex === secondaryMenuItemIndex
-    return {
-      tabIndex: isSelectable ? 0 : -1,
-      onKeyDown: (e) => {
-        if (e.key === "Escape") {
-          setSecondaryMenuItemIndex(null)
-        }
-      },
-      role: "menuitem",
-    }
-  }
-
-  return {
-    mobileMenuOpen,
-    menuBarHasFocus,
-    primaryMenuItemIndex,
-    secondaryMenuItemIndex,
-    bindToggle,
-    bindPrimaryMenu,
-    bindPrimaryMenuItem,
-    bindSecondaryMenu,
-    bindSecondaryMenuItem,
-  }
-}
-
 /**
  * @see https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation-hybrid.html
  */
@@ -302,4 +163,144 @@ const Header = () => {
     </header>
   )
 }
+
+const useMenu = ({ navigationItems }) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [primaryMenuItemIndex, setPrimaryMenuItemIndex] = useState(0)
+  const [secondaryMenuItemIndex, setSecondaryMenuItemIndex] = useState(null)
+  const [menuBarHasFocus, setMenuBarHasFocus] = useState(false)
+  const rootElement = useRef(null)
+
+  // Navigation Callbacks
+  const navigateHorizontally = (direction) => {
+    setPrimaryMenuItemIndex(
+      (primaryMenuItemIndex + direction + navigationItems.length) %
+        navigationItems.length
+    )
+    setSecondaryMenuItemIndex(null)
+  }
+  const navigateVertically = (direction) => {
+    const secondaryItems = navigationItems[primaryMenuItemIndex].childItems
+    if (secondaryItems) {
+      const isDropdownOpen = secondaryMenuItemIndex !== null
+      if (isDropdownOpen) {
+        // Select the next/previous item
+        setSecondaryMenuItemIndex(
+          ((secondaryMenuItemIndex || 0) + direction + secondaryItems.length) %
+            secondaryItems.length
+        )
+      } else {
+        // Select the first/last item
+        setSecondaryMenuItemIndex(
+          direction === 1 ? 0 : secondaryItems.length - 1
+        )
+      }
+    }
+  }
+
+  // Ensuring document.activeElement follows the menu's roving tabindex
+  useEffect(() => {
+    if (menuBarHasFocus) {
+      rootElement.current
+        .querySelector(`[tabindex="0"]`)
+        .focus({ preventScroll: true })
+    }
+  }, [menuBarHasFocus, primaryMenuItemIndex, secondaryMenuItemIndex])
+
+  // Element attributes / listeners
+  const bindToggle = () => ({
+    open: mobileMenuOpen,
+    onClick: () => setMobileMenuOpen(!mobileMenuOpen),
+  })
+  const bindPrimaryMenu = () => {
+    return {
+      role: "menubar",
+      ref: rootElement,
+      onFocus: (e) => {
+        setMenuBarHasFocus(true)
+      },
+      onBlur: (e) => {
+        const focusLeftMenu = !rootElement.current.contains(e.relatedTarget)
+        if (focusLeftMenu) {
+          setMenuBarHasFocus(false)
+        }
+      },
+      onKeyDown: (e) => {
+        if (e.key === "Escape") {
+          setMobileMenuOpen(false)
+        }
+        if (
+          ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)
+        ) {
+          e.preventDefault()
+          // prettier-ignore
+          switch (e.key) {
+            case "ArrowLeft":  navigateHorizontally(-1); break;
+            case "ArrowRight": navigateHorizontally(+1); break;
+            case "ArrowUp":    navigateVertically(-1); break;
+            case "ArrowDown":  navigateVertically(+1); break;
+          }
+        }
+      },
+    }
+  }
+  const bindPrimaryMenuItem = (
+    itemIndex,
+    { hasPopup } = { hasPopup: false }
+  ) => {
+    const isActive = itemIndex === primaryMenuItemIndex
+    const isDropdownClosed = secondaryMenuItemIndex === null
+    const isSelectable = isActive && isDropdownClosed
+    const isExpanded =
+      hasPopup && isActive && !isDropdownClosed && menuBarHasFocus
+    return {
+      role: "menuitem",
+      "aria-haspopup": hasPopup,
+      "aria-expanded": isExpanded,
+      tabIndex: isSelectable ? 0 : -1,
+      onKeyDown: (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault()
+          setSecondaryMenuItemIndex(0)
+        }
+      },
+      onClick: () => {
+        if (isActive) {
+          setSecondaryMenuItemIndex(isDropdownClosed ? 0 : null)
+        } else {
+          setPrimaryMenuItemIndex(itemIndex)
+          setSecondaryMenuItemIndex(0)
+        }
+      },
+    }
+  }
+  const bindSecondaryMenu = () => ({ role: "menu" })
+  const bindSecondaryMenuItem = (parentIndex, itemIndex) => {
+    const isSelectable =
+      parentIndex === primaryMenuItemIndex &&
+      itemIndex === secondaryMenuItemIndex
+    return {
+      tabIndex: isSelectable ? 0 : -1,
+      onKeyDown: (e) => {
+        if (e.key === "Escape") {
+          setSecondaryMenuItemIndex(null)
+        }
+      },
+      role: "menuitem",
+    }
+  }
+
+  return {
+    mobileMenuOpen,
+    menuBarHasFocus,
+    primaryMenuItemIndex,
+    secondaryMenuItemIndex,
+    bindToggle,
+    bindPrimaryMenu,
+    bindPrimaryMenuItem,
+    bindSecondaryMenu,
+    bindSecondaryMenuItem,
+  }
+}
+
 export default Header
