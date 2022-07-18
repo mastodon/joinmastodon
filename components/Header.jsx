@@ -256,7 +256,7 @@ const useMenu = ({ navigationItems }) => {
     return {
       role: "menuitem",
       "aria-haspopup": hasPopup,
-      "aria-expanded": isExpanded,
+      "aria-expanded": hasPopup ? isExpanded : undefined,
       tabIndex: isSelectable ? 0 : -1,
       onKeyDown: (e) => {
         if (e.key === "Enter" || e.key === " ") {
