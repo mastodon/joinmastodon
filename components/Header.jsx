@@ -206,11 +206,7 @@ const Header = () => {
   } = useMenu({ navigationItems })
 
   const checkPageScroll = (e) => {
-    if (window.scrollY > 0) {
-      setPageScrolled(true)
-    } else {
-      setPageScrolled(false)
-    }
+    setPageScrolled(window.scrollY > 0)
   }
   useEffect(() => {
     window.addEventListener("scroll", checkPageScroll)
