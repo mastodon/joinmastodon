@@ -16,7 +16,7 @@ const useMenu = ({ navigationItems }) => {
   const [menuBarHasFocus, setMenuBarHasFocus] = useState(false)
   const rootElement = useRef(null)
 
-  // Navigation
+  // Navigation Callbacks
   const navigateHorizontally = (direction) => {
     setPrimaryMenuItemIndex(
       (primaryMenuItemIndex + direction + navigationItems.length) %
@@ -63,7 +63,8 @@ const useMenu = ({ navigationItems }) => {
         setMenuBarHasFocus(true)
       },
       onBlur: (e) => {
-        if (!rootElement.current.contains(e.relatedTarget)) {
+        const focusLeftMenu = !rootElement.current.contains(e.relatedTarget)
+        if (focusLeftMenu) {
           setMenuBarHasFocus(false)
         }
       },
