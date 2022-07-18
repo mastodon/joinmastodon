@@ -27,14 +27,17 @@ const useMenu = ({ navigationItems }) => {
   const navigateVertically = (direction) => {
     const secondaryItems = navigationItems[primaryMenuItemIndex].childItems
     if (secondaryItems) {
-      if (secondaryMenuItemIndex === null) {
-        setSecondaryMenuItemIndex(
-          direction === 1 ? 0 : secondaryItems.length - 1
-        )
-      } else {
+      const isDropdownOpen = secondaryMenuItemIndex !== null
+      if (isDropdownOpen) {
+        // Select the next/previous item
         setSecondaryMenuItemIndex(
           ((secondaryMenuItemIndex || 0) + direction + secondaryItems.length) %
             secondaryItems.length
+        )
+      } else {
+        // Select the first/last item
+        setSecondaryMenuItemIndex(
+          direction === 1 ? 0 : secondaryItems.length - 1
         )
       }
     }
