@@ -1,8 +1,8 @@
 <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="109" y1="73" x2="11" y2="73" stroke="#6364FF" stroke-width="2"/>
-<line x1="89" y1="102" x2="31" y2="102" stroke="#6364FF" stroke-width="2" stroke-linecap="round"/>
-<line x1="62" y1="80" x2="58" y2="80" stroke="#6364FF" stroke-width="2" stroke-linecap="round"/>
-<rect x="11" y="17" width="98" height="70" rx="3" stroke="#6364FF" stroke-width="2"/>
-<path d="M41 87H79V102H41V87Z" stroke="#6364FF" stroke-width="2"/>
-<path d="M20 25C19.4477 25 19 25.4477 19 26L19 35C19 35.5523 19.4477 36 20 36C20.5523 36 21 35.5523 21 35L21 27L29 27C29.5523 27 30 26.5523 30 26C30 25.4477 29.5523 25 29 25L20 25ZM30.2929 37.7071C30.6834 38.0976 31.3166 38.0976 31.7071 37.7071C32.0976 37.3166 32.0976 36.6834 31.7071 36.2929L30.2929 37.7071ZM19.2929 26.7071L30.2929 37.7071L31.7071 36.2929L20.7071 25.2929L19.2929 26.7071Z" fill="#6364FF"/>
+<line x1="109" y1="73" x2="11" y2="73" stroke="currentColor" stroke-width="2"/>
+<line x1="89" y1="102" x2="31" y2="102" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<line x1="62" y1="80" x2="58" y2="80" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<rect x="11" y="17" width="98" height="70" rx="3" stroke="currentColor" stroke-width="2"/>
+<path d="M41 87H79V102H41V87Z" stroke="currentColor" stroke-width="2"/>
+<path d="M20 25C19.4477 25 19 25.4477 19 26L19 35C19 35.5523 19.4477 36 20 36C20.5523 36 21 35.5523 21 35L21 27L29 27C29.5523 27 30 26.5523 30 26C30 25.4477 29.5523 25 29 25L20 25ZM30.2929 37.7071C30.6834 38.0976 31.3166 38.0976 31.7071 37.7071C32.0976 37.3166 32.0976 36.6834 31.7071 36.2929L30.2929 37.7071ZM19.2929 26.7071L30.2929 37.7071L31.7071 36.2929L20.7071 25.2929L19.2929 26.7071Z" fill="currentColor"/>
 </svg>
