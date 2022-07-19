@@ -6,7 +6,7 @@ let server = {
   domain: "mastodon.social",
   version: "3.5.3",
   description:
-    "The original server maintained by the Mastodon gGmbH non-profit.",
+    "The original server maintained by the Mastodon gGmbH non-profit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lorem tellus, dignissim sed faucibus in, auctor ut mi.",
   languages: ["en"],
   region: "",
   categories: ["general"],
@@ -21,7 +21,7 @@ let server = {
 
 const ServerCard = () => {
   return (
-    <div className="col-span-1 rounded shadow">
+    <div className="relative col-span-1 flex flex-col rounded shadow">
       <div className="relative h-26 lg:h-40">
         <Image
           className="rounded-t"
@@ -31,11 +31,13 @@ const ServerCard = () => {
         />
       </div>
 
-      <div className="p-4">
+      <div className="p-4 pb-5">
         <p className="b1">{server.domain}</p>
         <p className="b3 mb-4 capitalize text-gray-1">{server.category}</p>
-        <p className="b3 mb-5">{server.description}</p>
+        <p className="b3">{server.description}</p>
+      </div>
 
+      <div className="justify-self-end p-4 pt-0">
         {server.approval_required ? (
           <LinkButton href={`https://${server.domain}`} fullWidth light small>
             <FormattedMessage
