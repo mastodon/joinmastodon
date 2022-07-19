@@ -1,3 +1,5 @@
+const defaultLocale = "en"
+
 const locales = [
   { code: "ar", language: "العربية", dir: "rtl" },
   { code: "ca", language: "Català" },
@@ -29,5 +31,6 @@ const locales = [
 ]
 
 module.exports = {
+  defaultLocale,
   locales,
 }
