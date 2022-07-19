@@ -34,7 +34,7 @@ const ServerCard = () => {
       <div className="p-4 pb-5">
         <p className="b1 !font-700">{server.domain}</p>
         <p className="b3 mb-4 capitalize text-gray-1">{server.category}</p>
-        <p className="b3">{server.description}</p>
+        <p className="b3 line-clamp-5">{server.description}</p>
       </div>
 
       <div className="justify-self-end p-4 pt-0">
