@@ -22,20 +22,24 @@ let server = {
 const ServerCard = () => {
   return (
     <div className="col-span-1 rounded shadow">
-      <div className="relative h-24">
+      <div className="relative h-26 lg:h-40">
         <Image
-          className="opacity-20"
+          className="rounded-t"
           src={server.proxied_thumbnail}
           layout="fill"
-        />{" "}
+          objectFit="cover"
+        />
       </div>
-      <p className="b1">{server.domain}</p>
-      <p className="b3 capitalize text-gray-1">{server.category}</p>
-      <p className="b3">{server.description}</p>
 
-      <LinkButton href={`https://${server.domain}`} fullWidth>
-        <FormattedMessage id="join_server" defaultMessage="Join server" />
-      </LinkButton>
+      <div className="p-4">
+        <p className="b1">{server.domain}</p>
+        <p className="b3 mb-4 capitalize text-gray-1">{server.category}</p>
+        <p className="b3 mb-5">{server.description}</p>
+
+        <LinkButton href={`https://${server.domain}`} fullWidth>
+          <FormattedMessage id="join_server" defaultMessage="Join server" />
+        </LinkButton>
+      </div>
     </div>
   )
 }
