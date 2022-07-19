@@ -21,7 +21,7 @@ let server = {
 
 const ServerCard = () => {
   return (
-    <div className="relative col-span-1 flex flex-col rounded shadow">
+    <div className="flex flex-col rounded shadow">
       <div className="relative h-26 lg:h-40">
         <Image
           className="rounded-t"
@@ -38,18 +38,21 @@ const ServerCard = () => {
       </div>
 
       <div className="justify-self-end p-4 pt-0">
-        {server.approval_required ? (
-          <LinkButton href={`https://${server.domain}`} fullWidth light small>
+        <LinkButton
+          href={`https://${server.domain}`}
+          light={server.approval_required}
+          fullWidth
+          small
+        >
+          {server.approval_required ? (
             <FormattedMessage
               id="request_access"
               defaultMessage="Request access"
             />
-          </LinkButton>
-        ) : (
-          <LinkButton href={`https://${server.domain}`} fullWidth small>
+          ) : (
             <FormattedMessage id="join_server" defaultMessage="Join server" />
-          </LinkButton>
-        )}
+          )}
+        </LinkButton>
       </div>
     </div>
   )
