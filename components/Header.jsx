@@ -128,7 +128,7 @@ const Header = () => {
                     <ul
                       {...bindSecondaryMenu()}
                       className={classNames(
-                        "absolute top-[100%] -right-4 flex flex-col rounded bg-eggplant p-4 md:shadow",
+                        "absolute top-[100%] flex flex-col rounded bg-eggplant p-4 -inline-end-4 md:shadow",
                         (!menuBarHasFocus ||
                           primaryMenuItemIndex !== itemIndex ||
                           secondaryMenuItemIndex === null) &&
