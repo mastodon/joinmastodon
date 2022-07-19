@@ -78,6 +78,9 @@ module.exports = {
       maxWidth: {
         site: "90rem",
       },
+      spacing: {
+        26: "6.5rem",
+      },
     },
   },
   plugins: [],
