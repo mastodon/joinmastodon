@@ -32,7 +32,7 @@ const ServerCard = () => {
       </div>
 
       <div className="p-4 pb-5">
-        <p className="b1">{server.domain}</p>
+        <p className="b1 !font-700">{server.domain}</p>
         <p className="b3 mb-4 capitalize text-gray-1">{server.category}</p>
         <p className="b3">{server.description}</p>
       </div>
