@@ -8,7 +8,7 @@ function Servers() {
       <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
         <div className="col-span-3">checkboxes go here</div>
 
-        <div className="col-span-4 lg:col-start-4 lg:col-end-13 lg:grid lg:grid-cols-3 lg:gap-gutter">
+        <div className="col-span-4 md:grid md:grid-cols-2 md:gap-gutter lg:col-start-4 lg:col-end-13 xl:grid-cols-3">
           <ServerCard />
           <ServerCard />
           <ServerCard />
