@@ -7,6 +7,9 @@ const nextConfig = {
     locales: locales.map((l) => l.code),
     defaultLocale: "en",
   },
+  images: {
+    domains: ["proxy.joinmastodon.org"],
+  },
 }
 
 module.exports = nextConfig
