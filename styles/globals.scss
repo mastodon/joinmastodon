@@ -160,7 +160,11 @@ $xxl: 1400px;
     @apply font-450 tracking-copy;
   }
 
-  .wrapper {
-    @apply mx-auto max-w-site px-6 lg:px-16;
+  .full-width-bg {
+    margin-inline: calc(50% - 50vw);
+
+    &__inner {
+      @apply mx-auto max-w-site px-6 lg:px-16;
+    }
   }
 }

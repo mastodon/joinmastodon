@@ -83,11 +83,11 @@ const Header = () => {
   return (
     <header
       className={classNames(
-        "sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] h-[var(--header-area)] pt-[var(--header-offset)] text-white transition-colors",
+        "full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white transition-colors",
         pageScrolled && "bg-black"
       )}
     >
-      <div className="wrapper flex h-[var(--header-height)] items-center justify-between">
+      <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
         <div>
           <Link href="/">
             <a className="flex max-w-[11.375rem] md:max-w-[12.625rem]">
