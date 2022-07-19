@@ -32,8 +32,8 @@ export default Home
 
 const HomeHero = () => {
   return (
-    <section className="full-width-bg hero h-[80vh] bg-main-blurple pt-[var(--header-area)] text-center text-white">
-      <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
+    <section className="hero h-[80vh] bg-main-blurple pt-[var(--header-area)] text-center text-white">
+      <div className="wrapper flex flex-col items-center justify-center py-20">
         <h1 className="h1 mb-2 max-w-[17ch]">
           <FormattedMessage
             id="home.hero.headline"
@@ -70,8 +70,8 @@ const HomeHero = () => {
 
 const Testimonials = ({ testimonials }) => {
   return (
-    <section className="full-width-bg bg-gray-5 pt-20 pb-28">
-      <div className="full-width-bg__inner">
+    <section className="bg-gray-5 pt-20 pb-28">
+      <div className="wrapper">
         <h2 className="h3 pb-16 text-center">
           <FormattedMessage
             id="home.testimonials.title"
@@ -170,16 +170,8 @@ const Features = () => {
       ].map((block, i) => {
         const isOdd = i % 2 != 0
         return (
-          <div
-            className={classnames(isOdd && "full-width-bg bg-gray-5")}
-            key={i}
-          >
-            <div
-              className={classnames(
-                "pt-14 pb-[4.5rem] md:grid md:grid-cols-2 md:items-center md:gap-gutter xl:grid-cols-12",
-                isOdd && "full-width-bg__inner"
-              )}
-            >
+          <div className={classnames(isOdd && "bg-gray-5")} key={i}>
+            <div className="wrapper pt-14 pb-[4.5rem] md:grid md:grid-cols-2 md:items-center md:gap-gutter xl:grid-cols-12">
               <div
                 className={classnames(
                   "row-span-full xl:col-span-5",
@@ -209,7 +201,7 @@ const Features = () => {
 
 const WhyMastodon = () => {
   return (
-    <section className="py-20">
+    <section className="wrapper py-20">
       <h3 className="h3 pb-16 text-center">
         <FormattedMessage id="home.why.title" defaultMessage="Why Mastodon?" />
       </h3>
@@ -283,7 +275,7 @@ const WhyMastodon = () => {
 
 const Sponsors = ({ sponsors }) => {
   return (
-    <section className="text-center">
+    <section className="wrapper text-center">
       <div className="py-20 lg:grid lg:grid-cols-12 lg:gap-x-gutter lg:py-28">
         <div className="mx-auto mb-12 max-w-lg lg:col-span-4 lg:col-start-5 lg:mb-10 lg:w-full">
           <Image

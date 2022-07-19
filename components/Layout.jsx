@@ -9,7 +9,7 @@ export const Layout = ({ children }) => {
   const dir = locales.find((l) => l.code === locale)?.dir || "ltr"
 
   return (
-    <div className="mx-auto max-w-site px-6 lg:px-16" dir={dir}>
+    <div dir={dir}>
       <Header />
       {children}
       <Footer />

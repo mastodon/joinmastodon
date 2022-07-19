@@ -81,94 +81,95 @@ const Header = () => {
   }, [])
 
   return (
-    <header className="sticky -top-[var(--header-offset)] z-10 mx-auto -mb-[var(--header-area)] flex h-[var(--header-area)] items-center justify-between pt-[var(--header-offset)] text-white">
-      <div
-        className={classNames(
-          "full-width-bg absolute inset-y-0 -z-10 h-full transition-colors",
-          pageScrolled && "bg-black"
-        )}
-      />
-      <div>
-        <Link href="/">
-          <a className="flex max-w-[11.375rem] md:max-w-[12.625rem]">
-            <Image src={mastodonLogo} alt="Mastodon" />
-          </a>
-        </Link>
-      </div>
+    <header
+      className={classNames(
+        "sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] h-[var(--header-area)] pt-[var(--header-offset)] text-white transition-colors",
+        pageScrolled && "bg-black"
+      )}
+    >
+      <div className="wrapper flex h-[var(--header-height)] items-center justify-between">
+        <div>
+          <Link href="/">
+            <a className="flex max-w-[11.375rem] md:max-w-[12.625rem]">
+              <Image src={mastodonLogo} alt="Mastodon" />
+            </a>
+          </Link>
+        </div>
 
-      <nav>
-        <MenuToggle {...bindToggle()} />
-        <ul
-          {...bindPrimaryMenu()}
-          className={classNames(
-            "absolute w-screen gap-4 rounded focus-within:outline md:relative md:w-auto md:gap-10 md:p-4",
-            mobileMenuOpen ? "flex" : "hidden md:flex"
-          )}
-        >
-          {navigationItems.map((item, itemIndex) => (
-            <li className="relative" key={item.key || item.value}>
-              {Boolean(item.childItems) ? (
-                <>
-                  <button
-                    {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
-                    className="flex items-center gap-[0.125rem] whitespace-nowrap focus:outline-2"
-                  >
-                    {item.label}
-                    <SVG
-                      src={"/ui/disclosure-arrow.svg"}
-                      className={classNames({
-                        "rotate-180":
-                          menuBarHasFocus &&
-                          primaryMenuItemIndex === itemIndex &&
-                          secondaryMenuItemIndex !== null,
-                      })}
-                    />
-                  </button>
+        <nav>
+          <MenuToggle {...bindToggle()} />
+          <ul
+            {...bindPrimaryMenu()}
+            className={classNames(
+              "absolute w-screen gap-4 rounded focus-within:outline md:relative md:w-auto md:gap-10 md:p-4",
+              mobileMenuOpen ? "flex" : "hidden md:flex"
+            )}
+          >
+            {navigationItems.map((item, itemIndex) => (
+              <li className="relative" key={item.key || item.value}>
+                {Boolean(item.childItems) ? (
+                  <>
+                    <button
+                      {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
+                      className="flex items-center gap-[0.125rem] whitespace-nowrap focus:outline-2"
+                    >
+                      {item.label}
+                      <SVG
+                        src={"/ui/disclosure-arrow.svg"}
+                        className={classNames({
+                          "rotate-180":
+                            menuBarHasFocus &&
+                            primaryMenuItemIndex === itemIndex &&
+                            secondaryMenuItemIndex !== null,
+                        })}
+                      />
+                    </button>
 
-                  <ul
-                    {...bindSecondaryMenu()}
-                    className={classNames(
-                      "absolute top-[100%] -right-4 flex flex-col rounded bg-eggplant p-4 md:shadow",
-                      (!menuBarHasFocus ||
-                        primaryMenuItemIndex !== itemIndex ||
-                        secondaryMenuItemIndex === null) &&
-                        "md:sr-only"
-                    )}
-                  >
-                    {item.childItems.map((child, childIndex) => (
-                      <li key={child.key || child.value}>
-                        <Link
-                          href={child.value}
-                          locale={child.locale || undefined}
-                        >
-                          <a
-                            {...bindSecondaryMenuItem(
-                              itemIndex,
-                              childIndex,
-                              child
-                            )}
+                    <ul
+                      {...bindSecondaryMenu()}
+                      className={classNames(
+                        "absolute top-[100%] -right-4 flex flex-col rounded bg-eggplant p-4 md:shadow",
+                        (!menuBarHasFocus ||
+                          primaryMenuItemIndex !== itemIndex ||
+                          secondaryMenuItemIndex === null) &&
+                          "md:sr-only"
+                      )}
+                    >
+                      {item.childItems.map((child, childIndex) => (
+                        <li key={child.key || child.value}>
+                          <Link
+                            href={child.value}
+                            locale={child.locale || undefined}
                           >
-                            {child.label}
-                          </a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : (
-                <Link href={item.value}>
-                  <a
-                    className="whitespace-nowrap"
-                    {...bindPrimaryMenuItem(itemIndex)}
-                  >
-                    {item.label}
-                  </a>
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
-      </nav>
+                            <a
+                              {...bindSecondaryMenuItem(
+                                itemIndex,
+                                childIndex,
+                                child
+                              )}
+                            >
+                              {child.label}
+                            </a>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <Link href={item.value}>
+                    <a
+                      className="whitespace-nowrap"
+                      {...bindPrimaryMenuItem(itemIndex)}
+                    >
+                      {item.label}
+                    </a>
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }
