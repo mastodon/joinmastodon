@@ -46,7 +46,7 @@ $xxl: 1400px;
 
   --border-radius: 4px;
   --border-width: 2px;
-  
+
   --header-offset: #{rem(24)};
   --header-height: #{rem(90px)};
   --gutter-width: #{rem(16px)};
@@ -161,7 +161,7 @@ $xxl: 1400px;
   }
 
   .full-width-bg {
-    @apply ml-[50%] w-screen -translate-x-1/2;
+    margin-inline: calc(50% - 50vw);
 
     &__inner {
       @apply mx-auto max-w-site px-6 lg:px-16;

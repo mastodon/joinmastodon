@@ -84,7 +84,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [require("tailwindcss-logical"), require("@tailwindcss/line-clamp")],
 }
 function rem(px) {
   return `${px / 16}rem`
