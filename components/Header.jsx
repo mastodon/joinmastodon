@@ -236,6 +236,7 @@ const useMenu = ({ navigationItems }) => {
         }
       },
       onKeyDown: (e) => {
+        const isRTL = !!e.target.closest("[dir='rtl']")
         if (e.key === "Escape") {
           setMobileMenuOpen(false)
         }
@@ -245,8 +246,8 @@ const useMenu = ({ navigationItems }) => {
           e.preventDefault()
           // prettier-ignore
           switch (e.key) {
-            case "ArrowLeft":  navigateHorizontally(-1); break;
-            case "ArrowRight": navigateHorizontally(+1); break;
+            case "ArrowLeft":  navigateHorizontally(isRTL ? +1 : -1); break;
+            case "ArrowRight": navigateHorizontally(isRTL ? -1 : +1); break;
             case "ArrowUp":    navigateVertically(-1); break;
             case "ArrowDown":  navigateVertically(+1); break;
           }
