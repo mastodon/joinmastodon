@@ -42,7 +42,7 @@ const ServerCard = () => {
           href={`https://${server.domain}`}
           light={server.approval_required}
           fullWidth
-          small
+          size="small"
         >
           {server.approval_required ? (
             <FormattedMessage

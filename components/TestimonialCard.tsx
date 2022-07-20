@@ -36,7 +36,7 @@ export const TestimonialCard = ({ testimonial }) => {
       </div>
       <p className="b3">{testimonial.text}</p>
 
-      <LinkButton href={testimonial.profile_url} light fullWidth>
+      <LinkButton href={testimonial.profile_url} size="medium" light fullWidth>
         <FormattedMessage id="view_profile" defaultMessage="View profile" />
       </LinkButton>
     </div>
