@@ -2,8 +2,11 @@ import classnames from "classnames"
 import SVG from "react-inlinesvg"
 
 export type Props = {
+  /** Card's heading */
   title: React.ReactNode
+  /** Card's visual element, using a predefined set of icons */
   icon: string
+  /** Card's copy */
   copy: React.ReactNode
 }
 /**
