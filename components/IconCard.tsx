@@ -1,16 +1,16 @@
 import classnames from "classnames"
 import SVG from "react-inlinesvg"
 
+export type Props = {
+  title: React.ReactNode
+  icon: string
+  copy: React.ReactNode
+}
 /**
  * IconCard component.
  * Layout (width, height, positioning) can be set from the parent.
- * @param {{
- *  title: React.ReactNode,
- *  icon: string,
- *  copy: React.ReactNode
- * }} props
  */
-export const IconCard = ({ title, icon, copy }) => {
+export const IconCard = ({ title, icon, copy }: Props) => {
   return (
     <div className="flex flex-col items-center justify-start overflow-hidden rounded bg-white text-center shadow">
       <div className="flex h-44 w-full items-center justify-center bg-accent-blurple text-white">
