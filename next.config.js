@@ -3,7 +3,9 @@ const { locales, defaultLocale } = require("./data/locales.js")
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  ignoreBuildErrors: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   i18n: {
     locales: locales.map((l) => l.code),
     defaultLocale,
