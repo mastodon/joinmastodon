@@ -1,17 +1,27 @@
 import Link from "next/link"
 import classnames from "classnames"
 
+type LinkButtonProps = {
+  borderless?: boolean
+  children: JSX.Element
+  fullWidth?: boolean
+  href: string
+  light?: boolean
+  size: "small" | "medium" | "large"
+}
+
 const LinkButton = ({
   borderless,
   children,
   fullWidth,
   href,
   light,
-  large,
-  medium = true,
-  small,
-}) => {
-  let linkAttrs = {}
+  size,
+}: LinkButtonProps) => {
+  let linkAttrs = {} as {
+    target: string
+    rel: string
+  }
 
   // check if absolute url
   if (href.indexOf("http://") === 0 || href.indexOf("https://") === 0) {
@@ -29,9 +39,9 @@ const LinkButton = ({
           light
             ? "bg-white text-accent-blurple hover:text-white"
             : "bg-accent-blurple text-white",
-          large && "b1 h-16",
-          medium && "b3 h-12",
-          small && "b3 h-10"
+          size === "small" && "b3 h-10",
+          size === "medium" && "b3 h-12",
+          size === "large" && "b1 h-16"
         )}
         {...linkAttrs}
       >
