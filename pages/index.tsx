@@ -1,3 +1,4 @@
+import React from "react"
 import { FormattedMessage } from "react-intl"
 import Image from "next/image"
 import Link from "next/link"
@@ -358,8 +359,9 @@ const SponsorGroup = ({ sponsors }) => {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                aspectRatio:
-                  sponsor.logo.default.width / sponsor.logo.default.height || 0,
+                aspectRatio: String(
+                  sponsor.logo.default.width / sponsor.logo.default.height || 0
+                ),
               }}
             >
               <Image
