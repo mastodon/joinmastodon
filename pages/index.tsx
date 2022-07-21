@@ -1,3 +1,4 @@
+import React from "react"
 import { FormattedMessage } from "react-intl"
 import Image from "next/image"
 import Link from "next/link"
@@ -49,14 +50,14 @@ const HomeHero = () => {
         </p>
 
         <div className="flex justify-center gap-12">
-          <LinkButton href="/">
+          <LinkButton size="medium" href="/">
             <FormattedMessage
               id="home.how_it_works"
               defaultMessage="How it works"
             />
           </LinkButton>
 
-          <LinkButton href="/" light borderless>
+          <LinkButton size="medium" href="/" light borderless>
             <FormattedMessage
               id="home.get_started"
               defaultMessage="Get started"
@@ -112,7 +113,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton href="/">
+            <LinkButton size="medium" href="/">
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -135,7 +136,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton href="/">
+            <LinkButton size="medium" href="/">
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -158,7 +159,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton href="/">
+            <LinkButton size="medium" href="/">
               <FormattedMessage
                 id="home.features.button.find_a_server"
                 defaultMessage="Find a server"
@@ -303,14 +304,14 @@ const Sponsors = ({ sponsors }) => {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-            <LinkButton href="https://sponsor.joinmastodon.org/" large>
+            <LinkButton href="https://sponsor.joinmastodon.org/" size="large">
               <FormattedMessage
                 id="sponsorship.become_a_sponsor"
                 defaultMessage="Become a sponsor"
               />
             </LinkButton>
 
-            <LinkButton href="/sponsors" light large>
+            <LinkButton href="/sponsors" light size="large">
               <FormattedMessage
                 id="credits.view_sponsors"
                 defaultMessage="View sponsors"
@@ -358,8 +359,9 @@ const SponsorGroup = ({ sponsors }) => {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                aspectRatio:
-                  sponsor.logo.default.width / sponsor.logo.default.height || 0,
+                aspectRatio: String(
+                  sponsor.logo.default.width / sponsor.logo.default.height || 0
+                ),
               }}
             >
               <Image

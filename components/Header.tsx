@@ -72,7 +72,7 @@ const Header = () => {
     bindSecondaryMenuItem,
   } = useMenu({ navigationItems })
 
-  const checkPageScroll = (e) => {
+  const checkPageScroll = () => {
     setPageScrolled(window.scrollY > 0)
   }
   useEffect(() => {
@@ -107,7 +107,7 @@ const Header = () => {
           >
             {navigationItems.map((item, itemIndex) => (
               <li className="relative" key={item.key || item.value}>
-                {Boolean(item.childItems) ? (
+                {"childItems" in item ? (
                   <>
                     <button
                       {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
@@ -176,20 +176,24 @@ const Header = () => {
 
 const useMenu = ({ navigationItems }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [primaryMenuItemIndex, setPrimaryMenuItemIndex] = useState(0)
-  const [secondaryMenuItemIndex, setSecondaryMenuItemIndex] = useState(null)
-  const [menuBarHasFocus, setMenuBarHasFocus] = useState(false)
-  const rootElement = useRef(null)
+  const [primaryMenuItemIndex, setPrimaryMenuItemIndex] = useState<number>(0)
+  /** `null` means the secondary menu is closed */
+  const [secondaryMenuItemIndex, setSecondaryMenuItemIndex] = useState<
+    number | null
+  >(null)
+  const [menuBarHasFocus, setMenuBarHasFocus] = useState<boolean>(false)
+  const rootElement = useRef<HTMLUListElement>(null)
+  const wasFocusedAtStartOfClick = useRef(menuBarHasFocus)
 
   // Navigation Callbacks
-  const navigateHorizontally = (direction) => {
+  const navigateHorizontally = (direction: -1 | 1) => {
     setPrimaryMenuItemIndex(
       (primaryMenuItemIndex + direction + navigationItems.length) %
         navigationItems.length
     )
     setSecondaryMenuItemIndex(null)
   }
-  const navigateVertically = (direction) => {
+  const navigateVertically = (direction: -1 | 1) => {
     const secondaryItems = navigationItems[primaryMenuItemIndex].childItems
     if (secondaryItems) {
       const isDropdownOpen = secondaryMenuItemIndex !== null
@@ -210,9 +214,9 @@ const useMenu = ({ navigationItems }) => {
 
   // Ensuring document.activeElement follows the menu's roving tabindex
   useEffect(() => {
-    if (menuBarHasFocus) {
+    if (menuBarHasFocus && rootElement.current) {
       rootElement.current
-        .querySelector(`[tabindex="0"]`)
+        .querySelector<HTMLElement>(`[tabindex="0"]`)
         .focus({ preventScroll: true })
     }
   }, [menuBarHasFocus, primaryMenuItemIndex, secondaryMenuItemIndex])
@@ -226,7 +230,7 @@ const useMenu = ({ navigationItems }) => {
     return {
       role: "menubar",
       ref: rootElement,
-      onFocus: (e) => {
+      onFocus: () => {
         setMenuBarHasFocus(true)
       },
       onBlur: (e) => {
@@ -236,7 +240,7 @@ const useMenu = ({ navigationItems }) => {
         }
       },
       onKeyDown: (e) => {
-        const isRTL = !!e.target.closest("[dir='rtl']")
+        const isRTL = Boolean(e.target?.closest("[dir='rtl']"))
         if (e.key === "Escape") {
           setMobileMenuOpen(false)
         }
@@ -256,7 +260,7 @@ const useMenu = ({ navigationItems }) => {
     }
   }
   const bindPrimaryMenuItem = (
-    itemIndex,
+    itemIndex: number,
     { hasPopup } = { hasPopup: false }
   ) => {
     const isActive = itemIndex === primaryMenuItemIndex
@@ -269,14 +273,19 @@ const useMenu = ({ navigationItems }) => {
       "aria-haspopup": hasPopup,
       "aria-expanded": hasPopup ? isExpanded : undefined,
       tabIndex: isSelectable ? 0 : -1,
-      onKeyDown: (e) => {
+      onKeyDown: (e: React.KeyboardEvent) => {
         if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault()
+          if (hasPopup) {
+            e.preventDefault()
+          }
           setSecondaryMenuItemIndex(0)
         }
       },
+      onMouseDown: () => {
+        wasFocusedAtStartOfClick.current = menuBarHasFocus
+      },
       onClick: () => {
-        if (isActive) {
+        if (isActive && hasPopup && wasFocusedAtStartOfClick.current) {
           setSecondaryMenuItemIndex(isDropdownClosed ? 0 : null)
         } else {
           setPrimaryMenuItemIndex(itemIndex)
@@ -286,7 +295,11 @@ const useMenu = ({ navigationItems }) => {
     }
   }
   const bindSecondaryMenu = () => ({ role: "menu" })
-  const bindSecondaryMenuItem = (parentIndex, itemIndex, child) => {
+  const bindSecondaryMenuItem = (
+    parentIndex: number,
+    itemIndex: number,
+    child
+  ) => {
     const isSelectable =
       parentIndex === primaryMenuItemIndex &&
       itemIndex === secondaryMenuItemIndex

@@ -43,6 +43,7 @@ module.exports = {
       400: 400,
       450: 450,
       600: 600,
+      700: 700,
       800: 800,
     },
     boxShadow: {
@@ -78,9 +79,12 @@ module.exports = {
       maxWidth: {
         site: "90rem",
       },
+      spacing: {
+        26: "6.5rem",
+      },
     },
   },
-  plugins: [require("tailwindcss-logical")],
+  plugins: [require("tailwindcss-logical"), require("@tailwindcss/line-clamp")],
 }
 function rem(px) {
   return `${px / 16}rem`
