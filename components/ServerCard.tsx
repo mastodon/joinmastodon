@@ -18,7 +18,14 @@ const ServerCard = ({ server }: { server: Server }) => {
 
       <div className="p-4 pb-5">
         <p className="b1 !font-700">{server.domain}</p>
-        <p className="b3 mb-4 capitalize text-gray-1">{category}</p>
+        <p className="b3 mb-4 capitalize text-gray-1">
+          {category}
+          {server.approval_required && (
+            <span className="before:px-1 before:content-['·']">
+              Invite only
+            </span>
+          )}
+        </p>
         <p className="b3 line-clamp-5">{server.description}</p>
       </div>
 
