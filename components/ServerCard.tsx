@@ -5,7 +5,7 @@ import type Server from "../types/server"
 
 const ServerCard = ({ server }: { server: Server }) => {
   return (
-    <div className="flex flex-col rounded shadow">
+    <div className="grid grid-rows-[auto_1fr_auto] rounded shadow">
       <div className="relative h-26 rounded-t bg-black lg:h-40">
         <Image
           className="rounded-t"
@@ -21,7 +21,7 @@ const ServerCard = ({ server }: { server: Server }) => {
         <p className="b3 line-clamp-5">{server.description}</p>
       </div>
 
-      <div className="justify-self-end p-4 pt-0">
+      <div className="p-4 pt-0">
         <LinkButton
           href={`https://${server.domain}`}
           light={server.approval_required}
