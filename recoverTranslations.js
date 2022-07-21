@@ -1,27 +1,24 @@
 const fs = require("fs")
 
-let oldMessages = fs.readdirSync("./z_archive/locales")
-let oldDefaultMessages = JSON.parse(
-  fs.readFileSync("./z_archive/locales/old_default_messages.json", "utf-8")
+let oldTranslationFiles = fs.readdirSync("./z_archive/locales")
+let oldSource = JSON.parse(
+  fs.readFileSync("./z_archive/locales/en.json", "utf-8")
 )
 let newSource = JSON.parse(fs.readFileSync("./locales/en.json", "utf-8"))
 
-oldMessages.forEach((localeFile) => {
+oldTranslationFiles.forEach((localeFile) => {
   if (localeFile === "en.json" || localeFile === "old_default_messages.json")
     return // don't overwrite the source file or old default messages
 
-  let oldMessages = JSON.parse(
+  let oldTranslations = JSON.parse(
     fs.readFileSync(`./z_archive/locales/${localeFile}`, "utf-8")
   )
 
   let result = {}
   for (let newSourceKey in newSource) {
-    for (let oldDefaultMessageKey in oldDefaultMessages) {
-      if (
-        oldDefaultMessages[oldDefaultMessageKey].defaultMessage ===
-        newSource[newSourceKey]
-      ) {
-        result[newSourceKey] = oldMessages[oldDefaultMessageKey]
+    for (let oldSourceKey in oldSource) {
+      if (oldSource[oldSourceKey] === newSource[newSourceKey]) {
+        result[newSourceKey] = oldTranslations[oldSourceKey]
       }
     }
   }
