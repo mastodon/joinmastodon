@@ -25,5 +25,8 @@ export async function getStaticProps() {
   const res = await fetch("https://api.joinmastodon.org/servers")
   const servers = await res.json()
 
-  return { props: { servers } }
+  return {
+    props: { servers },
+    revalidate: 3600, // 1 hour
+  }
 }
