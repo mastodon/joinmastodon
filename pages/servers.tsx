@@ -1,7 +1,15 @@
+import { useQuery } from "@tanstack/react-query"
 import ServerCard from "../components/ServerCard"
 import type Server from "../types/server"
 
-const Servers = ({ servers }: { servers: Server[] }) => {
+const Servers = () => {
+  const servers = useQuery(["servers"], async function (): Promise<Server[]> {
+    const res = await fetch("https://api.joinmastodon.org/servers")
+    return await res.json()
+  })
+
+  console.log(servers.data)
+
   return (
     <div className="py-40">
       <h1>Servers page placeholder</h1>
@@ -10,7 +18,7 @@ const Servers = ({ servers }: { servers: Server[] }) => {
         <div className="col-span-3">checkboxes go here</div>
 
         <div className="col-span-4 grid gap-gutter md:grid-cols-2 lg:col-start-4 lg:col-end-13 xl:grid-cols-3">
-          {servers.map((server) => (
+          {servers.data?.map((server) => (
             <ServerCard key={server.domain} server={server} />
           ))}
         </div>
@@ -21,12 +29,12 @@ const Servers = ({ servers }: { servers: Server[] }) => {
 
 export default Servers
 
-export async function getStaticProps() {
-  const res = await fetch("https://api.joinmastodon.org/servers")
-  const servers = await res.json()
+// export async function getStaticProps() {
+//   const res = await fetch("https://api.joinmastodon.org/servers")
+//   const servers = await res.json()
 
-  return {
-    props: { servers },
-    revalidate: 3600, // 1 hour
-  }
-}
+//   return {
+//     props: { servers },
+//     revalidate: 3600, // 1 hour
+//   }
+// }

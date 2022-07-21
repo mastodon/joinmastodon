@@ -1,9 +1,10 @@
 import { useRouter } from "next/router"
 import { IntlProvider } from "react-intl"
-import Layout from "../components/Layout"
-import "../styles/globals.scss"
 import { useEffect } from "react"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import Layout from "../components/Layout"
 import { getDirForLocale } from "../utils/locales"
+import "../styles/globals.scss"
 
 function MyApp({ Component, pageProps }) {
   const { locale, defaultLocale } = useRouter()
@@ -12,15 +13,19 @@ function MyApp({ Component, pageProps }) {
     document.documentElement.dir = dir
   }, [dir])
 
+  const queryClient = new QueryClient()
+
   return (
     <IntlProvider
       locale={locale}
       defaultLocale={defaultLocale}
       messages={pageProps.intlMessages}
     >
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <QueryClientProvider client={queryClient}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </QueryClientProvider>
     </IntlProvider>
   )
 }
