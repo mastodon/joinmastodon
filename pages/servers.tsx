@@ -8,8 +8,6 @@ const Servers = () => {
     return await res.json()
   })
 
-  console.log(servers.data)
-
   return (
     <div className="py-40">
       <h1>Servers page placeholder</h1>
@@ -28,13 +26,3 @@ const Servers = () => {
 }
 
 export default Servers
-
-// export async function getStaticProps() {
-//   const res = await fetch("https://api.joinmastodon.org/servers")
-//   const servers = await res.json()
-
-//   return {
-//     props: { servers },
-//     revalidate: 3600, // 1 hour
-//   }
-// }
