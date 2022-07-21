@@ -6,7 +6,7 @@ import type Server from "../types/server"
 const ServerCard = ({ server }: { server: Server }) => {
   return (
     <div className="flex flex-col rounded shadow">
-      <div className="relative h-26 lg:h-40">
+      <div className="relative h-26 rounded-t bg-black lg:h-40">
         <Image
           className="rounded-t"
           src={server.proxied_thumbnail}
