@@ -38,11 +38,14 @@ const ServerCard = ({ server }: { server: Server }) => {
         >
           {server.approval_required ? (
             <FormattedMessage
-              id="request_access"
-              defaultMessage="Request access"
+              id="servers.get_on_waitlist"
+              defaultMessage="Get on waitlist"
             />
           ) : (
-            <FormattedMessage id="join_server" defaultMessage="Join server" />
+            <FormattedMessage
+              id="servers.join_server"
+              defaultMessage="Join server"
+            />
           )}
         </LinkButton>
       </div>
