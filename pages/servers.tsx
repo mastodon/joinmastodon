@@ -1,6 +1,7 @@
 import ServerCard from "../components/ServerCard"
+import type Server from "../types/server"
 
-const Servers = ({ servers }) => {
+const Servers = ({ servers }: { servers: Server[] }) => {
   return (
     <div className="py-40">
       <h1>Servers page placeholder</h1>
