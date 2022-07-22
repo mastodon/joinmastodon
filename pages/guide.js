@@ -129,7 +129,7 @@ function Home(props) {
           </div>
         </div>
         <div>
-          <h3 className="h6">IconCard</h3>
+          <h3 className="h6">SelectMenu</h3>
           <div>
             <SelectMenu
               label={
