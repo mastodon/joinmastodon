@@ -21,7 +21,7 @@ export const AppCard = ({ name, icon, url, paid }) => {
         <div className="h-[3.5rem] w-[3.5rem] flex-shrink-0 overflow-hidden rounded-sm">
           <Image src={icon} alt={`Logo for ${name}`} />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-auto flex-col">
           <span className="b4 block text-gray-1">
             {paid ? (
               <FormattedMessage id="apps.paid" defaultMessage="Paid" />
@@ -29,8 +29,8 @@ export const AppCard = ({ name, icon, url, paid }) => {
               <FormattedMessage id="apps.free" defaultMessage="Free" />
             )}
           </span>
-          <h3 className="b1 flex flex-auto items-center font-800 !leading-[1] [unicode-bidi:normal]">
-            {name}
+          <h3 className="b1 flex flex-auto items-center text-right font-800 !leading-[1]">
+            <span dir="ltr">{name}</span>
           </h3>
         </div>
       </div>
