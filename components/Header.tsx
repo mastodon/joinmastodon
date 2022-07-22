@@ -54,6 +54,7 @@ const Header = () => {
       childItems: locales.map((locale) => ({
         key: locale.code,
         locale: locale.code,
+        scroll: false,
         value: "", // current page
         label: locale.language,
       })),
@@ -140,6 +141,7 @@ const Header = () => {
                           <Link
                             href={child.value}
                             locale={child.locale || undefined}
+                            scroll={child.scroll ?? true}
                           >
                             <a
                               {...bindSecondaryMenuItem(
