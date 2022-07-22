@@ -217,9 +217,9 @@ const useMenu = ({ navigationItems }) => {
   // Ensuring document.activeElement follows the menu's roving tabindex
   useEffect(() => {
     if (menuBarHasFocus && rootElement.current) {
-      rootElement.current
-        .querySelector<HTMLElement>(`[tabindex="0"]`)
-        .focus({ preventScroll: true })
+      const activeTabIndexElement =
+        rootElement.current.querySelector<HTMLElement>(`[tabindex="0"]`)
+      activeTabIndexElement?.focus({ preventScroll: true })
     }
   }, [menuBarHasFocus, primaryMenuItemIndex, secondaryMenuItemIndex])
 
