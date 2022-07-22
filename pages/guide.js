@@ -1,8 +1,11 @@
 import SVG from "react-inlinesvg"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import { IconCard } from "../components/IconCard"
+import SelectMenu from "../components/SelectMenu"
+import { FormattedMessage, useIntl } from "react-intl"
 
 function Home(props) {
+  const intl = useIntl()
   return (
     <div className="flex flex-col gap-16 [padding-block:4rem]">
       <section>
@@ -91,37 +94,74 @@ function Home(props) {
           ))}
         </div>
       </section>
-      <section>
+      <section className="flex flex-col gap-8">
         <h2 className="h5">Components</h2>
 
-        <h3 className="h6">IconCard</h3>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-gutter">
-          <IconCard
-            title="Decentralized"
-            icon="decentralized"
-            copy={
-              "Not controlled by a single website or company, Mastodon is a network of completely independent service providers forming a global, cohesive social media platform. "
-            }
-          />
-          <IconCard
-            title="Open Source"
-            icon="open-source"
-            copy={
-              "Mastodon is free and open-source software. We believe in your right to use, copy, study and change Mastodon as you see fit. Community collaboration helps us continually evolve Mastodon."
-            }
-          />
-          <IconCard
-            title="Not for Sale"
-            icon="privacy"
-            copy={
-              "No surprises. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data is yours and yours alone."
-            }
-          />
-          <IconCard
-            title="Privacy-Minded"
-            icon="safety"
-            copy={"You’re in control. Publish only what you choose."}
-          />
+        <div>
+          <h3 className="h6">IconCard</h3>
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-gutter">
+            <IconCard
+              title="Decentralized"
+              icon="decentralized"
+              copy={
+                "Not controlled by a single website or company, Mastodon is a network of completely independent service providers forming a global, cohesive social media platform. "
+              }
+            />
+            <IconCard
+              title="Open Source"
+              icon="open-source"
+              copy={
+                "Mastodon is free and open-source software. We believe in your right to use, copy, study and change Mastodon as you see fit. Community collaboration helps us continually evolve Mastodon."
+              }
+            />
+            <IconCard
+              title="Not for Sale"
+              icon="privacy"
+              copy={
+                "No surprises. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data is yours and yours alone."
+              }
+            />
+            <IconCard
+              title="Privacy-Minded"
+              icon="safety"
+              copy={"You’re in control. Publish only what you choose."}
+            />
+          </div>
+        </div>
+        <div>
+          <h3 className="h6">IconCard</h3>
+          <div>
+            <SelectMenu
+              label={
+                <FormattedMessage id="sorting.sort_by" defaultMessage="Sort" />
+              }
+              value="all"
+              onChange={() => {}}
+              options={[
+                {
+                  label: intl.formatMessage({
+                    id: "sorting.recently_added",
+                    defaultMessage: "Recently added",
+                  }),
+                  value: "all",
+                },
+                {
+                  label: intl.formatMessage({
+                    id: "sorting.free",
+                    defaultMessage: "Free",
+                  }),
+                  value: "x",
+                },
+                {
+                  label: intl.formatMessage({
+                    id: "sorting.alphabetical",
+                    defaultMessage: "A–Z",
+                  }),
+                  value: "y",
+                },
+              ]}
+            />
+          </div>
         </div>
       </section>
     </div>
