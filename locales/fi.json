@@ -1,18 +1,1 @@
-{
-    "contact_us": "Ota meihin yhteyttä",
-    "credits.press_kit": "Lehdistölle",
-    "credits.view_sponsors": "Näytä sponsorit",
-    "home.get_started": "Aloitetaan",
-    "home.how_it_works": "Kuinka se toimii",
-    "nav.apps": "Sovellukset",
-    "nav.blog": "Blogi",
-    "nav.code": "Koodi",
-    "nav.company": "Yritys",
-    "nav.docs": "Dokumentaatio",
-    "nav.product": "Tuote",
-    "nav.resources": "Resurssit",
-    "nav.sponsors": "Sponsorit",
-    "nav.support": "Tuki",
-    "privacy_policy": "Tietosuojakäytäntö",
-    "sponsorship.become_a_sponsor": "Ryhdy sponsoriksi"
-}
+{"contact_us":"Ota meihin yhteyttä","credits.press_kit":"Lehdistölle","credits.view_sponsors":"Näytä sponsorit","home.get_started":"Aloitetaan","home.how_it_works":"Kuinka se toimii","nav.apps":"Sovellukset","nav.blog":"Blogi","nav.code":"Koodi","nav.company":"Yritys","nav.docs":"Dokumentaatio","nav.product":"Tuote","nav.resources":"Resurssit","nav.sponsors":"Sponsorit","nav.support":"Tuki","privacy_policy":"Tietosuojakäytäntö","server.category.academia":"Akatemia","server.category.activism":"Aktivismi","server.category.adult_content":"Aikuissisältö","server.category.art":"Taide","server.category.books":"Kirjat","server.category.food":"Ruoka","server.category.furry":"Turri","server.category.gaming":"Pelaaminen","server.category.general":"Yleinen","server.category.humor":"Huumori","server.category.journalism":"Journalismi","server.category.lgbt":"LGBTQ+","server.category.music":"Musiikki","server.category.regional":"Alueellinen","server.category.sports":"Urheilu","server.category.technology":"Teknologia","sponsorship.become_a_sponsor":"Ryhdy sponsoriksi"}
