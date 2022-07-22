@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "extract": "formatjs extract 'pages/**/*.js' 'components/**/*.jsx' --out-file 'locales/en.json' --format 'locales/locale_format.js'"
+    "extract": "formatjs extract '{components,pages}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.0.10",
     "classnames": "^2.3.1",
     "next": "12.2.0",
     "react": "18.2.0",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@formatjs/cli": "^5.0.2",
     "@tailwindcss/line-clamp": "^0.4.0",
+    "@tanstack/react-query-devtools": "^4.0.10",
     "@types/node": "^18.0.6",
     "autoprefixer": "^10.4.7",
     "eslint": "8.18.0",
