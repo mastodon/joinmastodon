@@ -35,7 +35,7 @@ export const SelectMenu = ({
           ))}
         </select>
         <SVG
-          className="absolute text-gray-1 inline-end-2 block-start-4"
+          className="pointer-events-none absolute text-gray-1 inline-end-2 block-start-4"
           src={"/ui/disclosure-arrow.svg"}
         />
       </div>
