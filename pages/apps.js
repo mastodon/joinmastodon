@@ -23,7 +23,6 @@ import downloadOnAppStore from "../public/badges/app-store.svg"
 
 import { FormattedMessage, useIntl } from "react-intl"
 import Head from "next/head"
-import Link from "next/link"
 import Image from "next/image"
 import LinkButton from "../components/LinkButton"
 import { AppCard } from "../components/AppCard"
@@ -235,92 +234,97 @@ const BrowseApps = () => {
                 />
               </p>
 
-              <a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974">
-                <Image
-                  src={downloadOnAppStore}
-                  alt="Download on the App Store"
-                  className="app-store-badge"
+              <h2 className="h4 mb-4">
+                <FormattedMessage
+                  id="ios_and_android.download"
+                  defaultMessage="Download the apps"
                 />
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android">
-                <Image
-                  src={downloadOnGooglePlay}
-                  alt="Get it on Google Play"
-                  className="app-store-badge"
-                  style={{ height: 70, margin: "-10px 0" }}
-                />
-              </a>
+              </h2>
+
+              <div className="flex gap-5">
+                <a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974">
+                  <Image
+                    src={downloadOnAppStore}
+                    alt="Download on the App Store"
+                    className="app-store-badge"
+                  />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android">
+                  <Image
+                    src={downloadOnGooglePlay}
+                    alt="Get it on Google Play"
+                    className="app-store-badge"
+                    style={{ height: 70, margin: "-10px 0" }}
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="feature container">
-        <div className="feature-angle-container">
-          <div className="feature-angle">
-            <i className="ion-md-browsers" />
-            <h3>
+      <div className="gap-gutter md:flex">
+        {[
+          {
+            title: (
               <FormattedMessage
                 id="browse_apps.progressive_web_app"
-                defaultMessage="Progressive Web App"
+                defaultMessage="Progressive web app"
               />
-            </h3>
-            <p>
+            ),
+            copy: (
               <FormattedMessage
                 id="browse_apps.you_can_use_it_from_desktop"
                 defaultMessage="You can always use Mastodon from the browser on your desktop or phone! It can be added to your home screen and some browsers even support push notifications, just like a native app!"
               />
-            </p>
-            <LinkButton href="/communities" className="link-button">
+            ),
+            cta: (
               <FormattedMessage
-                id="features.join_community"
-                defaultMessage="Join a community"
+                id="browse_apps.pwa_feature.cta"
+                defaultMessage="Join a server"
               />
-            </LinkButton>
-          </div>
-
-          <div className="feature-angle">
-            <i className="ion-md-code" />
-            <h3>
+            ),
+            cta_link: "/servers",
+          },
+          {
+            title: (
               <FormattedMessage
                 id="browse_apps.open_api"
                 defaultMessage="Open API"
               />
-            </h3>
-            <p>
+            ),
+            copy: (
               <FormattedMessage
                 id="browse_apps.make_your_own"
                 defaultMessage="Mastodon is open-source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!"
               />
-            </p>
-            <LinkButton
-              href="https://docs.joinmastodon.org/client/intro/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-button"
-            >
+            ),
+            cta: (
               <FormattedMessage
                 id="browse_apps.api_docs"
                 defaultMessage="API documentation"
               />
-            </LinkButton>
+            ),
+            cta_link: "https://docs.joinmastodon.org/client/intro/",
+          },
+        ].map(({ title, copy, cta, cta_link }) => (
+          <div className="grid py-32 md:grid-cols-6" key={title}>
+            <div className="col-span-4 col-start-2">
+              <h2 className="h4">{title}</h2>
+              <h2 className="sh1">{copy}</h2>
+              <LinkButton href={cta_link}>{cta}</LinkButton>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
 
       <div>
-        <h2>
+        <h2 className="h4 mb-8">
           <FormattedMessage
             id="browse_apps.title2"
             defaultMessage="Browse third-party apps"
           />
         </h2>
-        <p className="lead">
-          <FormattedMessage
-            id="browse_apps.lead2"
-            defaultMessage="Thanks to Mastodon's open API, you can use it from any of these apps developed by third-party developers"
-          />
-        </p>
         <div className="mb-6 flex gap-gutter">
           {categories.map((category) => (
             <label
@@ -349,6 +353,33 @@ const BrowseApps = () => {
       <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
         {filteredApps.map(AppCard)}
       </div>
+
+      <section className="flex flex-col items-center gap-12 py-32">
+        <h2 className="h1">
+          <FormattedMessage
+            id="apps.get_started"
+            defaultMessage="Get started today"
+          />
+        </h2>
+
+        <div className="flex gap-5">
+          <a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974">
+            <Image
+              src={downloadOnAppStore}
+              alt="Download on the App Store"
+              className="app-store-badge"
+            />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android">
+            <Image
+              src={downloadOnGooglePlay}
+              alt="Get it on Google Play"
+              className="app-store-badge"
+              style={{ height: 70, margin: "-10px 0" }}
+            />
+          </a>
+        </div>
+      </section>
 
       <Head>
         <title>
