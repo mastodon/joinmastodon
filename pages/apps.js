@@ -17,6 +17,11 @@ import imast from "../public/apps/imast_icon.png"
 import mercury from "../public/apps/mercury.png"
 import sengi from "../public/apps/sengi.png"
 import metatext from "../public/apps/metatext.png"
+import footer_festival from "../public/illustrations/footer_festival.png"
+import SVG from "react-inlinesvg"
+import loadIntlMessages from "../utils/loadIntlMessages"
+
+import { sortBy as _sortBy } from "lodash"
 
 import downloadOnGooglePlay from "../public/badges/google-play.svg"
 import downloadOnAppStore from "../public/badges/app-store.svg"
@@ -28,6 +33,7 @@ import LinkButton from "../components/LinkButton"
 import { AppCard } from "../components/AppCard"
 import classNames from "classnames"
 import { useState } from "react"
+import SelectMenu from "../components/SelectMenu"
 
 const apps = {
   android: [
@@ -142,7 +148,7 @@ const apps = {
     },
 
     {
-      name: "Hyperspace",
+      name: "Hyper­space",
       icon: hyperspace,
       url: "https://hyperspace.marquiskurt.net/",
     },
@@ -167,7 +173,6 @@ const apps = {
     },
   ],
 }
-const categories = ["all", ...Object.keys(apps)]
 const allApps = Object.entries(apps)
   .map(([category, apps]) =>
     apps.map(({ name, icon, url, paid }) => ({
@@ -179,34 +184,79 @@ const allApps = Object.entries(apps)
     }))
   )
   .flat()
-console.log(allApps)
 
 const sortOptions = [
   {
-    key: "date_added",
+    value: "date_added",
     label: (
       <FormattedMessage
-        id="sort.recently_added"
+        id="sorting.recently_added"
         defaultMessage="Recently Added"
       />
     ),
   },
   {
-    key: "paid",
-    label: <FormattedMessage id="sort.price" defaultMessage="Free" />,
+    value: "paid",
+    label: <FormattedMessage id="sorting.free" defaultMessage="Free" />,
   },
   {
-    key: "name",
-    label: <FormattedMessage id="sort.name" defaultMessage="Alphabetical" />,
+    value: "name",
+    label: <FormattedMessage id="sorting.name" defaultMessage="Alphabetical" />,
   },
 ]
 
 const BrowseApps = () => {
   const intl = useIntl()
-  const [activeCategory, setActiveCategory] = useState(categories[0])
+  const [activeCategory, setActiveCategory] = useState("all")
+  const [sortOption, setSortOption] = useState(sortOptions[0].value)
   const filteredApps = allApps.filter(
     ({ category }) => category === activeCategory || activeCategory === "all"
   )
+  const sortedAndFilteredApps = _sortBy(filteredApps)
+  const categories = [
+    {
+      key: "all",
+      label: intl.formatMessage({
+        id: "browse_apps.all",
+        defaultMessage: "All",
+      }),
+    },
+    {
+      key: "android",
+      label: intl.formatMessage({
+        id: "browse_apps.android",
+        defaultMessage: "Android",
+      }),
+    },
+    {
+      key: "ios",
+      label: intl.formatMessage({
+        id: "browse_apps.ios",
+        defaultMessage: "iOS",
+      }),
+    },
+    {
+      key: "web",
+      label: intl.formatMessage({
+        id: "browse_apps.web",
+        defaultMessage: "Web",
+      }),
+    },
+    {
+      key: "sailfish",
+      label: intl.formatMessage({
+        id: "browse_apps.sailfish",
+        defaultMessage: "SailfishOS",
+      }),
+    },
+    {
+      key: "desktop",
+      label: intl.formatMessage({
+        id: "browse_apps.desktop",
+        defaultMessage: "Desktop",
+      }),
+    },
+  ]
   return (
     <div className="pt-40">
       <div className="app-intro">
@@ -266,6 +316,7 @@ const BrowseApps = () => {
       <div className="gap-gutter md:flex">
         {[
           {
+            icon: "/icons/progressive-web.svg",
             title: (
               <FormattedMessage
                 id="browse_apps.progressive_web_app"
@@ -287,6 +338,7 @@ const BrowseApps = () => {
             cta_link: "/servers",
           },
           {
+            icon: "/icons/api-gear.svg",
             title: (
               <FormattedMessage
                 id="browse_apps.open_api"
@@ -307,11 +359,15 @@ const BrowseApps = () => {
             ),
             cta_link: "https://docs.joinmastodon.org/client/intro/",
           },
-        ].map(({ title, copy, cta, cta_link }) => (
-          <div className="grid py-32 md:grid-cols-6" key={title}>
-            <div className="col-span-4 col-start-2">
-              <h2 className="h4">{title}</h2>
-              <h2 className="sh1">{copy}</h2>
+        ].map(({ icon, title, copy, cta, cta_link }) => (
+          <div className="grid py-8 md:grid-cols-6 md:py-32" key={title}>
+            <div className="md:col-span-4 md:col-start-2">
+              <SVG
+                src={icon}
+                className="-ml-2 h-auto w-20 text-accent-blurple md:-ml-4 md:w-32"
+              />
+              <h2 className="h4 mb-5 mt-4">{title}</h2>
+              <h2 className="sh1 mb-8">{copy}</h2>
               <LinkButton href={cta_link}>{cta}</LinkButton>
             </div>
           </div>
@@ -325,39 +381,55 @@ const BrowseApps = () => {
             defaultMessage="Browse third-party apps"
           />
         </h2>
-        <div className="mb-6 flex gap-gutter">
-          {categories.map((category) => (
-            <label
-              key={category}
-              className={classNames(
-                "b3 block w-full rounded border-2 p-4  text-center !font-600 transition-all",
-                category === activeCategory
-                  ? "border-accent-blurple bg-accent-blurple text-white hover:border-dark-blurple hover:bg-dark-blurple"
-                  : "border-accent-blurple bg-white text-accent-blurple hover:border-dark-blurple hover:text-dark-blurple"
-              )}
-            >
-              <input
-                className="sr-only"
-                type="radio"
-                name="apps-selection"
-                id=""
-                value={category}
-                onChange={(e) => setActiveCategory(e.target.value)}
-              />
-              {category}
-            </label>
-          ))}
+        <div className="-mx-gutter pis-gutter mb-6 overflow-x-auto">
+          <div className="flex gap-gutter">
+            {categories.map((category) => (
+              <label
+                key={category.key}
+                className={classNames(
+                  "b3 block w-full whitespace-nowrap rounded border-2 p-4 text-center !font-600 transition-all",
+                  category.key === activeCategory
+                    ? "border-accent-blurple bg-accent-blurple text-white hover:border-dark-blurple hover:bg-dark-blurple"
+                    : "border-accent-blurple bg-white text-accent-blurple hover:border-dark-blurple hover:text-dark-blurple"
+                )}
+              >
+                <input
+                  className="sr-only"
+                  type="radio"
+                  name="apps-selection"
+                  id=""
+                  value={category.key}
+                  onChange={(e) => setActiveCategory(e.target.value)}
+                />
+                {category.label}
+              </label>
+            ))}
+          </div>
         </div>
       </div>
-
+      <div className="my-8">
+        <SelectMenu
+          label={
+            <FormattedMessage id="sorting.sort_by" defaultMessage="Sort" />
+          }
+          value="all"
+          onChange={(v) => {
+            setSortOption(v)
+          }}
+          options={sortOptions}
+        />
+      </div>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
-        {filteredApps.map(AppCard)}
+        {sortedAndFilteredApps.map(AppCard)}
       </div>
 
-      <section className="flex flex-col items-center gap-12 py-32">
+      <section className="relative -mx-[50%] flex flex-col items-center gap-12 pt-32 pb-footer-offset">
+        <div className="absolute inset-0">
+          <Image src={footer_festival} alt={""} layout="responsive" />
+        </div>
         <h2 className="h1">
           <FormattedMessage
-            id="apps.get_started"
+            id="browse_apps.get_started"
             defaultMessage="Get started today"
           />
         </h2>
@@ -415,6 +487,12 @@ const BrowseApps = () => {
       </Head>
     </div>
   )
+}
+
+export async function getStaticProps(ctx) {
+  return {
+    props: { intlMessages: await loadIntlMessages(ctx) },
+  }
 }
 
 export default BrowseApps
