@@ -73,7 +73,7 @@ const ServerList = ({ servers }) => {
   )
 }
 
-const ServerFilters = ({ filterList, setFilters, filterGroups }) => {
+const ServerFilters = ({ filterList }: { filterList: any }) => {
   const intl = useIntl()
   const filterGroupMessages = defineMessages({
     topic: { id: "server.filter_by.topic", defaultMessage: "Topic" },
