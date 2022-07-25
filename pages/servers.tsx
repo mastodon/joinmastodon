@@ -74,12 +74,16 @@ const ServerFilters = ({ filters }) => {
     <div className="col-span-3">
       {Object.keys(filterGroupMessages).map((group) => {
         return (
-          <div key={group}>
-            <h3 className="h5" id={`${group}-group-label`}>
+          <div className="mb-8" key={group}>
+            <h3 className="h5 mb-2" id={`${group}-group-label`}>
               {intl.formatMessage(filterGroupMessages[group])}
             </h3>
 
-            <ul role="group" aria-labelledby={`${group}-group-label`}>
+            <ul
+              className="space-y-2"
+              role="group"
+              aria-labelledby={`${group}-group-label`}
+            >
               {filters[group]?.map((item, i) => {
                 if (item.category || item.language || item.server_size) {
                   return (
@@ -102,7 +106,7 @@ const ServerFilters = ({ filters }) => {
                           })
                         }}
                       >
-                        <span>
+                        <span className="pl-2">
                           {group === "topic"
                             ? intl.formatMessage(
                                 categoriesMessages[item.category]
@@ -129,12 +133,28 @@ export async function getServerSideProps() {
   const topicRes = await fetch("https://api.joinmastodon.org/categories")
   const topic = await topicRes.json()
 
+  const langaugeRes = await fetch("https://api.joinmastodon.org/languages")
+  const language = await langaugeRes.json()
+
   return {
     props: {
       filters: {
         topic,
-        language: [],
-        server_size: [],
+        language,
+        server_size: [
+          {
+            server_size: "1-1000",
+            servers_count: 0,
+          },
+          {
+            server_size: "1,000 - 5,000",
+            servers_count: 0,
+          },
+          {
+            server_size: "5,000+",
+            servers_count: 0,
+          },
+        ],
       },
     },
   }
