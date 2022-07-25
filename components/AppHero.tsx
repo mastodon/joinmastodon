@@ -5,21 +5,27 @@ import downloadOnGooglePlay from "../public/badges/google-play.svg"
 import downloadOnAppStore from "../public/badges/app-store.svg"
 
 export type AppHeroProps = {
+  /** Image source value passed to `next/image`'s `src` */
   backgroundImage: ImageProps["src"]
+  /** Image-framing value passed to `next/image`'s `object-position` */
+  backgroundImagePosition: string
 }
-export const AppHero = ({ backgroundImage }: AppHeroProps) => {
+export const AppHero = ({
+  backgroundImage,
+  backgroundImagePosition = "center center",
+}: AppHeroProps) => {
   return (
     <section className="full-width-bg relative -mb-footer-offset pb-footer-offset pt-32">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 -z-10">
         <Image
           src={backgroundImage}
           alt=""
           layout="fill"
           objectFit="cover"
-          objectPosition="center center"
+          objectPosition={backgroundImagePosition}
         />
       </div>
-      <div className="full-width-bg__inner flex flex-col items-center gap-12 pb-[20%] md:gap-20">
+      <div className="full-width-bg__inner flex flex-col items-center gap-12 pb-[50vw] md:gap-20">
         <h2 className="h1 text-center">
           <FormattedMessage
             id="browse_apps.get_started"

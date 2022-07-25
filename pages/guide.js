@@ -1,13 +1,16 @@
-import footer_festival from "../public/illustrations/footer_festival.png"
+import app_hero_planets from "../public/illustrations/app_hero_planets.png"
+import app_hero_festival from "../public/illustrations/app_hero_festival.png"
 import SVG from "react-inlinesvg"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import { FormattedMessage, useIntl } from "react-intl"
 import AppHero from "../components/AppHero"
+import { useState } from "react"
 
 function Home(props) {
   const intl = useIntl()
+  const [altAppHero, setAltAppHero] = useState(false)
   return (
     <div className="flex flex-col gap-16">
       <section>
@@ -167,7 +170,22 @@ function Home(props) {
           <div>
             <h3 className="h6">AppHero</h3>
             <div>
-              <AppHero backgroundImage={footer_festival} />
+              <label>
+                <input
+                  type="checkbox"
+                  onChange={(e) => setAltAppHero(e.target.checked)}
+                  checked={altAppHero}
+                />
+                {" Alternate AppHero"}
+              </label>
+              {altAppHero ? (
+                <AppHero backgroundImage={app_hero_planets} />
+              ) : (
+                <AppHero
+                  backgroundImage={app_hero_festival}
+                  backgroundImagePosition={"center left"}
+                />
+              )}
             </div>
           </div>
         </div>
