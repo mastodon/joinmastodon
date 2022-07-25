@@ -104,10 +104,12 @@ const ServerFilters = ({ filterList }: { filterList: any }) => {
             <ul>
               {filterList[group].map((item, i) => {
                 return (
-                  <li className="b2" key={i}>
+                  <li className="b2 flex gap-1" key={i}>
                     {group === "topic"
                       ? intl.formatMessage(categoriesMessages[item.category])
                       : item.language || item.server_size}
+
+                    <span className="text-gray-2">({item.servers_count})</span>
                   </li>
                 )
               })}
