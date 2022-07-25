@@ -5,7 +5,7 @@ import classNames from "classnames"
 import LinkButton from "./LinkButton"
 import type Server from "../types/server"
 
-import { categoriesMessages } from "../pages/servers"
+import { categoriesMessages } from "../data/categories"
 
 const ServerCard = ({ server }: { server: Server }) => {
   const intl = useIntl()
