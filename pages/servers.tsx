@@ -87,7 +87,7 @@ const ServerFilters = ({ filters }) => {
               {filters[group]?.map((item, i) => {
                 if (item.category || item.language || item.server_size) {
                   return (
-                    <li>
+                    <li key={i}>
                       <div
                         className="flex w-max cursor-pointer gap-1"
                         role="checkbox"
@@ -136,25 +136,41 @@ export async function getServerSideProps() {
   const langaugeRes = await fetch("https://api.joinmastodon.org/languages")
   const language = await langaugeRes.json()
 
+  const serversRes = await fetch("https://api.joinmastodon.org/servers")
+  const servers = await serversRes.json()
+
+  // matching data format of /categories and /languages
+  let serverCount = [
+    {
+      server_size: "1 - 1,000",
+      servers_count: 0,
+    },
+    {
+      server_size: "1,000 - 5,000",
+      servers_count: 0,
+    },
+    {
+      server_size: "5,000+",
+      servers_count: 0,
+    },
+  ]
+
+  servers.forEach((server) => {
+    if (server.total_users < 1000) {
+      serverCount[0].servers_count++
+    } else if (server.total_users > 1000 && server.total_users <= 5000) {
+      serverCount[1].servers_count++
+    } else {
+      serverCount[2].servers_count++
+    }
+  })
+
   return {
     props: {
       filters: {
         topic,
         language,
-        server_size: [
-          {
-            server_size: "1-1000",
-            servers_count: 0,
-          },
-          {
-            server_size: "1,000 - 5,000",
-            servers_count: 0,
-          },
-          {
-            server_size: "5,000+",
-            servers_count: 0,
-          },
-        ],
+        server_size: serverCount,
       },
     },
   }
