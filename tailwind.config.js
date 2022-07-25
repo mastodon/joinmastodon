@@ -81,6 +81,7 @@ module.exports = {
       },
       spacing: {
         26: "6.5rem",
+        "footer-offset": "var(--footer-offset)",
       },
     },
   },
