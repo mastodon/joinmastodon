@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query"
 import { useState } from "react"
 import { FormattedMessage, defineMessages, useIntl } from "react-intl"
+import classnames from "classnames"
+import { orderBy as _orderBy } from "lodash"
 import ServerCard from "../components/ServerCard"
 import { categoriesMessages } from "../data/categories"
 import type Server from "../types/server"
@@ -18,8 +20,6 @@ const Servers = ({ filterList }) => {
     },
     { cacheTime: 30 * 60 * 1000 }
   ) // 30 minutes)
-
-  console.log(servers.data)
 
   return (
     <div className="py-40">
@@ -94,7 +94,12 @@ const ServerFilters = ({
               {filterList[group].map((item, i) => {
                 return (
                   <li
-                    className="b2 flex cursor-pointer gap-1"
+                    className={classnames(
+                      "b2 flex cursor-pointer gap-1",
+                      (filters.language === item.locale ||
+                        filters.topic === item.category) &&
+                        "!font-800"
+                    )}
                     key={i}
                     onClick={() => {
                       if (group === "topic") {
@@ -162,8 +167,8 @@ export async function getServerSideProps() {
     props: {
       // servers,
       filterList: {
-        topic,
-        language,
+        topic: _orderBy(topic, "servers_count", "desc"),
+        language: _orderBy(language, "servers_count", "desc"),
         // server_size: serverCount,
       },
     },
