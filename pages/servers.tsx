@@ -1,42 +1,18 @@
 import { useQuery } from "@tanstack/react-query"
-import { FormattedMessage, defineMessages } from "react-intl"
+import { useState } from "react"
+import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 import ServerCard from "../components/ServerCard"
+import { categoriesMessages } from "../data/categories"
 import type Server from "../types/server"
 
-export const categoriesMessages = defineMessages({
-  academia: { id: "server.category.academia", defaultMessage: "Academia" },
-  activism: { id: "server.category.activism", defaultMessage: "Activism" },
-  adult: {
-    id: "server.category.adult_content",
-    defaultMessage: "Adult content",
-  },
-  art: { id: "server.category.art", defaultMessage: "Art" },
-  books: { id: "server.category.books", defaultMessage: "Books" },
-  food: { id: "server.category.food", defaultMessage: "Food" },
-  furry: { id: "server.category.furry", defaultMessage: "Furry" },
-  games: { id: "server.category.gaming", defaultMessage: "Gaming" },
-  general: { id: "server.category.general", defaultMessage: "General" },
-  humor: { id: "server.category.humor", defaultMessage: "Humour" },
-  journalism: {
-    id: "server.category.journalism",
-    defaultMessage: "Journalism",
-  },
-  lgbt: { id: "server.category.lgbt", defaultMessage: "LGBTQ+" },
-  music: { id: "server.category.music", defaultMessage: "Music" },
-  regional: { id: "server.category.regional", defaultMessage: "Regional" },
-  sports: { id: "server.category.sports", defaultMessage: "Sports" },
-  tech: { id: "server.category.technology", defaultMessage: "Technology" },
-})
-
-const Servers = () => {
+const Servers = ({ filters }) => {
   return (
     <div className="py-40">
       <h1>Servers page placeholder</h1>
 
       <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
-        <div className="col-span-3">checkboxes go here</div>
-
-        <ServerList />
+        <ServerFilters filters={filters} />
+        {/* <ServerList /> */}
       </div>
     </div>
   )
@@ -73,4 +49,93 @@ const ServerList = () => {
     </div>
   )
 }
+
+const ServerFilters = ({ filters }) => {
+  const [filterState, setFilterState] = useState({
+    topic: new Array(filters.topic.length).fill(false),
+    language: new Array(filters.language.length).fill(false),
+    server_size: new Array(filters.server_size.length).fill(false),
+  })
+
+  const intl = useIntl()
+  const filterGroupMessages = defineMessages({
+    topic: { id: "server.filter_by.topic", defaultMessage: "Topic" },
+    language: {
+      id: "server.filter_by.language",
+      defaultMessage: "Language",
+    },
+    server_size: {
+      id: "server.filter_by.server_size",
+      defaultMessage: "Server size",
+    },
+  })
+
+  return (
+    <div className="col-span-3">
+      {Object.keys(filterGroupMessages).map((group) => {
+        return (
+          <div key={group}>
+            <h3 className="h5" id={`${group}-group-label`}>
+              {intl.formatMessage(filterGroupMessages[group])}
+            </h3>
+
+            <ul role="group" aria-labelledby={`${group}-group-label`}>
+              {filters[group]?.map((item, i) => {
+                if (item.category || item.language || item.server_size) {
+                  return (
+                    <li>
+                      <div
+                        className="flex gap-1"
+                        role="checkbox"
+                        tabIndex={0}
+                        aria-checked={filterState[group][i]}
+                        onClick={() => {
+                          const updatedFilterState = filterState[group].map(
+                            (item, position) => {
+                              return i === position ? !item : item
+                            }
+                          )
+
+                          setFilterState({
+                            ...filterState,
+                            [group]: updatedFilterState,
+                          })
+                        }}
+                      >
+                        <span>
+                          {group === "topic"
+                            ? intl.formatMessage(
+                                categoriesMessages[item.category]
+                              )
+                            : item.language || item.server_size}
+                        </span>
+                        <span>{item.servers_count}</span>
+                      </div>
+                    </li>
+                  )
+                }
+              })}
+            </ul>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+export async function getServerSideProps() {
+  const topicRes = await fetch("https://api.joinmastodon.org/categories")
+  const topic = await topicRes.json()
+
+  return {
+    props: {
+      filters: {
+        topic,
+        language: [],
+        server_size: [],
+      },
+    },
+  }
+}
+
 export default Servers
