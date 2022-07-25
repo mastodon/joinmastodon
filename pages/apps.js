@@ -30,6 +30,7 @@ import { FormattedMessage, useIntl } from "react-intl"
 import Head from "next/head"
 import Image from "next/image"
 import LinkButton from "../components/LinkButton"
+import AppHero from "../components/AppHero"
 import { AppCard } from "../components/AppCard"
 import classNames from "classnames"
 import { useState } from "react"
@@ -360,8 +361,8 @@ const BrowseApps = () => {
             cta_link: "https://docs.joinmastodon.org/client/intro/",
           },
         ].map(({ icon, title, copy, cta, cta_link }) => (
-          <div className="grid py-8 md:grid-cols-6 md:py-32" key={title}>
-            <div className="md:col-span-4 md:col-start-2">
+          <div className="grid py-8 md:py-32 lg:grid-cols-6" key={title}>
+            <div className="md:pie-4 lg:col-span-4 lg:col-start-2 lg:pie-0">
               <SVG
                 src={icon}
                 className="-ml-2 h-auto w-20 text-accent-blurple md:-ml-4 md:w-32"
@@ -422,37 +423,7 @@ const BrowseApps = () => {
       <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
         {sortedAndFilteredApps.map(AppCard)}
       </div>
-
-      <section className="relative -mx-[50%] flex flex-col items-center gap-12 pt-32 pb-footer-offset">
-        <div className="absolute inset-0">
-          <Image src={footer_festival} alt={""} layout="responsive" />
-        </div>
-        <h2 className="h1">
-          <FormattedMessage
-            id="browse_apps.get_started"
-            defaultMessage="Get started today"
-          />
-        </h2>
-
-        <div className="flex gap-5">
-          <a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974">
-            <Image
-              src={downloadOnAppStore}
-              alt="Download on the App Store"
-              className="app-store-badge"
-            />
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android">
-            <Image
-              src={downloadOnGooglePlay}
-              alt="Get it on Google Play"
-              className="app-store-badge"
-              style={{ height: 70, margin: "-10px 0" }}
-            />
-          </a>
-        </div>
-      </section>
-
+      <AppHero backgroundImage={footer_festival} />
       <Head>
         <title>
           {intl.formatMessage({
