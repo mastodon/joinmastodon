@@ -29,7 +29,7 @@ export const AppCard = ({ name, icon, url, paid }) => {
               <FormattedMessage id="apps.free" defaultMessage="Free" />
             )}
           </span>
-          <h3 className="b1 flex flex-auto items-center text-right font-800 !leading-[1]">
+          <h3 className="b1 flex flex-auto items-center text-right !font-700 !leading-[1]">
             <span dir="ltr">{name}</span>
           </h3>
         </div>
