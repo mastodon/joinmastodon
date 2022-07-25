@@ -85,7 +85,7 @@ const ServerFilters = ({ filters }) => {
                   return (
                     <li>
                       <div
-                        className="flex gap-1"
+                        className="flex w-max cursor-pointer gap-1"
                         role="checkbox"
                         tabIndex={0}
                         aria-checked={filterState[group][i]}
@@ -109,7 +109,9 @@ const ServerFilters = ({ filters }) => {
                               )
                             : item.language || item.server_size}
                         </span>
-                        <span>{item.servers_count}</span>
+                        <span className="text-gray-2">
+                          ({item.servers_count})
+                        </span>
                       </div>
                     </li>
                   )
