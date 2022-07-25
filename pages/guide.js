@@ -1,8 +1,10 @@
+import footer_festival from "../public/illustrations/footer_festival.png"
 import SVG from "react-inlinesvg"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import { FormattedMessage, useIntl } from "react-intl"
+import AppHero from "../components/AppHero"
 
 function Home(props) {
   const intl = useIntl()
@@ -161,6 +163,12 @@ function Home(props) {
                 },
               ]}
             />
+          </div>
+          <div>
+            <h3 className="h6">AppHero</h3>
+            <div>
+              <AppHero backgroundImage={footer_festival} />
+            </div>
           </div>
         </div>
       </section>
