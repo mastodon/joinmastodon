@@ -9,7 +9,7 @@ export type AppHeroProps = {
 }
 export const AppHero = ({ backgroundImage }: AppHeroProps) => {
   return (
-    <section className="full-width-bg pb-footer-offset relative pt-32">
+    <section className="full-width-bg relative -mb-footer-offset pb-footer-offset pt-32">
       <div className="absolute inset-0">
         <Image
           src={backgroundImage}

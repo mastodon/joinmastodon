@@ -9,7 +9,7 @@ import AppHero from "../components/AppHero"
 function Home(props) {
   const intl = useIntl()
   return (
-    <div className="flex flex-col gap-16 [padding-block:4rem]">
+    <div className="flex flex-col gap-16">
       <section>
         <h2 className="h5">Type Scale</h2>
 

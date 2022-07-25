@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export const Footer = () => (
   <>
-    <footer className="full-width-bg relative mt-72 bg-nightshade pb-24 text-center text-white md:pt-24 md:text-start">
+    <footer className="full-width-bg relative mt-footer-offset bg-nightshade pb-24 text-center text-white md:pt-24 md:text-start">
       {/* TODO(daniel): tighten up sizing of swoosh */}
       <div className="absolute bottom-full left-1/2 h-48 w-full -translate-x-1/2 translate-y-[1px] bg-[url(/illustrations/swoosh.svg)] bg-no-repeat [background-position:90%_bottom] [background-size:MAX(64rem,100vw)_auto] md:h-72"></div>
       <nav className="full-width-bg__inner">
