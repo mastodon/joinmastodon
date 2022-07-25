@@ -5,36 +5,59 @@ import ServerCard from "../components/ServerCard"
 import { categoriesMessages } from "../data/categories"
 import type Server from "../types/server"
 
-const Servers = ({ filters }) => {
+const Servers = ({ filterList, servers }) => {
+  // const [filters, setFilters] = useState({
+  //   topic: filterData.topic.map((item) => ({ ...item, checked: false })),
+  //   // language: filters.language.map((item) => ({ ...item, checked: false })),
+  //   // server_size: filters.server_size.map((item) => ({
+  //   //   ...item,
+  //   //   checked: false,
+  //   // })),
+  // })
+
+  // for (let group in filters) {
+  //   filters[group].forEach((item) => {
+  //     if (item.checked) {
+  //       console.log(
+  //         "filtered",
+  //         servers.filter((server) => server.categories.includes(item.label))
+  //       )
+  //     }
+  //   })
+
+  // }
+
+  console.log(filterList)
+
   return (
     <div className="py-40">
       <h1>Servers page placeholder</h1>
 
       <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
-        <ServerFilters filters={filters} />
-        {/* <ServerList /> */}
+        <ServerFilters filterList={filterList} />
+        <ServerList servers={servers} />
       </div>
     </div>
   )
 }
 
-const ServerList = () => {
-  const servers = useQuery(
-    ["servers"],
-    async function (): Promise<Server[]> {
-      const res = await fetch("https://api.joinmastodon.org/servers")
-      return await res.json()
-    },
-    { cacheTime: 30 * 60 * 1000 } // 30 minutes
-  )
+const ServerList = ({ servers }) => {
+  // const servers = useQuery(
+  //   ["servers"],
+  //   async function (): Promise<Server[]> {
+  //     const res = await fetch("https://api.joinmastodon.org/servers")
+  //     return await res.json()
+  //   },
+  //   { cacheTime: 30 * 60 * 1000 } // 30 minutes
+  // )
 
-  if (servers.isLoading) {
-    return <p>Loading...</p>
-  }
+  // if (servers.isLoading) {
+  //   return <p>Loading...</p>
+  // }
 
-  if (servers.isError) {
-    return <p>Oops, something went wrong.</p>
-  }
+  // if (servers.isError) {
+  //   return <p>Oops, something went wrong.</p>
+  // }
 
   return (
     <div className="col-span-4 lg:col-start-4 lg:col-end-13 ">
@@ -42,7 +65,7 @@ const ServerList = () => {
         <FormattedMessage id="servers.browse_all" defaultMessage="Browse all" />
       </h3>
       <div className="grid gap-gutter md:grid-cols-2  xl:grid-cols-3">
-        {servers.data?.map((server) => (
+        {servers?.map((server) => (
           <ServerCard key={server.domain} server={server} />
         ))}
       </div>
@@ -50,13 +73,7 @@ const ServerList = () => {
   )
 }
 
-const ServerFilters = ({ filters }) => {
-  const [filterState, setFilterState] = useState({
-    topic: new Array(filters.topic.length).fill(false),
-    language: new Array(filters.language.length).fill(false),
-    server_size: new Array(filters.server_size.length).fill(false),
-  })
-
+const ServerFilters = ({ filterList, setFilters, filterGroups }) => {
   const intl = useIntl()
   const filterGroupMessages = defineMessages({
     topic: { id: "server.filter_by.topic", defaultMessage: "Topic" },
@@ -70,9 +87,64 @@ const ServerFilters = ({ filters }) => {
     },
   })
 
+  console.log(filterList)
+
+  // const isChecked = (item) => {
+  //   return filters.some((filter) => filter.label === item.label)
+  // }
+
   return (
     <div className="col-span-3">
-      {Object.keys(filterGroupMessages).map((group) => {
+      {Object.keys(filterList).map((group) => {
+        return (
+          <div className="mb-8">
+            <h3 className="h5 mb-2" id={`${group}-group-label`}>
+              {intl.formatMessage(filterGroupMessages[group])}
+            </h3>
+            <ul>
+              {filterList[group].map((item, i) => {
+                return (
+                  <li className="b2">
+                    {group === "topic"
+                      ? intl.formatMessage(categoriesMessages[item.category])
+                      : item.language || item.server_size}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        )
+      })}
+      {/* {Object.keys(filters).map((group, i) => {
+        return (
+          <div key={i}>
+            <h3>title here</h3>
+
+            <ul>
+              {/* {filters[group].map((item, i) => {
+                return (
+                  <li
+                    className="cursor-pointer"
+                    role="checkbox"
+                    key={i}
+                    aria-checked={item.checked}
+                    onClick={() => {
+                      let item = filters[group][i]
+                      item.checked = !item.checked
+                      filters[group].splice(i, 1, item)
+                      setFilters({ ...filters })
+                    }}
+                  >
+                    {item.label}
+                  </li>
+                )
+              })} */}
+      {/* </ul>
+          </div>
+        )
+      })} */}
+
+      {/* {Object.keys(filters).map((group) => {
         return (
           <div className="mb-8" key={group}>
             <h3 className="h5 mb-2" id={`${group}-group-label`}>
@@ -85,18 +157,25 @@ const ServerFilters = ({ filters }) => {
               aria-labelledby={`${group}-group-label`}
             >
               {filters[group]?.map((item, i) => {
-                if (item.category || item.language || item.server_size) {
+                if (item.label || item.language || item.server_size) {
                   return (
                     <li key={i}>
                       <div
                         className="flex w-max cursor-pointer gap-1"
                         role="checkbox"
                         tabIndex={0}
-                        aria-checked={filterState[group][i]}
+                        aria-checked={
+                          filterState[group].find(
+                            (filter) => filter.label === item.label
+                          )?.checked
+                        }
                         onClick={() => {
                           const updatedFilterState = filterState[group].map(
-                            (item, position) => {
-                              return i === position ? !item : item
+                            (filter) => {
+                              if (filter.label === item.label) {
+                                filter.checked = !filter.checked
+                              }
+                              return filter
                             }
                           )
 
@@ -108,14 +187,10 @@ const ServerFilters = ({ filters }) => {
                       >
                         <span className="pl-2">
                           {group === "topic"
-                            ? intl.formatMessage(
-                                categoriesMessages[item.category]
-                              )
+                            ? intl.formatMessage(categoriesMessages[item.label])
                             : item.language || item.server_size}
                         </span>
-                        <span className="text-gray-2">
-                          ({item.servers_count})
-                        </span>
+                        <span className="text-gray-2">({item.count})</span>
                       </div>
                     </li>
                   )
@@ -124,14 +199,14 @@ const ServerFilters = ({ filters }) => {
             </ul>
           </div>
         )
-      })}
+      })} */}
     </div>
   )
 }
 
 export async function getServerSideProps() {
   const topicRes = await fetch("https://api.joinmastodon.org/categories")
-  const topic = await topicRes.json()
+  let topic = await topicRes.json()
 
   const langaugeRes = await fetch("https://api.joinmastodon.org/languages")
   const language = await langaugeRes.json()
@@ -167,7 +242,8 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      filters: {
+      servers,
+      filterList: {
         topic,
         language,
         server_size: serverCount,
