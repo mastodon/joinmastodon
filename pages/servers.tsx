@@ -95,16 +95,16 @@ const ServerFilters = ({ filterList }: { filterList: any }) => {
 
   return (
     <div className="col-span-3">
-      {Object.keys(filterList).map((group) => {
+      {Object.keys(filterList).map((group, i) => {
         return (
-          <div className="mb-8">
+          <div className="mb-8" key={i}>
             <h3 className="h5 mb-2" id={`${group}-group-label`}>
               {intl.formatMessage(filterGroupMessages[group])}
             </h3>
             <ul>
               {filterList[group].map((item, i) => {
                 return (
-                  <li className="b2">
+                  <li className="b2" key={i}>
                     {group === "topic"
                       ? intl.formatMessage(categoriesMessages[item.category])
                       : item.language || item.server_size}
