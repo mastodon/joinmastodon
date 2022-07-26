@@ -51,17 +51,17 @@ const HomeHero = () => {
         </p>
 
         <div className="flex justify-center gap-12">
-          <LinkButton size="large" href="/">
+          <LinkButton size="large" href="/apps">
             <FormattedMessage
-              id="home.how_it_works"
-              defaultMessage="How it works"
+              id="home.get_the_app"
+              defaultMessage="Get the app"
             />
           </LinkButton>
 
-          <LinkButton size="large" href="/" light borderless>
+          <LinkButton size="large" href="/servers" light borderless>
             <FormattedMessage
               id="home.get_started"
-              defaultMessage="Get started"
+              defaultMessage="Find a server"
             />
           </LinkButton>
         </div>
