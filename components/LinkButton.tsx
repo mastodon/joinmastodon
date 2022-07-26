@@ -33,7 +33,7 @@ const LinkButton = ({
     <Link href={href}>
       <a
         className={classnames(
-          "flex items-center justify-center rounded border-2 p-4 text-center !font-600 transition-all hover:border-dark-blurple hover:bg-dark-blurple",
+          "flex items-center justify-center rounded border-2 p-4 text-center !font-600 transition-colors hover:border-dark-blurple hover:bg-dark-blurple",
           borderless ? "border-white" : "border-accent-blurple",
           fullWidth ? "w-full" : "w-max",
           light
@@ -41,7 +41,7 @@ const LinkButton = ({
             : "bg-accent-blurple text-white",
           size === "small" && "b3 h-10",
           size === "medium" && "b3 h-12",
-          size === "large" && "b1 h-16 px-6"
+          size === "large" && "b3 md:b1 h-12 md:h-16 md:px-6"
         )}
         {...linkAttrs}
       >
