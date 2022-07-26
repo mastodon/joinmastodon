@@ -57,7 +57,7 @@ const HomeHero = () => {
             />
           </LinkButton>
 
-          <LinkButton size="medium" href="/" light borderless>
+          <LinkButton size="medium" href="/servers" light borderless>
             <FormattedMessage
               id="home.get_started"
               defaultMessage="Get started"
