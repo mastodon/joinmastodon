@@ -41,7 +41,7 @@ const LinkButton = ({
             : "bg-accent-blurple text-white",
           size === "small" && "b3 h-10",
           size === "medium" && "b3 h-12",
-          size === "large" && "b1 h-16"
+          size === "large" && "b1 h-16 px-6"
         )}
         {...linkAttrs}
       >

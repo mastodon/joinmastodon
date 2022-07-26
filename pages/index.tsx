@@ -51,14 +51,14 @@ const HomeHero = () => {
         </p>
 
         <div className="flex justify-center gap-12">
-          <LinkButton size="medium" href="/">
+          <LinkButton size="large" href="/">
             <FormattedMessage
               id="home.how_it_works"
               defaultMessage="How it works"
             />
           </LinkButton>
 
-          <LinkButton size="medium" href="/" light borderless>
+          <LinkButton size="large" href="/" light borderless>
             <FormattedMessage
               id="home.get_started"
               defaultMessage="Get started"
@@ -114,7 +114,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="medium" href="/">
+            <LinkButton size="large" href="/">
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -137,7 +137,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="medium" href="/">
+            <LinkButton size="large" href="/">
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -160,7 +160,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="medium" href="/">
+            <LinkButton size="large" href="/">
               <FormattedMessage
                 id="home.features.button.find_a_server"
                 defaultMessage="Find a server"
