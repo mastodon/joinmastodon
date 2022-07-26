@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { FormattedMessage } from "react-intl"
 import SVG from "react-inlinesvg"
-import SponsorGroup from "../components/SponsorGroup"
+import SponsorLogoGroup from "../components/SponsorLogoGroup"
 import LinkButton from "../components/LinkButton"
 import sponsors from "../data/sponsors"
 import sponsorData from "../data/sponsors"
@@ -81,7 +81,7 @@ function Sponsors() {
             defaultMessage="Supported by"
           />
         </h2>
-        <SponsorGroup
+        <SponsorLogoGroup
           sponsors={[...sponsorData.platinum, ...sponsorData.gold]}
         />
       </section>

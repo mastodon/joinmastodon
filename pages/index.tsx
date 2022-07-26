@@ -7,7 +7,7 @@ import classnames from "classnames"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
-import SponsorGroup from "../components/SponsorGroup"
+import SponsorGroup from "../components/SponsorLogoGroup"
 
 import testimonials from "../data/testimonials.json"
 import { platinum, additionalFunding } from "../data/sponsors.js"

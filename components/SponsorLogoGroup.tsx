@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import classnames from "classnames"
 
-const SponsorGroup = ({ sponsors }) => {
+const SponsorLogoGroup = ({ sponsors }) => {
   return (
     <div className="grid grid-cols-2 items-center justify-center gap-5 gap-x-5 bg-white sm:flex sm:flex-wrap">
       {sponsors.map((sponsor, i) => {
@@ -39,4 +39,4 @@ const SponsorGroup = ({ sponsors }) => {
   )
 }
 
-export default SponsorGroup
+export default SponsorLogoGroup
