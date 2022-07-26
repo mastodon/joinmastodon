@@ -25,7 +25,7 @@ function Sponsors() {
         </div>
       </section>
 
-      <section className="my-24 my-32 grid gap-gutter md:grid-cols-2 lg:grid-cols-12">
+      <section className="my-32 grid gap-gutter md:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4 lg:col-start-2">
           <SVG className="mb-2 text-accent-blurple" src={`/icons/donate.svg`} />
           <h3 className="h4 mb-6">
