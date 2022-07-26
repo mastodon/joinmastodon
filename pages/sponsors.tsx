@@ -149,7 +149,7 @@ const SponsorCard = ({ sponsor, tier }) => {
         (sponsor.logo ? (
           <Image src={sponsor.logo} width="56" height="56" />
         ) : (
-          <div className="h-[56px] w-[56px] bg-blurple-gradient" />
+          <div className="h-[56px] w-[56px] rounded-[2px] bg-blurple-gradient" />
         ))}
 
       <div className="flex flex-col justify-center">
