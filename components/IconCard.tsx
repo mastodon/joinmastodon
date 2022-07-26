@@ -16,12 +16,12 @@ export type IconCardProps = {
 export const IconCard = ({ title, icon, copy }: IconCardProps) => {
   return (
     <div className="flex flex-col items-center justify-start overflow-hidden rounded bg-white text-center shadow">
-      <div className="flex h-44 w-full items-center justify-center bg-accent-blurple text-white">
+      <div className="flex h-44 w-full items-center justify-center text-accent-blurple">
         <div className="h-[7.5rem] w-[7.5rem]">
           <SVG src={`/icons/${icon}.svg`} />
         </div>
       </div>
-      <div className="pt-3rem flex flex-col gap-2 p-8">
+      <div className="flex flex-col gap-2 p-8 pt-0">
         <h3 className="h5">{title}</h3>
         <p className="b2">{copy}</p>
       </div>
