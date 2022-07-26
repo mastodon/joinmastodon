@@ -307,7 +307,7 @@ const Sponsors = ({ sponsors }) => {
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
             <LinkButton href="https://sponsor.joinmastodon.org/" size="large">
               <FormattedMessage
-                id="sponsorship.become_a_sponsor"
+                id="sponsors.become_a_sponsor"
                 defaultMessage="Become a sponsor"
               />
             </LinkButton>
@@ -324,7 +324,7 @@ const Sponsors = ({ sponsors }) => {
 
       <h3 className="h4 pb-4">
         <FormattedMessage
-          id="home.sponsors.supported_by"
+          id="sponsors.supported_by"
           defaultMessage="Supported by"
         />
       </h3>
