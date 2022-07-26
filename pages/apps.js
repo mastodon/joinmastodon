@@ -383,12 +383,12 @@ const BrowseApps = () => {
           />
         </h2>
         <div className="-mx-gutter pis-gutter mb-6 overflow-x-auto">
-          <div className="flex gap-gutter">
+          <div className="flex flex-wrap gap-gutter md:flex-nowrap">
             {categories.map((category) => (
               <label
                 key={category.key}
                 className={classNames(
-                  "b3 block w-full whitespace-nowrap rounded border-2 p-4 text-center !font-600 transition-all",
+                  "b3 block whitespace-nowrap rounded border-2 p-4 text-center !font-600 transition-all md:w-full",
                   category.key === activeCategory
                     ? "border-accent-blurple bg-accent-blurple text-white hover:border-dark-blurple hover:bg-dark-blurple"
                     : "border-accent-blurple bg-white text-accent-blurple hover:border-dark-blurple hover:text-dark-blurple"
