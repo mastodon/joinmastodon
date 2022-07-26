@@ -31,12 +31,12 @@ export const categoriesMessages = defineMessages({
 const Servers = () => {
   return (
     <>
-      <section className=" h-[612px] pt-[var(--header-area)]">
-        <div className="flex h-full max-w-[50ch] flex-col justify-center text-white">
-          <h1 className="h1">
+      <section className=" h-[791px] pt-[var(--header-area)]">
+        <div className="gap-x-gutter pt-28 text-white lg:grid lg:grid-cols-12">
+          <h1 className="h1 lg:col-span-3 lg:col-start-2">
             <FormattedMessage id="servers" defaultMessage="Servers" />
           </h1>
-          <p className="sh1">
+          <p className="sh1 max-w-[36ch] lg:col-span-5 lg:col-start-2">
             <FormattedMessage
               id="servers.hero.body"
               defaultMessage="Find your community here on the servers page. New here? Check out the help section below"
@@ -44,7 +44,7 @@ const Servers = () => {
           </p>
         </div>
 
-        <div className=" absolute top-0 left-0 right-0 -z-10 h-[612px] w-[1868px] w-screen bg-[#0E0012] bg-[url(/illustrations/server_hero.webp)] bg-contain bg-center bg-no-repeat"></div>
+        <div className="absolute top-0 left-0 right-0 -z-10 h-[791px] w-screen bg-[url(/illustrations/servers.png)] bg-cover bg-center bg-no-repeat"></div>
       </section>
       <div className="py-10">
         <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
