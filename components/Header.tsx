@@ -54,6 +54,7 @@ const Header = () => {
       childItems: locales.map((locale) => ({
         key: locale.code,
         locale: locale.code,
+        scroll: false,
         value: "", // current page
         label: locale.language,
       })),
@@ -140,6 +141,7 @@ const Header = () => {
                           <Link
                             href={child.value}
                             locale={child.locale || undefined}
+                            scroll={child.scroll ?? true}
                           >
                             <a
                               {...bindSecondaryMenuItem(
@@ -215,9 +217,9 @@ const useMenu = ({ navigationItems }) => {
   // Ensuring document.activeElement follows the menu's roving tabindex
   useEffect(() => {
     if (menuBarHasFocus && rootElement.current) {
-      rootElement.current
-        .querySelector<HTMLElement>(`[tabindex="0"]`)
-        .focus({ preventScroll: true })
+      const activeTabIndexElement =
+        rootElement.current.querySelector<HTMLElement>(`[tabindex="0"]`)
+      activeTabIndexElement?.focus({ preventScroll: true })
     }
   }, [menuBarHasFocus, primaryMenuItemIndex, secondaryMenuItemIndex])
 

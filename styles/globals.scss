@@ -59,6 +59,9 @@ $xxl: 1400px;
 
 @layer base {
   html {
+    @apply [--footer-offset:14rem] md:[--footer-offset:18rem];
+  }
+  html {
     overflow-x: hidden;
   }
   html,

@@ -23,5 +23,5 @@ oldTranslationFiles.forEach((localeFile) => {
     }
   }
 
-  fs.writeFileSync(`./locales/${localeFile}`, JSON.stringify(result))
+  fs.writeFileSync(`./locales/${localeFile}`, JSON.stringify(result, null, 2))
 })
