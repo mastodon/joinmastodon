@@ -1,5 +1,6 @@
 import classnames from "classnames"
 import Image from "next/image"
+import Link from "next/link"
 import { FormattedMessage } from "react-intl"
 import SponsorGroup from "../components/SponsorGroup"
 import sponsors from "../data/sponsors"
@@ -22,10 +23,21 @@ function Sponsors() {
         </h2>
         <div className="grid gap-y-8 lg:grid-cols-4 lg:gap-x-5">
           {sponsorData.silver.map((sponsor) => {
-            return <SponsorCard sponsor={sponsor} tier="silver" />
+            if (sponsor.url) {
+              return (
+                <Link href={sponsor.url}>
+                  <a>
+                    <SponsorCard sponsor={sponsor} tier="silver" />
+                  </a>
+                </Link>
+              )
+            } else {
+              return <SponsorCard sponsor={sponsor} tier="silver" />
+            }
           })}
         </div>
       </section>
+
       <section className="general-sponsors mb-96">
         <h2 className="h5 mb-8">
           <FormattedMessage
