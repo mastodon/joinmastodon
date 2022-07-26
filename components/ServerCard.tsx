@@ -34,7 +34,9 @@ const ServerCard = ({ server }: { server: Server }) => {
           </span>
           {server.approval_required && <span>Invite only</span>}
         </p>
-        <p className="b3 line-clamp-5">{server.description}</p>
+        <p className="b3 line-clamp-5 [unicode-bidi:plaintext]">
+          {server.description}
+        </p>
       </div>
 
       <div className="p-4 pt-0">
