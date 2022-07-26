@@ -44,7 +44,7 @@ const Servers = () => {
           </p>
         </div>
 
-        <div className="absolute top-0 left-0 right-0 -z-10 h-[791px] w-screen bg-[url(/illustrations/servers.png)] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute top-0 left-0 right-0 -z-10 h-[791px] w-screen bg-[url(/illustrations/server_hero.png)] bg-cover bg-center bg-no-repeat"></div>
       </section>
       <div className="py-10">
         <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
