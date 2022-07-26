@@ -6,9 +6,9 @@ import Image from "next/image"
 
 export const Footer = () => (
   <>
-    <footer className="full-width-bg relative bg-nightshade pb-24 text-center text-white md:pt-24 md:text-start">
+    <footer className="full-width-bg relative mt-footer-offset bg-nightshade pb-24 text-center text-white md:pt-24 md:text-start">
       {/* TODO(daniel): tighten up sizing of swoosh */}
-      <div className="absolute bottom-full left-1/2 h-48 w-full -translate-x-1/2 translate-y-[1px] bg-[url(/illustrations/swoosh.svg)] bg-no-repeat [background-position:90%_bottom] [background-size:MAX(64rem,100vw)_auto] md:h-72"></div>
+      <div className="absolute bottom-full left-1/2 h-48 w-full -translate-x-1/2 translate-y-[1px] bg-[url(/illustrations/swoosh.svg)] bg-no-repeat [background-position:90%_bottom] [background-size:MAX(64rem,100vw)_auto] md:h-[MAX(18vw,12rem)]"></div>
       <nav className="full-width-bg__inner">
         <div className="grid gap-x-4 gap-y-16 md:grid-cols-12 md:gap-x-5">
           <div className="w-20 max-w-full justify-self-center md:col-start-1 md:col-end-4 lg:col-start-2 lg:col-end-5">
