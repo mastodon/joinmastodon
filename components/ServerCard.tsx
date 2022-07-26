@@ -3,7 +3,7 @@ import { FormattedMessage, useIntl } from "react-intl"
 import classNames from "classnames"
 
 import LinkButton from "./LinkButton"
-import type Server from "../types/server"
+import type { Server } from "../types/api"
 
 import { categoriesMessages } from "../data/categories"
 

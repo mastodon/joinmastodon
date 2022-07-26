@@ -5,7 +5,7 @@ import classnames from "classnames"
 import { orderBy as _orderBy } from "lodash"
 import ServerCard from "../components/ServerCard"
 import { categoriesMessages } from "../data/categories"
-import type Server from "../types/server"
+import type { Server, Category, Language } from "../types/api"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
