@@ -6,6 +6,8 @@ import { orderBy as _orderBy } from "lodash"
 import ServerCard from "../components/ServerCard"
 import { categoriesMessages } from "../data/categories"
 import type { Server, Category, Language } from "../types/api"
+import SelectMenu from "../components/SelectMenu"
+import SVG from "react-inlinesvg"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
@@ -20,7 +22,8 @@ const Servers = ({ filterList }) => {
   const [filters, setFilters] = useState({ language: "", category: "" })
 
   // stores filter list to be passed at placeholder data in the next API fetch
-  const cachedFilterList = useRef(filterList)
+  const cachedLanguages = useRef(filterList.language)
+  const cachedCategory = useRef(filterList.category)
 
   const params = new URLSearchParams(filters)
   const queryOptions = {
@@ -32,36 +35,20 @@ const Servers = ({ filterList }) => {
     return await res.json()
   }
 
-  const apiCategories = useQuery(
+  const apiCategories = useQuery<Category[]>(
     ["categories", filters.language],
     () => fetchEndpoint("categories"),
-    { ...queryOptions, placeholderData: cachedFilterList.current.category }
+    { ...queryOptions, placeholderData: cachedCategory.current }
   )
-  const apiLanguages = useQuery(
+  const apiLanguages = useQuery<Language[]>(
     ["languages", filters.category],
     () => fetchEndpoint("languages"),
-    { ...queryOptions, placeholderData: cachedFilterList.current.language }
+    { ...queryOptions, placeholderData: cachedLanguages.current }
   )
-  const apiFilters = { category: apiCategories, language: apiLanguages }
+  cachedLanguages.current = apiLanguages.data
+  cachedCategory.current = apiCategories.data
 
-  // when we get category/language data from the API, we need to update
-  // the full list of filters' `servers_count` with the new data,
-  // or 0 if it's not in the API's list
-  let updatedFilterList = { ...filterList }
-  filterAccessKeys.forEach(({ groupKey, idKey }) => {
-    if (apiFilters[groupKey].data) {
-      updatedFilterList[groupKey] = filterList[groupKey].map((localItem) => ({
-        ...localItem,
-        servers_count:
-          apiFilters[groupKey].data.find(
-            (remoteItem) => remoteItem[idKey] === localItem[idKey]
-          )?.servers_count ?? 0,
-      }))
-    }
-  })
-  cachedFilterList.current = updatedFilterList
-
-  const servers = useQuery(
+  const servers = useQuery<Server[]>(
     ["servers", filters.language, filters.category],
     () => fetchEndpoint("servers"),
     queryOptions
@@ -71,9 +58,48 @@ const Servers = ({ filterList }) => {
     <div className="py-40">
       <h1>Servers page placeholder</h1>
 
+      <div className="my-8 flex justify-between">
+        <h2 className="flex items-center gap-2">
+          <SVG className="text-gray-2" src="/ui/filters.svg" />
+          <span className="text-gray-1">
+            <FormattedMessage id="wizard.filter" defaultMessage="Filter" />
+          </span>
+        </h2>
+
+        <SelectMenu
+          label={
+            <FormattedMessage
+              id="wizard.filter_by_language"
+              defaultMessage="Filter by language"
+            />
+          }
+          onChange={(v) => {
+            setFilters({ ...filters, language: v })
+          }}
+          value={filters.language}
+          options={[
+            {
+              value: "",
+              label: (
+                <FormattedMessage
+                  id="wizard.filter.all_languages"
+                  defaultMessage="All languages"
+                />
+              ),
+            },
+            ...apiLanguages.data.map((language) => ({
+              label: language.language
+                ? `${language.language} (${language.servers_count})`
+                : "",
+              value: language.locale,
+            })),
+          ]}
+        />
+      </div>
+
       <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
         <ServerFilters
-          filterList={updatedFilterList}
+          filterList={{ category: apiCategories }}
           filters={filters}
           setFilters={setFilters}
         />
@@ -92,11 +118,18 @@ const ServerList = ({ servers }) => {
     return <p>Oops, something went wrong.</p>
   }
 
+  const featuredServers = null
+
   return (
     <div className="col-span-4 lg:col-start-4 lg:col-end-13 ">
-      <h3 className="h5 mb-6">
-        <FormattedMessage id="servers.browse_all" defaultMessage="Browse all" />
-      </h3>
+      {featuredServers && (
+        <h3 className="h5 mb-6">
+          <FormattedMessage
+            id="servers.browse_all"
+            defaultMessage="Browse all"
+          />
+        </h3>
+      )}
       <div className="grid gap-gutter md:grid-cols-2  xl:grid-cols-3">
         {servers.data.map((server) => (
           <ServerCard key={server.domain} server={server} />
@@ -132,13 +165,14 @@ const ServerFilters = ({
     <div className="col-span-3">
       {Object.keys(filterList).map((group, i) => {
         const accessKeys = filterAccessKeys.find((k) => k.groupKey === group)
+
         return (
           <div className="mb-8" key={i}>
             <h3 className="h5 mb-2" id={`${group}-group-label`}>
               {intl.formatMessage(filterGroupMessages[group])}
             </h3>
             <ul>
-              {filterList[group].map((item, i) => {
+              {filterList[group].data.map((item, i) => {
                 const isActive =
                   filters.language === item.locale ||
                   filters.category === item.category
