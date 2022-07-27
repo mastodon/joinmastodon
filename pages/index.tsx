@@ -34,7 +34,7 @@ export default Home
 
 const HomeHero = () => {
   return (
-    <section className="full-width-bg hero h-[80vh] bg-main-blurple pt-[var(--header-area)] text-center text-white">
+    <section className="full-width-bg hero  h-[1230px] pt-[var(--header-area)] text-center text-white">
       <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
         <h1 className="h1 mb-2 max-w-[17ch]">
           <FormattedMessage
@@ -66,6 +66,7 @@ const HomeHero = () => {
           </LinkButton>
         </div>
       </div>
+      <div className="absolute top-0 left-0 right-0 -z-10 h-[1230px] w-screen bg-[url(/illustrations/home_hero.webp)] bg-cover bg-center bg-no-repeat"></div>
     </section>
   )
 }
