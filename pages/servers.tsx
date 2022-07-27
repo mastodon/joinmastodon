@@ -104,10 +104,12 @@ const Servers = ({ filterList }) => {
                 defaultMessage: "All languages",
               }),
             },
-            ...apiLanguages.data.map((language) => ({
-              label: language.language,
-              value: language.locale,
-            })),
+            ...apiLanguages.data
+              .filter((language) => language.language && language.locale)
+              .map((language) => ({
+                label: language.language,
+                value: language.locale,
+              })),
           ]}
         />
       </div>
