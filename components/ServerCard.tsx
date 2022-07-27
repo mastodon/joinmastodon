@@ -13,9 +13,9 @@ const ServerCard = ({ server }: { server: Server }) => {
   const intl = useIntl()
   return (
     <div className="grid grid-rows-[auto_1fr_auto] rounded-md p-4 shadow">
-      <div className="relative h-26 overflow-hidden rounded-md bg-black lg:h-40">
+      <div className="relative h-26 lg:h-40">
         <Image
-          className="rounded-t"
+          className="rounded-md bg-black"
           src={server.proxied_thumbnail}
           layout="fill"
           objectFit="cover"
