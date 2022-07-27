@@ -66,7 +66,7 @@ const HomeHero = () => {
           </LinkButton>
         </div>
       </div>
-      <div className="bg-[65%] absolute top-0 left-0 right-0 -z-10 h-[1000px] w-screen bg-[url(/illustrations/home_hero.webp)] bg-cover bg-center bg-no-repeat xl:h-[1197px]"></div>
+      <div className="absolute top-0 left-0 right-0 -z-10 h-[1000px] w-screen bg-[url(/illustrations/home_hero.webp)] bg-cover bg-center bg-no-repeat xl:h-[1197px]"></div>
     </section>
   )
 }
