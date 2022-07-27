@@ -17,6 +17,10 @@ const Header = () => {
 
   const navigationItems = [
     {
+      value: "/servers",
+      label: <FormattedMessage id="servers" defaultMessage="Servers" />,
+    },
+    {
       value: "/apps",
       label: <FormattedMessage id="nav.apps" defaultMessage="Apps" />,
     },
