@@ -280,8 +280,8 @@ const WhyMastodon = () => {
 
 const Sponsors = ({ sponsors }) => {
   return (
-    <section className="text-center">
-      <div className="py-20 lg:grid lg:grid-cols-12 lg:gap-x-gutter lg:py-28">
+    <section className="grid gap-x-gutter text-center lg:grid-cols-12">
+      <div className="py-20 lg:col-span-12 lg:grid lg:grid-cols-12 lg:gap-x-gutter lg:py-28">
         <div className="mx-auto mb-12 max-w-lg lg:col-span-4 lg:col-start-5 lg:mb-10 lg:w-full">
           <Image
             src={illoWorld}
@@ -322,23 +322,27 @@ const Sponsors = ({ sponsors }) => {
         </div>
       </div>
 
-      <h3 className="h4 pb-4">
+      <h3 className="h4 mb-8 text-center lg:col-span-12">
         <FormattedMessage
           id="sponsors.supported_by"
           defaultMessage="Supported by"
         />
       </h3>
 
-      <SponsorGroup sponsors={sponsors.platinum} />
+      <div className="lg:col-start-4 lg:col-end-10">
+        <SponsorGroup sponsors={sponsors.platinum} />
+      </div>
 
-      <h4 className="h5 pt-20 pb-4">
+      <h4 className="h5 mb-8 pt-20 text-center lg:col-span-12">
         <FormattedMessage
           id="home.additional_support_from"
           defaultMessage="Additional support from"
         />
       </h4>
 
-      <SponsorGroup sponsors={sponsors.additionalFunding} />
+      <div className="lg:col-start-4 lg:col-end-10">
+        <SponsorGroup sponsors={sponsors.additionalFunding} />
+      </div>
     </section>
   )
 }
