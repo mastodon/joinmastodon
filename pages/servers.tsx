@@ -1,57 +1,125 @@
 import { useQuery } from "@tanstack/react-query"
-import { FormattedMessage, defineMessages } from "react-intl"
+import { useRef, useState } from "react"
+import { FormattedMessage, defineMessages, useIntl } from "react-intl"
+import classnames from "classnames"
+import { orderBy as _orderBy } from "lodash"
 import ServerCard from "../components/ServerCard"
-import type Server from "../types/server"
+import { categoriesMessages } from "../data/categories"
+import type { Server, Category, Language } from "../types/api"
+import SelectMenu from "../components/SelectMenu"
+import SVG from "react-inlinesvg"
 
-export const categoriesMessages = defineMessages({
-  academia: { id: "server.category.academia", defaultMessage: "Academia" },
-  activism: { id: "server.category.activism", defaultMessage: "Activism" },
-  adult: {
-    id: "server.category.adult_content",
-    defaultMessage: "Adult content",
-  },
-  art: { id: "server.category.art", defaultMessage: "Art" },
-  books: { id: "server.category.books", defaultMessage: "Books" },
-  food: { id: "server.category.food", defaultMessage: "Food" },
-  furry: { id: "server.category.furry", defaultMessage: "Furry" },
-  games: { id: "server.category.gaming", defaultMessage: "Gaming" },
-  general: { id: "server.category.general", defaultMessage: "General" },
-  humor: { id: "server.category.humor", defaultMessage: "Humour" },
-  journalism: {
-    id: "server.category.journalism",
-    defaultMessage: "Journalism",
-  },
-  lgbt: { id: "server.category.lgbt", defaultMessage: "LGBTQ+" },
-  music: { id: "server.category.music", defaultMessage: "Music" },
-  regional: { id: "server.category.regional", defaultMessage: "Regional" },
-  sports: { id: "server.category.sports", defaultMessage: "Sports" },
-  tech: { id: "server.category.technology", defaultMessage: "Technology" },
-})
+const apiBase = `https://api.joinmastodon.org/`
+const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
 
-const Servers = () => {
+const Servers = ({ filterList }) => {
+  const intl = useIntl()
+  const [filters, setFilters] = useState({ language: "", category: "" })
+
+  // stores filter list to be passed at placeholder data in the next API fetch
+  const cachedLanguages = useRef(filterList.language)
+  const cachedCategory = useRef(filterList.category)
+
+  const params = new URLSearchParams(filters)
+  const queryOptions = {
+    cacheTime: 30 * 60 * 1000, // 30 minutes
+  }
+  const fetchEndpoint = async function (endpoint): Promise<any[]> {
+    const res = await fetch(getApiUrl(endpoint, params.toString()))
+    return await res.json()
+  }
+
+  const apiCategories = useQuery<Category[]>(
+    ["categories", filters.language],
+    () => fetchEndpoint("categories"),
+    { ...queryOptions, placeholderData: cachedCategory.current }
+  )
+  const apiLanguages = useQuery<Language[]>(
+    ["languages", filters.category],
+    () => fetchEndpoint("languages"),
+    { ...queryOptions, placeholderData: cachedLanguages.current }
+  )
+
+  /**
+   * To keep the list stable when we get category data from the API,
+   * we need to update the full list of filters' `servers_count` with
+   * the new data, or 0 if it's not in the API's list */
+  const updateCategoriesWithServersCount = (categories, newCategories) => {
+    return categories.map((localItem) => ({
+      ...localItem,
+      servers_count:
+        newCategories.find(
+          (remoteItem) => remoteItem.category === localItem.category
+        )?.servers_count ?? 0,
+    }))
+  }
+  const updatedCategoryList = updateCategoriesWithServersCount(
+    filterList.category,
+    apiCategories.data
+  )
+
+  cachedLanguages.current = apiLanguages.data
+  cachedCategory.current = updatedCategoryList
+
+  const servers = useQuery<Server[]>(
+    ["servers", filters.language, filters.category],
+    () => fetchEndpoint("servers"),
+    queryOptions
+  )
+
   return (
     <div className="py-40">
       <h1>Servers page placeholder</h1>
 
-      <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
-        <div className="col-span-3">checkboxes go here</div>
+      <div className="my-8 flex justify-between">
+        <h2 className="flex items-center gap-2">
+          <SVG className="text-gray-2" src="/ui/filters.svg" />
+          <span className="text-gray-1">
+            <FormattedMessage id="wizard.filter" defaultMessage="Filter" />
+          </span>
+        </h2>
 
-        <ServerList />
+        <SelectMenu
+          label={
+            <FormattedMessage
+              id="wizard.filter_by_language"
+              defaultMessage="Filter by language"
+            />
+          }
+          onChange={(v) => {
+            console.log("CHANGE", v)
+            setFilters({ ...filters, language: v })
+          }}
+          value={filters.language}
+          options={[
+            {
+              value: "",
+              label: intl.formatMessage({
+                id: "wizard.filter.all_languages",
+                defaultMessage: "All languages",
+              }),
+            },
+            ...apiLanguages.data.map((language) => ({
+              label: language.language,
+              value: language.locale,
+            })),
+          ]}
+        />
+      </div>
+
+      <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
+        <ServerFilters
+          filterList={{ category: updatedCategoryList }}
+          filters={filters}
+          setFilters={setFilters}
+        />
+        <ServerList servers={servers} />
       </div>
     </div>
   )
 }
 
-const ServerList = () => {
-  const servers = useQuery(
-    ["servers"],
-    async function (): Promise<Server[]> {
-      const res = await fetch("https://api.joinmastodon.org/servers")
-      return await res.json()
-    },
-    { cacheTime: 30 * 60 * 1000 } // 30 minutes
-  )
-
+const ServerList = ({ servers }) => {
   if (servers.isLoading) {
     return <p>Loading...</p>
   }
@@ -60,17 +128,124 @@ const ServerList = () => {
     return <p>Oops, something went wrong.</p>
   }
 
+  const featuredServers = null
+
   return (
     <div className="col-span-4 lg:col-start-4 lg:col-end-13 ">
-      <h3 className="h5 mb-6">
-        <FormattedMessage id="servers.browse_all" defaultMessage="Browse all" />
-      </h3>
+      {featuredServers && (
+        <h3 className="h5 mb-6">
+          <FormattedMessage
+            id="servers.browse_all"
+            defaultMessage="Browse all"
+          />
+        </h3>
+      )}
       <div className="grid gap-gutter md:grid-cols-2  xl:grid-cols-3">
-        {servers.data?.map((server) => (
+        {servers.data.map((server) => (
           <ServerCard key={server.domain} server={server} />
         ))}
       </div>
     </div>
   )
 }
+
+const ServerFilters = ({
+  filters,
+  setFilters,
+  filterList,
+}: {
+  filters: any
+  setFilters: any
+  filterList: any
+}) => {
+  const intl = useIntl()
+  const filterGroupMessages = defineMessages({
+    category: { id: "server.filter_by.category", defaultMessage: "Topic" },
+    language: {
+      id: "server.filter_by.language",
+      defaultMessage: "Language",
+    },
+    server_size: {
+      id: "server.filter_by.server_size",
+      defaultMessage: "Server size",
+    },
+  })
+
+  return (
+    <div className="col-span-3">
+      {Object.keys(filterList).map((group, i) => {
+        const totalServersCount =
+          filterList[group]?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
+        const allOption = {
+          category: "",
+          servers_count: totalServersCount,
+        }
+        const options = [allOption, ...filterList[group]]
+        return (
+          <div className="mb-8" key={i}>
+            <h3 className="h5 mb-2" id={`${group}-group-label`}>
+              {intl.formatMessage(filterGroupMessages[group])}
+            </h3>
+            <ul>
+              {options.map((item, i) => {
+                const isActive = filters.category === item.category
+                return (
+                  <li key={i}>
+                    <label
+                      className={classnames(
+                        "b2 flex cursor-pointer gap-1 rounded focus-within:outline focus-within:outline-2 focus-within:outline-accent-blurple",
+                        isActive && "!font-800",
+                        item.servers_count === 0 && "text-gray-2"
+                      )}
+                    >
+                      <input
+                        className="sr-only"
+                        type="checkbox"
+                        name={`filters-${group}`}
+                        onChange={() => {
+                          setFilters({
+                            ...filters,
+                            category: isActive ? "" : item.category,
+                          })
+                        }}
+                      />
+                      {item.category === ""
+                        ? intl.formatMessage({
+                            id: "wizard.filter.all_categories",
+                            defaultMessage: "All topics",
+                          })
+                        : intl.formatMessage(categoriesMessages[item.category])}
+
+                      <span className="text-gray-2">
+                        ({item.servers_count})
+                      </span>
+                    </label>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+export async function getServerSideProps() {
+  const categoryRes = await fetch(getApiUrl("categories"))
+  let category = await categoryRes.json()
+
+  const langaugeRes = await fetch(getApiUrl("languages"))
+  const language = await langaugeRes.json()
+
+  return {
+    props: {
+      filterList: {
+        category,
+        language,
+      },
+    },
+  }
+}
+
 export default Servers
