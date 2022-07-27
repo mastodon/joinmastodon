@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query"
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 import classnames from "classnames"
 import { orderBy as _orderBy } from "lodash"
@@ -69,12 +69,14 @@ const Servers = ({ filterList }) => {
   )
 
   return (
-    <div className="py-40">
-      <h1>Servers page placeholder</h1>
+    <div className="grid py-40">
+      <section className="order-0">
+        <h1>Servers page placeholder</h1>
+      </section>
 
       <GettingStartedCards />
 
-      <div className="my-8 flex justify-between">
+      <div className="order-2 my-8 flex justify-between">
         <h2 className="flex items-center gap-2">
           <SVG className="text-gray-2" src="/ui/filters.svg" />
           <span className="text-gray-1">
@@ -110,7 +112,7 @@ const Servers = ({ filterList }) => {
         />
       </div>
 
-      <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
+      <div className="order-3 grid grid-cols-4 gap-gutter lg:grid-cols-12">
         <ServerFilters
           filterList={{ category: updatedCategoryList }}
           filters={filters}
@@ -123,8 +125,20 @@ const Servers = ({ filterList }) => {
 }
 
 const GettingStartedCards = () => {
+  const [visited, setVisited] = useState(false)
+  useEffect(function () {
+    let visits = localStorage.getItem("visited")
+
+    // on first visit, set localStorage.visited = true
+    if (!visits) {
+      localStorage.setItem("visited", "true")
+    } else {
+      setVisited(true) // on subsequent visits
+    }
+  }, [])
+
   return (
-    <section className="mb-8">
+    <section className={classnames("mb-8", visited ? "order-4" : "order-0")}>
       <h2 className="h3 mb-8 text-center">
         <FormattedMessage
           id="servers.getting_started.headline"
@@ -172,7 +186,6 @@ const GettingStartedCards = () => {
             />
           }
         />
-
         <IconCard
           title={
             <FormattedMessage
