@@ -369,7 +369,9 @@ const BrowseApps = () => {
               />
               <h2 className="h4 mb-5 mt-4">{title}</h2>
               <h2 className="sh1 mb-8">{copy}</h2>
-              <LinkButton href={cta_link}>{cta}</LinkButton>
+              <LinkButton size="large" href={cta_link}>
+                {cta}
+              </LinkButton>
             </div>
           </div>
         ))}
