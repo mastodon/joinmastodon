@@ -4,9 +4,10 @@ import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 import classnames from "classnames"
 import { orderBy as _orderBy } from "lodash"
 import ServerCard from "../components/ServerCard"
+import { IconCard } from "../components/IconCard"
+import SelectMenu from "../components/SelectMenu"
 import { categoriesMessages } from "../data/categories"
 import type { Server, Category, Language } from "../types/api"
-import SelectMenu from "../components/SelectMenu"
 import SVG from "react-inlinesvg"
 
 const apiBase = `https://api.joinmastodon.org/`
@@ -71,6 +72,8 @@ const Servers = ({ filterList }) => {
     <div className="py-40">
       <h1>Servers page placeholder</h1>
 
+      <GettingStartedCards />
+
       <div className="my-8 flex justify-between">
         <h2 className="flex items-center gap-2">
           <SVG className="text-gray-2" src="/ui/filters.svg" />
@@ -116,6 +119,77 @@ const Servers = ({ filterList }) => {
         <ServerList servers={servers} />
       </div>
     </div>
+  )
+}
+
+const GettingStartedCards = () => {
+  return (
+    <section className="mb-8">
+      <h2 className="h3 mb-8 text-center">
+        <FormattedMessage
+          id="servers.getting_started.headline"
+          defaultMessage="Getting started with Mastodon is easy"
+        />
+      </h2>
+      <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-4">
+        <IconCard
+          title={<FormattedMessage id="servers" defaultMessage="Servers" />}
+          icon="decentralized"
+          copy={
+            <FormattedMessage
+              id="servers.getting_started.servers"
+              defaultMessage="The first step is deciding which network you’d like to be a part of. Every server is operated by an independent organization or individual and the server you choose will host your account."
+            />
+          }
+        />
+        <IconCard
+          title={
+            <FormattedMessage
+              id="servers.getting_started.feed.title"
+              defaultMessage="Your feed"
+            />
+          }
+          icon="decentralized"
+          copy={
+            <FormattedMessage
+              id="servers.getting_started.feed.body"
+              defaultMessage="Once you join a server, you can curate your home feed by browsing locally, following and talking with people from other servers, or explore trending posts from any publically available server."
+            />
+          }
+        />
+        <IconCard
+          title={
+            <FormattedMessage
+              id="servers.getting_started.flexible.title"
+              defaultMessage="Flexible"
+            />
+          }
+          icon="decentralized"
+          copy={
+            <FormattedMessage
+              id="servers.getting_started.feed.body"
+              defaultMessage="Find a different server you'd prefer? With Mastodon, you can easily move your profile to a different server at any time without losing any followers. To be in complete control, you can create your own server."
+            />
+          }
+        />
+
+        <IconCard
+          title={
+            <FormattedMessage
+              id="servers.getting_started.safe_for_all.title"
+              defaultMessage="Safe for all"
+            />
+          }
+          icon="decentralized"
+          copy={
+            <FormattedMessage
+              id="servers.getting_started.safe_for_all.body"
+              defaultMessage="Actively working to eliminate hate speech, Mastodon will only list servers that are consistently committed to moderation again racism, sexism, and transphobia."
+            />
+          }
+        />
+      </div>
+    </section>
   )
 }
 
