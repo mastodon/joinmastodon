@@ -75,7 +75,7 @@ function Sponsors() {
         ]}
       />
 
-      <section className="platinum-gold-sponsors">
+      <section className="platinum-gold-sponsors mb-32">
         <h2 className="h4 mb-10 text-center">
           <FormattedMessage
             id="sponsors.supported_by"
