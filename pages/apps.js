@@ -6,13 +6,13 @@ import downloadOnAppStore from "../public/badges/app-store.svg"
 import { FormattedMessage, useIntl } from "react-intl"
 import Head from "next/head"
 import Image from "next/image"
-import LinkButton from "../components/LinkButton"
 import AppHero from "../components/AppHero"
 import loadIntlMessages from "../utils/loadIntlMessages"
-import SVG from "react-inlinesvg"
 import footer_festival from "../public/illustrations/footer_festival.png"
 import AppsGrid from "../components/AppsGrid"
-const BrowseApps = () => {
+import TwoUpFeature from "../components/TwoUpFeature"
+
+const AppsPage = () => {
   const intl = useIntl()
   return (
     <div className="pt-40">
@@ -70,8 +70,8 @@ const BrowseApps = () => {
         </div>
       </div>
 
-      <div className="gap-gutter md:flex">
-        {[
+      <TwoUpFeature
+        features={[
           {
             icon: "/icons/progressive-web.svg",
             title: (
@@ -116,22 +116,8 @@ const BrowseApps = () => {
             ),
             cta_link: "https://docs.joinmastodon.org/client/intro/",
           },
-        ].map(({ icon, title, copy, cta, cta_link }) => (
-          <div className="grid py-8 md:py-32 lg:grid-cols-6" key={title}>
-            <div className="md:pie-4 lg:col-span-4 lg:col-start-2 lg:pie-0">
-              <SVG
-                src={icon}
-                className="-ml-2 h-auto w-20 text-accent-blurple md:-ml-4 md:w-32"
-              />
-              <h2 className="h4 mb-5 mt-4">{title}</h2>
-              <h2 className="sh1 mb-8">{copy}</h2>
-              <LinkButton size="large" href={cta_link}>
-                {cta}
-              </LinkButton>
-            </div>
-          </div>
-        ))}
-      </div>
+        ]}
+      />
       <AppsGrid />
       <AppHero backgroundImage={footer_festival} />
       <Head>
@@ -176,4 +162,4 @@ export async function getStaticProps(ctx) {
   }
 }
 
-export default BrowseApps
+export default AppsPage
