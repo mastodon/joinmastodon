@@ -11,6 +11,7 @@ import loadIntlMessages from "../utils/loadIntlMessages"
 import footer_festival from "../public/illustrations/footer_festival.png"
 import AppsGrid from "../components/AppsGrid"
 import TwoUpFeature from "../components/TwoUpFeature"
+import { apps as appsList } from "../data/apps.ts"
 
 const AppsPage = () => {
   const intl = useIntl()
@@ -118,7 +119,7 @@ const AppsPage = () => {
           },
         ]}
       />
-      <AppsGrid />
+      <AppsGrid apps={appsList} />
       <AppHero backgroundImage={footer_festival} />
       <Head>
         <title>
