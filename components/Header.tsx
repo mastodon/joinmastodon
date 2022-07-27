@@ -95,7 +95,7 @@ const Header = () => {
       <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
         <div>
           <Link href="/">
-            <a className="flex max-w-[11.375rem] md:max-w-[12.625rem]">
+            <a className="relative z-10 flex max-w-[11.375rem] md:max-w-[12.625rem]">
               <Image src={mastodonLogo} alt="Mastodon" />
             </a>
           </Link>
@@ -106,7 +106,8 @@ const Header = () => {
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "absolute w-screen gap-4 rounded focus-within:outline md:relative md:w-auto md:gap-10 md:p-4",
+              "fixed inset-0 flex-col bg-eggplant px-6 pt-[var(--header-area)] md:bg-[transparent]",
+              "w-screen gap-4 focus-within:outline md:relative md:w-auto md:flex-row md:gap-10 md:rounded md:p-4",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
@@ -116,7 +117,7 @@ const Header = () => {
                   <>
                     <button
                       {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
-                      className="flex items-center gap-[0.125rem] whitespace-nowrap focus:outline-2"
+                      className="md:b1 h5 flex items-center gap-[0.125rem] whitespace-nowrap focus:outline-2"
                     >
                       {item.label}
                       <SVG
@@ -133,11 +134,11 @@ const Header = () => {
                     <ul
                       {...bindSecondaryMenu()}
                       className={classNames(
-                        "absolute top-[100%] flex flex-col rounded bg-eggplant p-4 -inline-end-4 md:shadow",
+                        "top-[100%] flex flex-col rounded bg-eggplant p-4 -inline-end-4 md:absolute md:shadow",
                         (!menuBarHasFocus ||
                           primaryMenuItemIndex !== itemIndex ||
                           secondaryMenuItemIndex === null) &&
-                          "md:sr-only"
+                          "sr-only"
                       )}
                     >
                       {item.childItems.map((child, childIndex) => (
@@ -164,7 +165,7 @@ const Header = () => {
                 ) : (
                   <Link href={item.value}>
                     <a
-                      className="whitespace-nowrap"
+                      className="md:b1 h5 whitespace-nowrap"
                       {...bindPrimaryMenuItem(itemIndex)}
                     >
                       {item.label}
@@ -248,7 +249,9 @@ const useMenu = ({ navigationItems }) => {
       onKeyDown: (e) => {
         const isRTL = Boolean(e.target?.closest("[dir='rtl']"))
         if (e.key === "Escape") {
-          setMobileMenuOpen(false)
+          if (secondaryMenuItemIndex === null) {
+            setMobileMenuOpen(false)
+          }
         }
         if (
           ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)
