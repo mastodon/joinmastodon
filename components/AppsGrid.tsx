@@ -59,14 +59,17 @@ const apps = {
     { name: "Tooter", icon: tooter, url: "https://openrepos.net/content/dysko/tooter" },
   ],
 }
+
+// normalizing the apps dictionary
 const allApps = Object.entries(apps)
   .map(([category, apps]) =>
-    apps.map(({ name, icon, url, paid }) => ({
+    apps.map(({ name, icon, url, paid, released_on }) => ({
       name,
       icon,
       url,
-      paid: paid || false,
       category,
+      paid: paid ?? false,
+      released_on: new Date(released_on) ?? null,
     }))
   )
   .flat()
