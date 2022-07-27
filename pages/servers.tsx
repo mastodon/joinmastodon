@@ -92,7 +92,6 @@ const Servers = ({ filterList }) => {
             />
           }
           onChange={(v) => {
-            console.log("CHANGE", v)
             setFilters({ ...filters, language: v })
           }}
           value={filters.language}
@@ -114,7 +113,7 @@ const Servers = ({ filterList }) => {
         />
       </div>
 
-      <div className="order-3 grid grid-cols-4 gap-gutter lg:grid-cols-12">
+      <div className="order-3 grid grid-cols-4 gap-gutter md:grid-cols-12">
         <ServerFilters
           filterList={{ category: updatedCategoryList }}
           filters={filters}
@@ -220,7 +219,7 @@ const ServerList = ({ servers }) => {
   const featuredServers = null
 
   return (
-    <div className="col-span-4 lg:col-start-4 lg:col-end-13 ">
+    <div className="col-span-4 md:col-start-4 md:col-end-13 ">
       {featuredServers && (
         <h3 className="h5 mb-6">
           <FormattedMessage
