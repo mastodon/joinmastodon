@@ -164,8 +164,8 @@ const sponsors = {
       url: "https://www.ivisa.com/photos",
       logo: require("../public/sponsors/ivisa.png"),
       name: "iVisa",
+      light: true,
     },
-    ,
     {
       url: "https://www.mysextoyguide.com/",
       logo: require("../public/sponsors/mysextoyguide.jpg"),
@@ -175,6 +175,7 @@ const sponsors = {
       url: "https://www.kevani.com/",
       logo: require("../public/sponsors/KEVANI_LOGO.png"),
       name: "Kevani",
+      light: true,
     },
     {
       url: "https://www.doggietoys.deals/",
@@ -230,6 +231,7 @@ const sponsors = {
       url: "https://farbridge.com/",
       logo: require("../public/sponsors/farbridge.png"),
       name: "Farbridge",
+      light: true,
     },
   ],
   silver: [

@@ -7,6 +7,7 @@ import classnames from "classnames"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
+import SponsorGroup from "../components/SponsorLogoGroup"
 
 import testimonials from "../data/testimonials.json"
 import { platinum, additionalFunding } from "../data/sponsors.js"
@@ -50,17 +51,17 @@ const HomeHero = () => {
         </p>
 
         <div className="flex justify-center gap-12">
-          <LinkButton size="medium" href="/">
+          <LinkButton size="large" href="/apps">
             <FormattedMessage
-              id="home.how_it_works"
-              defaultMessage="How it works"
+              id="home.get_the_app"
+              defaultMessage="Get the app"
             />
           </LinkButton>
 
-          <LinkButton size="medium" href="/servers" light borderless>
+          <LinkButton size="large" href="/servers" light borderless>
             <FormattedMessage
               id="home.get_started"
-              defaultMessage="Get started"
+              defaultMessage="Find a server"
             />
           </LinkButton>
         </div>
@@ -113,7 +114,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="medium" href="/">
+            <LinkButton size="large" href="/">
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -136,7 +137,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="medium" href="/">
+            <LinkButton size="large" href="/">
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -159,7 +160,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="medium" href="/">
+            <LinkButton size="large" href="/">
               <FormattedMessage
                 id="home.features.button.find_a_server"
                 defaultMessage="Find a server"
@@ -306,7 +307,7 @@ const Sponsors = ({ sponsors }) => {
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
             <LinkButton href="https://sponsor.joinmastodon.org/" size="large">
               <FormattedMessage
-                id="sponsorship.become_a_sponsor"
+                id="sponsors.become_a_sponsor"
                 defaultMessage="Become a sponsor"
               />
             </LinkButton>
@@ -323,7 +324,7 @@ const Sponsors = ({ sponsors }) => {
 
       <h3 className="h4 pb-4">
         <FormattedMessage
-          id="home.sponsors.supported_by"
+          id="sponsors.supported_by"
           defaultMessage="Supported by"
         />
       </h3>
@@ -339,43 +340,6 @@ const Sponsors = ({ sponsors }) => {
 
       <SponsorGroup sponsors={sponsors.additionalFunding} />
     </section>
-  )
-}
-
-const SponsorGroup = ({ sponsors }) => {
-  return (
-    <div className="grid grid-cols-2 items-center justify-center gap-5 gap-x-5 bg-white sm:flex sm:flex-wrap">
-      {sponsors.map((sponsor, i) => {
-        let isLastItem = sponsors[i + 1] == undefined
-        let isUnevenItems = sponsors.length % 2 != 0
-
-        return (
-          <Link href={sponsor.url} key={i}>
-            <a
-              className={classnames(
-                "relative inline-flex max-h-[90px] max-w-[200px] justify-self-center",
-                isLastItem && isUnevenItems && "col-span-2"
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                aspectRatio: String(
-                  sponsor.logo.default.width / sponsor.logo.default.height || 0
-                ),
-              }}
-            >
-              <Image
-                className={classnames(
-                  "object-contain mix-blend-luminosity",
-                  sponsor.light && "invert"
-                )}
-                src={sponsor.logo}
-              />
-            </a>
-          </Link>
-        )
-      })}
-    </div>
   )
 }
 
