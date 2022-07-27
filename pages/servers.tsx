@@ -12,13 +12,8 @@ import SVG from "react-inlinesvg"
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
 
-// helps with standardizing property access and ID-matching from the API
-const filterAccessKeys = [
-  { groupKey: "category", idKey: "category" },
-  { groupKey: "language", idKey: "locale" },
-]
-
 const Servers = ({ filterList }) => {
+  const intl = useIntl()
   const [filters, setFilters] = useState({ language: "", category: "" })
 
   // stores filter list to be passed at placeholder data in the next API fetch
@@ -29,7 +24,6 @@ const Servers = ({ filterList }) => {
   const queryOptions = {
     cacheTime: 30 * 60 * 1000, // 30 minutes
   }
-
   const fetchEndpoint = async function (endpoint): Promise<any[]> {
     const res = await fetch(getApiUrl(endpoint, params.toString()))
     return await res.json()
@@ -45,8 +39,27 @@ const Servers = ({ filterList }) => {
     () => fetchEndpoint("languages"),
     { ...queryOptions, placeholderData: cachedLanguages.current }
   )
+
+  /**
+   * To keep the list stable when we get category data from the API,
+   * we need to update the full list of filters' `servers_count` with
+   * the new data, or 0 if it's not in the API's list */
+  const updateCategoriesWithServersCount = (categories, newCategories) => {
+    return categories.map((localItem) => ({
+      ...localItem,
+      servers_count:
+        newCategories.find(
+          (remoteItem) => remoteItem.category === localItem.category
+        )?.servers_count ?? 0,
+    }))
+  }
+  const updatedCategoryList = updateCategoriesWithServersCount(
+    filterList.category,
+    apiCategories.data
+  )
+
   cachedLanguages.current = apiLanguages.data
-  cachedCategory.current = apiCategories.data
+  cachedCategory.current = updatedCategoryList
 
   const servers = useQuery<Server[]>(
     ["servers", filters.language, filters.category],
@@ -74,23 +87,20 @@ const Servers = ({ filterList }) => {
             />
           }
           onChange={(v) => {
+            console.log("CHANGE", v)
             setFilters({ ...filters, language: v })
           }}
           value={filters.language}
           options={[
             {
               value: "",
-              label: (
-                <FormattedMessage
-                  id="wizard.filter.all_languages"
-                  defaultMessage="All languages"
-                />
-              ),
+              label: intl.formatMessage({
+                id: "wizard.filter.all_languages",
+                defaultMessage: "All languages",
+              }),
             },
             ...apiLanguages.data.map((language) => ({
-              label: language.language
-                ? `${language.language} (${language.servers_count})`
-                : "",
+              label: language.language,
               value: language.locale,
             })),
           ]}
@@ -99,7 +109,7 @@ const Servers = ({ filterList }) => {
 
       <div className="grid grid-cols-4 gap-gutter lg:grid-cols-12">
         <ServerFilters
-          filterList={{ category: apiCategories }}
+          filterList={{ category: updatedCategoryList }}
           filters={filters}
           setFilters={setFilters}
         />
@@ -150,7 +160,7 @@ const ServerFilters = ({
 }) => {
   const intl = useIntl()
   const filterGroupMessages = defineMessages({
-    category: { id: "server.filter_by.topic", defaultMessage: "Topic" },
+    category: { id: "server.filter_by.category", defaultMessage: "Topic" },
     language: {
       id: "server.filter_by.language",
       defaultMessage: "Language",
@@ -164,40 +174,52 @@ const ServerFilters = ({
   return (
     <div className="col-span-3">
       {Object.keys(filterList).map((group, i) => {
-        const accessKeys = filterAccessKeys.find((k) => k.groupKey === group)
-
+        const totalServersCount =
+          filterList[group]?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
+        const allOption = {
+          category: "",
+          servers_count: totalServersCount,
+        }
+        const options = [allOption, ...filterList[group]]
         return (
           <div className="mb-8" key={i}>
             <h3 className="h5 mb-2" id={`${group}-group-label`}>
               {intl.formatMessage(filterGroupMessages[group])}
             </h3>
             <ul>
-              {filterList[group].data.map((item, i) => {
-                const isActive =
-                  filters.language === item.locale ||
-                  filters.category === item.category
+              {options.map((item, i) => {
+                const isActive = filters.category === item.category
                 return (
-                  <li
-                    className={classnames(
-                      "b2 flex cursor-pointer gap-1",
-                      isActive && "!font-800",
-                      item.servers_count === 0 && "text-gray-2"
-                    )}
-                    key={i}
-                    onClick={() => {
-                      setFilters({
-                        ...filters,
-                        [accessKeys.groupKey]: isActive
-                          ? ""
-                          : item[accessKeys.idKey],
-                      })
-                    }}
-                  >
-                    {group === "category"
-                      ? intl.formatMessage(categoriesMessages[item.category])
-                      : item.language || item.server_size}
+                  <li key={i}>
+                    <label
+                      className={classnames(
+                        "b2 flex cursor-pointer gap-1 rounded focus-within:outline focus-within:outline-2 focus-within:outline-accent-blurple",
+                        isActive && "!font-800",
+                        item.servers_count === 0 && "text-gray-2"
+                      )}
+                    >
+                      <input
+                        className="sr-only"
+                        type="checkbox"
+                        name={`filters-${group}`}
+                        onChange={() => {
+                          setFilters({
+                            ...filters,
+                            category: isActive ? "" : item.category,
+                          })
+                        }}
+                      />
+                      {item.category === ""
+                        ? intl.formatMessage({
+                            id: "wizard.filter.all_categories",
+                            defaultMessage: "All topics",
+                          })
+                        : intl.formatMessage(categoriesMessages[item.category])}
 
-                    <span className="text-gray-2">({item.servers_count})</span>
+                      <span className="text-gray-2">
+                        ({item.servers_count})
+                      </span>
+                    </label>
                   </li>
                 )
               })}
