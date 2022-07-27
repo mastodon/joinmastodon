@@ -167,7 +167,7 @@ const GettingStartedCards = () => {
           icon="decentralized"
           copy={
             <FormattedMessage
-              id="servers.getting_started.feed.body"
+              id="servers.getting_started.flexible.body"
               defaultMessage="Find a different server you'd prefer? With Mastodon, you can easily move your profile to a different server at any time without losing any followers. To be in complete control, you can create your own server."
             />
           }
