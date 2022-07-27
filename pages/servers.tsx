@@ -76,7 +76,7 @@ const Servers = ({ filterList }) => {
 
       <GettingStartedCards />
 
-      <div className="order-2 my-8 flex justify-between">
+      <div className="order-2 my-4 flex flex-wrap justify-between lg:my-8 ">
         <h2 className="flex items-center gap-2">
           <SVG className="text-gray-2" src="/ui/filters.svg" />
           <span className="text-gray-1">
