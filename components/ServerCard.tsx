@@ -3,9 +3,9 @@ import { FormattedMessage, useIntl } from "react-intl"
 import classNames from "classnames"
 
 import LinkButton from "./LinkButton"
-import type Server from "../types/server"
+import type { Server } from "../types/api"
 
-import { categoriesMessages } from "../pages/servers"
+import { categoriesMessages } from "../data/categories"
 
 const ServerCard = ({ server }: { server: Server }) => {
   const intl = useIntl()
@@ -34,7 +34,9 @@ const ServerCard = ({ server }: { server: Server }) => {
           </span>
           {server.approval_required && <span>Invite only</span>}
         </p>
-        <p className="b3 line-clamp-5">{server.description}</p>
+        <p className="b3 line-clamp-5 [unicode-bidi:plaintext]">
+          {server.description}
+        </p>
       </div>
 
       <div className="p-4 pt-0">
