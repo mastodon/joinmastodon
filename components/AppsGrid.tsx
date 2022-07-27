@@ -26,142 +26,37 @@ import { useState } from "react"
 import SelectMenu from "../components/SelectMenu"
 import { sortBy as _sortBy } from "lodash"
 
+//prettier-ignore
 const apps = {
   android: [
-    {
-      released_on: "Mar 15, 2017",
-      name: "Tusky",
-      icon: tusky,
-      url: "https://play.google.com/store/apps/details?id=com.keylesspalace.tusky",
-    },
-
-    {
-      released_on: "Apr 23, 2017",
-      name: "Subway Tooter",
-      icon: subwayTooter,
-      url: "https://play.google.com/store/apps/details?id=jp.juggler.subwaytooter",
-    },
-
-    {
-      released_on: "May 18, 2019",
-      name: "Fedilab",
-      icon: fedilab,
-      url: "https://play.google.com/store/apps/details?id=app.fedilab.android",
-      paid: true,
-    },
+    { released_on: "Mar 15, 2017", name: "Tusky", icon: tusky, url: "https://play.google.com/store/apps/details?id=com.keylesspalace.tusky" },
+    { released_on: "Apr 23, 2017", name: "Subway Tooter", icon: subwayTooter, url: "https://play.google.com/store/apps/details?id=jp.juggler.subwaytooter" },
+    { released_on: "May 18, 2019", name: "Fedilab", icon: fedilab, url: "https://play.google.com/store/apps/details?id=app.fedilab.android", paid: true,},
   ],
-
   ios: [
-    {
-      name: "Toot!",
-      icon: toot,
-      url: "https://itunes.apple.com/app/toot/id1229021451?ls=1&mt=8",
-      paid: true,
-    },
-
-    {
-      name: "Mast",
-      icon: mast,
-      url: "https://apps.apple.com/us/app/mast-for-mastodon/id1437429129",
-      paid: true,
-    },
-
-    {
-      name: "Amaroq",
-      icon: amaroq,
-      url: "https://itunes.apple.com/us/app/amarok-for-mastodon/id1214116200?ls=1&mt=8",
-    },
-
-    {
-      name: "iMast",
-      icon: imast,
-      url: "https://apps.apple.com/us/app/imast/id1229461703",
-    },
-
-    {
-      name: "Mercury",
-      icon: mercury,
-      url: "https://apps.apple.com/us/app/mercury-for-mastodon/id1486749200?ls=1&mt1=8",
-    },
-
-    {
-      name: "Metatext",
-      icon: metatext,
-      url: "https://apps.apple.com/us/app/metatext/id1523996615?mt=8",
-    },
+    { name: "Toot!", icon: toot, url: "https://itunes.apple.com/app/toot/id1229021451?ls=1&mt=8", paid: true },
+    { name: "Mast", icon: mast, url: "https://apps.apple.com/us/app/mast-for-mastodon/id1437429129", paid: true },
+    { name: "Amaroq", icon: amaroq, url: "https://itunes.apple.com/us/app/amarok-for-mastodon/id1214116200?ls=1&mt=8" },
+    { name: "iMast", icon: imast, url: "https://apps.apple.com/us/app/imast/id1229461703" },
+    { name: "Mercury", icon: mercury, url: "https://apps.apple.com/us/app/mercury-for-mastodon/id1486749200?ls=1&mt1=8" },
+    { name: "Metatext", icon: metatext, url: "https://apps.apple.com/us/app/metatext/id1523996615?mt=8" },
   ],
-
   web: [
-    {
-      name: "Pinafore",
-      icon: pinafore,
-      url: "https://pinafore.social",
-    },
-
-    {
-      name: "Halcyon",
-      icon: halcyon,
-      url: "https://www.halcyon.social/",
-    },
-
-    {
-      name: "Cuckoo+",
-      icon: cuckooPlus,
-      url: "https://www.cuckoo.social",
-    },
+    { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
+    { name: "Halcyon", icon: halcyon, url: "https://www.halcyon.social/" },
+    { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
   ],
-
-  sailfish: [
-    {
-      name: "Tooter",
-      icon: tooter,
-      url: "https://openrepos.net/content/dysko/tooter",
-    },
-  ],
-
   desktop: [
-    {
-      name: "Whalebird",
-      icon: whalebird,
-      url: "https://whalebird.social",
-    },
-
-    {
-      name: "Tootle (Linux)",
-      icon: tootle,
-      url: "https://flathub.org/apps/details/com.github.bleakgrey.tootle",
-    },
-
-    {
-      name: "TheDesk",
-      icon: thedesk,
-      url: "https://thedesk.top/en",
-    },
-
-    {
-      name: "Hyper­space",
-      icon: hyperspace,
-      url: "https://hyperspace.marquiskurt.net/",
-    },
-
-    {
-      name: "Mast (Mac)",
-      icon: mast,
-      url: "https://apps.apple.com/app/mast-for-mastodon/id1437429129",
-      paid: true,
-    },
-
-    {
-      name: "Mastonaut (Mac)",
-      icon: mastonaut,
-      url: "https://itunes.apple.com/us/app/mastonaut/id1450757574",
-    },
-
-    {
-      name: "Sengi",
-      icon: sengi,
-      url: "https://nicolasconstant.github.io/sengi/",
-    },
+    { name: "Whalebird", icon: whalebird, url: "https://whalebird.social" },
+    { name: "Tootle (Linux)", icon: tootle, url: "https://flathub.org/apps/details/com.github.bleakgrey.tootle" },
+    { name: "TheDesk", icon: thedesk, url: "https://thedesk.top/en" },
+    { name: "Hyper­space", icon: hyperspace, url: "https://hyperspace.marquiskurt.net/" },
+    { name: "Mast (Mac)", icon: mast, url: "https://apps.apple.com/app/mast-for-mastodon/id1437429129", paid: true },
+    { name: "Mastonaut (Mac)", icon: mastonaut, url: "https://itunes.apple.com/us/app/mastonaut/id1450757574" },
+    { name: "Sengi", icon: sengi, url: "https://nicolasconstant.github.io/sengi/" },
+  ],
+  sailfish: [
+    { name: "Tooter", icon: tooter, url: "https://openrepos.net/content/dysko/tooter" },
   ],
 }
 const allApps = Object.entries(apps)
@@ -176,77 +71,29 @@ const allApps = Object.entries(apps)
   )
   .flat()
 
-const sortOptions = [
-  {
-    value: "date_added",
-    label: (
-      <FormattedMessage
-        id="sorting.recently_added"
-        defaultMessage="Recently Added"
-      />
-    ),
-  },
-  {
-    value: "paid",
-    label: <FormattedMessage id="sorting.free" defaultMessage="Free" />,
-  },
-  {
-    value: "name",
-    label: <FormattedMessage id="sorting.name" defaultMessage="Alphabetical" />,
-  },
-]
-
 export const AppsGrid = () => {
   const intl = useIntl()
   const [activeCategory, setActiveCategory] = useState("all")
+  //prettier-ignore
+  const sortOptions = [
+    { value: "date_added", label: intl.formatMessage({ id: "sorting.recently_added", defaultMessage: "Recently Added" }) },
+    { value: "paid", label: intl.formatMessage({ id: "sorting.free", defaultMessage: "Free" }) },
+    { value: "name", label: intl.formatMessage({ id: "sorting.name", defaultMessage: "Alphabetical" }) },
+  ]
   const [sortOption, setSortOption] = useState(sortOptions[0].value)
   const filteredApps = allApps.filter(
     ({ category }) => category === activeCategory || activeCategory === "all"
   )
-  const sortedAndFilteredApps = _sortBy(filteredApps)
+  const sortedAndFilteredApps = _sortBy(filteredApps, sortOption)
+
+  //prettier-ignore
   const categories = [
-    {
-      key: "all",
-      label: intl.formatMessage({
-        id: "browse_apps.all",
-        defaultMessage: "All",
-      }),
-    },
-    {
-      key: "android",
-      label: intl.formatMessage({
-        id: "browse_apps.android",
-        defaultMessage: "Android",
-      }),
-    },
-    {
-      key: "ios",
-      label: intl.formatMessage({
-        id: "browse_apps.ios",
-        defaultMessage: "iOS",
-      }),
-    },
-    {
-      key: "web",
-      label: intl.formatMessage({
-        id: "browse_apps.web",
-        defaultMessage: "Web",
-      }),
-    },
-    {
-      key: "sailfish",
-      label: intl.formatMessage({
-        id: "browse_apps.sailfish",
-        defaultMessage: "SailfishOS",
-      }),
-    },
-    {
-      key: "desktop",
-      label: intl.formatMessage({
-        id: "browse_apps.desktop",
-        defaultMessage: "Desktop",
-      }),
-    },
+    { key: "all", label: intl.formatMessage({ id: "browse_apps.all", defaultMessage: "All" }) },
+    { key: "android", label: intl.formatMessage({ id: "browse_apps.android", defaultMessage: "Android" }) },
+    { key: "ios", label: intl.formatMessage({ id: "browse_apps.ios", defaultMessage: "iOS" }) },
+    { key: "web", label: intl.formatMessage({ id: "browse_apps.web", defaultMessage: "Web" }) },
+    { key: "sailfish", label: intl.formatMessage({ id: "browse_apps.sailfish", defaultMessage: "SailfishOS" }) },
+    { key: "desktop", label: intl.formatMessage({ id: "browse_apps.desktop", defaultMessage: "Desktop" }) },
   ]
   return (
     <div>
