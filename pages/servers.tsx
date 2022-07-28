@@ -109,7 +109,7 @@ const Servers = ({ filterList }) => {
             alt=""
             layout="fill"
             objectFit="cover"
-            className="lg:object-[45%_center] xl:object-center"
+            objectPosition="center center"
             placeholder="blur"
             priority={true}
           />
