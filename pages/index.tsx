@@ -78,6 +78,7 @@ const HomeHero = () => {
           objectFit="cover"
           objectPosition="center center"
           placeholder="blur"
+          priority={true}
         />
       </div>
 
@@ -89,6 +90,7 @@ const HomeHero = () => {
           objectFit="cover"
           className="lg:object-[45%_center] xl:object-center"
           placeholder="blur"
+          priority={true}
         />
       </div>
     </section>
