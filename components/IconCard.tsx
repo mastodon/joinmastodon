@@ -10,7 +10,7 @@ export type IconCardProps = {
   copy: React.ReactNode
 }
 /**
- * IconCard component.
+ * Renders a feature card with a visual element and copy.
  * Layout (width, height, positioning) can be set from the parent.
  */
 export const IconCard = ({ title, icon, copy }: IconCardProps) => {

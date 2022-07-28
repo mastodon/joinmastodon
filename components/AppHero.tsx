@@ -8,8 +8,9 @@ export type AppHeroProps = {
   /** Image source value passed to `next/image`'s `src` */
   backgroundImage: ImageProps["src"]
   /** Image-framing value passed to `next/image`'s `object-position` */
-  backgroundImagePosition: string
+  backgroundImagePosition?: string
 }
+/** Renders a hero with links to the app store, typically at the bottom of a page. */
 export const AppHero = ({
   backgroundImage,
   backgroundImagePosition = "center center",

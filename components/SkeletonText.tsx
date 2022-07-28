@@ -2,7 +2,7 @@ import classNames from "classnames"
 
 /**
  * Placeholder for dynamically-loaded text
- * @example widths can be added as classNames from the parent to give an organic feel
+ * @example widths can be added as classNames from the parent to give multiline skeletons an organic feel
  *   ```jsx
  *     <SkeletonText className="w-[40ch]" />
  *     <SkeletonText className="w-[39ch]" />

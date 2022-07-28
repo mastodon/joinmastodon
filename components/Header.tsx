@@ -9,9 +9,7 @@ import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
 import SVG from "react-inlinesvg"
 
-/**
- * @see https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation-hybrid.html
- */
+/** Sitewide header and navigation */
 const Header = () => {
   const [pageScrolled, setPageScrolled] = useState(false)
 
@@ -178,6 +176,10 @@ const Header = () => {
   )
 }
 
+/**
+ * `useMenu` provides a React Hook for managing menu state and attributes for accessibility.
+ * @see https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation-hybrid.html
+ */
 const useMenu = ({ navigationItems }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [primaryMenuItemIndex, setPrimaryMenuItemIndex] = useState<number>(0)

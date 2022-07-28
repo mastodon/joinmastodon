@@ -1,3 +1,8 @@
+/**
+ * Layout scaffolding for page files that need an 8-column
+ *  area for rich text, but no additional sections.
+ * (eg: /imprint)
+ */
 export const BasicPage = ({ children }) => {
   return (
     <div className="grid-cols-12 pt-[var(--header-area)] md:grid">

@@ -1,15 +1,19 @@
 import SVG from "react-inlinesvg"
 
 export type SelectMenuProps = {
+  /** The label shown before the dropdown */
   label: React.ReactNode
+  /** Callback that sends along the current value of the input */
   onChange: (value: string) => void
+  /** Controlled current value */
   value: string
+  /** Options (passed to `<option>`s) of the input */
   options: {
     label: React.ReactNode
     value: string
   }[]
 }
-/** Styled replacement for <select> */
+/** Styled replacement for <select> inputs */
 export const SelectMenu = ({
   label,
   onChange,

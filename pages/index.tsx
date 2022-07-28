@@ -10,7 +10,7 @@ import TestimonialCard from "../components/TestimonialCard"
 import SponsorGroup from "../components/SponsorLogoGroup"
 import { IconCard } from "../components/IconCard"
 
-import testimonials from "../data/testimonials.json"
+import testimonials from "../data/testimonials"
 import { platinum, additionalFunding } from "../data/sponsors.js"
 
 import illoTimeline from "../public/illustrations/features_timeline.png"

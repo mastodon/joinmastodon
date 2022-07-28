@@ -2,17 +2,20 @@ import LinkButton from "./LinkButton"
 import SVG from "react-inlinesvg"
 
 export type TwoUpFeatureProps = {
-  icon: string
-  title: React.ReactNode
-  copy: React.ReactNode
-  cta: React.ReactNode
-  cta_link: string
+  features: {
+    icon: string
+    title: React.ReactNode
+    copy: React.ReactNode
+    cta: React.ReactNode
+    cta_link: string
+  }[]
 }
-const TwoUpFeature = ({ features }) => {
+/** Two-column (on desktop) feature section */
+const TwoUpFeature = ({ features }: TwoUpFeatureProps) => {
   return (
     <div className="gap-gutter md:flex">
       {features.map(({ icon, title, copy, cta, cta_link }) => (
-        <div className="grid py-8 md:py-32 lg:grid-cols-6" key={title}>
+        <div className="grid py-8 md:py-32 lg:grid-cols-6" key={icon}>
           <div className="md:pie-4 lg:col-span-4 lg:col-start-2 lg:pie-0">
             <SVG
               src={icon}

@@ -1,22 +1,16 @@
 import { FormattedMessage } from "react-intl"
 import Image from "next/image"
 import LinkButton from "./LinkButton"
+import type { Testimonial } from "../data/testimonials"
 
+export type TestimonialCardProps = {
+  testimonial: Testimonial
+}
 /**
  * TestimonialCard component.
  * Layout (width, height, positioning) can be set from the parent.
- * @param {{
- *  testimonial: {
- *    avatar: string,
- *    name: string,
- *    username: string,
- *    text: string,
- *    profile_url: string,
- *  }
- * }} props
  */
-
-export const TestimonialCard = ({ testimonial }) => {
+export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
     <div className="h-max space-y-6 rounded bg-white py-8 px-6 shadow">
       <div className="flex flex-wrap gap-x-6 ">

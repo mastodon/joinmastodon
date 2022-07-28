@@ -2,14 +2,23 @@ import Link from "next/link"
 import classnames from "classnames"
 
 type LinkButtonProps = {
+  /** Renders without border, typically on a dark, illustrated background */
   borderless?: boolean
-  children: JSX.Element
+  /** Button's label */
+  children: React.ReactNode
+  /** Block button, fills parent's width */
   fullWidth?: boolean
+  /** URL, either internal or external */
   href: string
+  /** Light background */
   light?: boolean
+  /** Buttons size, using `b3` typically, or `b1` on `large` */
   size: "small" | "medium" | "large"
 }
 
+/**
+ * Default CTA component, renders links in a button style.
+ */
 const LinkButton = ({
   borderless,
   children,

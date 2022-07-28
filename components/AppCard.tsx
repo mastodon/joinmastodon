@@ -11,7 +11,7 @@ export type AppCardProps = {
 }
 
 /**
- * IconCard component.
+ * Renders a card with app data.
  * Layout (width, height, positioning) can be set from the parent.
  */
 export const AppCard = ({ name, icon, url, paid }) => {

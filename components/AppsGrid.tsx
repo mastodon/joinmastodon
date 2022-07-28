@@ -10,11 +10,12 @@ export type AppsGridProps = {
   apps: appsList
 }
 
+/** Renders AppCards as a grid, with sorting and filtering options */
 export const AppsGrid = ({ apps }: AppsGridProps) => {
   const intl = useIntl()
   const [activeCategory, setActiveCategory] = useState("all")
 
-  // normalizing the apps dictionary
+  // normalizing the apps dictionary as an array
   const allApps = Object.entries(apps)
     .map(([category, apps]) =>
       apps.map(({ name, icon, url, paid, released_on }) => ({
