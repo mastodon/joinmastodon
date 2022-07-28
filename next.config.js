@@ -13,6 +13,15 @@ const nextConfig = {
   images: {
     domains: ["proxy.joinmastodon.org"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/communities",
+        destination: "/servers",
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

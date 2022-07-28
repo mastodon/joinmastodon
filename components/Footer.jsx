@@ -25,7 +25,7 @@ export const Footer = () => (
                   <FormattedMessage id="nav.product" defaultMessage="Product" />
                 ),
                 links: [
-                  <Link key="communities" href="/communities">
+                  <Link key="servers" href="/servers">
                     <a className="inline-block py-2">
                       <FormattedMessage
                         id="home.get_started"
