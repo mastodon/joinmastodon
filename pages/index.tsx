@@ -8,6 +8,7 @@ import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
 import SponsorGroup from "../components/SponsorLogoGroup"
+import { IconCard } from "../components/IconCard"
 
 import testimonials from "../data/testimonials.json"
 import { platinum, additionalFunding } from "../data/sponsors.js"
@@ -16,7 +17,9 @@ import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
 import illoModeration from "../public/illustrations/features_moderation.png"
 import illoWorld from "../public/illustrations/home_sponsors_world.png"
-import { IconCard } from "../components/IconCard"
+
+import test from "../public/illustrations/home_hero_mobile.webp"
+import heroDesktop from "../public/illustrations/home_hero_desktop.webp"
 
 function Home() {
   return (
@@ -34,7 +37,7 @@ export default Home
 
 const HomeHero = () => {
   return (
-    <section className="full-width-bg hero  h-[921px] pt-[var(--header-area)] text-center text-white lg:h-[1188px]">
+    <section className="full-width-bg hero relative  h-[921px] pt-[var(--header-area)] text-center text-white lg:h-[1188px]">
       <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
         <h1 className="h1 mb-2 max-w-[17ch]">
           <FormattedMessage
@@ -67,8 +70,25 @@ const HomeHero = () => {
         </div>
       </div>
 
-      <div className="absolute top-0 left-0 right-0 -z-10 h-[921px] w-screen bg-[url(/illustrations/home_hero_mobile.webp)] bg-cover bg-center bg-no-repeat lg:hidden"></div>
-      <div className="absolute top-0 left-0 right-0 -z-10 hidden h-[1188px] w-screen bg-[url(/illustrations/home_hero_desktop.webp)] bg-cover bg-[position:_45%] bg-no-repeat lg:block xl:bg-center"></div>
+      <div className="absolute inset-0 -z-10 lg:hidden">
+        <Image
+          src={test}
+          alt=""
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center center"
+        />
+      </div>
+
+      <div className="absolute inset-0 -z-10 hidden lg:block">
+        <Image
+          src={heroDesktop}
+          alt=""
+          layout="fill"
+          objectFit="cover"
+          className="lg:object-[45%_center] xl:object-center"
+        />
+      </div>
     </section>
   )
 }
