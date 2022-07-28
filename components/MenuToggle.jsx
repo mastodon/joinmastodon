@@ -5,6 +5,7 @@ export const MenuToggle = ({ open, onClick }) => {
   useEffect(() => {
     if (open) {
       document.documentElement.classList.add("overflow-hidden")
+      document.documentElement.classList.add("md:overflow-auto")
     } else {
       document.documentElement.classList.remove("overflow-hidden")
     }

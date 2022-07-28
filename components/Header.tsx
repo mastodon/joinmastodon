@@ -67,9 +67,9 @@ const Header = () => {
 
   const {
     mobileMenuOpen,
-    menuBarHasFocus,
     primaryMenuItemIndex,
     secondaryMenuItemIndex,
+    secondaryMenuOpen,
     bindToggle,
     bindPrimaryMenu,
     bindPrimaryMenuItem,
@@ -101,13 +101,12 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav>
+        <nav className="">
           <MenuToggle {...bindToggle()} />
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 flex-col bg-eggplant px-6 pt-[var(--header-area)] md:bg-[transparent]",
-              "w-screen gap-4 focus-within:outline md:relative md:w-auto md:flex-row md:gap-10 md:rounded md:p-4",
+              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[var(--header-area)] md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4 [&:has(:focus-visible)]:outline",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
@@ -117,16 +116,15 @@ const Header = () => {
                   <>
                     <button
                       {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
-                      className="md:b1 h5 flex items-center gap-[0.125rem] whitespace-nowrap focus:outline-2"
+                      className="flex items-center gap-[0.125rem] whitespace-nowrap text-h5 font-800 focus:outline-2 md:text-b2 md:font-450"
                     >
                       {item.label}
                       <SVG
                         src={"/ui/disclosure-arrow.svg"}
                         className={classNames({
                           "rotate-180":
-                            menuBarHasFocus &&
                             primaryMenuItemIndex === itemIndex &&
-                            secondaryMenuItemIndex !== null,
+                            secondaryMenuOpen,
                         })}
                       />
                     </button>
@@ -135,9 +133,8 @@ const Header = () => {
                       {...bindSecondaryMenu()}
                       className={classNames(
                         "top-[100%] flex flex-col rounded bg-eggplant p-4 -inline-end-4 md:absolute md:shadow",
-                        (!menuBarHasFocus ||
-                          primaryMenuItemIndex !== itemIndex ||
-                          secondaryMenuItemIndex === null) &&
+                        (primaryMenuItemIndex !== itemIndex ||
+                          !secondaryMenuOpen) &&
                           "sr-only"
                       )}
                     >
@@ -165,7 +162,7 @@ const Header = () => {
                 ) : (
                   <Link href={item.value}>
                     <a
-                      className="md:b1 h5 whitespace-nowrap"
+                      className="whitespace-nowrap text-h5 font-800 md:text-b2 md:font-450"
                       {...bindPrimaryMenuItem(itemIndex)}
                     >
                       {item.label}
@@ -188,9 +185,8 @@ const useMenu = ({ navigationItems }) => {
   const [secondaryMenuItemIndex, setSecondaryMenuItemIndex] = useState<
     number | null
   >(null)
-  const [menuBarHasFocus, setMenuBarHasFocus] = useState<boolean>(false)
   const rootElement = useRef<HTMLUListElement>(null)
-  const wasFocusedAtStartOfClick = useRef(menuBarHasFocus)
+  const secondaryMenuOpen = secondaryMenuItemIndex !== null
 
   // Navigation Callbacks
   const navigateHorizontally = (direction: -1 | 1) => {
@@ -221,12 +217,31 @@ const useMenu = ({ navigationItems }) => {
 
   // Ensuring document.activeElement follows the menu's roving tabindex
   useEffect(() => {
-    if (menuBarHasFocus && rootElement.current) {
-      const activeTabIndexElement =
-        rootElement.current.querySelector<HTMLElement>(`[tabindex="0"]`)
-      activeTabIndexElement?.focus({ preventScroll: true })
+    if (rootElement.current) {
+      // only update focus if we're in the menu's focus already
+      const focusInMenu = rootElement.current.contains(document.activeElement)
+      if (focusInMenu) {
+        const activeTabIndexElement =
+          rootElement.current.querySelector<HTMLElement>(`[tabindex="0"]`)
+        activeTabIndexElement?.focus({ preventScroll: true })
+      }
     }
-  }, [menuBarHasFocus, primaryMenuItemIndex, secondaryMenuItemIndex])
+  }, [primaryMenuItemIndex, secondaryMenuItemIndex])
+
+  // check for clicks outside of the menu
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (!rootElement.current.contains(e.target as Node)) {
+        setSecondaryMenuItemIndex(null)
+      }
+    }
+    if (rootElement.current) {
+      document.addEventListener("click", handleClickOutside)
+    }
+    return () => {
+      document.removeEventListener("click", handleClickOutside)
+    }
+  }, [])
 
   // Element attributes / listeners
   const bindToggle = () => ({
@@ -237,19 +252,16 @@ const useMenu = ({ navigationItems }) => {
     return {
       role: "menubar",
       ref: rootElement,
-      onFocus: () => {
-        setMenuBarHasFocus(true)
-      },
       onBlur: (e) => {
         const focusLeftMenu = !rootElement.current.contains(e.relatedTarget)
         if (focusLeftMenu) {
-          setMenuBarHasFocus(false)
+          setSecondaryMenuItemIndex(null)
         }
       },
       onKeyDown: (e) => {
         const isRTL = Boolean(e.target?.closest("[dir='rtl']"))
         if (e.key === "Escape") {
-          if (secondaryMenuItemIndex === null) {
+          if (!secondaryMenuOpen) {
             setMobileMenuOpen(false)
           }
         }
@@ -275,8 +287,7 @@ const useMenu = ({ navigationItems }) => {
     const isActive = itemIndex === primaryMenuItemIndex
     const isDropdownClosed = secondaryMenuItemIndex === null
     const isSelectable = isActive && isDropdownClosed
-    const isExpanded =
-      hasPopup && isActive && !isDropdownClosed && menuBarHasFocus
+    const isExpanded = hasPopup && isActive && !isDropdownClosed
     return {
       role: "menuitem",
       "aria-haspopup": hasPopup,
@@ -291,10 +302,7 @@ const useMenu = ({ navigationItems }) => {
         }
       },
       onMouseDown: () => {
-        wasFocusedAtStartOfClick.current = menuBarHasFocus
-      },
-      onClick: () => {
-        if (isActive && hasPopup && wasFocusedAtStartOfClick.current) {
+        if (isActive && hasPopup) {
           setSecondaryMenuItemIndex(isDropdownClosed ? 0 : null)
         } else {
           setPrimaryMenuItemIndex(itemIndex)
@@ -327,7 +335,6 @@ const useMenu = ({ navigationItems }) => {
 
   return {
     mobileMenuOpen,
-    menuBarHasFocus,
     primaryMenuItemIndex,
     secondaryMenuItemIndex,
     bindToggle,
@@ -335,6 +342,7 @@ const useMenu = ({ navigationItems }) => {
     bindPrimaryMenuItem,
     bindSecondaryMenu,
     bindSecondaryMenuItem,
+    secondaryMenuOpen,
   }
 }
 
