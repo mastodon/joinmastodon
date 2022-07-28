@@ -208,10 +208,6 @@ const GettingStartedCards = () => {
 }
 
 const ServerList = ({ servers }) => {
-  if (servers.isLoading) {
-    return <p>Loading...</p>
-  }
-
   if (servers.isError) {
     return <p>Oops, something went wrong.</p>
   }
@@ -219,7 +215,7 @@ const ServerList = ({ servers }) => {
   const featuredServers = null
 
   return (
-    <div className="col-span-4 md:col-start-4 md:col-end-13 ">
+    <div className="col-span-4 md:col-start-4 md:col-end-13">
       {featuredServers && (
         <h3 className="h5 mb-6">
           <FormattedMessage
@@ -229,9 +225,13 @@ const ServerList = ({ servers }) => {
         </h3>
       )}
       <div className="grid gap-gutter md:grid-cols-2  xl:grid-cols-3">
-        {servers.data.map((server) => (
-          <ServerCard key={server.domain} server={server} />
-        ))}
+        {servers.isLoading
+          ? Array(8)
+              .fill(null)
+              .map((_el, i) => <ServerCard key={i} />)
+          : servers.data.map((server) => (
+              <ServerCard key={server.domain} server={server} />
+            ))}
       </div>
     </div>
   )
