@@ -120,7 +120,10 @@ const AppsPage = () => {
         ]}
       />
       <AppsGrid apps={appsList} />
-      <AppHero backgroundImage={footer_festival} />
+      <AppHero
+        backgroundImage={footer_festival}
+        backgroundImagePosition="left center"
+      />
       <Head>
         <title>
           {intl.formatMessage({
