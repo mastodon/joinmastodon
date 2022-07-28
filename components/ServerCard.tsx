@@ -18,24 +18,25 @@ const ServerCard = ({ server }: { server?: Server }) => {
     <div className="grid grid-rows-[auto_1fr_auto] rounded-md p-4 shadow">
       <div className="relative h-26 lg:h-40">
         {server ? (
-          <>
-            <Image
-              className="rounded-md bg-gray-2"
-              src={server.proxied_thumbnail}
-              layout="fill"
-              objectFit="cover"
-            />
-            <span className="absolute flex items-center gap-1 rounded bg-white px-1.5 py-0.5 text-gray-1 inline-end-2 block-start-2">
+          <Image
+            className="rounded-md bg-gray-2"
+            src={server.proxied_thumbnail}
+            layout="fill"
+            objectFit="cover"
+          />
+        ) : (
+          <div className="h-full w-full rounded-md bg-gray-3" />
+        )}
+        <span className="absolute flex h-7 items-center gap-1 rounded bg-white px-1.5 py-0.5 text-gray-1 inline-end-2 block-start-2">
+          {server ? (
+            <>
               {formatNumber(server.total_users, intl.locale)}
               <SVG src="/ui/person.svg" />
-            </span>
-          </>
-        ) : (
-          <>
-            <div className="h-full w-full rounded-md bg-gray-3" />
-            <span className="absolute block h-7 w-14 rounded bg-white inline-end-2 block-start-2"></span>
-          </>
-        )}
+            </>
+          ) : (
+            <span className="w-[5ch]" />
+          )}
+        </span>
       </div>
 
       <div className="pb-5">
@@ -54,20 +55,20 @@ const ServerCard = ({ server }: { server?: Server }) => {
               )}
             </>
           ) : (
-            <SkeletonText className="w-[10em]" />
+            <SkeletonText className="w-[16ch]" />
           )}
         </p>
         <p className="b1 mb-2 !font-700">
-          {server ? server.domain : <SkeletonText className="w-[9em]" />}
+          {server ? server.domain : <SkeletonText className="w-[14ch]" />}
         </p>
         <p className="b3 line-clamp-5 [unicode-bidi:plaintext]">
           {server ? (
             server.description
           ) : (
             <>
-              <SkeletonText className="w-[17em]" />
-              <SkeletonText className="w-[16em]" />
-              <SkeletonText className="w-[7em]" />
+              <SkeletonText className="w-[27ch]" />
+              <SkeletonText className="w-[26ch]" />
+              <SkeletonText className="w-[12ch]" />
             </>
           )}
         </p>
