@@ -11,7 +11,7 @@ import SponsorGroup from "../components/SponsorLogoGroup"
 import { IconCard } from "../components/IconCard"
 
 import testimonials from "../data/testimonials"
-import { platinum, additionalFunding } from "../data/sponsors.js"
+import { platinum, additionalFunding } from "../data/sponsors"
 
 import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
