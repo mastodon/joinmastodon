@@ -4,6 +4,9 @@
 
 @layer base {
   :root {
+    // While colors could go in tailwind.config.js,
+    // having them here enables easier theme overriding
+    // in color preference media queries (eg high contrast)
     --black: #000000;
     --gray-1: #555555;
     --gray-2: #9b9b9b;
