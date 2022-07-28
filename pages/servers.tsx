@@ -75,12 +75,12 @@ const Servers = ({ filterList }) => {
   return (
     <div className="grid pb-40">
       <section className="order-0 full-width-bg relative h-[767px] pt-[var(--header-area)] text-white lg:h-[713px]">
-        <div className="full-width-bg__inner grid justify-center py-20 lg:grid-cols-12 lg:gap-x-gutter">
+        <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
           <h1 className="h1 mb-2 lg:col-span-3 lg:col-start-2">
             <FormattedMessage id="servers" defaultMessage="Servers" />
           </h1>
 
-          <p className="sh1 mb-14 lg:col-span-5 lg:col-start-2">
+          <p className="sh1 mb-14 max-w-[36ch] lg:col-span-5 lg:col-start-2">
             <FormattedMessage
               id="servers.hero.body"
               defaultMessage="Find your community here on the servers page. New here? <b>Check out the help section below.</b>"
