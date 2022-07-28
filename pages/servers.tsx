@@ -1,14 +1,18 @@
 import { useQuery } from "@tanstack/react-query"
 import { useRef, useState, useEffect } from "react"
 import { FormattedMessage, defineMessages, useIntl } from "react-intl"
+import SVG from "react-inlinesvg"
 import classnames from "classnames"
+import Image from "next/image"
 import { orderBy as _orderBy } from "lodash"
 import ServerCard from "../components/ServerCard"
 import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import { categoriesMessages } from "../data/categories"
 import type { Server, Category, Language } from "../types/api"
-import SVG from "react-inlinesvg"
+
+import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
+import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
@@ -69,9 +73,53 @@ const Servers = ({ filterList }) => {
   )
 
   return (
-    <div className="grid py-40">
-      <section className="order-0">
-        <h1>Servers page placeholder</h1>
+    <div className="grid pb-40">
+      <section
+        className={`order-0 full-width-bg relative h-[${
+          serverHeroMobile.height / 2
+        }px] pt-[var(--header-area)] text-white lg:h-[${
+          serverHeroDesktop.height / 2
+        }px]`}
+      >
+        <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
+          <h1 className="h1 mb-2 lg:col-span-3 lg:col-start-2">
+            <FormattedMessage id="servers" defaultMessage="Servers" />
+          </h1>
+
+          <p className="sh1 mb-14 max-w-[36ch] lg:col-span-5 lg:col-start-2">
+            <FormattedMessage
+              id="servers.hero.body"
+              defaultMessage="Find your community here on the servers page. New here? <b>Check out the help section below.</b>"
+              values={{
+                b: (text) => <b>{text}</b>,
+              }}
+            />
+          </p>
+        </div>
+
+        <div className="absolute inset-0 -z-10 lg:hidden">
+          <Image
+            src={serverHeroMobile}
+            alt=""
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center center"
+            placeholder="blur"
+            priority={true}
+          />
+        </div>
+
+        <div className="absolute inset-0 -z-10 hidden lg:block">
+          <Image
+            src={serverHeroDesktop}
+            alt=""
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center center"
+            placeholder="blur"
+            priority={true}
+          />
+        </div>
       </section>
 
       <GettingStartedCards />
