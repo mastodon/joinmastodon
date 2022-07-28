@@ -5,7 +5,7 @@ export type SelectMenuProps = {
   onChange: (value: string) => void
   value: string
   options: {
-    label: string
+    label: React.ReactNode
     value: string
   }[]
 }

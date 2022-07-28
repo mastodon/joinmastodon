@@ -5,6 +5,7 @@ import { FormattedMessage } from "react-intl"
 import SVG from "react-inlinesvg"
 import SponsorLogoGroup from "../components/SponsorLogoGroup"
 import LinkButton from "../components/LinkButton"
+import TwoUpFeature from "../components/TwoUpFeature"
 import sponsors from "../data/sponsors"
 import sponsorData from "../data/sponsors"
 
@@ -25,56 +26,56 @@ function Sponsors() {
         </div>
       </section>
 
-      <section className="my-32 grid gap-gutter md:grid-cols-2 lg:grid-cols-12">
-        <div className="lg:col-span-4 lg:col-start-2">
-          <SVG className="mb-2 text-accent-blurple" src={`/icons/donate.svg`} />
-          <h3 className="h4 mb-6">
-            <FormattedMessage
-              id="sponsors.sponsorship.title"
-              defaultMessage="Sponsorship"
-            />
-          </h3>
-          <p className="mb-8">
-            <FormattedMessage
-              id="sponsors.sponsorship.body"
-              defaultMessage="If you would like to see your company's logo with a go follow link on this site, you can become a sponsor directly through our own platform!"
-            />
-          </p>
-          <LinkButton href="https://sponsor.joinmastodon.org/" size="medium">
-            <FormattedMessage
-              id="sponsors.become_a_sponsor"
-              defaultMessage="Become a sponsor"
-            />
-          </LinkButton>
-        </div>
+      <TwoUpFeature
+        features={[
+          {
+            icon: "/icons/donate.svg",
+            title: (
+              <FormattedMessage
+                id="sponsors.sponsorship.title"
+                defaultMessage="Sponsorship"
+              />
+            ),
+            copy: (
+              <FormattedMessage
+                id="sponsors.sponsorship.body"
+                defaultMessage="If you would like to see your company's logo with a go follow link on this site, you can become a sponsor directly through our own platform!"
+              />
+            ),
+            cta: (
+              <FormattedMessage
+                id="sponsors.become_a_sponsor"
+                defaultMessage="Become a sponsor"
+              />
+            ),
+            cta_link: "https://sponsor.joinmastodon.org/",
+          },
+          {
+            icon: "/icons/donate-box.svg",
+            title: (
+              <FormattedMessage
+                id="sponsors.patreon.title"
+                defaultMessage="Support us on Patreon"
+              />
+            ),
+            copy: (
+              <FormattedMessage
+                id="sponsors.patreon.body"
+                defaultMessage="Making a contribution through our Patreon will reward you with access to our development Discord and your name listed on this page."
+              />
+            ),
+            cta: (
+              <FormattedMessage
+                id="sponsors.patreon.cta"
+                defaultMessage="Go to Patreon"
+              />
+            ),
+            cta_link: "https://patreon.com/mastodon",
+          },
+        ]}
+      />
 
-        <div className="lg:col-span-4 lg:col-start-8">
-          <SVG
-            className="mb-2 text-accent-blurple"
-            src="/icons/donate-box.svg"
-          />
-          <h3 className="h4 mb-6">
-            <FormattedMessage
-              id="sponsors.patreon.title"
-              defaultMessage="Support us on Patreon"
-            />
-          </h3>
-          <p className="mb-8">
-            <FormattedMessage
-              id="sponsors.patreon.body"
-              defaultMessage="Making a contribution through our Patreon will reward you with access to our development Discord and your name listed on this page."
-            />
-          </p>
-          <LinkButton href="https://patreon.com/mastodon" size="medium">
-            <FormattedMessage
-              id="sponsors.patreon.cta"
-              defaultMessage="Go to Patreon"
-            />
-          </LinkButton>
-        </div>
-      </section>
-
-      <section className="platinum-gold-sponsors">
+      <section className="platinum-gold-sponsors mb-32">
         <h2 className="h4 mb-10 text-center">
           <FormattedMessage
             id="sponsors.supported_by"

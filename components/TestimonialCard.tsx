@@ -34,7 +34,7 @@ export const TestimonialCard = ({ testimonial }) => {
           <p className="b3 truncate text-gray-1">{testimonial.username}</p>
         </div>
       </div>
-      <p className="b3">{testimonial.text}</p>
+      <p className="b2">{testimonial.text}</p>
 
       <LinkButton href={testimonial.profile_url} size="medium" light fullWidth>
         <FormattedMessage id="view_profile" defaultMessage="View profile" />
