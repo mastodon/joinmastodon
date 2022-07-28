@@ -75,11 +75,7 @@ const Servers = ({ filterList }) => {
   return (
     <div className="grid pb-40">
       <section
-        className={`order-0 full-width-bg relative h-[${
-          serverHeroMobile.height / 2
-        }px] pt-[var(--header-area)] text-white lg:h-[${
-          serverHeroDesktop.height / 2
-        }px]`}
+        className={`order-0 full-width-bg relative h-[var(--servers-mobile-hero-height)] pt-[var(--header-area)] text-white lg:h-[var(--servers-desktop-hero-height)]`}
       >
         <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
           <h1 className="h1 mb-2 lg:col-span-3 lg:col-start-2">
@@ -106,6 +102,12 @@ const Servers = ({ filterList }) => {
             objectPosition="center center"
             placeholder="blur"
             priority={true}
+            onLoadingComplete={() => {
+              document.documentElement.style.setProperty(
+                "--servers-mobile-hero-height",
+                `${serverHeroMobile.height / 2}px`
+              )
+            }}
           />
         </div>
 
@@ -118,6 +120,12 @@ const Servers = ({ filterList }) => {
             objectPosition="center center"
             placeholder="blur"
             priority={true}
+            onLoadingComplete={() => {
+              document.documentElement.style.setProperty(
+                "--servers-desktop-hero-height",
+                `${serverHeroDesktop.height / 2}px`
+              )
+            }}
           />
         </div>
       </section>

@@ -38,11 +38,7 @@ export default Home
 const HomeHero = () => {
   return (
     <section
-      className={`full-width-bg hero relative  h-[${
-        homeHeroMobile.height / 2
-      }px] pt-[var(--header-area)] text-center text-white lg:h-[${
-        homeHeroDesktop.height / 2
-      }px]`}
+      className={`full-width-bg hero relative  h-[var(--home-mobile-hero-height)] pt-[var(--header-area)] text-center text-white lg:h-[var(--home-desktop-hero-height)]`}
     >
       <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
         <h1 className="h1 mb-2 max-w-[17ch]">
@@ -85,6 +81,12 @@ const HomeHero = () => {
           objectPosition="center center"
           placeholder="blur"
           priority={true}
+          onLoadingComplete={() => {
+            document.documentElement.style.setProperty(
+              "--home-mobile-hero-height",
+              `${homeHeroMobile.height / 2}px`
+            )
+          }}
         />
       </div>
 
@@ -97,6 +99,12 @@ const HomeHero = () => {
           className="lg:object-[45%_center] xl:object-center"
           placeholder="blur"
           priority={true}
+          onLoadingComplete={() => {
+            document.documentElement.style.setProperty(
+              "--home-desktop-hero-height",
+              `${homeHeroDesktop.height / 2}px`
+            )
+          }}
         />
       </div>
     </section>
