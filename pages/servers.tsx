@@ -11,8 +11,8 @@ import SelectMenu from "../components/SelectMenu"
 import { categoriesMessages } from "../data/categories"
 import type { Server, Category, Language } from "../types/api"
 
-import serverMobile from "../public/illustrations/servers_hero_mobile.png"
-import serverDesktop from "../public/illustrations/servers_hero_desktop.png"
+import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
+import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
@@ -74,7 +74,13 @@ const Servers = ({ filterList }) => {
 
   return (
     <div className="grid pb-40">
-      <section className="order-0 full-width-bg relative h-[767px] pt-[var(--header-area)] text-white lg:h-[713px]">
+      <section
+        className={`order-0 full-width-bg relative h-[${
+          serverHeroMobile.height / 2
+        }px] pt-[var(--header-area)] text-white lg:h-[${
+          serverHeroDesktop.height / 2
+        }px]`}
+      >
         <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
           <h1 className="h1 mb-2 lg:col-span-3 lg:col-start-2">
             <FormattedMessage id="servers" defaultMessage="Servers" />
@@ -93,7 +99,7 @@ const Servers = ({ filterList }) => {
 
         <div className="absolute inset-0 -z-10 lg:hidden">
           <Image
-            src={serverMobile}
+            src={serverHeroMobile}
             alt=""
             layout="fill"
             objectFit="cover"
@@ -105,7 +111,7 @@ const Servers = ({ filterList }) => {
 
         <div className="absolute inset-0 -z-10 hidden lg:block">
           <Image
-            src={serverDesktop}
+            src={serverHeroDesktop}
             alt=""
             layout="fill"
             objectFit="cover"
