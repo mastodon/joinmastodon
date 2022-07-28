@@ -18,7 +18,7 @@ import illoAudience from "../public/illustrations/features_audience.png"
 import illoModeration from "../public/illustrations/features_moderation.png"
 import illoWorld from "../public/illustrations/home_sponsors_world.png"
 
-import test from "../public/illustrations/home_hero_mobile.webp"
+import heroMobile from "../public/illustrations/home_hero_mobile.webp"
 import heroDesktop from "../public/illustrations/home_hero_desktop.webp"
 
 function Home() {
@@ -72,11 +72,12 @@ const HomeHero = () => {
 
       <div className="absolute inset-0 -z-10 lg:hidden">
         <Image
-          src={test}
+          src={heroMobile}
           alt=""
           layout="fill"
           objectFit="cover"
           objectPosition="center center"
+          placeholder="blur"
         />
       </div>
 
@@ -87,6 +88,7 @@ const HomeHero = () => {
           layout="fill"
           objectFit="cover"
           className="lg:object-[45%_center] xl:object-center"
+          placeholder="blur"
         />
       </div>
     </section>
