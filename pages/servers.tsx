@@ -280,7 +280,7 @@ const ServerList = ({ servers }) => {
           />
         </h3>
       )}
-      <div className="grid gap-gutter md:grid-cols-2  xl:grid-cols-3">
+      <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-3">
         {servers.isLoading
           ? Array(8)
               .fill(null)
