@@ -91,7 +91,7 @@ function Sponsors() {
           {sponsorData.silver.map((sponsor) => {
             if (sponsor.url) {
               return (
-                <Link href={sponsor.url}>
+                <Link key={sponsor.url} href={sponsor.url}>
                   <a>
                     <SponsorCard sponsor={sponsor} tier="silver" />
                   </a>
