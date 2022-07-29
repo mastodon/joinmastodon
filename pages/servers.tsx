@@ -208,7 +208,7 @@ const GettingStartedCards = () => {
       <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-4">
         <IconCard
           title={<FormattedMessage id="servers" defaultMessage="Servers" />}
-          icon="decentralized"
+          icon="servers"
           copy={
             <FormattedMessage
               id="servers.getting_started.servers"
@@ -223,7 +223,7 @@ const GettingStartedCards = () => {
               defaultMessage="Your feed"
             />
           }
-          icon="decentralized"
+          icon="feed"
           copy={
             <FormattedMessage
               id="servers.getting_started.feed.body"
@@ -238,7 +238,7 @@ const GettingStartedCards = () => {
               defaultMessage="Flexible"
             />
           }
-          icon="decentralized"
+          icon="move-servers"
           copy={
             <FormattedMessage
               id="servers.getting_started.flexible.body"
@@ -253,7 +253,7 @@ const GettingStartedCards = () => {
               defaultMessage="Safe for all"
             />
           }
-          icon="decentralized"
+          icon="safety-1"
           copy={
             <FormattedMessage
               id="servers.getting_started.safe_for_all.body"
