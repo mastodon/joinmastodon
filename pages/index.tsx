@@ -196,8 +196,8 @@ const Features = () => {
                   isOdd ? "xl:col-start-8" : "xl:col-start-2"
                 )}
               >
-                <h2 className="h4 md:h2 mb-2">{block.title}</h2>
-                <p className="b1 mb-8">{block.body}</p>
+                <h2 className="h4 md:h2 mb-2 md:mb-5">{block.title}</h2>
+                <p className="sh1 mb-8">{block.body}</p>
                 {block.button}
               </div>
             </div>
