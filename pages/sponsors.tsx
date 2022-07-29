@@ -1,7 +1,6 @@
-import classnames from "classnames"
-import Image from "next/image"
 import Link from "next/link"
 import { FormattedMessage } from "react-intl"
+import Hero from "../components/Hero"
 import SponsorCard from "../components/SponsorCard"
 import SponsorLogoGroup from "../components/SponsorLogoGroup"
 import TwoUpFeature from "../components/TwoUpFeature"
@@ -11,19 +10,17 @@ import sponsorData from "../data/sponsors"
 function Sponsors() {
   return (
     <>
-      <section className="full-width-bg hero h-[80vh] bg-main-blurple pt-[var(--header-area)] text-white">
-        <div className="full-width-bg__inner grid lg:grid-cols-12">
-          <h1 className="h1 mb-2 lg:col-start-2">
-            <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
-          </h1>
-          <p className="sh1 lg:col-start-2 lg:col-end-6">
-            <FormattedMessage
-              id="sponsors.hero.body"
-              defaultMessage="You can back us on a monthly basis through Patreon or pledge to become a sponsor through our link below. We are grateful for the companies and people who make mastodon possible."
-            />
-          </p>
-        </div>
-      </section>
+      <Hero>
+        <h1 className="h1 mb-2 lg:col-start-2">
+          <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
+        </h1>
+        <p className="sh1 lg:col-start-2 lg:col-end-6">
+          <FormattedMessage
+            id="sponsors.hero.body"
+            defaultMessage="You can back us on a monthly basis through Patreon or pledge to become a sponsor through our link below. We are grateful for the companies and people who make mastodon possible."
+          />
+        </p>
+      </Hero>
 
       <TwoUpFeature
         features={[

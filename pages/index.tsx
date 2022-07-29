@@ -20,25 +20,12 @@ import illoWorld from "../public/illustrations/home_sponsors_world.png"
 
 import homeHeroMobile from "../public/illustrations/home_hero_mobile.webp"
 import homeHeroDesktop from "../public/illustrations/home_hero_desktop.webp"
+import Hero from "../components/Hero"
 
 function Home() {
   return (
     <>
-      <HomeHero />
-      <Features />
-      <WhyMastodon />
-      <Testimonials testimonials={testimonials.slice(0, 3)} />
-      <Sponsors sponsors={{ platinum, additionalFunding }} />
-    </>
-  )
-}
-
-export default Home
-
-const HomeHero = () => {
-  return (
-    <section className="full-width-bg hero relative  h-[var(--home-mobile-hero-height)] pt-[var(--header-area)] text-center text-white lg:h-[var(--home-desktop-hero-height)]">
-      <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
+      <Hero mobileImage={homeHeroMobile} desktopImage={homeHeroDesktop} large>
         <h1 className="h1 mb-2 max-w-[17ch]">
           <FormattedMessage
             id="home.hero.headline"
@@ -68,46 +55,16 @@ const HomeHero = () => {
             />
           </LinkButton>
         </div>
-      </div>
-
-      <div className="absolute inset-0 -z-10 lg:hidden">
-        <Image
-          src={homeHeroMobile}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center center"
-          placeholder="blur"
-          priority={true}
-          onLoadingComplete={() => {
-            document.documentElement.style.setProperty(
-              "--home-mobile-hero-height",
-              `${homeHeroMobile.height / 2}px`
-            )
-          }}
-        />
-      </div>
-
-      <div className="absolute inset-0 -z-10 hidden lg:block">
-        <Image
-          src={homeHeroDesktop}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          className="lg:object-[45%_center] xl:object-center"
-          placeholder="blur"
-          priority={true}
-          onLoadingComplete={() => {
-            document.documentElement.style.setProperty(
-              "--home-desktop-hero-height",
-              `${homeHeroDesktop.height / 2}px`
-            )
-          }}
-        />
-      </div>
-    </section>
+      </Hero>
+      <Features />
+      <WhyMastodon />
+      <Testimonials testimonials={testimonials.slice(0, 3)} />
+      <Sponsors sponsors={{ platinum, additionalFunding }} />
+    </>
   )
 }
+
+export default Home
 
 const Testimonials = ({ testimonials }) => {
   return (
