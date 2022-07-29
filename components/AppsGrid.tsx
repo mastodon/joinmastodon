@@ -15,7 +15,7 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
   const intl = useIntl()
   const [activeCategory, setActiveCategory] = useState("all")
 
-  // normalizing the apps dictionary as an array
+  /** normalizing the apps dictionary as an array */
   const allApps = Object.entries(apps)
     .map(([category, apps]) =>
       apps.map(({ name, icon, url, paid, released_on }) => ({

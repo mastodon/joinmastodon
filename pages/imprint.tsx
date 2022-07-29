@@ -1,7 +1,7 @@
 import Head from "next/head"
 import BasicPage from "../components/BasicPage"
 
-// This page does not require translations
+/** This page does not require translations */
 const Imprint = () => (
   <BasicPage>
     <div className="[unicode-bidi:plaintext]">
