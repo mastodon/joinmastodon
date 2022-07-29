@@ -24,7 +24,7 @@ module.exports = {
     },
     lineHeight: {
       h1: "calc(75 / 68)",
-      h2: "calc(60 / 50)",
+      h2: "calc(55 / 50)",
       h3: "calc(55 / 42)",
       h4: "calc(50 / 38)",
       h5: "calc(38 / 28)",
