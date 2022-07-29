@@ -64,14 +64,6 @@ function Home() {
   )
 }
 
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  DotGroup,
-  Dot,
-} from "pure-react-carousel"
-import "pure-react-carousel/dist/react-carousel.es.css"
 export default Home
 
 const Testimonials = ({ testimonials }) => {
