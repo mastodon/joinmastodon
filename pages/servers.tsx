@@ -19,7 +19,7 @@ const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
 
 const Servers = ({ filterList }) => {
   const intl = useIntl()
-  const [filters, setFilters] = useState({ language: "", category: "" })
+  const [filters, setFilters] = useState({ language: "", category: "general" })
 
   // stores filter list to be passed at placeholder data in the next API fetch
   const cachedLanguages = useRef(filterList.language)
