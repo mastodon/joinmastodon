@@ -87,7 +87,12 @@ const Testimonials = ({ testimonials }) => {
 
         <div className="columns-sm gap-5">
           {testimonials.map((testimonial) => {
-            return <TestimonialCard testimonial={testimonial} />
+            return (
+              <TestimonialCard
+                key={testimonial.name}
+                testimonial={testimonial}
+              />
+            )
           })}
         </div>
       </div>
