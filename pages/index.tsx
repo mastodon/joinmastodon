@@ -10,8 +10,8 @@ import TestimonialCard from "../components/TestimonialCard"
 import SponsorGroup from "../components/SponsorLogoGroup"
 import { IconCard } from "../components/IconCard"
 
-import testimonials from "../data/testimonials.json"
-import { platinum, additionalFunding } from "../data/sponsors.js"
+import testimonials from "../data/testimonials"
+import { platinum, additionalFunding } from "../data/sponsors"
 
 import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
@@ -20,31 +20,12 @@ import illoWorld from "../public/illustrations/home_sponsors_world.png"
 
 import homeHeroMobile from "../public/illustrations/home_hero_mobile.webp"
 import homeHeroDesktop from "../public/illustrations/home_hero_desktop.webp"
+import Hero from "../components/Hero"
 
 function Home() {
   return (
     <>
-      <HomeHero />
-      <Features />
-      <WhyMastodon />
-      <Testimonials testimonials={testimonials} />
-      <Sponsors sponsors={{ platinum, additionalFunding }} />
-    </>
-  )
-}
-
-export default Home
-
-const HomeHero = () => {
-  return (
-    <section
-      className={`full-width-bg hero relative  h-[${
-        homeHeroMobile.height / 2
-      }px] pt-[var(--header-area)] text-center text-white lg:h-[${
-        homeHeroDesktop.height / 2
-      }px]`}
-    >
-      <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
+      <Hero mobileImage={homeHeroMobile} desktopImage={homeHeroDesktop} large>
         <h1 className="h1 mb-2 max-w-[17ch]">
           <FormattedMessage
             id="home.hero.headline"
@@ -74,32 +55,12 @@ const HomeHero = () => {
             />
           </LinkButton>
         </div>
-      </div>
-
-      <div className="absolute inset-0 -z-10 lg:hidden">
-        <Image
-          src={homeHeroMobile}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center center"
-          placeholder="blur"
-          priority={true}
-        />
-      </div>
-
-      <div className="absolute inset-0 -z-10 hidden lg:block">
-        <Image
-          src={homeHeroDesktop}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          className="lg:object-[45%_center] xl:object-center"
-          placeholder="blur"
-          priority={true}
-        />
-      </div>
-    </section>
+      </Hero>
+      <Features />
+      <WhyMastodon />
+      <Testimonials testimonials={testimonials} />
+      <Sponsors sponsors={{ platinum, additionalFunding }} />
+    </>
   )
 }
 
@@ -111,6 +72,7 @@ import {
   Dot,
 } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
+export default Home
 
 const Testimonials = ({ testimonials }) => {
   return (

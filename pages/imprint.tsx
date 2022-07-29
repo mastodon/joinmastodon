@@ -1,16 +1,18 @@
 import Head from "next/head"
 import BasicPage from "../components/BasicPage"
+import Hero from "../components/Hero"
 
-// This page does not require translations
+/** This page does not require translations */
 const Imprint = () => (
-  <BasicPage>
-    <div className="[unicode-bidi:plaintext]">
-      <div className="py-8">
-        <h1 className="h2">Contact us / Impressum</h1>
-        <p className="sh1">
-          For the pages under joinmastodon.org and its subdomains:
-        </p>
-        <hr className="my-4" />
+  <>
+    <Hero>
+      <h1 className="h1 mb-4">Contact us / Impressum</h1>
+      <p className="sh1">
+        For the pages under joinmastodon.org and its subdomains:
+      </p>
+    </Hero>
+    <BasicPage>
+      <div className="[unicode-bidi:plaintext]">
         <address className="not-italic">
           <p>
             Mastodon gGmbH
@@ -56,14 +58,14 @@ const Imprint = () => (
             </div>
           </dl>
         </address>
-      </div>
 
-      <Head>
-        <title>Contact us / Impressum - Mastodon</title>
-        <meta property="og:title" content="Contact us / Impressum" />
-      </Head>
-    </div>
-  </BasicPage>
+        <Head>
+          <title>Contact us / Impressum - Mastodon</title>
+          <meta property="og:title" content="Contact us / Impressum" />
+        </Head>
+      </div>
+    </BasicPage>
+  </>
 )
 
 export default Imprint

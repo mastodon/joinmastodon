@@ -1,10 +1,8 @@
-import classnames from "classnames"
-import Image from "next/image"
 import Link from "next/link"
 import { FormattedMessage } from "react-intl"
-import SVG from "react-inlinesvg"
+import Hero from "../components/Hero"
+import SponsorCard from "../components/SponsorCard"
 import SponsorLogoGroup from "../components/SponsorLogoGroup"
-import LinkButton from "../components/LinkButton"
 import TwoUpFeature from "../components/TwoUpFeature"
 import sponsors from "../data/sponsors"
 import sponsorData from "../data/sponsors"
@@ -12,19 +10,17 @@ import sponsorData from "../data/sponsors"
 function Sponsors() {
   return (
     <>
-      <section className="full-width-bg hero h-[80vh] bg-main-blurple pt-[var(--header-area)] text-white">
-        <div className="full-width-bg__inner grid lg:grid-cols-12">
-          <h1 className="h1 mb-2 lg:col-start-2">
-            <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
-          </h1>
-          <p className="sh1 lg:col-start-2 lg:col-end-6">
-            <FormattedMessage
-              id="sponsors.hero.body"
-              defaultMessage="You can back us on a monthly basis through Patreon or pledge to become a sponsor through our link below. We are grateful for the companies and people who make mastodon possible."
-            />
-          </p>
-        </div>
-      </section>
+      <Hero>
+        <h1 className="h1 mb-2 lg:col-start-2">
+          <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
+        </h1>
+        <p className="sh1 lg:col-start-2 lg:col-end-6">
+          <FormattedMessage
+            id="sponsors.hero.body"
+            defaultMessage="You can back us on a monthly basis through Patreon or pledge to become a sponsor through our link below. We are grateful for the companies and people who make mastodon possible."
+          />
+        </p>
+      </Hero>
 
       <TwoUpFeature
         features={[
@@ -91,7 +87,7 @@ function Sponsors() {
         <h2 className="h5 mb-8">
           <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
         </h2>
-        <div className="grid gap-y-8 lg:grid-cols-4 lg:gap-x-5">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-y-8 gap-x-gutter">
           {sponsorData.silver.map((sponsor) => {
             if (sponsor.url) {
               return (
@@ -115,7 +111,7 @@ function Sponsors() {
             defaultMessage="Additional thanks to"
           />
         </h2>
-        <div className="grid gap-y-8 md:grid-cols-4 lg:grid-cols-6 lg:gap-x-6">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-y-4 gap-x-gutter">
           {sponsors.generalHighlighted.map((sponsor) => {
             return (
               <SponsorCard
@@ -137,36 +133,3 @@ function Sponsors() {
 }
 
 export default Sponsors
-
-const SponsorCard = ({ sponsor, tier }) => {
-  return (
-    <div
-      className={classnames(
-        "grid grid-cols-[auto_1fr] gap-4 rounded p-4 shadow",
-        tier === "generalHighlighted" && "bg-gray-3"
-      )}
-    >
-      {tier === "silver" &&
-        (sponsor.logo ? (
-          <Image src={sponsor.logo} width="56" height="56" />
-        ) : (
-          <div className="h-[56px] w-[56px] rounded-[2px] bg-blurple-gradient" />
-        ))}
-
-      <div className="flex flex-col justify-center">
-        <span className="c2 !leading-[1.5] text-gray-1">
-          {tier === "silver" ? (
-            <FormattedMessage
-              id="silver_sponsor"
-              defaultMessage="Silver sponsor"
-            />
-          ) : (
-            <FormattedMessage id="sponsor" defaultMessage="Sponsor" />
-          )}
-        </span>
-
-        <p className="b3">{sponsor.name || sponsor}</p>
-      </div>
-    </div>
-  )
-}

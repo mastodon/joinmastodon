@@ -10,11 +10,12 @@ export type AppsGridProps = {
   apps: appsList
 }
 
+/** Renders AppCards as a grid, with sorting and filtering options */
 export const AppsGrid = ({ apps }: AppsGridProps) => {
   const intl = useIntl()
   const [activeCategory, setActiveCategory] = useState("all")
 
-  // normalizing the apps dictionary
+  /** normalizing the apps dictionary as an array */
   const allApps = Object.entries(apps)
     .map(([category, apps]) =>
       apps.map(({ name, icon, url, paid, released_on }) => ({
@@ -66,7 +67,7 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
                 className={classNames(
                   "b3 block whitespace-nowrap rounded border-2 p-4 text-center !font-600 transition-all md:w-full",
                   category.key === activeCategory
-                    ? "border-accent-blurple bg-accent-blurple text-white hover:border-dark-blurple hover:bg-dark-blurple"
+                    ? "border-accent-blurple bg-accent-blurple text-white hover:border-dark-blurple hover:bg-dark-blurple focus-visible-within:border-dark-blurple focus-visible-within:bg-dark-blurple"
                     : "border-accent-blurple bg-white text-accent-blurple hover:border-dark-blurple hover:text-dark-blurple"
                 )}
               >

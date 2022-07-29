@@ -3,13 +3,13 @@ import { useRef, useState, useEffect } from "react"
 import { FormattedMessage, defineMessages, useIntl } from "react-intl"
 import SVG from "react-inlinesvg"
 import classnames from "classnames"
-import Image from "next/image"
 import { orderBy as _orderBy } from "lodash"
 import ServerCard from "../components/ServerCard"
 import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import { categoriesMessages } from "../data/categories"
 import type { Server, Category, Language } from "../types/api"
+import Hero from "../components/Hero"
 
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
@@ -19,7 +19,7 @@ const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
 
 const Servers = ({ filterList }) => {
   const intl = useIntl()
-  const [filters, setFilters] = useState({ language: "", category: "" })
+  const [filters, setFilters] = useState({ language: "", category: "general" })
 
   // stores filter list to be passed at placeholder data in the next API fetch
   const cachedLanguages = useRef(filterList.language)
@@ -73,101 +73,72 @@ const Servers = ({ filterList }) => {
   )
 
   return (
-    <div className="grid pb-40">
-      <section
-        className={`order-0 full-width-bg relative h-[${
-          serverHeroMobile.height / 2
-        }px] pt-[var(--header-area)] text-white lg:h-[${
-          serverHeroDesktop.height / 2
-        }px]`}
-      >
-        <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
-          <h1 className="h1 mb-2 lg:col-span-3 lg:col-start-2">
-            <FormattedMessage id="servers" defaultMessage="Servers" />
-          </h1>
+    <div>
+      <Hero mobileImage={serverHeroMobile} desktopImage={serverHeroDesktop}>
+        <h1 className="h1 mb-2">
+          <FormattedMessage id="servers" defaultMessage="Servers" />
+        </h1>
 
-          <p className="sh1 mb-14 max-w-[36ch] lg:col-span-5 lg:col-start-2">
-            <FormattedMessage
-              id="servers.hero.body"
-              defaultMessage="Find your community here on the servers page. New here? <b>Check out the help section below.</b>"
-              values={{
-                b: (text) => <b>{text}</b>,
-              }}
-            />
-          </p>
-        </div>
-
-        <div className="absolute inset-0 -z-10 lg:hidden">
-          <Image
-            src={serverHeroMobile}
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center center"
-            placeholder="blur"
-            priority={true}
+        <p className="sh1 mb-14 max-w-[36ch]">
+          <FormattedMessage
+            id="servers.hero.body"
+            defaultMessage="Find your community here on the servers page. New here? <b>Check out the help section below.</b>"
+            values={{
+              b: (text) => <b>{text}</b>,
+            }}
           />
-        </div>
+        </p>
+      </Hero>
 
-        <div className="absolute inset-0 -z-10 hidden lg:block">
-          <Image
-            src={serverHeroDesktop}
-            alt=""
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center center"
-            placeholder="blur"
-            priority={true}
-          />
-        </div>
-      </section>
-
-      <GettingStartedCards />
-
-      <div className="order-2 my-4 flex flex-wrap justify-between lg:my-8 ">
-        <h2 className="flex items-center gap-2">
-          <SVG className="text-gray-2" src="/ui/filters.svg" />
-          <span className="text-gray-1">
-            <FormattedMessage id="wizard.filter" defaultMessage="Filter" />
-          </span>
-        </h2>
-
-        <SelectMenu
-          label={
-            <FormattedMessage
-              id="wizard.filter_by_language"
-              defaultMessage="Filter by language"
+      <div className="grid gap-20 pb-40">
+        <GettingStartedCards />
+        <div className="grid grid-cols-4 gap-gutter md:grid-cols-12">
+          <div className="col-span-3 my-4">
+            <h2 className="mb-8 flex items-center gap-2">
+              <SVG className="text-gray-2" src="/ui/filters.svg" />
+              <span className="text-gray-1">
+                <FormattedMessage id="wizard.filter" defaultMessage="Filter" />
+              </span>
+            </h2>
+            <ServerFilters
+              filterList={{ category: updatedCategoryList }}
+              filters={filters}
+              setFilters={setFilters}
             />
-          }
-          onChange={(v) => {
-            setFilters({ ...filters, language: v })
-          }}
-          value={filters.language}
-          options={[
-            {
-              value: "",
-              label: intl.formatMessage({
-                id: "wizard.filter.all_languages",
-                defaultMessage: "All languages",
-              }),
-            },
-            ...apiLanguages.data
-              .filter((language) => language.language && language.locale)
-              .map((language) => ({
-                label: language.language,
-                value: language.locale,
-              })),
-          ]}
-        />
-      </div>
-
-      <div className="order-3 grid grid-cols-4 gap-gutter md:grid-cols-12">
-        <ServerFilters
-          filterList={{ category: updatedCategoryList }}
-          filters={filters}
-          setFilters={setFilters}
-        />
-        <ServerList servers={servers} />
+          </div>
+          <div className="col-span-4 md:col-start-4 md:col-end-13">
+            <div className="my-4 mb-8 flex md:justify-end">
+              <SelectMenu
+                label={
+                  <FormattedMessage
+                    id="wizard.filter_by_language"
+                    defaultMessage="Filter by language"
+                  />
+                }
+                onChange={(v) => {
+                  setFilters({ ...filters, language: v })
+                }}
+                value={filters.language}
+                options={[
+                  {
+                    value: "",
+                    label: intl.formatMessage({
+                      id: "wizard.filter.all_languages",
+                      defaultMessage: "All languages",
+                    }),
+                  },
+                  ...apiLanguages.data
+                    .filter((language) => language.language && language.locale)
+                    .map((language) => ({
+                      label: language.language,
+                      value: language.locale,
+                    })),
+                ]}
+              />
+            </div>
+            <ServerList servers={servers} />
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -175,7 +146,7 @@ const Servers = ({ filterList }) => {
 
 const GettingStartedCards = () => {
   const [visited, setVisited] = useState(false)
-  useEffect(function () {
+  useEffect(function checkVisited() {
     let visits = localStorage.getItem("visited")
 
     // on first visit, set localStorage.visited = true
@@ -187,7 +158,7 @@ const GettingStartedCards = () => {
   }, [])
 
   return (
-    <section className={classnames("mb-8", visited ? "order-4" : "order-0")}>
+    <section className={classnames("mb-8", visited ? "order-1" : "order-0")}>
       <h2 className="h3 mb-8 text-center">
         <FormattedMessage
           id="servers.getting_started.headline"
@@ -197,7 +168,7 @@ const GettingStartedCards = () => {
       <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-4">
         <IconCard
           title={<FormattedMessage id="servers" defaultMessage="Servers" />}
-          icon="decentralized"
+          icon="servers"
           copy={
             <FormattedMessage
               id="servers.getting_started.servers"
@@ -212,7 +183,7 @@ const GettingStartedCards = () => {
               defaultMessage="Your feed"
             />
           }
-          icon="decentralized"
+          icon="feed"
           copy={
             <FormattedMessage
               id="servers.getting_started.feed.body"
@@ -227,7 +198,7 @@ const GettingStartedCards = () => {
               defaultMessage="Flexible"
             />
           }
-          icon="decentralized"
+          icon="move-servers"
           copy={
             <FormattedMessage
               id="servers.getting_started.flexible.body"
@@ -242,7 +213,7 @@ const GettingStartedCards = () => {
               defaultMessage="Safe for all"
             />
           }
-          icon="decentralized"
+          icon="safety-1"
           copy={
             <FormattedMessage
               id="servers.getting_started.safe_for_all.body"
@@ -256,10 +227,6 @@ const GettingStartedCards = () => {
 }
 
 const ServerList = ({ servers }) => {
-  if (servers.isLoading) {
-    return <p>Loading...</p>
-  }
-
   if (servers.isError) {
     return <p>Oops, something went wrong.</p>
   }
@@ -267,7 +234,7 @@ const ServerList = ({ servers }) => {
   const featuredServers = null
 
   return (
-    <div className="col-span-4 md:col-start-4 md:col-end-13 ">
+    <div className="col-span-4 md:col-start-4 md:col-end-13">
       {featuredServers && (
         <h3 className="h5 mb-6">
           <FormattedMessage
@@ -276,10 +243,14 @@ const ServerList = ({ servers }) => {
           />
         </h3>
       )}
-      <div className="grid gap-gutter md:grid-cols-2  xl:grid-cols-3">
-        {servers.data.map((server) => (
-          <ServerCard key={server.domain} server={server} />
-        ))}
+      <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-3">
+        {servers.isLoading
+          ? Array(8)
+              .fill(null)
+              .map((_el, i) => <ServerCard key={i} />)
+          : servers.data.map((server) => (
+              <ServerCard key={server.domain} server={server} />
+            ))}
       </div>
     </div>
   )
@@ -308,7 +279,7 @@ const ServerFilters = ({
   })
 
   return (
-    <div className="col-span-3">
+    <div>
       {Object.keys(filterList).map((group, i) => {
         const totalServersCount =
           filterList[group]?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
@@ -329,7 +300,7 @@ const ServerFilters = ({
                   <li key={i}>
                     <label
                       className={classnames(
-                        "b2 flex cursor-pointer gap-1 rounded focus-within:outline focus-within:outline-2 focus-within:outline-accent-blurple",
+                        "b2 flex cursor-pointer gap-1 rounded focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-accent-blurple",
                         isActive && "!font-800",
                         item.servers_count === 0 && "text-gray-2"
                       )}

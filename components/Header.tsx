@@ -9,9 +9,7 @@ import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
 import SVG from "react-inlinesvg"
 
-/**
- * @see https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation-hybrid.html
- */
+/** Sitewide header and navigation */
 const Header = () => {
   const [pageScrolled, setPageScrolled] = useState(false)
 
@@ -106,7 +104,7 @@ const Header = () => {
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[var(--header-area)] md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4 [&:has(:focus-visible)]:outline",
+              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[var(--header-area)] focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
@@ -178,6 +176,10 @@ const Header = () => {
   )
 }
 
+/**
+ * `useMenu` provides a React Hook for managing menu state and attributes for accessibility.
+ * @see https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation-hybrid.html
+ */
 const useMenu = ({ navigationItems }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [primaryMenuItemIndex, setPrimaryMenuItemIndex] = useState<number>(0)

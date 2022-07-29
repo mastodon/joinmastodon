@@ -1,6 +1,10 @@
 import classNames from "classnames"
 import { useEffect } from "react"
 
+/**
+ * Mobile menu toggle
+ * Also controls scrollability of the page
+ */
 export const MenuToggle = ({ open, onClick }) => {
   useEffect(() => {
     if (open) {

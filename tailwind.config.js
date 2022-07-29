@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin")
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -82,7 +84,14 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-logical"), require("@tailwindcss/line-clamp")],
+  plugins: [
+    require("tailwindcss-logical"),
+    require("@tailwindcss/line-clamp"),
+    plugin(function ({ addVariant }) {
+      addVariant("hocus", ["&:hover", "&:focus-visible"])
+      addVariant("focus-visible-within", ["&:has(:focus-visible)"])
+    }),
+  ],
 }
 function rem(px) {
   return `${px / 16}rem`
