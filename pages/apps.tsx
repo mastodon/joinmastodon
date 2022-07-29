@@ -12,61 +12,66 @@ import footer_festival from "../public/illustrations/footer_festival.png"
 import AppsGrid from "../components/AppsGrid"
 import TwoUpFeature from "../components/TwoUpFeature"
 import { apps as appsList } from "../data/apps"
+import Hero from "../components/Hero"
+import appsHeroDesktop from "../public/illustrations/apps_hero_desktop.png"
+import appsHeroMobile from "../public/illustrations/apps_hero_mobile.png"
+import ios_android_apps from "../public/illustrations/ios_android_apps.png"
 
 const AppsPage = () => {
   const intl = useIntl()
   return (
-    <div className="pt-40">
-      <div className="app-intro">
-        <div className="container">
-          <div className="app-intro__hero">
-            <div className="app-intro__hero__unit">
-              <h1>
-                <small>
+    <div>
+      <Hero desktopImage={appsHeroDesktop} mobileImage={appsHeroMobile}>
+        <div className="app-intro">
+          <div className="container">
+            <div className="app-intro__hero">
+              <div className="app-intro__hero__unit">
+                <h1 className="h1 mb-4">
+                  <FormattedMessage id="apps.title" defaultMessage="Apps" />
+                </h1>
+
+                <p className="sh1">
                   <FormattedMessage
-                    id="ios.introducing"
-                    defaultMessage="Introducing"
+                    id="ios_and_android.download"
+                    defaultMessage="We've released official apps for Mastodon on iOS and Android, in addition to the web version and all the third-party apps available below."
                   />
-                </small>
-                <br />
-                <FormattedMessage
-                  id="ios_and_android.app_name"
-                  defaultMessage="Official apps"
-                />
-              </h1>
-
-              <p>
-                <FormattedMessage
-                  id="ios_and_android.download"
-                  defaultMessage="We've released official apps for Mastodon on iOS and Android, in addition to the web version and all the third-party apps available below."
-                />
-              </p>
-
-              <h2 className="h4 mb-4">
-                <FormattedMessage
-                  id="ios_and_android.download"
-                  defaultMessage="Download the apps"
-                />
-              </h2>
-
-              <div className="flex gap-5">
-                <a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974">
-                  <Image
-                    src={downloadOnAppStore}
-                    alt="Download on the App Store"
-                    className="app-store-badge"
-                  />
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android">
-                  <Image
-                    src={downloadOnGooglePlay}
-                    alt="Get it on Google Play"
-                    className="app-store-badge"
-                    style={{ height: 70, margin: "-10px 0" }}
-                  />
-                </a>
+                </p>
               </div>
             </div>
+          </div>
+        </div>
+      </Hero>
+
+      <div className="grid justify-center gap-x-gutter gap-y-16 pt-16 pb-8 text-center md:grid-cols-12 md:text-start">
+        <div className="md:col-span-6 lg:col-span-5 xl:col-span-4 xl:col-start-2">
+          <h2 className="h4 mb-4">
+            <FormattedMessage
+              id="ios_and_android.download"
+              defaultMessage="Download the apps"
+            />
+          </h2>
+
+          <div className="flex justify-center gap-5 md:justify-start">
+            <a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974">
+              <Image
+                src={downloadOnAppStore}
+                alt="Download on the App Store"
+                className="app-store-badge"
+              />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android">
+              <Image
+                src={downloadOnGooglePlay}
+                alt="Get it on Google Play"
+                className="app-store-badge"
+                style={{ height: 70, margin: "-10px 0" }}
+              />
+            </a>
+          </div>
+        </div>
+        <div className="md:col-span-6 md:-mt-16 lg:col-span-5 lg:col-start-7 lg:-mt-32 xl:-mt-72">
+          <div className="mx-auto max-w-xs md:max-w-none">
+            <Image src={ios_android_apps} />
           </div>
         </div>
       </div>
