@@ -73,9 +73,9 @@ const Servers = ({ filterList }) => {
   )
 
   return (
-    <div className="grid pb-40">
+    <div>
       <section
-        className={`order-0 full-width-bg relative h-[var(--servers-mobile-hero-height)] pt-[var(--header-area)] text-white lg:h-[var(--servers-desktop-hero-height)]`}
+        className={`full-width-bg relative h-[var(--servers-mobile-hero-height)] pt-[var(--header-area)] text-white lg:h-[var(--servers-desktop-hero-height)]`}
       >
         <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
           <h1 className="h1 mb-2 lg:col-span-3 lg:col-start-2">
@@ -130,52 +130,55 @@ const Servers = ({ filterList }) => {
         </div>
       </section>
 
-      <GettingStartedCards />
-
-      <div className="order-2 my-4 flex flex-wrap justify-between lg:my-8 ">
-        <h2 className="flex items-center gap-2">
-          <SVG className="text-gray-2" src="/ui/filters.svg" />
-          <span className="text-gray-1">
-            <FormattedMessage id="wizard.filter" defaultMessage="Filter" />
-          </span>
-        </h2>
-
-        <SelectMenu
-          label={
-            <FormattedMessage
-              id="wizard.filter_by_language"
-              defaultMessage="Filter by language"
+      <div className="grid gap-20 pb-40">
+        <GettingStartedCards />
+        <div className="grid grid-cols-4 gap-gutter md:grid-cols-12">
+          <div className="col-span-3 my-4">
+            <h2 className="mb-8 flex items-center gap-2">
+              <SVG className="text-gray-2" src="/ui/filters.svg" />
+              <span className="text-gray-1">
+                <FormattedMessage id="wizard.filter" defaultMessage="Filter" />
+              </span>
+            </h2>
+            <ServerFilters
+              filterList={{ category: updatedCategoryList }}
+              filters={filters}
+              setFilters={setFilters}
             />
-          }
-          onChange={(v) => {
-            setFilters({ ...filters, language: v })
-          }}
-          value={filters.language}
-          options={[
-            {
-              value: "",
-              label: intl.formatMessage({
-                id: "wizard.filter.all_languages",
-                defaultMessage: "All languages",
-              }),
-            },
-            ...apiLanguages.data
-              .filter((language) => language.language && language.locale)
-              .map((language) => ({
-                label: language.language,
-                value: language.locale,
-              })),
-          ]}
-        />
-      </div>
-
-      <div className="order-3 grid grid-cols-4 gap-gutter md:grid-cols-12">
-        <ServerFilters
-          filterList={{ category: updatedCategoryList }}
-          filters={filters}
-          setFilters={setFilters}
-        />
-        <ServerList servers={servers} />
+          </div>
+          <div className="col-span-4 md:col-start-4 md:col-end-13">
+            <div className="my-4 mb-8 flex md:justify-end">
+              <SelectMenu
+                label={
+                  <FormattedMessage
+                    id="wizard.filter_by_language"
+                    defaultMessage="Filter by language"
+                  />
+                }
+                onChange={(v) => {
+                  setFilters({ ...filters, language: v })
+                }}
+                value={filters.language}
+                options={[
+                  {
+                    value: "",
+                    label: intl.formatMessage({
+                      id: "wizard.filter.all_languages",
+                      defaultMessage: "All languages",
+                    }),
+                  },
+                  ...apiLanguages.data
+                    .filter((language) => language.language && language.locale)
+                    .map((language) => ({
+                      label: language.language,
+                      value: language.locale,
+                    })),
+                ]}
+              />
+            </div>
+            <ServerList servers={servers} />
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -183,7 +186,7 @@ const Servers = ({ filterList }) => {
 
 const GettingStartedCards = () => {
   const [visited, setVisited] = useState(false)
-  useEffect(function () {
+  useEffect(function checkVisited() {
     let visits = localStorage.getItem("visited")
 
     // on first visit, set localStorage.visited = true
@@ -195,7 +198,7 @@ const GettingStartedCards = () => {
   }, [])
 
   return (
-    <section className={classnames("mb-8", visited ? "order-4" : "order-0")}>
+    <section className={classnames("mb-8", visited ? "order-1" : "order-0")}>
       <h2 className="h3 mb-8 text-center">
         <FormattedMessage
           id="servers.getting_started.headline"
@@ -316,7 +319,7 @@ const ServerFilters = ({
   })
 
   return (
-    <div className="col-span-3">
+    <div>
       {Object.keys(filterList).map((group, i) => {
         const totalServersCount =
           filterList[group]?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
