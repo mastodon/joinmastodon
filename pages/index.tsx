@@ -85,64 +85,11 @@ const Testimonials = ({ testimonials }) => {
           />
         </h2>
 
-        {/* mobile carousel */}
-        <CarouselProvider
-          className="lg:hidden"
-          naturalSlideWidth={100}
-          naturalSlideHeight={125}
-          totalSlides={testimonials.length}
-          isIntrinsicHeight
-          visibleSlides={1}
-        >
-          <Slider className="pb-16" classNameTray="gap-5">
-            {testimonials.map((testimonial, i) => {
-              return (
-                <Slide index={i} key={testimonial.name}>
-                  <TestimonialCard testimonial={testimonial} />
-                </Slide>
-              )
-            })}
-          </Slider>
-          <DotGroup className="flex justify-center" />
-        </CarouselProvider>
-
-        {/* desktop carousel */}
-        <CarouselProvider
-          className="hidden lg:block"
-          naturalSlideWidth={100}
-          naturalSlideHeight={125}
-          totalSlides={testimonials.length}
-          isIntrinsicHeight
-          visibleSlides={3}
-          dragStep={3}
-        >
-          <Slider className="pb-16" classNameTray="gap-5">
-            {testimonials.map((testimonial, i) => {
-              return (
-                <Slide index={i} key={testimonial.name}>
-                  <TestimonialCard testimonial={testimonial} />
-                </Slide>
-              )
-            })}
-          </Slider>
-          <DotGroup
-            className="flex justify-center"
-            renderDots={() => {
-              return testimonials
-                .map((testimonial, i) => ({ ...testimonial, index: i }))
-                .filter((_, i: number) => i % 3 === 0)
-                .map((testimonial) => {
-                  return (
-                    <Dot
-                      key={testimonial.index}
-                      className="carousel__dot"
-                      slide={testimonial.index}
-                    />
-                  )
-                })
-            }}
-          />
-        </CarouselProvider>
+        <div className="columns-sm gap-5">
+          {testimonials.map((testimonial) => {
+            return <TestimonialCard testimonial={testimonial} />
+          })}
+        </div>
       </div>
     </section>
   )
