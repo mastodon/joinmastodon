@@ -74,9 +74,7 @@ const Servers = ({ filterList }) => {
 
   return (
     <div>
-      <section
-        className={`full-width-bg relative h-[var(--servers-mobile-hero-height)] pt-[var(--header-area)] text-white lg:h-[var(--servers-desktop-hero-height)]`}
-      >
+      <section className="full-width-bg relative h-[var(--servers-mobile-hero-height)] pt-[var(--header-area)] text-white lg:h-[var(--servers-desktop-hero-height)]">
         <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
           <h1 className="h1 mb-2 lg:col-span-3 lg:col-start-2">
             <FormattedMessage id="servers" defaultMessage="Servers" />

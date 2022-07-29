@@ -37,9 +37,7 @@ export default Home
 
 const HomeHero = () => {
   return (
-    <section
-      className={`full-width-bg hero relative  h-[var(--home-mobile-hero-height)] pt-[var(--header-area)] text-center text-white lg:h-[var(--home-desktop-hero-height)]`}
-    >
+    <section className="full-width-bg hero relative  h-[var(--home-mobile-hero-height)] pt-[var(--header-area)] text-center text-white lg:h-[var(--home-desktop-hero-height)]">
       <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
         <h1 className="h1 mb-2 max-w-[17ch]">
           <FormattedMessage
