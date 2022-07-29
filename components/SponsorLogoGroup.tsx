@@ -13,7 +13,7 @@ const SponsorLogoGroup = ({ sponsors }) => {
           <Link href={sponsor.url} key={i}>
             <a
               className={classnames(
-                "relative inline-flex max-h-[60px] max-w-[150px] justify-self-center",
+                "group relative inline-flex max-h-[60px] max-w-[150px] justify-self-center",
                 isLastItem && isUnevenItems && "col-span-2"
               )}
               target="_blank"
@@ -26,7 +26,7 @@ const SponsorLogoGroup = ({ sponsors }) => {
             >
               <Image
                 className={classnames(
-                  "object-contain opacity-50 mix-blend-luminosity transition-opacity hover:opacity-100",
+                  "object-contain opacity-50 mix-blend-luminosity transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100",
                   sponsor.light && "invert"
                 )}
                 src={sponsor.logo}

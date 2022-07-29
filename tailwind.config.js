@@ -88,6 +88,7 @@ module.exports = {
     require("tailwindcss-logical"),
     require("@tailwindcss/line-clamp"),
     plugin(function ({ addVariant }) {
+      addVariant("hocus", ["&:hover", "&:focus-visible"])
       addVariant("focus-visible-within", ["&:has(:focus-visible)"])
     }),
   ],

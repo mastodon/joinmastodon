@@ -67,7 +67,7 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
                 className={classNames(
                   "b3 block whitespace-nowrap rounded border-2 p-4 text-center !font-600 transition-all md:w-full",
                   category.key === activeCategory
-                    ? "border-accent-blurple bg-accent-blurple text-white hover:border-dark-blurple hover:bg-dark-blurple"
+                    ? "border-accent-blurple bg-accent-blurple text-white hover:border-dark-blurple hover:bg-dark-blurple focus-visible-within:border-dark-blurple focus-visible-within:bg-dark-blurple"
                     : "border-accent-blurple bg-white text-accent-blurple hover:border-dark-blurple hover:text-dark-blurple"
                 )}
               >
