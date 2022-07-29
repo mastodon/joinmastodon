@@ -23,7 +23,7 @@ module.exports = {
       c3: rem(6),
     },
     lineHeight: {
-      h1: "calc(90 / 68)",
+      h1: "calc(75 / 68)",
       h2: "calc(60 / 50)",
       h3: "calc(55 / 42)",
       h4: "calc(50 / 38)",

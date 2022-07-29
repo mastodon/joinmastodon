@@ -26,14 +26,14 @@ function Home() {
   return (
     <>
       <Hero mobileImage={homeHeroMobile} desktopImage={homeHeroDesktop} large>
-        <h1 className="h1 mb-2 max-w-[17ch]">
+        <h1 className="h1 mb-4 max-w-[17ch] md:mb-7">
           <FormattedMessage
             id="home.hero.headline"
             defaultMessage="Social networking that's not for sale."
           />
         </h1>
 
-        <p className="sh1 mb-14 max-w-[50ch]">
+        <p className="sh1 mb-11 max-w-[50ch]">
           <FormattedMessage
             id="home.hero.body"
             defaultMessage="Your home feed should be filled with what matters to you most, not what a corporation thinks you should see. Radically different social media, back in the hands of the people."
