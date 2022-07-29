@@ -318,7 +318,7 @@ const Sponsors = ({ sponsors }) => {
         </div>
       </div>
 
-      <h3 className="h4 mb-8 text-center lg:col-span-12">
+      <h3 className="h5 mb-8 text-center lg:col-span-12">
         <FormattedMessage
           id="sponsors.supported_by"
           defaultMessage="Supported by"
