@@ -12,7 +12,11 @@ export type TestimonialCardProps = {
 export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
     <Link href={testimonial.profile_url}>
-      <a className="mb-8 inline-block h-max w-full space-y-6 rounded bg-white p-8 shadow">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-8 inline-block h-max w-full space-y-6 rounded bg-white p-8 shadow"
+      >
         <p className="b3">{testimonial.text}</p>
         <div className="flex flex-wrap gap-x-6 ">
           <div className="shrink-0">
