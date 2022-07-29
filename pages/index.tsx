@@ -58,12 +58,20 @@ function Home() {
       </Hero>
       <Features />
       <WhyMastodon />
-      <Testimonials testimonials={testimonials.slice(0, 3)} />
+      <Testimonials testimonials={testimonials} />
       <Sponsors sponsors={{ platinum, additionalFunding }} />
     </>
   )
 }
 
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  DotGroup,
+  Dot,
+} from "pure-react-carousel"
+import "pure-react-carousel/dist/react-carousel.es.css"
 export default Home
 
 const Testimonials = ({ testimonials }) => {
@@ -76,8 +84,8 @@ const Testimonials = ({ testimonials }) => {
             defaultMessage="What our users are saying"
           />
         </h2>
-        <div className=" grid gap-gutter  md:grid-cols-3 ">
-          {/* TODO(mika): these cards should be rendered in a carousel*/}
+
+        <div className="columns-sm gap-5">
           {testimonials.map((testimonial) => {
             return (
               <TestimonialCard

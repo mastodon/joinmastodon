@@ -1,6 +1,5 @@
-import { FormattedMessage } from "react-intl"
+import Link from "next/link"
 import Image from "next/image"
-import LinkButton from "./LinkButton"
 import type { Testimonial } from "../data/testimonials"
 
 export type TestimonialCardProps = {
@@ -12,28 +11,30 @@ export type TestimonialCardProps = {
  */
 export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   return (
-    <div className="h-max space-y-6 rounded bg-white py-8 px-6 shadow">
-      <div className="flex flex-wrap gap-x-6 ">
-        <div className="shrink-0">
-          <Image
-            className="rounded"
-            src={testimonial.avatar}
-            alt=""
-            width="56"
-            height="56"
-          />
+    <Link href={testimonial.profile_url}>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-8 inline-block h-max w-full space-y-6 rounded bg-white p-8 shadow"
+      >
+        <p className="b3">{testimonial.text}</p>
+        <div className="flex flex-wrap gap-x-6 ">
+          <div className="shrink-0">
+            <Image
+              className="rounded-sm"
+              src={testimonial.avatar}
+              alt=""
+              width="56"
+              height="56"
+            />
+          </div>
+          <div className="flex flex-col justify-center">
+            <p className="b2 !font-700">{testimonial.name}</p>
+            <p className="b4 truncate text-gray-1">{testimonial.username}</p>
+          </div>
         </div>
-        <div className="flex flex-col justify-center">
-          <p className="sh1 !font-800">{testimonial.name}</p>
-          <p className="b3 truncate text-gray-1">{testimonial.username}</p>
-        </div>
-      </div>
-      <p className="b2">{testimonial.text}</p>
-
-      <LinkButton href={testimonial.profile_url} size="medium" light fullWidth>
-        <FormattedMessage id="view_profile" defaultMessage="View profile" />
-      </LinkButton>
-    </div>
+      </a>
+    </Link>
   )
 }
 
