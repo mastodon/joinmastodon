@@ -26,7 +26,7 @@ const SponsorLogoGroup = ({ sponsors }) => {
             >
               <Image
                 className={classnames(
-                  "object-contain opacity-50 mix-blend-luminosity transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100",
+                  "object-contain opacity-50 mix-blend-luminosity transition-all group-hover:opacity-100 group-hover:mix-blend-normal group-focus-visible:opacity-100 group-focus-visible:mix-blend-normal",
                   sponsor.light && "invert"
                 )}
                 src={sponsor.logo}
