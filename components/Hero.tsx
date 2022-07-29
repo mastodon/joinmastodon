@@ -37,7 +37,7 @@ const Hero = ({
         </div>
       ) : (
         <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
-          <div className="xxl:col-span-5 col-span-12 lg:col-span-8 xl:col-span-6 xl:col-start-2">
+          <div className="xxl:col-span-5 col-span-12 lg:col-span-7 xl:col-span-5 xl:col-start-2">
             {children}
           </div>
         </div>
