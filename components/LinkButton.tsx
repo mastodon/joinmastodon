@@ -27,10 +27,10 @@ const LinkButton = ({
   light,
   size,
 }: LinkButtonProps) => {
-  let linkAttrs = {} as {
-    target: string
-    rel: string
-  }
+  let linkAttrs: {
+    target?: string
+    rel?: string
+  } = {}
 
   // check if absolute url
   if (href.indexOf("http://") === 0 || href.indexOf("https://") === 0) {
