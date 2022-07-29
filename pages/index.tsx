@@ -133,7 +133,11 @@ const Testimonials = ({ testimonials }) => {
                 .filter((_, i: number) => i % 3 === 0)
                 .map((testimonial) => {
                   return (
-                    <Dot className="carousel__dot" slide={testimonial.index} />
+                    <Dot
+                      key={testimonial.index}
+                      className="carousel__dot"
+                      slide={testimonial.index}
+                    />
                   )
                 })
             }}
