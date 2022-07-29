@@ -27,7 +27,7 @@ function Home() {
       <HomeHero />
       <Features />
       <WhyMastodon />
-      <Testimonials testimonials={testimonials.slice(0, 3)} />
+      <Testimonials testimonials={testimonials} />
       <Sponsors sponsors={{ platinum, additionalFunding }} />
     </>
   )
@@ -103,6 +103,15 @@ const HomeHero = () => {
   )
 }
 
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  DotGroup,
+  Dot,
+} from "pure-react-carousel"
+import "pure-react-carousel/dist/react-carousel.es.css"
+
 const Testimonials = ({ testimonials }) => {
   return (
     <section className="full-width-bg bg-gray-5 pt-20 pb-28">
@@ -113,17 +122,61 @@ const Testimonials = ({ testimonials }) => {
             defaultMessage="What our users are saying"
           />
         </h2>
-        <div className=" grid gap-gutter  md:grid-cols-3 ">
-          {/* TODO(mika): these cards should be rendered in a carousel*/}
-          {testimonials.map((testimonial) => {
-            return (
-              <TestimonialCard
-                key={testimonial.name}
-                testimonial={testimonial}
-              />
-            )
-          })}
-        </div>
+
+        {/* mobile carousel */}
+        <CarouselProvider
+          className="lg:hidden"
+          naturalSlideWidth={100}
+          naturalSlideHeight={125}
+          totalSlides={testimonials.length}
+          isIntrinsicHeight
+          visibleSlides={1}
+        >
+          <Slider className="pb-16" classNameTray="gap-5">
+            {testimonials.map((testimonial, i) => {
+              return (
+                <Slide index={i} key={testimonial.name}>
+                  <TestimonialCard testimonial={testimonial} />
+                </Slide>
+              )
+            })}
+          </Slider>
+          <DotGroup className="flex justify-center" />
+        </CarouselProvider>
+
+        {/* desktop carousel */}
+        <CarouselProvider
+          className="hidden lg:block"
+          naturalSlideWidth={100}
+          naturalSlideHeight={125}
+          totalSlides={testimonials.length}
+          isIntrinsicHeight
+          visibleSlides={3}
+          dragStep={3}
+        >
+          <Slider className="pb-16" classNameTray="gap-5">
+            {testimonials.map((testimonial, i) => {
+              return (
+                <Slide index={i} key={testimonial.name}>
+                  <TestimonialCard testimonial={testimonial} />
+                </Slide>
+              )
+            })}
+          </Slider>
+          <DotGroup
+            className="flex justify-center"
+            renderDots={() => {
+              return testimonials
+                .map((testimonial, i) => ({ ...testimonial, index: i }))
+                .filter((_, i: number) => i % 3 === 0)
+                .map((testimonial) => {
+                  return (
+                    <Dot className="carousel__dot" slide={testimonial.index} />
+                  )
+                })
+            }}
+          />
+        </CarouselProvider>
       </div>
     </section>
   )
