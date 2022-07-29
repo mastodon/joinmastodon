@@ -104,7 +104,7 @@ const Header = () => {
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[var(--header-area)] md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4 [&:has(:focus-visible)]:outline",
+              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[var(--header-area)] focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
