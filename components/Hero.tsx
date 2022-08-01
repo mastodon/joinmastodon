@@ -23,7 +23,7 @@ const Hero = ({
 }: HeroProps) => {
   return (
     <section
-      className="full-width-bg relative h-[var(--mobile-hero-height)] pt-[var(--header-area)] text-white xl:h-[var(--desktop-hero-height)]"
+      className="full-width-bg relative h-[var(--mobile-hero-height)] pt-[var(--header-area)] text-white 2xl:h-[var(--desktop-hero-height)]"
       style={
         {
           "--desktop-hero-height": `${desktopImage.height / 2}px`,
@@ -37,31 +37,32 @@ const Hero = ({
         </div>
       ) : (
         <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
-          <div className="xxl:col-span-5 col-span-12 lg:col-span-7 xl:col-span-5 xl:col-start-2">
+          <div className="col-span-12 lg:col-span-7 xl:col-span-5 xl:col-start-2">
             {children}
           </div>
         </div>
       )}
 
-      <div className="absolute inset-0 -z-10 xl:hidden">
+      <div className="absolute inset-0 -z-10 2xl:hidden">
         <Image
           src={mobileImage}
           alt=""
           layout="fill"
           objectFit="cover"
-          objectPosition="center center"
+          objectPosition="center bottom"
           placeholder="blur"
           priority={true}
         />
       </div>
 
-      <div className="absolute inset-0 -z-10 hidden xl:block">
+      <div className="absolute inset-0 -z-10 hidden 2xl:block">
         <Image
+          className="desktop-hero"
           src={desktopImage}
           alt=""
           layout="fill"
           objectFit="cover"
-          className="xl:object-center"
+          objectPosition="center bottom"
           placeholder="blur"
           priority={true}
         />
