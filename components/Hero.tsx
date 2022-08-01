@@ -43,7 +43,7 @@ const Hero = ({
         </div>
       )}
 
-      <div className="absolute inset-0 -z-10 2xl:hidden">
+      <div className="absolute inset-0 -z-10 2xl:hidden md:ml-[-25%]">
         <Image
           src={mobileImage}
           alt=""
