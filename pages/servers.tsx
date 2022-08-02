@@ -341,6 +341,9 @@ const ServerFilters = ({
 export async function getServerSideProps() {
   const categoryRes = await fetch(getApiUrl("categories"))
   let category = await categoryRes.json()
+  if (category) {
+    category = _orderBy(category, "servers_count", "desc")
+  }
 
   const langaugeRes = await fetch(getApiUrl("languages"))
   const language = await langaugeRes.json()
