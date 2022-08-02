@@ -13,7 +13,7 @@ const SponsorLogoGroup = ({ sponsors }) => {
           <Link href={sponsor.url} key={i}>
             <a
               className={classnames(
-                "group relative inline-flex max-h-[50px] max-w-[150px] justify-self-center",
+                "group relative inline-flex max-h-[40px] max-w-[150px] justify-self-center",
                 isLastItem && isUnevenItems && "col-span-2"
               )}
               target="_blank"

@@ -7,7 +7,7 @@ import classnames from "classnames"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
-import SponsorGroup from "../components/SponsorLogoGroup"
+import SponsorLogoGroup from "../components/SponsorLogoGroup"
 import { IconCard } from "../components/IconCard"
 
 import testimonials from "../data/testimonials"
@@ -325,8 +325,8 @@ const Sponsors = ({ sponsors }) => {
         />
       </h3>
 
-      <div className="lg:col-start-4 lg:col-end-10">
-        <SponsorGroup sponsors={sponsors.platinum} />
+      <div className="lg:col-start-3 lg:col-end-11">
+        <SponsorLogoGroup sponsors={sponsors.platinum} />
       </div>
 
       <h4 className="h5 mb-8 pt-20 text-center lg:col-span-12">
@@ -337,7 +337,7 @@ const Sponsors = ({ sponsors }) => {
       </h4>
 
       <div className="lg:col-start-4 lg:col-end-10">
-        <SponsorGroup sponsors={sponsors.additionalFunding} />
+        <SponsorLogoGroup sponsors={sponsors.additionalFunding} />
       </div>
     </section>
   )
