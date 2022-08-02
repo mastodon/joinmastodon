@@ -1,13 +1,11 @@
-import React from "react"
 import { FormattedMessage } from "react-intl"
 import Image from "next/image"
-import Link from "next/link"
 import classnames from "classnames"
 
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
-import SponsorGroup from "../components/SponsorLogoGroup"
+import SponsorLogoGroup from "../components/SponsorLogoGroup"
 import { IconCard } from "../components/IconCard"
 
 import testimonials from "../data/testimonials"
@@ -58,7 +56,7 @@ function Home() {
       </Hero>
       <Features />
       <WhyMastodon />
-      <Testimonials testimonials={testimonials} />
+      <Testimonials testimonials={testimonials.slice(6, -1)} />
       <Sponsors sponsors={{ platinum, additionalFunding }} />
     </>
   )
@@ -110,7 +108,10 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="large" href="/">
+            <LinkButton
+              size="large"
+              href="https://docs.joinmastodon.org/user/moderating/"
+            >
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -133,7 +134,10 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="large" href="/">
+            <LinkButton
+              size="large"
+              href="https://docs.joinmastodon.org/user/run-your-own/"
+            >
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -156,7 +160,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="large" href="/">
+            <LinkButton size="large" href="/servers">
               <FormattedMessage
                 id="home.features.button.find_a_server"
                 defaultMessage="Find a server"
@@ -325,8 +329,8 @@ const Sponsors = ({ sponsors }) => {
         />
       </h3>
 
-      <div className="lg:col-start-4 lg:col-end-10">
-        <SponsorGroup sponsors={sponsors.platinum} />
+      <div className="lg:col-start-3 lg:col-end-11">
+        <SponsorLogoGroup sponsors={sponsors.platinum} />
       </div>
 
       <h4 className="h5 mb-8 pt-20 text-center lg:col-span-12">
@@ -337,7 +341,7 @@ const Sponsors = ({ sponsors }) => {
       </h4>
 
       <div className="lg:col-start-4 lg:col-end-10">
-        <SponsorGroup sponsors={sponsors.additionalFunding} />
+        <SponsorLogoGroup sponsors={sponsors.additionalFunding} />
       </div>
     </section>
   )

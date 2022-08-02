@@ -1,6 +1,7 @@
 {
   "apps.free": "Bezplatná",
   "apps.paid": "Placená",
+  "apps.title": "Aplikace",
   "browse_apps.api_docs": "Dokumentace API",
   "browse_apps.desktop": "Desktop",
   "browse_apps.make_your_own": "Mastodon má otevřený zdrojový kód a elegantní, dobře dokumentované API přístupné každému. Vytvořte si vlastní nebo používejte jednu z mnoha aplikací vytvořenou vývojáři třetích stran!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Pro média",
   "credits.view_sponsors": "Zobrazit sponzory",
   "home.get_started": "Začínáme",
-  "ios.introducing": "Představujeme",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Aplikace",
   "nav.blog": "Blog",
   "nav.code": "Kód",

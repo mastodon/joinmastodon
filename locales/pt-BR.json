@@ -1,6 +1,7 @@
 {
   "apps.free": "Gratuito",
   "apps.paid": "Pago",
+  "apps.title": "Aplicativos",
   "browse_apps.api_docs": "Documentação da API",
   "browse_apps.desktop": "Computador",
   "browse_apps.make_your_own": "Mastodon é um projeto de código aberto e tem um API elegante e bem documentado que está disponível para todos. Faça a sua própria aplicação, ou utilize uma das muitas aplicações de terceiros desenvolvidas por outros programadores!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Kit de imprensa",
   "credits.view_sponsors": "Ver apoiadores",
   "home.get_started": "Comece já",
-  "ios.introducing": "Introduzindo",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Aplicativos",
   "nav.blog": "Blog",
   "nav.code": "Código-fonte",

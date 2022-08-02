@@ -1,6 +1,7 @@
 {
   "apps.free": "An-asgaidh",
   "apps.paid": "Air airgead",
+  "apps.title": "Aplacaidean",
   "browse_apps.api_docs": "Docamaideadh an API",
   "browse_apps.desktop": "Desktop",
   "browse_apps.make_your_own": "Tha bun-tùs fosgailte agus API innealta aig Mastodon le deagh dhocamaideadh a tha ri làimh dhan a h-uile duine. Dèan an aplacaid agad fhèin no cleachd gin de phailteas nan aplacaidean treas-phàrtaidh a rinn luchd-leasachaidh eile!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Acainn luchd-naidheachd",
   "credits.view_sponsors": "Seall na sponsairean",
   "home.get_started": "Dèan toiseach-tòiseachaidh",
-  "ios.introducing": "A’ cur an aithne dhut",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Aplacaidean",
   "nav.blog": "Bloga",
   "nav.code": "Còd",

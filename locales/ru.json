@@ -1,6 +1,7 @@
 {
   "apps.free": "Бесплатное",
   "apps.paid": "Платное",
+  "apps.title": "Приложения",
   "browse_apps.api_docs": "Документация по API",
   "browse_apps.desktop": "Компьютер",
   "browse_apps.make_your_own": "Mastodon — проект с открытым исходным кодом, и имеет хорошо задокументированное API, доступное всем. Создайте своё приложение или используйте одно из множества приложений от сторонних разработчиков.",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Пресс-кит",
   "credits.view_sponsors": "Очаровательные спонсоры",
   "home.get_started": "Присоединиться",
-  "ios.introducing": "Представляем",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Приложения",
   "nav.blog": "Блог",
   "nav.code": "Код",

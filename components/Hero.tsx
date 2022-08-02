@@ -1,5 +1,8 @@
+import { useRouter } from "next/router"
 import Image, { StaticImageData } from "next/image"
 import { CSSProperties } from "react"
+import { getDirForLocale } from "../utils/locales"
+
 import defaultMobileImage from "../public/illustrations/default_hero_mobile.png"
 import defaultDesktopImage from "../public/illustrations/default_hero_desktop.png"
 
@@ -21,6 +24,9 @@ const Hero = ({
   children,
   large,
 }: HeroProps) => {
+  const { locale } = useRouter()
+  const dir = getDirForLocale(locale)
+
   return (
     <section
       className="full-width-bg relative h-[var(--mobile-hero-height)] pt-[var(--header-area)] text-white xl:h-[var(--desktop-hero-height)]"
@@ -43,7 +49,11 @@ const Hero = ({
         </div>
       )}
 
-      <div className="absolute inset-0 -z-10 xl:hidden">
+      <div
+        className={`absolute inset-0 -z-10 xl:hidden ${
+          dir === "rtl" && "-scale-x-100"
+        }`}
+      >
         <Image
           src={mobileImage}
           alt=""
@@ -55,7 +65,11 @@ const Hero = ({
         />
       </div>
 
-      <div className="absolute inset-0 -z-10 hidden xl:block">
+      <div
+        className={`absolute inset-0 -z-10 hidden xl:block ${
+          dir === "rtl" && "-scale-x-100"
+        }`}
+      >
         <Image
           src={desktopImage}
           alt=""
