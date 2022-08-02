@@ -110,7 +110,10 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="large" href="/">
+            <LinkButton
+              size="large"
+              href="https://docs.joinmastodon.org/user/moderating/"
+            >
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -133,7 +136,10 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="large" href="/">
+            <LinkButton
+              size="large"
+              href="https://docs.joinmastodon.org/user/run-your-own/"
+            >
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -156,7 +162,7 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="large" href="/">
+            <LinkButton size="large" href="/servers">
               <FormattedMessage
                 id="home.features.button.find_a_server"
                 defaultMessage="Find a server"
