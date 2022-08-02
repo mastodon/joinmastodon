@@ -44,11 +44,11 @@ const Hero = ({
       }
     >
       {homepage ? (
-        <div className="full-width-bg__inner flex flex-col items-center justify-center py-20 text-center">
+        <div className="full-width-bg__inner flex flex-col items-center justify-center py-20 text-center drop-shadow-safe-text">
           {children}
         </div>
       ) : (
-        <div className="full-width-bg__inner grid py-20 lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
+        <div className="full-width-bg__inner grid py-20 drop-shadow-safe-text lg:grid-cols-12 lg:justify-center lg:gap-x-gutter">
           <div className="col-span-12 lg:col-span-7 xl:col-span-5 xl:col-start-2">
             {children}
           </div>
