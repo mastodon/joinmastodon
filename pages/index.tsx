@@ -1,8 +1,8 @@
-import React from "react"
+import { useEffect, useState } from "react"
 import { FormattedMessage } from "react-intl"
 import Image from "next/image"
-import Link from "next/link"
 import classnames from "classnames"
+import { shuffle as _shuffle } from "lodash"
 
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
@@ -23,6 +23,11 @@ import homeHeroDesktop from "../public/illustrations/home_hero_desktop.webp"
 import Hero from "../components/Hero"
 
 function Home() {
+  const [randomTestimonials, setRandomTestimonials] = useState([])
+  useEffect(() => {
+    setRandomTestimonials(_shuffle(testimonials).slice(0, 6))
+  }, [])
+
   return (
     <>
       <Hero mobileImage={homeHeroMobile} desktopImage={homeHeroDesktop} large>
@@ -58,7 +63,7 @@ function Home() {
       </Hero>
       <Features />
       <WhyMastodon />
-      <Testimonials testimonials={testimonials} />
+      <Testimonials testimonials={randomTestimonials} />
       <Sponsors sponsors={{ platinum, additionalFunding }} />
     </>
   )
