@@ -9,6 +9,7 @@ import AppHero from "../components/AppHero"
 import { useState } from "react"
 import Hero from "../components/Hero"
 import LinkButton from "../components/LinkButton"
+import { theme } from "../tailwind.config.js"
 
 function Home(props) {
   const intl = useIntl()
@@ -25,21 +26,7 @@ function Home(props) {
         <section>
           <h2 className="h5">Type Scale</h2>
 
-          {[
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6",
-            "sh1",
-            "b1",
-            "b2",
-            "b3",
-            "b4",
-            "c2",
-            "c3",
-          ].map((name) => (
+          {Object.keys(theme.fontSize).map((name) => (
             <div key={name} className="flex items-baseline gap-4">
               <div className="b4 flex-0 w-4">{name}</div>
               <div className={name}>Find your perfect community</div>
@@ -51,25 +38,11 @@ function Home(props) {
           <h2 className="h5">Colors</h2>
 
           <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
-            {[
-              "bg-black",
-              "bg-gray-1",
-              "bg-gray-2",
-              "bg-gray-3",
-              "bg-gray-4",
-              "bg-gray-5",
-              "bg-white",
-              "bg-blurple-gradient",
-              "bg-eggplant",
-              "bg-dark-blurple",
-              "bg-main-blurple",
-              "bg-accent-blurple",
-              "bg-blurple-text-on-black",
-              "bg-lime",
-              "bg-goldenrod",
-            ].map((color) => (
+            {Object.keys(theme.colors).map((color) => (
               <div key={color} className="flex items-center gap-4">
-                <div className={`h-12 w-12 ${color}`} />
+                <div
+                  className={`h-12 w-12 flex-shrink-0 rounded bg-${color} border-2 border-solid border-[rgba(0,0,0,0.1)] bg-clip-border`}
+                />
                 <div className="b2">{color.replace("bg-", "")}</div>
               </div>
             ))}
