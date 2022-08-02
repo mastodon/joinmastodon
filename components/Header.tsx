@@ -66,6 +66,8 @@ const Header = () => {
       })),
     },
   ]
+    // set active status on links
+    .map((item) => ({ ...item, active: router.asPath === item.value }))
 
   const {
     mobileMenuOpen,
@@ -160,6 +162,7 @@ const Header = () => {
                                 !child.small && "py-1",
                                 child.active && "font-800"
                               )}
+                              aria-current={child.active ? "page" : undefined}
                             >
                               {child.label}
                             </a>
@@ -174,8 +177,9 @@ const Header = () => {
                     <a
                       className={classNames(
                         "whitespace-nowrap text-h5 md:text-b2",
-                        router.asPath === item.value && "font-800"
+                        item.active && "font-800"
                       )}
+                      aria-current={item.active ? "page" : undefined}
                       {...bindPrimaryMenuItem(itemIndex)}
                     >
                       {item.label}
