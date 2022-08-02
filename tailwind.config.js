@@ -82,6 +82,9 @@ module.exports = {
         26: "6.5rem",
         "footer-offset": "var(--footer-offset)",
       },
+      dropShadow: {
+        "safe-text": "0 0 30px var(--nightshade)",
+      },
     },
   },
   plugins: [

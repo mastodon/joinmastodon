@@ -23,7 +23,11 @@ import Hero from "../components/Hero"
 function Home() {
   return (
     <>
-      <Hero mobileImage={homeHeroMobile} desktopImage={homeHeroDesktop} large>
+      <Hero
+        mobileImage={homeHeroMobile}
+        desktopImage={homeHeroDesktop}
+        homepage
+      >
         <h1 className="h1 mb-4 max-w-[17ch] md:mb-7">
           <FormattedMessage
             id="home.hero.headline"
