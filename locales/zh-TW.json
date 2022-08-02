@@ -1,6 +1,7 @@
 {
   "apps.free": "免費",
   "apps.paid": "付費",
+  "apps.title": "應用程式",
   "browse_apps.api_docs": "API 文件",
   "browse_apps.desktop": "桌面",
   "browse_apps.make_your_own": "Mastodon 是開放原始碼軟體，並有一套優雅且有文件可查的 API 供每個人使用。製作您自己的應用程式，或是使用其他眾多第三方開發者開發的應用程式！",
@@ -13,8 +14,6 @@
   "credits.press_kit": "媒體資源",
   "credits.view_sponsors": "檢視贊助者",
   "home.get_started": "開始使用",
-  "ios.introducing": "介紹",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "應用程式",
   "nav.blog": "部落格",
   "nav.code": "程式碼",

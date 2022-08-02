@@ -51,20 +51,19 @@ const AppsPage = () => {
             />
           </h2>
 
-          <div className="flex justify-center gap-5 md:justify-start">
+          <div className="grid grid-cols-2 justify-center gap-gutter md:justify-start">
             <a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974">
               <Image
                 src={downloadOnAppStore}
                 alt="Download on the App Store"
-                className="app-store-badge"
+                layout="responsive"
               />
             </a>
             <a href="https://play.google.com/store/apps/details?id=org.joinmastodon.android">
               <Image
                 src={downloadOnGooglePlay}
                 alt="Get it on Google Play"
-                className="app-store-badge"
-                style={{ height: 70, margin: "-10px 0" }}
+                layout="responsive"
               />
             </a>
           </div>

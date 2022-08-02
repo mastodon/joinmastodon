@@ -1,6 +1,7 @@
 {
   "apps.free": "Doan",
   "apps.paid": "Ordainduta",
+  "apps.title": "Aplikazioak",
   "browse_apps.api_docs": "API dokumentazioa",
   "browse_apps.desktop": "Mahaigaina",
   "browse_apps.make_your_own": "Mastodon software librea da eta edonor erabil dezakeen ondo dokumentatutako API dotorea dauka. Sortu zure aplikazioa edo erabili beste garatzaileek egindako aplikazioetako bat!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Prentsa",
   "credits.view_sponsors": "Ikusi babesleak",
   "home.get_started": "Nola hasi",
-  "ios.introducing": "Aurkezpena",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Aplikazioak",
   "nav.blog": "Bloga",
   "nav.code": "Kodea",

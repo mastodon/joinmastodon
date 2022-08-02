@@ -1,6 +1,7 @@
 {
   "apps.free": "مجاني",
   "apps.paid": "مدفوع",
+  "apps.title": "التطبيقات",
   "browse_apps.api_docs": "دليل واجهة برمجة التطبيقات",
   "browse_apps.desktop": "سطح المكتب",
   "browse_apps.make_your_own": "ماستدون مفتوح المصدر ولديه واجهة برمجة تطبيقات أنيقة وموثقة جيدا ومتاحة للجميع. اصنع تطبيقك الخاص، أو استخدم أحد تطبيقات أطراف ثالثة طُوّرت من قبل مطورين آخرين!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "عدة الصحافة",
   "credits.view_sponsors": "تعرَّف على رُعاة المشروع",
   "home.get_started": "الخطوات الأولى",
-  "ios.introducing": "تعريف",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "التطبيقات",
   "nav.blog": "المدوّنة",
   "nav.code": "شفرة المصدر",

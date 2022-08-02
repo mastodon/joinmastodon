@@ -1,6 +1,7 @@
 {
   "apps.free": "Falas",
   "apps.paid": "Me pagesë",
+  "apps.title": "Aplikacione",
   "browse_apps.api_docs": "Dokumentim API",
   "browse_apps.desktop": "Desktop",
   "browse_apps.make_your_own": "Mastodon-i është me burim të hapët dhe ka një API elegante, të dokumentuar mirë, që mund të përdoret nga kushdo. Krijoni aplikacionin tuaj, ose përdorni një nga aplikacionet e shumtë prej palësh të treta, të krijuara nga zhvillues të tjerë!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Paketë për shtypin",
   "credits.view_sponsors": "Shihni sponsorë",
   "home.get_started": "Fillojani",
-  "ios.introducing": "Ju paraqesim",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Aplikacione",
   "nav.blog": "Blog",
   "nav.code": "Kod",

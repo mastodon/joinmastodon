@@ -1,6 +1,7 @@
 {
   "apps.free": "무료",
   "apps.paid": "유료",
+  "apps.title": "앱",
   "browse_apps.api_docs": "API 문서",
   "browse_apps.desktop": "데스크톱",
   "browse_apps.make_your_own": "Mastodon은 오픈소스이며 모두가 사용할 수 있는 우아하고 잘 문서화된 API가 존재합니다. 자신만의 앱을 만들거나 다른 서드 파티 개발자가 만든 앱을 사용해보세요!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "보도 자료",
   "credits.view_sponsors": "스폰서 보기",
   "home.get_started": "시작하기",
-  "ios.introducing": "소개합니다",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "앱",
   "nav.blog": "블로그",
   "nav.code": "코드",

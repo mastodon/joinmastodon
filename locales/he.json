@@ -1,6 +1,7 @@
 {
   "apps.free": "חינם",
   "apps.paid": "בתשלום",
+  "apps.title": "Apps",
   "browse_apps.api_docs": "API documentation",
   "browse_apps.desktop": "Desktop",
   "browse_apps.make_your_own": "Mastodon is open-source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Press kit",
   "credits.view_sponsors": "View sponsors",
   "home.get_started": "Get started",
-  "ios.introducing": "Introducing",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Apps",
   "nav.blog": "Blog",
   "nav.code": "Code",

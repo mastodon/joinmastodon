@@ -1,6 +1,7 @@
 {
   "apps.free": "免费",
   "apps.paid": "付费",
+  "apps.title": "应用",
   "browse_apps.api_docs": "API 文档",
   "browse_apps.desktop": "电脑端",
   "browse_apps.make_your_own": "Mastodon 的源代码开放，并且有着工整简洁的 API 文档可供开发。你可选择开发你自己的程序来使用 Mastodon，或者使用其他数不胜数由第三方开发者开发的应用",
@@ -13,8 +14,6 @@
   "credits.press_kit": "宣传材料",
   "credits.view_sponsors": "查看赞助者列表",
   "home.get_started": "开始使用",
-  "ios.introducing": "隆重推出",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "应用",
   "nav.blog": "博客",
   "nav.code": "源码",

@@ -8,9 +8,11 @@ import classNames from "classnames"
 import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
 import SVG from "react-inlinesvg"
+import { useRouter } from "next/router"
 
 /** Sitewide header and navigation */
 const Header = () => {
+  const router = useRouter()
   const [pageScrolled, setPageScrolled] = useState(false)
 
   const navigationItems = [
@@ -57,11 +59,15 @@ const Header = () => {
         key: locale.code,
         locale: locale.code,
         scroll: false,
+        small: true,
         value: "", // current page
         label: locale.language,
+        active: router.locale === locale.code,
       })),
     },
   ]
+    // set active status on links
+    .map((item) => ({ ...item, active: router.asPath === item.value }))
 
   const {
     mobileMenuOpen,
@@ -99,22 +105,23 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="">
+        <nav>
           <MenuToggle {...bindToggle()} />
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[var(--header-area)] focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4",
+              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[calc(var(--header-area)_+_1rem)] focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
             {navigationItems.map((item, itemIndex) => (
               <li className="relative" key={item.key || item.value}>
                 {"childItems" in item ? (
+                  // Top-level Dropdown
                   <>
                     <button
                       {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
-                      className="flex items-center gap-[0.125rem] whitespace-nowrap text-h5 font-800 focus:outline-2 md:text-b2 md:font-450"
+                      className="flex items-center gap-[0.125rem] whitespace-nowrap text-h5 focus:outline-2 md:text-b2 md:font-450"
                     >
                       {item.label}
                       <SVG
@@ -130,13 +137,14 @@ const Header = () => {
                     <ul
                       {...bindSecondaryMenu()}
                       className={classNames(
-                        "top-[100%] flex flex-col rounded bg-eggplant p-4 -inline-end-4 md:absolute md:shadow",
+                        "top-full flex max-h-[calc(100vh_-_var(--header-height))] flex-col overflow-auto rounded py-4 -inline-end-4 md:absolute md:mt-4 md:bg-white md:px-4 md:text-black md:shadow",
                         (primaryMenuItemIndex !== itemIndex ||
                           !secondaryMenuOpen) &&
                           "sr-only"
                       )}
                     >
                       {item.childItems.map((child, childIndex) => (
+                        // Child Items
                         <li key={child.key || child.value}>
                           <Link
                             href={child.value}
@@ -149,6 +157,12 @@ const Header = () => {
                                 childIndex,
                                 child
                               )}
+                              className={classNames(
+                                "block px-1",
+                                !child.small && "py-1",
+                                child.active && "font-800"
+                              )}
+                              aria-current={child.active ? "page" : undefined}
                             >
                               {child.label}
                             </a>
@@ -158,9 +172,14 @@ const Header = () => {
                     </ul>
                   </>
                 ) : (
+                  // Top-level Link
                   <Link href={item.value}>
                     <a
-                      className="whitespace-nowrap text-h5 font-800 md:text-b2 md:font-450"
+                      className={classNames(
+                        "whitespace-nowrap text-h5 md:text-b2",
+                        item.active && "font-800"
+                      )}
+                      aria-current={item.active ? "page" : undefined}
                       {...bindPrimaryMenuItem(itemIndex)}
                     >
                       {item.label}
@@ -303,6 +322,11 @@ const useMenu = ({ navigationItems }) => {
           setSecondaryMenuItemIndex(0)
         }
       },
+      onClick: () => {
+        if (!hasPopup) {
+          setMobileMenuOpen(false)
+        }
+      },
       onMouseDown: () => {
         if (isActive && hasPopup) {
           setSecondaryMenuItemIndex(isDropdownClosed ? 0 : null)
@@ -328,6 +352,9 @@ const useMenu = ({ navigationItems }) => {
         if (e.key === "Escape") {
           setSecondaryMenuItemIndex(null)
         }
+      },
+      onClick: () => {
+        setMobileMenuOpen(false)
       },
       hrefLang: child.locale || undefined,
       lang: child.locale || undefined,

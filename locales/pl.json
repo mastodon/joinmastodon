@@ -1,6 +1,7 @@
 {
   "apps.free": "Darmowa",
   "apps.paid": "Płatna",
+  "apps.title": "Aplikacje",
   "browse_apps.api_docs": "Dokumentacja API",
   "browse_apps.desktop": "Komputer",
   "browse_apps.make_your_own": "Mastodon jest open-source i posiada dobrze udokumentowane API dostępne dla wszystkich. Stwórz własną aplikację, lub użyj jednej z wielu aplikacji stworzonych przez innych deweloperów!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Materiały prasowe",
   "credits.view_sponsors": "Pokaż sponsorów",
   "home.get_started": "Rozpocznij",
-  "ios.introducing": "Nowość",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Aplikacje",
   "nav.blog": "Blog",
   "nav.code": "Kod źródłowy",

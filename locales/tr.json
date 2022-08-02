@@ -1,6 +1,7 @@
 {
   "apps.free": "Ücretsiz",
   "apps.paid": "Ücretli",
+  "apps.title": "Uygulamalar",
   "browse_apps.api_docs": "API Belgeleri",
   "browse_apps.desktop": "Masaüstü",
   "browse_apps.make_your_own": "Mastodon açık kaynaktır ve herkese açık zarif, iyice belgelenmiş bir API'ye sahiptir. Kendi uygulamanızı geliştirin veya başka geliştiriciler tarafından geliştirilmiş olan üçüncü parti uygulamalardan birini kullanın!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Basın için malzemeler",
   "credits.view_sponsors": "Sponsorları görüntüle",
   "home.get_started": "Başlarken",
-  "ios.introducing": "Tanıtım",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Uygulamalar",
   "nav.blog": "Blog",
   "nav.code": "Kaynak kodu",
