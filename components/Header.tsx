@@ -57,6 +57,7 @@ const Header = () => {
         key: locale.code,
         locale: locale.code,
         scroll: false,
+        small: true,
         value: "", // current page
         label: locale.language,
       })),
@@ -130,7 +131,7 @@ const Header = () => {
                     <ul
                       {...bindSecondaryMenu()}
                       className={classNames(
-                        "top-[100%] flex flex-col rounded bg-eggplant p-4 -inline-end-4 md:absolute md:shadow",
+                        "flex flex-col rounded bg-white p-4 text-black -inline-end-4 md:absolute md:mt-4 md:shadow",
                         (primaryMenuItemIndex !== itemIndex ||
                           !secondaryMenuOpen) &&
                           "sr-only"
@@ -148,6 +149,10 @@ const Header = () => {
                                 itemIndex,
                                 childIndex,
                                 child
+                              )}
+                              className={classNames(
+                                "block px-1",
+                                !child.small && "py-1",
                               )}
                             >
                               {child.label}
