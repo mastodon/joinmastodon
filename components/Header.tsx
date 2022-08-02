@@ -8,9 +8,11 @@ import classNames from "classnames"
 import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
 import SVG from "react-inlinesvg"
+import { useRouter } from "next/router"
 
 /** Sitewide header and navigation */
 const Header = () => {
+  const router = useRouter()
   const [pageScrolled, setPageScrolled] = useState(false)
 
   const navigationItems = [
@@ -60,6 +62,7 @@ const Header = () => {
         small: true,
         value: "", // current page
         label: locale.language,
+        active: router.locale === locale.code,
       })),
     },
   ]
@@ -100,22 +103,23 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="">
+        <nav>
           <MenuToggle {...bindToggle()} />
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[var(--header-area)] focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4",
+              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[calc(var(--header-area)_+_1rem)] focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
             {navigationItems.map((item, itemIndex) => (
               <li className="relative" key={item.key || item.value}>
                 {"childItems" in item ? (
+                  // Top-level Dropdown
                   <>
                     <button
                       {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
-                      className="flex items-center gap-[0.125rem] whitespace-nowrap text-h5 font-800 focus:outline-2 md:text-b2 md:font-450"
+                      className="flex items-center gap-[0.125rem] whitespace-nowrap text-h5 focus:outline-2 md:text-b2 md:font-450"
                     >
                       {item.label}
                       <SVG
@@ -131,13 +135,14 @@ const Header = () => {
                     <ul
                       {...bindSecondaryMenu()}
                       className={classNames(
-                        "flex flex-col rounded bg-white p-4 text-black -inline-end-4 md:absolute md:mt-4 md:shadow",
+                        "top-full flex max-h-[calc(100vh_-_var(--header-height))] flex-col overflow-auto rounded py-4 -inline-end-4 md:absolute md:mt-4 md:bg-white md:px-4 md:text-black md:shadow",
                         (primaryMenuItemIndex !== itemIndex ||
                           !secondaryMenuOpen) &&
                           "sr-only"
                       )}
                     >
                       {item.childItems.map((child, childIndex) => (
+                        // Child Items
                         <li key={child.key || child.value}>
                           <Link
                             href={child.value}
@@ -153,6 +158,7 @@ const Header = () => {
                               className={classNames(
                                 "block px-1",
                                 !child.small && "py-1",
+                                child.active && "font-800"
                               )}
                             >
                               {child.label}
@@ -163,9 +169,13 @@ const Header = () => {
                     </ul>
                   </>
                 ) : (
+                  // Top-level Link
                   <Link href={item.value}>
                     <a
-                      className="whitespace-nowrap text-h5 font-800 md:text-b2 md:font-450"
+                      className={classNames(
+                        "whitespace-nowrap text-h5 md:text-b2",
+                        router.asPath === item.value && "font-800"
+                      )}
                       {...bindPrimaryMenuItem(itemIndex)}
                     >
                       {item.label}
