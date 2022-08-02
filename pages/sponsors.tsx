@@ -23,6 +23,7 @@ function Sponsors() {
       </Hero>
 
       <TwoUpFeature
+        padding="md:!pt-16"
         features={[
           {
             icon: "/icons/donate.svg",
