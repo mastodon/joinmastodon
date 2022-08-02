@@ -322,6 +322,11 @@ const useMenu = ({ navigationItems }) => {
           setSecondaryMenuItemIndex(0)
         }
       },
+      onClick: () => {
+        if (!hasPopup) {
+          setMobileMenuOpen(false)
+        }
+      },
       onMouseDown: () => {
         if (isActive && hasPopup) {
           setSecondaryMenuItemIndex(isDropdownClosed ? 0 : null)
@@ -347,6 +352,9 @@ const useMenu = ({ navigationItems }) => {
         if (e.key === "Escape") {
           setSecondaryMenuItemIndex(null)
         }
+      },
+      onClick: () => {
+        setMobileMenuOpen(false)
       },
       hrefLang: child.locale || undefined,
       lang: child.locale || undefined,
