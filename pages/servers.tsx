@@ -93,7 +93,7 @@ const Servers = ({ filterList }) => {
       <div className="grid gap-20 pb-40">
         <GettingStartedCards />
         <div className="grid grid-cols-4 gap-gutter md:grid-cols-12">
-          <div className="col-span-3 my-4">
+          <div className="col-span-4 my-4 md:col-span-3">
             <h2 className="mb-8 flex items-center gap-2">
               <SVG className="text-gray-2" src="/ui/filters.svg" />
               <span className="text-gray-1">
@@ -289,11 +289,11 @@ const ServerFilters = ({
         }
         const options = [allOption, ...filterList[group]]
         return (
-          <div className="mb-8" key={i}>
+          <div className="md:mb-8" key={i}>
             <h3 className="h5 mb-2" id={`${group}-group-label`}>
               {intl.formatMessage(filterGroupMessages[group])}
             </h3>
-            <ul>
+            <ul className="flex flex-wrap gap-x-3 md:flex-col">
               {options.map((item, i) => {
                 const isActive = filters.category === item.category
                 return (
