@@ -15,7 +15,7 @@ export type HeroProps = {
   /** Text content */
   children: React.ReactNode
   /** Large, centered hero style used on the homepage */
-  large?: boolean
+  homepage?: boolean
 }
 
 /** Illustrated hero component used at the top of all pages */
@@ -23,14 +23,19 @@ const Hero = ({
   mobileImage = defaultMobileImage,
   desktopImage = defaultDesktopImage,
   children,
-  large,
+  homepage,
 }: HeroProps) => {
   const { locale } = useRouter()
   const dir = getDirForLocale(locale)
 
   return (
     <section
-      className="full-width-bg relative h-[var(--mobile-hero-height)] pt-[var(--header-area)] text-white 2xl:h-[var(--desktop-hero-height)]"
+      className={classNames(
+        "full-width-bg relative h-[var(--mobile-hero-height)] pt-[var(--header-area)] text-white",
+        homepage
+          ? "2xl:h-[var(--desktop-hero-height)]"
+          : "xl:h-[var(--desktop-hero-height)]"
+      )}
       style={
         {
           "--desktop-hero-height": `${desktopImage.height / 2}px`,
@@ -38,7 +43,7 @@ const Hero = ({
         } as CSSProperties
       }
     >
-      {large ? (
+      {homepage ? (
         <div className="full-width-bg__inner flex flex-col items-center justify-center py-20 text-center">
           {children}
         </div>
@@ -52,7 +57,8 @@ const Hero = ({
 
       <div
         className={classNames(
-          "absolute inset-0 -z-10 md:ml-[-25%] 2xl:hidden",
+          "absolute inset-0 -z-10",
+          homepage ? "md:ml-[-25%] 2xl:hidden" : "xl:hidden",
           dir === "rtl" && "-scale-x-100"
         )}
       >
@@ -69,7 +75,8 @@ const Hero = ({
 
       <div
         className={classNames(
-          "absolute inset-0 -z-10 hidden 2xl:block",
+          "absolute inset-0 -z-10 hidden",
+          homepage ? "2xl:block" : "xl:block",
           dir === "rtl" && "-scale-x-100"
         )}
       >
