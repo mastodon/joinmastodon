@@ -1,6 +1,7 @@
 {
   "apps.free": "Ilmainen",
   "apps.paid": "Maksullinen",
+  "apps.title": "Sovellukset",
   "browse_apps.api_docs": "API-dokumentaatio",
   "browse_apps.desktop": "Työpöytä",
   "browse_apps.make_your_own": "Mastodon on avointa lähdekoodia ja siinä on hienostunut sekä hyvin dokumentoitu API, joka on kaikkien saatavilla. Luo oma sovelluksesi tai käytä yhtä muiden kehittäjien monista kolmannen osapuolen sovelluksista!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Lehdistölle",
   "credits.view_sponsors": "Näytä sponsorit",
   "home.get_started": "Aloitetaan",
-  "ios.introducing": "Esittelyssä",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Sovellukset",
   "nav.blog": "Blogi",
   "nav.code": "Koodi",

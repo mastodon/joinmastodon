@@ -1,6 +1,7 @@
 {
   "apps.free": "無料",
   "apps.paid": "有料",
+  "apps.title": "アプリ",
   "browse_apps.api_docs": "APIドキュメント",
   "browse_apps.desktop": "デスクトップ",
   "browse_apps.make_your_own": "Mastodon is open-source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Press kit",
   "credits.view_sponsors": "スポンサーを表示",
   "home.get_started": "始めよう",
-  "ios.introducing": "Introducing",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "アプリ",
   "nav.blog": "ブログ",
   "nav.code": "ソースコード",

@@ -1,6 +1,7 @@
 {
   "apps.free": "Lliure",
   "apps.paid": "De pagament",
+  "apps.title": "Aplicacions",
   "browse_apps.api_docs": "Documentació de l'API",
   "browse_apps.desktop": "Escriptori",
   "browse_apps.make_your_own": "Mastodon és codi obert i té una elegant i ben documentada API que està disponible per a tothom. Crea la teva pròpia aplicació o fes servir una de les diverses aplicacions de tercers fetes per altres desenvolupadors!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "Dossier de premsa",
   "credits.view_sponsors": "Mostrar els patrocinadors",
   "home.get_started": "Començar",
-  "ios.introducing": "Presentació",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "Aplicacions",
   "nav.blog": "Bloc",
   "nav.code": "Codi",

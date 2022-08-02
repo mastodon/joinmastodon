@@ -1,6 +1,7 @@
 {
   "apps.free": "ฟรี",
   "apps.paid": "เสียเงิน",
+  "apps.title": "แอป",
   "browse_apps.api_docs": "เอกสารประกอบ API",
   "browse_apps.desktop": "เดสก์ท็อป",
   "browse_apps.make_your_own": "Mastodon is open-source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!",
@@ -13,8 +14,6 @@
   "credits.press_kit": "ชุดประชาสัมพันธ์",
   "credits.view_sponsors": "ดูรายชื่อผู้สนับสนุน",
   "home.get_started": "เริ่มต้นใช้งาน",
-  "ios.introducing": "ขอแนะนำ",
-  "ios_and_android.app_name": "Official apps",
   "nav.apps": "แอป",
   "nav.blog": "บล็อก",
   "nav.code": "โค้ด",
