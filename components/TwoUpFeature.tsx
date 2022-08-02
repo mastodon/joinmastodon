@@ -9,13 +9,17 @@ export type TwoUpFeatureProps = {
     cta: React.ReactNode
     cta_link: string
   }[]
+  padding?: string
 }
 /** Two-column (on desktop) feature section */
-const TwoUpFeature = ({ features }: TwoUpFeatureProps) => {
+const TwoUpFeature = ({ features, padding }: TwoUpFeatureProps) => {
   return (
     <div className="gap-gutter md:flex">
       {features.map(({ icon, title, copy, cta, cta_link }) => (
-        <div className="grid py-8 md:py-32 lg:grid-cols-6" key={icon}>
+        <div
+          className={`grid py-8 md:py-32 lg:grid-cols-6 ${padding}`}
+          key={icon}
+        >
           <div className="md:pie-4 lg:col-span-4 lg:col-start-2 lg:pie-0">
             <SVG
               src={icon}
