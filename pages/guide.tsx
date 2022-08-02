@@ -52,7 +52,7 @@ function Home(props) {
         <section>
           <h2 className="h5">Icons</h2>
 
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap gap-gutter">
             {[
               `api-gear`,
               `api-window`,
