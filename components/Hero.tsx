@@ -58,7 +58,7 @@ const Hero = ({
       <div
         className={classNames(
           "absolute inset-0 -z-10",
-          homepage ? "md:ml-[-25%] 2xl:hidden" : "xl:hidden",
+          homepage ? "md:mis-[-25%] 2xl:hidden" : "xl:hidden",
           dir === "rtl" && "-scale-x-100"
         )}
       >
