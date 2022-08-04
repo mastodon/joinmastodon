@@ -218,7 +218,7 @@ const GettingStartedCards = () => {
           copy={
             <FormattedMessage
               id="servers.getting_started.safe_for_all.body"
-              defaultMessage="Actively working to eliminate hate speech, Mastodon will only list servers that are consistently committed to moderation again racism, sexism, and transphobia."
+              defaultMessage="Actively working to eliminate hate speech, our organization will only point you to servers that are consistently committed to moderation again racism, sexism, and transphobia."
             />
           }
         />
