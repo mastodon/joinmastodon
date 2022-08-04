@@ -159,7 +159,7 @@ function Guide(props) {
                   {
                     label: intl.formatMessage({
                       id: "sorting.recently_added",
-                      defaultMessage: "Recently added",
+                      defaultMessage: "Recently Added",
                     }),
                     value: "all",
                   },

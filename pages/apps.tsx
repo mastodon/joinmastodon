@@ -32,7 +32,7 @@ const AppsPage = () => {
 
                 <p className="sh1">
                   <FormattedMessage
-                    id="ios_and_android.download"
+                    id="ios_and_android.download.body"
                     defaultMessage="We've released official apps for Mastodon on iOS and Android, in addition to the web version and all the third-party apps available below."
                   />
                 </p>
