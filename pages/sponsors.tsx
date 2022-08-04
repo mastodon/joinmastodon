@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { FormattedMessage } from "react-intl"
+import Head from "next/head"
+import { FormattedMessage, useIntl } from "react-intl"
 import Hero from "../components/Hero"
 import SponsorCard from "../components/SponsorCard"
 import SponsorLogoGroup from "../components/SponsorLogoGroup"
@@ -9,6 +10,7 @@ import sponsors from "../data/sponsors"
 import sponsorData from "../data/sponsors"
 
 function Sponsors() {
+  const intl = useIntl()
   return (
     <>
       <Hero>
@@ -130,6 +132,38 @@ function Sponsors() {
           })}
         </div>
       </section>
+      <Head>
+        <title>
+          {intl.formatMessage({
+            id: "sponsors.page_title",
+            defaultMessage: "Sponsors of Mastodon",
+          })}{" "}
+          - Mastodon
+        </title>
+        <meta
+          property="og:title"
+          content={intl.formatMessage({
+            id: "sponsors.page_title",
+            defaultMessage: "Sponsors of Mastodon",
+          })}
+        />
+        <meta
+          name="description"
+          content={intl.formatMessage({
+            id: "default.page_description",
+            defaultMessage:
+              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
+          })}
+        />
+        <meta
+          property="og:description"
+          content={intl.formatMessage({
+            id: "default.page_description",
+            defaultMessage:
+              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
+          })}
+        />
+      </Head>
     </>
   )
 }

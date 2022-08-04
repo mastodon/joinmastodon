@@ -82,7 +82,7 @@ function Home() {
         <meta
           name="description"
           content={intl.formatMessage({
-            id: "home.page_description",
+            id: "default.page_description",
             defaultMessage:
               "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
           })}
@@ -90,7 +90,7 @@ function Home() {
         <meta
           property="og:description"
           content={intl.formatMessage({
-            id: "home.page_description",
+            id: "default.page_description",
             defaultMessage:
               "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
           })}
