@@ -21,7 +21,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         <div className="flex flex-wrap gap-x-6 ">
           <div className="shrink-0">
             <Image
-              className="rounded-sm"
+              className="rounded"
               src={testimonial.avatar}
               alt=""
               width="56"
