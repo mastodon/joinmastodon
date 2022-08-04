@@ -10,7 +10,10 @@ export const Layout = ({ children }) => {
       {children}
       <Footer />
       <Head>
-        <meta property="og:image" content="/illustrations/preview.jpg" />
+        <meta
+          property="og:image"
+          content="https://joinmastodon.org/preview.jpg"
+        />
       </Head>
     </div>
   )
