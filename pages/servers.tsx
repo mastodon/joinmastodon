@@ -10,6 +10,7 @@ import SelectMenu from "../components/SelectMenu"
 import { categoriesMessages } from "../data/categories"
 import type { Server, Category, Language } from "../types/api"
 import Hero from "../components/Hero"
+import loadIntlMessages from "../utils/loadIntlMessages"
 
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
@@ -338,7 +339,7 @@ const ServerFilters = ({
   )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(ctx) {
   const categoryRes = await fetch(getApiUrl("categories"))
   let category = await categoryRes.json()
   if (category) {
@@ -354,8 +355,8 @@ export async function getServerSideProps() {
         category,
         language,
       },
+      intlMessages: await loadIntlMessages(ctx),
     },
   }
 }
-
 export default Servers

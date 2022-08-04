@@ -11,7 +11,8 @@ import Hero from "../components/Hero"
 import LinkButton from "../components/LinkButton"
 import { theme } from "../tailwind.config.js"
 
-function Home(props) {
+/** This page does not require translations */
+function Guide(props) {
   const intl = useIntl()
   const [altAppHero, setAltAppHero] = useState(false)
   return (
@@ -207,7 +208,7 @@ function Home(props) {
   )
 }
 
-export default Home
+export default Guide
 
 export async function getStaticProps(ctx) {
   return {

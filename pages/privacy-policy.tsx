@@ -2,6 +2,7 @@ import BasicPage from "../components/BasicPage"
 import Head from "next/head"
 import Hero from "../components/Hero"
 
+/** This page does not require translations */
 const PrivacyPolicy = () => (
   <>
     <Hero>
