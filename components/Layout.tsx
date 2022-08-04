@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Footer from "./Footer"
 import Header from "./Header"
 
@@ -8,6 +9,9 @@ export const Layout = ({ children }) => {
       <Header />
       {children}
       <Footer />
+      <Head>
+        <meta property="og:image" content="/illustrations/preview.jpg" />
+      </Head>
     </div>
   )
 }
