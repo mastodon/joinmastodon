@@ -92,17 +92,17 @@ function Sponsors() {
           <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
         </h2>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-y-8 gap-x-gutter">
-          {sponsorData.silver.map((sponsor) => {
+          {sponsorData.silver.map((sponsor, i) => {
             if (sponsor.url) {
               return (
-                <Link key={sponsor.url} href={sponsor.url}>
+                <Link key={i} href={sponsor.url}>
                   <a>
                     <SponsorCard sponsor={sponsor} tier="silver" />
                   </a>
                 </Link>
               )
             } else {
-              return <SponsorCard sponsor={sponsor} tier="silver" />
+              return <SponsorCard key={i} sponsor={sponsor} tier="silver" />
             }
           })}
         </div>
