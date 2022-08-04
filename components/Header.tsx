@@ -137,10 +137,10 @@ const Header = () => {
                     <ul
                       {...bindSecondaryMenu()}
                       className={classNames(
-                        "top-full flex max-h-[calc(100vh_-_var(--header-height))] flex-col overflow-auto rounded py-4 -inline-end-4 md:absolute md:mt-4 md:bg-white md:px-4 md:text-black md:shadow",
-                        (primaryMenuItemIndex !== itemIndex ||
-                          !secondaryMenuOpen) &&
-                          "sr-only"
+                        "top-full flex flex-col rounded py-4 -inline-end-4 md:absolute md:mt-4 md:max-h-[calc(100vh_-_var(--header-height))] md:bg-white md:px-4 md:text-black md:shadow",
+                        primaryMenuItemIndex !== itemIndex || !secondaryMenuOpen
+                          ? "sr-only"
+                          : "overflow-auto"
                       )}
                     >
                       {item.childItems.map((child, childIndex) => (
