@@ -1,5 +1,6 @@
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage, useIntl } from "react-intl"
 import Image from "next/image"
+import Head from "next/head"
 import classnames from "classnames"
 
 import loadIntlMessages from "../utils/loadIntlMessages"
@@ -21,6 +22,7 @@ import homeHeroDesktop from "../public/illustrations/home_hero_desktop.webp"
 import Hero from "../components/Hero"
 
 function Home() {
+  const intl = useIntl()
   return (
     <>
       <Hero
@@ -62,6 +64,38 @@ function Home() {
       <WhyMastodon />
       <Testimonials testimonials={testimonials.slice(6, -1)} />
       <Sponsors sponsors={{ platinum, additionalFunding }} />
+      <Head>
+        <title>
+          {intl.formatMessage({
+            id: "home.page_title",
+            defaultMessage: "Giving social networking back to you",
+          })}{" "}
+          - Mastodon
+        </title>
+        <meta
+          property="og:title"
+          content={intl.formatMessage({
+            id: "home.page_title",
+            defaultMessage: "Giving social networking back to you",
+          })}
+        />
+        <meta
+          name="description"
+          content={intl.formatMessage({
+            id: "home.page_description",
+            defaultMessage:
+              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
+          })}
+        />
+        <meta
+          property="og:description"
+          content={intl.formatMessage({
+            id: "home.page_description",
+            defaultMessage:
+              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
+          })}
+        />
+      </Head>
     </>
   )
 }
