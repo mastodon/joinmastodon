@@ -17,10 +17,10 @@ const TwoUpFeature = ({ features, padding }: TwoUpFeatureProps) => {
     <div className="gap-gutter md:flex">
       {features.map(({ icon, title, copy, cta, cta_link }) => (
         <div
-          className={`grid py-8 md:py-32 lg:grid-cols-6 ${padding}`}
+          className={`grid py-8 text-center md:py-32 lg:grid-cols-6 ${padding}`}
           key={icon}
         >
-          <div className="md:pie-4 lg:col-span-4 lg:col-start-2 lg:pie-0">
+          <div className="flex flex-col items-center md:pie-4 lg:col-span-4 lg:col-start-2 lg:pie-0">
             <SVG
               src={icon}
               className="-ml-2 h-auto w-20 text-accent-blurple md:-ml-4 md:w-32"
