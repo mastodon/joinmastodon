@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FormattedMessage, useIntl } from "react-intl"
 import Image from "next/image"
 import Head from "next/head"
@@ -25,6 +25,8 @@ import illoWorld from "../public/illustrations/home_sponsors_world.png"
 import homeHeroMobile from "../public/illustrations/home_hero_mobile.webp"
 import homeHeroDesktop from "../public/illustrations/home_hero_desktop.webp"
 import Hero from "../components/Hero"
+import { getDirForLocale } from "../utils/locales"
+import { useRouter } from "next/router"
 
 function Home() {
   const intl = useIntl()
@@ -112,7 +114,10 @@ const Testimonials = ({ testimonials }) => {
   const [loaded, setLoaded] = useState(false)
   const fullConfig = resolveConfig(twConfig)
 
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const { locale } = useRouter()
+  const dir = getDirForLocale(locale)
+
+  const options = {
     loop: true,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
@@ -131,7 +136,14 @@ const Testimonials = ({ testimonials }) => {
         slides: { perView: 3, spacing: 16 },
       },
     },
-  })
+  }
+  const [sliderRef, instanceRef] = useKeenSlider(options)
+
+  useEffect(() => {
+    if (dir === "rtl") {
+      instanceRef.current.update({ ...options, rtl: true })
+    }
+  }, [dir])
 
   return (
     <section className="full-width-bg bg-gray-5 pt-20 pb-28">
