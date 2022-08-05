@@ -360,14 +360,8 @@ export async function getServerSideProps(ctx) {
         category,
         language,
       },
+      intlMessages: await loadIntlMessages(ctx),
     },
   }
 }
-
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
-
 export default Servers
