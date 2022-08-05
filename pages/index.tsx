@@ -224,74 +224,123 @@ const Features = () => {
 }
 
 const WhyMastodon = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+  const fullConfig = resolveConfig(twConfig)
+
+  const options = {
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
+    created() {
+      setLoaded(true)
+    },
+    slides: {
+      perView: 1,
+    },
+    breakpoints: {
+      [`(min-width: ${fullConfig.theme.screens.md})`]: {
+        disabled: true,
+      },
+    },
+  }
+  const [sliderRef, instanceRef] = useKeenSlider(options)
+
   return (
     <section className="py-20">
       <h3 className="h3 pb-16 text-center">
         <FormattedMessage id="home.why.title" defaultMessage="Why Mastodon?" />
       </h3>
-      <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-4">
-        <IconCard
-          title={
-            <FormattedMessage
-              id="home.why.decentralized.title"
-              defaultMessage="Decentralized"
-            />
-          }
-          icon="decentralized"
-          copy={
-            <FormattedMessage
-              id="home.why.decentralized.copy"
-              defaultMessage="Not controlled by a 
+      <div dir="ltr">
+        <div
+          ref={sliderRef}
+          className="keen-slider mb-8 md:mb-0 md:grid md:grid-cols-2 md:gap-gutter lg:grid-cols-4"
+        >
+          <IconCard
+            className="keen-slider__slide"
+            title={
+              <FormattedMessage
+                id="home.why.decentralized.title"
+                defaultMessage="Decentralized"
+              />
+            }
+            icon="decentralized"
+            copy={
+              <FormattedMessage
+                id="home.why.decentralized.copy"
+                defaultMessage="Not controlled by a 
             single website or company, Mastodon is a network of completely independent service providers forming 
             a global, cohesive social media platform. "
-            />
-          }
-        />
-        <IconCard
-          title={
-            <FormattedMessage
-              id="home.why.opensource.title"
-              defaultMessage="Open Source"
-            />
-          }
-          icon="open-source"
-          copy={
-            <FormattedMessage
-              id="home.why.opensource.copy"
-              defaultMessage="Mastodon is free and open-source software. We believe in your right to use, copy, study and change Mastodon as you see fit. Community collaboration helps us continually evolve Mastodon."
-            />
-          }
-        />
-        <IconCard
-          title={
-            <FormattedMessage
-              id="home.why.not_for_sale.title"
-              defaultMessage="Not for Sale"
-            />
-          }
-          icon="price-tag"
-          copy={
-            <FormattedMessage
-              id="home.why.not_for_sale.copy"
-              defaultMessage="No surprises. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data is yours and yours alone"
-            />
-          }
-        />
-        <IconCard
-          title={
-            <FormattedMessage
-              id="home.why.privacy_minded.title"
-              defaultMessage="Privacy-Minded"
-            />
-          }
-          icon="safety"
-          copy={
-            <FormattedMessage
-              id="home.why.privacy_minded.copy"
-              defaultMessage="You’re in control. Publish only what you choose and rest assured that your personal information is safe. Mastodon is not a platform for ads and respects your privacy."
-            />
-          }
-        />
+              />
+            }
+          />
+          <IconCard
+            className="keen-slider__slide"
+            title={
+              <FormattedMessage
+                id="home.why.opensource.title"
+                defaultMessage="Open Source"
+              />
+            }
+            icon="open-source"
+            copy={
+              <FormattedMessage
+                id="home.why.opensource.copy"
+                defaultMessage="Mastodon is free and open-source software. We believe in your right to use, copy, study and change Mastodon as you see fit. Community collaboration helps us continually evolve Mastodon."
+              />
+            }
+          />
+          <IconCard
+            className="keen-slider__slide"
+            title={
+              <FormattedMessage
+                id="home.why.not_for_sale.title"
+                defaultMessage="Not for Sale"
+              />
+            }
+            icon="price-tag"
+            copy={
+              <FormattedMessage
+                id="home.why.not_for_sale.copy"
+                defaultMessage="No surprises. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data is yours and yours alone"
+              />
+            }
+          />
+          <IconCard
+            className="keen-slider__slide"
+            title={
+              <FormattedMessage
+                id="home.why.privacy_minded.title"
+                defaultMessage="Privacy-Minded"
+              />
+            }
+            icon="safety"
+            copy={
+              <FormattedMessage
+                id="home.why.privacy_minded.copy"
+                defaultMessage="You’re in control. Publish only what you choose and rest assured that your personal information is safe. Mastodon is not a platform for ads and respects your privacy."
+              />
+            }
+          />
+        </div>
+        {loaded && instanceRef.current && (
+          <div className="flex items-center justify-center gap-2 md:hidden">
+            {instanceRef.current.slides.map((_, idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx)
+                  }}
+                  className={
+                    "rounded-[50%] p-1.5 " +
+                    (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
+                  }
+                ></button>
+              )
+            })}
+          </div>
+        )}
       </div>
     </section>
   )
