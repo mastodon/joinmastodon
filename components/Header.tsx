@@ -107,7 +107,7 @@ const Header = () => {
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 w-screen flex-col overflow-auto bg-eggplant px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1 md:-mie-1 md:mis-0",
+              "fixed inset-0 w-screen flex-col overflow-auto bg-black px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1 md:-mie-1 md:mis-0",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
@@ -165,7 +165,7 @@ const Header = () => {
                               aria-current={child.active ? "page" : undefined}
                             >
                               <span className="block">{child.label}</span>
-                              <span className="b3 block opacity-70 md:text-gray-2 md:opacity-100">
+                              <span className="b3 block text-gray-3 md:text-gray-1">
                                 {child.description}
                               </span>
                             </a>
