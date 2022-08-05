@@ -27,13 +27,10 @@ export const SelectMenu = ({
         <select
           className="h-10 appearance-none rounded bg-[transparent] pie-7 pis-2"
           onChange={(e) => onChange(e.target.value)}
+          value={value}
         >
           {options.map(({ label: optionLabel, value: optionValue }) => (
-            <option
-              key={optionValue}
-              value={optionValue}
-              selected={optionValue === value}
-            >
+            <option key={optionValue} value={optionValue}>
               {optionLabel}
             </option>
           ))}
