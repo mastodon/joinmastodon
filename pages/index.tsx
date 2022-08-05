@@ -114,9 +114,6 @@ const Testimonials = ({ testimonials }) => {
   const [loaded, setLoaded] = useState(false)
   const fullConfig = resolveConfig(twConfig)
 
-  const { locale } = useRouter()
-  const dir = getDirForLocale(locale)
-
   const options = {
     loop: true,
     slideChanged(slider) {
@@ -139,12 +136,6 @@ const Testimonials = ({ testimonials }) => {
   }
   const [sliderRef, instanceRef] = useKeenSlider(options)
 
-  useEffect(() => {
-    if (dir === "rtl") {
-      instanceRef.current.update({ ...options, rtl: true })
-    }
-  }, [dir])
-
   return (
     <section className="full-width-bg bg-gray-5 pt-20 pb-28">
       <div className="full-width-bg__inner">
@@ -155,34 +146,36 @@ const Testimonials = ({ testimonials }) => {
           />
         </h2>
 
-        <div ref={sliderRef} className="keen-slider mb-8">
-          {testimonials.map((testimonial) => {
-            return (
-              <TestimonialCard
-                key={testimonial.name}
-                testimonial={testimonial}
-              />
-            )
-          })}
-        </div>
-        {loaded && instanceRef.current && (
-          <div className="flex items-center justify-center gap-2">
-            {testimonials.map((_, idx) => {
+        <div dir="ltr">
+          <div ref={sliderRef} className="keen-slider mb-8">
+            {testimonials.map((testimonial) => {
               return (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    instanceRef.current?.moveToIdx(idx)
-                  }}
-                  className={
-                    "rounded-[50%] p-1.5 " +
-                    (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
-                  }
-                ></button>
+                <TestimonialCard
+                  key={testimonial.name}
+                  testimonial={testimonial}
+                />
               )
             })}
           </div>
-        )}
+          {loaded && instanceRef.current && (
+            <div className="flex items-center justify-center gap-2">
+              {testimonials.map((_, idx) => {
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      instanceRef.current?.moveToIdx(idx)
+                    }}
+                    className={
+                      "rounded-[50%] p-1.5 " +
+                      (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
+                    }
+                  ></button>
+                )
+              })}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   )
