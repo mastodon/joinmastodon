@@ -1,7 +1,10 @@
+import { useState } from "react"
 import { FormattedMessage, useIntl } from "react-intl"
 import Image from "next/image"
 import Head from "next/head"
 import classnames from "classnames"
+import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
 
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
@@ -62,7 +65,7 @@ function Home() {
       </Hero>
       <Features />
       <WhyMastodon />
-      <Testimonials testimonials={testimonials.slice(6, -1)} />
+      <Testimonials testimonials={testimonials} />
       <Sponsors sponsors={{ platinum, additionalFunding }} />
       <Head>
         <title>
@@ -103,6 +106,24 @@ function Home() {
 export default Home
 
 const Testimonials = ({ testimonials }) => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+
+  const [sliderRef, instanceRef] = useKeenSlider({
+    slides: {
+      perView: 3,
+      spacing: 16,
+    },
+    loop: true,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
+    created() {
+      setLoaded(true)
+    },
+  })
+
+  console.log(currentSlide)
   return (
     <section className="full-width-bg bg-gray-5 pt-20 pb-28">
       <div className="full-width-bg__inner">
@@ -113,7 +134,7 @@ const Testimonials = ({ testimonials }) => {
           />
         </h2>
 
-        <div className="columns-sm gap-5">
+        <div ref={sliderRef} className="keen-slider mb-8">
           {testimonials.map((testimonial) => {
             return (
               <TestimonialCard
@@ -123,6 +144,24 @@ const Testimonials = ({ testimonials }) => {
             )
           })}
         </div>
+        {loaded && instanceRef.current && (
+          <div className="flex items-center justify-center gap-2">
+            {testimonials.map((_, idx) => {
+              return (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx)
+                  }}
+                  className={
+                    "rounded-[50%] p-1.5 " +
+                    (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
+                  }
+                ></button>
+              )
+            })}
+          </div>
+        )}
       </div>
     </section>
   )
