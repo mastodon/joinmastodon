@@ -8,14 +8,18 @@ export type IconCardProps = {
   icon: string
   /** Card's copy */
   copy: React.ReactNode
+  /** Extra class names, used for homepage carousel */
+  className?: string
 }
 /**
  * Renders a feature card with a visual element and copy.
  * Layout (width, height, positioning) can be set from the parent.
  */
-export const IconCard = ({ title, icon, copy }: IconCardProps) => {
+export const IconCard = ({ title, icon, copy, className }: IconCardProps) => {
   return (
-    <div className="flex flex-col items-center justify-start overflow-hidden rounded bg-white text-center shadow">
+    <div
+      className={`flex flex-col items-center justify-start overflow-hidden rounded bg-white text-center shadow ${className}`}
+    >
       <div className="flex h-44 w-full items-center justify-center text-accent-blurple">
         <div className="h-[7.5rem] w-[7.5rem]">
           <SVG src={`/icons/${icon}.svg`} />

@@ -15,7 +15,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        className="mb-8 inline-block h-max w-full space-y-6 rounded bg-white p-8 shadow"
+        className="keen-slider__slide mb-8 inline-block h-max w-full space-y-6 rounded bg-white p-8 shadow"
       >
         <p className="b2">{testimonial.text}</p>
         <div className="flex flex-wrap gap-x-6 ">
