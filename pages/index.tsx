@@ -109,78 +109,6 @@ function Home() {
 
 export default Home
 
-const Testimonials = ({ testimonials }) => {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [loaded, setLoaded] = useState(false)
-  const fullConfig = resolveConfig(twConfig)
-
-  const options = {
-    loop: true,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
-    },
-    created() {
-      setLoaded(true)
-    },
-    slides: {
-      perView: 1,
-    },
-    breakpoints: {
-      [`(min-width: ${fullConfig.theme.screens.md})`]: {
-        slides: { perView: 2, spacing: 16 },
-      },
-      [`(min-width: ${fullConfig.theme.screens.lg})`]: {
-        slides: { perView: 3, spacing: 16 },
-      },
-    },
-  }
-  const [sliderRef, instanceRef] = useKeenSlider(options)
-
-  return (
-    <section className="full-width-bg bg-gray-5 pt-20 pb-28">
-      <div className="full-width-bg__inner">
-        <h2 className="h3 pb-16 text-center">
-          <FormattedMessage
-            id="home.testimonials.title"
-            defaultMessage="What our users are saying"
-          />
-        </h2>
-
-        <div dir="ltr">
-          <div ref={sliderRef} className="keen-slider mb-8">
-            {testimonials.map((testimonial) => {
-              return (
-                <TestimonialCard
-                  key={testimonial.name}
-                  testimonial={testimonial}
-                />
-              )
-            })}
-          </div>
-          {loaded && instanceRef.current && (
-            <div className="flex items-center justify-center gap-2">
-              {testimonials.map((_, idx) => {
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      instanceRef.current?.moveToIdx(idx)
-                    }}
-                    className={
-                      "rounded-[50%] p-1.5 " +
-                      (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
-                    }
-                  ></button>
-                )
-              })}
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
-  )
-}
-
 const Features = () => {
   return (
     <section>
@@ -364,6 +292,78 @@ const WhyMastodon = () => {
             />
           }
         />
+      </div>
+    </section>
+  )
+}
+
+const Testimonials = ({ testimonials }) => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+  const fullConfig = resolveConfig(twConfig)
+
+  const options = {
+    loop: true,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
+    created() {
+      setLoaded(true)
+    },
+    slides: {
+      perView: 1,
+    },
+    breakpoints: {
+      [`(min-width: ${fullConfig.theme.screens.md})`]: {
+        slides: { perView: 2, spacing: 16 },
+      },
+      [`(min-width: ${fullConfig.theme.screens.lg})`]: {
+        slides: { perView: 3, spacing: 16 },
+      },
+    },
+  }
+  const [sliderRef, instanceRef] = useKeenSlider(options)
+
+  return (
+    <section className="full-width-bg bg-gray-5 pt-20 pb-28">
+      <div className="full-width-bg__inner">
+        <h2 className="h3 pb-16 text-center">
+          <FormattedMessage
+            id="home.testimonials.title"
+            defaultMessage="What our users are saying"
+          />
+        </h2>
+
+        <div dir="ltr">
+          <div ref={sliderRef} className="keen-slider mb-8">
+            {testimonials.map((testimonial) => {
+              return (
+                <TestimonialCard
+                  key={testimonial.name}
+                  testimonial={testimonial}
+                />
+              )
+            })}
+          </div>
+          {loaded && instanceRef.current && (
+            <div className="flex items-center justify-center gap-2">
+              {testimonials.map((_, idx) => {
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      instanceRef.current?.moveToIdx(idx)
+                    }}
+                    className={
+                      "rounded-[50%] p-1.5 " +
+                      (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
+                    }
+                  ></button>
+                )
+              })}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   )
