@@ -26,8 +26,8 @@
     --lime: #baff3b;
     --goldenrod: #ffbe2e;
 
-    --header-offset: 1.5rem;
     --header-area: calc(var(--header-offset) + var(--header-height));
+    @apply [--header-offset:0rem] md:[--header-offset:1.5rem];
     @apply [--header-height:5.625rem] md:[--header-height:6rem];
     @apply [--gutter-width:1rem] md:[--gutter-width:1.25rem];
     @apply [--footer-offset:14rem] md:[--footer-offset:18rem];
