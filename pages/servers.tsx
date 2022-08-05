@@ -342,7 +342,7 @@ const ServerFilters = ({
 export async function getServerSideProps(ctx) {
   ctx.res.setHeader(
     "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
+    "public, s-maxage=1800, stale-while-revalidate=1800"
   )
 
   const categoryRes = await fetch(getApiUrl("categories"))
