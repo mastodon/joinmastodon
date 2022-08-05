@@ -5,6 +5,8 @@ import Head from "next/head"
 import classnames from "classnames"
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+import resolveConfig from "tailwindcss/resolveConfig"
+import twConfig from "../tailwind.config"
 
 import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
@@ -108,12 +110,9 @@ export default Home
 const Testimonials = ({ testimonials }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
+  const fullConfig = resolveConfig(twConfig)
 
   const [sliderRef, instanceRef] = useKeenSlider({
-    slides: {
-      perView: 3,
-      spacing: 16,
-    },
     loop: true,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
@@ -121,9 +120,19 @@ const Testimonials = ({ testimonials }) => {
     created() {
       setLoaded(true)
     },
+    slides: {
+      perView: 1,
+    },
+    breakpoints: {
+      [`(min-width: ${fullConfig.theme.screens.md})`]: {
+        slides: { perView: 2, spacing: 16 },
+      },
+      [`(min-width: ${fullConfig.theme.screens.lg})`]: {
+        slides: { perView: 3, spacing: 16 },
+      },
+    },
   })
 
-  console.log(currentSlide)
   return (
     <section className="full-width-bg bg-gray-5 pt-20 pb-28">
       <div className="full-width-bg__inner">
