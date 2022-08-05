@@ -107,7 +107,7 @@ const Header = () => {
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "-md:mie-1 fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[calc(var(--header-area)_+_1rem)] focus-visible-within:outline md:relative md:-mx-2 md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1 md:mis-0",
+              "fixed inset-0 w-screen flex-col overflow-auto bg-eggplant px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1 md:-mie-1 md:mis-0",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
@@ -157,13 +157,15 @@ const Header = () => {
                               )}
                               className={classNames(
                                 "block rounded hover:bg-eggplant hover:md:bg-gray-5",
-                                item.compact ? "px-2" : "py-3 px-4 font-700",
+                                item.compact
+                                  ? "px-5 md:px-2"
+                                  : "py-3 px-5 font-700 md:px-4",
                                 child.active && "font-800"
                               )}
                               aria-current={child.active ? "page" : undefined}
                             >
                               <span className="block">{child.label}</span>
-                              <span className="b3 block text-gray-2">
+                              <span className="b3 block opacity-70 md:text-gray-2 md:opacity-100">
                                 {child.description}
                               </span>
                             </a>
