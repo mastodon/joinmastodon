@@ -25,7 +25,7 @@ export const SelectMenu = ({
       <span className="text-gray-1">{label}:</span>
       <div className="relative flex">
         <select
-          className="h-10 appearance-none rounded bg-[transparent] pie-7 pis-2"
+          className="h-10 cursor-pointer appearance-none rounded bg-[transparent] pie-7 pis-2 hover:bg-gray-5"
           onChange={(e) => onChange(e.target.value)}
           value={value}
         >
