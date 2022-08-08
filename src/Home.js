@@ -18,12 +18,9 @@ import sponsorFireStickTricks from './assets/sponsors/firesticktricks-logo.png';
 import sponsorPapersOwl from './assets/sponsors/papersowl.png';
 import avatarSexToyCollective from './assets/sponsors/sextoycollective.jpg';
 import sponsorVPSServer from './assets/sponsors/vpsserver2.png';
-import sponsorBetrugstest from './assets/sponsors/betrugstest-com.png';
 import sponsorSujitech from './assets/sponsors/mask-network.png';
-import sponsorBCS from './assets/sponsors/bcs-white.png';
 import sponsorBCO from './assets/sponsors/BesteCasinosOnline.png';
 import sponsorSisterSites from './assets/sponsors/sistersites-logo.png';
-import sponsorSchnellNode from './assets/sponsors/schnellnode.png';
 import sponsorAusCasinos from './assets/sponsors/auscasinos.png';
 import sponsorMastoHost from './assets/sponsors/MH-horizontal-white.png';
 import sponsorAssemblyFour from './assets/sponsors/a4.png';
@@ -32,7 +29,6 @@ import sponsorKasynoHex from './assets/sponsors/kasynohex.svg';
 import sponsorAltCasino from './assets/sponsors/alt-casino-1.png';
 import sponsorNettikasinot from './assets/sponsors/nettikasinot.svg';
 import sponsorOnlineCasinos from './assets/sponsors/onlinecasinos.a2791b0.png';
-import sponsorCasinoHexAU from './assets/sponsors/casino-hex-au.png';
 import sponsorWideAngleAnalytics from './assets/sponsors/wide-angle-analytics.png';
 import sponsorGoread from './assets/sponsors/goread.png';
 import sponsorOak from './assets/sponsors/oak.svg';
@@ -88,12 +84,9 @@ export const sponsors = [
   { href: 'https://papersowl.com/write-my-essay-please', src: sponsorPapersOwl, alt: 'Free plagiarism checker' },
   { href: 'https://sextoycollective.com', src: avatarSexToyCollective, alt: 'SexToyCollective' },
   { href: 'https://www.vpsserver.com/', src: sponsorVPSServer, alt: 'VPS Server' },
-  { href: 'https://www.betrugstest.com/', src: sponsorBetrugstest, alt: 'Betrugstest.com' }, // Custom/other
   { href: 'https://mask.io/', src: sponsorSujitech, alt: 'Mask Network' }, // Custom/other
-  { href: 'https://www.bestcasinosites.net', src: sponsorBCS, alt: 'bestcasinosites.net' }, // Custom/other
   { href: 'https://www.bestecasinosonline.at/', src: sponsorBCO, alt: 'Online Casino Österreich' }, // Custom
   { href: 'https://www.sister-sites.co.uk/', src: sponsorSisterSites, alt: 'sister-sites.co.uk' }, // Custom
-  { href: 'https://schnellno.de/', src: sponsorSchnellNode, alt: 'Schnell Node' }, // Custom
   { href: 'https://masto.host/', src: sponsorMastoHost, alt: 'Masto.host - Fully managed Mastodon hosting' }, // Custom
   { href: 'https://assemblyfour.com/', src: sponsorAssemblyFour, alt: 'Assembly Four' }, // Custom
   { href: 'https://www.auscasinos.com/new/', src: sponsorAusCasinos, alt: 'AusCasinos.com New Site Section' }, // Custom
@@ -102,7 +95,6 @@ export const sponsors = [
   { href: 'https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html', src: sponsorAltCasino, alt: 'Online Casinos Australia' }, // Custom
   { href: 'https://www.nettikasinot.org/', src: sponsorNettikasinot, alt: 'Nettikasinot' },
   { href: 'https://www.onlinecasinos.net/', src: sponsorOnlineCasinos, alt: 'OnlineCasinos.net' }, // Custom
-  { href: 'https://topaussiecasinos.com/', src: sponsorCasinoHexAU, alt: 'CasinoHEX Australia' }, // Custom
   { href: 'https://wideangle.co', src: sponsorWideAngleAnalytics, alt: 'Wide Angle Analytics' }, // Custom
   { href: 'https://goread.io/buy-instagram-followers', src: sponsorGoread, alt: 'Goread.io' },
 ];
