@@ -9,9 +9,7 @@ import { sponsors as platinumSponsors } from './Home';
 
 import sponsorEasyDNS from './assets/sponsors/easydns.png';
 import sponsorWritersPerHour from './assets/sponsors/writersperhour.jpg';
-
 import sponsorMiniTool from './assets/sponsors/minitool.png';
-import sponsorIVisa from './assets/sponsors/ivisa.png';
 import sponsorMySexToyGuide from './assets/sponsors/mysextoyguide.jpg';
 import sponsorKevani from './assets/sponsors/KEVANI_LOGO.png';
 import sponsorDoggieToys from './assets/sponsors/doggie-toys.png';
@@ -19,7 +17,6 @@ import sponsorBitlaunch from './assets/sponsors/bitlaunch.svg';
 import sponsorInkedin from './assets/sponsors/inkedin-logo-small-2.webp';
 import sponsorCasinoFiables from './assets/sponsors/logo-fiables.png';
 import sponsorRapidEssay from './assets/sponsors/rapidessay_logo.png';
-import sponsorCasinoHexNL from './assets/sponsors/casino-hex-nl.png';
 import sponsorHostNoc from './assets/sponsors/hostnoc.png';
 import sponsorIBoysoft from './assets/sponsors/iboysoft-logo-dark2.png';
 import sponsorNettikasino from './assets/sponsors/nettikasinolista-mv.png';
@@ -58,7 +55,6 @@ const goldSponsors = [
   { href: 'https://easydns.com/', src: sponsorEasyDNS, alt: 'easyDNS' },
   { href: 'https://writersperhour.com/', src: sponsorWritersPerHour, alt: 'Writers Per Hour' },
   { href: 'https://www.partitionwizard.com/', src: sponsorMiniTool, alt: 'MiniTool Partition Wizard' },
-  { href: 'https://www.ivisa.com/photos', src: sponsorIVisa, alt: 'iVisa' },
   { href: 'https://www.mysextoyguide.com/', src: sponsorMySexToyGuide, alt: 'MySexToyGuide' },
   { href: 'https://www.kevani.com/', src: sponsorKevani, alt: 'Kevani' },
   { href: 'https://www.doggietoys.deals/', src: sponsorDoggieToys, alt: 'Doggie Toys' }, // Custom
@@ -66,7 +62,6 @@ const goldSponsors = [
   { href: 'http://inkedin.com/', src: sponsorInkedin, alt: 'inkedin.com' },
   { href: 'https://casinofiables.com/', src: sponsorCasinoFiables, alt: 'Casino Fiables' },
   { href: 'https://rapidessay.com/', src: sponsorRapidEssay, alt: 'Rapid Essay' },
-  { href: 'https://onlinecasinohex.nl/', src: sponsorCasinoHexNL, alt: 'CasinoHEX Nederland' },
   { href: 'https://hostnoc.com', src: sponsorHostNoc, alt: 'HostNoc Dedicated Server' }, // Custom
   { href: 'https://iboysoft.com/', src: sponsorIBoysoft, alt: 'iBoysoft Data Recovery' }, // Custom
   { href: 'https://nettikasinolista.com/', src: sponsorNettikasino, alt: 'Nettikasino' }, // Custom
