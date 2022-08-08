@@ -159,7 +159,7 @@ const Header = () => {
                                 "block rounded hover:bg-eggplant hover:md:bg-gray-5",
                                 item.compact
                                   ? "px-5 md:px-2"
-                                  : "py-3 px-5 font-700 md:px-4",
+                                  : "py-3 px-5 font-600 md:px-4",
                                 child.active && "font-800"
                               )}
                               aria-current={child.active ? "page" : undefined}
