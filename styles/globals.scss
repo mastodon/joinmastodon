@@ -7,7 +7,9 @@
     // While colors could go in tailwind.config.js,
     // having them here enables easier theme overriding
     // in color preference media queries (eg high contrast)
+    --black-transparent: rgba(0, 0, 0, 0.95);
     --black: #000000;
+    --gray-0: #333333;
     --gray-1: #555555;
     --gray-2: #9b9b9b;
     --gray-3: #d4d4d4;
@@ -34,6 +36,7 @@
   }
   html {
     overflow-x: hidden;
+    background: var(--white);
   }
   html,
   body {

@@ -53,6 +53,7 @@ module.exports = {
       none: "0",
     },
     colors: {
+      "black-transparent": "var(--black-transparent)",
       black: "var(--black)",
       white: "var(--white)",
       nightshade: "var(--nightshade)",
@@ -63,6 +64,7 @@ module.exports = {
       "blurple-text-on-black": "var(--blurple-text-on-black)",
       lime: "var(--lime)",
       goldenrod: "var(--goldenrod)",
+      "gray-0": "var(--gray-0)",
       "gray-1": "var(--gray-1)",
       "gray-2": "var(--gray-2)",
       "gray-3": "var(--gray-3)",

@@ -88,9 +88,10 @@ const Header = () => {
 
   return (
     <header
+      // background needs to be on the ::before for now to get around nested compositing bug in chrome
       className={classNames(
-        "full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white transition-colors",
-        pageScrolled && "bg-black"
+        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:backdrop-blur-sm before:transition-colors before:content-[""]',
+        pageScrolled && "before:bg-black-transparent"
       )}
     >
       <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
@@ -134,7 +135,7 @@ const Header = () => {
                     <ul
                       {...bindSecondaryMenu()}
                       className={classNames(
-                        "top-full flex flex-col rounded-md  inline-end-0 md:absolute md:mt-2 md:max-h-[calc(100vh_-_var(--header-height))] md:bg-white md:text-black md:shadow",
+                        "top-full flex flex-col rounded-md  inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-black-transparent md:shadow md:backdrop-blur-sm",
                         primaryMenuItemIndex !== itemIndex || !secondaryMenuOpen
                           ? "sr-only"
                           : "overflow-auto",
@@ -156,7 +157,7 @@ const Header = () => {
                                 child
                               )}
                               className={classNames(
-                                "block rounded hover:bg-eggplant hover:md:bg-gray-5",
+                                "block rounded hover:bg-eggplant hover:md:bg-gray-0",
                                 item.compact
                                   ? "px-5 md:px-2"
                                   : "py-3 px-5 font-600 md:px-4",
@@ -165,7 +166,7 @@ const Header = () => {
                               aria-current={child.active ? "page" : undefined}
                             >
                               <span className="block">{child.label}</span>
-                              <span className="b3 block text-gray-3 md:text-gray-1">
+                              <span className="b3 block text-gray-2">
                                 {child.description}
                               </span>
                             </a>
