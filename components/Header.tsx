@@ -90,8 +90,8 @@ const Header = () => {
     <header
       // background needs to be on the ::before for now to get around nested compositing bug in chrome
       className={classNames(
-        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:backdrop-blur-sm before:transition-colors before:content-[""]',
-        pageScrolled && "before:bg-black-transparent"
+        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:bg-black-transparent before:backdrop-blur-sm before:transition-opacity before:content-[""]',
+        pageScrolled ? "before:opacity-100" : "before:opacity-0"
       )}
     >
       <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
