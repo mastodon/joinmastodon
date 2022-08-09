@@ -7,7 +7,9 @@
     // While colors could go in tailwind.config.js,
     // having them here enables easier theme overriding
     // in color preference media queries (eg high contrast)
+    --black-transparent: rgba(0, 0, 0, 0.95);
     --black: #000000;
+    --gray-0: #333333;
     --gray-1: #555555;
     --gray-2: #9b9b9b;
     --gray-3: #d4d4d4;
@@ -26,14 +28,15 @@
     --lime: #baff3b;
     --goldenrod: #ffbe2e;
 
-    --header-offset: 1.5rem;
     --header-area: calc(var(--header-offset) + var(--header-height));
+    @apply [--header-offset:0rem] md:[--header-offset:1.5rem];
     @apply [--header-height:5.625rem] md:[--header-height:6rem];
     @apply [--gutter-width:1rem] md:[--gutter-width:1.25rem];
     @apply [--footer-offset:14rem] md:[--footer-offset:18rem];
   }
   html {
     overflow-x: hidden;
+    background: var(--white);
   }
   html,
   body {

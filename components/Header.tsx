@@ -15,46 +15,43 @@ const Header = () => {
   const router = useRouter()
   const [pageScrolled, setPageScrolled] = useState(false)
 
+  // prettier-ignore
   const navigationItems = [
     {
       value: "/servers",
       label: <FormattedMessage id="servers" defaultMessage="Servers" />,
-    },
-    {
+    }, {
       value: "/apps",
       label: <FormattedMessage id="nav.apps" defaultMessage="Apps" />,
-    },
-    {
+    }, {
       value: "/sponsors",
       label: <FormattedMessage id="nav.sponsors" defaultMessage="Sponsors" />,
-    },
-    {
-      value: "https://github.com/mastodon/mastodon",
-      label: <FormattedMessage id="nav.code" defaultMessage="Code" />,
-    },
-    {
+    }, {
       key: "resources",
       label: <FormattedMessage id="nav.resources" defaultMessage="Resources" />,
       childItems: [
         {
           value: "https://blog.joinmastodon.org/",
-          label: <FormattedMessage id="nav.blog" defaultMessage="Blog" />,
-        },
-        {
+          label: <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />,
+          description: <FormattedMessage id="nav.blog.description" defaultMessage="Description for the blog" />,
+        }, {
           value: "https://github.com/mastodon/mastodon/discussions",
-          label: <FormattedMessage id="nav.support" defaultMessage="Support" />,
-        },
-        {
+          label: <FormattedMessage id="nav.support.title" defaultMessage="Support" />,
+          description: <FormattedMessage id="nav.support.description" defaultMessage="Description for support" />,
+        }, {
+          value: "https://github.com/mastodon/mastodon",
+          label: <FormattedMessage id="nav.code.title" defaultMessage="Code" />,
+          description: <FormattedMessage id="nav.code.description" defaultMessage="Code on GitHub. Description for code" />,
+        }, {
           value: "https://docs.joinmastodon.org",
-          label: (
-            <FormattedMessage id="nav.docs" defaultMessage="Documentation" />
-          ),
-        },
+          label: <FormattedMessage id="nav.docs.title" defaultMessage="Documentation" />,
+          description: <FormattedMessage id="nav.docs.description" defaultMessage="Description for documentation" />,
+        }
       ],
-    },
-    {
+    }, {
       key: "locale",
       label: <>文A</>,
+      compact: true,
       childItems: locales.map((locale) => ({
         key: locale.code,
         locale: locale.code,
@@ -64,7 +61,7 @@ const Header = () => {
         label: locale.language,
         active: router.locale === locale.code,
       })),
-    },
+    }
   ]
     // set active status on links
     .map((item) => ({ ...item, active: router.asPath === item.value }))
@@ -91,9 +88,10 @@ const Header = () => {
 
   return (
     <header
+      // background needs to be on the ::before for now to get around nested compositing bug in chrome
       className={classNames(
-        "full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white transition-colors",
-        pageScrolled && "bg-black"
+        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:backdrop-blur-sm before:transition-colors before:content-[""]',
+        pageScrolled && "before:bg-black-transparent"
       )}
     >
       <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
@@ -110,7 +108,7 @@ const Header = () => {
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 w-screen flex-col gap-4 overflow-auto bg-eggplant px-6 pt-[calc(var(--header-area)_+_1rem)] focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-10 md:overflow-visible md:rounded md:bg-[transparent] md:p-4",
+              "fixed inset-0 w-screen flex-col overflow-auto bg-black px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1 md:-mie-1 md:mis-0",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
@@ -121,7 +119,7 @@ const Header = () => {
                   <>
                     <button
                       {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
-                      className="flex items-center gap-[0.125rem] whitespace-nowrap text-h5 focus:outline-2 md:text-b2 md:font-450"
+                      className="flex items-center gap-[0.125rem] whitespace-nowrap rounded-md p-3 px-5 text-h5 focus:outline-2 md:text-b2 md:font-450"
                     >
                       {item.label}
                       <SVG
@@ -137,10 +135,11 @@ const Header = () => {
                     <ul
                       {...bindSecondaryMenu()}
                       className={classNames(
-                        "top-full flex flex-col rounded py-4 -inline-end-4 md:absolute md:mt-4 md:max-h-[calc(100vh_-_var(--header-height))] md:bg-white md:px-4 md:text-black md:shadow",
+                        "top-full flex flex-col rounded-md  inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-black-transparent md:shadow md:backdrop-blur-sm",
                         primaryMenuItemIndex !== itemIndex || !secondaryMenuOpen
                           ? "sr-only"
-                          : "overflow-auto"
+                          : "overflow-auto",
+                        item.compact ? "md:p-4" : "min-w-[20ch] py-2 md:px-2"
                       )}
                     >
                       {item.childItems.map((child, childIndex) => (
@@ -158,13 +157,18 @@ const Header = () => {
                                 child
                               )}
                               className={classNames(
-                                "block px-1",
-                                !child.small && "py-1",
+                                "block rounded hover:bg-eggplant hover:md:bg-gray-0",
+                                item.compact
+                                  ? "px-5 md:px-2"
+                                  : "py-3 px-5 font-600 md:px-4",
                                 child.active && "font-800"
                               )}
                               aria-current={child.active ? "page" : undefined}
                             >
-                              {child.label}
+                              <span className="block">{child.label}</span>
+                              <span className="b3 block text-gray-2">
+                                {child.description}
+                              </span>
                             </a>
                           </Link>
                         </li>
@@ -176,7 +180,7 @@ const Header = () => {
                   <Link href={item.value}>
                     <a
                       className={classNames(
-                        "whitespace-nowrap text-h5 md:text-b2",
+                        "block whitespace-nowrap rounded-md p-3 px-5 text-h5 md:text-b2",
                         item.active && "font-800"
                       )}
                       aria-current={item.active ? "page" : undefined}
