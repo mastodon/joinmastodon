@@ -18,13 +18,13 @@ import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
 
-const Servers = ({ filterList }) => {
+const Servers = () => {
   const intl = useIntl()
   const [filters, setFilters] = useState({ language: "", category: "general" })
 
-  // stores filter list to be passed at placeholder data in the next API fetch
-  const cachedLanguages = useRef(filterList.language)
-  const cachedCategory = useRef(filterList.category)
+  // // stores filter list to be passed at placeholder data in the next API fetch
+  // const cachedLanguages = useRef(filterList.language)
+  // const cachedCategory = useRef(filterList.category)
 
   const params = new URLSearchParams(filters)
   const queryOptions = {
@@ -35,15 +35,20 @@ const Servers = ({ filterList }) => {
     return await res.json()
   }
 
+  const cachedCategories = useRef(null)
+
   const apiCategories = useQuery<Category[]>(
     ["categories", filters.language],
     () => fetchEndpoint("categories"),
-    { ...queryOptions, placeholderData: cachedCategory.current }
+    { ...queryOptions }
   )
+
+  cachedCategories.current = apiCategories.data
+
   const apiLanguages = useQuery<Language[]>(
     ["languages", filters.category],
     () => fetchEndpoint("languages"),
-    { ...queryOptions, placeholderData: cachedLanguages.current }
+    { ...queryOptions }
   )
 
   /**
@@ -51,7 +56,7 @@ const Servers = ({ filterList }) => {
    * we need to update the full list of filters' `servers_count` with
    * the new data, or 0 if it's not in the API's list */
   const updateCategoriesWithServersCount = (categories, newCategories) => {
-    return categories.map((localItem) => ({
+    return categories?.map((localItem) => ({
       ...localItem,
       servers_count:
         newCategories.find(
@@ -59,13 +64,17 @@ const Servers = ({ filterList }) => {
         )?.servers_count ?? 0,
     }))
   }
-  const updatedCategoryList = updateCategoriesWithServersCount(
-    filterList.category,
-    apiCategories.data
+  const updatedCategoryList = _orderBy(
+    updateCategoriesWithServersCount(
+      cachedCategories.current,
+      apiCategories.data
+    ),
+    "servers_count",
+    "desc"
   )
 
-  cachedLanguages.current = apiLanguages.data
-  cachedCategory.current = updatedCategoryList
+  // cachedLanguages.current = apiLanguages.data
+  // cachedCategory.current = updatedCategoryList
 
   const servers = useQuery<Server[]>(
     ["servers", filters.language, filters.category],
@@ -102,13 +111,13 @@ const Servers = ({ filterList }) => {
               </span>
             </h2>
             <ServerFilters
-              filterList={{ category: updatedCategoryList }}
+              filterList={updatedCategoryList}
               filters={filters}
               setFilters={setFilters}
             />
           </div>
           <div className="col-span-4 md:col-start-4 md:col-end-13">
-            <div className="my-4 mb-8 flex md:justify-end">
+            {/* <div className="my-4 mb-8 flex md:justify-end">
               <SelectMenu
                 label={
                   <FormattedMessage
@@ -136,7 +145,7 @@ const Servers = ({ filterList }) => {
                     })),
                 ]}
               />
-            </div>
+            </div> */}
             <ServerList servers={servers} />
           </div>
         </div>
@@ -267,74 +276,58 @@ const ServerFilters = ({
   filterList: any
 }) => {
   const intl = useIntl()
-  const filterGroupMessages = defineMessages({
-    category: { id: "server.filter_by.category", defaultMessage: "Topic" },
-    language: {
-      id: "server.filter_by.language",
-      defaultMessage: "Language",
-    },
-    server_size: {
-      id: "server.filter_by.server_size",
-      defaultMessage: "Server size",
-    },
-  })
-
+  const totalServersCount =
+    filterList?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
+  const allOption = {
+    category: "",
+    servers_count: totalServersCount,
+  }
+  const options = [allOption, ...filterList]
   return (
-    <div>
-      {Object.keys(filterList).map((group, i) => {
-        const totalServersCount =
-          filterList[group]?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
-        const allOption = {
-          category: "",
-          servers_count: totalServersCount,
-        }
-        const options = [allOption, ...filterList[group]]
-        return (
-          <div className="md:mb-8" key={i}>
-            <h3 className="h5 mb-2" id={`${group}-group-label`}>
-              {intl.formatMessage(filterGroupMessages[group])}
-            </h3>
-            <ul className="flex flex-wrap gap-x-3 md:flex-col">
-              {options.map((item, i) => {
-                const isActive = filters.category === item.category
-                return (
-                  <li key={i}>
-                    <label
-                      className={classnames(
-                        "b2 flex cursor-pointer gap-1 rounded py-1 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-accent-blurple",
-                        isActive && "!font-800",
-                        item.servers_count === 0 && "text-gray-2"
-                      )}
-                    >
-                      <input
-                        className="sr-only"
-                        type="checkbox"
-                        name={`filters-${group}`}
-                        onChange={() => {
-                          setFilters({
-                            ...filters,
-                            category: isActive ? "" : item.category,
-                          })
-                        }}
-                      />
-                      {item.category === ""
-                        ? intl.formatMessage({
-                            id: "wizard.filter.all_categories",
-                            defaultMessage: "All topics",
-                          })
-                        : intl.formatMessage(categoriesMessages[item.category])}
+    <div className="md:mb-8">
+      <h3 className="h5 mb-2" id="category-group-label">
+        {/* {intl.formatMessage(filterGroupMessages[group])} */}
+        <FormattedMessage
+          id="server.filter_by.category"
+          defaultMessage="Topic"
+        />
+      </h3>
+      <ul className="flex flex-wrap gap-x-3 md:flex-col">
+        {options.map((item, i) => {
+          const isActive = filters.category === item.category
+          return (
+            <li key={i}>
+              <label
+                className={classnames(
+                  "b2 flex cursor-pointer gap-1 rounded py-1 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-accent-blurple",
+                  isActive && "!font-800",
+                  item.servers_count === 0 && "text-gray-2"
+                )}
+              >
+                <input
+                  className="sr-only"
+                  type="checkbox"
+                  name="filters-category"
+                  onChange={() => {
+                    setFilters({
+                      ...filters,
+                      category: isActive ? "" : item.category,
+                    })
+                  }}
+                />
+                {item.category === ""
+                  ? intl.formatMessage({
+                      id: "wizard.filter.all_categories",
+                      defaultMessage: "All topics",
+                    })
+                  : intl.formatMessage(categoriesMessages[item.category])}
 
-                      <span className="text-gray-2">
-                        ({item.servers_count})
-                      </span>
-                    </label>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-        )
-      })}
+                <span className="text-gray-2">({item.servers_count})</span>
+              </label>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }
