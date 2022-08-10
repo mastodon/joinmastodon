@@ -22,32 +22,30 @@ const Servers = () => {
   const intl = useIntl()
   const [filters, setFilters] = useState({ language: "", category: "general" })
 
-  // // stores filter list to be passed at placeholder data in the next API fetch
-  // const cachedLanguages = useRef(filterList.language)
-  // const cachedCategory = useRef(filterList.category)
-
   const params = new URLSearchParams(filters)
   const queryOptions = {
     cacheTime: 30 * 60 * 1000, // 30 minutes
   }
-  const fetchEndpoint = async function (endpoint): Promise<any[]> {
+  const fetchEndpoint = async function (endpoint, params): Promise<any[]> {
     const res = await fetch(getApiUrl(endpoint, params.toString()))
     return await res.json()
   }
 
-  const cachedCategories = useRef(null)
-
-  const apiCategories = useQuery<Category[]>(
-    ["categories", filters.language],
-    () => fetchEndpoint("categories"),
+  const initialCategories = useQuery<Category[]>(
+    ["initial-categories"],
+    () => fetchEndpoint("categories", {}),
     { ...queryOptions }
   )
 
-  cachedCategories.current = apiCategories.data
+  const apiCategories = useQuery<Category[]>(
+    ["categories", filters.language],
+    () => fetchEndpoint("categories", params),
+    { ...queryOptions }
+  )
 
   const apiLanguages = useQuery<Language[]>(
     ["languages", filters.category],
-    () => fetchEndpoint("languages"),
+    () => fetchEndpoint("languages", params),
     { ...queryOptions }
   )
 
@@ -59,26 +57,25 @@ const Servers = () => {
     return categories?.map((localItem) => ({
       ...localItem,
       servers_count:
-        newCategories.find(
+        newCategories?.find(
           (remoteItem) => remoteItem.category === localItem.category
         )?.servers_count ?? 0,
     }))
   }
-  const updatedCategoryList = _orderBy(
-    updateCategoriesWithServersCount(
-      cachedCategories.current,
-      apiCategories.data
-    ),
+
+  const sortedInitialCategories = _orderBy(
+    initialCategories.data,
     "servers_count",
     "desc"
   )
-
-  // cachedLanguages.current = apiLanguages.data
-  // cachedCategory.current = updatedCategoryList
+  const updatedCategoryList = updateCategoriesWithServersCount(
+    sortedInitialCategories,
+    apiCategories?.data
+  )
 
   const servers = useQuery<Server[]>(
     ["servers", filters.language, filters.category],
-    () => fetchEndpoint("servers"),
+    () => fetchEndpoint("servers", params),
     queryOptions
   )
 
@@ -117,35 +114,39 @@ const Servers = () => {
             />
           </div>
           <div className="col-span-4 md:col-start-4 md:col-end-13">
-            {/* <div className="my-4 mb-8 flex md:justify-end">
-              <SelectMenu
-                label={
-                  <FormattedMessage
-                    id="wizard.filter_by_language"
-                    defaultMessage="Filter by language"
-                  />
-                }
-                onChange={(v) => {
-                  setFilters({ ...filters, language: v })
-                }}
-                value={filters.language}
-                options={[
-                  {
-                    value: "",
-                    label: intl.formatMessage({
-                      id: "wizard.filter.all_languages",
-                      defaultMessage: "All languages",
-                    }),
-                  },
-                  ...apiLanguages.data
-                    .filter((language) => language.language && language.locale)
-                    .map((language) => ({
-                      label: language.language,
-                      value: language.locale,
-                    })),
-                ]}
-              />
-            </div> */}
+            <div className="my-4 mb-8 flex md:justify-end">
+              {apiLanguages.isSuccess && (
+                <SelectMenu
+                  label={
+                    <FormattedMessage
+                      id="wizard.filter_by_language"
+                      defaultMessage="Filter by language"
+                    />
+                  }
+                  onChange={(v) => {
+                    setFilters({ ...filters, language: v })
+                  }}
+                  value={filters.language}
+                  options={[
+                    {
+                      value: "",
+                      label: intl.formatMessage({
+                        id: "wizard.filter.all_languages",
+                        defaultMessage: "All languages",
+                      }),
+                    },
+                    ...apiLanguages.data
+                      .filter(
+                        (language) => language.language && language.locale
+                      )
+                      .map((language) => ({
+                        label: language.language,
+                        value: language.locale,
+                      })),
+                  ]}
+                />
+              )}
+            </div>
             <ServerList servers={servers} />
           </div>
         </div>
@@ -286,7 +287,6 @@ const ServerFilters = ({
   return (
     <div className="md:mb-8">
       <h3 className="h5 mb-2" id="category-group-label">
-        {/* {intl.formatMessage(filterGroupMessages[group])} */}
         <FormattedMessage
           id="server.filter_by.category"
           defaultMessage="Topic"
