@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
-import { useRef, useState, useEffect } from "react"
-import { FormattedMessage, defineMessages, useIntl } from "react-intl"
+import { useState, useEffect } from "react"
+import { FormattedMessage, useIntl } from "react-intl"
 import SVG from "react-inlinesvg"
 import classnames from "classnames"
 import { orderBy as _orderBy } from "lodash"
