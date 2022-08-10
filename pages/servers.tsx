@@ -110,7 +110,7 @@ const Servers = () => {
               </span>
             </h2>
             <ServerFilters
-              isLoading={initialCategories.isLoading}
+              isLoading={!initialCategories}
               filterList={updatedCategoryList}
               filters={filters}
               setFilters={setFilters}
