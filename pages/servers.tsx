@@ -14,6 +14,7 @@ import loadIntlMessages from "../utils/loadIntlMessages"
 
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
+import SkeletonText from "../components/SkeletonText"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
@@ -108,6 +109,7 @@ const Servers = () => {
               </span>
             </h2>
             <ServerFilters
+              isLoading={initialCategories.isLoading}
               filterList={updatedCategoryList}
               filters={filters}
               setFilters={setFilters}
@@ -271,10 +273,12 @@ const ServerFilters = ({
   filters,
   setFilters,
   filterList,
+  isLoading,
 }: {
   filters: any
   setFilters: any
   filterList: any
+  isLoading: boolean
 }) => {
   const intl = useIntl()
   const totalServersCount =
@@ -284,6 +288,7 @@ const ServerFilters = ({
     servers_count: totalServersCount,
   }
   const options = [allOption, ...filterList]
+
   return (
     <div className="md:mb-8">
       <h3 className="h5 mb-2" id="category-group-label">
@@ -293,40 +298,47 @@ const ServerFilters = ({
         />
       </h3>
       <ul className="flex flex-wrap gap-x-3 md:flex-col">
-        {options.map((item, i) => {
-          const isActive = filters.category === item.category
-          return (
-            <li key={i}>
-              <label
-                className={classnames(
-                  "b2 flex cursor-pointer gap-1 rounded py-1 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-accent-blurple",
-                  isActive && "!font-800",
-                  item.servers_count === 0 && "text-gray-2"
-                )}
-              >
-                <input
-                  className="sr-only"
-                  type="checkbox"
-                  name="filters-category"
-                  onChange={() => {
-                    setFilters({
-                      ...filters,
-                      category: isActive ? "" : item.category,
-                    })
-                  }}
-                />
-                {item.category === ""
-                  ? intl.formatMessage({
-                      id: "wizard.filter.all_categories",
-                      defaultMessage: "All topics",
-                    })
-                  : intl.formatMessage(categoriesMessages[item.category])}
+        {isLoading
+          ? new Array(11).fill(null).map((_, i) => (
+              <li className="h-8 py-2" key={i}>
+                <SkeletonText className="!h-full" />
+              </li>
+            ))
+          : options.map((item, i) => {
+              const isActive = filters.category === item.category
 
-                <span className="text-gray-2">({item.servers_count})</span>
-              </label>
-            </li>
-          )
-        })}
+              return (
+                <li key={i}>
+                  <label
+                    className={classnames(
+                      "b2 flex cursor-pointer gap-1 rounded py-1 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-accent-blurple",
+                      isActive && "!font-800",
+                      item.servers_count === 0 && "text-gray-2"
+                    )}
+                  >
+                    <input
+                      className="sr-only"
+                      type="checkbox"
+                      name="filters-category"
+                      onChange={() => {
+                        setFilters({
+                          ...filters,
+                          category: isActive ? "" : item.category,
+                        })
+                      }}
+                    />
+                    {item.category === ""
+                      ? intl.formatMessage({
+                          id: "wizard.filter.all_categories",
+                          defaultMessage: "All topics",
+                        })
+                      : intl.formatMessage(categoriesMessages[item.category])}
+
+                    <span className="text-gray-2">({item.servers_count})</span>
+                  </label>
+                </li>
+              )
+            })}
       </ul>
     </div>
   )
