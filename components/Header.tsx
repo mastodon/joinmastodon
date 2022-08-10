@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl"
 
 import mastodonLogo from "../public/logos/logo-full-purple.svg"
 import Image from "next/image"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useId } from "react"
 import classNames from "classnames"
 import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
@@ -68,13 +68,10 @@ const Header = () => {
 
   const {
     mobileMenuOpen,
-    primaryMenuItemIndex,
-    secondaryMenuItemIndex,
-    secondaryMenuOpen,
+    openMenuIndex,
     bindToggle,
     bindPrimaryMenu,
     bindPrimaryMenuItem,
-    bindSecondaryMenu,
     bindSecondaryMenuItem,
   } = useMenu({ navigationItems })
 
@@ -84,6 +81,9 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", checkPageScroll)
     checkPageScroll()
+    return () => {
+      window.removeEventListener("scroll", checkPageScroll)
+    }
   }, [])
 
   return (
@@ -108,7 +108,7 @@ const Header = () => {
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 w-screen flex-col overflow-auto bg-black px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 focus-visible-within:outline md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1 md:-mie-1 md:mis-0",
+              "fixed inset-0 w-screen flex-col overflow-auto bg-black px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1 md:-mie-1 md:mis-0",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
@@ -125,20 +125,17 @@ const Header = () => {
                       <SVG
                         src={"/ui/disclosure-arrow.svg"}
                         className={classNames({
-                          "rotate-180":
-                            primaryMenuItemIndex === itemIndex &&
-                            secondaryMenuOpen,
+                          "rotate-180": openMenuIndex === itemIndex,
                         })}
                       />
                     </button>
 
                     <ul
-                      {...bindSecondaryMenu()}
                       className={classNames(
-                        "top-full flex flex-col rounded-md  inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-black-transparent md:shadow md:backdrop-blur-sm",
-                        primaryMenuItemIndex !== itemIndex || !secondaryMenuOpen
-                          ? "sr-only"
-                          : "overflow-auto",
+                        "top-full flex-col rounded-md  inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-black-transparent md:shadow md:backdrop-blur-sm",
+                        openMenuIndex === itemIndex
+                          ? "flex overflow-auto"
+                          : "hidden",
                         item.compact ? "md:p-4" : "min-w-[20ch] py-2 md:px-2"
                       )}
                     >
@@ -151,11 +148,7 @@ const Header = () => {
                             scroll={child.scroll ?? true}
                           >
                             <a
-                              {...bindSecondaryMenuItem(
-                                itemIndex,
-                                childIndex,
-                                child
-                              )}
+                              {...bindSecondaryMenuItem(child)}
                               className={classNames(
                                 "block rounded hover:bg-eggplant hover:md:bg-gray-0",
                                 item.compact
@@ -201,63 +194,20 @@ const Header = () => {
 
 /**
  * `useMenu` provides a React Hook for managing menu state and attributes for accessibility.
- * @see https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation-hybrid.html
  */
 const useMenu = ({ navigationItems }) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [primaryMenuItemIndex, setPrimaryMenuItemIndex] = useState<number>(0)
-  /** `null` means the secondary menu is closed */
-  const [secondaryMenuItemIndex, setSecondaryMenuItemIndex] = useState<
-    number | null
-  >(null)
+  const menuId = useId()
   const rootElement = useRef<HTMLUListElement>(null)
-  const secondaryMenuOpen = secondaryMenuItemIndex !== null
-
-  // Navigation Callbacks
-  const navigateHorizontally = (direction: -1 | 1) => {
-    setPrimaryMenuItemIndex(
-      (primaryMenuItemIndex + direction + navigationItems.length) %
-        navigationItems.length
-    )
-    setSecondaryMenuItemIndex(null)
-  }
-  const navigateVertically = (direction: -1 | 1) => {
-    const secondaryItems = navigationItems[primaryMenuItemIndex].childItems
-    if (secondaryItems) {
-      const isDropdownOpen = secondaryMenuItemIndex !== null
-      if (isDropdownOpen) {
-        // Select the next/previous item
-        setSecondaryMenuItemIndex(
-          ((secondaryMenuItemIndex || 0) + direction + secondaryItems.length) %
-            secondaryItems.length
-        )
-      } else {
-        // Select the first/last item
-        setSecondaryMenuItemIndex(
-          direction === 1 ? 0 : secondaryItems.length - 1
-        )
-      }
-    }
-  }
-
-  // Ensuring document.activeElement follows the menu's roving tabindex
-  useEffect(() => {
-    if (rootElement.current) {
-      // only update focus if we're in the menu's focus already
-      const focusInMenu = rootElement.current.contains(document.activeElement)
-      if (focusInMenu) {
-        const activeTabIndexElement =
-          rootElement.current.querySelector<HTMLElement>(`[tabindex="0"]`)
-        activeTabIndexElement?.focus({ preventScroll: true })
-      }
-    }
-  }, [primaryMenuItemIndex, secondaryMenuItemIndex])
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  /** `null` means the secondary menu is closed */
+  const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null)
+  const secondaryMenuOpen = openMenuIndex !== null
 
   // check for clicks outside of the menu
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (!rootElement.current.contains(e.target as Node)) {
-        setSecondaryMenuItemIndex(null)
+        setOpenMenuIndex(null)
       }
     }
     if (rootElement.current) {
@@ -271,35 +221,29 @@ const useMenu = ({ navigationItems }) => {
   // Element attributes / listeners
   const bindToggle = () => ({
     open: mobileMenuOpen,
+    attributes: {
+      "aria-expanded": mobileMenuOpen,
+      "aria-controls": menuId,
+    },
     onClick: () => setMobileMenuOpen(!mobileMenuOpen),
   })
   const bindPrimaryMenu = () => {
     return {
-      role: "menubar",
       ref: rootElement,
+      id: menuId,
       onBlur: (e) => {
         const focusLeftMenu = !rootElement.current.contains(e.relatedTarget)
         if (focusLeftMenu) {
-          setSecondaryMenuItemIndex(null)
+          setOpenMenuIndex(null)
+          setMobileMenuOpen(false)
         }
       },
       onKeyDown: (e) => {
-        const isRTL = Boolean(e.target?.closest("[dir='rtl']"))
         if (e.key === "Escape") {
-          if (!secondaryMenuOpen) {
+          if (openMenuIndex) {
+            setOpenMenuIndex(null)
+          } else {
             setMobileMenuOpen(false)
-          }
-        }
-        if (
-          ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)
-        ) {
-          e.preventDefault()
-          // prettier-ignore
-          switch (e.key) {
-            case "ArrowLeft":  navigateHorizontally(isRTL ? +1 : -1); break;
-            case "ArrowRight": navigateHorizontally(isRTL ? -1 : +1); break;
-            case "ArrowUp":    navigateVertically(-1); break;
-            case "ArrowDown":  navigateVertically(+1); break;
           }
         }
       },
@@ -309,21 +253,17 @@ const useMenu = ({ navigationItems }) => {
     itemIndex: number,
     { hasPopup } = { hasPopup: false }
   ) => {
-    const isActive = itemIndex === primaryMenuItemIndex
-    const isDropdownClosed = secondaryMenuItemIndex === null
-    const isSelectable = isActive && isDropdownClosed
-    const isExpanded = hasPopup && isActive && !isDropdownClosed
+    const isDropdownOpen = openMenuIndex === itemIndex
+    const isExpanded = hasPopup && isDropdownOpen
     return {
-      role: "menuitem",
       "aria-haspopup": hasPopup,
       "aria-expanded": hasPopup ? isExpanded : undefined,
-      tabIndex: isSelectable ? 0 : -1,
       onKeyDown: (e: React.KeyboardEvent) => {
         if (e.key === "Enter" || e.key === " ") {
           if (hasPopup) {
             e.preventDefault()
           }
-          setSecondaryMenuItemIndex(0)
+          setOpenMenuIndex(itemIndex)
         }
       },
       onClick: () => {
@@ -332,29 +272,19 @@ const useMenu = ({ navigationItems }) => {
         }
       },
       onMouseDown: () => {
-        if (isActive && hasPopup) {
-          setSecondaryMenuItemIndex(isDropdownClosed ? 0 : null)
+        if (hasPopup) {
+          setOpenMenuIndex(isDropdownOpen ? null : itemIndex)
         } else {
-          setPrimaryMenuItemIndex(itemIndex)
-          setSecondaryMenuItemIndex(0)
+          setOpenMenuIndex(null)
         }
       },
     }
   }
-  const bindSecondaryMenu = () => ({ role: "menu" })
-  const bindSecondaryMenuItem = (
-    parentIndex: number,
-    itemIndex: number,
-    child
-  ) => {
-    const isSelectable =
-      parentIndex === primaryMenuItemIndex &&
-      itemIndex === secondaryMenuItemIndex
+  const bindSecondaryMenuItem = (child) => {
     return {
-      tabIndex: isSelectable ? 0 : -1,
       onKeyDown: (e) => {
         if (e.key === "Escape") {
-          setSecondaryMenuItemIndex(null)
+          setOpenMenuIndex(null)
         }
       },
       onClick: () => {
@@ -368,12 +298,10 @@ const useMenu = ({ navigationItems }) => {
 
   return {
     mobileMenuOpen,
-    primaryMenuItemIndex,
-    secondaryMenuItemIndex,
+    openMenuIndex,
     bindToggle,
     bindPrimaryMenu,
     bindPrimaryMenuItem,
-    bindSecondaryMenu,
     bindSecondaryMenuItem,
     secondaryMenuOpen,
   }

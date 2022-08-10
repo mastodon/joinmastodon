@@ -6,8 +6,14 @@ import Header from "./Header"
 export const Layout = ({ children }) => {
   return (
     <div className="mx-auto max-w-site px-6 lg:px-16">
+      <a
+        className="sr-only top-0 left-0 z-20 block bg-dark-blurple text-white focus:not-sr-only focus:absolute focus:p-2"
+        href="#main"
+      >
+        Skip to main content
+      </a>
       <Header />
-      {children}
+      <main id="main">{children}</main>
       <Footer />
       <Head>
         <meta
