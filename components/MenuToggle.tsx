@@ -1,21 +1,29 @@
 import classNames from "classnames"
 import { useEffect } from "react"
 
+export type MenuToggleProps = {
+  /** Open state of the toggle, controls HTML element's overflow as well */
+  open: boolean
+  /** Toggle's button click handler */
+  onClick: () => void
+  /** Misc. attributes (eg. aria-*) */
+  attributes: React.ComponentPropsWithoutRef<"button">
+}
 /**
  * Mobile menu toggle
  * Also controls scrollability of the page
  */
-export const MenuToggle = ({ open, onClick }) => {
+export const MenuToggle = ({ open, onClick, attributes }: MenuToggleProps) => {
   useEffect(() => {
-    if (open) {
-      document.documentElement.classList.add("overflow-hidden")
-      document.documentElement.classList.add("md:overflow-auto")
-    } else {
-      document.documentElement.classList.remove("overflow-hidden")
-    }
+    document.documentElement.classList.toggle("overflow-hidden", open)
+    document.documentElement.classList.toggle("md:overflow-auto", open)
   }, [open])
   return (
-    <button onClick={onClick} className="relative z-10 md:hidden">
+    <button
+      onClick={onClick}
+      className="relative z-10 md:hidden"
+      {...attributes}
+    >
       <svg
         width="27"
         height="19"
