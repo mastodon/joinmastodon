@@ -1,6 +1,5 @@
-import { useQuery } from "@tanstack/react-query"
-import { useState, useEffect } from "react"
-import Link from "next/link"
+import { useQuery, useQueryClient } from "@tanstack/react-query"
+import { useState, useEffect, useRef } from "react"
 import { FormattedMessage, useIntl } from "react-intl"
 import SVG from "react-inlinesvg"
 import classnames from "classnames"
@@ -21,6 +20,8 @@ const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
 
 const Servers = () => {
+  const queryClient = useQueryClient()
+
   const intl = useIntl()
   const [filters, setFilters] = useState({ language: "", category: "general" })
 
@@ -33,17 +34,13 @@ const Servers = () => {
     return await res.json()
   }
 
-  const initialCategories = useQuery<Category[]>(
-    ["initial-categories"],
-    () => fetchEndpoint("categories", {}),
-    { ...queryOptions }
-  )
-
   const apiCategories = useQuery<Category[]>(
     ["categories", filters.language],
     () => fetchEndpoint("categories", params),
     { ...queryOptions }
   )
+
+  const initialCategories = queryClient.getQueryData(["categories", ""])
 
   const apiLanguages = useQuery<Language[]>(
     ["languages", filters.category],
@@ -51,22 +48,29 @@ const Servers = () => {
     { ...queryOptions }
   )
 
+  const prevCategoryData = useRef(null)
+
   /**
    * To keep the list stable when we get category data from the API,
    * we need to update the full list of filters' `servers_count` with
    * the new data, or 0 if it's not in the API's list */
-  const updateCategoriesWithServersCount = (categories, newCategories) => {
-    return categories?.map((localItem) => ({
-      ...localItem,
-      servers_count:
-        newCategories?.find(
-          (remoteItem) => remoteItem.category === localItem.category
-        )?.servers_count ?? 0,
+  const updateCategoriesWithServersCount = (
+    initialCategories,
+    updatedCategories
+  ) => {
+    return initialCategories?.map((item) => ({
+      ...item,
+      servers_count: apiCategories.isLoading
+        ? prevCategoryData?.current.find(
+            ({ category }) => category === item.category
+          )?.servers_count
+        : updatedCategories?.find(({ category }) => category === item.category)
+            ?.servers_count ?? 0,
     }))
   }
 
   const sortedInitialCategories = _orderBy(
-    initialCategories.data,
+    initialCategories,
     "servers_count",
     "desc"
   )
@@ -74,6 +78,8 @@ const Servers = () => {
     sortedInitialCategories,
     apiCategories?.data
   )
+
+  prevCategoryData.current = updatedCategoryList
 
   const servers = useQuery<Server[]>(
     ["servers", filters.language, filters.category],
