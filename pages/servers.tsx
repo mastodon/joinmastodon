@@ -100,9 +100,6 @@ const Servers = () => {
       </Hero>
 
       <div className="grid gap-20 pb-40">
-        <Link href="https://tanstack.com/query/v4/docs/reference/QueryClient#queryclientfetchquery">
-          <a>Test Link</a>
-        </Link>
         <GettingStartedCards />
         <div className="grid grid-cols-4 gap-gutter md:grid-cols-12">
           <div className="col-span-4 my-4 md:col-span-3">
