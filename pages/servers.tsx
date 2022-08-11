@@ -240,7 +240,14 @@ const GettingStartedCards = () => {
 
 const ServerList = ({ servers }) => {
   if (servers.isError) {
-    return <p>Oops, something went wrong.</p>
+    return (
+      <p>
+        <FormattedMessage
+          id="wizard.error"
+          defaultMessage="Oops, something went wrong. Try refreshing the page."
+        />
+      </p>
+    )
   }
 
   const featuredServers = null
