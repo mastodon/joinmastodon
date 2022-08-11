@@ -1,10 +1,11 @@
 import Head from "next/head"
 import BasicPage from "../components/BasicPage"
 import Hero from "../components/Hero"
+import loadIntlMessages from "../utils/loadIntlMessages"
 
 /** This page does not require translations */
 const Imprint = () => (
-  <>
+  <div dir="ltr" className="[unicode-bidi:plaintext]">
     <Hero>
       <h1 className="h1 mb-4">Contact us / Impressum</h1>
       <p className="sh1">
@@ -12,7 +13,7 @@ const Imprint = () => (
       </p>
     </Hero>
     <BasicPage>
-      <div className="[unicode-bidi:plaintext]">
+      <div className="[unicode-bidi:plaintext]" dir="ltr">
         <address className="not-italic">
           <p>
             Mastodon gGmbH
@@ -65,7 +66,11 @@ const Imprint = () => (
         </Head>
       </div>
     </BasicPage>
-  </>
+  </div>
 )
-
+export async function getStaticProps(ctx) {
+  return {
+    props: { intlMessages: await loadIntlMessages(ctx) },
+  }
+}
 export default Imprint

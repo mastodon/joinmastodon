@@ -1,16 +1,17 @@
 import BasicPage from "../components/BasicPage"
 import Head from "next/head"
 import Hero from "../components/Hero"
+import loadIntlMessages from "../utils/loadIntlMessages"
 
 /** This page does not require translations */
 const PrivacyPolicy = () => (
-  <>
+  <div dir="ltr" className="[unicode-bidi:plaintext]">
     <Hero>
       <h1 className="h1 mb-4">Privacy Policy</h1>
       <p className="sh1">Last updated June 28, 2021</p>
     </Hero>
     <BasicPage>
-      <div className="[unicode-bidi:plaintext]">
+      <div>
         <p>
           <strong>
             This is the privacy policy for the joinmastodon.org website and
@@ -52,7 +53,11 @@ const PrivacyPolicy = () => (
         />
       </Head>
     </BasicPage>
-  </>
+  </div>
 )
-
+export async function getStaticProps(ctx) {
+  return {
+    props: { intlMessages: await loadIntlMessages(ctx) },
+  }
+}
 export default PrivacyPolicy
