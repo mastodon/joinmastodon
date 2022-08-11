@@ -108,13 +108,38 @@ const Servers = () => {
       <div className="grid gap-20 pb-40">
         <GettingStartedCards />
         <div className="grid grid-cols-4 gap-gutter md:grid-cols-12">
-          <div className="col-span-4 my-4 md:col-span-3">
-            <h2 className="mb-8 flex items-center gap-2">
-              <SVG className="text-gray-2" src="/ui/filters.svg" />
-              <span className="text-gray-1">
-                <FormattedMessage id="wizard.filter" defaultMessage="Filter" />
-              </span>
-            </h2>
+          <div className="col-span-full mb-2 flex md:justify-end">
+            {apiLanguages.isSuccess && (
+              <SelectMenu
+                label={
+                  <FormattedMessage
+                    id="wizard.filter_by_language"
+                    defaultMessage="Filter by language"
+                  />
+                }
+                onChange={(v) => {
+                  setFilters({ ...filters, language: v })
+                }}
+                value={filters.language}
+                options={[
+                  {
+                    value: "",
+                    label: intl.formatMessage({
+                      id: "wizard.filter.all_languages",
+                      defaultMessage: "All languages",
+                    }),
+                  },
+                  ...apiLanguages.data
+                    .filter((language) => language.language && language.locale)
+                    .map((language) => ({
+                      label: language.language,
+                      value: language.locale,
+                    })),
+                ]}
+              />
+            )}
+          </div>
+          <div className="col-span-4 md:col-span-3">
             <ServerFilters
               isLoading={!initialCategories}
               filterList={updatedCategoryList}
@@ -123,39 +148,6 @@ const Servers = () => {
             />
           </div>
           <div className="col-span-4 md:col-start-4 md:col-end-13">
-            <div className="my-4 mb-8 flex md:justify-end">
-              {apiLanguages.isSuccess && (
-                <SelectMenu
-                  label={
-                    <FormattedMessage
-                      id="wizard.filter_by_language"
-                      defaultMessage="Filter by language"
-                    />
-                  }
-                  onChange={(v) => {
-                    setFilters({ ...filters, language: v })
-                  }}
-                  value={filters.language}
-                  options={[
-                    {
-                      value: "",
-                      label: intl.formatMessage({
-                        id: "wizard.filter.all_languages",
-                        defaultMessage: "All languages",
-                      }),
-                    },
-                    ...apiLanguages.data
-                      .filter(
-                        (language) => language.language && language.locale
-                      )
-                      .map((language) => ({
-                        label: language.language,
-                        value: language.locale,
-                      })),
-                  ]}
-                />
-              )}
-            </div>
             <ServerList servers={servers} />
           </div>
         </div>
