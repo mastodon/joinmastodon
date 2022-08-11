@@ -250,18 +250,8 @@ const ServerList = ({ servers }) => {
     )
   }
 
-  const featuredServers = null
-
   return (
     <div className="col-span-4 md:col-start-4 md:col-end-13">
-      {featuredServers && (
-        <h3 className="h5 mb-6">
-          <FormattedMessage
-            id="servers.browse_all"
-            defaultMessage="Browse all"
-          />
-        </h3>
-      )}
       {servers.data?.length === 0 ? (
         <div className="b2 rounded bg-gray-5 p-4 text-gray-1 md:p-8">
           <p className="max-w-[48ch]">
