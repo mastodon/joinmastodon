@@ -70,7 +70,10 @@ const AppsPage = () => {
         </div>
         <div className="md:col-span-6 md:-mt-16 lg:col-span-5 lg:col-start-7 lg:-mt-32 xl:-mt-72">
           <div className="mx-auto max-w-xs md:max-w-none">
-            <Image src={ios_android_apps} />
+            <Image
+              src={ios_android_apps}
+              alt="Screenshots of Mastodon on iOS and Android, showing an artist's profile, reblogging, and a poll"
+            />
           </div>
         </div>
       </div>
