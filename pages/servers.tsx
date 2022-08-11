@@ -41,6 +41,7 @@ const Servers = () => {
     () => fetchEndpoint("categories", params),
     {
       ...queryOptions,
+      keepPreviousData: true,
       select: (data) => {
         let updated = allCategories.data.map(({ category }) => {
           let match = data.find((el) => {
