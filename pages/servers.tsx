@@ -255,15 +255,26 @@ const ServerList = ({ servers }) => {
           />
         </h3>
       )}
-      <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-3">
-        {servers.isLoading
-          ? Array(8)
-              .fill(null)
-              .map((_el, i) => <ServerCard key={i} />)
-          : servers.data.map((server) => (
-              <ServerCard key={server.domain} server={server} />
-            ))}
-      </div>
+      {servers.data?.length === 0 ? (
+        <div className="b2 rounded bg-gray-5 p-4 text-gray-1 md:p-8">
+          <p className="max-w-[48ch]">
+            <FormattedMessage
+              id="wizard.no_results"
+              defaultMessage="Seems like there are currently no servers that fit your criteria. Try a different category or a different language filter!"
+            />
+          </p>
+        </div>
+      ) : (
+        <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-3">
+          {servers.isLoading
+            ? Array(8)
+                .fill(null)
+                .map((_el, i) => <ServerCard key={i} />)
+            : servers.data.map((server) => (
+                <ServerCard key={server.domain} server={server} />
+              ))}
+        </div>
+      )}
     </div>
   )
 }
