@@ -29,6 +29,7 @@ const SponsorLogoGroup = ({ sponsors }) => {
                   "object-contain opacity-50 mix-blend-luminosity transition-all group-hover:opacity-100 group-hover:mix-blend-normal group-focus-visible:opacity-100 group-focus-visible:mix-blend-normal",
                   sponsor.light && "invert"
                 )}
+                alt={sponsor.name}
                 src={sponsor.logo}
               />
             </a>
