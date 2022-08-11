@@ -20,16 +20,16 @@ const Header = () => {
   const navigationItems = [
     {
       value: "/servers",
-      label: <FormattedMessage id="servers" defaultMessage="Servers" />,
+      label: <FormattedMessage id="nav.servers.title" defaultMessage="Servers" />,
     }, {
       value: "/apps",
-      label: <FormattedMessage id="nav.apps" defaultMessage="Apps" />,
+      label: <FormattedMessage id="nav.apps.title" defaultMessage="Apps" />,
     }, {
       value: "/sponsors",
-      label: <FormattedMessage id="nav.sponsors" defaultMessage="Sponsors" />,
+      label: <FormattedMessage id="nav.sponsors.title" defaultMessage="Sponsors" />,
     }, {
       key: "resources",
-      label: <FormattedMessage id="nav.resources" defaultMessage="Resources" />,
+      label: <FormattedMessage id="nav.resources.title" defaultMessage="Resources" />,
       childItems: [
         {
           value: "https://blog.joinmastodon.org/",

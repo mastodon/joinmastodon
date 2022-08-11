@@ -21,26 +21,32 @@ export const Footer = () => (
           {[
             {
               heading: (
-                <FormattedMessage id="nav.product" defaultMessage="Product" />
+                <FormattedMessage
+                  id="nav.product.title"
+                  defaultMessage="Product"
+                />
               ),
               links: [
                 <Link key="servers" href="/servers">
                   <a className="inline-block py-2">
                     <FormattedMessage
-                      id="home.get_started"
-                      defaultMessage="Get started"
+                      id="nav.servers.title"
+                      defaultMessage="Servers"
                     />
                   </a>
                 </Link>,
                 <Link key="apps" href="/apps">
                   <a className="inline-block py-2">
-                    <FormattedMessage id="nav.apps" defaultMessage="Apps" />
+                    <FormattedMessage
+                      id="nav.apps.title"
+                      defaultMessage="Apps"
+                    />
                   </a>
                 </Link>,
                 <Link key="sponsors" href="/sponsors">
                   <a className="inline-block py-2">
                     <FormattedMessage
-                      id="nav.sponsors"
+                      id="nav.sponsors.title"
                       defaultMessage="Sponsors"
                     />
                   </a>
@@ -50,11 +56,20 @@ export const Footer = () => (
             {
               heading: (
                 <FormattedMessage
-                  id="nav.resources"
+                  id="nav.resources.title"
                   defaultMessage="Resources"
                 />
               ),
               links: [
+                <a
+                  className="inline-block py-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key="https://blog.joinmastodon.org"
+                  href="https://blog.joinmastodon.org/"
+                >
+                  <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />
+                </a>,
                 <a
                   className="inline-block py-2"
                   key="mastodon/mastodon"
@@ -62,7 +77,7 @@ export const Footer = () => (
                   rel="noopener noreferrer"
                   href="https://github.com/mastodon/mastodon"
                 >
-                  <FormattedMessage id="nav.code" defaultMessage="Code" />
+                  <FormattedMessage id="nav.code.title" defaultMessage="Code" />
                 </a>,
                 <a
                   className="inline-block py-2"
@@ -72,7 +87,7 @@ export const Footer = () => (
                   href="https://docs.joinmastodon.org"
                 >
                   <FormattedMessage
-                    id="nav.docs"
+                    id="nav.docs.title"
                     defaultMessage="Documentation"
                   />
                 </a>,
@@ -83,46 +98,43 @@ export const Footer = () => (
                   rel="noopener noreferrer"
                   href="https://github.com/mastodon/mastodon/discussions"
                 >
-                  <FormattedMessage id="nav.support" defaultMessage="Support" />
+                  <FormattedMessage
+                    id="nav.support.title"
+                    defaultMessage="Support"
+                  />
                 </a>,
               ],
             },
             {
               heading: (
-                <FormattedMessage id="nav.company" defaultMessage="Company" />
+                <FormattedMessage
+                  id="nav.company.title"
+                  defaultMessage="Company"
+                />
               ),
               links: [
                 <Link key="/imprint" href="/imprint">
                   <a className="inline-block py-2">
                     <FormattedMessage
-                      id="contact_us"
+                      id="nav.contact_us.title"
                       defaultMessage="Contact us"
                     />
                   </a>
                 </Link>,
                 <a
                   className="inline-block py-2"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key="https://blog.joinmastodon.org"
-                  href="https://blog.joinmastodon.org/"
-                >
-                  <FormattedMessage id="nav.blog" defaultMessage="Blog" />
-                </a>,
-                <a
-                  className="inline-block py-2"
                   key="/press-kit.zip"
                   href="/press-kit.zip"
                 >
                   <FormattedMessage
-                    id="credits.press_kit"
+                    id="nav.press_kit.title"
                     defaultMessage="Press kit"
                   />
                 </a>,
                 <Link key="/privacy-policy" href="/privacy-policy">
                   <a className="inline-block py-2">
                     <FormattedMessage
-                      id="privacy_policy"
+                      id="nav.privacy_policy.title"
                       defaultMessage="Privacy policy"
                     />
                   </a>
