@@ -1,7 +1,11 @@
 const plugin = require("tailwindcss/plugin")
 
+function rem(px) {
+  return `${px / 16}rem`
+}
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -104,6 +108,12 @@ module.exports = {
     }),
   ],
 }
-function rem(px) {
-  return `${px / 16}rem`
+
+module.exports = {
+  ...config,
+  safelist: [
+    // needed for /guide
+    ...Object.keys(config.theme.fontSize),
+    ...Object.keys(config.theme.colors).map((k) => `bg-${k}`),
+  ],
 }
