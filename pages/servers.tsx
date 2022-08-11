@@ -20,8 +20,6 @@ const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
 
 const Servers = () => {
-  const queryClient = useQueryClient()
-
   const intl = useIntl()
   const [filters, setFilters] = useState({ language: "", category: "general" })
 
@@ -34,52 +32,63 @@ const Servers = () => {
     return await res.json()
   }
 
+  const allCategories = useQuery<Category[]>(["categories", ""], () =>
+    fetchEndpoint("categories", {})
+  )
+
   const apiCategories = useQuery<Category[]>(
     ["categories", filters.language],
     () => fetchEndpoint("categories", params),
-    { ...queryOptions }
+    {
+      ...queryOptions,
+      select: (data) => {
+        let updated = allCategories.data.map(({ category }) => {
+          let match = data.find((el) => {
+            return el.category === category
+          })
+
+          return { category, servers_count: match ? match.servers_count : 0 }
+        })
+
+        const totalServersCount =
+          updated?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
+
+        updated = [
+          { category: "", servers_count: totalServersCount },
+          ...updated,
+        ]
+
+        return _orderBy(updated, "servers_count", "desc")
+      },
+    }
   )
 
-  const initialCategories = queryClient.getQueryData(["categories", ""])
-
-  const apiLanguages = useQuery<Language[]>(
-    ["languages", filters.category],
-    () => fetchEndpoint("languages", params),
-    { ...queryOptions }
-  )
-
-  const prevCategoryData = useRef(null)
-
-  /**
-   * To keep the list stable when we get category data from the API,
-   * we need to update the full list of filters' `servers_count` with
-   * the new data, or 0 if it's not in the API's list */
-  const updateCategoriesWithServersCount = (
-    initialCategories,
-    updatedCategories
-  ) => {
-    return initialCategories?.map((item) => ({
-      ...item,
-      servers_count: apiCategories.isLoading
-        ? prevCategoryData?.current.find(
-            ({ category }) => category === item.category
-          )?.servers_count
-        : updatedCategories?.find(({ category }) => category === item.category)
-            ?.servers_count ?? 0,
-    }))
+  let defaultOption = {
+    value: "",
+    label: intl.formatMessage({
+      id: "wizard.filter.all_languages",
+      defaultMessage: "All languages",
+    }),
   }
 
-  const sortedInitialCategories = _orderBy(
-    initialCategories,
-    "servers_count",
-    "desc"
-  )
-  const updatedCategoryList = updateCategoriesWithServersCount(
-    sortedInitialCategories,
-    apiCategories?.data
-  )
+  const apiLanguages = useQuery<any[]>(
+    ["languages", filters.category],
+    () => fetchEndpoint("languages", params),
+    {
+      ...queryOptions,
+      select: (data) => {
+        let updated = data
+          .filter((language) => language.language && language.locale)
+          .map((language) => ({
+            label: language.language,
+            value: language.locale,
+          }))
 
-  prevCategoryData.current = updatedCategoryList
+        updated = [defaultOption, ...updated]
+        return updated
+      },
+    }
+  )
 
   const servers = useQuery<Server[]>(
     ["servers", filters.language, filters.category],
@@ -109,7 +118,7 @@ const Servers = () => {
         <GettingStartedCards />
         <div className="grid grid-cols-4 gap-gutter md:grid-cols-12">
           <div className="col-span-full mb-2 flex md:justify-end">
-            {apiLanguages.isSuccess && (
+            {
               <SelectMenu
                 label={
                   <FormattedMessage
@@ -121,28 +130,15 @@ const Servers = () => {
                   setFilters({ ...filters, language: v })
                 }}
                 value={filters.language}
-                options={[
-                  {
-                    value: "",
-                    label: intl.formatMessage({
-                      id: "wizard.filter.all_languages",
-                      defaultMessage: "All languages",
-                    }),
-                  },
-                  ...apiLanguages.data
-                    .filter((language) => language.language && language.locale)
-                    .map((language) => ({
-                      label: language.language,
-                      value: language.locale,
-                    })),
-                ]}
+                options={apiLanguages.data || [defaultOption]}
               />
-            )}
+            }
           </div>
           <div className="col-span-4 md:col-span-3">
             <ServerFilters
-              isLoading={!initialCategories}
-              filterList={updatedCategoryList}
+              // isLoading={!initialCategories}
+              initialCategories={allCategories.data}
+              categories={apiCategories.data}
               filters={filters}
               setFilters={setFilters}
             />
@@ -279,23 +275,15 @@ const ServerList = ({ servers }) => {
 const ServerFilters = ({
   filters,
   setFilters,
-  filterList,
-  isLoading,
+  categories,
+  initialCategories,
 }: {
   filters: any
   setFilters: any
-  filterList: any
-  isLoading: boolean
+  categories: Category[]
+  initialCategories: Category[]
 }) => {
   const intl = useIntl()
-  const totalServersCount =
-    filterList?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
-  const allOption = {
-    category: "",
-    servers_count: totalServersCount,
-  }
-  const options = [allOption, ...filterList]
-
   return (
     <div className="md:mb-8">
       <h3 className="h5 mb-2" id="category-group-label">
@@ -305,13 +293,13 @@ const ServerFilters = ({
         />
       </h3>
       <ul className="flex flex-wrap gap-x-3 md:flex-col">
-        {isLoading
+        {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (
               <li className="h-8 py-2" key={i}>
                 <SkeletonText className="!h-full" />
               </li>
             ))
-          : options.map((item, i) => {
+          : categories?.map((item, i) => {
               const isActive = filters.category === item.category
 
               return (
