@@ -136,7 +136,6 @@ const Servers = () => {
           </div>
           <div className="col-span-4 md:col-span-3">
             <ServerFilters
-              // isLoading={!initialCategories}
               initialCategories={allCategories.data}
               categories={apiCategories.data}
               filters={filters}
