@@ -32,8 +32,10 @@ const Servers = () => {
     return await res.json()
   }
 
-  const allCategories = useQuery<Category[]>(["categories", ""], () =>
-    fetchEndpoint("categories", {})
+  const allCategories = useQuery<Category[]>(
+    ["categories", ""],
+    () => fetchEndpoint("categories", {}),
+    { select: (data) => _orderBy(data, "servers_count", "desc") }
   )
 
   const apiCategories = useQuery<Category[]>(
@@ -59,7 +61,7 @@ const Servers = () => {
           ...updated,
         ]
 
-        return _orderBy(updated, "servers_count", "desc")
+        return updated
       },
     }
   )
