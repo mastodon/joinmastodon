@@ -1,5 +1,6 @@
 import classNames from "classnames"
 import { useEffect } from "react"
+import { useIntl } from "react-intl"
 
 export type MenuToggleProps = {
   /** Open state of the toggle, controls HTML element's overflow as well */
@@ -14,6 +15,7 @@ export type MenuToggleProps = {
  * Also controls scrollability of the page
  */
 export const MenuToggle = ({ open, onClick, attributes }: MenuToggleProps) => {
+  const intl = useIntl()
   useEffect(() => {
     document.documentElement.classList.toggle("overflow-hidden", open)
     document.documentElement.classList.toggle("md:overflow-auto", open)
@@ -23,6 +25,10 @@ export const MenuToggle = ({ open, onClick, attributes }: MenuToggleProps) => {
       onClick={onClick}
       className="relative z-10 md:hidden"
       {...attributes}
+      aria-label={intl.formatMessage({
+        id: "nav.toggle",
+        defaultMessage: "Toggle menu",
+      })}
     >
       <svg
         width="27"
@@ -33,7 +39,7 @@ export const MenuToggle = ({ open, onClick, attributes }: MenuToggleProps) => {
         <line
           className={classNames(
             "origin-center stroke-white transition-all",
-            open && "-translate-x-1 translate-y-[0.37rem] rotate-45"
+            open && "-translate-x-[5px] translate-y-[0.37rem] rotate-45"
           )}
           y1="1.5"
           x2="27"
@@ -53,7 +59,7 @@ export const MenuToggle = ({ open, onClick, attributes }: MenuToggleProps) => {
         <line
           className={classNames(
             "origin-center stroke-white transition-all",
-            open && "-translate-x-1 -translate-y-[0.37rem] -rotate-45"
+            open && "-translate-x-[5px] -translate-y-[0.37rem] -rotate-45"
           )}
           y1="17.5"
           x2="27"
