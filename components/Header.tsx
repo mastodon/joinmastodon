@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage, useIntl } from "react-intl"
 
 import mastodonLogo from "../public/logos/logo-full-purple.svg"
 import Image from "next/image"
@@ -12,6 +12,7 @@ import { useRouter } from "next/router"
 
 /** Sitewide header and navigation */
 const Header = () => {
+  const intl = useIntl()
   const router = useRouter()
   const [pageScrolled, setPageScrolled] = useState(false)
 
@@ -50,7 +51,10 @@ const Header = () => {
       ],
     }, {
       key: "locale",
-      label: <>文A</>,
+      label: <span aria-label={intl.formatMessage({
+        id: "translate_site",
+        defaultMessage: "文A, Translate site",
+      })}>文A</span>,
       compact: true,
       childItems: locales.map((locale) => ({
         key: locale.code,
