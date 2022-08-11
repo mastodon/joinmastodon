@@ -87,15 +87,19 @@ module.exports = {
         "footer-offset": "var(--footer-offset)",
       },
       dropShadow: {
+        /** Used for text on hero images that may shift around  */
         "safe-text": "0 0 30px var(--nightshade)",
       },
     },
   },
   plugins: [
+    /** CSS Logical Properties https://github.com/stevecochrane/tailwindcss-logical */
     require("tailwindcss-logical"),
     require("@tailwindcss/line-clamp"),
     plugin(function ({ addVariant }) {
+      /** A good default for hover states */
       addVariant("hocus", ["&:hover", "&:focus-visible"])
+      /** Focus-visible inside of presentational containers */
       addVariant("focus-visible-within", ["&:has(:focus-visible)"])
     }),
   ],

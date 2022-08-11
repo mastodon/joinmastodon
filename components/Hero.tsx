@@ -18,7 +18,13 @@ export type HeroProps = {
   homepage?: boolean
 }
 
-/** Illustrated hero component used at the top of all pages */
+/**
+ * Illustrated hero component used at the top of all pages.
+ *
+ * The height of the hero is calculated from:
+ * `(the height of the image / 2)`
+ * so @2x images are required.
+ */
 const Hero = ({
   mobileImage = defaultMobileImage,
   desktopImage = defaultDesktopImage,
