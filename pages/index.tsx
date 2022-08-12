@@ -240,7 +240,7 @@ const WhyMastodon = () => {
       spacing: 16,
     },
     breakpoints: {
-      [`(min-width: ${fullConfig.theme.screens.md})`]: {
+      [`(min-width: ${fullConfig.theme.screens["md"]})`]: {
         disabled: true,
       },
     },
@@ -365,10 +365,10 @@ const Testimonials = ({ testimonials }) => {
       spacing: 16,
     },
     breakpoints: {
-      [`(min-width: ${fullConfig.theme.screens.md})`]: {
+      [`(min-width: ${fullConfig.theme.screens["md"]})`]: {
         slides: { perView: 2, spacing: 16 },
       },
-      [`(min-width: ${fullConfig.theme.screens.lg})`]: {
+      [`(min-width: ${fullConfig.theme.screens["lg"]})`]: {
         slides: { perView: 3, spacing: 16 },
       },
     },

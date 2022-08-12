@@ -14,30 +14,30 @@
     "recover": "node ./recoverTranslations.js"
   },
   "dependencies": {
-    "@tanstack/react-query": "^4.0.10",
+    "@tanstack/react-query": "^4.1.0",
     "classnames": "^2.3.1",
     "keen-slider": "^6.7.0",
     "lodash": "^4.17.21",
-    "next": "12.2.0",
+    "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-inlinesvg": "^3.0.0",
-    "react-intl": "^6.0.4",
-    "sass": "^1.53.0"
+    "react-intl": "^6.0.5",
+    "sass": "^1.54.4"
   },
   "devDependencies": {
-    "@formatjs/cli": "^5.0.2",
+    "@formatjs/cli": "^5.0.7",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tanstack/react-query-devtools": "^4.0.10",
-    "@types/node": "^18.0.6",
-    "autoprefixer": "^10.4.7",
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.2.0",
+    "@types/node": "^18.7.2",
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.16",
     "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.12",
-    "tailwindcss": "^3.1.5",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.1.8",
     "tailwindcss-logical": "^3.0.0",
     "typescript": "^4.7.4"
   }
