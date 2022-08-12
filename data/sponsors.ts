@@ -55,21 +55,9 @@ const sponsors = {
       light: true,
     },
     {
-      url: "https://www.betrugstest.com/",
-      logo: require("../public/sponsors/betrugstest-com.png"),
-      name: "Betrugstest.com",
-      light: true,
-    }, // Custom/other
-    {
       url: "https://mask.io/",
       logo: require("../public/sponsors/mask-network.png"),
       name: "Mask Network",
-    }, // Custom/other
-    {
-      url: "https://www.bestcasinosites.net",
-      logo: require("../public/sponsors/bcs-white.png"),
-      name: "bestcasinosites.net",
-      light: true,
     }, // Custom/other
     {
       url: "https://www.bestecasinosonline.at/",
@@ -80,11 +68,6 @@ const sponsors = {
       url: "https://www.sister-sites.co.uk/",
       logo: require("../public/sponsors/sistersites-logo.png"),
       name: "sister-sites.co.uk",
-    }, // Custom
-    {
-      url: "https://schnellno.de/",
-      logo: require("../public/sponsors/schnellnode.png"),
-      name: "Schnell Node",
     }, // Custom
     {
       url: "https://masto.host/",
@@ -129,11 +112,6 @@ const sponsors = {
       logo: require("../public/sponsors/onlinecasinos.a2791b0.png"),
     }, // Custom
     {
-      url: "https://topaussiecasinos.com/",
-      logo: require("../public/sponsors/casino-hex-au.png"),
-      name: "CasinoHEX Australia",
-    }, // Custom
-    {
       url: "https://wideangle.co",
       logo: require("../public/sponsors/wide-angle-analytics.webp"),
       name: "Wide Angle Analytics",
@@ -159,12 +137,6 @@ const sponsors = {
       url: "https://www.partitionwizard.com/",
       logo: require("../public/sponsors/minitool.png"),
       name: "MiniTool Partition Wizard",
-    },
-    {
-      url: "https://www.ivisa.com/photos",
-      logo: require("../public/sponsors/ivisa.png"),
-      name: "iVisa",
-      light: true,
     },
     {
       url: "https://www.mysextoyguide.com/",
@@ -201,11 +173,6 @@ const sponsors = {
       url: "https://rapidessay.com/",
       logo: require("../public/sponsors/rapidessay_logo.png"),
       name: "Rapid Essay",
-    },
-    {
-      url: "https://onlinecasinohex.nl/",
-      logo: require("../public/sponsors/casino-hex-nl.png"),
-      name: "CasinoHEX Nederland",
     },
     {
       url: "https://hostnoc.com",
