@@ -42,7 +42,7 @@ const AppsPage = () => {
         </div>
       </Hero>
 
-      <div className="grid justify-center gap-x-gutter gap-y-16 pt-16 pb-8 text-center md:grid-cols-12 md:text-start">
+      <div className="grid justify-center gap-x-gutter gap-y-16 pt-10 pb-8 text-center md:grid-cols-12 md:text-start">
         <div className="md:col-span-6 lg:col-span-5 xl:col-span-4 xl:col-start-2">
           <h2 className="h4 mb-4">
             <FormattedMessage
@@ -68,7 +68,7 @@ const AppsPage = () => {
             </a>
           </div>
         </div>
-        <div className="md:col-span-6 md:-mt-16 lg:col-span-5 lg:col-start-7 lg:-mt-32 xl:-mt-72">
+        <div className="md:col-span-6 md:-mt-16 lg:col-span-5 lg:col-start-7 lg:-mt-32 xl:-mt-80">
           <div className="mx-auto max-w-xs md:max-w-none">
             <Image
               src={ios_android_apps}
