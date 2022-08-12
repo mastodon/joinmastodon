@@ -30,5 +30,6 @@
   "sponsors.page_title": "Sponzoři Mastodonu",
   "wizard.filter.all_languages": "Všechny jazyky",
   "wizard.filter_by_language": "Filtrovat podle jazyka",
-  "wizard.no_results": "Zdá se, že v současné době nejsou žádné komunity vyhovující vašim kritériím. Zkuste jinou kategorii nebo jiný filtr jazyka!"
+  "wizard.no_results": "Zdá se, že v současné době nejsou žádné komunity vyhovující vašim kritériím. Zkuste jinou kategorii nebo jiný filtr jazyka!",
+  "wizard_navigation.choosing_a_community": "Výběr komunity"
 }

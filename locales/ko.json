@@ -30,5 +30,6 @@
   "sponsors.page_title": "Mastodon의 스폰서",
   "wizard.filter.all_languages": "모든 언어",
   "wizard.filter_by_language": "언어 필터링",
-  "wizard.no_results": "아직까지는 기준에 맞는 커뮤니티가 없는 것 같네요. 다른 카테고리나 언어 필터를 선택해보세요!"
+  "wizard.no_results": "아직까지는 기준에 맞는 커뮤니티가 없는 것 같네요. 다른 카테고리나 언어 필터를 선택해보세요!",
+  "wizard_navigation.choosing_a_community": "커뮤니티 고르기"
 }

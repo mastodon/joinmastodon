@@ -15,6 +15,7 @@ import loadIntlMessages from "../utils/loadIntlMessages"
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
 import SkeletonText from "../components/SkeletonText"
+import Head from "next/head"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
@@ -150,6 +151,22 @@ const Servers = () => {
           </div>
         </div>
       </div>
+      <Head>
+        <title>
+          {intl.formatMessage({
+            id: "wizard_navigation.choosing_a_community",
+            defaultMessage: "Choosing a server",
+          })}{" "}
+          - Mastodon
+        </title>
+        <meta
+          property="og:title"
+          content={intl.formatMessage({
+            id: "wizard_navigation.choosing_a_community",
+            defaultMessage: "Choosing a server",
+          })}
+        />
+      </Head>
     </div>
   )
 }

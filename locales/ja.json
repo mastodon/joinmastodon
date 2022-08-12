@@ -30,5 +30,6 @@
   "sponsors.page_title": "Mastodonのスポンサー",
   "wizard.filter.all_languages": "すべての言語",
   "wizard.filter_by_language": "言語で絞り込む",
-  "wizard.no_results": "現在、条件に合うコミュニティがありません。別のカテゴリまたは別の言語フィルタを試してください！"
+  "wizard.no_results": "現在、条件に合うコミュニティがありません。別のカテゴリまたは別の言語フィルタを試してください！",
+  "wizard_navigation.choosing_a_community": "コミュニティを選ぶ"
 }

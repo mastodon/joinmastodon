@@ -30,5 +30,6 @@
   "sponsors.page_title": "Sponsoren van Mastodon",
   "wizard.filter.all_languages": "Alle talen",
   "wizard.filter_by_language": "Op taal filteren",
-  "wizard.no_results": "Het ziet er naar uit dat er momenteel geen community's aan jouw criteria voldoen. Probeer een andere categorie of filter!"
+  "wizard.no_results": "Het ziet er naar uit dat er momenteel geen community's aan jouw criteria voldoen. Probeer een andere categorie of filter!",
+  "wizard_navigation.choosing_a_community": "Een community kiezen"
 }

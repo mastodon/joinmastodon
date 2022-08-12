@@ -30,5 +30,6 @@
   "sponsors.page_title": "Sponsor di Mastodon",
   "wizard.filter.all_languages": "Tutte le lingue",
   "wizard.filter_by_language": "Filtra per lingua",
-  "wizard.no_results": "Sembra che al momento non ci siano community adatte ai tuoi criteri. Prova a selezionare un'altra categoria o un'altra lingua!"
+  "wizard.no_results": "Sembra che al momento non ci siano community adatte ai tuoi criteri. Prova a selezionare un'altra categoria o un'altra lingua!",
+  "wizard_navigation.choosing_a_community": "Selezione di una community"
 }

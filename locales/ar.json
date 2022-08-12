@@ -30,5 +30,6 @@
   "sponsors.page_title": "رُعاة ماستدون",
   "wizard.filter.all_languages": "كافة اللغات",
   "wizard.filter_by_language": "التصفية حسب اللغة",
-  "wizard.no_results": "يبدو أنه لا توجد حاليًا مجتمعات تتناسب مع معاييرك. جرب فئة مختلفة أو مرشح لغة مختلف!"
+  "wizard.no_results": "يبدو أنه لا توجد حاليًا مجتمعات تتناسب مع معاييرك. جرب فئة مختلفة أو مرشح لغة مختلف!",
+  "wizard_navigation.choosing_a_community": "اختيار مُجتمع"
 }

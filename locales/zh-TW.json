@@ -30,5 +30,6 @@
   "sponsors.page_title": "Mastodon 的贊助者",
   "wizard.filter.all_languages": "所有語言",
   "wizard.filter_by_language": "按語言過濾",
-  "wizard.no_results": "似乎暫時未有符合你條件的社群。不妨改變一下類型或者語言要求，再搜尋一遍吧！"
+  "wizard.no_results": "似乎暫時未有符合你條件的社群。不妨改變一下類型或者語言要求，再搜尋一遍吧！",
+  "wizard_navigation.choosing_a_community": "選擇社群"
 }

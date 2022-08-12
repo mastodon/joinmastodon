@@ -30,5 +30,6 @@
   "sponsors.page_title": "Sponsorë të Mastodon-it",
   "wizard.filter.all_languages": "Tërë gjuhët",
   "wizard.filter_by_language": "Filtroji sipas gjuhësh",
-  "wizard.no_results": "Duket se hëpërhë s’ka bashkësi që plotësojnë kushtin tuaj. Provoni një filtër tjetër kategorish ose gjuhësh!"
+  "wizard.no_results": "Duket se hëpërhë s’ka bashkësi që plotësojnë kushtin tuaj. Provoni një filtër tjetër kategorish ose gjuhësh!",
+  "wizard_navigation.choosing_a_community": "Si të zgjidhet një bashkësi"
 }

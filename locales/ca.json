@@ -30,5 +30,6 @@
   "sponsors.page_title": "Patrocinadors de Mastodon",
   "wizard.filter.all_languages": "Tots els idiomes",
   "wizard.filter_by_language": "Filtra per idioma",
-  "wizard.no_results": "Sembla que actualment no hi ha comunitats que s'ajustin als teus criteris. Prova una categoria diferent o un filtre d'idioma diferent!"
+  "wizard.no_results": "Sembla que actualment no hi ha comunitats que s'ajustin als teus criteris. Prova una categoria diferent o un filtre d'idioma diferent!",
+  "wizard_navigation.choosing_a_community": "Tria una comunitat"
 }

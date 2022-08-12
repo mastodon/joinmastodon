@@ -102,5 +102,6 @@
   "wizard.filter.all_categories": "All topics",
   "wizard.filter.all_languages": "All languages",
   "wizard.filter_by_language": "Filter by language",
-  "wizard.no_results": "Seems like there are currently no servers that fit your criteria. Try a different category or a different language filter!"
+  "wizard.no_results": "Seems like there are currently no servers that fit your criteria. Try a different category or a different language filter!",
+  "wizard_navigation.choosing_a_community": "Choosing a server"
 }

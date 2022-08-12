@@ -30,5 +30,6 @@
   "sponsors.page_title": "Sponsors de Mastodon",
   "wizard.filter.all_languages": "Toutes les langues",
   "wizard.filter_by_language": "Filtrer par langue",
-  "wizard.no_results": "Il semble qu'il n'y ait actuellement aucune communauté qui corresponde à vos critères. Essayez une catégorie différente ou un filtre de langue différent !"
+  "wizard.no_results": "Il semble qu'il n'y ait actuellement aucune communauté qui corresponde à vos critères. Essayez une catégorie différente ou un filtre de langue différent !",
+  "wizard_navigation.choosing_a_community": "Choisir une communauté"
 }

@@ -30,5 +30,6 @@
   "sponsors.page_title": "Mastodon 项目赞助者列表",
   "wizard.filter.all_languages": "所有语言",
   "wizard.filter_by_language": "按语言过滤",
-  "wizard.no_results": "目前似乎没有符合你标准的社区。请尝试选择其他种类或者不同的语言过滤！"
+  "wizard.no_results": "目前似乎没有符合你标准的社区。请尝试选择其他种类或者不同的语言过滤！",
+  "wizard_navigation.choosing_a_community": "选择一个社区"
 }
