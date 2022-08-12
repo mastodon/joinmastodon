@@ -10,8 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "extract": "formatjs extract '{components,pages}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'",
-    "recover": "node ./recoverTranslations.js"
+    "extract": "formatjs extract '{components,pages}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.1.0",
