@@ -1,0 +1,14 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="11" y="17" width="22" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+<line x1="109" y1="19" x2="44" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<line x1="109" y1="27" x2="44" y2="27" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<line x1="82" y1="35" x2="44" y2="35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<rect x="11" y="49" width="22" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+<line x1="109" y1="51" x2="44" y2="51" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<line x1="109" y1="59" x2="44" y2="59" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<line x1="82" y1="67" x2="44" y2="67" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<rect x="11" y="81" width="22" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+<line x1="109" y1="83" x2="44" y2="83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<line x1="109" y1="91" x2="44" y2="91" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<line x1="82" y1="99" x2="44" y2="99" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
