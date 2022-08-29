@@ -34,19 +34,19 @@ const Header = () => {
         {
           value: "https://blog.joinmastodon.org/",
           label: <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />,
-          description: <FormattedMessage id="nav.blog.description" defaultMessage="Description for the blog" />,
+          description: <FormattedMessage id="nav.blog.description" defaultMessage="Mastodon news and updates" />,
         }, {
           value: "https://github.com/mastodon/mastodon/discussions",
           label: <FormattedMessage id="nav.support.title" defaultMessage="Support" />,
-          description: <FormattedMessage id="nav.support.description" defaultMessage="Description for support" />,
+          description: <FormattedMessage id="nav.support.description" defaultMessage="Q&A and community discussions on GitHub" />,
         }, {
           value: "https://github.com/mastodon/mastodon",
           label: <FormattedMessage id="nav.code.title" defaultMessage="Code" />,
-          description: <FormattedMessage id="nav.code.description" defaultMessage="Code on GitHub. Description for code" />,
+          description: <FormattedMessage id="nav.code.description" defaultMessage="Source code for Mastodon on GitHub" />,
         }, {
           value: "https://docs.joinmastodon.org",
           label: <FormattedMessage id="nav.docs.title" defaultMessage="Documentation" />,
-          description: <FormattedMessage id="nav.docs.description" defaultMessage="Description for documentation" />,
+          description: <FormattedMessage id="nav.docs.description" defaultMessage="API reference, feature walkthroughs, and technical overview" />,
         }
       ],
     }, {
