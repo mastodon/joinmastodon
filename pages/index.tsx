@@ -270,7 +270,7 @@ const WhyMastodon = () => {
               <FormattedMessage
                 id="home.why.decentralized.copy"
                 defaultMessage="Not controlled by a 
-            single website or company, Mastodon is a network of completely independent service providers forming 
+            single website or company, Mastodon is part of a network of completely independent service providers forming 
             a global, cohesive social media platform. "
               />
             }
