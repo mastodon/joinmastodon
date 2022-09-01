@@ -121,6 +121,11 @@ const sponsors = {
       logo: require("../public/sponsors/goread.png"),
       name: "Goread.io",
     },
+    {
+      url: "https://www.noneedtostudy.com/take-my-online-class/",
+      logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
+      name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
+    }, // Custom
   ],
   gold: [
     {

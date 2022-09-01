@@ -1,4 +1,3 @@
-import Link from "next/link"
 import Head from "next/head"
 import { FormattedMessage, useIntl } from "react-intl"
 import Hero from "../components/Hero"
@@ -95,11 +94,9 @@ function Sponsors() {
           {sponsorData.silver.map((sponsor, i) => {
             if (sponsor.url) {
               return (
-                <Link key={i} href={sponsor.url}>
-                  <a>
-                    <SponsorCard sponsor={sponsor} tier="silver" />
-                  </a>
-                </Link>
+                <a key={i} href={sponsor.url} rel={sponsor.nofollow ? "nofollow" : undefined}>
+                  <SponsorCard sponsor={sponsor} tier="silver" />
+                </a>
               )
             } else {
               return <SponsorCard key={i} sponsor={sponsor} tier="silver" />
