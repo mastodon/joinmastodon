@@ -136,11 +136,11 @@ const Header = () => {
 
                     <ul
                       className={classNames(
-                        "top-full flex-col rounded-md  inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-black-transparent md:shadow md:backdrop-blur-sm",
+                        "top-full flex-col rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] text-black md:bg-white-transparent md:backdrop-blur-sm",
                         openMenuIndex === itemIndex
                           ? "flex overflow-auto"
                           : "hidden",
-                        item.compact ? "md:p-4" : "min-w-[20ch] py-2 md:px-2"
+                        item.compact ? "py-2 md:px-2" : "min-w-[30ch] py-2 md:px-2"
                       )}
                     >
                       {item.childItems.map((child, childIndex) => (
@@ -154,16 +154,16 @@ const Header = () => {
                             <a
                               {...bindSecondaryMenuItem(child)}
                               className={classNames(
-                                "block rounded hover:bg-eggplant hover:md:bg-gray-0",
+                                "block rounded hover:bg-eggplant hover:md:bg-gray-3",
                                 item.compact
-                                  ? "px-5 md:px-2"
+                                  ? "py-2 px-5 md:px-4"
                                   : "py-3 px-5 font-600 md:px-4",
                                 child.active && "font-800"
                               )}
                               aria-current={child.active ? "page" : undefined}
                             >
                               <span className="block">{child.label}</span>
-                              <span className="b3 block text-gray-2">
+                              <span className="b2 block text-gray-2">
                                 {child.description}
                               </span>
                             </a>
@@ -215,10 +215,10 @@ const useMenu = ({ navigationItems }) => {
       }
     }
     if (rootElement.current) {
-      document.addEventListener("click", handleClickOutside)
+      document.addEventListener("click", handleClickOutside, false)
     }
     return () => {
-      document.removeEventListener("click", handleClickOutside)
+      document.removeEventListener("click", handleClickOutside, false)
     }
   }, [])
 

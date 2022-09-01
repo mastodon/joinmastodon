@@ -74,7 +74,8 @@ const Hero = ({
           layout="fill"
           objectFit="cover"
           objectPosition="center bottom"
-          placeholder="blur"
+          placeholder="empty"
+          quality={100}
           priority={true}
         />
       </div>
@@ -93,7 +94,8 @@ const Hero = ({
           layout="fill"
           objectFit="cover"
           objectPosition="center bottom"
-          placeholder="blur"
+          placeholder="empty"
+          quality={100}
           priority={true}
         />
       </div>

@@ -58,6 +58,7 @@ const config = {
     },
     colors: {
       "black-transparent": "var(--black-transparent)",
+      "white-transparent": "var(--white-transparent)",
       black: "var(--black)",
       "gray-0": "var(--gray-0)",
       "gray-1": "var(--gray-1)",

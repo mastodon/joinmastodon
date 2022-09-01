@@ -16,7 +16,7 @@ export type AppCardProps = {
  */
 export const AppCard = ({ name, icon, url, paid }) => {
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
+    <a key={url} href={url} target="_blank" rel="noopener noreferrer">
       <div className="flex items-stretch justify-start gap-4 rounded bg-white p-2 shadow md:p-4">
         <div className="h-[3.5rem] w-[3.5rem] flex-shrink-0 overflow-hidden rounded-sm">
           <Image src={icon} alt={`Logo for ${name}`} />

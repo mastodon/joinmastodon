@@ -24,6 +24,7 @@ const ServerCard = ({ server }: { server?: Server }) => {
             layout="fill"
             objectFit="cover"
             alt=""
+            unoptimized
           />
         ) : (
           <div className="h-full w-full rounded-md bg-gray-3" />
