@@ -103,7 +103,7 @@ const Servers = () => {
   return (
     <div>
       <Hero mobileImage={serverHeroMobile} desktopImage={serverHeroDesktop}>
-        <h1 className="h1 mb-2">
+        <h1 className="h1 mb-5">
           <FormattedMessage id="servers" defaultMessage="Servers" />
         </h1>
 

@@ -18,7 +18,7 @@ export type IconCardProps = {
 export const IconCard = ({ title, icon, copy, className }: IconCardProps) => {
   return (
     <div
-      className={`flex flex-col items-center justify-start overflow-hidden rounded bg-white text-center shadow ${className}`}
+      className={`flex flex-col items-center justify-start overflow-hidden rounded bg-white text-center ${className}`}
     >
       <div className="flex h-44 w-full items-center justify-center text-accent-blurple">
         <div className="h-[7.5rem] w-[7.5rem]">

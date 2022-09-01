@@ -13,7 +13,7 @@ function Sponsors() {
   return (
     <>
       <Hero>
-        <h1 className="h1 mb-2 lg:col-start-2">
+        <h1 className="h1 mb-5 lg:col-start-2">
           <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
         </h1>
         <p className="sh1 lg:col-start-2 lg:col-end-6">

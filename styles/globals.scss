@@ -106,7 +106,6 @@
     // having them here enables easier theme overriding
     // in color preference media queries (eg high contrast)
     --black-transparent: rgba(0, 0, 0, 0.95);
-    --white-transparent: rgba(255, 255, 255, 0.95);
     --black: #000000;
     --gray-0: #333333;
     --gray-1: #555555;
@@ -115,6 +114,7 @@
     --gray-4: #f3f3f3;
     --gray-5: #f6f6f6;
     --white: #ffffff;
+    --white-transparent: rgba(255, 255, 255, 0.95);
 
     --blurple-gradient: linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%);
 
@@ -124,6 +124,7 @@
     --accent-blurple: #6364ff;
     --blurple-text-on-black: #858afa;
     --nightshade: #1d0023;
+    --nightshade-transparent: rgba(29, 0, 35, 0.9);
     --lime: #baff3b;
     --goldenrod: #ffbe2e;
 
@@ -144,6 +145,7 @@
     font-family: "Manrope", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
+    font-size: 15px;
   }
 }
 

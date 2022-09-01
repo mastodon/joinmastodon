@@ -58,7 +58,6 @@ const config = {
     },
     colors: {
       "black-transparent": "var(--black-transparent)",
-      "white-transparent": "var(--white-transparent)",
       black: "var(--black)",
       "gray-0": "var(--gray-0)",
       "gray-1": "var(--gray-1)",
@@ -67,8 +66,9 @@ const config = {
       "gray-4": "var(--gray-4)",
       "gray-5": "var(--gray-5)",
       white: "var(--white)",
-
+      "white-transparent": "var(--white-transparent)",
       nightshade: "var(--nightshade)",
+      "nightshade-transparent": "var(--nightshade-transparent)",
       eggplant: "var(--eggplant)",
       "dark-blurple": "var(--dark-blurple)",
       "main-blurple": "var(--main-blurple)",

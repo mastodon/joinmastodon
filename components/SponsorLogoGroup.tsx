@@ -3,7 +3,7 @@ import classnames from "classnames"
 
 const SponsorLogoGroup = ({ sponsors }) => {
   return (
-    <div className="grid grid-cols-2 items-center justify-center gap-5 gap-x-5 bg-white sm:flex sm:flex-wrap">
+    <div className="grid grid-cols-2 items-center justify-center gap-5 gap-x-5 bg-gray-5 py-5 rounded-md sm:flex sm:flex-wrap">
       {sponsors.map((sponsor, i) => {
         let isLastItem = sponsors[i + 1] == undefined
         let isUnevenItems = sponsors.length % 2 != 0
@@ -24,10 +24,7 @@ const SponsorLogoGroup = ({ sponsors }) => {
             }}
           >
             <Image
-              className={classnames(
-                "object-contain opacity-50 mix-blend-luminosity transition-all group-hover:opacity-100 group-hover:mix-blend-normal group-focus-visible:opacity-100 group-focus-visible:mix-blend-normal",
-                sponsor.light && "invert"
-              )}
+              className="object-contain opacity-80 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0 group-focus-visible:opacity-100 group-focus-visible:grayscale-0"
               alt={sponsor.name}
               src={sponsor.logo}
               width={150}

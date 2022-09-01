@@ -258,7 +258,7 @@ const WhyMastodon = () => {
           className="keen-slider mb-8 md:mb-0 md:grid md:grid-cols-2 md:gap-gutter lg:grid-cols-4"
         >
           <IconCard
-            className="keen-slider__slide shadow-none md:shadow"
+            className="keen-slider__slide shadow-none md:border md:border-gray-3"
             title={
               <FormattedMessage
                 id="home.why.decentralized.title"
@@ -276,7 +276,7 @@ const WhyMastodon = () => {
             }
           />
           <IconCard
-            className="keen-slider__slide shadow-none md:shadow"
+            className="keen-slider__slide shadow-none md:border md:border-gray-3"
             title={
               <FormattedMessage
                 id="home.why.opensource.title"
@@ -292,7 +292,7 @@ const WhyMastodon = () => {
             }
           />
           <IconCard
-            className="keen-slider__slide shadow-none md:shadow"
+            className="keen-slider__slide shadow-none md:border md:border-gray-3"
             title={
               <FormattedMessage
                 id="home.why.not_for_sale.title"
@@ -308,7 +308,7 @@ const WhyMastodon = () => {
             }
           />
           <IconCard
-            className="keen-slider__slide shadow-none md:shadow"
+            className="keen-slider__slide shadow-none md:border md:border-gray-3"
             title={
               <FormattedMessage
                 id="home.why.privacy_minded.title"

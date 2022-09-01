@@ -15,7 +15,7 @@ import SkeletonText from "./SkeletonText"
 const ServerCard = ({ server }: { server?: Server }) => {
   const intl = useIntl()
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] rounded-md p-4 shadow">
+    <div className="grid grid-rows-[auto_1fr_auto] rounded-md p-4 border border-gray-3">
       <div className="relative h-26 lg:h-40">
         {server ? (
           <Image

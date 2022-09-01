@@ -75,7 +75,7 @@ const Hero = ({
           objectFit="cover"
           objectPosition="center bottom"
           placeholder="empty"
-          quality={100}
+          unoptimized
           priority={true}
         />
       </div>
@@ -95,7 +95,7 @@ const Hero = ({
           objectFit="cover"
           objectPosition="center bottom"
           placeholder="empty"
-          quality={100}
+          unoptimized
           priority={true}
         />
       </div>

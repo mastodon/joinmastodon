@@ -94,7 +94,7 @@ const Header = () => {
     <header
       // background needs to be on the ::before for now to get around nested compositing bug in chrome
       className={classNames(
-        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:bg-black-transparent before:backdrop-blur-sm before:transition-opacity before:content-[""]',
+        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:bg-nightshade-transparent before:backdrop-blur before:transition-opacity before:content-[""]',
         pageScrolled ? "before:opacity-100" : "before:opacity-0"
       )}
     >
@@ -136,7 +136,7 @@ const Header = () => {
 
                     <ul
                       className={classNames(
-                        "top-full flex-col rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] text-black md:bg-white-transparent md:backdrop-blur-sm",
+                        "top-full flex-col rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:text-black md:bg-white-transparent md:backdrop-blur",
                         openMenuIndex === itemIndex
                           ? "flex overflow-auto"
                           : "hidden",
@@ -163,7 +163,7 @@ const Header = () => {
                               aria-current={child.active ? "page" : undefined}
                             >
                               <span className="block">{child.label}</span>
-                              <span className="b2 block text-gray-2">
+                              <span className="b2 block text-gray-1">
                                 {child.description}
                               </span>
                             </a>

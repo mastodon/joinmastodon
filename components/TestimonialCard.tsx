@@ -15,22 +15,20 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        className="keen-slider__slide mb-8 inline-block h-max w-full space-y-6 rounded bg-white p-8 shadow"
+        className="keen-slider__slide mb-8 inline-block h-max w-full space-y-6 rounded bg-white p-8"
       >
-        <p className="b2">{testimonial.text}</p>
-        <div className="flex flex-wrap gap-x-6 ">
-          <div className="shrink-0">
-            <Image
-              className="rounded"
-              src={testimonial.avatar}
-              alt=""
-              width="56"
-              height="56"
-            />
-          </div>
+        <p className="b1">{testimonial.text}</p>
+        <div className="flex flex-wrap gap-x-6 items-center">
+          <Image
+            className="rounded shrink-0"
+            src={testimonial.avatar}
+            alt=""
+            width="56"
+            height="56"
+          />
           <div className="flex flex-col justify-center">
             <p className="b2 !font-700">{testimonial.name}</p>
-            <p className="b4 truncate text-gray-1">{testimonial.username}</p>
+            <p className="b2 truncate text-gray-1">{testimonial.username}</p>
           </div>
         </div>
       </a>

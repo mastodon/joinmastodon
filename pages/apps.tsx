@@ -26,7 +26,7 @@ const AppsPage = () => {
           <div className="container">
             <div className="app-intro__hero">
               <div className="app-intro__hero__unit">
-                <h1 className="h1 mb-4">
+                <h1 className="h1 mb-5">
                   <FormattedMessage id="apps.title" defaultMessage="Apps" />
                 </h1>
 
