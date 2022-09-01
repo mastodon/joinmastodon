@@ -30,6 +30,9 @@ const SponsorLogoGroup = ({ sponsors }) => {
               )}
               alt={sponsor.name}
               src={sponsor.logo}
+              width={150}
+              height={40}
+              layout="fixed"
             />
           </a>
         )

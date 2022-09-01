@@ -23,6 +23,7 @@ const ServerCard = ({ server }: { server?: Server }) => {
             src={server.proxied_thumbnail}
             layout="fill"
             objectFit="cover"
+            alt=""
           />
         ) : (
           <div className="h-full w-full rounded-md bg-gray-3" />
