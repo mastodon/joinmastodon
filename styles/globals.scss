@@ -132,7 +132,7 @@
     @apply [--header-offset:0rem] md:[--header-offset:1.5rem];
     @apply [--header-height:5.625rem] md:[--header-height:6rem];
     @apply [--gutter-width:1rem] md:[--gutter-width:1.25rem];
-    @apply [--footer-offset:14rem] md:[--footer-offset:18rem];
+    @apply [--footer-offset:14rem] md:[--footer-offset:MAX(20vw,16rem)];
   }
   html {
     overflow-x: hidden;
