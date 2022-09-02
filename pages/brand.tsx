@@ -51,22 +51,22 @@ const Brand = () => (
       }
       preview={
         <div className="grid grid-cols-12 gap-gutter">
-          <div className="col-span-3 grid aspect-square items-center justify-center rounded bg-eggplant p-4 md:col-start-3">
+          <div className="col-span-4 md:col-span-3 grid aspect-square items-center justify-center rounded bg-eggplant p-8 md:col-start-3">
             <img src="/logos/logo-purple.svg" alt="" />
           </div>
-          <div className="col-span-5 grid items-center justify-center rounded bg-eggplant p-4">
+          <div className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-eggplant p-8">
             <img src="/logos/logo-full-purple.svg" alt="" />
           </div>
-          <div className="col-span-3 grid aspect-square items-center justify-center rounded bg-gray-1 p-4 md:col-start-3">
+          <div className="col-span-4 md:col-span-3 grid aspect-square items-center justify-center rounded bg-gray-1 p-8 md:col-start-3">
             <img src="/logos/logo-white.svg" alt="" />
           </div>
-          <div className="col-span-5 grid items-center justify-center rounded bg-gray-1 p-4">
+          <div className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-gray-1 p-8">
             <img src="/logos/logo-full-white.svg" alt="" />
           </div>
-          <div className="col-span-3 grid aspect-square items-center justify-center rounded bg-gray-3 p-4 md:col-start-3">
+          <div className="col-span-4 md:col-span-3 grid aspect-square items-center justify-center rounded bg-gray-3 p-8 md:col-start-3">
             <img src="/logos/logo-black.svg" alt="" />
           </div>
-          <div className="col-span-5 grid items-center justify-center rounded bg-gray-3 p-4">
+          <div className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-gray-3 p-8">
             <img src="/logos/logo-full-black.svg" alt="" />
           </div>
         </div>
