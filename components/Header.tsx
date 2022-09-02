@@ -36,6 +36,10 @@ const Header = () => {
           label: <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />,
           description: <FormattedMessage id="nav.blog.description" defaultMessage="Mastodon news and updates" />,
         }, {
+          value: "https://docs.joinmastodon.org",
+          label: <FormattedMessage id="nav.docs.title" defaultMessage="Documentation" />,
+          description: <FormattedMessage id="nav.docs.description" defaultMessage="API reference and technical overview" />,
+        }, {
           value: "https://github.com/mastodon/mastodon/discussions",
           label: <FormattedMessage id="nav.support.title" defaultMessage="Support" />,
           description: <FormattedMessage id="nav.support.description" defaultMessage="Q&A and community discussions on GitHub" />,
@@ -43,11 +47,7 @@ const Header = () => {
           value: "https://github.com/mastodon/mastodon",
           label: <FormattedMessage id="nav.code.title" defaultMessage="Code" />,
           description: <FormattedMessage id="nav.code.description" defaultMessage="Source code for Mastodon on GitHub" />,
-        }, {
-          value: "https://docs.joinmastodon.org",
-          label: <FormattedMessage id="nav.docs.title" defaultMessage="Documentation" />,
-          description: <FormattedMessage id="nav.docs.description" defaultMessage="API reference, feature walkthroughs, and technical overview" />,
-        }
+        },
       ],
     }, {
       key: "locale",
@@ -94,7 +94,7 @@ const Header = () => {
     <header
       // background needs to be on the ::before for now to get around nested compositing bug in chrome
       className={classNames(
-        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:bg-nightshade-transparent before:backdrop-blur before:transition-opacity before:content-[""]',
+        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:bg-nightshade/[0.95] before:backdrop-blur before:transition-opacity before:content-[""]',
         pageScrolled ? "before:opacity-100" : "before:opacity-0"
       )}
     >
@@ -136,11 +136,11 @@ const Header = () => {
 
                     <ul
                       className={classNames(
-                        "top-full flex-col rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:text-black md:bg-white-transparent md:backdrop-blur",
+                        "top-full rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:text-black md:shadow-lg md:bg-white",
                         openMenuIndex === itemIndex
-                          ? "flex overflow-auto"
+                          ? "md:grid overflow-auto"
                           : "hidden",
-                        item.compact ? "py-2 md:px-2" : "min-w-[30ch] py-2 md:px-2"
+                        item.compact ? "py-2 md:px-2" : "py-2 md:px-3 md:py-4 w-screen max-w-md md:grid-cols-2 md:gap-6"
                       )}
                     >
                       {item.childItems.map((child, childIndex) => (
@@ -154,16 +154,16 @@ const Header = () => {
                             <a
                               {...bindSecondaryMenuItem(child)}
                               className={classNames(
-                                "block rounded hover:bg-eggplant hover:md:bg-gray-3",
+                                "block rounded-md hover:bg-eggplant hover:md:bg-nightshade-50",
                                 item.compact
                                   ? "py-2 px-5 md:px-4"
-                                  : "py-3 px-5 font-600 md:px-4",
-                                child.active && "font-800"
+                                  : "py-3 px-5 md:px-4",
+                                (item.compact && child.active) && "font-800"
                               )}
                               aria-current={child.active ? "page" : undefined}
                             >
-                              <span className="block">{child.label}</span>
-                              <span className="b2 block text-gray-1">
+                              <span className={classNames("block", !item.compact && "font-800")}>{child.label}</span>
+                              <span className="mt-1 block text-gray-1">
                                 {child.description}
                               </span>
                             </a>
@@ -237,10 +237,10 @@ const useMenu = ({ navigationItems }) => {
       id: menuId,
       onBlur: (e) => {
         const focusLeftMenu = !rootElement.current.contains(e.relatedTarget)
-        if (focusLeftMenu) {
+        /*if (focusLeftMenu) {
           setOpenMenuIndex(null)
           setMobileMenuOpen(false)
-        }
+        }*/
       },
       onKeyDown: (e) => {
         if (e.key === "Escape") {

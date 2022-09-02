@@ -9,7 +9,7 @@ const SponsorCard = ({ sponsor, tier }) => {
       className={classNames(
         "grid grid-cols-[auto_1fr] gap-4 rounded p-4",
         tier === "generalHighlighted" && "bg-gray-5",
-        tier === "silver" && "border border-gray-3"
+        tier === "silver" && "border border-gray-3 hover:bg-gray-4"
       )}
     >
       {tier === "silver" &&
