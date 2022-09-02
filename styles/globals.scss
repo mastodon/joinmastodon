@@ -242,7 +242,7 @@
     margin-inline: calc(50% - 50vw);
 
     &__inner {
-      @apply mx-auto max-w-site px-6 lg:px-16;
+      @apply mx-auto max-w-site px-6 lg:px-16 w-full;
     }
   }
 
