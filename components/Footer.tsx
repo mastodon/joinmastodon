@@ -123,8 +123,8 @@ export const Footer = () => (
                 </Link>,
                 <a
                   className="inline-block py-2"
-                  key="/press-kit.zip"
-                  href="/press-kit.zip"
+                  key="/brand"
+                  href="/brand"
                 >
                   <FormattedMessage
                     id="nav.press_kit.title"
