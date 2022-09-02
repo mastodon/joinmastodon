@@ -121,16 +121,14 @@ export const Footer = () => (
                     />
                   </a>
                 </Link>,
-                <a
-                  className="inline-block py-2"
-                  key="/brand"
-                  href="/brand"
-                >
-                  <FormattedMessage
-                    id="nav.press_kit.title"
-                    defaultMessage="Press kit"
-                  />
-                </a>,
+                <Link key="/brand" href="/brand">
+                  <a className="inline-block py-2">
+                    <FormattedMessage
+                      id="nav.press_kit.title"
+                      defaultMessage="Press kit"
+                    />
+                  </a>
+                </Link>,
                 <Link key="/privacy-policy" href="/privacy-policy">
                   <a className="inline-block py-2">
                     <FormattedMessage
