@@ -199,7 +199,7 @@ const GettingStartedCards = () => {
           copy={
             <FormattedMessage
               id="servers.getting_started.servers"
-              defaultMessage="The first step is deciding which network you’d like to be a part of. Every server is operated by an independent organization or individual and the server you choose will host your account."
+              defaultMessage="The first step is deciding which server you’d like to make your account on. Every server is operated by an independent organization or individual and may differ in moderation policies."
             />
           }
         />
@@ -214,7 +214,7 @@ const GettingStartedCards = () => {
           copy={
             <FormattedMessage
               id="servers.getting_started.feed.body"
-              defaultMessage="Once you join a server, you can curate your home feed by browsing locally, following and talking with people from other servers, or explore trending posts from any publically available server."
+              defaultMessage="With an account on your server, you can follow any other person on the network, regardless of where their account is hosted. You will see their posts in your home feed, and if they follow you, they will see yours in theirs."
             />
           }
         />
@@ -244,7 +244,7 @@ const GettingStartedCards = () => {
           copy={
             <FormattedMessage
               id="servers.getting_started.safe_for_all.body"
-              defaultMessage="Actively working to eliminate hate speech, our organization will only point you to servers that are consistently committed to moderation again racism, sexism, and transphobia."
+              defaultMessage="We can't control the servers, but we can control what we promote on this page. Our organization will only point you to servers that are consistently committed to moderation again racism, sexism, and transphobia."
             />
           }
         />
