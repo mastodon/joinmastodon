@@ -64,6 +64,9 @@ const config = {
       nightshade: {
         DEFAULT: "#1d0023",
         50: "#fcefff",
+        100: "#BD8DC8",
+        300: "#834491",
+        600: "#4E155A",
       },
       eggplant: "#17063b",
       "dark-blurple": "var(--dark-blurple)",
