@@ -205,6 +205,11 @@ const sponsors = {
       name: "Farbridge",
       light: true,
     },
+    {
+      url: "https://www.sure.bet/casinos-not-on-gamstop/",
+      logo: require("../public/sponsors/surebet.jpg"),
+      name: "non GamStop Casinos",
+    }, // Custom
   ],
   silver: [
     {
