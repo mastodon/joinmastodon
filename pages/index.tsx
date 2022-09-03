@@ -287,7 +287,7 @@ const WhyMastodon = () => {
             copy={
               <FormattedMessage
                 id="home.why.opensource.copy"
-                defaultMessage="Mastodon is free and open-source software. We believe in your right to use, copy, study and change Mastodon as you see fit. Community collaboration helps us continually evolve Mastodon."
+                defaultMessage="Mastodon is free and open-source software. We believe in your right to use, copy, study and change Mastodon as you see fit, and we benefit from contributions from the community."
               />
             }
           />
@@ -303,7 +303,7 @@ const WhyMastodon = () => {
             copy={
               <FormattedMessage
                 id="home.why.not_for_sale.copy"
-                defaultMessage="No surprises. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data is yours and yours alone"
+                defaultMessage="We respect your agency. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data is yours and yours alone."
               />
             }
           />
@@ -311,15 +311,15 @@ const WhyMastodon = () => {
             className="keen-slider__slide shadow-none md:border md:border-gray-3"
             title={
               <FormattedMessage
-                id="home.why.privacy_minded.title"
-                defaultMessage="Privacy-Minded"
+                id="home.why.interoperability.title"
+                defaultMessage="Interoperable"
               />
             }
-            icon="safety"
+            icon="move"
             copy={
               <FormattedMessage
-                id="home.why.privacy_minded.copy"
-                defaultMessage="You’re in control. Publish only what you choose and rest assured that your personal information is safe. Mastodon is not a platform for ads and respects your privacy."
+                id="home.why.interoperability.copy"
+                defaultMessage="Built on open web protocols, Mastodon can speak with any other platform that implements ActivityPub. With one account you get access to a whole universe of social apps—the fediverse."
               />
             }
           />
@@ -435,14 +435,14 @@ const Sponsors = ({ sponsors }) => {
           <h2 className="h2 mb-4">
             <FormattedMessage
               id="home.sponsors.title"
-              defaultMessage="Independent and self made"
+              defaultMessage="Independent always"
             />
           </h2>
 
           <p className="b1 lg:sh1 mb-12 lg:mb-10">
             <FormattedMessage
               id="home.sponsors.body"
-              defaultMessage="Mastodon is free and open-source software developed by a non-profit organization. Public support directly affects development and evolution."
+              defaultMessage="Mastodon is free and open-source software developed by a non-profit organization. Public support directly sustains development and evolution."
             />
           </p>
 
