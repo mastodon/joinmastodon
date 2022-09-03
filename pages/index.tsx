@@ -269,9 +269,7 @@ const WhyMastodon = () => {
             copy={
               <FormattedMessage
                 id="home.why.decentralized.copy"
-                defaultMessage="Not controlled by a 
-            single website or company, Mastodon is a network of completely independent service providers forming 
-            a global, cohesive social media platform. "
+                defaultMessage="Instant global communication is too important to belong to one company. Each Mastodon server is a completely independent entity, able to interoperate with others to form one global social network."
               />
             }
           />
@@ -303,7 +301,7 @@ const WhyMastodon = () => {
             copy={
               <FormattedMessage
                 id="home.why.not_for_sale.copy"
-                defaultMessage="We respect your agency. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data is yours and yours alone."
+                defaultMessage="We respect your agency. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data and your time are yours and yours alone."
               />
             }
           />
