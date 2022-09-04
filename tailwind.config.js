@@ -45,13 +45,6 @@ const config = {
       heading: "0em",
       copy: "0.01em",
     },
-    fontWeight: {
-      400: 400,
-      450: 450,
-      600: 600,
-      700: 700,
-      800: 800,
-    },
     colors: {
       black: "#000000",
       "gray-0": "var(--gray-0)",

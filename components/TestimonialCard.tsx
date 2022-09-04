@@ -22,7 +22,7 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
           height="56"
         />
         <div className="flex flex-col justify-center">
-          <p className="b2 !font-700">{testimonial.name}</p>
+          <p className="b2 !font-bold">{testimonial.name}</p>
           <p className="b2 truncate text-gray-1">{testimonial.username}</p>
         </div>
       </div>

@@ -123,7 +123,7 @@ const Header = () => {
                   <>
                     <button
                       {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
-                      className="flex items-center gap-[0.125rem] whitespace-nowrap rounded-md p-3 px-5 text-h5 focus:outline-2 md:text-b2 md:font-450"
+                      className="flex items-center gap-[0.125rem] whitespace-nowrap rounded-md p-3 px-5 text-h5 focus:outline-2 md:text-b2 md:font-medium"
                     >
                       {item.label}
                       <SVG
@@ -158,11 +158,11 @@ const Header = () => {
                                 item.compact
                                   ? "py-2 px-5 md:px-4"
                                   : "py-3 px-5 md:px-4",
-                                (item.compact && child.active) && "font-800"
+                                (item.compact && child.active) && "font-extrabold"
                               )}
                               aria-current={child.active ? "page" : undefined}
                             >
-                              <span className={classNames("block", !item.compact && "font-800")}>{child.label}</span>
+                              <span className={classNames("block", !item.compact && "font-extrabold")}>{child.label}</span>
                               <span className="mt-1 block text-gray-1">
                                 {child.description}
                               </span>
@@ -178,7 +178,7 @@ const Header = () => {
                     <a
                       className={classNames(
                         "block whitespace-nowrap rounded-md p-3 px-5 text-h5 md:text-b2",
-                        item.active && "font-800"
+                        item.active && "font-extrabold"
                       )}
                       aria-current={item.active ? "page" : undefined}
                       {...bindPrimaryMenuItem(itemIndex)}

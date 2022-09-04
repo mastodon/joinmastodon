@@ -153,43 +153,43 @@
   .h1 {
     @apply text-h3 md:text-h1;
     @apply leading-h3 md:leading-h1;
-    @apply font-800 tracking-heading;
+    @apply font-extrabold tracking-heading;
   }
 
   .h2 {
     @apply text-h4 md:text-h2;
     @apply leading-h4 md:leading-h2;
-    @apply font-800 tracking-heading;
+    @apply font-extrabold tracking-heading;
   }
 
   .h3 {
     @apply text-h4 md:text-h3;
     @apply leading-h4 md:leading-h3;
-    @apply font-800 tracking-heading;
+    @apply font-extrabold tracking-heading;
   }
 
   .h4 {
     @apply text-h5 md:text-h4;
     @apply leading-h5 md:leading-h4;
-    @apply font-800 tracking-copy md:tracking-heading;
+    @apply font-extrabold tracking-copy md:tracking-heading;
   }
 
   .h5 {
     @apply text-h6 md:text-h5;
     @apply leading-h6 md:leading-h5;
-    @apply font-800 tracking-copy;
+    @apply font-extrabold tracking-copy;
   }
 
   .h6 {
     @apply text-h6;
     @apply leading-h6;
-    @apply font-800 tracking-copy;
+    @apply font-extrabold tracking-copy;
   }
 
   .sh1 {
     @apply text-b1 md:text-sh1;
     @apply leading-b1 md:leading-sh1;
-    @apply font-450 tracking-copy;
+    @apply font-medium tracking-copy;
   }
 
   .b1,
@@ -198,44 +198,44 @@
   .b4 {
     b,
     strong {
-      @apply font-600;
+      @apply font-bold;
     }
   }
 
   .b1 {
     @apply text-b1;
     @apply leading-b1;
-    @apply font-450 tracking-copy;
+    @apply font-medium tracking-copy;
   }
 
   .b2 {
     @apply text-b2;
     @apply leading-b2;
-    @apply font-450 tracking-copy;
+    @apply font-medium tracking-copy;
   }
 
   .b3 {
     @apply text-b3;
     @apply leading-b3;
-    @apply font-450 tracking-copy;
+    @apply font-medium tracking-copy;
   }
 
   .b4 {
     @apply text-b4;
     @apply leading-b4;
-    @apply font-400 tracking-copy;
+    @apply font-normal tracking-copy;
   }
 
   .c2 {
     @apply text-c2;
     @apply leading-c2;
-    @apply font-600 tracking-copy;
+    @apply font-bold tracking-copy;
   }
 
   .c3 {
     @apply text-c3;
     @apply leading-c3;
-    @apply font-450 tracking-copy;
+    @apply font-medium tracking-copy;
   }
 
   .full-width-bg {
