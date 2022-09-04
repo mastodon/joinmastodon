@@ -12,18 +12,10 @@ class MyDocument extends Document {
     return (
       <Html dir={dir}>
         <Head>
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
-          />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <meta name="apple-itunes-app" content="app-id=1571998974" />
+          <meta name="twitter:site" content="@joinmastodon" />
         </Head>
         <body className="bg-white">
           <Main />
