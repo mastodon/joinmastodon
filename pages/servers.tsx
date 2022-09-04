@@ -325,7 +325,7 @@ const ServerFilters = ({
                 <li key={i}>
                   <label
                     className={classnames(
-                      "b2 flex cursor-pointer gap-1 rounded py-1 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-accent-blurple",
+                      "b2 flex cursor-pointer gap-1 rounded py-1 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
                       isActive && "!font-extrabold",
                       item.servers_count === 0 && "text-gray-2"
                     )}

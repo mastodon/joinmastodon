@@ -102,32 +102,6 @@
 
 @layer base {
   :root {
-    // While colors could go in tailwind.config.js,
-    // having them here enables easier theme overriding
-    // in color preference media queries (eg high contrast)
-    --black-transparent: rgba(0, 0, 0, 0.95);
-    --black: #000000;
-    --gray-0: #333333;
-    --gray-1: #555555;
-    --gray-2: #9b9b9b;
-    --gray-3: #d4d4d4;
-    --gray-4: #f3f3f3;
-    --gray-5: #f6f6f6;
-    --white: #ffffff;
-    --white-transparent: rgba(255, 255, 255, 0.95);
-
-    --blurple-gradient: linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%);
-
-    --eggplant: #17063b;
-    --dark-blurple: #2f0c7a;
-    --main-blurple: #563acc;
-    --accent-blurple: #6364ff;
-    --blurple-text-on-black: #858afa;
-    --nightshade: #1d0023;
-    --nightshade-transparent: rgba(29, 0, 35, 0.9);
-    --lime: #baff3b;
-    --goldenrod: #ffbe2e;
-
     --header-area: calc(var(--header-offset) + var(--header-height));
     @apply [--header-offset:0rem] md:[--header-offset:1.5rem];
     @apply [--header-height:5.625rem] md:[--header-height:6rem];
@@ -136,7 +110,6 @@
   }
   html {
     overflow-x: hidden;
-    background: var(--white);
   }
   html,
   body {
@@ -153,43 +126,43 @@
   .h1 {
     @apply text-h3 md:text-h1;
     @apply leading-h3 md:leading-h1;
-    @apply font-extrabold tracking-heading;
+    @apply font-extrabold tracking-normal;
   }
 
   .h2 {
     @apply text-h4 md:text-h2;
     @apply leading-h4 md:leading-h2;
-    @apply font-extrabold tracking-heading;
+    @apply font-extrabold tracking-normal;
   }
 
   .h3 {
     @apply text-h4 md:text-h3;
     @apply leading-h4 md:leading-h3;
-    @apply font-extrabold tracking-heading;
+    @apply font-extrabold tracking-normal;
   }
 
   .h4 {
     @apply text-h5 md:text-h4;
     @apply leading-h5 md:leading-h4;
-    @apply font-extrabold tracking-copy md:tracking-heading;
+    @apply font-extrabold tracking-semiwide md:tracking-normal;
   }
 
   .h5 {
     @apply text-h6 md:text-h5;
     @apply leading-h6 md:leading-h5;
-    @apply font-extrabold tracking-copy;
+    @apply font-extrabold tracking-semiwide;
   }
 
   .h6 {
     @apply text-h6;
     @apply leading-h6;
-    @apply font-extrabold tracking-copy;
+    @apply font-extrabold tracking-semiwide;
   }
 
   .sh1 {
     @apply text-b1 md:text-sh1;
     @apply leading-b1 md:leading-sh1;
-    @apply font-medium tracking-copy;
+    @apply font-medium tracking-semiwide;
   }
 
   .b1,
@@ -205,37 +178,37 @@
   .b1 {
     @apply text-b1;
     @apply leading-b1;
-    @apply font-medium tracking-copy;
+    @apply font-medium tracking-semiwide;
   }
 
   .b2 {
     @apply text-b2;
     @apply leading-b2;
-    @apply font-medium tracking-copy;
+    @apply font-medium tracking-semiwide;
   }
 
   .b3 {
     @apply text-b3;
     @apply leading-b3;
-    @apply font-medium tracking-copy;
+    @apply font-medium tracking-semiwide;
   }
 
   .b4 {
     @apply text-b4;
     @apply leading-b4;
-    @apply font-normal tracking-copy;
+    @apply font-normal tracking-semiwide;
   }
 
   .c2 {
     @apply text-c2;
     @apply leading-c2;
-    @apply font-bold tracking-copy;
+    @apply font-bold tracking-semiwide;
   }
 
   .c3 {
     @apply text-c3;
     @apply leading-c3;
-    @apply font-medium tracking-copy;
+    @apply font-medium tracking-semiwide;
   }
 
   .full-width-bg {
@@ -251,6 +224,6 @@
   }
 
   .carousel__dot.carousel__dot--selected {
-    @apply bg-main-blurple;
+    @apply bg-blurple-500;
   }
 }

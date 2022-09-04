@@ -22,7 +22,7 @@ const TwoUpFeature = ({ features, padding }: TwoUpFeatureProps) => {
         >
           <SVG
             src={icon}
-            className="-ml-2 h-auto w-20 text-accent-blurple md:-ml-4 md:w-32 lg:col-span-6"
+            className="-ml-2 h-auto w-20 text-blurple-500 md:-ml-4 md:w-32 lg:col-span-6"
           />
           <h2 className="h4 mb-5 mt-4 lg:col-span-6">{title}</h2>
           <h2 className="sh1 mb-8 lg:col-span-6 lg:col-start-1 xl:col-span-4 xl:col-start-2">

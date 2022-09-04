@@ -333,7 +333,7 @@ const WhyMastodon = () => {
                   }}
                   className={
                     "rounded-[50%] p-1.5 " +
-                    (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
+                    (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                   }
                 ></button>
               )
@@ -405,7 +405,7 @@ const Testimonials = ({ testimonials }) => {
                     }}
                     className={
                       "rounded-[50%] p-1.5 " +
-                      (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
+                      (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                     }
                   ></button>
                 )

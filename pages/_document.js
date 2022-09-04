@@ -25,7 +25,7 @@ class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
         </Head>
-        <body>
+        <body className="bg-white">
           <Main />
           <NextScript />
         </body>
