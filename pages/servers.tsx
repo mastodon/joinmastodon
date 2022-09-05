@@ -1,5 +1,6 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query"
 import { useState, useEffect, useRef } from "react"
+import { useRouter } from "next/router"
 import { FormattedMessage, useIntl } from "react-intl"
 import SVG from "react-inlinesvg"
 import classnames from "classnames"
@@ -19,10 +20,12 @@ import Head from "next/head"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
+const DUNBAR = Math.log(800);
 
 const Servers = () => {
   const intl = useIntl()
-  const [filters, setFilters] = useState({ language: "", category: "general" })
+  const { locale } = useRouter()
+  const [filters, setFilters] = useState({ language: locale, category: "general" })
 
   const params = new URLSearchParams(filters)
   const queryOptions = {
@@ -286,7 +289,12 @@ const ServerList = ({ servers }) => {
             ? Array(8)
                 .fill(null)
                 .map((_el, i) => <ServerCard key={i} />)
-            : servers.data.map((server) => (
+            : servers.data.sort((a, b) => {
+              const aa = Math.abs(DUNBAR - Math.log(a.last_week_users));
+              const bb = Math.abs(DUNBAR - Math.log(b.last_week_users));
+
+              return aa > bb ? 1 : (aa < bb ? -1 : 0);
+            }).map((server) => (
                 <ServerCard key={server.domain} server={server} />
               ))}
         </div>
@@ -309,13 +317,13 @@ const ServerFilters = ({
   const intl = useIntl()
   return (
     <div className="md:mb-8">
-      <h3 className="h5 px-3 mb-4" id="category-group-label">
+      <h3 className="h5 md:px-3 mb-4" id="category-group-label">
         <FormattedMessage
           id="server.filter_by.category"
           defaultMessage="Topic"
         />
       </h3>
-      <ul className="flex flex-wrap gap-x-3 md:flex-col">
+      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1">
         {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (
               <li className="h-8 p-3" key={i}>
