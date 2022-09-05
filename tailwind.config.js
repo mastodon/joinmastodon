@@ -1,4 +1,5 @@
 const plugin = require("tailwindcss/plugin")
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 function rem(px) {
   return `${px / 16}rem`
@@ -70,6 +71,9 @@ const config = {
       goldenrod: "#ffbe2e",
     },
     extend: {
+      fontFamily: {
+        sans: ["Manrope", ...defaultTheme.fontFamily.sans],
+      },
       letterSpacing: {
         semiwide: ".01em",
       },
