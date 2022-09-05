@@ -23,7 +23,7 @@ import illoModeration from "../public/illustrations/features_moderation.png"
 import illoWorld from "../public/illustrations/home_sponsors_world.png"
 
 import homeHeroMobile from "../public/illustrations/home_hero_mobile.webp"
-import homeHeroDesktop from "../public/illustrations/home_hero_desktop.webp"
+import homeHeroDesktop from "../public/illustrations/home_hero_desktop.png"
 import Hero from "../components/Hero"
 import { getDirForLocale } from "../utils/locales"
 import { useRouter } from "next/router"
