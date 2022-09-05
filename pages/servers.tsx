@@ -244,7 +244,7 @@ const GettingStartedCards = () => {
           copy={
             <FormattedMessage
               id="servers.getting_started.safe_for_all.body"
-              defaultMessage="We can't control the servers, but we can control what we promote on this page. Our organization will only point you to servers that are consistently committed to moderation again racism, sexism, and transphobia."
+              defaultMessage="We can't control the servers, but we can control what we promote on this page. Our organization will only point you to servers that are consistently committed to moderation against racism, sexism, and transphobia."
             />
           }
         />

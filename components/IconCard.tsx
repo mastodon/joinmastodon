@@ -27,7 +27,7 @@ export const IconCard = ({ title, icon, copy, className }: IconCardProps) => {
       </div>
       <div className="flex flex-col gap-2 p-8 pt-0">
         <h3 className="h5">{title}</h3>
-        <p className="b2">{copy}</p>
+        <p className="b2 text-gray-1">{copy}</p>
       </div>
     </div>
   )

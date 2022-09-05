@@ -212,7 +212,7 @@ const Features = () => {
                 )}
               >
                 <h2 className="h4 md:h2 mb-2 md:mb-5">{block.title}</h2>
-                <p className="sh1 mb-8">{block.body}</p>
+                <p className="sh1 mb-8 text-gray-1">{block.body}</p>
                 {block.button}
               </div>
             </div>
@@ -430,7 +430,7 @@ const Sponsors = ({ sponsors }) => {
         </div>
 
         <div className=" lg:col-span-8 lg:col-start-3">
-          <h2 className="h2 mb-4">
+          <h2 className="h2 mb-6">
             <FormattedMessage
               id="home.sponsors.title"
               defaultMessage="Independent always"
@@ -469,7 +469,7 @@ const Sponsors = ({ sponsors }) => {
         />
       </h3>
 
-      <div className="lg:col-start-3 lg:col-end-11">
+      <div className="lg:col-start-2 lg:col-end-12">
         <SponsorLogoGroup sponsors={sponsors.platinum} />
       </div>
 

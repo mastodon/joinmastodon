@@ -90,7 +90,7 @@ function Sponsors() {
         <h2 className="h5 mb-8">
           <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
         </h2>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-y-8 gap-x-gutter">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-gutter">
           {sponsorData.silver.map((sponsor, i) => {
             if (sponsor.url) {
               return (
