@@ -196,6 +196,7 @@ const GettingStartedCards = () => {
         <IconCard
           title={<FormattedMessage id="servers" defaultMessage="Servers" />}
           icon="servers"
+          className="md:border md:border-gray-3"
           copy={
             <FormattedMessage
               id="servers.getting_started.servers"
@@ -211,6 +212,7 @@ const GettingStartedCards = () => {
             />
           }
           icon="feed"
+          className="md:border md:border-gray-3"
           copy={
             <FormattedMessage
               id="servers.getting_started.feed.body"
@@ -226,6 +228,7 @@ const GettingStartedCards = () => {
             />
           }
           icon="move-servers"
+          className="md:border md:border-gray-3"
           copy={
             <FormattedMessage
               id="servers.getting_started.flexible.body"
@@ -241,6 +244,7 @@ const GettingStartedCards = () => {
             />
           }
           icon="safety-1"
+          className="md:border md:border-gray-3"
           copy={
             <FormattedMessage
               id="servers.getting_started.safe_for_all.body"
@@ -305,7 +309,7 @@ const ServerFilters = ({
   const intl = useIntl()
   return (
     <div className="md:mb-8">
-      <h3 className="h5 mb-2" id="category-group-label">
+      <h3 className="h5 px-3 mb-4" id="category-group-label">
         <FormattedMessage
           id="server.filter_by.category"
           defaultMessage="Topic"
@@ -314,7 +318,7 @@ const ServerFilters = ({
       <ul className="flex flex-wrap gap-x-3 md:flex-col">
         {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (
-              <li className="h-8 py-2" key={i}>
+              <li className="h-8 p-3" key={i}>
                 <SkeletonText className="!h-full" />
               </li>
             ))
@@ -325,8 +329,8 @@ const ServerFilters = ({
                 <li key={i}>
                   <label
                     className={classnames(
-                      "b2 flex cursor-pointer gap-1 rounded py-1 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
-                      isActive && "!font-extrabold",
+                      "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
+                      isActive && "bg-nightshade-50 !font-extrabold",
                       item.servers_count === 0 && "text-gray-2"
                     )}
                   >
@@ -348,7 +352,7 @@ const ServerFilters = ({
                         })
                       : intl.formatMessage(categoriesMessages[item.category])}
 
-                    <span className="text-gray-2">({item.servers_count})</span>
+                    <span className={isActive ? "text-nightshade-100" : "text-gray-2"}>({item.servers_count})</span>
                   </label>
                 </li>
               )

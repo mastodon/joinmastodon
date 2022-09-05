@@ -112,7 +112,7 @@ function Sponsors() {
             defaultMessage="Additional thanks to"
           />
         </h2>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-y-4 gap-x-gutter">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1">
           {sponsors.generalHighlighted.map((sponsor) => {
             return (
               <SponsorCard
