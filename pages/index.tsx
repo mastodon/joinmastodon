@@ -123,7 +123,7 @@ const Features = () => {
           body: (
             <FormattedMessage
               id="home.features.timeline.body"
-              defaultMessage="Decentralized social media is created and maintained by its users, making you the owner of your feed. You can be as public or as private as you like and curate your own experience."
+              defaultMessage="You know best what you want to see on your home feed. No algorithms or ads to waste your time. Follow anyone across any Mastodon server from a single account and receive their posts in chronological order, and make your corner of the internet a little more like you."
             />
           ),
           button: (
@@ -143,13 +143,13 @@ const Features = () => {
           title: (
             <FormattedMessage
               id="home.features.audience.title"
-              defaultMessage="Build your audience"
+              defaultMessage="Build your audience in confidence"
             />
           ),
           body: (
             <FormattedMessage
               id="home.features.audience.body"
-              defaultMessage="Joining a server on Mastodon provides you with the power to communicate with any server across the globe. Meet like-minded people and make your corner of the internet a little more like you. Need more from Mastodon? Host your own server."
+              defaultMessage="Mastodon provides you with a unique possibility of managing your audience without middlemen. Mastodon deployed on your own infrastructure allows you to follow and be followed from any other Mastodon server online and is under no one's control but yours."
             />
           ),
           button: (
@@ -175,7 +175,7 @@ const Features = () => {
           body: (
             <FormattedMessage
               id="home.features.moderation.body"
-              defaultMessage="Mastodon puts decision making back in the hands of the people. Each server creates their own rules and regulations, which are enforced locally and not top-down like corporate social media. Self-hosting grants even more control by letting you decide the rules."
+              defaultMessage="Mastodon puts decision making back in your hands. Each server creates their own rules and regulations, which are enforced locally and not top-down like corporate social media, making it the most flexible in responding to the needs of different groups of people. Join a server with the rules you agree with, or host your own."
             />
           ),
           button: (
@@ -188,6 +188,29 @@ const Features = () => {
           ),
           image: illoModeration,
         },
+        {
+          title: (
+            <FormattedMessage
+              id="home.features.self_expression.title"
+              defaultMessage="Unparalleled creativity"
+            />
+          ),
+          body: (
+            <FormattedMessage
+              id="home.features.self_expression.body"
+              defaultMessage="Mastodon supports audio, video and picture posts, accessibility descriptions, polls, content warnings, animated avatars, custom emojis, thumbnail crop control, and more, to help you express yourself online. Whether you're publishing your art, your music, or your podcast, Mastodon is there for you."
+            />
+          ),
+          button: (
+            <LinkButton size="large" href="https://docs.joinmastodon.org/user/posting/">
+              <FormattedMessage
+                id="home.features.button.learn_more"
+                defaultMessage="Learn more"
+              />
+            </LinkButton>
+          ),
+          image: illoModeration,
+        }
       ].map((block, i) => {
         const isOdd = i % 2 != 0
         return (
