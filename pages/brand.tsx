@@ -22,7 +22,7 @@ const BrandSection = ({ title, copy, ctas, preview }) => (
 
 /** This page does not require translations */
 const Brand = () => (
-  <div dir="ltr" className="[unicode-bidi:plaintext]">
+  <div dir="ltr" className="[unicode-bidi:plaintext] -mb-footer-offset">
     <Hero>
       <h1 className="h1 mb-4">Brand Toolkit</h1>
       <p className="sh1">
@@ -86,7 +86,7 @@ const Brand = () => (
         </LinkButton>
       }
       preview={
-        <div className="grid gap-gutter sm:grid-cols-2">
+        <div className="grid gap-gutter sm:grid-cols-2 pb-footer-offset">
           <img
             className="w-full flex-auto"
             src="/samples/sample-toot.svg"
