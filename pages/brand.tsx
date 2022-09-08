@@ -5,13 +5,18 @@ import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import classNames from "classnames"
 
-const BrandSection = ({ title, copy, ctas, preview }) => (
+const BrandSection = ({ title, copy, ctas, preview }: {
+  title: React.ReactNode | string
+  copy: React.ReactNode
+  ctas?: React.ReactNode
+  preview: React.ReactNode
+}) => (
   <section className="text-center">
     <div className="full-width-bg">
       <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
         <h2 className="h1 mb-8 max-w-[17ch] md:mb-12">{title}</h2>
         <div className="b1 mb-12 flex max-w-[50ch] flex-col gap-8">{copy}</div>
-        <div className="flex justify-center gap-12">{ctas}</div>
+        {ctas && <div className="flex justify-center gap-12">{ctas}</div>}
       </div>
     </div>
     <div className="full-width-bg flex flex-col items-center justify-center bg-gray-5 py-20">
@@ -39,36 +44,26 @@ const Brand = () => (
           please keep it tasteful!
         </p>
       }
-      ctas={
-        <>
-          <LinkButton size="large" href="">
-            Download SVG
-          </LinkButton>
-          <LinkButton size="large" href="" light>
-            Download PNG
-          </LinkButton>
-        </>
-      }
       preview={
         <div className="grid grid-cols-12 gap-gutter">
-          <div className="col-span-4 md:col-span-3 grid aspect-square items-center justify-center rounded bg-eggplant p-8 md:col-start-3">
+          <a download href="/logos/logo-purple.svg" className="col-span-4 md:col-span-3 grid aspect-square items-center justify-center rounded bg-eggplant p-8 md:col-start-3">
             <img src="/logos/logo-purple.svg" alt="" />
-          </div>
-          <div className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-eggplant p-8">
+          </a>
+          <a download href="/logos/logo-full-purple.svg" className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-eggplant p-8">
             <img src="/logos/logo-full-purple.svg" alt="" />
-          </div>
-          <div className="col-span-4 md:col-span-3 grid aspect-square items-center justify-center rounded bg-gray-1 p-8 md:col-start-3">
+          </a>
+          <a download href="/logos/logo-white.svg" className="col-span-4 md:col-span-3 grid aspect-square items-center justify-center rounded bg-gray-1 p-8 md:col-start-3">
             <img src="/logos/logo-white.svg" alt="" />
-          </div>
-          <div className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-gray-1 p-8">
+          </a>
+          <a download href="/logos/logo-full-white.svg" className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-gray-1 p-8">
             <img src="/logos/logo-full-white.svg" alt="" />
-          </div>
-          <div className="col-span-4 md:col-span-3 grid aspect-square items-center justify-center rounded bg-gray-3 p-8 md:col-start-3">
+          </a>
+          <a download href="/logos/logo-black.svg" className="col-span-4 md:col-span-3 grid aspect-square items-center justify-center rounded bg-gray-3 p-8 md:col-start-3">
             <img src="/logos/logo-black.svg" alt="" />
-          </div>
-          <div className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-gray-3 p-8">
+          </a>
+          <a download href="/logos/logo-full-black.svg" className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-gray-3 p-8">
             <img src="/logos/logo-full-black.svg" alt="" />
-          </div>
+          </a>
         </div>
       }
     />
