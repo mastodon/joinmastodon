@@ -16,10 +16,8 @@ export const Layout = ({ children }) => {
       <main id="main">{children}</main>
       <Footer />
       <Head>
-        <meta
-          property="og:image"
-          content="https://joinmastodon.org/preview.jpg"
-        />
+        <meta property="og:image" content="https://joinmastodon.org/preview.png" />
+        <meta property="twitter:card" content="summary_large_image" />
       </Head>
     </div>
   )

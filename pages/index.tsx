@@ -73,35 +73,12 @@ function Home() {
       <Sponsors sponsors={{ platinum, additionalFunding }} />
       <Head>
         <title>
-          {intl.formatMessage({
+          Mastodon - {intl.formatMessage({
             id: "home.page_title",
-            defaultMessage: "Giving social networking back to you",
-          })}{" "}
-          - Mastodon
+            defaultMessage: "Decentralized social media",
+          })}
         </title>
-        <meta
-          property="og:title"
-          content={intl.formatMessage({
-            id: "home.page_title",
-            defaultMessage: "Giving social networking back to you",
-          })}
-        />
-        <meta
-          name="description"
-          content={intl.formatMessage({
-            id: "default.page_description",
-            defaultMessage:
-              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
-          })}
-        />
-        <meta
-          property="og:description"
-          content={intl.formatMessage({
-            id: "default.page_description",
-            defaultMessage:
-              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
-          })}
-        />
+        <meta property="og:title" content={`Mastodon - ${intl.formatMessage({ id: "home.page_title", defaultMessage: "Decentralized social media" })}`} />
       </Head>
     </>
   )
