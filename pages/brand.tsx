@@ -34,7 +34,7 @@ const Brand = () => (
       title="Our Logos"
       copy={
         <p>
-          We take pride in the Mastodon logo and hope you do too. Please take a
+          We take pride in the Mastodon logo and hope you do too. Please&nbsp;take a
           moment to think about how you apply it. If you want to use our art,
           please keep it tasteful!
         </p>
@@ -76,7 +76,7 @@ const Brand = () => (
       title="Sample toots!"
       copy={
         <p>
-          If you’d like to make a mockup of a toot for media or news, please use
+          If you’d like to make a mockup of a toot for media or news, please&nbsp;use
           the template below to get an accurate
         </p>
       }
