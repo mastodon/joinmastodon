@@ -74,6 +74,9 @@ const config = {
       fontFamily: {
         sans: ["Manrope", ...defaultTheme.fontFamily.sans],
       },
+      fontWeight: {
+        extranormal: 450,
+      },
       letterSpacing: {
         semiwide: ".01em",
       },

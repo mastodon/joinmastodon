@@ -177,7 +177,7 @@ const Header = () => {
                   <Link href={item.value}>
                     <a
                       className={classNames(
-                        "block whitespace-nowrap rounded-md p-3 px-5 text-h5 md:text-b2",
+                        "block whitespace-nowrap rounded-md p-3 px-5 text-h5 md:text-b2 font-medium",
                         item.active && "font-extrabold"
                       )}
                       aria-current={item.active ? "page" : undefined}
