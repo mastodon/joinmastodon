@@ -90,7 +90,7 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
           label={
             <FormattedMessage id="sorting.sort_by" defaultMessage="Sort" />
           }
-          value="all"
+          value={sortOption}
           onChange={(v) => {
             setSortOption(v)
           }}

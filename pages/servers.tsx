@@ -113,7 +113,7 @@ const Servers = () => {
         <p className="sh1 mb-14 max-w-[36ch]">
           <FormattedMessage
             id="servers.hero.body"
-            defaultMessage="Find your community here on the servers page. New here? <b>Check out the help section below.</b>"
+            defaultMessage="Find where to sign up here on the servers page. New here? <b>Check out the help section below.</b>"
             values={{
               b: (text) => <b>{text}</b>,
             }}
