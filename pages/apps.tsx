@@ -32,8 +32,8 @@ const AppsPage = () => {
 
                 <p className="sh1">
                   <FormattedMessage
-                    id="ios_and_android.download.body"
-                    defaultMessage="We've released official apps for Mastodon on iOS and Android, in addition to the web version and all the third-party apps available below."
+                    id="apps.lead"
+                    defaultMessage="The best way to get started with Mastodon is through our official apps for iOS and Android, but many third-party apps are also available below."
                   />
                 </p>
               </div>

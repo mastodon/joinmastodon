@@ -75,7 +75,7 @@ export const Footer = () => (
                   rel="noopener noreferrer"
                   href="https://github.com/mastodon/mastodon"
                 >
-                  <FormattedMessage id="nav.code.title" defaultMessage="Code" />
+                  <FormattedMessage id="nav.code.title" defaultMessage="Source code" />
                 </a>,
                 <a
                   className="inline-block py-2 hover:underline"
@@ -119,16 +119,14 @@ export const Footer = () => (
                     />
                   </a>
                 </Link>,
-                <a
-                  className="inline-block py-2 hover:underline"
-                  key="/press-kit.zip"
-                  href="/press-kit.zip"
-                >
-                  <FormattedMessage
-                    id="nav.press_kit.title"
-                    defaultMessage="Press kit"
-                  />
-                </a>,
+                <Link key="/branding" href="/branding">
+                  <a className="inline-block py-2 hover:underline">
+                    <FormattedMessage
+                      id="nav.branding.title"
+                      defaultMessage="Branding"
+                    />
+                  </a>
+                </Link>,
                 <Link key="/privacy-policy" href="/privacy-policy">
                   <a className="inline-block py-2 hover:underline">
                     <FormattedMessage

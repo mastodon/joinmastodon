@@ -34,21 +34,27 @@ const Header = () => {
         {
           value: "https://blog.joinmastodon.org/",
           label: <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />,
-          description: <FormattedMessage id="nav.blog.description" defaultMessage="Mastodon news and updates" />,
+          description: <FormattedMessage id="nav.blog.description" defaultMessage="Get the latest news about the platform" />,
         }, {
           value: "https://docs.joinmastodon.org",
           label: <FormattedMessage id="nav.docs.title" defaultMessage="Documentation" />,
-          description: <FormattedMessage id="nav.docs.description" defaultMessage="API reference and technical overview" />,
+          description: <FormattedMessage id="nav.docs.description" defaultMessage="Learn how Mastodon works in-depth" />,
         }, {
           value: "https://github.com/mastodon/mastodon/discussions",
           label: <FormattedMessage id="nav.support.title" defaultMessage="Support" />,
-          description: <FormattedMessage id="nav.support.description" defaultMessage="Q&A and community discussions on GitHub" />,
+          description: <FormattedMessage id="nav.support.description" defaultMessage="Get help or suggest a feature on GitHub" />,
         }, {
-          value: "https://github.com/mastodon/mastodon",
-          label: <FormattedMessage id="nav.code.title" defaultMessage="Code" />,
-          description: <FormattedMessage id="nav.code.description" defaultMessage="Source code for Mastodon on GitHub" />,
+          value: "/branding",
+          label: <FormattedMessage id="nav.branding.title" defaultMessage="Branding" />,
+          description: <FormattedMessage id="nav.branding.description" defaultMessage="Download our logos and learn how to use them" />,
         },
       ],
+      footer: {
+        value: "https://github.com/mastodon/mastodon",
+        label: <FormattedMessage id="nav.code.action" defaultMessage="Browse code" />,
+        title: <FormattedMessage id="nav.code.title" defaultMessage="Source code" />,
+        description: <FormattedMessage id="nav.code.description" defaultMessage="Mastodon is free and open-source software" />,
+      },
     }, {
       key: "locale",
       label: <span aria-label={intl.formatMessage({
@@ -134,43 +140,57 @@ const Header = () => {
                       />
                     </button>
 
-                    <ul
+                    <div
                       className={classNames(
                         "top-full rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:text-black md:shadow-lg md:bg-white",
                         openMenuIndex === itemIndex
-                          ? "md:grid overflow-auto"
-                          : "hidden",
-                        item.compact ? "py-2 md:px-2" : "py-2 md:px-3 md:py-4 w-screen max-w-md md:grid-cols-2 md:gap-6"
+                          ? "overflow-auto"
+                          : "hidden"
                       )}
                     >
-                      {item.childItems.map((child, childIndex) => (
-                        // Child Items
-                        <li key={child.key || child.value}>
-                          <Link
-                            href={child.value}
-                            locale={child.locale || undefined}
-                            scroll={child.scroll ?? true}
-                          >
-                            <a
-                              {...bindSecondaryMenuItem(child)}
-                              className={classNames(
-                                "block rounded-md hover:bg-eggplant hover:md:bg-nightshade-50",
-                                item.compact
-                                  ? "py-2 px-5 md:px-4"
-                                  : "py-3 px-5 md:px-4",
-                                (item.compact && child.active) && "font-extrabold"
-                              )}
-                              aria-current={child.active ? "page" : undefined}
+                      <ul className={classNames(item.compact ? "py-2 md:px-2" : "md:grid py-2 md:px-3 md:py-4 w-screen max-w-md md:max-w-lg md:grid-cols-2 md:gap-6")}>
+                        {item.childItems.map((child, childIndex) => (
+                          // Child Items
+                          <li key={child.key || child.value}>
+                            <Link
+                              href={child.value}
+                              locale={child.locale || undefined}
+                              scroll={child.scroll ?? true}
                             >
-                              <span className={classNames("block", !item.compact && "font-extrabold")}>{child.label}</span>
-                              <span className="mt-1 block text-gray-1">
-                                {child.description}
-                              </span>
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                              <a
+                                {...bindSecondaryMenuItem(child)}
+                                className={classNames(
+                                  "block rounded-md hover:md:bg-nightshade-50",
+                                  item.compact
+                                    ? "py-2 px-5 md:px-4"
+                                    : "py-3 px-5 md:px-4",
+                                  (item.compact && child.active) && "font-extrabold"
+                                )}
+                                aria-current={child.active ? "page" : undefined}
+                              >
+                                <span className={classNames("block", !item.compact && "font-extrabold")}>{child.label}</span>
+                                <span className="mt-1 block font-extranormal text-gray-1">
+                                  {child.description}
+                                </span>
+                              </a>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {item.footer && (
+                        <div className="md:bg-gray-4 md:p-4">
+                          <a href={item.footer.value} className="px-5 py-3 group rounded-md md:p-2 flex items-center justify-between">
+                            <span>
+                              <span className="font-extrabold">{item.footer.title}</span>
+                              <span className="block mt-1 font-extranormal text-gray-1">{item.footer.description}</span>
+                            </span>
+
+                            <span className="hidden border-2 border-blurple-500 bg-blurple-500 text-white rounded-md b3 h-12 md:flex items-center justify-center p-4 !font-semibold transition-colors group-hover:bg-blurple-600 group-hover:border-blurple-600">{item.footer.label}</span>
+                          </a>
+                        </div>
+                      )}
+                    </div>
                   </>
                 ) : (
                   // Top-level Link
