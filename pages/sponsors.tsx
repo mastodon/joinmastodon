@@ -19,7 +19,7 @@ function Sponsors() {
         <p className="sh1 lg:col-start-2 lg:col-end-6">
           <FormattedMessage
             id="sponsors.hero.body"
-            defaultMessage="You can back us on a monthly basis through Patreon or pledge to become a sponsor through our link below. We are grateful for the companies and people who make mastodon possible."
+            defaultMessage="You can back us on a monthly basis through Patreon or pledge to become a sponsor through our own platform. We are grateful for the companies and people who make Mastodon possible."
           />
         </p>
       </Hero>

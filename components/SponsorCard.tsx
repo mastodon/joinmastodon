@@ -20,7 +20,7 @@ const SponsorCard = ({ sponsor, tier }) => {
         ))}
 
       <div className="flex flex-col justify-center">
-        <span className={classNames("c2 !leading-[1.5]", tier === "generalHighlighted" ? "text-nightshade-100" : "text-gray-1")}>
+        <span className={classNames("b3 !leading-[1.5]", tier === "generalHighlighted" ? "text-nightshade-100" : "text-gray-1")}>
           {tier === "silver" ? (
             <FormattedMessage
               id="silver_sponsor"
@@ -31,7 +31,7 @@ const SponsorCard = ({ sponsor, tier }) => {
           )}
         </span>
 
-        <p className="b3">{sponsor.name || sponsor}</p>
+        <p className="b2 !font-semibold truncate">{sponsor.name || sponsor}</p>
       </div>
     </div>
   )

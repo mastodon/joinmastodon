@@ -15,7 +15,7 @@ export const Footer = () => (
           <p className="mt-2"><FormattedMessage id="footer.quip" defaultMessage="Free, open-source decentralized social media platform." /></p>
         </div>
 
-        <div className="grid gap-10 gap-x-4 md:col-start-4 md:col-end-13 md:grid-cols-3 md:gap-x-5 lg:col-start-6 lg:col-end-12">
+        <div className="grid gap-10 gap-x-4 md:col-start-6 md:col-end-13 md:grid-cols-3 md:gap-x-5">
           {[
             {
               heading: (
@@ -61,21 +61,21 @@ export const Footer = () => (
               links: [
                 <a
                   className="inline-block py-2 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key="https://blog.joinmastodon.org"
-                  href="https://blog.joinmastodon.org/"
-                >
-                  <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />
-                </a>,
-                <a
-                  className="inline-block py-2 hover:underline"
                   key="mastodon/mastodon"
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/mastodon/mastodon"
                 >
                   <FormattedMessage id="nav.code.title" defaultMessage="Source code" />
+                </a>,
+                <a
+                  className="inline-block py-2 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key="https://blog.joinmastodon.org"
+                  href="https://blog.joinmastodon.org/"
+                >
+                  <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />
                 </a>,
                 <a
                   className="inline-block py-2 hover:underline"
@@ -111,11 +111,11 @@ export const Footer = () => (
                 />
               ),
               links: [
-                <Link key="/imprint" href="/imprint">
+                <Link key="/about" href="/about">
                   <a className="inline-block py-2 hover:underline">
                     <FormattedMessage
-                      id="nav.contact_us.title"
-                      defaultMessage="Contact us"
+                      id="nav.about_us.title"
+                      defaultMessage="About us"
                     />
                   </a>
                 </Link>,
@@ -127,14 +127,20 @@ export const Footer = () => (
                     />
                   </a>
                 </Link>,
-                <Link key="/privacy-policy" href="/privacy-policy">
+                <Link key="/impressum" href="/impressum">
                   <a className="inline-block py-2 hover:underline">
                     <FormattedMessage
-                      id="nav.privacy_policy.title"
-                      defaultMessage="Privacy policy"
+                      id="nav.impressum.title"
+                      defaultMessage="Impressum"
                     />
                   </a>
                 </Link>,
+                <a key="contact-us" href="mailto:hello@joinmastodon.org" className="inline-block py-2 hover:underline">
+                  <FormattedMessage
+                    id="nav.contact_us.title"
+                    defaultMessage="Contact us"
+                  />
+                </a>
               ],
             },
           ].map((menu, i) => (
@@ -153,7 +159,7 @@ export const Footer = () => (
       <hr className="my-6 border-nightshade-600 sm:mx-auto lg:my-8" />
 
       <div className="sm:flex sm:items-center sm:justify-between">
-        <span className="text-nightshade-100 text-center md:text-start">Copyright © 2022 Mastodon gGmbH. <Link href="/"><a className="hover:underline"><FormattedMessage id="footer.trademark_policy" defaultMessage="Trademark Policy" /></a></Link></span>
+        <span className="text-nightshade-100 text-center md:text-start">Copyright © 2022 Mastodon gGmbH. <Link href="/privacy-policy"><a className="hover:underline"><FormattedMessage id="nav.privacy_policy.title" defaultMessage="Privacy Policy" /></a></Link></span>
 
         <div className="flex justify-center mt-4 md:space-x-6 md:mt-0">
           <a href="https://mastodon.social/@Mastodon" rel="me" className="text-nightshade-100 hover:text-nightshade-50">
