@@ -65,10 +65,10 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
               <label
                 key={category.key}
                 className={classNames(
-                  "b3 block cursor-pointer whitespace-nowrap rounded border-2 p-4 text-center !font-600 transition-all md:w-full",
+                  "b3 block cursor-pointer whitespace-nowrap rounded border-2 p-4 text-center !font-semibold transition-all md:w-full",
                   category.key === activeCategory
-                    ? "border-accent-blurple bg-accent-blurple text-white hover:border-dark-blurple hover:bg-dark-blurple focus-visible-within:border-dark-blurple focus-visible-within:bg-dark-blurple"
-                    : "border-accent-blurple bg-white text-accent-blurple hover:border-dark-blurple hover:text-dark-blurple"
+                    ? "border-blurple-500 bg-blurple-500 text-white hover:border-dark-blurple hover:bg-dark-blurple focus-visible-within:border-dark-blurple focus-visible-within:bg-dark-blurple"
+                    : "border-blurple-500 bg-white text-blurple-500 hover:border-dark-blurple hover:text-dark-blurple"
                 )}
               >
                 <input
@@ -90,7 +90,7 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
           label={
             <FormattedMessage id="sorting.sort_by" defaultMessage="Sort" />
           }
-          value="all"
+          value={sortOption}
           onChange={(v) => {
             setSortOption(v)
           }}

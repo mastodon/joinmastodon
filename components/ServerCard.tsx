@@ -42,7 +42,7 @@ const ServerCard = ({ server }: { server?: Server }) => {
       </div>
 
       <div className="pb-5">
-        <p className="b3 mt-4 mb-2 !font-600 uppercase text-gray-2">
+        <p className="b3 mt-4 mb-2 !font-semibold uppercase text-gray-2">
           {server ? (
             <>
               <span>

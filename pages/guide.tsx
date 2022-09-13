@@ -9,7 +9,7 @@ import AppHero from "../components/AppHero"
 import React, { useState } from "react"
 import Hero from "../components/Hero"
 import LinkButton from "../components/LinkButton"
-import { theme } from "../tailwind.config.js"
+import { theme, safelist } from "../tailwind.config.js"
 import { AppCard } from "../components/AppCard"
 
 import tusky from "../public/apps/tusky.png"
@@ -68,13 +68,30 @@ function Guide(props) {
           ))}
         </GuideSection>
         <GuideSection title="Colors">
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
-            {Object.keys(theme.colors).map((color) => (
-              <div key={color} className="flex items-center gap-4">
-                <div
-                  className={`h-12 w-12 flex-shrink-0 rounded bg-${color} border-2 border-solid border-[rgba(0,0,0,0.1)] bg-clip-border`}
-                />
-                <div className="b2">{color.replace("bg-", "")}</div>
+          <div className="grid grid-cols-1 gap-8">
+            {Object.keys(theme.colors).map(color => (
+              <div key={color}>
+                <div className="flex space-x-4">
+                  <div className="w-24 shrink-0">
+                    <div className="h-10 flex flex-col justify-center">
+                      <div className="font-semibold">{color}</div>
+                    </div>
+                  </div>
+
+                  <div className="min-w-0 flex-0 grid grid-cols-6 gap-x-4 gap-y-3">
+                    {(typeof theme.colors[color] === "string" ? [""] : Object.keys(theme.colors[color])).map(stage => (
+                      <div key={stage} className="relative flex">
+                        <div className="space-y-1.5">
+                          <div className={`h-10 w-full rounded bg-${color}${stage === "" ? "" : `-${stage}`} border-2 border-solid border-[rgba(0,0,0,0.1)] bg-clip-border`} />
+                          <div className="px-0.5">
+                            <div className="w-20 font-medium">{stage || "-"}</div>
+                            <div className="text-gray-2 font-mono lowercase">{theme.colors[color][stage] || theme.colors[color]}</div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>

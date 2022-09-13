@@ -23,7 +23,7 @@ const PrivacyPolicy = () => (
           policy through its website.
         </p>
 
-        <hr className="my-8" />
+        <hr className="my-8 border-gray-3" />
 
         <p>
           <strong>

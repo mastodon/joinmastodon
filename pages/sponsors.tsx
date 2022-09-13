@@ -19,7 +19,7 @@ function Sponsors() {
         <p className="sh1 lg:col-start-2 lg:col-end-6">
           <FormattedMessage
             id="sponsors.hero.body"
-            defaultMessage="You can back us on a monthly basis through Patreon or pledge to become a sponsor through our link below. We are grateful for the companies and people who make mastodon possible."
+            defaultMessage="You can back us on a monthly basis through Patreon or pledge to become a sponsor through our own platform. We are grateful for the companies and people who make Mastodon possible."
           />
         </p>
       </Hero>
@@ -90,7 +90,7 @@ function Sponsors() {
         <h2 className="h5 mb-8">
           <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
         </h2>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-y-8 gap-x-gutter">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-gutter">
           {sponsorData.silver.map((sponsor, i) => {
             if (sponsor.url) {
               return (
@@ -112,7 +112,7 @@ function Sponsors() {
             defaultMessage="Additional thanks to"
           />
         </h2>
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-y-4 gap-x-gutter">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1">
           {sponsors.generalHighlighted.map((sponsor) => {
             return (
               <SponsorCard
@@ -147,17 +147,17 @@ function Sponsors() {
         <meta
           name="description"
           content={intl.formatMessage({
-            id: "default.page_description",
+            id: "sponsors.page_description",
             defaultMessage:
-              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
+              "View people and companies who crowdfund the development of the decentralized, open-source social media platform Mastodon.",
           })}
         />
         <meta
           property="og:description"
           content={intl.formatMessage({
-            id: "default.page_description",
+            id: "sponsors.page_description",
             defaultMessage:
-              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
+              "View people and companies who crowdfund the development of the decentralized, open-source social media platform Mastodon.",
           })}
         />
       </Head>

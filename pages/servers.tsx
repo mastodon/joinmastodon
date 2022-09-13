@@ -1,5 +1,6 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query"
 import { useState, useEffect, useRef } from "react"
+import { useRouter } from "next/router"
 import { FormattedMessage, useIntl } from "react-intl"
 import SVG from "react-inlinesvg"
 import classnames from "classnames"
@@ -19,10 +20,12 @@ import Head from "next/head"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
+const DUNBAR = Math.log(800);
 
 const Servers = () => {
   const intl = useIntl()
-  const [filters, setFilters] = useState({ language: "", category: "general" })
+  const { locale } = useRouter()
+  const [filters, setFilters] = useState({ language: locale, category: "general" })
 
   const params = new URLSearchParams(filters)
   const queryOptions = {
@@ -110,7 +113,7 @@ const Servers = () => {
         <p className="sh1 mb-14 max-w-[36ch]">
           <FormattedMessage
             id="servers.hero.body"
-            defaultMessage="Find your community here on the servers page. New here? <b>Check out the help section below.</b>"
+            defaultMessage="Find where to sign up here on the servers page. New here? <b>Check out the help section below.</b>"
             values={{
               b: (text) => <b>{text}</b>,
             }}
@@ -154,16 +157,32 @@ const Servers = () => {
       <Head>
         <title>
           {intl.formatMessage({
-            id: "wizard_navigation.choosing_a_community",
-            defaultMessage: "Choosing a server",
+            id: "servers.page_title",
+            defaultMessage: "Servers",
           })}{" "}
           - Mastodon
         </title>
         <meta
           property="og:title"
           content={intl.formatMessage({
-            id: "wizard_navigation.choosing_a_community",
-            defaultMessage: "Choosing a server",
+            id: "servers.page_title",
+            defaultMessage: "Servers of Mastodon",
+          })}
+        />
+        <meta
+          name="description"
+          content={intl.formatMessage({
+            id: "servers.page_description",
+            defaultMessage:
+              "Find where to sign up for the decentralized social network Mastodon.",
+          })}
+        />
+        <meta
+          property="og:description"
+          content={intl.formatMessage({
+            id: "servers.page_description",
+            defaultMessage:
+              "Find where to sign up for the decentralized social network Mastodon.",
           })}
         />
       </Head>
@@ -196,10 +215,11 @@ const GettingStartedCards = () => {
         <IconCard
           title={<FormattedMessage id="servers" defaultMessage="Servers" />}
           icon="servers"
+          className="md:border md:border-gray-3"
           copy={
             <FormattedMessage
               id="servers.getting_started.servers"
-              defaultMessage="The first step is deciding which network you’d like to be a part of. Every server is operated by an independent organization or individual and the server you choose will host your account."
+              defaultMessage="The first step is deciding which server you’d like to make your account on. Every server is operated by an independent organization or individual and may differ in moderation policies."
             />
           }
         />
@@ -211,10 +231,11 @@ const GettingStartedCards = () => {
             />
           }
           icon="feed"
+          className="md:border md:border-gray-3"
           copy={
             <FormattedMessage
               id="servers.getting_started.feed.body"
-              defaultMessage="Once you join a server, you can curate your home feed by browsing locally, following and talking with people from other servers, or explore trending posts from any publically available server."
+              defaultMessage="With an account on your server, you can follow any other person on the network, regardless of where their account is hosted. You will see their posts in your home feed, and if they follow you, they will see yours in theirs."
             />
           }
         />
@@ -226,6 +247,7 @@ const GettingStartedCards = () => {
             />
           }
           icon="move-servers"
+          className="md:border md:border-gray-3"
           copy={
             <FormattedMessage
               id="servers.getting_started.flexible.body"
@@ -241,10 +263,11 @@ const GettingStartedCards = () => {
             />
           }
           icon="safety-1"
+          className="md:border md:border-gray-3"
           copy={
             <FormattedMessage
               id="servers.getting_started.safe_for_all.body"
-              defaultMessage="Actively working to eliminate hate speech, our organization will only point you to servers that are consistently committed to moderation again racism, sexism, and transphobia."
+              defaultMessage="We can't control the servers, but we can control what we promote on this page. Our organization will only point you to servers that are consistently committed to moderation against racism, sexism, and transphobia."
             />
           }
         />
@@ -282,7 +305,12 @@ const ServerList = ({ servers }) => {
             ? Array(8)
                 .fill(null)
                 .map((_el, i) => <ServerCard key={i} />)
-            : servers.data.map((server) => (
+            : servers.data.sort((a, b) => {
+              const aa = Math.abs(DUNBAR - Math.log(a.last_week_users));
+              const bb = Math.abs(DUNBAR - Math.log(b.last_week_users));
+
+              return aa > bb ? 1 : (aa < bb ? -1 : 0);
+            }).map((server) => (
                 <ServerCard key={server.domain} server={server} />
               ))}
         </div>
@@ -305,16 +333,16 @@ const ServerFilters = ({
   const intl = useIntl()
   return (
     <div className="md:mb-8">
-      <h3 className="h5 mb-2" id="category-group-label">
+      <h3 className="h5 md:px-3 mb-4" id="category-group-label">
         <FormattedMessage
           id="server.filter_by.category"
           defaultMessage="Topic"
         />
       </h3>
-      <ul className="flex flex-wrap gap-x-3 md:flex-col">
+      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1">
         {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (
-              <li className="h-8 py-2" key={i}>
+              <li className="h-8 p-3" key={i}>
                 <SkeletonText className="!h-full" />
               </li>
             ))
@@ -325,8 +353,8 @@ const ServerFilters = ({
                 <li key={i}>
                   <label
                     className={classnames(
-                      "b2 flex cursor-pointer gap-1 rounded py-1 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-accent-blurple",
-                      isActive && "!font-800",
+                      "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
+                      isActive && "bg-nightshade-50 !font-extrabold",
                       item.servers_count === 0 && "text-gray-2"
                     )}
                   >
@@ -348,7 +376,7 @@ const ServerFilters = ({
                         })
                       : intl.formatMessage(categoriesMessages[item.category])}
 
-                    <span className="text-gray-2">({item.servers_count})</span>
+                    <span className={isActive ? "text-nightshade-100" : "text-gray-2"}>({item.servers_count})</span>
                   </label>
                 </li>
               )
