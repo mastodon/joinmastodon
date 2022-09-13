@@ -157,16 +157,32 @@ const Servers = () => {
       <Head>
         <title>
           {intl.formatMessage({
-            id: "wizard_navigation.choosing_a_community",
-            defaultMessage: "Choosing a server",
+            id: "servers.page_title",
+            defaultMessage: "Servers",
           })}{" "}
           - Mastodon
         </title>
         <meta
           property="og:title"
           content={intl.formatMessage({
-            id: "wizard_navigation.choosing_a_community",
-            defaultMessage: "Choosing a server",
+            id: "servers.page_title",
+            defaultMessage: "Servers of Mastodon",
+          })}
+        />
+        <meta
+          name="description"
+          content={intl.formatMessage({
+            id: "servers.page_description",
+            defaultMessage:
+              "Find where to sign up for the decentralized social network Mastodon.",
+          })}
+        />
+        <meta
+          property="og:description"
+          content={intl.formatMessage({
+            id: "servers.page_description",
+            defaultMessage:
+              "Find where to sign up for the decentralized social network Mastodon.",
           })}
         />
       </Head>

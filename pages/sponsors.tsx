@@ -147,17 +147,17 @@ function Sponsors() {
         <meta
           name="description"
           content={intl.formatMessage({
-            id: "default.page_description",
+            id: "sponsors.page_description",
             defaultMessage:
-              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
+              "View people and companies who crowdfund the development of the decentralized, open-source social media platform Mastodon.",
           })}
         />
         <meta
           property="og:description"
           content={intl.formatMessage({
-            id: "default.page_description",
+            id: "sponsors.page_description",
             defaultMessage:
-              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
+              "View people and companies who crowdfund the development of the decentralized, open-source social media platform Mastodon.",
           })}
         />
       </Head>
