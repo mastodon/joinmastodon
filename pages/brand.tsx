@@ -46,22 +46,46 @@ const Brand = () => (
       }
       preview={
         <div className="grid grid-cols-12 gap-gutter">
-          <a download href="/logos/logo-purple.svg" className="col-span-4 md:col-span-3 grid aspect-square h-full items-center justify-center rounded bg-eggplant p-8 md:col-start-3">
+          <a
+            download
+            href="/logos/logo-purple.svg"
+            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-eggplant p-8 md:col-span-3 md:col-start-3"
+          >
             <img src="/logos/logo-purple.svg" alt="" />
           </a>
-          <a download href="/logos/logo-full-purple.svg" className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-eggplant p-8">
+          <a
+            download
+            href="/logos/logo-full-purple.svg"
+            className="col-span-8 grid items-center justify-center rounded bg-eggplant p-8 md:col-span-5"
+          >
             <img src="/logos/logo-full-purple.svg" alt="" />
           </a>
-          <a download href="/logos/logo-white.svg" className="col-span-4 md:col-span-3 grid aspect-square h-full items-center justify-center rounded bg-gray-1 p-8 md:col-start-3">
+          <a
+            download
+            href="/logos/logo-white.svg"
+            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-1 p-8 md:col-span-3 md:col-start-3"
+          >
             <img src="/logos/logo-white.svg" alt="" />
           </a>
-          <a download href="/logos/logo-full-white.svg" className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-gray-1 p-8">
+          <a
+            download
+            href="/logos/logo-full-white.svg"
+            className="col-span-8 grid items-center justify-center rounded bg-gray-1 p-8 md:col-span-5"
+          >
             <img src="/logos/logo-full-white.svg" alt="" />
           </a>
-          <a download href="/logos/logo-black.svg" className="col-span-4 md:col-span-3 grid aspect-square h-full items-center justify-center rounded bg-gray-3 p-8 md:col-start-3">
+          <a
+            download
+            href="/logos/logo-black.svg"
+            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-3 p-8 md:col-span-3 md:col-start-3"
+          >
             <img src="/logos/logo-black.svg" alt="" />
           </a>
-          <a download href="/logos/logo-full-black.svg" className="col-span-8 md:col-span-5 grid items-center justify-center rounded bg-gray-3 p-8">
+          <a
+            download
+            href="/logos/logo-full-black.svg"
+            className="col-span-8 grid items-center justify-center rounded bg-gray-3 p-8 md:col-span-5"
+          >
             <img src="/logos/logo-full-black.svg" alt="" />
           </a>
         </div>
