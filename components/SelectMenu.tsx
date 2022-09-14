@@ -1,4 +1,6 @@
 import SVG from "react-inlinesvg"
+import { Listbox } from "@headlessui/react"
+import classNames from "classnames"
 
 export type SelectMenuProps = {
   /** The label shown before the dropdown */
@@ -20,27 +22,37 @@ export const SelectMenu = ({
   options,
   value,
 }: SelectMenuProps) => {
+  const selectedLabel = options.find(option => option.value === value)?.label;
+
   return (
-    <label className="b2 inline-flex h-10 items-center gap-2">
-      <span className="text-gray-1">{label}:</span>
-      <div className="relative flex">
-        <select
-          className="h-10 cursor-pointer appearance-none rounded bg-[transparent] pie-7 pis-2 hover:bg-gray-5"
-          onChange={(e) => onChange(e.target.value)}
-          value={value}
-        >
-          {options.map(({ label: optionLabel, value: optionValue }) => (
-            <option key={optionValue} value={optionValue}>
-              {optionLabel}
-            </option>
-          ))}
-        </select>
-        <SVG
-          className="pointer-events-none absolute text-gray-1 inline-end-2 block-start-4"
-          src={"/ui/disclosure-arrow.svg"}
-        />
+    <Listbox value={value} onChange={onChange}>
+      <div className="b3 inline-flex">
+        <div className="relative">
+          <Listbox.Button className="relative cursor-pointer rounded-md border border-gray-3 py-4 pl-4 pr-10 text-left focus:outline-none focus:ring-1 focus:ring-blurple-500">
+            <span className="block truncate text-gray-1">
+              <span className="font-medium">{label}:{" "}</span>
+              <span className="font-bold">{selectedLabel}</span>
+            </span>
+
+            <span className="pointer-events-none absolute inline-end-3 block-start-5">
+              <SVG className="h-4 w-4 text-gray-2" fill="currentColor" src="/ui/disclosure-arrow.svg" />
+            </span>
+          </Listbox.Button>
+
+          <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full min-w-max overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-gray-3 focus:outline-none">
+            {options.map(({ label: optionLabel, value: optionValue }) => (
+              <Listbox.Option key={optionValue} value={optionValue} className={({ active }) => classNames(active ? "text-white bg-blurple-500" : "text-gray-1", "relative text-gray-1 cursor-pointer select-none py-3 px-4 font-medium")}>
+                {({ selected }) => (
+                  <>
+                    <span className={selected ? "font-bold" : ""}>{optionLabel}</span>
+                  </>
+                )}
+              </Listbox.Option>
+            ))}
+          </Listbox.Options>
+        </div>
       </div>
-    </label>
+    </Listbox>
   )
 }
 export default SelectMenu
