@@ -43,7 +43,7 @@ const BrandSection = ({
 )
 
 /** This page does not require translations */
-const Brand = () => (
+const Branding = () => (
   <div dir="ltr" className="-mb-footer-offset [unicode-bidi:plaintext]">
     <Hero>
       <h1 className="h1 mb-4">Brand Toolkit</h1>
@@ -150,4 +150,4 @@ export async function getStaticProps(ctx) {
     props: { intlMessages: await loadIntlMessages(ctx) },
   }
 }
-export default Brand
+export default Branding
