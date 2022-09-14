@@ -67,34 +67,6 @@ const Brand = () => (
         </div>
       }
     />
-    <BrandSection
-      title="Sample toots!"
-      copy={
-        <p>
-          If you’d like to make a mockup of a toot for media or news, please&nbsp;use
-          the template below to get an accurate
-        </p>
-      }
-      ctas={
-        <LinkButton size="large" href="">
-          Figma File
-        </LinkButton>
-      }
-      preview={
-        <div className="grid gap-gutter sm:grid-cols-2 pb-footer-offset">
-          <img
-            className="w-full flex-auto"
-            src="/samples/sample-toot.svg"
-            alt=""
-          />
-          <img
-            className="w-full flex-auto"
-            src="/samples/sample-boost.svg"
-            alt=""
-          />
-        </div>
-      }
-    />
 
     <Head>
       <title>Brand Toolkit - Mastodon</title>
