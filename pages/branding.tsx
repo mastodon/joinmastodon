@@ -36,7 +36,7 @@ const BrandSection = ({
 /** This page does not require translations */
 const Branding = () => (
   <Layout transparentHeader={false}>
-    <div dir="ltr" className="-mb-footer-offset [unicode-bidi:plaintext]">
+    <div dir="ltr" className="unicode-bidi:plaintext]">
       <Hero homepage desktopImage={heroImage} mobileImage={heroImage} safeTextShadow={false}> 
         <h1 className="h1 pt-16 mb-8">Brand Toolkit</h1>
         <p className="sh1">
@@ -150,7 +150,7 @@ const Branding = () => (
       <BrandSection
         title="Our colors"
         preview={
-          <div className="grid grid-cols-12 flex-col gap-gutter pb-footer-offset">
+          <div className="grid grid-cols-12 flex-col gap-gutter">
             <div className="col-span-12 grid grid-cols-2 gap-gutter lg:col-span-8 lg:col-start-3">
               {["#6364FF", "#563ACC"].map((hex) => (
                 <div key={hex} className="flex flex-col gap-2 text-left">
