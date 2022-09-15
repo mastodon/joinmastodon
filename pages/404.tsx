@@ -9,7 +9,7 @@ import Layout from "../components/Layout"
 const NotFoundPage = () => (
   <Layout transparentHeader={false}>
     <BasicPage>
-      <div className="flex justify-center pt-32">
+      <div className="flex justify-center pt-48">
         <div className="h2 px-12 font-bold text-blurple-500">404</div>
 
         <div className="border-l-2 border-gray-4 px-12">
