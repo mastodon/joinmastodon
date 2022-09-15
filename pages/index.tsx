@@ -20,6 +20,7 @@ import { platinum, additionalFunding } from "../data/sponsors"
 import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
 import illoModeration from "../public/illustrations/features_moderation.png"
+import illoCustomization from "../public/illustrations/features_customization.png"
 import illoWorld from "../public/illustrations/home_sponsors_world.png"
 
 import homeHeroMobile from "../public/illustrations/home_hero_mobile.webp"
@@ -188,7 +189,7 @@ const Features = () => {
               />
             </LinkButton>
           ),
-          image: illoModeration,
+          image: illoCustomization,
         }
       ].map((block, i) => {
         const isOdd = i % 2 != 0
