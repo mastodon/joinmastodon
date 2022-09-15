@@ -13,7 +13,7 @@ export const Layout = ({
   return (
     <div className="mx-auto max-w-site px-6 lg:px-16">
       <a
-        className="bg-dark-blurple sr-only top-0 left-0 z-20 block text-white focus:not-sr-only focus:absolute focus:p-2"
+        className="bg-blurple-900 sr-only top-0 left-0 z-20 block text-white focus:not-sr-only focus:absolute focus:p-2"
         href="#main"
       >
         Skip to main content
