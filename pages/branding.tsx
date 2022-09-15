@@ -105,9 +105,39 @@ const Branding = () => (
       }
     />
     <BrandSection
+      title="Clear space"
+      copy={
+        <p>
+          When using our logo, please ensure that you give it room to breathe!
+          At least 36px on all sides please.
+        </p>
+      }
+      preview={
+        <div className="flex justify-center gap-gutter">
+          {["/logos/logo-purple.svg", "/logos/logo-full-purple.svg"].map(
+            (src) => (
+              <div className="relative rounded bg-eggplant text-blurple-600 p-[36px] shadow-[currentColor_0_0_0_1px_inset]" key={src}>
+                <div className="absolute rounded-full w-[36px] h-[36px] border top-0 left-0" />
+                <div className="absolute rounded-full w-[36px] h-[36px] border top-0 right-0" />
+                <div className="absolute rounded-full w-[36px] h-[36px] border bottom-0 left-0" />
+                <div className="absolute rounded-full w-[36px] h-[36px] border bottom-0 right-0" />
+                <div className="absolute rounded-full w-[18px] h-[18px] border m-[9px] top-0 left-0" />
+                <div className="absolute rounded-full w-[18px] h-[18px] border m-[9px] top-0 right-0" />
+                <div className="absolute rounded-full w-[18px] h-[18px] border m-[9px] bottom-0 left-0" />
+                <div className="absolute rounded-full w-[18px] h-[18px] border m-[9px] bottom-0 right-0" />
+                <div className="absolute border-x inset-block-0 inset-inline-[35px]" />
+                <div className="absolute border-y inset-inline-0 inset-block-[35px]" />
+                <img src={src} alt="" className="h-24 w-auto" />
+              </div>
+            )
+          )}
+        </div>
+      }
+    />
+    <BrandSection
       title="Our colors"
       preview={
-        <div className="flex grid grid-cols-12 flex-col gap-gutter gap-gutter pb-footer-offset">
+        <div className="grid grid-cols-12 flex-col gap-gutter pb-footer-offset">
           <div className="col-span-12 grid grid-cols-2 gap-gutter lg:col-span-8 lg:col-start-3">
             {["#6364FF", "#563ACC"].map((hex) => (
               <div key={hex} className="flex flex-col gap-2 text-left">
