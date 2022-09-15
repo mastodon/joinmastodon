@@ -20,6 +20,7 @@ import { platinum, additionalFunding } from "../data/sponsors"
 import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
 import illoModeration from "../public/illustrations/features_moderation.png"
+import illoCustomization from "../public/illustrations/features_customization.png"
 import illoWorld from "../public/illustrations/home_sponsors_world.png"
 
 import homeHeroMobile from "../public/illustrations/home_hero_mobile.webp"
@@ -27,11 +28,12 @@ import homeHeroDesktop from "../public/illustrations/home_hero_desktop.png"
 import Hero from "../components/Hero"
 import { getDirForLocale } from "../utils/locales"
 import { useRouter } from "next/router"
+import Layout from "../components/Layout"
 
 function Home() {
   const intl = useIntl()
   return (
-    <>
+    <Layout>
       <Hero
         mobileImage={homeHeroMobile}
         desktopImage={homeHeroDesktop}
@@ -82,7 +84,7 @@ function Home() {
         <meta property="og:description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
         <meta property="description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
       </Head>
-    </>
+    </Layout>
   )
 }
 
@@ -188,7 +190,7 @@ const Features = () => {
               />
             </LinkButton>
           ),
-          image: illoModeration,
+          image: illoCustomization,
         }
       ].map((block, i) => {
         const isOdd = i % 2 != 0
