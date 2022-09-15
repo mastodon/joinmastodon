@@ -16,11 +16,12 @@ import Hero from "../components/Hero"
 import appsHeroDesktop from "../public/illustrations/apps_hero_desktop.png"
 import appsHeroMobile from "../public/illustrations/apps_hero_mobile.png"
 import ios_android_apps from "../public/illustrations/ios_android_apps.png"
+import Layout from "../components/Layout"
 
 const AppsPage = () => {
   const intl = useIntl()
   return (
-    <div>
+    <Layout>
       <Hero desktopImage={appsHeroDesktop} mobileImage={appsHeroMobile}>
         <div className="app-intro">
           <div className="container">
@@ -163,7 +164,7 @@ const AppsPage = () => {
           })}
         />
       </Head>
-    </div>
+    </Layout>
   )
 }
 

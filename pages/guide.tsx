@@ -11,6 +11,7 @@ import Hero from "../components/Hero"
 import LinkButton from "../components/LinkButton"
 import { theme, safelist } from "../tailwind.config.js"
 import { AppCard } from "../components/AppCard"
+import Layout from "../components/Layout"
 
 import tusky from "../public/apps/tusky.png"
 import SkeletonText from "../components/SkeletonText"
@@ -48,7 +49,7 @@ function Guide(props) {
   const [serverCardLoading, setServerCardLoading] = useState(false)
 
   return (
-    <>
+    <Layout>
       <Hero>
         <h1 className="h1 mb-4">Style Guide</h1>
         <p className="sh1">
@@ -343,7 +344,7 @@ function Guide(props) {
           </div>
         </GuideSection>
       </div>
-    </>
+    </Layout>
   )
 }
 

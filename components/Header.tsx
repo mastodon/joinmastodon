@@ -10,8 +10,15 @@ import MenuToggle from "./MenuToggle"
 import SVG from "react-inlinesvg"
 import { useRouter } from "next/router"
 
+type HeaderProps = {
+  /** determines whether the header is transparent on load, before scrolling down */
+  transparent?: boolean
+}
+
 /** Sitewide header and navigation */
-const Header = () => {
+const Header = ({
+  transparent = true
+}: HeaderProps) => {
   const intl = useIntl()
   const router = useRouter()
   const [pageScrolled, setPageScrolled] = useState(false)
@@ -101,7 +108,7 @@ const Header = () => {
       // background needs to be on the ::before for now to get around nested compositing bug in chrome
       className={classNames(
         'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:bg-nightshade-900/[0.9] before:backdrop-blur before:transition-opacity before:content-[""]',
-        pageScrolled ? "before:opacity-100" : "before:opacity-0"
+        pageScrolled || !transparent ? "before:opacity-100" : "before:opacity-0"
       )}
     >
       <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
