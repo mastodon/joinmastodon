@@ -53,54 +53,56 @@ const Branding = () => (
       }
       preview={
         <div className="grid grid-cols-12 gap-gutter">
-          <a
-            download
-            aria-label="Download the purple SVG Logo"
-            href="/logos/logo-purple.svg"
-            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-eggplant p-9 md:col-span-3 md:col-start-3"
-          >
-            <img src="/logos/logo-purple.svg" alt="" />
-          </a>
-          <a
-            download
-            aria-label="Download the purple SVG Logo with wordmark"
-            href="/logos/logo-full-purple.svg"
-            className="col-span-8 grid items-center justify-center rounded bg-eggplant p-9 md:col-span-5"
-          >
-            <img src="/logos/logo-full-purple.svg" alt="" />
-          </a>
-          <a
-            download
-            aria-label="Download the white SVG Logo"
-            href="/logos/logo-white.svg"
-            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-1 p-9 md:col-span-3 md:col-start-3"
-          >
-            <img src="/logos/logo-white.svg" alt="" />
-          </a>
-          <a
-            download
-            aria-label="Download the white SVG Logo with wordmark"
-            href="/logos/logo-full-white.svg"
-            className="col-span-8 grid items-center justify-center rounded bg-gray-1 p-9 md:col-span-5"
-          >
-            <img src="/logos/logo-full-white.svg" alt="" />
-          </a>
-          <a
-            download
-            aria-label="Download the black SVG Logo"
-            href="/logos/logo-black.svg"
-            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-3 p-9 md:col-span-3 md:col-start-3"
-          >
-            <img src="/logos/logo-black.svg" alt="" />
-          </a>
-          <a
-            download
-            aria-label="Download the black SVG Logo with wordmark"
-            href="/logos/logo-full-black.svg"
-            className="col-span-8 grid items-center justify-center rounded bg-gray-3 p-9 md:col-span-5"
-          >
-            <img src="/logos/logo-full-black.svg" alt="" />
-          </a>
+          <div className="col-span-12 grid grid-cols-12 gap-gutter py-10 rounded bg-gray-2 lg:col-span-8 lg:col-start-3 lg:grid-cols-8">
+            {[
+              {
+                label: "Download the purple SVG Logo",
+                src: "/logos/logo-purple.svg",
+              },
+              {
+                label: "Download the purple SVG Logo with wordmark",
+                src: "/logos/logo-full-purple.svg",
+              },
+              {
+                label: "Download the white SVG Logo",
+                src: "/logos/logo-white.svg",
+              },
+              {
+                label: "Download the white SVG Logo with wordmark",
+                src: "/logos/logo-full-white.svg",
+              },
+              {
+                label: "Download the black SVG Logo",
+                src: "/logos/logo-black.svg",
+              },
+              {
+                label: "Download the black SVG Logo with wordmark",
+                src: "/logos/logo-full-black.svg",
+              },
+            ].map((image, imageIndex) => (
+              <div
+                key={image.src}
+                className={classNames(
+                  "flex items-center justify-center rounded py-4",
+                  imageIndex % 2 === 0
+                    ? "col-span-4 lg:col-span-3"
+                    : "col-span-8 lg:col-span-5"
+                )}
+              >
+                <a
+                  download
+                  aria-label={image.label}
+                  href={image.src}
+                  className={classNames(
+                    "flex items-center justify-center rounded p-4 transition-colors hocus:bg-gray-3",
+                    imageIndex % 2 === 0 ? "aspect-square" : ""
+                  )}
+                >
+                  <img src={image.src} alt="" className="h-16 md:h-18 lg:h-20 w-auto" />
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       }
     />
@@ -113,24 +115,30 @@ const Branding = () => (
         </p>
       }
       preview={
-        <div className="flex justify-center gap-gutter">
-          {["/logos/logo-purple.svg", "/logos/logo-full-purple.svg"].map(
-            (src) => (
-              <div className="relative rounded bg-eggplant text-blurple-600 p-[36px] shadow-[currentColor_0_0_0_1px_inset]" key={src}>
-                <div className="absolute rounded-full w-[36px] h-[36px] border top-0 left-0" />
-                <div className="absolute rounded-full w-[36px] h-[36px] border top-0 right-0" />
-                <div className="absolute rounded-full w-[36px] h-[36px] border bottom-0 left-0" />
-                <div className="absolute rounded-full w-[36px] h-[36px] border bottom-0 right-0" />
-                <div className="absolute rounded-full w-[18px] h-[18px] border m-[9px] top-0 left-0" />
-                <div className="absolute rounded-full w-[18px] h-[18px] border m-[9px] top-0 right-0" />
-                <div className="absolute rounded-full w-[18px] h-[18px] border m-[9px] bottom-0 left-0" />
-                <div className="absolute rounded-full w-[18px] h-[18px] border m-[9px] bottom-0 right-0" />
-                <div className="absolute border-x inset-block-0 inset-inline-[35px]" />
-                <div className="absolute border-y inset-inline-0 inset-block-[35px]" />
-                <img src={src} alt="" className="h-24 w-auto" />
-              </div>
-            )
-          )}
+        <div className="grid grid-cols-12 gap-gutter">
+          <div className="flex flex-col items-center sm:flex-row col-span-12 gap-gutter py-8 rounded lg:col-span-6 lg:col-start-4 justify-center lg:justify-between">
+            {["/logos/logo-purple.svg", "/logos/logo-full-purple.svg"].map(
+              (src) => (
+                <div
+                  className="relative rounded bg-eggplant p-[36px] text-blurple-600 shadow-[currentColor_0_0_0_1px_inset]"
+                  key={src}
+                >
+                  {/* everything except for the image is a guide mark */}
+                  <div className="absolute top-0 left-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute top-0 right-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute bottom-0 left-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute bottom-0 right-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute top-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute top-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute bottom-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute bottom-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute border-x inset-block-0 inset-inline-[35px]" />
+                  <div className="absolute border-y inset-inline-0 inset-block-[35px]" />
+                  <img src={src} alt="" className="w-auto" />
+                </div>
+              )
+            )}
+          </div>
         </div>
       }
     />
