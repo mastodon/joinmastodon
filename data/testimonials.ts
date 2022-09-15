@@ -12,11 +12,18 @@ export type Testimonial = {
 }
 const testimonials: Testimonial[] = [
   {
-    text: "I'm personally addicted to Mastodon, for me it's like if Facebook or Twitter had a friendly version— where I can discuss things with people around the world about every single thing they love. If there's a subreddit for everything, of course there's also a Mastodon community for everything: I've got one profile for sharing art, another one for casual conversation and another one for politics.",
-    name: "guedes",
-    username: "guedes@mastodon.social",
-    avatar: "/testimonials/avatar_guedes.jpg",
-    profile_url: "https://mastodon.social/@guedes",
+    text: "I've made so many friends on Mastodon because I can actually talk to people instead of getting buried by algorithms that reward meaningless numbers over actual interaction.",
+    name: "infinite love ⴳ",
+    username: "trwnh@mastodon.social",
+    avatar: "/testimonials/avatar_trwnh.png",
+    profile_url: "https://mastodon.social/@trwnh",
+  },
+  {
+    text: "Mastodon does an amazing job at giving communities the autonomy necessary to thrive by giving them the keys to federate and moderate their own servers. But don't let that alone overshadow the fact that it simply does features that the major social networks try to do (e.g. image captioning, content warnings) astoundingly better.",
+    name: "Jenn Schiffer",
+    username: "jenn@toot.cafe",
+    avatar: "/testimonials/avatar_jennschiffer.jpeg",
+    profile_url: "https://toot.cafe/@jenn",
   },
   {
     text: "Mastodon has changed my opinion of social media, it's a refreshing take on microblogging with a focus on privacy and safety.",
@@ -33,13 +40,6 @@ const testimonials: Testimonial[] = [
     profile_url: "https://octodon.social/@craigmaloney",
   },
   {
-    text: "Mastodon does an amazing job at giving communities the autonomy necessary to thrive by giving them the keys to federate and moderate their own servers. But don't let that alone overshadow the fact that it simply does features that the major social networks try to do (e.g. image captioning, content warnings) astoundingly better.",
-    name: "Jenn Schiffer",
-    username: "jenn@toot.cafe",
-    avatar: "/testimonials/avatar_jennschiffer.jpeg",
-    profile_url: "https://toot.cafe/@jenn",
-  },
-  {
     text: "Mastodon is a privacy-friendly way to communicate with people which are interested in my work and the work of my authority. social.bund.de gives us the opportunity to incubate Mastodon accounts even for other federal authorities.",
     name: "Ulrich Kelber",
     username: "ulrichkelber@bonn.social",
@@ -52,13 +52,6 @@ const testimonials: Testimonial[] = [
     username: "jaz@toot.wales",
     avatar: "/testimonials/avatar_jaz.jpeg",
     profile_url: "https://toot.wales/@jaz",
-  },
-  {
-    text: "I've made so many friends on Mastodon because I can actually talk to people instead of getting buried by algorithms that reward meaningless numbers over actual interaction.",
-    name: "infinite love ⴳ",
-    username: "trwnh@mastodon.social",
-    avatar: "/testimonials/avatar_trwnh.png",
-    profile_url: "https://mastodon.social/@trwnh",
   },
   {
     text: "Mastodon is a well-moderated fully-functional microblogging service with some great features!",
@@ -101,6 +94,13 @@ const testimonials: Testimonial[] = [
     username: "koyuchan@koyu.space",
     avatar: "/testimonials/avatar_koyu.png",
     profile_url: "https://koyu.space/@koyuchan",
+  },
+  {
+    text: "I'm personally addicted to Mastodon, for me it's like if Facebook or Twitter had a friendly version— where I can discuss things with people around the world about every single thing they love. If there's a subreddit for everything, of course there's also a Mastodon community for everything: I've got one profile for sharing art, another one for casual conversation and another one for politics.",
+    name: "guedes",
+    username: "guedes@mastodon.social",
+    avatar: "/testimonials/avatar_guedes.jpg",
+    profile_url: "https://mastodon.social/@guedes",
   },
 ]
 export default testimonials

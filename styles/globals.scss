@@ -2,150 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* manrope-200 - latin */
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
-  font-weight: 200;
-  src: url('/fonts/manrope-v13-latin-200.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('/fonts/manrope-v13-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/manrope-v13-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/manrope-v13-latin-200.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/manrope-v13-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/manrope-v13-latin-200.svg#Manrope') format('svg'); /* Legacy iOS */
-}
+  font-weight: 100 900;
 
-/* manrope-300 - latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 300;
-  src: url('/fonts/manrope-v13-latin-300.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('/fonts/manrope-v13-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/manrope-v13-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/manrope-v13-latin-300.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/manrope-v13-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/manrope-v13-latin-300.svg#Manrope') format('svg'); /* Legacy iOS */
-}
-
-/* manrope-regular - latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/manrope-v13-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('/fonts/manrope-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/manrope-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/manrope-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/manrope-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/manrope-v13-latin-regular.svg#Manrope') format('svg'); /* Legacy iOS */
-}
-
-/* manrope-500 - latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  src: url('/fonts/manrope-v13-latin-500.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('/fonts/manrope-v13-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/manrope-v13-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/manrope-v13-latin-500.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/manrope-v13-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/manrope-v13-latin-500.svg#Manrope') format('svg'); /* Legacy iOS */
-}
-
-/* manrope-600 - latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  src: url('/fonts/manrope-v13-latin-600.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('/fonts/manrope-v13-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/manrope-v13-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/manrope-v13-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/manrope-v13-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/manrope-v13-latin-600.svg#Manrope') format('svg'); /* Legacy iOS */
-}
-
-/* manrope-800 - latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 800;
-  src: url('/fonts/manrope-v13-latin-800.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('/fonts/manrope-v13-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/manrope-v13-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/manrope-v13-latin-800.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/manrope-v13-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/manrope-v13-latin-800.svg#Manrope') format('svg'); /* Legacy iOS */
-}
-
-/* manrope-700 - latin */
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/fonts/manrope-v13-latin-700.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('/fonts/manrope-v13-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/manrope-v13-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/manrope-v13-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('/fonts/manrope-v13-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/manrope-v13-latin-700.svg#Manrope') format('svg'); /* Legacy iOS */
+  src: url('/fonts/manrope-variable.woff2') format('woff2 supports variations'),
+       url('/fonts/manrope-variable.woff2') format('woff2-variations');
 }
 
 @layer base {
   :root {
-    // While colors could go in tailwind.config.js,
-    // having them here enables easier theme overriding
-    // in color preference media queries (eg high contrast)
-    --black-transparent: rgba(0, 0, 0, 0.95);
-    --black: #000000;
-    --gray-0: #333333;
-    --gray-1: #555555;
-    --gray-2: #9b9b9b;
-    --gray-3: #d4d4d4;
-    --gray-4: #f3f3f3;
-    --gray-5: #f6f6f6;
-    --white: #ffffff;
-    --white-transparent: rgba(255, 255, 255, 0.95);
-
-    --blurple-gradient: linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%);
-
-    --eggplant: #17063b;
-    --dark-blurple: #2f0c7a;
-    --main-blurple: #563acc;
-    --accent-blurple: #6364ff;
-    --blurple-text-on-black: #858afa;
-    --nightshade: #1d0023;
-    --nightshade-transparent: rgba(29, 0, 35, 0.9);
-    --lime: #baff3b;
-    --goldenrod: #ffbe2e;
-
     --header-area: calc(var(--header-offset) + var(--header-height));
     @apply [--header-offset:0rem] md:[--header-offset:1.5rem];
     @apply [--header-height:5.625rem] md:[--header-height:6rem];
     @apply [--gutter-width:1rem] md:[--gutter-width:1.25rem];
     @apply [--footer-offset:14rem] md:[--footer-offset:MAX(20vw,16rem)];
   }
+
   html {
     overflow-x: hidden;
-    background: var(--white);
-  }
-  html,
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: "Manrope", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-      sans-serif;
-    font-size: 15px;
   }
 }
 
@@ -153,43 +29,43 @@
   .h1 {
     @apply text-h3 md:text-h1;
     @apply leading-h3 md:leading-h1;
-    @apply font-800 tracking-heading;
+    @apply font-extrabold tracking-normal;
   }
 
   .h2 {
     @apply text-h4 md:text-h2;
     @apply leading-h4 md:leading-h2;
-    @apply font-800 tracking-heading;
+    @apply font-extrabold tracking-normal;
   }
 
   .h3 {
     @apply text-h4 md:text-h3;
     @apply leading-h4 md:leading-h3;
-    @apply font-800 tracking-heading;
+    @apply font-extrabold tracking-normal;
   }
 
   .h4 {
     @apply text-h5 md:text-h4;
     @apply leading-h5 md:leading-h4;
-    @apply font-800 tracking-copy md:tracking-heading;
+    @apply font-extrabold tracking-semiwide md:tracking-normal;
   }
 
   .h5 {
     @apply text-h6 md:text-h5;
     @apply leading-h6 md:leading-h5;
-    @apply font-800 tracking-copy;
+    @apply font-extrabold tracking-semiwide;
   }
 
   .h6 {
     @apply text-h6;
     @apply leading-h6;
-    @apply font-800 tracking-copy;
+    @apply font-extrabold tracking-semiwide;
   }
 
   .sh1 {
     @apply text-b1 md:text-sh1;
     @apply leading-b1 md:leading-sh1;
-    @apply font-450 tracking-copy;
+    @apply font-extranormal tracking-semiwide;
   }
 
   .b1,
@@ -198,44 +74,44 @@
   .b4 {
     b,
     strong {
-      @apply font-600;
+      @apply font-bold;
     }
   }
 
   .b1 {
     @apply text-b1;
     @apply leading-b1;
-    @apply font-450 tracking-copy;
+    @apply font-extranormal tracking-semiwide;
   }
 
   .b2 {
     @apply text-b2;
     @apply leading-b2;
-    @apply font-450 tracking-copy;
+    @apply font-extranormal tracking-semiwide;
   }
 
   .b3 {
     @apply text-b3;
     @apply leading-b3;
-    @apply font-450 tracking-copy;
+    @apply font-extranormal tracking-semiwide;
   }
 
   .b4 {
     @apply text-b4;
     @apply leading-b4;
-    @apply font-400 tracking-copy;
+    @apply font-normal tracking-semiwide;
   }
 
   .c2 {
     @apply text-c2;
     @apply leading-c2;
-    @apply font-600 tracking-copy;
+    @apply font-bold tracking-semiwide;
   }
 
   .c3 {
     @apply text-c3;
     @apply leading-c3;
-    @apply font-450 tracking-copy;
+    @apply font-extranormal tracking-semiwide;
   }
 
   .full-width-bg {
@@ -251,6 +127,6 @@
   }
 
   .carousel__dot.carousel__dot--selected {
-    @apply bg-main-blurple;
+    @apply bg-blurple-500;
   }
 }

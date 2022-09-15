@@ -34,21 +34,27 @@ const Header = () => {
         {
           value: "https://blog.joinmastodon.org/",
           label: <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />,
-          description: <FormattedMessage id="nav.blog.description" defaultMessage="Mastodon news and updates" />,
-        }, {
-          value: "https://github.com/mastodon/mastodon/discussions",
-          label: <FormattedMessage id="nav.support.title" defaultMessage="Support" />,
-          description: <FormattedMessage id="nav.support.description" defaultMessage="Q&A and community discussions on GitHub" />,
-        }, {
-          value: "https://github.com/mastodon/mastodon",
-          label: <FormattedMessage id="nav.code.title" defaultMessage="Code" />,
-          description: <FormattedMessage id="nav.code.description" defaultMessage="Source code for Mastodon on GitHub" />,
+          description: <FormattedMessage id="nav.blog.description" defaultMessage="Get the latest news about the platform" />,
         }, {
           value: "https://docs.joinmastodon.org",
           label: <FormattedMessage id="nav.docs.title" defaultMessage="Documentation" />,
-          description: <FormattedMessage id="nav.docs.description" defaultMessage="API reference, feature walkthroughs, and technical overview" />,
-        }
+          description: <FormattedMessage id="nav.docs.description" defaultMessage="Learn how Mastodon works in-depth" />,
+        }, {
+          value: "https://github.com/mastodon/mastodon/discussions",
+          label: <FormattedMessage id="nav.support.title" defaultMessage="Support" />,
+          description: <FormattedMessage id="nav.support.description" defaultMessage="Get help or suggest a feature on GitHub" />,
+        }, {
+          value: "/branding",
+          label: <FormattedMessage id="nav.branding.title" defaultMessage="Branding" />,
+          description: <FormattedMessage id="nav.branding.description" defaultMessage="Download our logos and learn how to use them" />,
+        },
       ],
+      footer: {
+        value: "https://github.com/mastodon/mastodon",
+        label: <FormattedMessage id="nav.code.action" defaultMessage="Browse code" />,
+        title: <FormattedMessage id="nav.code.title" defaultMessage="Source code" />,
+        description: <FormattedMessage id="nav.code.description" defaultMessage="Mastodon is free and open-source software" />,
+      },
     }, {
       key: "locale",
       label: <span aria-label={intl.formatMessage({
@@ -94,7 +100,7 @@ const Header = () => {
     <header
       // background needs to be on the ::before for now to get around nested compositing bug in chrome
       className={classNames(
-        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:bg-nightshade-transparent before:backdrop-blur before:transition-opacity before:content-[""]',
+        'full-width-bg sticky -top-[var(--header-offset)] z-10 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:bg-nightshade-900/[0.9] before:backdrop-blur before:transition-opacity before:content-[""]',
         pageScrolled ? "before:opacity-100" : "before:opacity-0"
       )}
     >
@@ -123,7 +129,7 @@ const Header = () => {
                   <>
                     <button
                       {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
-                      className="flex items-center gap-[0.125rem] whitespace-nowrap rounded-md p-3 px-5 text-h5 focus:outline-2 md:text-b2 md:font-450"
+                      className="flex items-center gap-[0.125rem] whitespace-nowrap rounded-md p-3 px-5 text-h5 focus:outline-2 md:text-b2 md:font-medium"
                     >
                       {item.label}
                       <SVG
@@ -134,51 +140,65 @@ const Header = () => {
                       />
                     </button>
 
-                    <ul
+                    <div
                       className={classNames(
-                        "top-full flex-col rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:text-black md:bg-white-transparent md:backdrop-blur",
+                        "top-full rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:text-black md:shadow-lg md:bg-white",
                         openMenuIndex === itemIndex
-                          ? "flex overflow-auto"
-                          : "hidden",
-                        item.compact ? "py-2 md:px-2" : "min-w-[30ch] py-2 md:px-2"
+                          ? "overflow-auto"
+                          : "hidden"
                       )}
                     >
-                      {item.childItems.map((child, childIndex) => (
-                        // Child Items
-                        <li key={child.key || child.value}>
-                          <Link
-                            href={child.value}
-                            locale={child.locale || undefined}
-                            scroll={child.scroll ?? true}
-                          >
-                            <a
-                              {...bindSecondaryMenuItem(child)}
-                              className={classNames(
-                                "block rounded hover:bg-eggplant hover:md:bg-gray-3",
-                                item.compact
-                                  ? "py-2 px-5 md:px-4"
-                                  : "py-3 px-5 font-600 md:px-4",
-                                child.active && "font-800"
-                              )}
-                              aria-current={child.active ? "page" : undefined}
+                      <ul className={classNames(item.compact ? "py-2 md:px-2" : "md:grid py-2 md:px-3 md:py-4 w-screen max-w-md md:max-w-lg md:grid-cols-2 md:gap-6")}>
+                        {item.childItems.map((child, childIndex) => (
+                          // Child Items
+                          <li key={child.key || child.value}>
+                            <Link
+                              href={child.value}
+                              locale={child.locale || undefined}
+                              scroll={child.scroll ?? true}
                             >
-                              <span className="block">{child.label}</span>
-                              <span className="b2 block text-gray-1">
-                                {child.description}
-                              </span>
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                              <a
+                                {...bindSecondaryMenuItem(child)}
+                                className={classNames(
+                                  "block rounded-md hover:md:bg-nightshade-50",
+                                  item.compact
+                                    ? "py-2 px-5 md:px-4"
+                                    : "py-3 px-5 md:px-4",
+                                  (item.compact && child.active) && "font-extrabold"
+                                )}
+                                aria-current={child.active ? "page" : undefined}
+                              >
+                                <span className={classNames("block", !item.compact && "font-extrabold")}>{child.label}</span>
+                                <span className="mt-1 block font-extranormal text-gray-1">
+                                  {child.description}
+                                </span>
+                              </a>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {item.footer && (
+                        <div className="md:bg-gray-4 md:p-4">
+                          <a href={item.footer.value} className="px-5 py-3 group rounded-md md:p-2 flex items-center justify-between">
+                            <span>
+                              <span className="font-extrabold">{item.footer.title}</span>
+                              <span className="block mt-1 font-extranormal text-gray-1">{item.footer.description}</span>
+                            </span>
+
+                            <span className="hidden border-2 border-blurple-500 bg-blurple-500 text-white rounded-md b3 h-12 md:flex items-center justify-center p-4 !font-semibold transition-colors group-hover:bg-blurple-600 group-hover:border-blurple-600">{item.footer.label}</span>
+                          </a>
+                        </div>
+                      )}
+                    </div>
                   </>
                 ) : (
                   // Top-level Link
                   <Link href={item.value}>
                     <a
                       className={classNames(
-                        "block whitespace-nowrap rounded-md p-3 px-5 text-h5 md:text-b2",
-                        item.active && "font-800"
+                        "block whitespace-nowrap rounded-md p-3 px-5 text-h5 md:text-b2 font-medium",
+                        item.active && "font-extrabold"
                       )}
                       aria-current={item.active ? "page" : undefined}
                       {...bindPrimaryMenuItem(itemIndex)}
@@ -237,10 +257,10 @@ const useMenu = ({ navigationItems }) => {
       id: menuId,
       onBlur: (e) => {
         const focusLeftMenu = !rootElement.current.contains(e.relatedTarget)
-        if (focusLeftMenu) {
+        /*if (focusLeftMenu) {
           setOpenMenuIndex(null)
           setMobileMenuOpen(false)
-        }
+        }*/
       },
       onKeyDown: (e) => {
         if (e.key === "Escape") {

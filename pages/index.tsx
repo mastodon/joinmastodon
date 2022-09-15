@@ -20,10 +20,11 @@ import { platinum, additionalFunding } from "../data/sponsors"
 import illoTimeline from "../public/illustrations/features_timeline.png"
 import illoAudience from "../public/illustrations/features_audience.png"
 import illoModeration from "../public/illustrations/features_moderation.png"
+import illoCustomization from "../public/illustrations/features_customization.png"
 import illoWorld from "../public/illustrations/home_sponsors_world.png"
 
 import homeHeroMobile from "../public/illustrations/home_hero_mobile.webp"
-import homeHeroDesktop from "../public/illustrations/home_hero_desktop.webp"
+import homeHeroDesktop from "../public/illustrations/home_hero_desktop.png"
 import Hero from "../components/Hero"
 import { getDirForLocale } from "../utils/locales"
 import { useRouter } from "next/router"
@@ -73,35 +74,14 @@ function Home() {
       <Sponsors sponsors={{ platinum, additionalFunding }} />
       <Head>
         <title>
-          {intl.formatMessage({
+          Mastodon - {intl.formatMessage({
             id: "home.page_title",
-            defaultMessage: "Giving social networking back to you",
-          })}{" "}
-          - Mastodon
+            defaultMessage: "Decentralized social media",
+          })}
         </title>
-        <meta
-          property="og:title"
-          content={intl.formatMessage({
-            id: "home.page_title",
-            defaultMessage: "Giving social networking back to you",
-          })}
-        />
-        <meta
-          name="description"
-          content={intl.formatMessage({
-            id: "default.page_description",
-            defaultMessage:
-              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
-          })}
-        />
-        <meta
-          property="og:description"
-          content={intl.formatMessage({
-            id: "default.page_description",
-            defaultMessage:
-              "Mastodon is an open source decentralized social network - by the people for the people. Join the federation and take back control of your social media!",
-          })}
-        />
+        <meta property="og:title" content={`Mastodon - ${intl.formatMessage({ id: "home.page_title", defaultMessage: "Decentralized social media" })}`} />
+        <meta property="og:description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
+        <meta property="description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
       </Head>
     </>
   )
@@ -123,7 +103,7 @@ const Features = () => {
           body: (
             <FormattedMessage
               id="home.features.timeline.body"
-              defaultMessage="Decentralized social media is created and maintained by its users, making you the owner of your feed. You can be as public or as private as you like and curate your own experience."
+              defaultMessage="You know best what you want to see on your home feed. No algorithms or ads to waste your time. Follow anyone across any Mastodon server from a single account and receive their posts in chronological order, and make your corner of the internet a little more like you."
             />
           ),
           button: (
@@ -143,13 +123,13 @@ const Features = () => {
           title: (
             <FormattedMessage
               id="home.features.audience.title"
-              defaultMessage="Build your audience"
+              defaultMessage="Build your audience in confidence"
             />
           ),
           body: (
             <FormattedMessage
               id="home.features.audience.body"
-              defaultMessage="Joining a server on Mastodon provides you with the power to communicate with any server across the globe. Meet like-minded people and make your corner of the internet a little more like you. Need more from Mastodon? Host your own server."
+              defaultMessage="Mastodon provides you with a unique possibility of managing your audience without middlemen. Mastodon deployed on your own infrastructure allows you to follow and be followed from any other Mastodon server online and is under no one's control but yours."
             />
           ),
           button: (
@@ -175,7 +155,7 @@ const Features = () => {
           body: (
             <FormattedMessage
               id="home.features.moderation.body"
-              defaultMessage="Mastodon puts decision making back in the hands of the people. Each server creates their own rules and regulations, which are enforced locally and not top-down like corporate social media. Self-hosting grants even more control by letting you decide the rules."
+              defaultMessage="Mastodon puts decision making back in your hands. Each server creates their own rules and regulations, which are enforced locally and not top-down like corporate social media, making it the most flexible in responding to the needs of different groups of people. Join a server with the rules you agree with, or host your own."
             />
           ),
           button: (
@@ -188,6 +168,29 @@ const Features = () => {
           ),
           image: illoModeration,
         },
+        {
+          title: (
+            <FormattedMessage
+              id="home.features.self_expression.title"
+              defaultMessage="Unparalleled creativity"
+            />
+          ),
+          body: (
+            <FormattedMessage
+              id="home.features.self_expression.body"
+              defaultMessage="Mastodon supports audio, video and picture posts, accessibility descriptions, polls, content warnings, animated avatars, custom emojis, thumbnail crop control, and more, to help you express yourself online. Whether you're publishing your art, your music, or your podcast, Mastodon is there for you."
+            />
+          ),
+          button: (
+            <LinkButton size="large" href="https://docs.joinmastodon.org/user/posting/">
+              <FormattedMessage
+                id="home.features.button.learn_more"
+                defaultMessage="Learn more"
+              />
+            </LinkButton>
+          ),
+          image: illoCustomization,
+        }
       ].map((block, i) => {
         const isOdd = i % 2 != 0
         return (
@@ -212,7 +215,7 @@ const Features = () => {
                 )}
               >
                 <h2 className="h4 md:h2 mb-2 md:mb-5">{block.title}</h2>
-                <p className="sh1 mb-8">{block.body}</p>
+                <p className="sh1 mb-8 text-gray-1">{block.body}</p>
                 {block.button}
               </div>
             </div>
@@ -269,9 +272,7 @@ const WhyMastodon = () => {
             copy={
               <FormattedMessage
                 id="home.why.decentralized.copy"
-                defaultMessage="Not controlled by a 
-            single website or company, Mastodon is a network of completely independent service providers forming 
-            a global, cohesive social media platform. "
+                defaultMessage="Instant global communication is too important to belong to one company. Each Mastodon server is a completely independent entity, able to interoperate with others to form one global social network."
               />
             }
           />
@@ -287,7 +288,7 @@ const WhyMastodon = () => {
             copy={
               <FormattedMessage
                 id="home.why.opensource.copy"
-                defaultMessage="Mastodon is free and open-source software. We believe in your right to use, copy, study and change Mastodon as you see fit. Community collaboration helps us continually evolve Mastodon."
+                defaultMessage="Mastodon is free and open-source software. We believe in your right to use, copy, study and change Mastodon as you see fit, and we benefit from contributions from the community."
               />
             }
           />
@@ -303,7 +304,7 @@ const WhyMastodon = () => {
             copy={
               <FormattedMessage
                 id="home.why.not_for_sale.copy"
-                defaultMessage="No surprises. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data is yours and yours alone"
+                defaultMessage="We respect your agency. Your feed is curated and created by you. We will never serve ads or push profiles for you to see. That means your data and your time are yours and yours alone."
               />
             }
           />
@@ -311,15 +312,15 @@ const WhyMastodon = () => {
             className="keen-slider__slide shadow-none md:border md:border-gray-3"
             title={
               <FormattedMessage
-                id="home.why.privacy_minded.title"
-                defaultMessage="Privacy-Minded"
+                id="home.why.interoperability.title"
+                defaultMessage="Interoperable"
               />
             }
-            icon="safety"
+            icon="move"
             copy={
               <FormattedMessage
-                id="home.why.privacy_minded.copy"
-                defaultMessage="You’re in control. Publish only what you choose and rest assured that your personal information is safe. Mastodon is not a platform for ads and respects your privacy."
+                id="home.why.interoperability.copy"
+                defaultMessage="Built on open web protocols, Mastodon can speak with any other platform that implements ActivityPub. With one account you get access to a whole universe of social apps—the fediverse."
               />
             }
           />
@@ -335,7 +336,7 @@ const WhyMastodon = () => {
                   }}
                   className={
                     "rounded-[50%] p-1.5 " +
-                    (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
+                    (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                   }
                 ></button>
               )
@@ -407,7 +408,7 @@ const Testimonials = ({ testimonials }) => {
                     }}
                     className={
                       "rounded-[50%] p-1.5 " +
-                      (currentSlide === idx ? "bg-accent-blurple" : "bg-gray-3")
+                      (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                     }
                   ></button>
                 )
@@ -432,17 +433,17 @@ const Sponsors = ({ sponsors }) => {
         </div>
 
         <div className=" lg:col-span-8 lg:col-start-3">
-          <h2 className="h2 mb-4">
+          <h2 className="h2 mb-6">
             <FormattedMessage
               id="home.sponsors.title"
-              defaultMessage="Independent and self made"
+              defaultMessage="Independent always"
             />
           </h2>
 
           <p className="b1 lg:sh1 mb-12 lg:mb-10">
             <FormattedMessage
               id="home.sponsors.body"
-              defaultMessage="Mastodon is free and open-source software developed by a non-profit organization. Public support directly affects development and evolution."
+              defaultMessage="Mastodon is free and open-source software developed by a non-profit organization. Public support directly sustains development and evolution."
             />
           </p>
 
@@ -471,7 +472,7 @@ const Sponsors = ({ sponsors }) => {
         />
       </h3>
 
-      <div className="lg:col-start-3 lg:col-end-11">
+      <div className="lg:col-start-2 lg:col-end-12">
         <SponsorLogoGroup sponsors={sponsors.platinum} />
       </div>
 

@@ -1,4 +1,5 @@
 const plugin = require("tailwindcss/plugin")
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 function rem(px) {
   return `${px / 16}rem`
@@ -41,43 +42,44 @@ const config = {
       c2: "calc(19 / 9)",
       c3: "calc(17 / 6)",
     },
-    letterSpacing: {
-      heading: "0em",
-      copy: "0.01em",
-    },
-    fontWeight: {
-      400: 400,
-      450: 450,
-      600: 600,
-      700: 700,
-      800: 800,
-    },
-    boxShadow: {
-      DEFAULT: "0px 4px 15px rgba(0, 0, 0, 0.1);",
-      none: "0",
-    },
     colors: {
-      "black-transparent": "var(--black-transparent)",
-      black: "var(--black)",
-      "gray-0": "var(--gray-0)",
-      "gray-1": "var(--gray-1)",
-      "gray-2": "var(--gray-2)",
-      "gray-3": "var(--gray-3)",
-      "gray-4": "var(--gray-4)",
-      "gray-5": "var(--gray-5)",
-      white: "var(--white)",
-      "white-transparent": "var(--white-transparent)",
-      nightshade: "var(--nightshade)",
-      "nightshade-transparent": "var(--nightshade-transparent)",
-      eggplant: "var(--eggplant)",
-      "dark-blurple": "var(--dark-blurple)",
-      "main-blurple": "var(--main-blurple)",
-      "accent-blurple": "var(--accent-blurple)",
-      "blurple-text-on-black": "var(--blurple-text-on-black)",
-      lime: "var(--lime)",
-      goldenrod: "var(--goldenrod)",
+      black: "#000000",
+      "gray": {
+        0: "#333333",
+        1: "#555555",
+        2: "#9b9b9b",
+        3: "#d4d4d4",
+        4: "#f3f3f3",
+        5: "#f6f6f6",
+      },
+      white: "#ffffff",
+      nightshade: {
+        50: "#fcefff",
+        100: "#BD8DC8",
+        300: "#834491",
+        600: "#4E155A",
+        900: "#1d0023", // "main"
+      },
+      eggplant: "#17063b",
+      blurple: {
+        300: "#858afa",
+        500: "#6364ff",
+        600: "#563acc", // "main"
+        900: "#2f0c7a",
+      },
+      lime: "#baff3b",
+      goldenrod: "#ffbe2e",
     },
     extend: {
+      fontFamily: {
+        sans: ["Manrope", ...defaultTheme.fontFamily.sans],
+      },
+      fontWeight: {
+        extranormal: 450,
+      },
+      letterSpacing: {
+        semiwide: ".01em",
+      },
       backgroundImage: {
         "blurple-gradient": `linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%)`,
       },
@@ -93,7 +95,7 @@ const config = {
       },
       dropShadow: {
         /** Used for text on hero images that may shift around  */
-        "safe-text": "0 0 30px var(--nightshade)",
+        "safe-text": "0 0 30px #1d0023",
       },
     },
   },
@@ -115,6 +117,13 @@ module.exports = {
   safelist: [
     // needed for /guide
     ...Object.keys(config.theme.fontSize),
-    ...Object.keys(config.theme.colors).map((k) => `bg-${k}`),
+    ...Object.keys(config.theme.colors).reduce((arr, k) => {
+      if (typeof config.theme.colors[k] === "string") {
+        arr.push(`bg-${k}`)
+        return arr
+      } else {
+        return arr.concat(Object.keys(config.theme.colors[k]).map(s => `bg-${k}-${s}`))
+      }
+    }, []),
   ],
 }

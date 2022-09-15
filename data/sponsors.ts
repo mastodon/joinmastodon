@@ -34,9 +34,8 @@ const sponsors = {
     },
     {
       url: "https://www.firesticktricks.com/",
-      logo: require("../public/sponsors/firesticktricks-logo.png"),
+      logo: require("../public/sponsors/firesticktricks.webp"),
       name: "Fire Stick Tricks",
-      light: true,
     },
     {
       url: "https://papersowl.com/write-my-essay-please",
@@ -50,9 +49,8 @@ const sponsors = {
     },
     {
       url: "https://www.vpsserver.com/",
-      logo: require("../public/sponsors/vpsserver2.png"),
+      logo: require("../public/sponsors/vpsserver.png"),
       name: "VPS Server",
-      light: true,
     },
     {
       url: "https://mask.io/",
@@ -73,7 +71,6 @@ const sponsors = {
       url: "https://masto.host/",
       logo: require("../public/sponsors/MH-horizontal-white.png"),
       name: "Masto.host - Fully managed Mastodon hosting",
-      light: true,
     }, // Custom
     {
       url: "https://assemblyfour.com/",
@@ -104,7 +101,6 @@ const sponsors = {
       url: "https://www.nettikasinot.org/",
       logo: require("../public/sponsors/nettikasinot.svg"),
       name: "Nettikasinot",
-      light: true,
     },
     {
       url: "https://www.onlinecasinos.net/",
@@ -152,7 +148,6 @@ const sponsors = {
       url: "https://www.kevani.com/",
       logo: require("../public/sponsors/KEVANI_LOGO.png"),
       name: "Kevani",
-      light: true,
     },
     {
       url: "https://www.doggietoys.deals/",
@@ -203,8 +198,12 @@ const sponsors = {
       url: "https://farbridge.com/",
       logo: require("../public/sponsors/farbridge.png"),
       name: "Farbridge",
-      light: true,
     },
+    {
+      url: "https://www.sure.bet/casinos-not-on-gamstop/",
+      logo: require("../public/sponsors/surebet.jpg"),
+      name: "non GamStop Casinos",
+    }, // Custom
   ],
   silver: [
     {
