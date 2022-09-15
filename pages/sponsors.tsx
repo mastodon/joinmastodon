@@ -7,11 +7,12 @@ import TwoUpFeature from "../components/TwoUpFeature"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import sponsors from "../data/sponsors"
 import sponsorData from "../data/sponsors"
+import Layout from "../components/Layout"
 
 function Sponsors() {
   const intl = useIntl()
   return (
-    <>
+    <Layout>
       <Hero>
         <h1 className="h1 mb-5 lg:col-start-2">
           <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
@@ -161,7 +162,7 @@ function Sponsors() {
           })}
         />
       </Head>
-    </>
+    </Layout>
   )
 }
 

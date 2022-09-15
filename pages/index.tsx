@@ -28,11 +28,12 @@ import homeHeroDesktop from "../public/illustrations/home_hero_desktop.png"
 import Hero from "../components/Hero"
 import { getDirForLocale } from "../utils/locales"
 import { useRouter } from "next/router"
+import Layout from "../components/Layout"
 
 function Home() {
   const intl = useIntl()
   return (
-    <>
+    <Layout>
       <Hero
         mobileImage={homeHeroMobile}
         desktopImage={homeHeroDesktop}
@@ -83,7 +84,7 @@ function Home() {
         <meta property="og:description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
         <meta property="description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
       </Head>
-    </>
+    </Layout>
   )
 }
 

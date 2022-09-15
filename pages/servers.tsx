@@ -17,6 +17,7 @@ import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
 import SkeletonText from "../components/SkeletonText"
 import Head from "next/head"
+import Layout from "../components/Layout"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
@@ -104,7 +105,7 @@ const Servers = () => {
   )
 
   return (
-    <div>
+    <Layout>
       <Hero mobileImage={serverHeroMobile} desktopImage={serverHeroDesktop}>
         <h1 className="h1 mb-5">
           <FormattedMessage id="servers" defaultMessage="Servers" />
@@ -186,7 +187,7 @@ const Servers = () => {
           })}
         />
       </Head>
-    </div>
+    </Layout>
   )
 }
 
