@@ -65,6 +65,7 @@ const Branding = () => (
         <div className="grid grid-cols-12 gap-gutter">
           <a
             download
+            aria-label="Download the purple SVG Logo"
             href="/logos/logo-purple.svg"
             className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-eggplant p-8 md:col-span-3 md:col-start-3"
           >
@@ -72,6 +73,7 @@ const Branding = () => (
           </a>
           <a
             download
+            aria-label="Download the purple SVG Logo with wordmark"
             href="/logos/logo-full-purple.svg"
             className="col-span-8 grid items-center justify-center rounded bg-eggplant p-8 md:col-span-5"
           >
@@ -79,6 +81,7 @@ const Branding = () => (
           </a>
           <a
             download
+            aria-label="Download the white SVG Logo"
             href="/logos/logo-white.svg"
             className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-1 p-8 md:col-span-3 md:col-start-3"
           >
@@ -86,6 +89,7 @@ const Branding = () => (
           </a>
           <a
             download
+            aria-label="Download the white SVG Logo with wordmark"
             href="/logos/logo-full-white.svg"
             className="col-span-8 grid items-center justify-center rounded bg-gray-1 p-8 md:col-span-5"
           >
@@ -93,6 +97,7 @@ const Branding = () => (
           </a>
           <a
             download
+            aria-label="Download the black SVG Logo"
             href="/logos/logo-black.svg"
             className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-3 p-8 md:col-span-3 md:col-start-3"
           >
@@ -100,6 +105,7 @@ const Branding = () => (
           </a>
           <a
             download
+            aria-label="Download the black SVG Logo with wordmark"
             href="/logos/logo-full-black.svg"
             className="col-span-8 grid items-center justify-center rounded bg-gray-3 p-8 md:col-span-5"
           >
