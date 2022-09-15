@@ -10,33 +10,23 @@ const BrandSection = ({
   copy,
   ctas,
   preview,
-  seamlessPreview,
 }: {
   title: React.ReactNode | string
   copy?: React.ReactNode
   ctas?: React.ReactNode
   preview: React.ReactNode
-  seamlessPreview?: boolean
 }) => (
   <section className="text-center">
     <div className="full-width-bg">
       <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
-        <h2 className="h1 max-w-[17ch]">{title}</h2>
+        <h2 className="h3 max-w-[17ch]">{title}</h2>
         {copy && (
-          <div className="b1 mt-8 flex max-w-[50ch] flex-col gap-8 md:mt-12">
-            {copy}
-          </div>
+          <div className="b1 mt-2 flex max-w-[50ch] flex-col gap-8">{copy}</div>
         )}
         {ctas && <div className="mt-12 flex justify-center gap-12">{ctas}</div>}
       </div>
     </div>
-    <div
-      className={classNames(
-        "full-width-bg flex flex-col items-center justify-center pb-20",
-        { "pt-20": !seamlessPreview },
-        { "bg-gray-5": !seamlessPreview }
-      )}
-    >
+    <div className="full-width-bg flex flex-col items-center justify-center pb-20">
       <div className="full-width-bg__inner">{preview}</div>
     </div>
   </section>
@@ -116,7 +106,6 @@ const Branding = () => (
     />
     <BrandSection
       title="Our colors"
-      seamlessPreview
       preview={
         <div className="flex grid grid-cols-12 flex-col gap-gutter gap-gutter pb-footer-offset">
           <div className="col-span-12 grid grid-cols-2 gap-gutter lg:col-span-8 lg:col-start-3">
