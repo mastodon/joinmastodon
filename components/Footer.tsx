@@ -10,9 +10,9 @@ export const Footer = () => (
     <div className="absolute pointer-events-none bottom-full left-1/2 h-48 w-full -translate-x-1/2 translate-y-[1px] ml-[-1px] bg-[url(/illustrations/swoosh.svg)] bg-no-repeat [background-position:90%_bottom] [background-size:MAX(64rem,100vw)_auto] md:h-[MAX(18vw,12rem)]"></div>
     <nav className="full-width-bg__inner">
       <div className="grid gap-x-4 gap-y-16 md:grid-cols-12 md:gap-x-5">
-        <div className="flex flex-col items-center md:items-start md:col-start-1 md:col-end-5 lg:col-start-1 lg:col-end-5 text-nightshade-50">
+        <div className="flex flex-col items-center md:items-start md:col-start-1 md:col-end-5 lg:col-start-1 lg:col-end-5 text-nightshade-50 gap-8">
           <SVG src="/logos/logo-white.svg" className="w-20 max-w-full" fill="currentColor" />
-          <p className="mt-2"><FormattedMessage id="footer.quip" defaultMessage="Free, open-source decentralized social media platform." /></p>
+          <p className="mt-2 max-w-[28ch]"><FormattedMessage id="footer.quip" defaultMessage="Free, open-source decentralized social media platform." /></p>
         </div>
 
         <div className="grid gap-10 gap-x-4 md:col-start-6 md:col-end-13 md:grid-cols-3 md:gap-x-5">

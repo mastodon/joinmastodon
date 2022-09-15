@@ -107,7 +107,7 @@ const Header = () => {
       <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
         <div>
           <Link href="/">
-            <a className="relative z-10 flex max-w-[11.375rem] md:max-w-[12.625rem]">
+            <a className="relative z-10 flex max-w-[11.375rem] md:max-w-[12.625rem] pt-[6%]">
               <Image src={mastodonLogo} alt="Mastodon" />
             </a>
           </Link>
