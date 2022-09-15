@@ -57,7 +57,7 @@ const Branding = () => (
             download
             aria-label="Download the purple SVG Logo"
             href="/logos/logo-purple.svg"
-            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-eggplant p-8 md:col-span-3 md:col-start-3"
+            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-eggplant p-9 md:col-span-3 md:col-start-3"
           >
             <img src="/logos/logo-purple.svg" alt="" />
           </a>
@@ -65,7 +65,7 @@ const Branding = () => (
             download
             aria-label="Download the purple SVG Logo with wordmark"
             href="/logos/logo-full-purple.svg"
-            className="col-span-8 grid items-center justify-center rounded bg-eggplant p-8 md:col-span-5"
+            className="col-span-8 grid items-center justify-center rounded bg-eggplant p-9 md:col-span-5"
           >
             <img src="/logos/logo-full-purple.svg" alt="" />
           </a>
@@ -73,7 +73,7 @@ const Branding = () => (
             download
             aria-label="Download the white SVG Logo"
             href="/logos/logo-white.svg"
-            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-1 p-8 md:col-span-3 md:col-start-3"
+            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-1 p-9 md:col-span-3 md:col-start-3"
           >
             <img src="/logos/logo-white.svg" alt="" />
           </a>
@@ -81,7 +81,7 @@ const Branding = () => (
             download
             aria-label="Download the white SVG Logo with wordmark"
             href="/logos/logo-full-white.svg"
-            className="col-span-8 grid items-center justify-center rounded bg-gray-1 p-8 md:col-span-5"
+            className="col-span-8 grid items-center justify-center rounded bg-gray-1 p-9 md:col-span-5"
           >
             <img src="/logos/logo-full-white.svg" alt="" />
           </a>
@@ -89,7 +89,7 @@ const Branding = () => (
             download
             aria-label="Download the black SVG Logo"
             href="/logos/logo-black.svg"
-            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-3 p-8 md:col-span-3 md:col-start-3"
+            className="col-span-4 grid aspect-square h-full max-w-full items-center justify-center rounded bg-gray-3 p-9 md:col-span-3 md:col-start-3"
           >
             <img src="/logos/logo-black.svg" alt="" />
           </a>
@@ -97,7 +97,7 @@ const Branding = () => (
             download
             aria-label="Download the black SVG Logo with wordmark"
             href="/logos/logo-full-black.svg"
-            className="col-span-8 grid items-center justify-center rounded bg-gray-3 p-8 md:col-span-5"
+            className="col-span-8 grid items-center justify-center rounded bg-gray-3 p-9 md:col-span-5"
           >
             <img src="/logos/logo-full-black.svg" alt="" />
           </a>
