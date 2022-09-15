@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import classNames from "classnames"
 import Layout from "../components/Layout"
+import heroImage from "../public/illustrations/branding_hero.png"
 
 const BrandSection = ({
   title,
@@ -34,10 +35,10 @@ const BrandSection = ({
 
 /** This page does not require translations */
 const Branding = () => (
-  <Layout>
+  <Layout transparentHeader={false}>
     <div dir="ltr" className="-mb-footer-offset [unicode-bidi:plaintext]">
-      <Hero homepage>
-        <h1 className="h1 mb-8">Brand Toolkit</h1>
+      <Hero homepage desktopImage={heroImage} mobileImage={heroImage} safeTextShadow={false}> 
+        <h1 className="h1 pt-16 mb-8">Brand Toolkit</h1>
         <p className="sh1">
           Download our logos or use our brand colors for&nbsp;your&nbsp;projects
         </p>
