@@ -9,7 +9,10 @@ import heroImage from "../public/illustrations/apps_hero_desktop.png"
 
 const NotFoundPage = () => (
   <Layout>
-    <Hero homepage desktopImage={heroImage} mobileImage={heroImage} />
+    <Hero homepage desktopImage={heroImage} mobileImage={heroImage}>
+      {" "}
+    </Hero>
+
     <BasicPage>
       <div className="flex justify-center pt-24">
         <div className="h2 px-12 font-bold text-blurple-500">404</div>
