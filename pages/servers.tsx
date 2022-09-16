@@ -331,6 +331,8 @@ const ServerList = ({ servers }) => {
 }
 
 const ServerStats = ({ days }) => {
+  const intl = useIntl()
+
   if (days.isError) {
     return null
   }
@@ -358,7 +360,6 @@ const ServerStats = ({ days }) => {
     )
   }
 
-  const intl = useIntl()
   const currentDay = days.data[days.data.length - 2]
   const compareDay = days.data[0]
 
