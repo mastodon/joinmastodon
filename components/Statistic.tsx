@@ -4,7 +4,7 @@ import { useIntl } from "react-intl"
 import { formatNumber, percIncrease } from "../utils/numbers"
 import SkeletonText from "./SkeletonText"
 
-const Statistic = ({ icon, label, currentValue, prevValue }) => {
+const Statistic = ({ icon, label, currentValue, prevValue }: { icon?: string, label?: any, currentValue?: number, prevValue?: number }) => {
   const intl = useIntl()
   const change = currentValue ? percIncrease(prevValue, currentValue) : 0
 
