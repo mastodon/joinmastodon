@@ -331,8 +331,31 @@ const ServerList = ({ servers }) => {
 }
 
 const ServerStats = ({ days }) => {
-  if (days.isError || days.isLoading) {
+  if (days.isError) {
     return null
+  }
+
+  if (days.isLoading) {
+    return (
+      <div>
+        <h3 className="h5 mb-4">
+          <FormattedMessage
+            id="stats.network"
+            defaultMessage="Network health"
+          />
+        </h3>
+
+        <div className="space-y-4">
+          <Statistic key="mau" />
+          <Statistic key="servers" />
+        </div>
+
+        <p className="b2 mt-4 text-gray-2">
+          <SkeletonText className="w-[20ch]" />
+          <SkeletonText className="w-[16ch]" />
+        </p>
+      </div>
+    )
   }
 
   const intl = useIntl()
@@ -350,6 +373,7 @@ const ServerStats = ({ days }) => {
 
       <div className="space-y-4">
         <Statistic
+          key="mau"
           icon="/ui/person.svg"
           label={<FormattedMessage id="stats.monthly_active_users" defaultMessage="Monthly Active Users" />}
           currentValue={currentDay.active_user_count}
@@ -357,6 +381,7 @@ const ServerStats = ({ days }) => {
         />
 
         <Statistic
+          key="servers"
           icon="/ui/filters.svg"
           label={<FormattedMessage id="stats.servers" defaultMessage="Servers Up" />}
           currentValue={currentDay.server_count}
