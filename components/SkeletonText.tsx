@@ -12,7 +12,7 @@ import classNames from "classnames"
 export const SkeletonText = (props) => (
   <span
     className={classNames(
-      "inline-block h-[0.75em] w-full max-w-full rounded bg-gray-3",
+      "inline-block h-[0.75em] w-full max-w-full rounded bg-gray-3 animate-pulse",
       props.className
     )}
   />
