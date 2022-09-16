@@ -1,17 +1,19 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query"
 import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/router"
-import { FormattedMessage, useIntl } from "react-intl"
+import { FormattedMessage, FormattedDate, useIntl } from "react-intl"
 import SVG from "react-inlinesvg"
 import classnames from "classnames"
 import { orderBy as _orderBy } from "lodash"
 import ServerCard from "../components/ServerCard"
 import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
+import Statistic from "../components/Statistic"
 import { categoriesMessages } from "../data/categories"
-import type { Server, Category, Language } from "../types/api"
+import type { Server, Category, Language, Day } from "../types/api"
 import Hero from "../components/Hero"
 import loadIntlMessages from "../utils/loadIntlMessages"
+import { formatNumber } from "../utils/numbers"
 
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
@@ -104,6 +106,12 @@ const Servers = () => {
     queryOptions
   )
 
+  const days = useQuery<Day[]>(
+    [],
+    () => fetchEndpoint("statistics", params),
+    queryOptions
+  )
+
   return (
     <Layout>
       <Hero mobileImage={serverHeroMobile} desktopImage={serverHeroDesktop}>
@@ -149,6 +157,8 @@ const Servers = () => {
               filters={filters}
               setFilters={setFilters}
             />
+
+            <ServerStats days={days} />
           </div>
           <div className="col-span-4 md:col-start-4 md:col-end-13">
             <ServerList servers={servers} />
@@ -320,6 +330,45 @@ const ServerList = ({ servers }) => {
   )
 }
 
+const ServerStats = ({ days }) => {
+  if (days.isError || days.isLoading) {
+    return null
+  }
+
+  const intl = useIntl()
+  const currentDay = days.data[days.data.length - 2]
+  const compareDay = days.data[0]
+
+  return (
+    <div>
+      <h3 className="h5 mb-4">
+        <FormattedMessage
+          id="stats.network"
+          defaultMessage="Network health"
+        />
+      </h3>
+
+      <div className="space-y-4">
+        <Statistic
+          icon="/ui/person.svg"
+          label={<FormattedMessage id="stats.monthly_active_users" defaultMessage="Monthly Active Users" />}
+          currentValue={currentDay.active_user_count}
+          prevValue={compareDay.active_user_count}
+        />
+
+        <Statistic
+          icon="/ui/filters.svg"
+          label={<FormattedMessage id="stats.servers" defaultMessage="Servers Up" />}
+          currentValue={currentDay.server_count}
+          prevValue={compareDay.server_count}
+        />
+      </div>
+
+      <p className="b2 mt-4 text-gray-2"><FormattedMessage id="stats.disclaimer" defaultMessage="Data collected by crawling all accessible Mastodon servers on {date}." values={{ date: <FormattedDate value={currentDay.period} year="numeric" month="short" day="2-digit" /> }} /></p>
+    </div>
+  )
+}
+
 const ServerFilters = ({
   filters,
   setFilters,
@@ -334,13 +383,13 @@ const ServerFilters = ({
   const intl = useIntl()
   return (
     <div className="md:mb-8">
-      <h3 className="h5 md:px-3 mb-4" id="category-group-label">
+      <h3 className="h5 mb-4" id="category-group-label">
         <FormattedMessage
           id="server.filter_by.category"
           defaultMessage="Topic"
         />
       </h3>
-      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1">
+      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3">
         {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (
               <li className="h-8 p-3" key={i}>

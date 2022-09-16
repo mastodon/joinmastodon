@@ -23,3 +23,10 @@ export type Server = {
   language: string
   category: string
 }
+
+export type Day = {
+  period: string
+  server_count: string
+  user_count: string
+  active_user_count: string
+}
