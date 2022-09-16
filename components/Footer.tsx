@@ -3,12 +3,24 @@ import Link from "next/link"
 import { FormattedMessage } from "react-intl"
 import Image from "next/image"
 import SVG from "react-inlinesvg"
+import footerImage from "../public/illustrations/footer.png"
 
 /** Sitewide footer component */
 export const Footer = () => (
-  <footer className="full-width-bg relative mt-footer-offset bg-nightshade-900 pb-24 text-center text-white md:pt-24 md:text-start">
-    <div className="absolute pointer-events-none bottom-full left-1/2 h-48 w-full -translate-x-1/2 translate-y-[1px] ml-[-1px] bg-[url(/illustrations/swoosh.svg)] bg-no-repeat [background-position:90%_bottom] [background-size:MAX(64rem,100vw)_auto] md:h-[MAX(18vw,12rem)]"></div>
-    <nav className="full-width-bg__inner">
+  <footer className="full-width-bg relative mt-footer-offset bg-[#150118] pb-24 text-center text-white md:pt-24 md:text-start">
+    <div className="absolute bottom-full md:bottom-footer-offset left-1/2 w-full -translate-x-1/2 translate-y-[1px] ml-[-1px] z-0 pointer-events-none h-48 md:h-full">
+      <Image
+        src={footerImage}
+        alt=""
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center top"
+        placeholder="empty"
+        unoptimized
+      />
+    </div>
+
+    <nav className="full-width-bg__inner relative z-10">
       <div className="grid gap-x-4 gap-y-16 md:grid-cols-12 md:gap-x-5">
         <div className="flex flex-col items-center md:items-start md:col-start-1 md:col-end-5 lg:col-start-1 lg:col-end-5 text-nightshade-50 gap-8">
           <SVG src="/logos/logo-white.svg" className="w-20 max-w-full" fill="currentColor" />

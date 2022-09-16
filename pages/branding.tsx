@@ -171,7 +171,7 @@ const Branding = () => (
               <h4 className="h4 mb-4 md:mb-14">Usage hierarchy</h4>
 
               <div className="flex justify-center">
-                <ol className="list-decimal text-left">
+                <ol className="list-decimal text-start">
                   <li className="mb-4">
                     <strong className="block">Purple mark and white wordmark on black background.</strong>
                     This is the preferred option.
