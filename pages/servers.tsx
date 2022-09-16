@@ -107,7 +107,7 @@ const Servers = () => {
   )
 
   const days = useQuery<Day[]>(
-    [],
+    ["statistics"],
     () => fetchEndpoint("statistics", params),
     queryOptions
   )
