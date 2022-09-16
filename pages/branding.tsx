@@ -5,6 +5,13 @@ import loadIntlMessages from "../utils/loadIntlMessages"
 import classNames from "classnames"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
+import Image from "next/image"
+
+import screenshotComposeLight from "../public/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png"
+import screenshotHomeLight from "../public/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png"
+import screenshotProfileLight from "../public/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png"
+import screenshotServerRulesLight from "../public/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png"
+import screenshotThreadLight from "../public/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png"
 
 const BrandSection = ({
   title,
@@ -53,8 +60,8 @@ const Logo = ({ label, src, className }: { label: string, src: string, className
 /** This page does not require translations */
 const Branding = () => (
   <Layout>
-    <div dir="ltr" className="unicode-bidi:plaintext]">
-      <Hero homepage desktopImage={heroImage} mobileImage={heroImage}>
+    <div dir="ltr" className="[unicode-bidi:plaintext]">
+      <Hero desktopImage={heroImage} mobileImage={heroImage}>
         <h1 className="h1 pt-16 mb-8">Brand Toolkit</h1>
         <p className="sh1">
           Download our logos or use our brand colors for&nbsp;your&nbsp;projects
@@ -195,7 +202,7 @@ const Branding = () => (
       <BrandSection
         title="Our colors"
         preview={
-          <div className="grid grid-cols-12 flex-col gap-gutter">
+          <div className="grid grid-cols-12 gap-gutter">
             <div className="col-span-12 grid grid-cols-2 gap-gutter lg:col-span-8 lg:col-start-3">
               {["#6364FF", "#563ACC"].map((hex) => (
                 <div key={hex} className="flex flex-col gap-2 text-left">
@@ -223,12 +230,55 @@ const Branding = () => (
           </div>
         }
       />
+      <BrandSection
+        title="Product screenshots"
+        copy="Need some screenshots? We've got you covered."
+        preview={
+          <div className="flex gap-gutter">
+            {[
+              {
+                src: screenshotComposeLight,
+                download: "/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png",
+                title: "Compose, light mode, iPhone 13 Pro Max",
+              }, {
+                src: screenshotHomeLight,
+                download: "/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png",
+                title: "Home, light mode, iPhone 13 Pro Max",
+              }, {
+                src: screenshotProfileLight,
+                download: "/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png",
+                title: "Profile, light mode, iPhone 13 Pro Max",
+              }, {
+                src: screenshotServerRulesLight,
+                download: "/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png",
+                title: "Server rules, light mode, iPhone 13 Pro Max",
+              }, {
+                src: screenshotThreadLight,
+                download: "/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png",
+                title: "Thread, light mode, iPhone 13 Pro Max",
+              },
+            ].map(screenshot => (
+              <a key={screenshot.title} href={screenshot.download} title={screenshot.title} download className="block rounded overflow-hidden border border-gray-4 hocus:ring ring-blurple-500">
+                <Image src={screenshot.src} alt="" />
+              </a>
+            ))}
+          </div>
+        }
+      />
 
       <Head>
         <title>Brand Toolkit - Mastodon</title>
         <meta
           property="og:title"
-          content="Brand Toolkit for joinmastodon.org"
+          content="Branding guidelines for Mastodon"
+        />
+        <meta
+          property="og:description"
+          content="Download logos, product screenshots, learn about our trademark and more."
+        />
+        <meta
+          property="description"
+          content="Download logos, product screenshots, learn about our trademark and more."
         />
       </Head>
     </div>
