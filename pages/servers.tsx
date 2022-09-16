@@ -354,6 +354,7 @@ const ServerStats = ({ days }) => {
 
         <p className="b3 mt-4 text-gray-2">
           <SkeletonText className="w-[20ch]" />
+          <br />
           <SkeletonText className="w-[16ch]" />
         </p>
       </div>
