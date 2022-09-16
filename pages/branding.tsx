@@ -64,7 +64,7 @@ const Branding = () => (
       <Hero desktopImage={heroImage} mobileImage={heroImage}>
         <h1 className="h1 pt-16 mb-8">Brand Toolkit</h1>
         <p className="sh1">
-          Download our logos or use our brand colors for&nbsp;your&nbsp;projects
+          Learn our branding guidelines, download our logos and icons, or use our brand colors for&nbsp;your&nbsp;projects.
         </p>
       </Hero>
       <BrandSection
@@ -270,15 +270,15 @@ const Branding = () => (
         <title>Brand Toolkit - Mastodon</title>
         <meta
           property="og:title"
-          content="Branding guidelines for Mastodon"
+          content="Brand Toolkit for Mastodon"
         />
         <meta
           property="og:description"
-          content="Download logos, product screenshots, learn about our trademark and more."
+          content="Learn our branding guidelines, download our logos and icons, or use our brand colors for your projects."
         />
         <meta
           property="description"
-          content="Download logos, product screenshots, learn about our trademark and more."
+          content="Learn our branding guidelines, download our logos and icons, or use our brand colors for your projects."
         />
       </Head>
     </div>
