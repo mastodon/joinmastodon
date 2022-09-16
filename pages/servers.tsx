@@ -352,7 +352,7 @@ const ServerStats = ({ days }) => {
           <Statistic key="servers" />
         </div>
 
-        <p className="b2 mt-4 text-gray-2">
+        <p className="b3 mt-4 text-gray-2">
           <SkeletonText className="w-[20ch]" />
           <SkeletonText className="w-[16ch]" />
         </p>
@@ -390,7 +390,7 @@ const ServerStats = ({ days }) => {
         />
       </div>
 
-      <p className="b2 mt-4 text-gray-2"><FormattedMessage id="stats.disclaimer" defaultMessage="Data collected by crawling all accessible Mastodon servers on {date}." values={{ date: <FormattedDate value={currentDay.period} year="numeric" month="short" day="2-digit" /> }} /></p>
+      <p className="b3 mt-4 text-gray-2"><FormattedMessage id="stats.disclaimer" defaultMessage="Data collected by crawling all accessible Mastodon servers on {date}." values={{ date: <FormattedDate value={currentDay.period} year="numeric" month="short" day="2-digit" /> }} /></p>
     </div>
   )
 }

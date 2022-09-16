@@ -5,11 +5,13 @@ import loadIntlMessages from "../utils/loadIntlMessages"
 import LinkButton from "../components/LinkButton"
 import { FormattedMessage, useIntl } from "react-intl"
 import Layout from "../components/Layout"
+import heroImage from "../public/illustrations/apps_hero_desktop.png"
 
 const NotFoundPage = () => (
-  <Layout transparentHeader={false}>
+  <Layout>
+    <Hero homepage desktopImage={heroImage} mobileImage={heroImage} />
     <BasicPage>
-      <div className="flex justify-center pt-48">
+      <div className="flex justify-center pt-24">
         <div className="h2 px-12 font-bold text-blurple-500">404</div>
 
         <div className="border-l-2 border-gray-4 px-12">

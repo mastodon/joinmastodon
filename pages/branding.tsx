@@ -4,7 +4,7 @@ import Hero from "../components/Hero"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import classNames from "classnames"
 import Layout from "../components/Layout"
-import heroImage from "../public/illustrations/branding_hero.png"
+import heroImage from "../public/illustrations/apps_hero_desktop.png"
 
 const BrandSection = ({
   title,
@@ -35,9 +35,9 @@ const BrandSection = ({
 
 /** This page does not require translations */
 const Branding = () => (
-  <Layout transparentHeader={false}>
+  <Layout>
     <div dir="ltr" className="unicode-bidi:plaintext]">
-      <Hero homepage desktopImage={heroImage} mobileImage={heroImage} safeTextShadow={false}> 
+      <Hero homepage desktopImage={heroImage} mobileImage={heroImage}>
         <h1 className="h1 pt-16 mb-8">Brand Toolkit</h1>
         <p className="sh1">
           Download our logos or use our brand colors for&nbsp;your&nbsp;projects
@@ -95,7 +95,7 @@ const Branding = () => (
                     aria-label={image.label}
                     href={image.src}
                     className={classNames(
-                      "flex items-center justify-center rounded p-4 transition-colors hocus:bg-gray-3",
+                      "flex items-center rounded-md justify-center rounded p-4 transition-colors hocus:bg-gray-3",
                       imageIndex % 2 === 0 ? "aspect-square" : ""
                     )}
                   >
