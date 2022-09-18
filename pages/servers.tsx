@@ -28,7 +28,7 @@ const DUNBAR = Math.log(800);
 const Servers = () => {
   const intl = useIntl()
   const { locale } = useRouter()
-  const [filters, setFilters] = useState({ language: locale, category: "general" })
+  const [filters, setFilters] = useState({ language: "", category: "general" })
 
   const params = new URLSearchParams(filters)
   const queryOptions = {
