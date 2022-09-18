@@ -6,10 +6,12 @@ import classNames from "classnames"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
 import Image from "next/image"
-import { FormattedDate } from "react-intl"
+import { FormattedDate, FormattedMessage } from "react-intl"
 import SVG from "react-inlinesvg"
 import Link from "next/link"
-
+import { useQuery } from "@tanstack/react-query"
+import Statistic from "../components/Statistic"
+import { Day } from "../types/api"
 import team from "../data/team"
 import interviews from "../data/interviews"
 import press from "../data/press"
@@ -28,11 +30,7 @@ const About = () => (
         <div className="full-width-bg__inner">
           <div className="grid grid-cols-12 md:gap-x-12 gap-y-24 py-20">
             <div className="col-span-12 md:col-span-6">
-              <h2 className="h3">Our story</h2>
-
-              <div className="b2 my-6 p-4 bg-eggplant text-white rounded-md">
-                For high-quality <strong>Mastodon logos</strong>, <strong>product screenshots</strong>, and other marketing materials, go to our <Link href="/branding"><a className="text-blurple-300 hover:underline">branding page</a></Link>.
-              </div>
+              <h2 className="h3 mb-6">Our story</h2>
 
               <p className="b1 mb-4">
                 <strong>Mastodon gGmbH is a non-profit from Germany that develops the Mastodon software.</strong> Mastodon started as an open-source project by Eugen Rochko in 2016, who, as an avid user since 2008, was dissatisfied with the state and direction of Twitter.
@@ -69,8 +67,14 @@ const About = () => (
               </div>
             </div>
 
-            <div className="col-span-12 md:col-span-6">
-              <h2 className="h3 mb-4">Annual reports</h2>
+            <div className="col-span-12 md:col-span-3">
+              <h2 className="h3 mb-4">Our metrics</h2>
+
+              <Metrics />
+            </div>
+
+            <div className="col-span-12 md:col-span-3">
+              <h2 className="h3 mb-4">Reports</h2>
 
               <ul className="list-disc pl-3">
                 <li>
@@ -85,13 +89,13 @@ const About = () => (
             <div className="col-span-12 md:col-span-6">
               <h2 className="h3 mb-4">Podcast interviews</h2>
 
-              <div>
+              <div className="space-y-4">
                 {interviews.sort((a, b) => a.date.localeCompare(b.date) * -1).map(interview => (
-                  <a key={interview.url} href={interview.url} rel="nofollow noopener" className="flex items-center py-4 hover:text-blurple-500 group truncate">
+                  <a key={interview.url} href={interview.url} rel="nofollow noopener" className="flex items-center hover:text-blurple-500 group max-w-full">
                     <div className="relative shrink-0 rounded-md overflow-hidden w-20 h-20 group-hover:ring-2 ring-blurple-500"><Image src={interview.icon} alt="" layout="fill" objectFit="contain" /></div>
 
-                    <div className="px-4 max-w-full">
-                      <span className="block b1 !font-bold">{interview.title}</span>
+                    <div className="px-4 truncate">
+                      <span className="block b1 !font-bold truncate">{interview.title}</span>
                       <span className="b2 text-gray-1"><FormattedDate value={interview.date} year="numeric" month="short" day="2-digit" /> <strong>{interview.show}</strong></span>
                     </div>
                   </a>
@@ -117,6 +121,11 @@ const About = () => (
                 ))}
               </div>
             </div>
+
+            <div className="col-span-12">
+              <h2 className="h3 mb-4">Contact us</h2>
+              <p className="sh1">For press inquiries, use <a href="mailto:press@joinmastodon.org" className="text-blurple-500 hover:underline">press@joinmastodon.org</a>. For all other inquiries, e-mail us at <a href="mailto:hello@joinmastodon.org" className="text-blurple-500 hover:underline">hello@joinmastodon.org</a>.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -139,6 +148,41 @@ const About = () => (
     </div>
   </Layout>
 )
+
+const Metrics = () => {
+  const days = useQuery<Day[]>(["statistics"], () => fetch("https://api.joinmastodon.org/statistics").then(res => res.json()), { cacheTime: 30 * 60 * 1000 })
+
+  if (days.isError || days.isLoading) {
+    return null
+  }
+
+  const currentDay = days.data[days.data.length - 2]
+  const compareDay = days.data[0]
+
+  return (
+    <>
+      <div className="space-y-4">
+        <Statistic
+          key="mau"
+          icon="/ui/person.svg"
+          label={<FormattedMessage id="stats.monthly_active_users" defaultMessage="Monthly Active Users" />}
+          currentValue={currentDay.active_user_count}
+          prevValue={compareDay.active_user_count}
+        />
+
+        <Statistic
+          key="servers"
+          icon="/ui/filters.svg"
+          label={<FormattedMessage id="stats.servers" defaultMessage="Servers Up" />}
+          currentValue={currentDay.server_count}
+          prevValue={compareDay.server_count}
+        />
+      </div>
+
+      <p className="b3 mt-4 text-gray-2"><FormattedMessage id="stats.disclaimer" defaultMessage="Data collected by crawling all accessible Mastodon servers on {date}." values={{ date: <FormattedDate value={currentDay.period} year="numeric" month="short" day="2-digit" /> }} /></p>
+    </>
+  )
+}
 
 export async function getStaticProps(ctx) {
   return {
