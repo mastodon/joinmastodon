@@ -8,6 +8,7 @@ import heroImage from "../public/illustrations/apps_hero_desktop.png"
 import Image from "next/image"
 import { FormattedDate } from "react-intl"
 import SVG from "react-inlinesvg"
+import Link from "next/link"
 
 import team from "../data/team"
 import interviews from "../data/interviews"
@@ -27,12 +28,17 @@ const About = () => (
         <div className="full-width-bg__inner">
           <div className="grid grid-cols-12 md:gap-x-12 gap-y-24 py-20">
             <div className="col-span-12 md:col-span-6">
-              <h2 className="h3 mb-4">Our story</h2>
+              <h2 className="h3">Our story</h2>
+
+              <div className="b2 my-6 p-4 bg-eggplant text-white rounded-md">
+                For high-quality <strong>Mastodon logos</strong>, <strong>product screenshots</strong>, and other marketing materials, go to our <Link href="/branding"><a className="text-blurple-300 hover:underline">branding page</a></Link>.
+              </div>
+
               <p className="b1 mb-4">
                 <strong>Mastodon gGmbH is a non-profit from Germany that develops the Mastodon software.</strong> Mastodon started as an open-source project by Eugen Rochko in 2016, who, as an avid user since 2008, was dissatisfied with the state and direction of Twitter.
               </p>
               <p className="b1 mb-4">
-                Believing that instant global communications were too crucial for modern society to belong to a single commercial company, he saught to build a user-friendly microblogging product that would not belong to any central authority, but remain practical for everyday use.
+                Believing that instant global communications were too crucial for modern society to belong to a single commercial company, he sought to build a user-friendly microblogging product that would not belong to any central authority, but remain practical for everyday use.
               </p>
               <p className="b1 mb-4">
                 The first public launch occurred in October 2016. The initial support the project received through Patreon ensured that Eugen could begin working on the project full-time post-graduation. In April 2017 it received its first big break and garnered world-wide attention and press coverage.
