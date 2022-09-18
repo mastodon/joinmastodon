@@ -177,7 +177,7 @@ const Servers = () => {
           property="og:title"
           content={intl.formatMessage({
             id: "servers.page_title",
-            defaultMessage: "Servers of Mastodon",
+            defaultMessage: "Servers",
           })}
         />
         <meta
