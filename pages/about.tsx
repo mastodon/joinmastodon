@@ -33,7 +33,7 @@ const About = () => (
               <h2 className="h3 mb-6">Our story</h2>
 
               <p className="b1 mb-4">
-                <strong>Mastodon gGmbH is a non-profit from Germany that develops the Mastodon software.</strong> Mastodon started as an open-source project by Eugen Rochko in 2016, who, as an avid user since 2008, was dissatisfied with the state and direction of Twitter.
+                <strong>Mastodon gGmbH is a non-profit from Germany that develops the Mastodon software.</strong> Mastodon started in 2016 as an open-source project by Eugen Rochko, who, as an avid user since 2008, was dissatisfied with the state and direction of Twitter.
               </p>
               <p className="b1 mb-4">
                 Believing that instant global communications were too crucial for modern society to belong to a single commercial company, he sought to build a user-friendly microblogging product that would not belong to any central authority, but remain practical for everyday use.
