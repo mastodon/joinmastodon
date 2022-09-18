@@ -57,8 +57,8 @@ const Impressum = () => (
           </dl>
 
           <Head>
-            <title>About us - Mastodon</title>
-            <meta property="og:title" content="About us - Mastodon" />
+            <title>Impressum - Mastodon</title>
+            <meta property="og:title" content="Impressum - Mastodon" />
           </Head>
         </div>
       </BasicPage>
