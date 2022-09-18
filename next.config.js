@@ -17,6 +17,18 @@ const nextConfig = {
         destination: "/servers",
         permanent: true,
       },
+
+      {
+        source: "/imprint",
+        destination: "/about#impressum",
+        permanent: true,
+      },
+
+      {
+        source: "/impressum",
+        destination: "/about#impressum",
+        permanent: true,
+      },
     ]
   },
 }

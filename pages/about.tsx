@@ -122,9 +122,57 @@ const About = () => (
               </div>
             </div>
 
-            <div className="col-span-12">
+            <div className="col-span-12 md:col-span-6">
               <h2 className="h3 mb-4">Contact us</h2>
               <p className="sh1">For press inquiries, use <a href="mailto:press@joinmastodon.org" className="text-blurple-500 hover:underline">press@joinmastodon.org</a>. For all other inquiries, e-mail us at <a href="mailto:hello@joinmastodon.org" className="text-blurple-500 hover:underline">hello@joinmastodon.org</a>.</p>
+            </div>
+
+            <div className="col-span-12 md:col-span-6" id="impressum">
+              <h2 className="h3 mb-4">Impressum</h2>
+
+              <dl className="b1 grid grid-cols-12 gap-gutter">
+                <div className="col-span-6">
+                  <div className="mb-4">
+                    <dt className="font-bold">Firmenname:</dt>
+                    <dd>Mastodon gGmbH</dd>
+                  </div>
+
+                  <div className="mb-4">
+                    <dt className="font-bold">Anschrift:</dt>
+                    <dd>
+                      <address className="not-italic">
+                        Mühlenstraße 8a
+                        <br />
+                        14167 Berlin
+                        <br />
+                        Germany
+                      </address>
+                    </dd>
+                  </div>
+
+                  <div className="mb-4">
+                    <dt className="font-bold">Kontakt:</dt>
+                    <dd>
+                      <a href="mailto:hello@joinmastodon.org" className="text-blurple-500 hover:underline">
+                        hello@joinmastodon.org
+                      </a>
+                    </dd>
+                  </div>
+                </div>
+                <div className="col-span-6">
+                  <div className="mb-4">
+                    <dt className="font-bold">Handelsregister:</dt>
+                    <dd>HRB 230086 B (Amtsgericht Charlottenburg)</dd>
+                  </div>
+
+                  <div className="mb-4">
+                    <dt className="font-bold">
+                      Umsatzsteuer Identifikationsnummer:
+                    </dt>
+                    <dd>DE344258260</dd>
+                  </div>
+                </div>
+              </dl>
             </div>
           </div>
         </div>

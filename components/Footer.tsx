@@ -139,7 +139,7 @@ export const Footer = () => (
                     />
                   </a>
                 </Link>,
-                <Link key="/impressum" href="/impressum">
+                <Link key="/impressum" href="/about#impressum">
                   <a className="inline-block py-2 hover:underline">
                     <FormattedMessage
                       id="nav.impressum.title"
