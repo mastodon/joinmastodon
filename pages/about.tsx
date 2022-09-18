@@ -50,12 +50,12 @@ const About = () => (
                   <div key={member.name} className="col-span-12 md:col-span-6 lg:col-span-4">
                     <div className="w-full rounded-lg bg-blurple-gradient aspect-video shadow mb-4" />
 
-                    <span className="block b1 !font-bold">{member.name}</span>
-                    <span className="block b1 !font-semibold text-blurple-600">{member.position}</span>
+                    <span className="block b2 !font-bold">{member.name}</span>
+                    <span className="block b2 !font-semibold text-blurple-600">{member.position}</span>
 
                     {member.socials && <div className="flex mt-2">
-                      <a href={member.socials.mastodon} className="b1 block text-gray-2 hover:text-blurple-500">
-                        <SVG src="/logos/logo-white.svg" className="w-5 h-5" fill="currentColor" />
+                      <a href={member.socials.mastodon} className="b2 block text-gray-2 hover:text-blurple-500">
+                        <SVG src="/logos/logo-white.svg" className="w-4 h-4" fill="currentColor" />
                       </a>
                     </div>}
                   </div>
