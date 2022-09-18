@@ -166,16 +166,16 @@ const Metrics = () => {
           key="mau"
           icon="/ui/person.svg"
           label={<FormattedMessage id="stats.monthly_active_users" defaultMessage="Monthly Active Users" />}
-          currentValue={currentDay.active_user_count}
-          prevValue={compareDay.active_user_count}
+          currentValue={parseInt(currentDay.active_user_count)}
+          prevValue={parseInt(compareDay.active_user_count)}
         />
 
         <Statistic
           key="servers"
           icon="/ui/filters.svg"
           label={<FormattedMessage id="stats.servers" defaultMessage="Servers Up" />}
-          currentValue={currentDay.server_count}
-          prevValue={compareDay.server_count}
+          currentValue={parseInt(currentDay.server_count)}
+          prevValue={parseInt(compareDay.server_count)}
         />
       </div>
 
