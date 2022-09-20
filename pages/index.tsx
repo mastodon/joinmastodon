@@ -32,6 +32,7 @@ import Layout from "../components/Layout"
 
 function Home() {
   const intl = useIntl()
+
   return (
     <Layout>
       <Hero
@@ -80,6 +81,7 @@ function Home() {
             defaultMessage: "Decentralized social media",
           })}
         </title>
+
         <meta property="og:title" content={`Mastodon - ${intl.formatMessage({ id: "home.page_title", defaultMessage: "Decentralized social media" })}`} />
         <meta property="og:description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
         <meta property="description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
