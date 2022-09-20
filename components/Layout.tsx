@@ -35,7 +35,7 @@ export const Layout = ({
         <meta property="twitter:card" content="summary_large_image" />
 
         {locales.filter(locale => locale.code !== currentLocale).map(locale => (
-          <link key={locale.code} rel="alternate" hreflang={locale.code} href={`${BASE_URL}/${locale.code === defaultLocale ? "" : locale.code}${currentPath}`} />
+          <link key={locale.code} rel="alternate" hrefLang={locale.code} href={`${BASE_URL}/${locale.code === defaultLocale ? "" : locale.code}${currentPath}`} />
         ))}
       </Head>
     </div>
