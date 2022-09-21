@@ -1,5 +1,5 @@
 {
-  "404.description": "Bitte überprüfen Sie die Adresse, und versuchen Sie es erneut.",
+  "404.description": "Bitte überprüfen Sie die Adresse und versuchen Sie es erneut.",
   "404.go_back_home": "Zurück zur Startseite",
   "404.title": "Seite nicht gefunden",
   "apps.free": "Kostenlos",
@@ -43,8 +43,8 @@
   "home.page_description": "Erfahre mehr über Mastodon, die radikal andere, freie und quelloffene dezentrale Social-Media-Plattform.",
   "home.page_title": "Dezentrales Social Media",
   "home.sponsors.body": "Mastodon ist freie und quelloffene Software, die von einer gemeinnützigen Organisation entwickelt wird.",
-  "home.sponsors.title": "Für immer unabhängig",
-  "home.testimonials.title": "Was andere sagen",
+  "home.sponsors.title": "Dauerhaft unabhängig",
+  "home.testimonials.title": "Was unsere Benutzer sagen",
   "home.why.decentralized.copy": "Die globale Echtzeit-Kommunikation ist zu wichtig, als dass sie nur einem einzelnen Unternehmen gehören sollte. Jeder Mastodon-Server ist eine völlig unabhängige Einheit, die in der Lage ist, mit anderen Servern zusammenzuarbeiten, um ein globales soziales Netzwerk zu bilden.",
   "home.why.decentralized.title": "Dezentralisiert",
   "home.why.interoperability.copy": "Basierend auf offenen Web-Protokollen kann Mastodon mit jeder anderen Plattform sprechen, die ActivityPub implementiert. Mit einem Konto erhältst du Zugriff auf ein ganzes Universum von sozialen Apps – das Fediverse.",
