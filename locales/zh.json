@@ -1,7 +1,7 @@
 {
-  "404.description": "Please check the URL in the address bar and try again.",
-  "404.go_back_home": "Go back home",
-  "404.title": "Page not found",
+  "404.description": "请检查地址栏中的URL，然后重试。",
+  "404.go_back_home": "回到主页",
+  "404.title": "找不到页面",
   "apps.free": "免费",
   "apps.lead": "The best way to get started with Mastodon is through our official apps for iOS and Android, but many third-party apps are also available below.",
   "apps.paid": "付费",
