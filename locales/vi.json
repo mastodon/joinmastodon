@@ -111,7 +111,7 @@
   "sponsors.sponsorship.body": "Nếu bạn muốn biểu tượng của công ty mình xuất hiện trên trang này, bạn có thể trở thành nhà tài trợ trực tiếp thông qua nền tảng của riêng chúng tôi!",
   "sponsors.sponsorship.title": "Tài trợ",
   "sponsors.supported_by": "Ủng hộ bởi",
-  "stats.disclaimer": "Dữ liệu được thu thập bằng cách thu thập thông tin tất cả các máy chủ Mastodon vào {date}.",
+  "stats.disclaimer": "Dữ liệu được thu thập từ các máy chủ Mastodon vào {date}.",
   "stats.monthly_active_users": "Người dùng hàng tháng",
   "stats.network": "Thống kê nền tảng",
   "stats.servers": "Máy chủ hoạt động",
