@@ -113,9 +113,9 @@ const sponsors = {
       name: "Wide Angle Analytics",
     }, // Custom
     {
-      url: "https://goread.io/buy-instagram-followers",
+      url: "https://instalab.pro/buy-instagram-followers",
       logo: require("../public/sponsors/goread.png"),
-      name: "Goread.io",
+      name: "Instalab.pro",
     },
     {
       url: "https://www.noneedtostudy.com/take-my-online-class/",
