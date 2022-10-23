@@ -287,6 +287,12 @@ const sponsors = {
       name: "Coywolf",
       nofollow: true,
     },
+    {
+      url: "https://blog-wanderlust.de",
+      logo: require("../public/sponsors/wanderlust-blog.jpeg"),
+      name: "Wanderlust Blog",
+      nofollow: true,
+    }
   ],
   generalHighlighted: [
     "Moritz Heiber",
