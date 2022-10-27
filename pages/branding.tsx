@@ -25,7 +25,7 @@ const BrandSection = ({
   ctas?: React.ReactNode
   preview: React.ReactNode
 }) => (
-  <section className="text-center md:col-start-3 md:col-end-11">
+  <section className="text-center col-span-12 md:col-start-3 md:col-end-11">
     <div className="full-width-bg">
       <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
         <h2 className="h3 max-w-[17ch]">{title}</h2>
@@ -47,7 +47,7 @@ const Logo = ({ label, src, className }: { label: string, src: string, className
       download
       title={label}
       href={src}
-      className={classNames("flex items-center w-full h-full rounded-md justify-center p-16 transition-colors", className)}
+      className={classNames("flex items-center w-full h-full rounded-md justify-center transition-colors", className)}
     >
       <img
         src={src}
@@ -93,19 +93,20 @@ const Branding = () => (
                 {
                   label: "Download the SVG wordmark with white text",
                   src: "/logos/wordmark-white-text.svg",
-                  background: "bg-eggplant hocus:bg-black",
+                  styles: "bg-eggplant hocus:bg-black p-16",
                 },
                 {
                   label: "Download the SVG wordmark with black text",
                   src: "/logos/wordmark-black-text.svg",
-                  background: "bg-white hocus:bg-white",
+                  styles: "bg-white hocus:bg-gray-5 p-16",
                 },
               ].map((image) => (
+
                 <Logo
                   key={image.src}
                   src={image.src}
                   label={image.label}
-                  className={image.background}
+                  className={image.styles}
                 />
               ))}
 
@@ -115,19 +116,19 @@ const Branding = () => (
                 {
                   label: "Download the SVG wordmark with a white logo and black text",
                   src: "/logos/logo-full-black.svg",
-                  background: "bg-blurple-500 hocus:bg-black",
+                  styles: "bg-blurple-500 hocus:bg-blurple-600 p-16",
                 },
                 {
                   label: "Download the SVG wordmark with a black logo and white text",
                   src: "/logos/logo-full-white.svg",
-                  background: "bg-blurple-500 hocus:bg-white",
+                  styles: "bg-blurple-500 hocus:bg-blurple-600 p-16",
                 },
               ].map((image) => (
                 <Logo
                   key={image.src}
                   src={image.src}
                   label={image.label}
-                  className={image.background}
+                  className={image.styles}
                 />
               ))}
             </section>
@@ -139,29 +140,30 @@ const Branding = () => (
           copy={<p>Use these only when the Mastodon brand has been clearly established in the design.</p>}
           preview={
             <section>
-              <div className="grid md:grid-cols-3 gap-gutter">
+              <div className="grid grid-cols-3 gap-gutter lg:gap-24 md:px-8">
                 {[
                   {
                     label: "Download the purple SVG logo",
                     src: "/logos/logo-purple.svg",
-                    background: "bg-eggplant hocus:bg-black",
-                  },
-                  {
-                    label: "Download the white SVG logo",
-                    src: "/logos/logo-white.svg",
-                    background: "bg-eggplant hocus:bg-black",
+                    styles: "bg-white hocus:bg-gray-5 p-4 aspect-square",
                   },
                   {
                     label: "Download the black SVG logo",
                     src: "/logos/logo-black.svg",
-                    background: "bg-white hocus:bg-white",
+                    styles: "bg-white hocus:bg-gray-5 p-4 aspect-square",
                   },
+                  {
+                    label: "Download the white SVG logo",
+                    src: "/logos/logo-white.svg",
+                    styles: "bg-black hocus:bg-gray-0 p-4 aspect-square",
+                  },
+
                 ].map((image) => (
                   <Logo
                     key={image.src}
                     src={image.src}
                     label={image.label}
-                    className={image.background}
+                    className={image.styles}
                   />
                 ))}
               </div>
