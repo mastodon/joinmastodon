@@ -24,7 +24,7 @@ const BrandSection = ({
   ctas?: React.ReactNode
   preview: React.ReactNode
 }) => (
-  <section className="text-center">
+  <section className="text-center md:col-start-3 md:col-end-11">
     <div className="full-width-bg">
       <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
         <h2 className="h3 max-w-[17ch]">{title}</h2>
@@ -34,19 +34,19 @@ const BrandSection = ({
         {ctas && <div className="mt-12 flex justify-center gap-12">{ctas}</div>}
       </div>
     </div>
-    <div className="full-width-bg flex flex-col items-center justify-center pb-20">
-      <div className="full-width-bg__inner">{preview}</div>
+    <div className="flex flex-col items-center justify-center pb-20">
+      <div className="w-full">{preview}</div>
     </div>
   </section>
 )
 
 const Logo = ({ label, src, className }: { label: string, src: string, className?: string }) => (
-  <div className="flex items-center justify-center rounded-md bg-[url('/ui/void.png')] border border-gray-4 col-span-12 md:col-span-4">
+  <div className="flex items-center justify-center rounded-md col-span-12 md:col-span-4">
     <a
       download
       title={label}
       href={src}
-      className={classNames("flex items-center w-full h-full rounded-md justify-center p-8 transition-colors", className)}
+      className={classNames("flex items-center w-full h-full rounded-md justify-center p-16 transition-colors", className)}
     >
       <img
         src={src}
@@ -67,105 +67,107 @@ const Branding = () => (
           Learn our branding guidelines, download our logos and icons, or use our brand colors for&nbsp;your&nbsp;projects.
         </p>
       </Hero>
-      <BrandSection
-        title="Wordmark"
-        copy={
-          <p>
-            We take pride in the Mastodon logo and hope you do too.
-            Please&nbsp;take a moment to think about how you apply it. If you
-            want to use our art, please keep it tasteful!
-          </p>
-        }
-        preview={
-          <div>
-            {[
-              {
-                label: "Download the SVG wordmark with white text",
-                src: "/logos/wordmark-white-text.svg",
-                background: "bg-black/70 hocus:bg-black",
-              },
-              {
-                label: "Download the SVG wordmark with black text",
-                src: "/logos/wordmark-black-text.svg",
-                background: "bg-white/70 hocus:bg-white",
-              },
-            ].map((image) => (
-              <Logo
-                key={image.src}
-                src={image.src}
-                label={image.label}
-                className={image.background}
-              />
-            ))}
-          </div>
-        }
-      />
-      <BrandSection
-        title="Our colors"
-        preview={
-          <div className="grid grid-cols-12 gap-gutter">
-            <div className="col-span-12 grid grid-cols-2 gap-gutter lg:col-span-8 lg:col-start-3">
-              {["#6364FF", "#563ACC"].map((hex) => (
-                <div key={hex} className="flex flex-col gap-2 text-left">
-                  <div
-                    style={{ backgroundColor: hex }}
-                    className="h-20 rounded md:h-24"
-                  >
-                    <div className="p-4 pt-14 text-white/60 font-black">{hex}</div>
-                  </div>
-                </div>
+      <div className="grid grid-cols-12 gap-gutter">
+        <BrandSection
+          title="Wordmark"
+          copy={
+            <p>
+              We take pride in the Mastodon logo and hope you do too.
+              Please&nbsp;take a moment to think about how you apply it. If you
+              want to use our art, please keep it tasteful!
+            </p>
+          }
+          preview={
+            <div>
+              {[
+                {
+                  label: "Download the SVG wordmark with white text",
+                  src: "/logos/wordmark-white-text.svg",
+                  background: "bg-eggplant hocus:bg-black",
+                },
+                {
+                  label: "Download the SVG wordmark with black text",
+                  src: "/logos/wordmark-black-text.svg",
+                  background: "bg-white hocus:bg-white",
+                },
+              ].map((image) => (
+                <Logo
+                  key={image.src}
+                  src={image.src}
+                  label={image.label}
+                  className={image.background}
+                />
               ))}
             </div>
-            <div className="col-span-12 grid grid-cols-3 gap-gutter lg:col-span-6 lg:col-start-4">
-              {["#17063B", "#2F0C7A", "#858AFA"].map((hex) => (
-                <div key={hex} className="flex flex-col gap-2 text-left">
-                  <div
-                    style={{ backgroundColor: hex }}
-                    className="h-20 rounded md:h-24"
-                  >
-                    <div className="p-4 pt-14 text-white/60 font-black">{hex}</div>
+          }
+        />
+        <BrandSection
+          title="Our colors"
+          preview={
+            <div className="grid grid-cols-12 gap-gutter">
+              <div className="col-span-12 grid grid-cols-2 gap-gutter lg:col-span-8 lg:col-start-3">
+                {["#6364FF", "#563ACC"].map((hex) => (
+                  <div key={hex} className="flex flex-col gap-2 text-left">
+                    <div
+                      style={{ backgroundColor: hex }}
+                      className="h-20 rounded md:h-24"
+                    >
+                      <div className="p-4 pt-14 text-white/60 font-black">{hex}</div>
+                    </div>
                   </div>
-                </div>
+                ))}
+              </div>
+              <div className="col-span-12 grid grid-cols-3 gap-gutter lg:col-span-6 lg:col-start-4">
+                {["#17063B", "#2F0C7A", "#858AFA"].map((hex) => (
+                  <div key={hex} className="flex flex-col gap-2 text-left">
+                    <div
+                      style={{ backgroundColor: hex }}
+                      className="h-20 rounded md:h-24"
+                    >
+                      <div className="p-4 pt-14 text-white/60 font-black">{hex}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          }
+        />
+        <BrandSection
+          title="Product screenshots"
+          copy="Need some screenshots? We've got you covered."
+          preview={
+            <div className="flex gap-gutter">
+              {[
+                {
+                  src: screenshotComposeLight,
+                  download: "/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png",
+                  title: "Compose, light mode, iPhone 13 Pro Max",
+                }, {
+                  src: screenshotHomeLight,
+                  download: "/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png",
+                  title: "Home, light mode, iPhone 13 Pro Max",
+                }, {
+                  src: screenshotProfileLight,
+                  download: "/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png",
+                  title: "Profile, light mode, iPhone 13 Pro Max",
+                }, {
+                  src: screenshotServerRulesLight,
+                  download: "/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png",
+                  title: "Server rules, light mode, iPhone 13 Pro Max",
+                }, {
+                  src: screenshotThreadLight,
+                  download: "/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png",
+                  title: "Thread, light mode, iPhone 13 Pro Max",
+                },
+              ].map(screenshot => (
+                <a key={screenshot.title} href={screenshot.download} title={screenshot.title} download className="block rounded overflow-hidden border border-gray-4 hocus:ring ring-blurple-500">
+                  <Image src={screenshot.src} alt="" />
+                </a>
               ))}
             </div>
-          </div>
-        }
-      />
-      <BrandSection
-        title="Product screenshots"
-        copy="Need some screenshots? We've got you covered."
-        preview={
-          <div className="flex gap-gutter">
-            {[
-              {
-                src: screenshotComposeLight,
-                download: "/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png",
-                title: "Compose, light mode, iPhone 13 Pro Max",
-              }, {
-                src: screenshotHomeLight,
-                download: "/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png",
-                title: "Home, light mode, iPhone 13 Pro Max",
-              }, {
-                src: screenshotProfileLight,
-                download: "/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png",
-                title: "Profile, light mode, iPhone 13 Pro Max",
-              }, {
-                src: screenshotServerRulesLight,
-                download: "/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png",
-                title: "Server rules, light mode, iPhone 13 Pro Max",
-              }, {
-                src: screenshotThreadLight,
-                download: "/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png",
-                title: "Thread, light mode, iPhone 13 Pro Max",
-              },
-            ].map(screenshot => (
-              <a key={screenshot.title} href={screenshot.download} title={screenshot.title} download className="block rounded overflow-hidden border border-gray-4 hocus:ring ring-blurple-500">
-                <Image src={screenshot.src} alt="" />
-              </a>
-            ))}
-          </div>
-        }
-      />
+          }
+        />
+      </div>
 
       <Head>
         <title>Brand Toolkit - Mastodon</title>
