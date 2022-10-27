@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
 
-import mastodonLogo from "../public/logos/logo-full-purple.svg"
+import mastodonLogo from "../public/logos/wordmark-white-text.svg"
 import Image from "next/image"
 import { useState, useEffect, useRef, useId } from "react"
 import classNames from "classnames"

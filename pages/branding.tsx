@@ -68,7 +68,7 @@ const Branding = () => (
         </p>
       </Hero>
       <BrandSection
-        title="Our Logos"
+        title="Wordmark"
         copy={
           <p>
             We take pride in the Mastodon logo and hope you do too.
@@ -77,125 +77,26 @@ const Branding = () => (
           </p>
         }
         preview={
-          <div className="grid grid-cols-12 gap-gutter">
-            <div className="col-span-12 lg:col-span-6">
-              <h4 className="h4 mb-4">Wordmark</h4>
-              <p className="sh1">Please do not modify the marks or use them in a confusing way. If you are unsure, reach out to us.</p>
-
-              <div className="grid grid-cols-12 gap-gutter py-10">
-                {[
-                  {
-                    label: "Download the purple SVG Logo with wordmark",
-                    src: "/logos/logo-full-purple.svg",
-                    background: "bg-black/70 hocus:bg-black",
-                  },
-                  {
-                    label: "Download the black SVG Logo with wordmark",
-                    src: "/logos/logo-full-black.svg",
-                    background: "bg-white/70 hocus:bg-white",
-                  },
-                  {
-                    label: "Download the white SVG Logo with wordmark",
-                    src: "/logos/logo-full-white.svg",
-                    background: "bg-black/70 hocus:bg-black",
-                  },
-                ].map((image, imageIndex) => (
-                  <Logo
-                    key={image.src}
-                    src={image.src}
-                    label={image.label}
-                    className={image.background}
-                  />
-                ))}
-              </div>
-            </div>
-
-            <div className="col-span-12 lg:col-span-6">
-              <h4 className="h4 mb-4">Mark only</h4>
-              <p className="sh1">Use these only when the Mastodon brand has been clearly established in the design.</p>
-
-              <div className="grid grid-cols-12 gap-gutter py-10">
-                {[
-                  {
-                    label: "Download the purple SVG Logo",
-                    src: "/logos/logo-purple.svg",
-                    background: "bg-black/70 hocus:bg-black",
-                  },
-                  {
-                    label: "Download the black SVG Logo",
-                    src: "/logos/logo-black.svg",
-                    background: "bg-white/70 hocus:bg-white",
-                  },
-                  {
-                    label: "Download the white SVG Logo",
-                    src: "/logos/logo-white.svg",
-                    background: "bg-black/70 hocus:bg-black",
-                  },
-                ].map((image, imageIndex) => (
-                  <Logo
-                    key={image.src}
-                    src={image.src}
-                    label={image.label}
-                    className={image.background}
-                  />
-                ))}
-              </div>
-            </div>
-
-            <div className="col-span-12 lg:col-span-6">
-              <h4 className="h4 mb-4">Clear space</h4>
-              <p className="sh1">
-                When using our logo, please ensure that you give it room
-                to&nbsp;breathe! At least 36px on all sides please.
-              </p>
-
-              <div className="flex flex-col items-center justify-center py-10 sm:flex-row lg:justify-between">
-                {["/logos/logo-purple.svg", "/logos/logo-full-purple.svg"].map(
-                  (src) => (
-                    <div
-                      className="relative rounded bg-eggplant p-[36px] text-blurple-600 shadow-[currentColor_0_0_0_1px_inset]"
-                      key={src}
-                    >
-                      {/* everything except for the image is a guide mark */}
-                      <div className="absolute top-0 left-0 h-[36px] w-[36px] rounded-full border" />
-                      <div className="absolute top-0 right-0 h-[36px] w-[36px] rounded-full border" />
-                      <div className="absolute bottom-0 left-0 h-[36px] w-[36px] rounded-full border" />
-                      <div className="absolute bottom-0 right-0 h-[36px] w-[36px] rounded-full border" />
-                      <div className="absolute top-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                      <div className="absolute top-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                      <div className="absolute bottom-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                      <div className="absolute bottom-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                      <div className="absolute border-x inset-block-0 inset-inline-[35px]" />
-                      <div className="absolute border-y inset-inline-0 inset-block-[35px]" />
-                      <img src={src} alt="" className="w-auto" />
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-
-            <div className="col-span-12 lg:col-span-6">
-              <h4 className="h4 mb-4 md:mb-14">Usage hierarchy</h4>
-
-              <div className="flex justify-center">
-                <ol className="list-decimal text-start">
-                  <li className="mb-4">
-                    <strong className="block">Purple mark and white wordmark on black background.</strong>
-                    This is the preferred option.
-                  </li>
-
-                  <li className="mb-4">
-                    <strong className="block">White mark and black wordmark on white background.</strong>
-                    If the first option is not possible.
-                  </li>
-
-                  <li className="mb-4">
-                    <strong className="block">Black mark and white wordmark on black background.</strong>
-                    If incorporating color is not an option.
-                  </li>
-                </ol>
-              </div>
-            </div>
+          <div>
+            {[
+              {
+                label: "Download the SVG wordmark with white text",
+                src: "/logos/wordmark-white-text.svg",
+                background: "bg-black/70 hocus:bg-black",
+              },
+              {
+                label: "Download the SVG wordmark with black text",
+                src: "/logos/wordmark-black-text.svg",
+                background: "bg-white/70 hocus:bg-white",
+              },
+            ].map((image) => (
+              <Logo
+                key={image.src}
+                src={image.src}
+                label={image.label}
+                className={image.background}
+              />
+            ))}
           </div>
         }
       />
