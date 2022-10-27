@@ -6,6 +6,7 @@ import classNames from "classnames"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
 import Image from "next/image"
+import SVG from "react-inlinesvg"
 
 import screenshotComposeLight from "../public/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png"
 import screenshotHomeLight from "../public/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png"
@@ -41,7 +42,7 @@ const BrandSection = ({
 )
 
 const Logo = ({ label, src, className }: { label: string, src: string, className?: string }) => (
-  <div className="flex items-center justify-center rounded-md col-span-12 md:col-span-4">
+  <div className="flex items-center justify-center rounded-md">
     <a
       download
       title={label}
@@ -56,6 +57,15 @@ const Logo = ({ label, src, className }: { label: string, src: string, className
     </a>
   </div>
 )
+
+const UsageRule = ({ text }: { text: string }) => {
+  return (
+    <div className="flex items-center text-left gap-6">
+      <SVG className="shrink-0" src="/icons/check.svg" />
+      <p>{text}</p>
+    </div>
+  )
+}
 
 /** This page does not require translations */
 const Branding = () => (
@@ -78,7 +88,7 @@ const Branding = () => (
             </p>
           }
           preview={
-            <div>
+            <section>
               {[
                 {
                   label: "Download the SVG wordmark with white text",
@@ -98,7 +108,66 @@ const Branding = () => (
                   className={image.background}
                 />
               ))}
-            </div>
+
+              <UsageRule text="Use the main logo (black or white version) on a background that creates enough contrast to retain logo quality" />
+
+              {[
+                {
+                  label: "Download the SVG wordmark with a white logo and black text",
+                  src: "/logos/logo-full-black.svg",
+                  background: "bg-blurple-500 hocus:bg-black",
+                },
+                {
+                  label: "Download the SVG wordmark with a black logo and white text",
+                  src: "/logos/logo-full-white.svg",
+                  background: "bg-blurple-500 hocus:bg-white",
+                },
+              ].map((image) => (
+                <Logo
+                  key={image.src}
+                  src={image.src}
+                  label={image.label}
+                  className={image.background}
+                />
+              ))}
+            </section>
+          }
+        />
+
+        <BrandSection
+          title="Mark only"
+          copy={<p>Use these only when the Mastodon brand has been clearly established in the design.</p>}
+          preview={
+            <section>
+              <div className="grid md:grid-cols-3 gap-gutter">
+                {[
+                  {
+                    label: "Download the purple SVG logo",
+                    src: "/logos/logo-purple.svg",
+                    background: "bg-eggplant hocus:bg-black",
+                  },
+                  {
+                    label: "Download the white SVG logo",
+                    src: "/logos/logo-white.svg",
+                    background: "bg-eggplant hocus:bg-black",
+                  },
+                  {
+                    label: "Download the black SVG logo",
+                    src: "/logos/logo-black.svg",
+                    background: "bg-white hocus:bg-white",
+                  },
+                ].map((image) => (
+                  <Logo
+                    key={image.src}
+                    src={image.src}
+                    label={image.label}
+                    className={image.background}
+                  />
+                ))}
+              </div>
+              <UsageRule text="Use the small version of the logo when the brand has already been established and / or space is limited to allow appropriate clear space around the main Mastodon logo" />
+              <UsageRule text="Use the one color black or white version of the logo in applications of print or letterheadwhen only one print color is available" />
+            </section>
           }
         />
         <BrandSection
