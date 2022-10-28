@@ -176,7 +176,7 @@ const Branding = () => (
           title="Clear space"
           copy={<p>When using our logo, please ensure that you give it room to breathe! At least 36px on all sides please.</p>}
           preview={
-            <div className="flex flex-col items-center justify-center py-10 sm:flex-row gap-4 md:gap-32">
+            <div className="flex flex-col items-center justify-center sm:flex-row gap-4 md:gap-32">
               {["/logos/logo-purple.svg", "/logos/wordmark-white-text.svg"].map(
                 (src) => (
                   <div
