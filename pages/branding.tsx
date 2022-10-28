@@ -172,6 +172,37 @@ const Branding = () => (
             </section>
           }
         />
+
+        <BrandSection
+          title="Clear space"
+          copy={<p>When using our logo, please ensure that you give it room to breathe! At least 36px on all sides please.</p>}
+          preview={
+            <div className="flex flex-col items-center justify-center py-10 sm:flex-row gap-4 md:gap-32">
+              {["/logos/logo-purple.svg", "/logos/wordmark-white-text.svg"].map(
+                (src) => (
+                  <div
+                    className="relative rounded bg-eggplant p-[36px] text-blurple-600 shadow-[currentColor_0_0_0_1px_inset]"
+                    key={src}
+                  >
+                    {/* everything except for the image is a guide mark */}
+                    <div className="absolute top-0 left-0 h-[36px] w-[36px] rounded-full border" />
+                    <div className="absolute top-0 right-0 h-[36px] w-[36px] rounded-full border" />
+                    <div className="absolute bottom-0 left-0 h-[36px] w-[36px] rounded-full border" />
+                    <div className="absolute bottom-0 right-0 h-[36px] w-[36px] rounded-full border" />
+                    <div className="absolute top-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                    <div className="absolute top-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                    <div className="absolute bottom-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                    <div className="absolute bottom-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                    <div className="absolute border-x inset-block-0 inset-inline-[35px]" />
+                    <div className="absolute border-y inset-inline-0 inset-block-[35px]" />
+                    <img src={src} alt="" className="w-auto" />
+                  </div>
+                )
+              )}
+            </div>
+          }
+        />
+
         <BrandSection
           title="Our colors"
           preview={
