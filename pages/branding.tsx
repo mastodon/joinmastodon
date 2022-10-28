@@ -25,9 +25,9 @@ const BrandSection = ({
   ctas?: React.ReactNode
   preview: React.ReactNode
 }) => (
-  <section className="text-center col-span-12 md:col-start-3 md:col-end-11">
+  <section className="text-center col-span-12 md:col-start-3 md:col-end-11 grid gap-16">
     <div className="full-width-bg">
-      <div className="full-width-bg__inner flex flex-col items-center justify-center py-20">
+      <div className="full-width-bg__inner flex flex-col items-center justify-center pt-20">
         <h2 className="h3 max-w-[17ch]">{title}</h2>
         {copy && (
           <div className="b1 mt-2 flex max-w-[50ch] flex-col gap-8">{copy}</div>
@@ -35,9 +35,7 @@ const BrandSection = ({
         {ctas && <div className="mt-12 flex justify-center gap-12">{ctas}</div>}
       </div>
     </div>
-    <div className="flex flex-col items-center justify-center pb-20">
-      <div className="w-full">{preview}</div>
-    </div>
+    {preview}
   </section>
 )
 
@@ -88,7 +86,7 @@ const Branding = () => (
             </p>
           }
           preview={
-            <section>
+            <>
               {[
                 {
                   label: "Download the SVG wordmark with white text",
@@ -101,7 +99,6 @@ const Branding = () => (
                   styles: "bg-white hocus:bg-gray-5 p-16",
                 },
               ].map((image) => (
-
                 <Logo
                   key={image.src}
                   src={image.src}
@@ -131,7 +128,7 @@ const Branding = () => (
                   className={image.styles}
                 />
               ))}
-            </section>
+            </>
           }
         />
 
@@ -139,7 +136,7 @@ const Branding = () => (
           title="Mark only"
           copy={<p>Use these only when the Mastodon brand has been clearly established in the design.</p>}
           preview={
-            <section>
+            <>
               <div className="grid grid-cols-3 gap-gutter lg:gap-24 md:px-8">
                 {[
                   {
@@ -169,7 +166,7 @@ const Branding = () => (
               </div>
               <UsageRule text="Use the small version of the logo when the brand has already been established and / or space is limited to allow appropriate clear space around the main Mastodon logo" />
               <UsageRule text="Use the one color black or white version of the logo in applications of print or letterheadwhen only one print color is available" />
-            </section>
+            </>
           }
         />
 
