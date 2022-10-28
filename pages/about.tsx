@@ -19,7 +19,7 @@ import press from "../data/press"
 const About = () => (
   <Layout>
     <div dir="ltr" className="[unicode-bidi:plaintext]">
-      <Hero homepage desktopImage={heroImage} mobileImage={heroImage}>
+      <Hero desktopImage={heroImage} mobileImage={heroImage}>
         <h1 className="h1 pt-16 mb-8">We develop Mastodon</h1>
         <p className="sh1">
           Free, open-source decentralized social media
