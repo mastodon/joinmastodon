@@ -128,6 +128,8 @@ const Branding = () => (
                   className={image.styles}
                 />
               ))}
+
+              <UsageRule text="Use a black or white version of the logo when contrast can not be maintained with the main logo - for example above, using the main brand color for a background" />
             </>
           }
         />
