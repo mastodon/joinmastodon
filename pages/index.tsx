@@ -486,7 +486,7 @@ const Sponsors = ({ sponsors }) => {
         />
       </h4>
 
-      <div className="lg:col-start-4 lg:col-end-10">
+      <div className="lg:col-start-4 lg:col-end-10 lg:mb-16">
         <SponsorLogoGroup sponsors={sponsors.additionalFunding} />
       </div>
     </section>

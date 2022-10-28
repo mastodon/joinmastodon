@@ -237,7 +237,7 @@ const Branding = () => (
           title="Product screenshots"
           copy="Need some screenshots? We've got you covered."
           preview={
-            <div className="flex gap-gutter">
+            <div className="flex gap-gutter mb-16">
               {[
                 {
                   src: screenshotComposeLight,
