@@ -111,7 +111,7 @@
   "sponsors.sponsorship.body": "Pokud si přejete vidět logo vaší společnosti s kliknutím na odkaz na tuto stránku, se můžete stát sponzorem přímo prostřednictvím naší vlastní platformy!",
   "sponsors.sponsorship.title": "Sponzorství",
   "sponsors.supported_by": "Podporováno",
-  "stats.disclaimer": "Data shromážděná propracováním všech přístupných serverů Mastodon na {date}.",
+  "stats.disclaimer": "Data shromážděná ze všech přístupných serverů Mastodon k {date}.",
   "stats.monthly_active_users": "Měsíční aktivní uživatelé",
   "stats.network": "Stav sítě",
   "stats.servers": "Běžící servery",
