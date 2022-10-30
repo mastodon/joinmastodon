@@ -6,7 +6,6 @@ import mast from "../public/apps/mast.png"
 import mastonaut from "../public/apps/mastonaut.png"
 import toot from "../public/apps/toot.jpg"
 import tooter from "../public/apps/tooter.png"
-import tootle from "../public/apps/tootle.jpg"
 import pinafore from "../public/apps/pinafore.png"
 import whalebird from "../public/apps/whalebird.png"
 import halcyon from "../public/apps/halcyon.png"
@@ -97,11 +96,6 @@ export const apps: appsList = {
   ],
   desktop: [
     { name: "Whalebird", icon: whalebird, url: "https://whalebird.social" },
-    {
-      name: "Tootle (Linux)",
-      icon: tootle,
-      url: "https://flathub.org/apps/details/com.github.bleakgrey.tootle",
-    },
     { name: "TheDesk", icon: thedesk, url: "https://thedesk.top/en" },
     {
       name: "Hyper­space",
