@@ -74,12 +74,12 @@ const CovenantSection = ({ heading, description, rules }: { heading?: string; de
       {heading && <h2 className="h4">{heading}</h2>}
       {description && <p className="mt-4">{description}</p>}
       {rules &&
-        <ol className="list-decimal space-y-4 mt-8">
+        <ol className="list-decimal list-inside space-y-4 mt-8">
           {rules.map((rule) => {
             return (
               <li>
-                <h2 className="font-bold mb-2">{rule.heading}</h2>
-                <p>{rule.text}</p>
+                <h2 className="font-bold inline">{rule.heading}</h2>
+                <p className="mt-2 ">{rule.text}</p>
               </li>
             )
           })}
