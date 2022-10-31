@@ -22,6 +22,8 @@
   "browse_apps.title2": "Aplikace třetích stran",
   "browse_apps.web": "Web",
   "browse_apps.you_can_use_it_from_desktop": "Vždy můžete Mastodon používat z prohlížeče na svém počítači nebo telefonu. Můžete ho přidat na svou domovskou obrazovku a některé prohlížeče podporují i push notifikace, tak jako nativní aplikace!",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "Zobrazit sponzory",
   "footer.follow_us_on_mastodon": "Sledujte nás na Mastodonu",
   "footer.quip": "Free, open-source decentralizovaná platforma sociálních médií.",
