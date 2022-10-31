@@ -22,6 +22,8 @@
   "browse_apps.title2": "Explora les aplicacions de tercers",
   "browse_apps.web": "Web",
   "browse_apps.you_can_use_it_from_desktop": "Sempre pots fer servir Mastodon des d'el teu navegador d'escriptori o mòbil! Pot ser afegit a la teva pantalla inicial i fins i tot alguns navegadors suporten notificacions push, igualment que un aplicació nativa!",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "Mostrar els patrocinadors",
   "footer.follow_us_on_mastodon": "Segueix-nos a Mastodon",
   "footer.quip": "Plataforma de xarxa social descentralitzada, lliure i de codi obert.",
