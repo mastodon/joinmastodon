@@ -160,13 +160,13 @@ const Servers = () => {
             />
 
 
-            <p className="mb-8">
+            <p className="mb-8  text-gray-2">
               <FormattedMessage
                 id="covenant.learn_more"
                 defaultMessage="All servers listed here must commit to the {link}."
                 values={{
                   link: <Link href="/covenant">
-                    <a className="underline text-gray-2"><FormattedMessage id="covenant" defaultMessage="Mastodon Server Covenant" /></a>
+                    <a className="underline"><FormattedMessage id="covenant" defaultMessage="Mastodon Server Covenant" /></a>
                   </Link>
                 }}
               /></p>
