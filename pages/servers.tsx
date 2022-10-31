@@ -20,6 +20,7 @@ import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
 import SkeletonText from "../components/SkeletonText"
 import Head from "next/head"
 import Layout from "../components/Layout"
+import Link from "next/link"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
@@ -157,6 +158,18 @@ const Servers = () => {
               filters={filters}
               setFilters={setFilters}
             />
+
+
+            <p className="mb-8">
+              <FormattedMessage
+                id="covenant.learn_more"
+                defaultMessage="All servers listed here must commit to the {link}."
+                values={{
+                  link: <Link href="/covenant">
+                    <a className="underline text-gray-2"><FormattedMessage id="covenant" defaultMessage="Mastodon Server Covenant" /></a>
+                  </Link>
+                }}
+              /></p>
 
             <ServerStats days={days} />
           </div>
@@ -314,16 +327,16 @@ const ServerList = ({ servers }) => {
         <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-3">
           {servers.isLoading
             ? Array(8)
-                .fill(null)
-                .map((_el, i) => <ServerCard key={i} />)
+              .fill(null)
+              .map((_el, i) => <ServerCard key={i} />)
             : servers.data.sort((a, b) => {
               const aa = Math.abs(DUNBAR - Math.log(a.last_week_users));
               const bb = Math.abs(DUNBAR - Math.log(b.last_week_users));
 
               return aa > bb ? 1 : (aa < bb ? -1 : 0);
             }).map((server) => (
-                <ServerCard key={server.domain} server={server} />
-              ))}
+              <ServerCard key={server.domain} server={server} />
+            ))}
         </div>
       )}
     </div>
@@ -419,45 +432,45 @@ const ServerFilters = ({
       <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3">
         {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (
-              <li className="h-8 p-3" key={i}>
-                <SkeletonText className="!h-full" />
-              </li>
-            ))
+            <li className="h-8 p-3" key={i}>
+              <SkeletonText className="!h-full" />
+            </li>
+          ))
           : categories?.map((item, i) => {
-              const isActive = filters.category === item.category
+            const isActive = filters.category === item.category
 
-              return (
-                <li key={i}>
-                  <label
-                    className={classnames(
-                      "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
-                      isActive && "bg-nightshade-50 !font-extrabold",
-                      item.servers_count === 0 && "text-gray-2"
-                    )}
-                  >
-                    <input
-                      className="sr-only"
-                      type="checkbox"
-                      name="filters-category"
-                      onChange={() => {
-                        setFilters({
-                          ...filters,
-                          category: isActive ? "" : item.category,
-                        })
-                      }}
-                    />
-                    {item.category === ""
-                      ? intl.formatMessage({
-                          id: "wizard.filter.all_categories",
-                          defaultMessage: "All topics",
-                        })
-                      : intl.formatMessage(categoriesMessages[item.category])}
+            return (
+              <li key={i}>
+                <label
+                  className={classnames(
+                    "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
+                    isActive && "bg-nightshade-50 !font-extrabold",
+                    item.servers_count === 0 && "text-gray-2"
+                  )}
+                >
+                  <input
+                    className="sr-only"
+                    type="checkbox"
+                    name="filters-category"
+                    onChange={() => {
+                      setFilters({
+                        ...filters,
+                        category: isActive ? "" : item.category,
+                      })
+                    }}
+                  />
+                  {item.category === ""
+                    ? intl.formatMessage({
+                      id: "wizard.filter.all_categories",
+                      defaultMessage: "All topics",
+                    })
+                    : intl.formatMessage(categoriesMessages[item.category])}
 
-                    <span className={isActive ? "text-nightshade-100" : "text-gray-2"}>({item.servers_count})</span>
-                  </label>
-                </li>
-              )
-            })}
+                  <span className={isActive ? "text-nightshade-100" : "text-gray-2"}>({item.servers_count})</span>
+                </label>
+              </li>
+            )
+          })}
       </ul>
     </div>
   )
