@@ -22,6 +22,8 @@
   "browse_apps.title2": "Üçüncü parti uygulamalara göz gezdir",
   "browse_apps.web": "Web",
   "browse_apps.you_can_use_it_from_desktop": "Mastodon'u her zaman masaüstünüzdeki veya telefonunuzdaki tarayıcıdan kullanabilirsiniz! Ana sayfanıza ekleyebilirsiniz ve bazı tarayıcılar anlık bildirimi destekler, tıpkı doğal bir uygulama gibi!",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "Sponsorları görüntüle",
   "footer.follow_us_on_mastodon": "Mastodon'da bizi takip edin",
   "footer.quip": "Merkezi olmayan, özgür ve açık kaynaklı sosyal medya platformu.",
