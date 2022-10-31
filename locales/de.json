@@ -22,6 +22,8 @@
   "browse_apps.title2": "Drittanbieter-Apps durchsuchen",
   "browse_apps.web": "Web",
   "browse_apps.you_can_use_it_from_desktop": "Du kannst Mastodon immer im Browser auf deinem Desktop oder Telefon verwenden! Es kann deinem Startbildschirm hinzugefügt werden, und einige Browser unterstützen sogar Push-Benachrichtigungen, genau wie eine native App!",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "Sponsoren anzeigen",
   "footer.follow_us_on_mastodon": "Folge uns auf Mastodon",
   "footer.quip": "Freie, dezentrale Social-Media-Plattform.",
