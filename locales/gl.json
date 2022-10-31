@@ -22,6 +22,8 @@
   "browse_apps.title2": "Apps da comunidade",
   "browse_apps.web": "Web",
   "browse_apps.you_can_use_it_from_desktop": "Podes usar Mastodon desde o navegador, no escritorio ou no móbil! Podes engadilo á túa pantalla de inicio e incluso algúns navegadores teñen notificacións push, como cunha app nativa!",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "Ver patrocinadores",
   "footer.follow_us_on_mastodon": "Séguenos en Mastodon",
   "footer.quip": "Plataforma para relacións sociais descentralizada, de código aberto e libre.",
