@@ -22,6 +22,8 @@
   "browse_apps.title2": "تَصَفَّح تَطبيقَاتِ الطَّرَفِ الثَّالِث",
   "browse_apps.web": "الويب",
   "browse_apps.you_can_use_it_from_desktop": "يُمكِنُكَ دَائِمًا اِستِخدام مَاستودُون مِنَ المُتَصَفِّح عَلَى سَطحِ المَكتَب أو حَتَّى على هَاتِفِكَ الجَوال! يُمكِنُكَ إضافَتِه إلَى شَاشَتِكَ الرَّئِيسَة وَحتى أنَّ بَعض المُتَصَفِّحَات تَدعَمُ دَفع الإشعَارَات، تَمامًا كَما فِي التَّطبِيقِ الأصلِي!",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "تَعَرَّف عَلَى الرُّعَاة",
   "footer.follow_us_on_mastodon": "تَابِعنَا عَلَى مَاستودُون",
   "footer.quip": "منصة اجتماعية ، حرة ، مجانية ، لا مركزية ، مفتوحة المصدر.",
