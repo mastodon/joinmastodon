@@ -129,7 +129,7 @@ const Branding = () => (
                 />
               ))}
 
-              <UsageRule text="Use a black or white version of the logo when contrast can not be maintained with the main logo - for example above, using the main brand color for a background" />
+              <UsageRule text="Use a black or white version of the logo when contrast can not be maintained with the main logo — for example above, using the main brand color for a background" />
             </>
           }
         />
@@ -167,7 +167,7 @@ const Branding = () => (
                 ))}
               </div>
               <UsageRule text="Use the small version of the logo when the brand has already been established and / or space is limited to allow appropriate clear space around the main Mastodon logo" />
-              <UsageRule text="Use the one color black or white version of the logo in applications of print or letterheadwhen only one print color is available" />
+              <UsageRule text="Use the one color black or white version of the logo in applications of print or letterhead when only one print color is available" />
             </>
           }
         />
