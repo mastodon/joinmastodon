@@ -77,7 +77,7 @@ const CovenantSection = ({ heading, description, rules }: { heading?: string; de
         <ol className="list-decimal list-inside space-y-4 mt-8">
           {rules.map((rule) => {
             return (
-              <li>
+              <li key={rule.heading}>
                 <h2 className="font-bold inline">{rule.heading}</h2>
                 <p className="mt-2 ">{rule.text}</p>
               </li>
