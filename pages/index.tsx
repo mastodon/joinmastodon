@@ -486,9 +486,11 @@ const Sponsors = ({ sponsors }) => {
         />
       </h4>
 
-      <div className="lg:col-start-4 lg:col-end-10 lg:mb-16">
+      <div className="lg:col-start-4 lg:col-end-10 mb-8 lg:mb-16">
         <SponsorLogoGroup sponsors={sponsors.additionalFunding} />
       </div>
+
+      <p className="lg:col-span-12 lg:mb-16 text-gray-2">Sponsorship does not equal influence. Mastodon is fully independent.</p>
     </section>
   )
 }
