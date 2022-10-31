@@ -16,7 +16,7 @@ const sponsors = {
       url: "https://mobi.com/",
       logo: require("../public/sponsors/mobi-across-big.png"),
       name: "Mobi",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://oak.is/",
       logo: require("../public/sponsors/oak.svg"),
@@ -61,62 +61,57 @@ const sponsors = {
       url: "https://mask.io/",
       logo: require("../public/sponsors/mask-network.png"),
       name: "Mask Network",
-    }, // Custom/other
+    }, // Custom/other1
     {
       url: "https://www.bestecasinosonline.at/",
       name: "Online Casino Österreich",
       logo: require("../public/sponsors/BesteCasinosOnline.webp"),
-    }, // Custom
+    }, // Custom1
     {
       url: "https://www.sister-sites.co.uk/",
       logo: require("../public/sponsors/sistersites-logo.png"),
       name: "sister-sites.co.uk",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://masto.host/",
       logo: require("../public/sponsors/MH-horizontal-white.png"),
       name: "Masto.host - Fully managed Mastodon hosting",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://assemblyfour.com/",
       logo: require("../public/sponsors/a4.webp"),
       name: "Assembly Four",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://www.auscasinos.com/new/",
       logo: require("../public/sponsors/auscasinos.png"),
       name: "AusCasinos.com New Site Section",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://www.joylovedolls.com/",
       logo: require("../public/sponsors/jld_psd_logo_orig_black.png"),
       name: "Joy Love Dolls",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://kasynohex.com/kasyna-online/",
       logo: require("../public/sponsors/kasynohex.svg"),
       name: "Casino online PL",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html",
       logo: require("../public/sponsors/alt-casino-1.png"),
       name: "Online Casinos Australia",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://www.nettikasinot.org/",
       logo: require("../public/sponsors/nettikasinot.svg"),
       name: "Nettikasinot",
     },
     {
-      url: "https://www.onlinecasinos.net/",
-      name: "OnlineCasinos.net",
-      logo: require("../public/sponsors/onlinecasinos.a2791b0.png"),
-    }, // Custom
-    {
       url: "https://wideangle.co",
       logo: require("../public/sponsors/wide-angle-analytics.webp"),
       name: "Wide Angle Analytics",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://instalab.pro/buy-instagram-followers",
       logo: require("../public/sponsors/goread.png"),
@@ -126,7 +121,7 @@ const sponsors = {
       url: "https://www.noneedtostudy.com/take-my-online-class/",
       logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
       name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
-    }, // Custom
+    }, // Custom1
   ],
   gold: [
     {
@@ -155,15 +150,10 @@ const sponsors = {
       name: "Kevani",
     },
     {
-      url: "https://www.doggietoys.deals/",
-      logo: require("../public/sponsors/doggie-toys.png"),
-      name: "Doggie Toys",
-    }, // Custom
-    {
       url: "https://bitlaunch.io/",
       logo: require("../public/sponsors/bitlaunch.svg"),
       name: "Bitcoin VPS",
-    }, // Custom
+    }, // Custom1
     {
       url: "http://inkedin.com/",
       logo: require("../public/sponsors/inkedin-logo-small-2.webp"),
@@ -180,25 +170,20 @@ const sponsors = {
       name: "Rapid Essay",
     },
     {
-      url: "https://hostnoc.com",
-      logo: require("../public/sponsors/hostnoc.png"),
-      name: "HostNoc Dedicated Server",
-    }, // Custom
-    {
       url: "https://iboysoft.com/",
       logo: require("../public/sponsors/iboysoft-logo-dark2.png"),
       name: "iBoysoft Data Recovery",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://nettikasinolista.com/",
       logo: require("../public/sponsors/nettikasinolista-mv.png"),
       name: "Nettikasino",
-    }, // Custom
+    }, // Custom1
     {
       url: "http://doshfunding.com/",
       logo: require("../public/sponsors/doshfunding.svg"),
       name: "Funding Solutions for Businesses",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://farbridge.com/",
       logo: require("../public/sponsors/farbridge.png"),
@@ -208,17 +193,17 @@ const sponsors = {
       url: "https://www.sure.bet/casinos-not-on-gamstop/",
       logo: require("../public/sponsors/surebet.jpg"),
       name: "non GamStop Casinos",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://www.onestein.nl",
       logo: require("../public/sponsors/onestein.png"),
       name: "Onestein B.V.",
-    }, // Custom
+    }, // Custom1
     {
       url: "https://www.r2c.io/",
       logo: require("../public/sponsors/r2-logo.png"),
       name: "R2 Consulting",
-    }, // Custom
+    }, // Custom1
   ],
   silver: [
     {
