@@ -22,6 +22,8 @@
   "browse_apps.title2": "サードパーティのアプリを見る",
   "browse_apps.web": "ウェブ",
   "browse_apps.you_can_use_it_from_desktop": "Mastodonは、PCやスマートフォンのブラウザからいつでも利用できます。ホーム画面に追加したり、一部のブラウザではネイティブアプリのようにプッシュ通知にも対応しています。",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "スポンサーを表示",
   "footer.follow_us_on_mastodon": "Mastodonでフォロー",
   "footer.quip": "無料でオープンソースの分散型ソーシャルメディアプラットフォーム。",
