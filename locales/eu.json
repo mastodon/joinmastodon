@@ -22,6 +22,8 @@
   "browse_apps.title2": "Arakatu hirugarrengoen aplikazioak",
   "browse_apps.web": "Weba",
   "browse_apps.you_can_use_it_from_desktop": "Mastodon mahaigaineko edo mugikorreko nabigatzailean erabili dezakezu! Hasierako pantailara gehitu dezakezu eta nabigatzaile batzuk push jakinarazpenen euskarria ere badute, aplikazio natiboek bezala!",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "Ikusi babesleak",
   "footer.follow_us_on_mastodon": "Follow us on Mastodon",
   "footer.quip": "Free, open-source decentralized social media platform.",
