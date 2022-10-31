@@ -22,6 +22,8 @@
   "browse_apps.title2": "Przeglądaj aplikacje innych deweloperów",
   "browse_apps.web": "Przeglądarka",
   "browse_apps.you_can_use_it_from_desktop": "Zawsze możesz używać Mastodona z poziomu przeglądarki na komputerze lub telefonie! Można go dodać do ekranu głównego, a niektóre przeglądarki wspierają nawet powiadomienia push, zupełnie jak natywna aplikacja!",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "Pokaż sponsorów",
   "footer.follow_us_on_mastodon": "Śledź nas na Mastodon",
   "footer.quip": "Bezpłatna, otwarto-źródłowa zdecentralizowana platforma mediów społecznościowych.",
