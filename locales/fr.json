@@ -22,6 +22,8 @@
   "browse_apps.title2": "Parcourir les applications tierces",
   "browse_apps.web": "Web",
   "browse_apps.you_can_use_it_from_desktop": "Vous pouvez toujours utiliser Mastodon à partir du navigateur sur votre ordinateur ou votre téléphone ! Il est possible de l’ajouter à votre écran d’accueil et certains navigateurs prennent même en charge les notifications push, tout comme une application native !",
+  "covenant": "Mastodon Server Covenant",
+  "covenant.learn_more": "All servers listed here must commit to the {link}.",
   "credits.view_sponsors": "Nos sponsors",
   "footer.follow_us_on_mastodon": "Suivez-nous sur Mastodon",
   "footer.quip": "Média social décentralisé libre et open-source.",
