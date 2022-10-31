@@ -26,7 +26,7 @@ const Covenant = () => (
           heading="Submitting your server"
           description={
             <>
-              If you are a server owner, and your server passes these requirements, you can send an e-mail to <span className="font-bold">hello@joinmastodon.org</span> with the subject " Server submission" to be listed on this website. Because our goal is giving new users a smooth and reliable start into the decentralized social network of Mastodon rather than simply promoting individual servers, we are generally not interested in promoting brand new and unproven servers, so the submission should not be your primary strategy of growing your community.
+              If you are a server owner, and your server passes these requirements, you can send an e-mail to <span className="font-bold">hello@joinmastodon.org</span> with the subject &quot;Server submission&quot; to be listed on this website. Because our goal is giving new users a smooth and reliable start into the decentralized social network of Mastodon rather than simply promoting individual servers, we are generally not interested in promoting brand new and unproven servers, so the submission should not be your primary strategy of growing your community.
             </>
           }
         />
