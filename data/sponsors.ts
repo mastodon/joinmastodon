@@ -19,7 +19,7 @@ const sponsors = {
     }, // Custom
     {
       url: "https://www.spacesquad.de/",
-      logo: require("../public/sponsors/space-squad-logo-72.png"),
+      logo: require("../public/sponsors/spacesquad-logo-72.png"),
       name: "SPACE SQUAD",
     }, // Custom
     {
