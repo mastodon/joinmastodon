@@ -16,7 +16,12 @@ const sponsors = {
       url: "https://mobi.com/",
       logo: require("../public/sponsors/mobi-across-big.png"),
       name: "Mobi",
-    }, // Custom1
+    }, // Custom
+    {
+      url: "https://www.spacesquad.de/",
+      logo: require("../public/sponsors/space-squad-logo-72.png"),
+      name: "SPACE SQUAD",
+    }, // Custom
     {
       url: "https://oak.is/",
       logo: require("../public/sponsors/oak.svg"),
@@ -61,47 +66,47 @@ const sponsors = {
       url: "https://mask.io/",
       logo: require("../public/sponsors/mask-network.png"),
       name: "Mask Network",
-    }, // Custom/other1
+    }, // Custom/other
     {
       url: "https://www.bestecasinosonline.at/",
       name: "Online Casino Österreich",
       logo: require("../public/sponsors/BesteCasinosOnline.webp"),
-    }, // Custom1
+    }, // Custom
     {
       url: "https://www.sister-sites.co.uk/",
       logo: require("../public/sponsors/sistersites-logo.png"),
       name: "sister-sites.co.uk",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://masto.host/",
       logo: require("../public/sponsors/MH-horizontal-white.png"),
       name: "Masto.host - Fully managed Mastodon hosting",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://assemblyfour.com/",
       logo: require("../public/sponsors/a4.webp"),
       name: "Assembly Four",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://www.auscasinos.com/new/",
       logo: require("../public/sponsors/auscasinos.png"),
       name: "AusCasinos.com New Site Section",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://www.joylovedolls.com/",
       logo: require("../public/sponsors/jld_psd_logo_orig_black.png"),
       name: "Joy Love Dolls",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://kasynohex.com/kasyna-online/",
       logo: require("../public/sponsors/kasynohex.svg"),
       name: "Casino online PL",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html",
       logo: require("../public/sponsors/alt-casino-1.png"),
       name: "Online Casinos Australia",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://www.nettikasinot.org/",
       logo: require("../public/sponsors/nettikasinot.svg"),
@@ -111,7 +116,7 @@ const sponsors = {
       url: "https://wideangle.co",
       logo: require("../public/sponsors/wide-angle-analytics.webp"),
       name: "Wide Angle Analytics",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://instalab.pro/buy-instagram-followers",
       logo: require("../public/sponsors/goread.png"),
@@ -121,7 +126,7 @@ const sponsors = {
       url: "https://www.noneedtostudy.com/take-my-online-class/",
       logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
       name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
-    }, // Custom1
+    }, // Custom
   ],
   gold: [
     {
@@ -153,7 +158,7 @@ const sponsors = {
       url: "https://bitlaunch.io/",
       logo: require("../public/sponsors/bitlaunch.svg"),
       name: "Bitcoin VPS",
-    }, // Custom1
+    }, // Custom
     {
       url: "http://inkedin.com/",
       logo: require("../public/sponsors/inkedin-logo-small-2.webp"),
@@ -173,17 +178,17 @@ const sponsors = {
       url: "https://iboysoft.com/",
       logo: require("../public/sponsors/iboysoft-logo-dark2.png"),
       name: "iBoysoft Data Recovery",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://nettikasinolista.com/",
       logo: require("../public/sponsors/nettikasinolista-mv.png"),
       name: "Nettikasino",
-    }, // Custom1
+    }, // Custom
     {
       url: "http://doshfunding.com/",
       logo: require("../public/sponsors/doshfunding.svg"),
       name: "Funding Solutions for Businesses",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://farbridge.com/",
       logo: require("../public/sponsors/farbridge.png"),
@@ -193,17 +198,17 @@ const sponsors = {
       url: "https://www.sure.bet/casinos-not-on-gamstop/",
       logo: require("../public/sponsors/surebet.jpg"),
       name: "non GamStop Casinos",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://www.onestein.nl",
       logo: require("../public/sponsors/onestein.png"),
       name: "Onestein B.V.",
-    }, // Custom1
+    }, // Custom
     {
       url: "https://www.r2c.io/",
       logo: require("../public/sponsors/r2-logo.png"),
       name: "R2 Consulting",
-    }, // Custom1
+    }, // Custom
   ],
   silver: [
     {
@@ -335,18 +340,25 @@ const sponsors = {
     "VanVelding ",
     "David Spector",
     "Colin Cornaby",
+    "Tod Kurt",
     "Ben Ramsey",
     "spla ",
     "Evgeni Kunev",
     "Sebastian Bujwid",
     "Lars Marowsky-Brée",
     "Johannes Brück",
+    "Samuele Testi",
     "Monica",
+    "John",
+    "Scott Gray",
     "Preston Austin",
     "Joshua Go",
     "Brent Moresco",
     "JM",
     "Chedim",
+    "Paul Freddy Sulzer",
+    "Jan-Willem van de Meent",
+    "Tim Allison",
   ],
   general: [
     "Nolan Lawson",
@@ -373,8 +385,8 @@ const sponsors = {
     "Mikayla ",
     "Chris Hanson",
     "Kevin Yank",
-    "Boris Jamot",
     "Jon Dubovsky",
+    "Boris Jamot",
     "Donovan Finch",
     "Jacqueline Button",
     "Wilkie",
@@ -387,6 +399,8 @@ const sponsors = {
     "Jonas Wisser",
     "Tassels ",
     "Johannes Brakensiek",
+    "Daniel Appelquist",
+    "Johannes Barre ",
     "Lee Starnes",
     "Tanatoes ",
     "Bal ",
@@ -405,6 +419,8 @@ const sponsors = {
     "Hans Kristian Flaatten",
     "Malcolm Bastien",
     "Iain Collins",
+    "Axel Antoni",
+    "Mark Allison",
     "Martin Schmitt",
     "James Hammond",
     "Arno de Vries",
@@ -431,6 +447,15 @@ const sponsors = {
     "jose mendoza",
     "Noah ",
     "Wes Hurd",
+    "Adrian Hon",
+    "Alex Levy",
+    "Jessica",
+    "Christopher Agocs",
+    "Rob",
+    "N",
+    "David Nelson",
+    "Maarten ",
+    "Cornelia Schaniel",
     "Al Steffen",
     "jducoeur ",
     "Camwyn ",
@@ -461,7 +486,6 @@ const sponsors = {
     "Marc Hoffmann",
     "Kevin Kryndson",
     "Jeffrey Yasskin",
-    "Tod Kurt",
     "Ilmari Karonen",
     "Martin Atkins",
     "lisa church",
@@ -469,6 +493,8 @@ const sponsors = {
     "Didier Malenfant",
     "Adam Bradley",
     "esmuellerthier",
+    "Lucas Freeman",
+    "Kai Engert",
     "Cycilng Weather",
     "David",
     "Marian Dörk",
@@ -476,7 +502,7 @@ const sponsors = {
     "Basix",
     "Michael Hager",
     "Drew Fustini (OSH Park)",
-    "Chris ",
+    "tasket",
     "Donald L Lambert",
     "Andrew Collins",
     "Jan Zenkner",
@@ -512,6 +538,7 @@ const sponsors = {
     "Susanne Franke",
     "Florian Brinkmann",
     "Michal Pokorny",
+    "Dave Wood",
     "Anreiter.at",
     "Brook Miles",
     "Pawel Ngei",
@@ -543,10 +570,24 @@ const sponsors = {
     "Ingo Steinke",
     "weatherby ",
     "Jannik",
+    "Aarne Granlund",
     "Luis Van Slageren",
+    "Shinji Kuwayama",
+    "Sean Boots",
     "John Francis",
     "Bogdan Buduroiu",
     "Christoph Lechleitner",
+    "Rick Walter",
+    "Chandler Carruth",
+    "Alvaro Graves",
+    "Lennart Koopmann",
+    "Learning Experiences - Chuck Severance",
+    "Kyle Van Essen",
+    "Grant Butler",
+    "Chris Donnelly",
+    "Joseph Bleau",
+    "Joshua Wells",
+    "Evan Hirsh",
     "James",
     "Tom Anderson",
     "Justin Salsburey",
@@ -606,11 +647,50 @@ const sponsors = {
     "Jo Shields",
     "Bennet Yee",
     "NFTmall",
-    "Evan Hirsh",
-    "Paul Freddy Sulzer",
-    "Maarten ",
-    "Cornelia Schaniel",
-    "Sean Boots",
+    "Smitty Of Halibut",
+    "Don Gray",
+    "Richard Bairwell",
+    "Philip Ashlock",
+    "Joseph Lozano",
+    "Chris Hubbs",
+    "mat",
+    "Alvaro Jesus Estrada Jaime",
+    "Mike Swanson",
+    "C Hoyer",
+    "Markus Pössel",
+    "Audrey Cormier",
+    "john jensen",
+    "Jeffrey W Smith",
+    "Joe Pishgar",
+    "Michael Aiello",
+    "Rod Hilton",
+    "Chris White",
+    "Vincent Janelle",
+    "Dominique K.",
+    "Andrew Tergis",
+    "Luna Vives",
+    "Russ Poldrack",
+    "Holly Wright",
+    "Thomas Hein",
+    "Wilfred Rubens",
+    "Poisson Consulting",
+    "Philipp ",
+    "Simon Wolf",
+    "Paul Krischer",
+    "Sébastien Vigneau",
+    "Joop van den Eijnde",
+    "Kevin Bruce",
+    "Ihar Varauka",
+    "Austin Kocher",
+    "Veronika C",
+    "Gisela",
+    "Uwe S.",
+    "Radiant Flux",
+    "Adam Fowler",
+    "Joel Chippindale",
+    "Sébastian Méric de Bellefon",
+    "Jay Paige",
+    "Evan Farrar",
   ],
 }
 
