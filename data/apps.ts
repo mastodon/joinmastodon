@@ -4,6 +4,7 @@ import fedilab from "../public/apps/fedilab.png"
 import amaroq from "../public/apps/amaroq.jpg"
 import mast from "../public/apps/mast.png"
 import mastonaut from "../public/apps/mastonaut.png"
+import tokodon from "../public/apps/tokodon.png"
 import toot from "../public/apps/toot.jpg"
 import tooter from "../public/apps/tooter.png"
 import pinafore from "../public/apps/pinafore.png"
@@ -95,6 +96,7 @@ export const apps: appsList = {
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
   ],
   desktop: [
+    { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
     { name: "Whalebird", icon: whalebird, url: "https://whalebird.social" },
     { name: "TheDesk", icon: thedesk, url: "https://thedesk.top/en" },
     {
