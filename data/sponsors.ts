@@ -209,6 +209,11 @@ const sponsors = {
       logo: require("../public/sponsors/r2-logo.png"),
       name: "R2 Consulting",
     }, // Custom
+    {
+      url: "https://r2.do/@ralf",
+      logo: require("../public/sponsors/Rottmann_Ventures.png"),
+      name: "Rottmann Ventures GmbH"
+    }, // Custom
   ],
   silver: [
     {
