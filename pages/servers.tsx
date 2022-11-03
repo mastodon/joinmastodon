@@ -160,7 +160,7 @@ const Servers = () => {
             />
 
 
-            <p className="my-8 md:mt-0  text-gray-2">
+            <p className="my-8 md:mt-0 b3 text-gray-2">
               <FormattedMessage
                 id="covenant.learn_more"
                 defaultMessage="All servers listed here must commit to the <link>Mastodon Server Covenant</link>."
