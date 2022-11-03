@@ -127,6 +127,11 @@ const sponsors = {
       logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
       name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
     }, // Custom
+    {
+      url: "https://www.movavi.com/imovie-for-windows.html",
+      logo: require("../public/sponsors/movavi.svg"),
+      name: "Movavi",
+    }, // Custom
   ],
   gold: [
     {
