@@ -22,6 +22,7 @@
   "browse_apps.title2": "서드파티 앱 탐색",
   "browse_apps.web": "웹",
   "browse_apps.you_can_use_it_from_desktop": "언제든지 데스크톱이나 폰의 브라우저에서 Mastodon을 사용할 수 있습니다! 홈 화면에 추가하고 몇몇 브라우저들은 일반적인 앱처럼 푸시 알림도 지원합니다!",
+  "covenant.learn_more": "All servers listed here must commit to the <link>Mastodon Server Covenant</link>.",
   "credits.view_sponsors": "스폰서 보기",
   "footer.follow_us_on_mastodon": "마스토돈에서 팔로우",
   "footer.quip": "Free, open-source decentralized social media platform.",
