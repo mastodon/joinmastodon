@@ -114,7 +114,7 @@ const AppsPage = () => {
             copy: (
               <FormattedMessage
                 id="browse_apps.make_your_own"
-                defaultMessage="Mastodon is open-source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!"
+                defaultMessage="Mastodon is open source and has an elegant, well-documented API that is available to everyone. Make your own app, or use one of the many third-party apps made by other developers!"
               />
             ),
             cta: (
