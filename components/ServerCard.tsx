@@ -29,20 +29,10 @@ const ServerCard = ({ server }: { server?: Server }) => {
         ) : (
           <div className="h-full w-full rounded-md bg-gray-3" />
         )}
-        <span className="absolute flex h-7 items-center gap-1 rounded bg-white px-1.5 py-0.5 text-gray-1 inline-end-2 block-start-2">
-          {server ? (
-            <>
-              {formatNumber(server.total_users, intl.locale)}
-              <SVG src="/ui/person.svg" />
-            </>
-          ) : (
-            <span className="w-[5ch]" />
-          )}
-        </span>
       </div>
 
       <div className="pb-5">
-        <p className="b3 mt-4 mb-2 !font-semibold uppercase text-gray-2">
+        <p className="b4 mt-4 mb-2 !font-semibold uppercase text-gray-2">
           {server ? (
             <>
               <span>
@@ -52,7 +42,7 @@ const ServerCard = ({ server }: { server?: Server }) => {
               </span>
               {server?.approval_required && (
                 <span className="before:px-1 before:content-['·']">
-                  Invite only
+                  <FormattedMessage id="servers.approval_required" defaultMessage="Sign-ups reviewed manually" />
                 </span>
               )}
             </>
@@ -86,13 +76,13 @@ const ServerCard = ({ server }: { server?: Server }) => {
           >
             {server.approval_required ? (
               <FormattedMessage
-                id="servers.get_on_waitlist"
-                defaultMessage="Get on waitlist"
+                id="servers.apply_for_an_account"
+                defaultMessage="Apply for an account"
               />
             ) : (
               <FormattedMessage
-                id="servers.join_server"
-                defaultMessage="Join server"
+                id="servers.create_account"
+                defaultMessage="Create account"
               />
             )}
           </LinkButton>
