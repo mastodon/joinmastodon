@@ -26,9 +26,9 @@ export const SelectMenu = ({
 
   return (
     <Listbox value={value} onChange={onChange}>
-      <div className="b3 inline-flex">
-        <div className="relative">
-          <Listbox.Button className="relative cursor-pointer rounded-md border border-gray-3 py-4 pl-4 pr-10 text-left focus:outline-none focus:ring-1 focus:ring-blurple-500">
+      <div className="b3 inline-flex w-full sm:w-auto">
+        <div className="relative w-full sm:w-auto">
+          <Listbox.Button className="w-full sm:w-auto relative cursor-pointer rounded-md border border-gray-3 py-4 pl-4 pr-10 text-left focus:outline-none focus:ring-1 focus:ring-blurple-500">
             <span className="block truncate text-gray-1">
               <span className="font-medium">{label}:{" "}</span>
               <span className="font-bold">{selectedLabel}</span>
