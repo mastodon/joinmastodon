@@ -129,6 +129,8 @@ function Sponsors() {
             )
           })}
         </div>
+
+        <p className="mt-8 lg:mt-16 text-gray-2">Sponsorship does not equal influence. Mastodon is fully independent.</p>
       </section>
       <Head>
         <title>

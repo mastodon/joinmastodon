@@ -22,6 +22,7 @@
   "browse_apps.title2": "Browse third-party apps",
   "browse_apps.web": "Web",
   "browse_apps.you_can_use_it_from_desktop": "You can always use Mastodon from the browser on your desktop or phone! It can be added to your home screen and some browsers even support push notifications, just like a native app!",
+  "covenant.learn_more": "All servers listed here must commit to the <link>Mastodon Server Covenant</link>.",
   "credits.view_sponsors": "Переглянути спонсорів",
   "footer.follow_us_on_mastodon": "Follow us on Mastodon",
   "footer.quip": "Free, open-source decentralized social media platform.",
