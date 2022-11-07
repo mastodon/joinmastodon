@@ -9,8 +9,29 @@ import financialTimesLogo from "../public/press/financial-times.svg"
 import gizmodoLogo from "../public/press/gizmodo.svg"
 import pcMagLogo from "../public/press/pcmag.svg"
 import boingBoingLogo from "../public/press/boing-boing.svg"
+import timeLogo from "../public/press/time-magazine.svg"
+import cnnLogo from "../public/press/cnn.svg";
+import guardianLogo from "../public/press/the-guardian.svg";
 
 const articles = [
+  {
+    logo: timeLogo,
+    url: "https://time.com/6229230/mastodon-eugen-rochko-interview/",
+    title: "Thousands Have Joined Mastodon Since Twitter Changed Hands. Its Founder Has a Vision for Democratizing Social Media",
+    date: "2022-11-06",
+  },
+  {
+    logo: cnnLogo,
+    url: "https://edition.cnn.com/2022/11/05/tech/mastodon/index.html",
+    title: "With Twitter in chaos, Mastodon is on fire",
+    date: "2022-11-05",
+  },
+  {
+    logo: guardianLogo,
+    url: "https://www.theguardian.com/media/2022/nov/01/mastodon-twitter-elon-musk-takeover",
+    title: "Mastodon gained 70,000 users after Musk’s Twitter takeover. I joined them",
+    date: "2022-11-01",
+  },
   {
     logo: motherboardLogo,
     url: "https://www.vice.com/en/article/n7npd7/30000-new-users-signed-up-for-mastodon-after-elon-musk-bought-twitter",
