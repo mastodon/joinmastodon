@@ -102,7 +102,7 @@
   "servers.getting_started.safe_for_all.body": "Chan eil smachd againn fhìn air na frithealaichean ach tha smachd againn air na bhrosnaicheas sinn air an duilleag seo. Cha tomh am buidheann seo thu ach gu frithealaichean aig a bheil dealas do mhaorsainneachd an aghaidh gràin-chinnidh, gnèitheachas is oillt thar-ghnèitheach.",
   "servers.getting_started.safe_for_all.title": "Sàbhailte dhan a h-uile duine",
   "servers.getting_started.servers": "An toiseach, tagh am frithealaiche air am bu mhiann leat an cunntas agad a chruthachadh. Tha gach frithealaiche ’ga ruith le buidheann no neach gu neo-eisimeileach agus tha poileasaidhean maorsainneachd eadar-dhealaichte aca.",
-  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider&mdash;we call them &quot;servers&quot;.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider&mdash;we call them &quot;servers&quot;&mdash;that lets you connect with other people across Mastodon.",
   "servers.page_description": "Lorg far an clàraich thu airson an lìonra sòisealta sgaoilte Mastodon.",
   "servers.page_title": "Frithealaichean",
   "silver_sponsor": "Sponsair airgid",
