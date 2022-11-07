@@ -102,7 +102,7 @@
   "servers.getting_started.safe_for_all.body": "サーバーを統制することはできませんが、このページで何を紹介するかを制御することはできます。当団体では、人種差別、性差別、性差へのヘイトに対して中立的な立場を一貫して貫いているサーバーのみをご案内しています。",
   "servers.getting_started.safe_for_all.title": "すべての人にとって安全",
   "servers.getting_started.servers": "最初のステップは、アカウントを作成するサーバーを決定することです。 すべてのサーバーは独立した組織または個人によって運営されており、運営ポリシーはサーバーによって異なる場合があります。",
-  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider&mdash;we call them &quot;servers&quot;.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider&mdash;we call them &quot;servers&quot;&mdash;that lets you connect with other people across Mastodon.",
   "servers.page_description": "分散型ソーシャルネットワークMastodonにサインアップする場所を見つけましょう。",
   "servers.page_title": "サーバー",
   "silver_sponsor": "シルバースポンサー",
