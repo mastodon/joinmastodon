@@ -29,7 +29,7 @@ const DUNBAR = Math.log(800);
 const Servers = () => {
   const intl = useIntl()
   const { locale } = useRouter()
-  const [filters, setFilters] = useState({ language: "", category: "general", region: "", ownership: "", registrations: "" })
+  const [filters, setFilters] = useState({ language: locale === "en" ? "en" : "", category: "", region: "", ownership: "", registrations: "" })
 
   const params = new URLSearchParams(filters)
   const queryOptions = {
@@ -177,14 +177,14 @@ const Servers = () => {
   return (
     <Layout>
       <Hero mobileImage={serverHeroMobile} desktopImage={serverHeroDesktop}>
-        <h1 className="h1 mb-5">
+        <h1 className="h2 mb-5">
           <FormattedMessage id="servers" defaultMessage="Servers" />
         </h1>
 
         <p className="sh1 mb-14 max-w-[36ch]">
           <FormattedMessage
             id="servers.hero.body"
-            defaultMessage="Mastodon is not a single website. To use it, you need to make an account with a provider&mdash;we call them &quot;servers&quot;&mdash;that lets you connect with other people across Mastodon."
+            defaultMessage="Mastodon is not a single website. To use it, you need to make an account with a provider&mdash;we call them <b>servers</b>&mdash;that lets you connect with other people across Mastodon."
             values={{
               b: (text) => <b>{text}</b>,
             }}

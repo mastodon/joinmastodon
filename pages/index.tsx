@@ -64,8 +64,8 @@ function Home() {
 
           <LinkButton size="large" href="/servers" light borderless>
             <FormattedMessage
-              id="home.find_a_server"
-              defaultMessage="Find a server"
+              id="home.create_account"
+              defaultMessage="Create account"
             />
           </LinkButton>
         </div>
