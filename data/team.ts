@@ -1,12 +1,12 @@
 export type SocialMap = {
-  mastodon: string
+  mastodon?: string
 }
 
 export type TeamMember = {
-  image: string
+  image?: string
   name: string
   position: string
-  socials: SocialMap
+  socials?: SocialMap
 }
 
 const team: TeamMember[] = [
