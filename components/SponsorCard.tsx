@@ -7,19 +7,19 @@ const SponsorCard = ({ sponsor, tier }) => {
   return (
     <div
       className={classNames(
-        "grid grid-cols-[auto] gap-4 rounded p-4",
+        "grid grid-cols-[auto_1fr] gap-4 rounded p-4",
         tier === "generalHighlighted" && "bg-nightshade-900 text-white",
         tier === "silver" && "border border-gray-3 hover:bg-gray-4"
       )}
     >
       {tier === "silver" &&
-        (sponsor.logo ? (
-          <Image src={sponsor.logo} width="56" height="56" alt="" className="rounded-md" />
-        ) : (
-          <div className="h-[56px] w-[56px] rounded-md bg-blurple-gradient" />
-        ))}
+        (
+          <div className="h-[56px] w-[56px] rounded-md bg-blurple-gradient overflow-hidden">
+            {sponsor.logo && <Image src={sponsor.logo} width="56" height="56" alt="" />}
+          </div>
+        )}
 
-      <div className="w-full truncate">
+      <div className={classNames("truncate", tier !== "silver" ? "w-full" : null)}>
         <span className={classNames("b3 !leading-[1.5]", tier === "generalHighlighted" ? "text-nightshade-100" : "text-gray-1")}>
           {tier === "silver" ? (
             <FormattedMessage
