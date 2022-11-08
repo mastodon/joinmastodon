@@ -141,5 +141,5 @@
   "wizard.filter_by_language": "Llengua",
   "wizard.filter_by_registrations": "Velocitat de registre",
   "wizard.filter_by_structure": "Estructura legal",
-  "wizard.no_results": "Sembla que ara mateix no hi ha cap servidor que s'ajusti als teus criteris de cerca. Tingues en compte que només mostrem un conjunt seleccionat de servidors que actualment accepten nous registres."
+  "wizard.no_results": "Sembla que ara mateix no hi ha cap servidor que s'ajusti als teus criteris de cerca. Tingues present que només mostrem la llista de servidors que consta que actualment accepten nous registres."
 }
