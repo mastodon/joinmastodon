@@ -99,7 +99,7 @@
   "servers.getting_started.flexible.body": "ほかのサーバーに移転したいですか？Mastodonでは、いつでも簡単に、フォロワーを失うことなくプロフィールの移転が可能です。プロフィールを完全にコントロールしたければ、自分のサーバーを立ち上げることもできます。",
   "servers.getting_started.flexible.title": "フレキシブル",
   "servers.getting_started.headline": "Mastodonをはじめるのは簡単",
-  "servers.getting_started.safe_for_all.body": "サーバーを統制することはできませんが、このページで何を紹介するかを制御することはできます。当団体では、人種差別、性差別、性差へのヘイトに対して中立的な立場を一貫して貫いているサーバーのみをご案内しています。",
+  "servers.getting_started.safe_for_all.body": "サーバーを統制することはできませんが、このページで何を紹介するかを制御することはできます。当団体では、人種差別、性差別、性差へのヘイトに対して一貫してモデレートすることにしているサーバーのみをご案内しています。",
   "servers.getting_started.safe_for_all.title": "すべての人にとって安全",
   "servers.getting_started.servers": "最初のステップは、アカウントを作成するサーバーを決定することです。 すべてのサーバーは独立した組織または個人によって運営されており、運営ポリシーはサーバーによって異なる場合があります。",
   "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider&mdash;we call them <b>servers</b>&mdash;that lets you connect with other people across Mastodon.",
