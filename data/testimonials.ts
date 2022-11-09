@@ -91,7 +91,7 @@ const testimonials: Testimonial[] = [
   {
     text: "I wanted to have a federated social network since 2013 that looked and felt great and where I can connect to like-minded people. Mastodon just gave me the last puzzle piece and I absolutely love it! Probably spend more than five hours a day on my own little space with a friendly community that truly cares.",
     name: "Leonie",
-    username: "koyuchan@koyu.space",
+    username: "koyu@koyu.space",
     avatar: "/testimonials/avatar_koyu.png",
     profile_url: "https://koyu.space/@koyuchan",
   },
