@@ -17,6 +17,7 @@ import imast from "../public/apps/imast_icon.png"
 import mercury from "../public/apps/mercury.png"
 import sengi from "../public/apps/sengi.png"
 import metatext from "../public/apps/metatext.png"
+import tooot from "../public/apps/tooot.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -55,6 +56,12 @@ export const apps: appsList = {
       url: "https://play.google.com/store/apps/details?id=app.fedilab.android",
       paid: true,
     },
+    {
+      released_on: "Apr 16, 2021",
+      name: "tooot",
+      icon: tooot,
+      url: "https://play.google.com/store/apps/details?id=com.xmflsct.app.tooot",
+    },
   ],
   ios: [
     {
@@ -89,6 +96,12 @@ export const apps: appsList = {
       icon: metatext,
       url: "https://apps.apple.com/us/app/metatext/id1523996615?mt=8",
     },
+    {
+      released_on: "Apr 16, 2021",
+      name: "tooot",
+      icon: tooot,
+      url: "https://apps.apple.com/us/app/tooot/id1549772269",
+    }
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
