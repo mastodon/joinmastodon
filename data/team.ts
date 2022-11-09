@@ -1,4 +1,15 @@
-const team = [
+export type SocialMap = {
+  mastodon?: string
+}
+
+export type TeamMember = {
+  image?: string
+  name: string
+  position: string
+  socials?: SocialMap
+}
+
+const team: TeamMember[] = [
   {
     name: "Eugen Rochko",
     position: "Founder / CEO",

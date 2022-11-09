@@ -30,3 +30,8 @@ export type Day = {
   user_count: string
   active_user_count: string
 }
+
+export type Region = {
+  value: string
+  label: string
+}

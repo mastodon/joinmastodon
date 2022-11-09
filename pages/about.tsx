@@ -52,7 +52,9 @@ const About = () => (
               <div className="grid grid-cols-12 gap-gutter">
                 {team.map(member => (
                   <div key={member.name} className="col-span-12 md:col-span-6 lg:col-span-4">
-                    <div className="w-full rounded-lg bg-blurple-gradient aspect-video shadow mb-4" />
+                    <div className="w-full rounded-lg bg-blurple-gradient aspect-video shadow mb-4 relative overflow-hidden">
+                      {member.image && <Image src={member.image} layout="fill" objectFit="cover" objectPosition="0% 28%" />}
+                    </div>
 
                     <span className="block b2 !font-bold">{member.name}</span>
                     <span className="block b2 !font-semibold text-blurple-600">{member.position}</span>
@@ -159,6 +161,7 @@ const About = () => (
                     </dd>
                   </div>
                 </div>
+
                 <div className="col-span-6">
                   <div className="mb-4">
                     <dt className="font-bold">Handelsregister:</dt>
@@ -167,10 +170,15 @@ const About = () => (
 
                   <div className="mb-4">
                     <dt className="font-bold">
-                      Umsatzsteuer Identifikationsnummer:
+                      USt-ID:
                     </dt>
                     <dd>DE344258260</dd>
                   </div>
+                </div>
+
+                <div className="mb-4 col-span-12">
+                  <dt className="font-bold">Vertretungsberechtigt:</dt>
+                  <dd>Eugen Rochko (Geschäftsführer)</dd>
                 </div>
               </dl>
             </div>

@@ -10,7 +10,7 @@ import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import Statistic from "../components/Statistic"
 import { categoriesMessages } from "../data/categories"
-import type { Server, Category, Language, Day } from "../types/api"
+import type { Server, Category, Language, Day, Region } from "../types/api"
 import Hero from "../components/Hero"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import { formatNumber } from "../utils/numbers"
@@ -29,7 +29,7 @@ const DUNBAR = Math.log(800);
 const Servers = () => {
   const intl = useIntl()
   const { locale } = useRouter()
-  const [filters, setFilters] = useState({ language: "", category: "general" })
+  const [filters, setFilters] = useState({ language: locale === "en" ? "en" : "", category: "", region: "", ownership: "", registrations: "" })
 
   const params = new URLSearchParams(filters)
   const queryOptions = {
@@ -82,6 +82,36 @@ const Servers = () => {
     }),
   }
 
+  const registrationsOptions = [
+    {
+      value: "",
+      label: intl.formatMessage({ id: "wizard.filter.sign_up.all", defaultMessage: "All" }),
+    },
+    {
+      value: "instant",
+      label: intl.formatMessage({ id: "wizard.filter.sign_up.instant", defaultMessage: "Instant" }),
+    },
+    {
+      value: "manual",
+      label: intl.formatMessage({ id: "wizard.filter.sign_up.manual", defaultMessage: "Manual review" }),
+    },
+  ]
+
+  const ownershipOptions = [
+    {
+      value: "",
+      label: intl.formatMessage({ id: "wizard.filter.ownership.all", defaultMessage: "All" }),
+    },
+    {
+      value: "juridicial",
+      label: intl.formatMessage({ id: "wizard.filter.ownership.juridicial", defaultMessage: "Public organization" }),
+    },
+    {
+      value: "natural",
+      label: intl.formatMessage({ id: "wizard.filter.ownership.natural", defaultMessage: "Private individual" }),
+    },
+  ]
+
   const apiLanguages = useQuery<any[]>(
     ["languages", filters.category],
     () => fetchEndpoint("languages", params),
@@ -102,28 +132,59 @@ const Servers = () => {
   )
 
   const servers = useQuery<Server[]>(
-    ["servers", filters.language, filters.category],
+    ["servers", filters.language, filters.category, filters.ownership, filters.registrations, filters.region],
     () => fetchEndpoint("servers", params),
     queryOptions
   )
 
   const days = useQuery<Day[]>(
     ["statistics"],
-    () => fetchEndpoint("statistics", params),
+    () => fetchEndpoint("statistics", ''),
     queryOptions
   )
+
+  const regions = [
+    {
+      value: "",
+      label: intl.formatMessage({ id: "server.regions.all", defaultMessage: "All regions" }),
+    },
+    {
+      value: "europe",
+      label: intl.formatMessage({ id: "server.regions.europe", defaultMessage: "Europe" }),
+    },
+    {
+      value: "north_america",
+      label: intl.formatMessage({ id: "server.regions.north_america", defaultMessage: "North America" }),
+    },
+    {
+      value: "south_america",
+      label: intl.formatMessage({ id: "server.regions.south_america", defaultMessage: "South America" }),
+    },
+    {
+      value: "africa",
+      label: intl.formatMessage({ id: "server.regions.africa", defaultMessage: "Africa" }),
+    },
+    {
+      value: "asia",
+      label: intl.formatMessage({ id: "server.regions.asia", defaultMessage: "Asia" }),
+    },
+    {
+      value: "oceania",
+      label: intl.formatMessage({ id: "server.regions.oceania", defaultMessage: "Oceania" }),
+    },
+  ]
 
   return (
     <Layout>
       <Hero mobileImage={serverHeroMobile} desktopImage={serverHeroDesktop}>
-        <h1 className="h1 mb-5">
+        <h1 className="h2 mb-5">
           <FormattedMessage id="servers" defaultMessage="Servers" />
         </h1>
 
         <p className="sh1 mb-14 max-w-[36ch]">
           <FormattedMessage
             id="servers.hero.body"
-            defaultMessage="Find where to sign up here on the servers page. New here? <b>Check out the help section below.</b>"
+            defaultMessage="Mastodon is not a single website. To use it, you need to make an account with a provider&mdash;we call them <b>servers</b>&mdash;that lets you connect with other people across Mastodon."
             values={{
               b: (text) => <b>{text}</b>,
             }}
@@ -134,36 +195,62 @@ const Servers = () => {
       <div className="grid gap-20 pb-40">
         <GettingStartedCards />
         <div className="grid grid-cols-4 gap-gutter md:grid-cols-12">
-          <div className="col-span-full mb-2 flex md:justify-end">
-            {
-              <SelectMenu
-                label={
-                  <FormattedMessage
-                    id="wizard.filter_by_language"
-                    defaultMessage="Filter by language"
-                  />
-                }
-                onChange={(v) => {
-                  setFilters({ ...filters, language: v })
-                }}
-                value={filters.language}
-                options={apiLanguages.data || [defaultOption]}
-              />
-            }
-          </div>
-          <div className="col-span-4 md:col-span-3">
-            <ServerFilters
-              initialCategories={allCategories.data}
-              categories={apiCategories.data}
-              filters={filters}
-              setFilters={setFilters}
+          <div className="col-span-full mb-4 md:mb-2 flex flex-wrap gap-gutter md:justify-end">
+            <SelectMenu
+              label={
+                <FormattedMessage
+                  id="wizard.filter_by_structure"
+                  defaultMessage="Legal structure"
+                />
+              }
+              onChange={(v) => {
+                setFilters({ ...filters, ownership: v })
+              }}
+              value={filters.ownership}
+              options={ownershipOptions}
             />
 
+            <SelectMenu
+              label={
+                <FormattedMessage
+                  id="wizard.filter_by_registrations"
+                  defaultMessage="Sign-up speed"
+                />
+              }
+              onChange={(v) => {
+                setFilters({ ...filters, registrations: v })
+              }}
+              value={filters.registrations}
+              options={registrationsOptions}
+            />
 
-            <p className="my-8 md:mt-0 b3 text-gray-2">
+            <SelectMenu
+              label={
+                <FormattedMessage
+                  id="wizard.filter_by_language"
+                  defaultMessage="Language"
+                />
+              }
+              onChange={(v) => {
+                setFilters({ ...filters, language: v })
+              }}
+              value={filters.language}
+              options={apiLanguages.data || [defaultOption]}
+            />
+
+          </div>
+          <div className="mb-8 md:mb-0 col-span-4 md:col-span-3">
+            <h3 className="h5 mb-4">
+              <FormattedMessage
+                id="server.safety"
+                defaultMessage="Safety"
+              />
+            </h3>
+
+            <p className="mb-8 b2 text-gray-1">
               <FormattedMessage
                 id="covenant.learn_more"
-                defaultMessage="All servers listed here must commit to the <link>Mastodon Server Covenant</link>."
+                defaultMessage="All servers listed here have committed to the <link>Mastodon Server Covenant</link>."
                 values={{
                   link: (chunks) => (
                     <Link href="/covenant">
@@ -171,7 +258,16 @@ const Servers = () => {
                     </Link>
                   ),
                 }}
-              /></p>
+              />
+            </p>
+
+            <ServerFilters
+              initialCategories={allCategories.data}
+              regions={regions}
+              categories={apiCategories.data}
+              filters={filters}
+              setFilters={setFilters}
+            />
 
             <ServerStats days={days} />
           </div>
@@ -317,11 +413,11 @@ const ServerList = ({ servers }) => {
   return (
     <div className="col-span-4 md:col-start-4 md:col-end-13">
       {servers.data?.length === 0 ? (
-        <div className="b2 rounded bg-gray-5 p-4 text-gray-1 md:p-8">
-          <p className="max-w-[48ch]">
+        <div className="b2 rounded bg-gray-5 p-4 text-gray-1 flex justify-center md:p-8 md:py-20">
+          <p className="max-w-[48ch] text-center">
             <FormattedMessage
               id="wizard.no_results"
-              defaultMessage="Seems like there are currently no servers that fit your criteria. Try a different category or a different language filter!"
+              defaultMessage="Seems like there are currently no servers that fit your search criteria. Mind that we only display a curated set of servers that currently accept new sign-ups."
             />
           </p>
         </div>
@@ -416,21 +512,65 @@ const ServerFilters = ({
   setFilters,
   categories,
   initialCategories,
+  regions,
 }: {
   filters: any
   setFilters: any
   categories: Category[]
   initialCategories: Category[]
+  regions: Region[]
 }) => {
   const intl = useIntl()
   return (
-    <div className="md:mb-8">
+    <div className="mb-8">
+      <h3 className="h5 mb-4" id="category-group-label">
+        <FormattedMessage
+          id="server.filter_by.region"
+          defaultMessage="Region"
+        />
+      </h3>
+
+      <p className="b3 mb-4 text-gray-2"><FormattedMessage id="server.filter_by.region.lead" defaultMessage="Where the provider is legally based." /></p>
+
+      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3 mb-8">
+        {regions?.map((item, i) => {
+          const isActive = filters.region === item.value
+
+          return (
+            <li key={i}>
+              <label
+                className={classnames(
+                  "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
+                  isActive && "bg-nightshade-50 !font-extrabold"
+                )}
+              >
+                <input
+                  className="sr-only"
+                  type="checkbox"
+                  name="filters-region"
+                  onChange={() => {
+                    setFilters({
+                      ...filters,
+                      region: isActive ? "" : item.value,
+                    })
+                  }}
+                />
+                {item.label}
+              </label>
+            </li>
+          )
+        })}
+      </ul>
+
       <h3 className="h5 mb-4" id="category-group-label">
         <FormattedMessage
           id="server.filter_by.category"
           defaultMessage="Topic"
         />
       </h3>
+
+      <p className="b3 mb-4 text-gray-2"><FormattedMessage id="server.filter_by.category.lead" defaultMessage="Some providers specialize in hosting accounts from specific communities." /></p>
+
       <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3">
         {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (

@@ -13,13 +13,13 @@ const SponsorCard = ({ sponsor, tier }) => {
       )}
     >
       {tier === "silver" &&
-        (sponsor.logo ? (
-          <Image src={sponsor.logo} width="56" height="56" alt="" className="rounded-md" />
-        ) : (
-          <div className="h-[56px] w-[56px] rounded-md bg-blurple-gradient" />
-        ))}
+        (
+          <div className="h-[56px] w-[56px] rounded-md bg-blurple-gradient overflow-hidden">
+            {sponsor.logo && <Image src={sponsor.logo} width="56" height="56" alt="" />}
+          </div>
+        )}
 
-      <div className="flex flex-col justify-center">
+      <div className={classNames("truncate", tier !== "silver" ? "w-full" : null)}>
         <span className={classNames("b3 !leading-[1.5]", tier === "generalHighlighted" ? "text-nightshade-100" : "text-gray-1")}>
           {tier === "silver" ? (
             <FormattedMessage
