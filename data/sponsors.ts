@@ -234,6 +234,16 @@ const sponsors = {
       logo: require("../public/sponsors/Rottmann_Ventures.png"),
       name: "Rottmann Ventures GmbH"
     }, // Custom
+    {
+      url: "https://customcomet.com/",
+      logo: require("../public/sponsors/custom-comet.png"),
+      name: "Custom Comet",
+    }, // Custom
+    {
+      url: "https://iatro.health/",
+      logo: require("../public/sponsors/iatro.jpeg"),
+      name: "iatro",
+    }, // Custom
   ],
   silver: [
     {
