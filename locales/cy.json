@@ -1,9 +1,9 @@
 {
-  "404.description": "Please check the URL in the address bar and try again.",
-  "404.go_back_home": "Go back home",
+  "404.description": "Gwiriwch yr URL yn y bar cyfeiriad a cheisiwch eto.",
+  "404.go_back_home": "Ewch yn ôl adref",
   "404.title": "Heb ganfod y dudalen",
   "apps.free": "Am ddim",
-  "apps.lead": "The best way to get started with Mastodon is through our official apps for iOS and Android, but many third-party apps are also available below.",
+  "apps.lead": "Y ffordd orau o ddechrau gyda Mastodon yw trwy ein apps swyddogol ar gyfer iOS ac Android, ond mae llawer o apiau trydydd parti ar gael isod hefyd.",
   "apps.paid": "Am dâl",
   "apps.title": "Apiau",
   "browse_apps.all": "All",
