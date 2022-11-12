@@ -27,7 +27,7 @@
   "footer.follow_us_on_mastodon": "Mastodonでフォロー",
   "footer.quip": "無料でオープンソースの分散型ソーシャルメディアプラットフォーム。",
   "home.additional_support_from": "追加サポーター",
-  "home.create_account": "Create account",
+  "home.create_account": "アカウントを作成",
   "home.features.audience.body": "Mastodonでは、誰の仲介もなく、あなた自身でオーディエンスの管理を行うことができます。あなたのインフラストラクチャー上にデプロイされたMastodon上でも、ほかのどんなMastodonサーバーのアカウントをフォローすることも、フォローされることもでき、それらはもちろんあなた自身で制御できます。",
   "home.features.audience.title": "自信を持ってオーディエンスを構築",
   "home.features.button.find_a_server": "サーバーを探す",
