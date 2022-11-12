@@ -7,7 +7,7 @@ const Covenant = () => (
   <Layout>
     <div dir="ltr" className="[unicode-bidi:plaintext]">
       <Hero>
-        <h1 className="h1 mb-4">Mastodon Server Covenant</h1>
+        <h1 className="h1">Mastodon Server Covenant</h1>
       </Hero>
       <BasicPage>
         <CovenantSection
@@ -22,14 +22,11 @@ const Covenant = () => (
 
         <hr className="my-16 border-gray-3" />
 
-        <CovenantSection
-          heading="Submitting your server"
-          description={
-            <>
-              If you are a server owner, and your server passes these requirements, you can send an e-mail to <span className="font-bold">hello@joinmastodon.org</span> with the subject &quot;Server submission&quot; to be listed on this website. Because our goal is giving new users a smooth and reliable start into the decentralized social network of Mastodon rather than simply promoting individual servers, we are generally not interested in promoting brand new and unproven servers, so the submission should not be your primary strategy of growing your community.
-            </>
-          }
-        />
+        <section>
+          <h2 className="h4">Submitting your server</h2>
+          <p className="mt-4">If you are a server owner, and your server passes these requirements, you can send an e-mail to <span className="font-bold">hello@joinmastodon.org</span> with the subject &quot;Server submission&quot; to be listed on this website. Please include the <strong>domain name</strong>, whether you are a private individual or represent an organization, in which country the server is legally situated in, and which category would fit it best.</p>
+          <p className="mt-4">Because our goal is giving new users a smooth and reliable start into the decentralized social network of Mastodon rather than simply promoting individual servers, we are generally not interested in promoting brand new and unproven servers, so the submission should not be your primary strategy of growing your community.</p>
+        </section>
 
         <hr className="my-16 border-gray-3" />
 
@@ -54,6 +51,13 @@ const Covenant = () => (
             { heading: "Blocking major e-mail providers", text: "Most people only have one e-mail address and few are willing to create a new one to satisfy the requirements of a social network they are checking out. Avoid blocking sign-ups from major e-mail providers like GMail, Outlook and so on, as this creates an incredibly frustrating onboarding experience that reflects badly on Mastodon as a whole." },
             { heading: "Running in limited-federation mode", text: "Mastodon is a decentralized social network and we are interested in promoting decentralization. While we respect the use cases of running Mastodon without federation in academic and private contexts, users arriving through our page should be able to participate in the Mastodon network without excessive limitations." },
           ]}
+        />
+
+        <hr className="my-16 border-gray-3" />
+
+        <CovenantSection
+          heading="After submission"
+          description="Submissions are reviewed manually. Our service periodically checks if you server is up and if it is accepting sign-ups. We only show servers that are up and accepting sign-ups."
         />
 
         <Head>
