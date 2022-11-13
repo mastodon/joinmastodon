@@ -94,7 +94,7 @@
   "servers.apply_for_an_account": "Hae tiliä",
   "servers.approval_required": "Rekisteröitymiset tarkistetaan manuaalisesti",
   "servers.create_account": "Luo tili",
-  "servers.getting_started.feed.body": "Palvelimellasi olevalla tilillä voit seurata ketä tahansa verkoston henkilöä riippumatta siitä, missä heidän tilinsä sijaitsee. Näet heidän julkaisunsa kotiaikajanallasi, ja jos he seuraavat sinua, he näkevät sinun julkaisusi omalla aikajanallaan.",
+  "servers.getting_started.feed.body": "Palvelimellasi olevalla tilillä voit seurata ketä tahansa verkoston henkilöä riippumatta siitä, missä heidän tilinsä sijaitsee. Näet heidän julkaisunsa kotisyötteessäsi ja jos he seuraavat sinua, näkevät he julkaisusi omissä syötteissään.",
   "servers.getting_started.feed.title": "Sinun aikajanasi",
   "servers.getting_started.flexible.body": "Löysitkö toisen palvelimen, jota haluaisit käyttää mieluummin? Mastodonin avulla voit helposti siirtää profiilisi eri palvelimelle milloin tahansa menettämättä yhtään seuraajaa. Halutessasi voit luoda oman palvelimesi, joka on täysin hallinnassasi.",
   "servers.getting_started.flexible.title": "Joustava",
