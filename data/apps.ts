@@ -17,6 +17,7 @@ import mercury from "../public/apps/mercury.png"
 import sengi from "../public/apps/sengi.png"
 import metatext from "../public/apps/metatext.png"
 import tooot from "../public/apps/tooot.png"
+import bitlbee from "../public/apps/bitlbee.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -131,12 +132,17 @@ export const apps: appsList = {
       icon: sengi,
       url: "https://nicolasconstant.github.io/sengi/",
     },
-  ],
-  sailfish: [
     {
-      name: "Tooter",
-      icon: tooter,
-      url: "https://openrepos.net/content/dysko/tooter",
+      name: "Bitlbee-Mastodon",
+      icon: bitlbee,
+      url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
     },
   ],
+    sailfish: [
+        {
+            name: "Tooter",
+            icon: tooter,
+            url: "https://openrepos.net/content/dysko/tooter",
+        },
+    ],
 }
