@@ -118,11 +118,6 @@ const sponsors = {
       name: "Wide Angle Analytics",
     }, // Custom
     {
-      url: "https://instalab.pro/buy-instagram-followers",
-      logo: require("../public/sponsors/goread.png"),
-      name: "Instalab.pro",
-    },
-    {
       url: "https://www.noneedtostudy.com/take-my-online-class/",
       logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
       name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
@@ -417,9 +412,19 @@ const sponsors = {
     { name: "Jerry Bell", nofollow: true },
     { name: "Daniel Chen", nofollow: true },
     { name: "Daniel Ehrenberg", nofollow: true },
-    { name: "Joanna Creates Art", nofollow: true },
+    {
+      name: "Joanna Creates Art",
+      logo: require("../public/sponsors/joanna-makes-art.jpg"),
+      url: "https://linktr.ee/joannacreatesart",
+      nofollow: true,
+    },
     { name: "Edward Huff", nofollow: true },
-    { name: "Steve Tran", nofollow: true },
+    {
+      name: "Steve Tran",
+      logo: require("../public/sponsors/steve-tran.png"),
+      url: "https://www.stevetran.com/",
+      nofollow: true,
+    },
   ],
   generalHighlighted: [
     "Moritz Heiber",
