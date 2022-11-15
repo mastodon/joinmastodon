@@ -9,7 +9,6 @@ import toot from "../public/apps/toot.jpg"
 import tooter from "../public/apps/tooter.png"
 import pinafore from "../public/apps/pinafore.png"
 import whalebird from "../public/apps/whalebird.png"
-import halcyon from "../public/apps/halcyon.png"
 import thedesk from "../public/apps/thedesk.png"
 import cuckooPlus from "../public/apps/cuckoo-plus.png"
 import hyperspace from "../public/apps/hyperspace.png"
@@ -105,7 +104,6 @@ export const apps: appsList = {
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
-    { name: "Halcyon", icon: halcyon, url: "https://www.halcyon.social/" },
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
   ],
   desktop: [
