@@ -144,8 +144,18 @@ const sponsors = {
     }, // Custom
     {
       url: "https://bibly.com/",
-      logo: require("../public/sponsors/Bibly-Server.png"),
+      logo: require("../public/sponsors/bibly-logo.png"),
       name: "Bibly",
+    }, // Custom
+    {
+      url: "https://ndash.com/?utm_source=mastodon",
+      logo: require("../public/sponsors/nDash.png"),
+      name: "nDash Content Creation Platform",
+    }, // Custom
+    {
+      url: "https://www.zerotier.com/",
+      logo: require("../public/sponsors/zerotier.png"),
+      name: "ZeroTier, Inc.",
     }, // Custom
   ],
   gold: [
@@ -253,6 +263,21 @@ const sponsors = {
       url: "https://archive.org/",
       logo: require("../public/sponsors/archive-logo-1600.png"),
       name: "Internet Archive",
+    }, // Custom
+    {
+      url: "https://bookingninja.io/",
+      logo: require("../public/sponsors/booking-ninja.png"),
+      name: "BookingNinja",
+    }, // Custom
+    {
+      url: "https://www.ecurium.com/",
+      logo: require("../public/sponsors/ecurium-for-nonprofits.svg"),
+      name: "Ecurium",
+    }, // Custom
+    {
+      url: "https://www.blindfiveyearold.com/",
+      logo: require("../public/sponsors/bfyo-face-logo.jpg"),
+      name: "Blind Five Year Old",
     }, // Custom
   ],
   silver: [
