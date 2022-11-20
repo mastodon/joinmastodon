@@ -154,7 +154,7 @@ const sponsors = {
     }, // Custom
     {
       url: "https://www.zerotier.com/",
-      logo: require("../public/sponsors/zerotier.png"),
+      logo: require("../public/sponsors/zerotier_logo_black.png"),
       name: "ZeroTier, Inc.",
     }, // Custom
   ],
@@ -276,8 +276,18 @@ const sponsors = {
     }, // Custom
     {
       url: "https://www.blindfiveyearold.com/",
-      logo: require("../public/sponsors/bfyo-face-logo.jpg"),
+      logo: require("../public/sponsors/BFYO-Logo.png"),
       name: "Blind Five Year Old",
+    }, // Custom
+    {
+      url: "https://stoners.social/invite/8rYLTCGW",
+      logo: require("../public/sponsors/chill.jpg"),
+      name: "Stoners Social | The Weed Platform",
+    }, // Custom
+    {
+      url: "https://j15r.com/",
+      logo: require("../public/sponsors/j15r.png"),
+      name: "Joel Webber",
     }, // Custom
   ],
   silver: [
