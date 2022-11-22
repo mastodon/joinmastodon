@@ -22,5 +22,6 @@ export const categoriesMessages = defineMessages({
   music: { id: "server.category.music", defaultMessage: "Music" },
   regional: { id: "server.category.regional", defaultMessage: "Regional" },
   sports: { id: "server.category.sports", defaultMessage: "Sports" },
+  science: { id: "server.category.science", defaultMessage: "Science" },
   tech: { id: "server.category.technology", defaultMessage: "Technology" },
 })
