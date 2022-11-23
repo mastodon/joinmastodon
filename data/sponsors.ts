@@ -164,7 +164,7 @@ const sponsors = {
     }, // Custom
     {
       url: "https://brightstarsystems.com/",
-      logo: require("../public/sponsors/brightstar-systems.jpg"),
+      logo: require("../public/sponsors/brightstarsystems.png"),
       name: "BrightStar Systems",
     }, // Custom
   ],
