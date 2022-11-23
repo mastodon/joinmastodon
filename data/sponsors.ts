@@ -157,6 +157,16 @@ const sponsors = {
       logo: require("../public/sponsors/zerotier_logo_black.png"),
       name: "ZeroTier, Inc.",
     }, // Custom
+    {
+      url: "https://www.goldeneaglecoin.com/",
+      logo: require("../public/sponsors/ge-logo-coin-card2.png"),
+      name: "Golden Eagle Coins",
+    }, // Custom
+    {
+      url: "https://brightstarsystems.com/",
+      logo: require("../public/sponsors/brightstar-systems.jpg"),
+      name: "BrightStar Systems",
+    }, // Custom
   ],
   gold: [
     {
