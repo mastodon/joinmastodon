@@ -141,5 +141,5 @@
   "wizard.filter_by_language": "භාෂාව",
   "wizard.filter_by_registrations": "ලියාපදිංචි වේගය",
   "wizard.filter_by_structure": "නෛතික ව්‍යුහය",
-  "wizard.no_results": "Seems like there are currently no servers that fit your search criteria. Mind that we only display a curated set of servers that currently accept new sign-ups."
+  "wizard.no_results": "ඔබගේ සෙවුම් නිර්ණායකයට ගැළපෙන සේවාදායක දැනට නැති බව පෙනේ. මෙහි දී නව ලියාපදිංචි කිරීම් පිළිගන්නා සේවාදායක කට්ටලයක් පමණක් පෙන්වන බව මතක තබා ගන්න."
 }
