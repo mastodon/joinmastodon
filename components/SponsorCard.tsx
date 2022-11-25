@@ -14,8 +14,8 @@ const SponsorCard = ({ sponsor, tier }) => {
     >
       {tier === "silver" &&
         (
-          <div className="h-[56px] w-[56px] rounded-md bg-blurple-gradient overflow-hidden">
-            {sponsor.logo && <Image src={sponsor.logo} width="56" height="56" alt="" />}
+          <div className="h-[56px] w-[56px] rounded-md bg-blurple-gradient overflow-hidden relative">
+            {sponsor.logo && <Image src={sponsor.logo} alt="" layout="fill" objectFit="cover" />}
           </div>
         )}
 
