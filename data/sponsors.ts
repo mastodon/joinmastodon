@@ -301,6 +301,11 @@ const sponsors = {
       logo: require("../public/sponsors/j15r.png"),
       name: "Joel Webber",
     }, // Custom
+    {
+      url: "https://goodyfeed.com/",
+      logo: require("../public/sponsors/goody-feed.png"),
+      name: "Goody Feed",
+    }, // Custom
   ],
   silver: patreonData.silver,
   generalHighlighted: patreonData.generalHighlighted,
