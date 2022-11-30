@@ -150,7 +150,7 @@ const sponsors = {
       name: "Bibly",
     }, // Custom
     {
-      url: "https://ndash.com/?utm_source=mastodon",
+      url: "https://ndash.com/?utm_campaign=mastodon_v2",
       logo: require("../public/sponsors/nDash.png"),
       name: "nDash Content Creation Platform",
     }, // Custom
@@ -168,6 +168,11 @@ const sponsors = {
       url: "https://brightstarsystems.com/",
       logo: require("../public/sponsors/brightstarsystems.png"),
       name: "BrightStar Systems",
+    }, // Custom
+    {
+      url: "https://apernet.io/",
+      logo: require("../public/sponsors/AperNetLogo.svg"),
+      name: "Aperture Internet Laboratory",
     }, // Custom
   ],
   gold: [
@@ -305,6 +310,16 @@ const sponsors = {
       url: "https://goodyfeed.com/",
       logo: require("../public/sponsors/goody-feed.png"),
       name: "Goody Feed",
+    }, // Custom
+    {
+      url: "https://supertokens.com/",
+      logo: require("../public/sponsors/supertokens.svg"),
+      name: "SuperTokens",
+    }, // Custom
+    {
+      url: "https://client.zealous.host/aff.php?aff=7",
+      logo: require("../public/sponsors/zealous.png"),
+      name: "Zealous Host | Gameservers",
     }, // Custom
   ],
   silver: patreonData.silver,
