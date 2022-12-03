@@ -174,6 +174,16 @@ const sponsors = {
       logo: require("../public/sponsors/AperNetLogo.svg"),
       name: "Aperture Internet Laboratory",
     }, // Custom
+    {
+      url: "https://rubycentral.org/",
+      logo: require("../public/sponsors/ruby-central.jpeg"),
+      name: "Ruby Central",
+    }, // Custom
+    {
+      url: "https://opalstack.com/?utm_campaign=mastodon2022&utm_source=joinmastodon&utm_term=mastodon%2Bhosting",
+      logo: require("../public/sponsors/opal-stack.svg"),
+      name: "Managed Hosting for developers, entrepreneurs, and businesses like yours.",
+    }, // Custom
   ],
   gold: [
     {
