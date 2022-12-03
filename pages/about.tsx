@@ -126,7 +126,31 @@ const About = () => (
 
             <div className="col-span-12 md:col-span-6">
               <h2 className="h3 mb-4">Contact us</h2>
-              <p className="sh1">For press inquiries, use <a href="mailto:press@joinmastodon.org" className="text-blurple-500 hover:underline">press@joinmastodon.org</a>. For all other inquiries, e-mail us at <a href="mailto:hello@joinmastodon.org" className="text-blurple-500 hover:underline">hello@joinmastodon.org</a>.</p>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Press inquiries:</dt>
+                <dd><a href="mailto:press@joinmastodon.org" className="text-blurple-500 hover:underline">press@joinmastodon.org</a></dd>
+              </div>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Legal inquiries:</dt>
+                <dd><a href="mailto:legal@joinmastodon.org" className="text-blurple-500 hover:underline">legal@joinmastodon.org</a></dd>
+              </div>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Trademark inquiries:</dt>
+                <dd><a href="mailto:trademark@joinmastodon.org" className="text-blurple-500 hover:underline">trademark@joinmastodon.org</a></dd>
+              </div>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Security inquiries:</dt>
+                <dd><a href="mailto:security@joinmastodon.org" className="text-blurple-500 hover:underline">security@joinmastodon.org</a></dd>
+              </div>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Other inquiries:</dt>
+                <dd><a href="mailto:hello@joinmastodon.org" className="text-blurple-500 hover:underline">hello@joinmastodon.org</a></dd>
+              </div>
             </div>
 
             <div className="col-span-12 md:col-span-6" id="impressum">

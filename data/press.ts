@@ -12,8 +12,15 @@ import boingBoingLogo from "../public/press/boing-boing.svg"
 import timeLogo from "../public/press/time-magazine.svg"
 import cnnLogo from "../public/press/cnn.svg";
 import guardianLogo from "../public/press/the-guardian.svg";
+import forbesLogo from "../public/press/forbes.svg";
 
 const articles = [
+  {
+    logo: forbesLogo,
+    url: "https://fortune.com/2022/11/28/mastodon-social-ceo-eugen-rochko-twitter-elon-musk/",
+    title: "Mastodon’s 29-year-old CEO wants his Twitter alternative to ‘replace’ its rival some day, but he’s taking an anti–Elon Musk approach to growing it",
+    date: "2022-11-28",
+  },
   {
     logo: timeLogo,
     url: "https://time.com/6229230/mastodon-eugen-rochko-interview/",
