@@ -331,6 +331,11 @@ const sponsors = {
       logo: require("../public/sponsors/zealous.png"),
       name: "Zealous Host | Gameservers",
     }, // Custom
+    {
+      url: "https://pillarwm.com/best-wealth-management-firms/",
+      logo: require("../public/sponsors/pillar.jpg"),
+      name: "Best Wealth Management Firms",
+    }, // Custom
   ],
   silver: patreonData.silver,
   generalHighlighted: patreonData.generalHighlighted,
