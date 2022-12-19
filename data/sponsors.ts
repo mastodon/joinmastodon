@@ -184,6 +184,16 @@ const sponsors = {
       logo: require("../public/sponsors/opal-stack.svg"),
       name: "Managed Hosting for developers, entrepreneurs, and businesses like yours.",
     }, // Custom
+    {
+      url: "https://allbursaries.co.za/",
+      logo: require("../public/sponsors/AMP All Bursaries South Africa.png"),
+      name: "AllBursaries"
+    }, // Custom
+    {
+      url: "https://theoatmeal.com/",
+      logo: require("../public/sponsors/oatmeal_logo_2020_square@5x.png"),
+      name: "The Oatmeal",
+    }, // Custom
   ],
   gold: [
     {
@@ -335,6 +345,16 @@ const sponsors = {
       url: "https://pillarwm.com/best-wealth-management-firms/",
       logo: require("../public/sponsors/pillar.jpg"),
       name: "Best Wealth Management Firms",
+    }, // Custom
+    {
+      url: "https://toot.io/mastodon_hosting.html",
+      logo: require("../public/sponsors/toot_io_logo.png"),
+      name: "toot.io",
+    }, // Custom
+    {
+      url: "http://www.reboot.io/",
+      logo: require("../public/sponsors/reboot-fullstacked-trademark-color-small.jpg"),
+      name: "Better Humans Make Better Leaders",
     }, // Custom
   ],
   silver: patreonData.silver,
