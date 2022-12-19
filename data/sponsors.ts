@@ -194,6 +194,16 @@ const sponsors = {
       logo: require("../public/sponsors/oatmeal_logo_2020_square@5x.png"),
       name: "The Oatmeal",
     }, // Custom
+    {
+      url: "https://www.completewebresources.com/",
+      logo: require("../public/sponsors/complete seo logo lg.jpg"),
+      name: "Complete SEO",
+    }, // Custom
+    {
+      url: "https://www.drinkingquest.com/",
+      logo: require("../public/sponsors/jason-anarchy-games.jpg"),
+      name: "Jason Anarchy Games",
+    }, // Custom
   ],
   gold: [
     {
