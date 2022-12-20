@@ -204,6 +204,11 @@ const sponsors = {
       logo: require("../public/sponsors/jason-anarchy-games.jpg"),
       name: "Jason Anarchy Games",
     }, // Custom
+    {
+      url: "https://intellifluence.com/",
+      logo: require("../public/sponsors/intellifluence logos.png"),
+      name: "Intellifluence supports all influencers",
+    }
   ],
   gold: [
     {
