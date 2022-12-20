@@ -6,6 +6,8 @@ Submit translations here: https://crowdin.com/project/joinmastodon
 
 ## Development
 
+Mastodon's homepage requires Node 16 LTS and Yarn for development.
+
 ### Installation
 
 ```sh
