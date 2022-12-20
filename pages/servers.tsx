@@ -525,45 +525,6 @@ const ServerFilters = ({
     <div className="mb-8">
       <h3 className="h5 mb-4" id="category-group-label">
         <FormattedMessage
-          id="server.filter_by.region"
-          defaultMessage="Region"
-        />
-      </h3>
-
-      <p className="b3 mb-4 text-gray-2"><FormattedMessage id="server.filter_by.region.lead" defaultMessage="Where the provider is legally based." /></p>
-
-      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3 mb-8">
-        {regions?.map((item, i) => {
-          const isActive = filters.region === item.value
-
-          return (
-            <li key={i}>
-              <label
-                className={classnames(
-                  "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
-                  isActive && "bg-nightshade-50 !font-extrabold"
-                )}
-              >
-                <input
-                  className="sr-only"
-                  type="checkbox"
-                  name="filters-region"
-                  onChange={() => {
-                    setFilters({
-                      ...filters,
-                      region: isActive ? "" : item.value,
-                    })
-                  }}
-                />
-                {item.label}
-              </label>
-            </li>
-          )
-        })}
-      </ul>
-
-      <h3 className="h5 mb-4" id="category-group-label">
-        <FormattedMessage
           id="server.filter_by.category"
           defaultMessage="Topic"
         />
@@ -571,7 +532,7 @@ const ServerFilters = ({
 
       <p className="b3 mb-4 text-gray-2"><FormattedMessage id="server.filter_by.category.lead" defaultMessage="Some providers specialize in hosting accounts from specific communities." /></p>
 
-      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3">
+      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3 mb-8">
         {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (
             <li className="h-8 p-3" key={i}>
@@ -613,6 +574,45 @@ const ServerFilters = ({
               </li>
             )
           })}
+      </ul>
+
+      <h3 className="h5 mb-4" id="category-group-label">
+        <FormattedMessage
+          id="server.filter_by.region"
+          defaultMessage="Region"
+        />
+      </h3>
+
+      <p className="b3 mb-4 text-gray-2"><FormattedMessage id="server.filter_by.region.lead" defaultMessage="Where the provider is legally based." /></p>
+
+      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3">
+        {regions?.map((item, i) => {
+          const isActive = filters.region === item.value
+
+          return (
+            <li key={i}>
+              <label
+                className={classnames(
+                  "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
+                  isActive && "bg-nightshade-50 !font-extrabold"
+                )}
+              >
+                <input
+                  className="sr-only"
+                  type="checkbox"
+                  name="filters-region"
+                  onChange={() => {
+                    setFilters({
+                      ...filters,
+                      region: isActive ? "" : item.value,
+                    })
+                  }}
+                />
+                {item.label}
+              </label>
+            </li>
+          )
+        })}
       </ul>
     </div>
   )
