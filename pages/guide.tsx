@@ -70,23 +70,35 @@ function Guide(props) {
         </GuideSection>
         <GuideSection title="Colors">
           <div className="grid grid-cols-1 gap-8">
-            {Object.keys(theme.colors).map(color => (
+            {Object.keys(theme.colors).map((color) => (
               <div key={color}>
                 <div className="flex space-x-4">
                   <div className="w-24 shrink-0">
-                    <div className="h-10 flex flex-col justify-center">
+                    <div className="flex h-10 flex-col justify-center">
                       <div className="font-semibold">{color}</div>
                     </div>
                   </div>
 
-                  <div className="min-w-0 flex-0 grid grid-cols-6 gap-x-4 gap-y-3">
-                    {(typeof theme.colors[color] === "string" ? [""] : Object.keys(theme.colors[color])).map(stage => (
+                  <div className="flex-0 grid min-w-0 grid-cols-6 gap-x-4 gap-y-3">
+                    {(typeof theme.colors[color] === "string"
+                      ? [""]
+                      : Object.keys(theme.colors[color])
+                    ).map((stage) => (
                       <div key={stage} className="relative flex">
                         <div className="space-y-1.5">
-                          <div className={`h-10 w-full rounded bg-${color}${stage === "" ? "" : `-${stage}`} border-2 border-solid border-[rgba(0,0,0,0.1)] bg-clip-border`} />
+                          <div
+                            className={`h-10 w-full rounded bg-${color}${
+                              stage === "" ? "" : `-${stage}`
+                            } border-2 border-solid border-[rgba(0,0,0,0.1)] bg-clip-border`}
+                          />
                           <div className="px-0.5">
-                            <div className="w-20 font-medium">{stage || "-"}</div>
-                            <div className="text-gray-2 font-mono lowercase">{theme.colors[color][stage] || theme.colors[color]}</div>
+                            <div className="w-20 font-medium">
+                              {stage || "-"}
+                            </div>
+                            <div className="font-mono lowercase text-gray-2">
+                              {theme.colors[color][stage] ||
+                                theme.colors[color]}
+                            </div>
                           </div>
                         </div>
                       </div>

@@ -8,7 +8,11 @@ const nextConfig = {
     defaultLocale,
   },
   images: {
-    domains: ["proxy.joinmastodon.org", "c8.patreon.com", "c10.patreonusercontent.com"],
+    domains: [
+      "proxy.joinmastodon.org",
+      "c8.patreon.com",
+      "c10.patreonusercontent.com",
+    ],
   },
   async redirects() {
     return [

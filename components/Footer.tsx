@@ -8,7 +8,7 @@ import footerImage from "../public/illustrations/footer.png"
 /** Sitewide footer component */
 export const Footer = () => (
   <footer className="full-width-bg relative mt-footer-offset bg-[#150118] pb-24 text-center text-white md:pt-24 md:text-start">
-    <div className="absolute bottom-full md:bottom-footer-offset left-1/2 w-full -translate-x-1/2 translate-y-[1px] ml-[-1px] z-0 pointer-events-none h-48 md:h-full">
+    <div className="pointer-events-none absolute bottom-full left-1/2 z-0 ml-[-1px] h-48 w-full -translate-x-1/2 translate-y-[1px] md:bottom-footer-offset md:h-full">
       <Image
         src={footerImage}
         alt=""
@@ -22,9 +22,18 @@ export const Footer = () => (
 
     <nav className="full-width-bg__inner relative z-10">
       <div className="grid gap-x-4 gap-y-16 md:grid-cols-12 md:gap-x-5">
-        <div className="flex flex-col items-center md:items-start md:col-start-1 md:col-end-5 lg:col-start-1 lg:col-end-5 text-nightshade-50 gap-8">
-          <SVG src="/logos/logo-white.svg" className="w-20 max-w-full" fill="currentColor" />
-          <p className="mt-2 max-w-[28ch]"><FormattedMessage id="footer.quip" defaultMessage="Free, open-source decentralized social media platform." /></p>
+        <div className="flex flex-col items-center gap-8 text-nightshade-50 md:col-start-1 md:col-end-5 md:items-start lg:col-start-1 lg:col-end-5">
+          <SVG
+            src="/logos/logo-white.svg"
+            className="w-20 max-w-full"
+            fill="currentColor"
+          />
+          <p className="mt-2 max-w-[28ch]">
+            <FormattedMessage
+              id="footer.quip"
+              defaultMessage="Free, open-source decentralized social media platform."
+            />
+          </p>
         </div>
 
         <div className="grid gap-10 gap-x-4 md:col-start-6 md:col-end-13 md:grid-cols-3 md:gap-x-5">
@@ -78,7 +87,10 @@ export const Footer = () => (
                   rel="noopener noreferrer"
                   href="https://github.com/mastodon/mastodon"
                 >
-                  <FormattedMessage id="nav.code.title" defaultMessage="Source code" />
+                  <FormattedMessage
+                    id="nav.code.title"
+                    defaultMessage="Source code"
+                  />
                 </a>,
                 <a
                   className="inline-block py-2 hover:underline"
@@ -147,12 +159,16 @@ export const Footer = () => (
                     />
                   </a>
                 </Link>,
-                <a key="contact-us" href="mailto:hello@joinmastodon.org" className="inline-block py-2 hover:underline">
+                <a
+                  key="contact-us"
+                  href="mailto:hello@joinmastodon.org"
+                  className="inline-block py-2 hover:underline"
+                >
                   <FormattedMessage
                     id="nav.contact_us.title"
                     defaultMessage="Contact us"
                   />
-                </a>
+                </a>,
               ],
             },
           ].map((menu, i) => (
@@ -171,12 +187,35 @@ export const Footer = () => (
       <hr className="my-6 border-nightshade-600 sm:mx-auto lg:my-8" />
 
       <div className="sm:flex sm:items-center sm:justify-between">
-        <span className="text-nightshade-100 text-center md:text-start">Copyright © 2022 Mastodon gGmbH. <Link href="/privacy-policy"><a className="hover:underline"><FormattedMessage id="nav.privacy_policy.title" defaultMessage="Privacy Policy" /></a></Link></span>
+        <span className="text-center text-nightshade-100 md:text-start">
+          Copyright © 2022 Mastodon gGmbH.{" "}
+          <Link href="/privacy-policy">
+            <a className="hover:underline">
+              <FormattedMessage
+                id="nav.privacy_policy.title"
+                defaultMessage="Privacy Policy"
+              />
+            </a>
+          </Link>
+        </span>
 
-        <div className="flex justify-center mt-4 md:space-x-6 md:mt-0">
-          <a href="https://mastodon.social/@Mastodon" rel="me" className="text-nightshade-100 hover:text-nightshade-50">
-            <SVG src="/logos/logo-white.svg" className="w-5 h-5" fill="currentColor" />
-            <span className="sr-only"><FormattedMessage id="footer.follow_us_on_mastodon" defaultMessage="Follow us on Mastodon" /></span>
+        <div className="mt-4 flex justify-center md:mt-0 md:space-x-6">
+          <a
+            href="https://mastodon.social/@Mastodon"
+            rel="me"
+            className="text-nightshade-100 hover:text-nightshade-50"
+          >
+            <SVG
+              src="/logos/logo-white.svg"
+              className="h-5 w-5"
+              fill="currentColor"
+            />
+            <span className="sr-only">
+              <FormattedMessage
+                id="footer.follow_us_on_mastodon"
+                defaultMessage="Follow us on Mastodon"
+              />
+            </span>
           </a>
         </div>
       </div>

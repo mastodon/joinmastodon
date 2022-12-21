@@ -24,9 +24,11 @@ export const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
 
       <p className="b1 text-center">{testimonial.text}</p>
 
-      <div className="text-center b2">
+      <div className="b2 text-center">
         <span className="block font-bold">{testimonial.name}</span>
-        <span className="text-blurple-600 font-semibold">@{testimonial.username}</span>
+        <span className="font-semibold text-blurple-600">
+          @{testimonial.username}
+        </span>
       </div>
     </div>
   )

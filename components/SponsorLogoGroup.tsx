@@ -10,9 +10,10 @@ const SponsorLogoGroup = ({ sponsors }) => {
 
         return (
           <a
-            href={sponsor.url} key={i}
+            href={sponsor.url}
+            key={i}
             className={classnames(
-              "group relative inline-flex items-center justify-center px-4 py-3 rounded",
+              "group relative inline-flex items-center justify-center rounded px-4 py-3",
               sponsor.light ? "bg-nightshade-900" : "bg-gray-5"
             )}
             target="_blank"

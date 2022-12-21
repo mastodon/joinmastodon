@@ -5,8 +5,8 @@
  */
 export const BasicPage = ({ children }) => {
   return (
-    <div className="grid-cols-12 md:grid b1">
-      <div className="pt-24 pb-12 md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3 gap-gutter">
+    <div className="b1 grid-cols-12 md:grid">
+      <div className="gap-gutter pt-24 pb-12 md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3">
         {children}
       </div>
     </div>

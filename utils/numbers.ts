@@ -13,7 +13,7 @@ export const formatNumber = (
 }
 
 export const percIncrease = (a: number, b: number): number => {
-  let percent;
+  let percent
 
   if (b !== 0) {
     if (a !== 0) {
@@ -24,7 +24,7 @@ export const percIncrease = (a: number, b: number): number => {
   } else if (b === 0 && a === 0) {
     percent = 0
   } else {
-    percent = - 1
+    percent = -1
   }
 
   return percent

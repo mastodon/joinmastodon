@@ -22,7 +22,10 @@ export const Layout = ({
 
   return (
     <div className="mx-auto max-w-site px-6 lg:px-16">
-      <a className="bg-blurple-900 sr-only top-0 left-0 z-20 block text-white focus:not-sr-only focus:absolute focus:p-2" href="#main">
+      <a
+        className="sr-only top-0 left-0 z-20 block bg-blurple-900 text-white focus:not-sr-only focus:absolute focus:p-2"
+        href="#main"
+      >
         Skip to main content
       </a>
 
@@ -31,14 +34,31 @@ export const Layout = ({
       <Footer />
 
       <Head>
-        <meta property="og:image" content="https://joinmastodon.org/preview.png" />
+        <meta
+          property="og:image"
+          content="https://joinmastodon.org/preview.png"
+        />
         <meta property="twitter:card" content="summary_large_image" />
 
-        {locales.filter(locale => locale.code !== currentLocale).map(locale => (
-          <link key={locale.code} rel="alternate" hrefLang={locale.code} href={`${BASE_URL}${locale.code === defaultLocale ? "" : `/${locale.code}`}${currentPath}`} />
-        ))}
+        {locales
+          .filter((locale) => locale.code !== currentLocale)
+          .map((locale) => (
+            <link
+              key={locale.code}
+              rel="alternate"
+              hrefLang={locale.code}
+              href={`${BASE_URL}${
+                locale.code === defaultLocale ? "" : `/${locale.code}`
+              }${currentPath}`}
+            />
+          ))}
 
-        <link rel="canonical" href={`${BASE_URL}${currentLocale === defaultLocale ? "" : `/${currentLocale}`}${currentPath}`} />
+        <link
+          rel="canonical"
+          href={`${BASE_URL}${
+            currentLocale === defaultLocale ? "" : `/${currentLocale}`
+          }${currentPath}`}
+        />
       </Head>
     </div>
   )

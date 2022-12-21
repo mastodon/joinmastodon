@@ -22,29 +22,44 @@ export const SelectMenu = ({
   options,
   value,
 }: SelectMenuProps) => {
-  const selectedLabel = options.find(option => option.value === value)?.label;
+  const selectedLabel = options.find((option) => option.value === value)?.label
 
   return (
     <Listbox value={value} onChange={onChange}>
       <div className="b3 inline-flex w-full sm:w-auto">
         <div className="relative w-full sm:w-auto">
-          <Listbox.Button className="w-full sm:w-auto relative cursor-pointer rounded-md border border-gray-3 py-4 pl-4 pr-10 text-left focus:outline-none focus:ring-1 focus:ring-blurple-500">
+          <Listbox.Button className="relative w-full cursor-pointer rounded-md border border-gray-3 py-4 pl-4 pr-10 text-left focus:outline-none focus:ring-1 focus:ring-blurple-500 sm:w-auto">
             <span className="block truncate text-gray-1">
-              <span className="font-medium">{label}:{" "}</span>
+              <span className="font-medium">{label}: </span>
               <span className="font-bold">{selectedLabel}</span>
             </span>
 
             <span className="pointer-events-none absolute inline-end-3 block-start-5">
-              <SVG className="h-4 w-4 text-gray-2" fill="currentColor" src="/ui/disclosure-arrow.svg" />
+              <SVG
+                className="h-4 w-4 text-gray-2"
+                fill="currentColor"
+                src="/ui/disclosure-arrow.svg"
+              />
             </span>
           </Listbox.Button>
 
           <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full min-w-max overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-gray-3 focus:outline-none">
             {options.map(({ label: optionLabel, value: optionValue }) => (
-              <Listbox.Option key={optionValue} value={optionValue} className={({ active }) => classNames(active ? "text-white bg-blurple-500" : "text-gray-1", "relative text-gray-1 cursor-pointer select-none py-3 px-4 font-medium")}>
+              <Listbox.Option
+                key={optionValue}
+                value={optionValue}
+                className={({ active }) =>
+                  classNames(
+                    active ? "bg-blurple-500 text-white" : "text-gray-1",
+                    "relative cursor-pointer select-none py-3 px-4 font-medium text-gray-1"
+                  )
+                }
+              >
                 {({ selected }) => (
                   <>
-                    <span className={selected ? "font-bold" : ""}>{optionLabel}</span>
+                    <span className={selected ? "font-bold" : ""}>
+                      {optionLabel}
+                    </span>
                   </>
                 )}
               </Listbox.Option>

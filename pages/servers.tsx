@@ -24,12 +24,18 @@ import Link from "next/link"
 
 const apiBase = `https://api.joinmastodon.org/`
 const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
-const DUNBAR = Math.log(800);
+const DUNBAR = Math.log(800)
 
 const Servers = () => {
   const intl = useIntl()
   const { locale } = useRouter()
-  const [filters, setFilters] = useState({ language: locale === "en" ? "en" : "", category: "", region: "", ownership: "", registrations: "" })
+  const [filters, setFilters] = useState({
+    language: locale === "en" ? "en" : "",
+    category: "",
+    region: "",
+    ownership: "",
+    registrations: "",
+  })
 
   const params = new URLSearchParams(filters)
   const queryOptions = {
@@ -85,30 +91,48 @@ const Servers = () => {
   const registrationsOptions = [
     {
       value: "",
-      label: intl.formatMessage({ id: "wizard.filter.sign_up.all", defaultMessage: "All" }),
+      label: intl.formatMessage({
+        id: "wizard.filter.sign_up.all",
+        defaultMessage: "All",
+      }),
     },
     {
       value: "instant",
-      label: intl.formatMessage({ id: "wizard.filter.sign_up.instant", defaultMessage: "Instant" }),
+      label: intl.formatMessage({
+        id: "wizard.filter.sign_up.instant",
+        defaultMessage: "Instant",
+      }),
     },
     {
       value: "manual",
-      label: intl.formatMessage({ id: "wizard.filter.sign_up.manual", defaultMessage: "Manual review" }),
+      label: intl.formatMessage({
+        id: "wizard.filter.sign_up.manual",
+        defaultMessage: "Manual review",
+      }),
     },
   ]
 
   const ownershipOptions = [
     {
       value: "",
-      label: intl.formatMessage({ id: "wizard.filter.ownership.all", defaultMessage: "All" }),
+      label: intl.formatMessage({
+        id: "wizard.filter.ownership.all",
+        defaultMessage: "All",
+      }),
     },
     {
       value: "juridicial",
-      label: intl.formatMessage({ id: "wizard.filter.ownership.juridicial", defaultMessage: "Public organization" }),
+      label: intl.formatMessage({
+        id: "wizard.filter.ownership.juridicial",
+        defaultMessage: "Public organization",
+      }),
     },
     {
       value: "natural",
-      label: intl.formatMessage({ id: "wizard.filter.ownership.natural", defaultMessage: "Private individual" }),
+      label: intl.formatMessage({
+        id: "wizard.filter.ownership.natural",
+        defaultMessage: "Private individual",
+      }),
     },
   ]
 
@@ -132,45 +156,73 @@ const Servers = () => {
   )
 
   const servers = useQuery<Server[]>(
-    ["servers", filters.language, filters.category, filters.ownership, filters.registrations, filters.region],
+    [
+      "servers",
+      filters.language,
+      filters.category,
+      filters.ownership,
+      filters.registrations,
+      filters.region,
+    ],
     () => fetchEndpoint("servers", params),
     queryOptions
   )
 
   const days = useQuery<Day[]>(
     ["statistics"],
-    () => fetchEndpoint("statistics", ''),
+    () => fetchEndpoint("statistics", ""),
     queryOptions
   )
 
   const regions = [
     {
       value: "",
-      label: intl.formatMessage({ id: "server.regions.all", defaultMessage: "All regions" }),
+      label: intl.formatMessage({
+        id: "server.regions.all",
+        defaultMessage: "All regions",
+      }),
     },
     {
       value: "europe",
-      label: intl.formatMessage({ id: "server.regions.europe", defaultMessage: "Europe" }),
+      label: intl.formatMessage({
+        id: "server.regions.europe",
+        defaultMessage: "Europe",
+      }),
     },
     {
       value: "north_america",
-      label: intl.formatMessage({ id: "server.regions.north_america", defaultMessage: "North America" }),
+      label: intl.formatMessage({
+        id: "server.regions.north_america",
+        defaultMessage: "North America",
+      }),
     },
     {
       value: "south_america",
-      label: intl.formatMessage({ id: "server.regions.south_america", defaultMessage: "South America" }),
+      label: intl.formatMessage({
+        id: "server.regions.south_america",
+        defaultMessage: "South America",
+      }),
     },
     {
       value: "africa",
-      label: intl.formatMessage({ id: "server.regions.africa", defaultMessage: "Africa" }),
+      label: intl.formatMessage({
+        id: "server.regions.africa",
+        defaultMessage: "Africa",
+      }),
     },
     {
       value: "asia",
-      label: intl.formatMessage({ id: "server.regions.asia", defaultMessage: "Asia" }),
+      label: intl.formatMessage({
+        id: "server.regions.asia",
+        defaultMessage: "Asia",
+      }),
     },
     {
       value: "oceania",
-      label: intl.formatMessage({ id: "server.regions.oceania", defaultMessage: "Oceania" }),
+      label: intl.formatMessage({
+        id: "server.regions.oceania",
+        defaultMessage: "Oceania",
+      }),
     },
   ]
 
@@ -195,7 +247,7 @@ const Servers = () => {
       <div className="grid gap-20 pb-40">
         <GettingStartedCards />
         <div className="grid grid-cols-4 gap-gutter md:grid-cols-12">
-          <div className="col-span-full mb-4 md:mb-2 flex flex-wrap gap-gutter md:justify-end">
+          <div className="col-span-full mb-4 flex flex-wrap gap-gutter md:mb-2 md:justify-end">
             <SelectMenu
               label={
                 <FormattedMessage
@@ -237,17 +289,13 @@ const Servers = () => {
               value={filters.language}
               options={apiLanguages.data || [defaultOption]}
             />
-
           </div>
-          <div className="mb-8 md:mb-0 col-span-4 md:col-span-3">
+          <div className="col-span-4 mb-8 md:col-span-3 md:mb-0">
             <h3 className="h5 mb-4">
-              <FormattedMessage
-                id="server.safety"
-                defaultMessage="Safety"
-              />
+              <FormattedMessage id="server.safety" defaultMessage="Safety" />
             </h3>
 
-            <p className="mb-8 b2 text-gray-1">
+            <p className="b2 mb-8 text-gray-1">
               <FormattedMessage
                 id="covenant.learn_more"
                 defaultMessage="All servers listed here have committed to the <link>Mastodon Server Covenant</link>."
@@ -413,7 +461,7 @@ const ServerList = ({ servers }) => {
   return (
     <div className="col-span-4 md:col-start-4 md:col-end-13">
       {servers.data?.length === 0 ? (
-        <div className="b2 rounded bg-gray-5 p-4 text-gray-1 flex justify-center md:p-8 md:py-20">
+        <div className="b2 flex justify-center rounded bg-gray-5 p-4 text-gray-1 md:p-8 md:py-20">
           <p className="max-w-[48ch] text-center">
             <FormattedMessage
               id="wizard.no_results"
@@ -425,16 +473,18 @@ const ServerList = ({ servers }) => {
         <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-3">
           {servers.isLoading
             ? Array(8)
-              .fill(null)
-              .map((_el, i) => <ServerCard key={i} />)
-            : servers.data.sort((a, b) => {
-              const aa = Math.abs(DUNBAR - Math.log(a.last_week_users));
-              const bb = Math.abs(DUNBAR - Math.log(b.last_week_users));
+                .fill(null)
+                .map((_el, i) => <ServerCard key={i} />)
+            : servers.data
+                .sort((a, b) => {
+                  const aa = Math.abs(DUNBAR - Math.log(a.last_week_users))
+                  const bb = Math.abs(DUNBAR - Math.log(b.last_week_users))
 
-              return aa > bb ? 1 : (aa < bb ? -1 : 0);
-            }).map((server) => (
-              <ServerCard key={server.domain} server={server} />
-            ))}
+                  return aa > bb ? 1 : aa < bb ? -1 : 0
+                })
+                .map((server) => (
+                  <ServerCard key={server.domain} server={server} />
+                ))}
         </div>
       )}
     </div>
@@ -478,17 +528,19 @@ const ServerStats = ({ days }) => {
   return (
     <div>
       <h3 className="h5 mb-4">
-        <FormattedMessage
-          id="stats.network"
-          defaultMessage="Network health"
-        />
+        <FormattedMessage id="stats.network" defaultMessage="Network health" />
       </h3>
 
       <div className="space-y-4">
         <Statistic
           key="mau"
           icon="/ui/person.svg"
-          label={<FormattedMessage id="stats.monthly_active_users" defaultMessage="Monthly Active Users" />}
+          label={
+            <FormattedMessage
+              id="stats.monthly_active_users"
+              defaultMessage="Monthly Active Users"
+            />
+          }
           currentValue={parseInt(currentDay.active_user_count)}
           prevValue={parseInt(compareDay.active_user_count)}
         />
@@ -496,13 +548,30 @@ const ServerStats = ({ days }) => {
         <Statistic
           key="servers"
           icon="/ui/filters.svg"
-          label={<FormattedMessage id="stats.servers" defaultMessage="Servers Up" />}
+          label={
+            <FormattedMessage id="stats.servers" defaultMessage="Servers Up" />
+          }
           currentValue={parseInt(currentDay.server_count)}
           prevValue={parseInt(compareDay.server_count)}
         />
       </div>
 
-      <p className="b3 mt-4 text-gray-2"><FormattedMessage id="stats.disclaimer" defaultMessage="Data collected by crawling all accessible Mastodon servers on {date}." values={{ date: <FormattedDate value={currentDay.period} year="numeric" month="short" day="2-digit" /> }} /></p>
+      <p className="b3 mt-4 text-gray-2">
+        <FormattedMessage
+          id="stats.disclaimer"
+          defaultMessage="Data collected by crawling all accessible Mastodon servers on {date}."
+          values={{
+            date: (
+              <FormattedDate
+                value={currentDay.period}
+                year="numeric"
+                month="short"
+                day="2-digit"
+              />
+            ),
+          }}
+        />
+      </p>
     </div>
   )
 }
@@ -530,9 +599,14 @@ const ServerFilters = ({
         />
       </h3>
 
-      <p className="b3 mb-4 text-gray-2"><FormattedMessage id="server.filter_by.region.lead" defaultMessage="Where the provider is legally based." /></p>
+      <p className="b3 mb-4 text-gray-2">
+        <FormattedMessage
+          id="server.filter_by.region.lead"
+          defaultMessage="Where the provider is legally based."
+        />
+      </p>
 
-      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3 mb-8">
+      <ul className="mb-8 grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:-ml-3 md:grid-cols-1 md:gap-x-3">
         {regions?.map((item, i) => {
           const isActive = filters.region === item.value
 
@@ -569,50 +643,61 @@ const ServerFilters = ({
         />
       </h3>
 
-      <p className="b3 mb-4 text-gray-2"><FormattedMessage id="server.filter_by.category.lead" defaultMessage="Some providers specialize in hosting accounts from specific communities." /></p>
+      <p className="b3 mb-4 text-gray-2">
+        <FormattedMessage
+          id="server.filter_by.category.lead"
+          defaultMessage="Some providers specialize in hosting accounts from specific communities."
+        />
+      </p>
 
-      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:gap-x-3 md:grid-cols-1 md:-ml-3">
+      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:-ml-3 md:grid-cols-1 md:gap-x-3">
         {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (
-            <li className="h-8 p-3" key={i}>
-              <SkeletonText className="!h-full" />
-            </li>
-          ))
-          : categories?.map((item, i) => {
-            const isActive = filters.category === item.category
-
-            return (
-              <li key={i}>
-                <label
-                  className={classnames(
-                    "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
-                    isActive && "bg-nightshade-50 !font-extrabold",
-                    item.servers_count === 0 && "text-gray-2"
-                  )}
-                >
-                  <input
-                    className="sr-only"
-                    type="checkbox"
-                    name="filters-category"
-                    onChange={() => {
-                      setFilters({
-                        ...filters,
-                        category: isActive ? "" : item.category,
-                      })
-                    }}
-                  />
-                  {item.category === ""
-                    ? intl.formatMessage({
-                      id: "wizard.filter.all_categories",
-                      defaultMessage: "All topics",
-                    })
-                    : intl.formatMessage(categoriesMessages[item.category])}
-
-                  <span className={isActive ? "text-nightshade-100" : "text-gray-2"}>({item.servers_count})</span>
-                </label>
+              <li className="h-8 p-3" key={i}>
+                <SkeletonText className="!h-full" />
               </li>
-            )
-          })}
+            ))
+          : categories?.map((item, i) => {
+              const isActive = filters.category === item.category
+
+              return (
+                <li key={i}>
+                  <label
+                    className={classnames(
+                      "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
+                      isActive && "bg-nightshade-50 !font-extrabold",
+                      item.servers_count === 0 && "text-gray-2"
+                    )}
+                  >
+                    <input
+                      className="sr-only"
+                      type="checkbox"
+                      name="filters-category"
+                      onChange={() => {
+                        setFilters({
+                          ...filters,
+                          category: isActive ? "" : item.category,
+                        })
+                      }}
+                    />
+                    {item.category === ""
+                      ? intl.formatMessage({
+                          id: "wizard.filter.all_categories",
+                          defaultMessage: "All topics",
+                        })
+                      : intl.formatMessage(categoriesMessages[item.category])}
+
+                    <span
+                      className={
+                        isActive ? "text-nightshade-100" : "text-gray-2"
+                      }
+                    >
+                      ({item.servers_count})
+                    </span>
+                  </label>
+                </li>
+              )
+            })}
       </ul>
     </div>
   )
