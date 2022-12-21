@@ -140,7 +140,7 @@ function Guide(props) {
                 className="relative flex flex-col items-baseline gap-4"
               >
                 <Image
-                  src={`/icons/${name}.svg`}
+                  src={require(`../public/icons/${name}.svg`)}
                   className="aspect-square"
                   width="120"
                   height="120"
