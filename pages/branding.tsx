@@ -6,13 +6,16 @@ import classNames from "classnames"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
 import Image from "next/image"
-import SVG from "react-inlinesvg"
 
 import screenshotComposeLight from "../public/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png"
 import screenshotHomeLight from "../public/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png"
 import screenshotProfileLight from "../public/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png"
 import screenshotServerRulesLight from "../public/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png"
 import screenshotThreadLight from "../public/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png"
+
+import CheckIcon from "../public/icons/check.svg?inline"
+import LogoPurple from "../public/logos/logo-purple.svg?inline"
+import WordmarkWhiteText from "../public/logos/wordmark-white-text.svg?inline"
 
 const BrandSection = ({
   title,
@@ -25,7 +28,7 @@ const BrandSection = ({
   ctas?: React.ReactNode
   preview: React.ReactNode
 }) => (
-  <section className="text-center col-span-12 md:col-start-3 md:col-end-11 grid gap-16">
+  <section className="col-span-12 grid gap-16 text-center md:col-start-3 md:col-end-11">
     <div className="full-width-bg">
       <div className="full-width-bg__inner flex flex-col items-center justify-center pt-20">
         <h2 className="h3 max-w-[17ch]">{title}</h2>
@@ -39,27 +42,36 @@ const BrandSection = ({
   </section>
 )
 
-const Logo = ({ label, src, className }: { label: string, src: string, className?: string }) => (
+const Logo = ({
+  label,
+  src,
+  className,
+}: {
+  label: string
+  src: string
+  className?: string
+}) => (
   <div className="flex items-center justify-center rounded-md">
     <a
       download
       title={label}
       href={src}
-      className={classNames("flex items-center w-full h-full rounded-md justify-center transition-colors", className)}
+      className={classNames(
+        "flex h-full w-full items-center justify-center rounded-md transition-colors",
+        className
+      )}
     >
-      <img
-        src={src}
-        alt=""
-        className="h-16 w-auto md:h-18 lg:h-20"
-      />
+      <div className="md:h-18 relative h-16 w-full lg:h-20">
+        <Image src={src} alt="" layout="fill" />
+      </div>
     </a>
   </div>
 )
 
 const UsageRule = ({ text }: { text: string }) => {
   return (
-    <div className="flex items-center text-left gap-6">
-      <SVG className="shrink-0" src="/icons/check.svg" />
+    <div className="flex items-center gap-6 text-left">
+      <CheckIcon className="shrink-0" />
       <p>{text}</p>
     </div>
   )
@@ -70,9 +82,10 @@ const Branding = () => (
   <Layout>
     <div dir="ltr" className="[unicode-bidi:plaintext]">
       <Hero desktopImage={heroImage} mobileImage={heroImage}>
-        <h1 className="h1 pt-16 mb-8">Brand Toolkit</h1>
+        <h1 className="h1 mb-8 pt-16">Brand Toolkit</h1>
         <p className="sh1">
-          Learn our branding guidelines, download our logos and icons, or use our brand colors for&nbsp;your&nbsp;projects.
+          Learn our branding guidelines, download our logos and icons, or use
+          our brand colors for&nbsp;your&nbsp;projects.
         </p>
       </Hero>
       <div className="grid grid-cols-12 gap-gutter">
@@ -111,12 +124,14 @@ const Branding = () => (
 
               {[
                 {
-                  label: "Download the SVG wordmark with a white logo and black text",
+                  label:
+                    "Download the SVG wordmark with a white logo and black text",
                   src: "/logos/logo-full-black.svg",
                   styles: "bg-blurple-500 hocus:bg-blurple-600 p-16",
                 },
                 {
-                  label: "Download the SVG wordmark with a black logo and white text",
+                  label:
+                    "Download the SVG wordmark with a black logo and white text",
                   src: "/logos/logo-full-white.svg",
                   styles: "bg-blurple-500 hocus:bg-blurple-600 p-16",
                 },
@@ -136,10 +151,15 @@ const Branding = () => (
 
         <BrandSection
           title="Mark only"
-          copy={<p>Use these only when the Mastodon brand has been clearly established in the design.</p>}
+          copy={
+            <p>
+              Use these only when the Mastodon brand has been clearly
+              established in the design.
+            </p>
+          }
           preview={
             <>
-              <div className="grid grid-cols-3 gap-gutter lg:gap-24 md:px-8">
+              <div className="grid grid-cols-3 gap-gutter md:px-8 lg:gap-24">
                 {[
                   {
                     label: "Download the purple SVG logo",
@@ -156,7 +176,6 @@ const Branding = () => (
                     src: "/logos/logo-white.svg",
                     styles: "bg-black hocus:bg-gray-0 p-4 aspect-square",
                   },
-
                 ].map((image) => (
                   <Logo
                     key={image.src}
@@ -174,30 +193,34 @@ const Branding = () => (
 
         <BrandSection
           title="Clear space"
-          copy={<p>When using our logo, please ensure that you give it room to breathe! At least 36px on all sides please.</p>}
+          copy={
+            <p>
+              When using our logo, please ensure that you give it room to
+              breathe! At least 36px on all sides please.
+            </p>
+          }
           preview={
-            <div className="flex flex-col items-center justify-center sm:flex-row gap-4 md:gap-32">
-              {["/logos/logo-purple.svg", "/logos/wordmark-white-text.svg"].map(
-                (src) => (
-                  <div
-                    className="relative rounded bg-eggplant p-[36px] text-blurple-600 shadow-[currentColor_0_0_0_1px_inset]"
-                    key={src}
-                  >
-                    {/* everything except for the image is a guide mark */}
-                    <div className="absolute top-0 left-0 h-[36px] w-[36px] rounded-full border" />
-                    <div className="absolute top-0 right-0 h-[36px] w-[36px] rounded-full border" />
-                    <div className="absolute bottom-0 left-0 h-[36px] w-[36px] rounded-full border" />
-                    <div className="absolute bottom-0 right-0 h-[36px] w-[36px] rounded-full border" />
-                    <div className="absolute top-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                    <div className="absolute top-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                    <div className="absolute bottom-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                    <div className="absolute bottom-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                    <div className="absolute border-x inset-block-0 inset-inline-[35px]" />
-                    <div className="absolute border-y inset-inline-0 inset-block-[35px]" />
-                    <img src={src} alt="" className="w-auto" />
-                  </div>
-                )
-              )}
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-32">
+              {[LogoPurple, WordmarkWhiteText].map((Svg, i) => (
+                <div
+                  className="relative rounded bg-eggplant p-[36px] text-blurple-600 shadow-[currentColor_0_0_0_1px_inset]"
+                  key={i}
+                >
+                  {/* everything except for the image is a guide mark */}
+                  <div className="absolute top-0 left-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute top-0 right-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute bottom-0 left-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute bottom-0 right-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute top-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute top-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute bottom-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute bottom-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute border-x inset-block-0 inset-inline-[35px]" />
+                  <div className="absolute border-y inset-inline-0 inset-block-[35px]" />
+
+                  <Svg />
+                </div>
+              ))}
             </div>
           }
         />
@@ -213,7 +236,9 @@ const Branding = () => (
                       style={{ backgroundColor: hex }}
                       className="h-20 rounded md:h-24"
                     >
-                      <div className="p-4 pt-14 text-white/60 font-black">{hex}</div>
+                      <div className="p-4 pt-14 font-black text-white/60">
+                        {hex}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -225,7 +250,9 @@ const Branding = () => (
                       style={{ backgroundColor: hex }}
                       className="h-20 rounded md:h-24"
                     >
-                      <div className="p-4 pt-14 text-white/60 font-black">{hex}</div>
+                      <div className="p-4 pt-14 font-black text-white/60">
+                        {hex}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -237,31 +264,46 @@ const Branding = () => (
           title="Product screenshots"
           copy="Need some screenshots? We've got you covered."
           preview={
-            <div className="flex gap-gutter mb-16">
+            <div className="mb-16 flex gap-gutter">
               {[
                 {
                   src: screenshotComposeLight,
-                  download: "/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png",
+                  download:
+                    "/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png",
                   title: "Compose, light mode, iPhone 13 Pro Max",
-                }, {
+                },
+                {
                   src: screenshotHomeLight,
-                  download: "/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png",
+                  download:
+                    "/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png",
                   title: "Home, light mode, iPhone 13 Pro Max",
-                }, {
+                },
+                {
                   src: screenshotProfileLight,
-                  download: "/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png",
+                  download:
+                    "/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png",
                   title: "Profile, light mode, iPhone 13 Pro Max",
-                }, {
+                },
+                {
                   src: screenshotServerRulesLight,
-                  download: "/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png",
+                  download:
+                    "/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png",
                   title: "Server rules, light mode, iPhone 13 Pro Max",
-                }, {
+                },
+                {
                   src: screenshotThreadLight,
-                  download: "/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png",
+                  download:
+                    "/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png",
                   title: "Thread, light mode, iPhone 13 Pro Max",
                 },
-              ].map(screenshot => (
-                <a key={screenshot.title} href={screenshot.download} title={screenshot.title} download className="block rounded overflow-hidden border border-gray-4 hocus:ring ring-blurple-500">
+              ].map((screenshot) => (
+                <a
+                  key={screenshot.title}
+                  href={screenshot.download}
+                  title={screenshot.title}
+                  download
+                  className="block overflow-hidden rounded border border-gray-4 ring-blurple-500 hocus:ring"
+                >
                   <Image src={screenshot.src} alt="" />
                 </a>
               ))}
@@ -272,10 +314,7 @@ const Branding = () => (
 
       <Head>
         <title>Brand Toolkit - Mastodon</title>
-        <meta
-          property="og:title"
-          content="Brand Toolkit for Mastodon"
-        />
+        <meta property="og:title" content="Brand Toolkit for Mastodon" />
         <meta
           property="og:description"
           content="Learn our branding guidelines, download our logos and icons, or use our brand colors for your projects."

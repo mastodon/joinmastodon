@@ -7,7 +7,7 @@ import { useState, useEffect, useRef, useId } from "react"
 import classNames from "classnames"
 import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
-import SVG from "react-inlinesvg"
+import DisclosureArrow from "../public/ui/disclosure-arrow.svg?inline"
 import { useRouter } from "next/router"
 
 type HeaderProps = {
@@ -16,9 +16,7 @@ type HeaderProps = {
 }
 
 /** Sitewide header and navigation */
-const Header = ({
-  transparent = true
-}: HeaderProps) => {
+const Header = ({ transparent = true }: HeaderProps) => {
   const intl = useIntl()
   const router = useRouter()
   const [pageScrolled, setPageScrolled] = useState(false)
@@ -114,7 +112,7 @@ const Header = ({
       <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
         <div>
           <Link href="/">
-            <a className="relative z-10 flex max-w-[11.375rem] md:max-w-[12.625rem] pt-[6%]">
+            <a className="relative z-10 flex max-w-[11.375rem] pt-[6%] md:max-w-[12.625rem]">
               <Image src={mastodonLogo} alt="Mastodon" />
             </a>
           </Link>
@@ -139,8 +137,7 @@ const Header = ({
                       className="flex items-center gap-[0.125rem] whitespace-nowrap rounded-md p-3 px-5 text-h5 focus:outline-2 md:text-b2 md:font-medium"
                     >
                       {item.label}
-                      <SVG
-                        src={"/ui/disclosure-arrow.svg"}
+                      <DisclosureArrow
                         className={classNames({
                           "rotate-180": openMenuIndex === itemIndex,
                         })}
@@ -149,13 +146,17 @@ const Header = ({
 
                     <div
                       className={classNames(
-                        "top-full rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:text-black md:shadow-lg md:bg-white",
-                        openMenuIndex === itemIndex
-                          ? "overflow-auto"
-                          : "hidden"
+                        "top-full rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-white md:text-black md:shadow-lg",
+                        openMenuIndex === itemIndex ? "overflow-auto" : "hidden"
                       )}
                     >
-                      <ul className={classNames(item.compact ? "py-2 md:px-2" : "md:grid py-2 md:px-3 md:py-4 w-screen max-w-md md:max-w-lg md:grid-cols-2 md:gap-6")}>
+                      <ul
+                        className={classNames(
+                          item.compact
+                            ? "py-2 md:px-2"
+                            : "w-screen max-w-md py-2 md:grid md:max-w-lg md:grid-cols-2 md:gap-6 md:px-3 md:py-4"
+                        )}
+                      >
                         {item.childItems.map((child, childIndex) => (
                           // Child Items
                           <li key={child.key || child.value}>
@@ -171,11 +172,20 @@ const Header = ({
                                   item.compact
                                     ? "py-2 px-5 md:px-4"
                                     : "py-3 px-5 md:px-4",
-                                  (item.compact && child.active) && "font-extrabold"
+                                  item.compact &&
+                                    child.active &&
+                                    "font-extrabold"
                                 )}
                                 aria-current={child.active ? "page" : undefined}
                               >
-                                <span className={classNames("block", !item.compact && "font-extrabold")}>{child.label}</span>
+                                <span
+                                  className={classNames(
+                                    "block",
+                                    !item.compact && "font-extrabold"
+                                  )}
+                                >
+                                  {child.label}
+                                </span>
                                 <span className="mt-1 block font-extranormal text-gray-1">
                                   {child.description}
                                 </span>
@@ -187,13 +197,22 @@ const Header = ({
 
                       {item.footer && (
                         <div className="md:bg-gray-4 md:p-4">
-                          <a href={item.footer.value} className="px-5 py-3 group rounded-md md:p-2 flex items-center justify-between">
+                          <a
+                            href={item.footer.value}
+                            className="group flex items-center justify-between rounded-md px-5 py-3 md:p-2"
+                          >
                             <span>
-                              <span className="font-extrabold">{item.footer.title}</span>
-                              <span className="block mt-1 font-extranormal text-gray-1">{item.footer.description}</span>
+                              <span className="font-extrabold">
+                                {item.footer.title}
+                              </span>
+                              <span className="mt-1 block font-extranormal text-gray-1">
+                                {item.footer.description}
+                              </span>
                             </span>
 
-                            <span className="hidden border-2 border-blurple-500 bg-blurple-500 text-white rounded-md b3 h-12 md:flex items-center justify-center p-4 !font-semibold transition-colors group-hover:bg-blurple-600 group-hover:border-blurple-600">{item.footer.label}</span>
+                            <span className="b3 hidden h-12 items-center justify-center rounded-md border-2 border-blurple-500 bg-blurple-500 p-4 !font-semibold text-white transition-colors group-hover:border-blurple-600 group-hover:bg-blurple-600 md:flex">
+                              {item.footer.label}
+                            </span>
                           </a>
                         </div>
                       )}
@@ -204,7 +223,7 @@ const Header = ({
                   <Link href={item.value}>
                     <a
                       className={classNames(
-                        "block whitespace-nowrap rounded-md p-3 px-5 text-h5 md:text-b2 font-medium",
+                        "block whitespace-nowrap rounded-md p-3 px-5 text-h5 font-medium md:text-b2",
                         item.active && "font-extrabold"
                       )}
                       aria-current={item.active ? "page" : undefined}

@@ -101,7 +101,7 @@ export const apps: appsList = {
       name: "tooot",
       icon: tooot,
       url: "https://apps.apple.com/us/app/tooot/id1549772269",
-    }
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
@@ -138,11 +138,11 @@ export const apps: appsList = {
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
     },
   ],
-    sailfish: [
-        {
-            name: "Tooter",
-            icon: tooter,
-            url: "https://openrepos.net/content/dysko/tooter",
-        },
-    ],
+  sailfish: [
+    {
+      name: "Tooter",
+      icon: tooter,
+      url: "https://openrepos.net/content/dysko/tooter",
+    },
+  ],
 }

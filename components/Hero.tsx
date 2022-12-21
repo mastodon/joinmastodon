@@ -53,9 +53,14 @@ const Hero = ({
       }
     >
       {homepage ? (
-        <div className={classNames("full-width-bg__inner flex flex-col items-center justify-center py-20 text-center", {
-          "drop-shadow-safe-text": safeTextShadow,
-        })}>
+        <div
+          className={classNames(
+            "full-width-bg__inner flex flex-col items-center justify-center py-20 text-center",
+            {
+              "drop-shadow-safe-text": safeTextShadow,
+            }
+          )}
+        >
           {children}
         </div>
       ) : (

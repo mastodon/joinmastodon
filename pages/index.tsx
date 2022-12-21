@@ -76,15 +76,36 @@ function Home() {
       <Sponsors sponsors={{ platinum, additionalFunding }} />
       <Head>
         <title>
-          Mastodon - {intl.formatMessage({
+          Mastodon -{" "}
+          {intl.formatMessage({
             id: "home.page_title",
             defaultMessage: "Decentralized social media",
           })}
         </title>
 
-        <meta property="og:title" content={`Mastodon - ${intl.formatMessage({ id: "home.page_title", defaultMessage: "Decentralized social media" })}`} />
-        <meta property="og:description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
-        <meta property="description" content={intl.formatMessage({ id: "home.page_description", defaultMessage: "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform." })} />
+        <meta
+          property="og:title"
+          content={`Mastodon - ${intl.formatMessage({
+            id: "home.page_title",
+            defaultMessage: "Decentralized social media",
+          })}`}
+        />
+        <meta
+          property="og:description"
+          content={intl.formatMessage({
+            id: "home.page_description",
+            defaultMessage:
+              "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform.",
+          })}
+        />
+        <meta
+          property="description"
+          content={intl.formatMessage({
+            id: "home.page_description",
+            defaultMessage:
+              "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform.",
+          })}
+        />
       </Head>
     </Layout>
   )
@@ -185,7 +206,10 @@ const Features = () => {
             />
           ),
           button: (
-            <LinkButton size="large" href="https://docs.joinmastodon.org/user/posting/">
+            <LinkButton
+              size="large"
+              href="https://docs.joinmastodon.org/user/posting/"
+            >
               <FormattedMessage
                 id="home.features.button.learn_more"
                 defaultMessage="Learn more"
@@ -193,7 +217,7 @@ const Features = () => {
             </LinkButton>
           ),
           image: illoCustomization,
-        }
+        },
       ].map((block, i) => {
         const isOdd = i % 2 != 0
         return (
@@ -486,11 +510,13 @@ const Sponsors = ({ sponsors }) => {
         />
       </h4>
 
-      <div className="lg:col-start-4 lg:col-end-10 mb-8 lg:mb-16">
+      <div className="mb-8 lg:col-start-4 lg:col-end-10 lg:mb-16">
         <SponsorLogoGroup sponsors={sponsors.additionalFunding} />
       </div>
 
-      <p className="lg:col-span-12 lg:mb-16 text-gray-2">Sponsorship does not equal influence. Mastodon is fully independent.</p>
+      <p className="text-gray-2 lg:col-span-12 lg:mb-16">
+        Sponsorship does not equal influence. Mastodon is fully independent.
+      </p>
     </section>
   )
 }

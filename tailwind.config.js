@@ -44,7 +44,7 @@ const config = {
     },
     colors: {
       black: "#000000",
-      "gray": {
+      gray: {
         0: "#333333",
         1: "#555555",
         2: "#9b9b9b",
@@ -122,7 +122,9 @@ module.exports = {
         arr.push(`bg-${k}`)
         return arr
       } else {
-        return arr.concat(Object.keys(config.theme.colors[k]).map(s => `bg-${k}-${s}`))
+        return arr.concat(
+          Object.keys(config.theme.colors[k]).map((s) => `bg-${k}-${s}`)
+        )
       }
     }, []),
   ],

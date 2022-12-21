@@ -12,15 +12,25 @@ const SponsorCard = ({ sponsor, tier }) => {
         tier === "silver" && "border border-gray-3 hover:bg-gray-4"
       )}
     >
-      {tier === "silver" &&
-        (
-          <div className="h-[56px] w-[56px] rounded-md bg-blurple-gradient overflow-hidden relative">
-            {sponsor.logo && <Image src={sponsor.logo} alt="" layout="fill" objectFit="cover" />}
-          </div>
-        )}
+      {tier === "silver" && (
+        <div className="relative h-[56px] w-[56px] overflow-hidden rounded-md bg-blurple-gradient">
+          {sponsor.logo && (
+            <Image src={sponsor.logo} alt="" layout="fill" objectFit="cover" />
+          )}
+        </div>
+      )}
 
-      <div className={classNames("truncate", tier !== "silver" ? "w-full" : null)}>
-        <span className={classNames("b3 !leading-[1.5]", tier === "generalHighlighted" ? "text-nightshade-100" : "text-gray-1")}>
+      <div
+        className={classNames("truncate", tier !== "silver" ? "w-full" : null)}
+      >
+        <span
+          className={classNames(
+            "b3 !leading-[1.5]",
+            tier === "generalHighlighted"
+              ? "text-nightshade-100"
+              : "text-gray-1"
+          )}
+        >
           {tier === "silver" ? (
             <FormattedMessage
               id="silver_sponsor"
@@ -31,7 +41,7 @@ const SponsorCard = ({ sponsor, tier }) => {
           )}
         </span>
 
-        <p className="b2 !font-semibold truncate">{sponsor.name || sponsor}</p>
+        <p className="b2 truncate !font-semibold">{sponsor.name || sponsor}</p>
       </div>
     </div>
   )

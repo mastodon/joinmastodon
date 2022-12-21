@@ -22,7 +22,7 @@ const team: TeamMember[] = [
     name: "Claire",
     position: "Developer",
     socials: {
-      mastodon: "https://social.sitedethib.com/@Claire"
+      mastodon: "https://social.sitedethib.com/@Claire",
     },
   },
 

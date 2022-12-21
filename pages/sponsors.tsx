@@ -9,6 +9,9 @@ import sponsors from "../data/sponsors"
 import sponsorData from "../data/sponsors"
 import Layout from "../components/Layout"
 
+import DonateIcon from "../public/icons/donate.svg?inline"
+import DonateBoxIcon from "../public/icons/donate-box.svg?inline"
+
 function Sponsors() {
   const intl = useIntl()
   return (
@@ -29,7 +32,7 @@ function Sponsors() {
         padding="md:!pt-16"
         features={[
           {
-            icon: "/icons/donate.svg",
+            Icon: DonateIcon,
             title: (
               <FormattedMessage
                 id="sponsors.sponsorship.title"
@@ -51,7 +54,7 @@ function Sponsors() {
             cta_link: "https://sponsor.joinmastodon.org/",
           },
           {
-            icon: "/icons/donate-box.svg",
+            Icon: DonateBoxIcon,
             title: (
               <FormattedMessage
                 id="sponsors.patreon.title"
@@ -95,7 +98,11 @@ function Sponsors() {
           {sponsorData.silver.map((sponsor, i) => {
             if (sponsor.url) {
               return (
-                <a key={i} href={sponsor.url} rel={sponsor.nofollow ? "nofollow" : undefined}>
+                <a
+                  key={i}
+                  href={sponsor.url}
+                  rel={sponsor.nofollow ? "nofollow" : undefined}
+                >
                   <SponsorCard sponsor={sponsor} tier="silver" />
                 </a>
               )
@@ -123,14 +130,20 @@ function Sponsors() {
               />
             )
           })}
-          {sponsors.general.map((sponsor) => {
+          {sponsors.general.map((sponsor, i) => {
             return (
-              <SponsorCard key={sponsor} sponsor={sponsor} tier="general" />
+              <SponsorCard
+                key={`sponsor-${i}`}
+                sponsor={sponsor}
+                tier="general"
+              />
             )
           })}
         </div>
 
-        <p className="mt-8 lg:mt-16 text-gray-2">Sponsorship does not equal influence. Mastodon is fully independent.</p>
+        <p className="mt-8 text-gray-2 lg:mt-16">
+          Sponsorship does not equal influence. Mastodon is fully independent.
+        </p>
       </section>
       <Head>
         <title>

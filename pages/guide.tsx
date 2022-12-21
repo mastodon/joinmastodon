@@ -1,12 +1,12 @@
 import app_hero_planets from "../public/illustrations/app_hero_planets.png"
 import app_hero_festival from "../public/illustrations/app_hero_festival.png"
-import SVG from "react-inlinesvg"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import { FormattedMessage, useIntl } from "react-intl"
 import AppHero from "../components/AppHero"
 import React, { useState } from "react"
+import Image from "next/image"
 import Hero from "../components/Hero"
 import LinkButton from "../components/LinkButton"
 import { theme, safelist } from "../tailwind.config.js"
@@ -18,6 +18,9 @@ import SkeletonText from "../components/SkeletonText"
 import ServerCard from "../components/ServerCard"
 import classNames from "classnames"
 import TwoUpFeature from "../components/TwoUpFeature"
+
+import ProgressiveWebIcon from "../public/icons/progressive-web.svg?inline"
+import ApiGearIcon from "../public/icons/api-gear.svg?inline"
 
 const GuideSection = ({
   title,
@@ -70,23 +73,35 @@ function Guide(props) {
         </GuideSection>
         <GuideSection title="Colors">
           <div className="grid grid-cols-1 gap-8">
-            {Object.keys(theme.colors).map(color => (
+            {Object.keys(theme.colors).map((color) => (
               <div key={color}>
                 <div className="flex space-x-4">
                   <div className="w-24 shrink-0">
-                    <div className="h-10 flex flex-col justify-center">
+                    <div className="flex h-10 flex-col justify-center">
                       <div className="font-semibold">{color}</div>
                     </div>
                   </div>
 
-                  <div className="min-w-0 flex-0 grid grid-cols-6 gap-x-4 gap-y-3">
-                    {(typeof theme.colors[color] === "string" ? [""] : Object.keys(theme.colors[color])).map(stage => (
+                  <div className="flex-0 grid min-w-0 grid-cols-6 gap-x-4 gap-y-3">
+                    {(typeof theme.colors[color] === "string"
+                      ? [""]
+                      : Object.keys(theme.colors[color])
+                    ).map((stage) => (
                       <div key={stage} className="relative flex">
                         <div className="space-y-1.5">
-                          <div className={`h-10 w-full rounded bg-${color}${stage === "" ? "" : `-${stage}`} border-2 border-solid border-[rgba(0,0,0,0.1)] bg-clip-border`} />
+                          <div
+                            className={`h-10 w-full rounded bg-${color}${
+                              stage === "" ? "" : `-${stage}`
+                            } border-2 border-solid border-[rgba(0,0,0,0.1)] bg-clip-border`}
+                          />
                           <div className="px-0.5">
-                            <div className="w-20 font-medium">{stage || "-"}</div>
-                            <div className="text-gray-2 font-mono lowercase">{theme.colors[color][stage] || theme.colors[color]}</div>
+                            <div className="w-20 font-medium">
+                              {stage || "-"}
+                            </div>
+                            <div className="font-mono lowercase text-gray-2">
+                              {theme.colors[color][stage] ||
+                                theme.colors[color]}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -120,8 +135,17 @@ function Guide(props) {
               `screen`,
               `servers`,
             ].map((name) => (
-              <figure key={name} className="flex flex-col items-baseline gap-4">
-                <SVG src={`/icons/${name}.svg`} />
+              <figure
+                key={name}
+                className="relative flex flex-col items-baseline gap-4"
+              >
+                <Image
+                  src={`/icons/${name}.svg`}
+                  className="aspect-square"
+                  width="120"
+                  height="120"
+                  alt=""
+                />
                 <figcaption className="b2">{name}</figcaption>
               </figure>
             ))}
@@ -236,7 +260,7 @@ function Guide(props) {
           <TwoUpFeature
             features={[
               {
-                icon: "/icons/progressive-web.svg",
+                Icon: ProgressiveWebIcon,
                 title: (
                   <FormattedMessage
                     id="browse_apps.progressive_web_app"
@@ -258,7 +282,7 @@ function Guide(props) {
                 cta_link: "/servers",
               },
               {
-                icon: "/icons/api-gear.svg",
+                Icon: ApiGearIcon,
                 title: (
                   <FormattedMessage
                     id="browse_apps.open_api"

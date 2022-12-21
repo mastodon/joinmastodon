@@ -1,5 +1,4 @@
 import Image from "next/image"
-import SVG from "react-inlinesvg"
 import { FormattedMessage, useIntl } from "react-intl"
 
 import LinkButton from "./LinkButton"
@@ -15,7 +14,7 @@ import SkeletonText from "./SkeletonText"
 const ServerCard = ({ server }: { server?: Server }) => {
   const intl = useIntl()
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] rounded-md p-4 border border-gray-3">
+    <div className="grid grid-rows-[auto_1fr_auto] rounded-md border border-gray-3 p-4">
       <div className="relative h-26 lg:h-40">
         {server ? (
           <Image
@@ -42,7 +41,10 @@ const ServerCard = ({ server }: { server?: Server }) => {
               </span>
               {server?.approval_required && (
                 <span className="before:px-1 before:content-['·']">
-                  <FormattedMessage id="servers.approval_required" defaultMessage="Sign-ups reviewed manually" />
+                  <FormattedMessage
+                    id="servers.approval_required"
+                    defaultMessage="Sign-ups reviewed manually"
+                  />
                 </span>
               )}
             </>
@@ -50,7 +52,7 @@ const ServerCard = ({ server }: { server?: Server }) => {
             <SkeletonText className="w-[16ch]" />
           )}
         </p>
-        <p className="b1 mb-2 !font-700">
+        <p className="b1 !font-700 mb-2">
           {server ? server.domain : <SkeletonText className="w-[14ch]" />}
         </p>
         <p className="b3 line-clamp-5 [unicode-bidi:plaintext]">

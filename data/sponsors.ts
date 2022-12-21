@@ -187,7 +187,7 @@ const sponsors = {
     {
       url: "https://allbursaries.co.za/",
       logo: require("../public/sponsors/AMP All Bursaries South Africa.png"),
-      name: "AllBursaries"
+      name: "AllBursaries",
     }, // Custom
     {
       url: "https://theoatmeal.com/",
@@ -208,7 +208,7 @@ const sponsors = {
       url: "https://intellifluence.com/",
       logo: require("../public/sponsors/intellifluence logos.png"),
       name: "Intellifluence supports all influencers",
-    }
+    },
   ],
   gold: [
     {
@@ -294,7 +294,7 @@ const sponsors = {
     {
       url: "https://home.social/@ralf",
       logo: require("../public/sponsors/Rottmann_Ventures.png"),
-      name: "Rottmann Ventures GmbH"
+      name: "Rottmann Ventures GmbH",
     }, // Custom
     {
       url: "https://customcomet.com/",
