@@ -2,7 +2,6 @@ import { useQuery, useQueryClient } from "@tanstack/react-query"
 import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/router"
 import { FormattedMessage, FormattedDate, useIntl } from "react-intl"
-import SVG from "react-inlinesvg"
 import classnames from "classnames"
 import { orderBy as _orderBy } from "lodash"
 import ServerCard from "../components/ServerCard"
@@ -17,6 +16,8 @@ import { formatNumber } from "../utils/numbers"
 
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
+import PersonIcon from "../public/ui/person.svg?inline"
+import FiltersIcon from "../public/ui/filters.svg?inline"
 import SkeletonText from "../components/SkeletonText"
 import Head from "next/head"
 import Layout from "../components/Layout"
@@ -534,7 +535,7 @@ const ServerStats = ({ days }) => {
       <div className="space-y-4">
         <Statistic
           key="mau"
-          icon="/ui/person.svg"
+          Icon={PersonIcon}
           label={
             <FormattedMessage
               id="stats.monthly_active_users"
@@ -547,7 +548,7 @@ const ServerStats = ({ days }) => {
 
         <Statistic
           key="servers"
-          icon="/ui/filters.svg"
+          Icon={FiltersIcon}
           label={
             <FormattedMessage id="stats.servers" defaultMessage="Servers Up" />
           }

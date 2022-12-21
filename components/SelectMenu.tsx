@@ -1,6 +1,6 @@
-import SVG from "react-inlinesvg"
 import { Listbox } from "@headlessui/react"
 import classNames from "classnames"
+import DisclosureArrow from "../public/ui/disclosure-arrow.svg?inline"
 
 export type SelectMenuProps = {
   /** The label shown before the dropdown */
@@ -35,10 +35,9 @@ export const SelectMenu = ({
             </span>
 
             <span className="pointer-events-none absolute inline-end-3 block-start-5">
-              <SVG
+              <DisclosureArrow
                 className="h-4 w-4 text-gray-2"
                 fill="currentColor"
-                src="/ui/disclosure-arrow.svg"
               />
             </span>
           </Listbox.Button>

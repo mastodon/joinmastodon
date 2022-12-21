@@ -7,7 +7,6 @@ import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
 import Image from "next/image"
 import { FormattedDate, FormattedMessage } from "react-intl"
-import SVG from "react-inlinesvg"
 import Link from "next/link"
 import { useQuery } from "@tanstack/react-query"
 import Statistic from "../components/Statistic"
@@ -15,6 +14,10 @@ import { Day } from "../types/api"
 import team from "../data/team"
 import interviews from "../data/interviews"
 import press from "../data/press"
+
+import PersonIcon from "../public/ui/person.svg?inline"
+import FiltersIcon from "../public/ui/filters.svg?inline"
+import LogoWhite from "../public/logos/logo-white.svg?inline"
 
 const About = () => (
   <Layout>
@@ -75,6 +78,7 @@ const About = () => (
                           layout="fill"
                           objectFit="cover"
                           objectPosition="0% 28%"
+                          alt=""
                         />
                       )}
                     </div>
@@ -88,13 +92,9 @@ const About = () => (
                       <div className="mt-2 flex">
                         <a
                           href={member.socials.mastodon}
-                          className="b2 block text-gray-2 hover:text-blurple-500"
+                          className="b2 relative block text-gray-2 hover:text-blurple-500"
                         >
-                          <SVG
-                            src="/logos/logo-white.svg"
-                            className="h-4 w-4"
-                            fill="currentColor"
-                          />
+                          <LogoWhite className="h-4 w-4" fill="currentColor" />
                         </a>
                       </div>
                     )}
@@ -361,7 +361,7 @@ const Metrics = () => {
       <div className="space-y-4">
         <Statistic
           key="mau"
-          icon="/ui/person.svg"
+          Icon={PersonIcon}
           label={
             <FormattedMessage
               id="stats.monthly_active_users"
@@ -374,7 +374,7 @@ const Metrics = () => {
 
         <Statistic
           key="servers"
-          icon="/ui/filters.svg"
+          Icon={FiltersIcon}
           label={
             <FormattedMessage id="stats.servers" defaultMessage="Servers Up" />
           }

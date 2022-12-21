@@ -1,5 +1,4 @@
-import classnames from "classnames"
-import SVG from "react-inlinesvg"
+import Image from "next/image"
 
 export type IconCardProps = {
   /** Card's heading */
@@ -21,8 +20,8 @@ export const IconCard = ({ title, icon, copy, className }: IconCardProps) => {
       className={`flex flex-col items-center justify-start overflow-hidden rounded bg-white text-center ${className}`}
     >
       <div className="flex h-44 w-full items-center justify-center text-blurple-500">
-        <div className="h-[7.5rem] w-[7.5rem]">
-          <SVG src={`/icons/${icon}.svg`} />
+        <div className="relative h-[7.5rem] w-[7.5rem]">
+          <Image src={`/icons/${icon}.svg`} layout="fill" alt="" />
         </div>
       </div>
       <div className="flex flex-col gap-2 p-8 pt-0">

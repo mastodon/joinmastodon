@@ -18,6 +18,9 @@ import appsHeroMobile from "../public/illustrations/apps_hero_mobile.png"
 import ios_android_apps from "../public/illustrations/ios_android_apps.png"
 import Layout from "../components/Layout"
 
+import ProgressiveWebIcon from "../public/icons/progressive-web.svg?inline"
+import ApiGearIcon from "../public/icons/api-gear.svg?inline"
+
 const AppsPage = () => {
   const intl = useIntl()
   return (
@@ -82,7 +85,7 @@ const AppsPage = () => {
       <TwoUpFeature
         features={[
           {
-            icon: "/icons/progressive-web.svg",
+            Icon: ProgressiveWebIcon,
             title: (
               <FormattedMessage
                 id="browse_apps.progressive_web_app"
@@ -104,7 +107,7 @@ const AppsPage = () => {
             cta_link: "/servers",
           },
           {
-            icon: "/icons/api-gear.svg",
+            Icon: ApiGearIcon,
             title: (
               <FormattedMessage
                 id="browse_apps.open_api"

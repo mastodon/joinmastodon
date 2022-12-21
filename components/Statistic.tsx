@@ -1,27 +1,20 @@
-import Image from "next/image"
-import SVG from "react-inlinesvg"
 import { useIntl } from "react-intl"
 import { formatNumber, percIncrease } from "../utils/numbers"
 import SkeletonText from "./SkeletonText"
 
-const Statistic = ({
-  icon,
-  label,
-  currentValue,
-  prevValue,
-}: {
-  icon?: string
+const Statistic: React.FC<{
+  Icon?: (props: React.SVGProps<SVGElement>) => React.ReactElement
   label?: any
   currentValue?: number
   prevValue?: number
-}) => {
+}> = ({ Icon, label, currentValue, prevValue }) => {
   const intl = useIntl()
   const change = currentValue ? percIncrease(prevValue, currentValue) : 0
 
   return (
     <div className="flex items-center">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-blurple-500 text-white">
-        {icon && <SVG src={icon} className="h-5 w-5" />}
+      <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-blurple-500 text-white">
+        {Icon && <Icon className="h-5 w-5" />}
       </div>
 
       <div className="grow px-3">

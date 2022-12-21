@@ -6,13 +6,16 @@ import classNames from "classnames"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
 import Image from "next/image"
-import SVG from "react-inlinesvg"
 
 import screenshotComposeLight from "../public/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png"
 import screenshotHomeLight from "../public/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png"
 import screenshotProfileLight from "../public/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png"
 import screenshotServerRulesLight from "../public/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png"
 import screenshotThreadLight from "../public/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png"
+
+import CheckIcon from "../public/icons/check.svg?inline"
+import LogoPurple from "../public/logos/logo-purple.svg?inline"
+import WordmarkWhiteText from "../public/logos/wordmark-white-text.svg?inline"
 
 const BrandSection = ({
   title,
@@ -58,7 +61,9 @@ const Logo = ({
         className
       )}
     >
-      <img src={src} alt="" className="md:h-18 h-16 w-auto lg:h-20" />
+      <div className="md:h-18 relative h-16 w-full lg:h-20">
+        <Image src={src} alt="" layout="fill" />
+      </div>
     </a>
   </div>
 )
@@ -66,7 +71,7 @@ const Logo = ({
 const UsageRule = ({ text }: { text: string }) => {
   return (
     <div className="flex items-center gap-6 text-left">
-      <SVG className="shrink-0" src="/icons/check.svg" />
+      <CheckIcon className="shrink-0" />
       <p>{text}</p>
     </div>
   )
@@ -196,27 +201,26 @@ const Branding = () => (
           }
           preview={
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-32">
-              {["/logos/logo-purple.svg", "/logos/wordmark-white-text.svg"].map(
-                (src) => (
-                  <div
-                    className="relative rounded bg-eggplant p-[36px] text-blurple-600 shadow-[currentColor_0_0_0_1px_inset]"
-                    key={src}
-                  >
-                    {/* everything except for the image is a guide mark */}
-                    <div className="absolute top-0 left-0 h-[36px] w-[36px] rounded-full border" />
-                    <div className="absolute top-0 right-0 h-[36px] w-[36px] rounded-full border" />
-                    <div className="absolute bottom-0 left-0 h-[36px] w-[36px] rounded-full border" />
-                    <div className="absolute bottom-0 right-0 h-[36px] w-[36px] rounded-full border" />
-                    <div className="absolute top-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                    <div className="absolute top-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                    <div className="absolute bottom-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                    <div className="absolute bottom-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
-                    <div className="absolute border-x inset-block-0 inset-inline-[35px]" />
-                    <div className="absolute border-y inset-inline-0 inset-block-[35px]" />
-                    <img src={src} alt="" className="w-auto" />
-                  </div>
-                )
-              )}
+              {[LogoPurple, WordmarkWhiteText].map((Svg, i) => (
+                <div
+                  className="relative rounded bg-eggplant p-[36px] text-blurple-600 shadow-[currentColor_0_0_0_1px_inset]"
+                  key={i}
+                >
+                  {/* everything except for the image is a guide mark */}
+                  <div className="absolute top-0 left-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute top-0 right-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute bottom-0 left-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute bottom-0 right-0 h-[36px] w-[36px] rounded-full border" />
+                  <div className="absolute top-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute top-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute bottom-0 left-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute bottom-0 right-0 m-[9px] h-[18px] w-[18px] rounded-full border" />
+                  <div className="absolute border-x inset-block-0 inset-inline-[35px]" />
+                  <div className="absolute border-y inset-inline-0 inset-block-[35px]" />
+
+                  <Svg />
+                </div>
+              ))}
             </div>
           }
         />

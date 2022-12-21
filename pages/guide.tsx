@@ -1,12 +1,12 @@
 import app_hero_planets from "../public/illustrations/app_hero_planets.png"
 import app_hero_festival from "../public/illustrations/app_hero_festival.png"
-import SVG from "react-inlinesvg"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import { FormattedMessage, useIntl } from "react-intl"
 import AppHero from "../components/AppHero"
 import React, { useState } from "react"
+import Image from "next/image"
 import Hero from "../components/Hero"
 import LinkButton from "../components/LinkButton"
 import { theme, safelist } from "../tailwind.config.js"
@@ -18,6 +18,9 @@ import SkeletonText from "../components/SkeletonText"
 import ServerCard from "../components/ServerCard"
 import classNames from "classnames"
 import TwoUpFeature from "../components/TwoUpFeature"
+
+import ProgressiveWebIcon from "../public/icons/progressive-web.svg?inline"
+import ApiGearIcon from "../public/icons/api-gear.svg?inline"
 
 const GuideSection = ({
   title,
@@ -132,8 +135,17 @@ function Guide(props) {
               `screen`,
               `servers`,
             ].map((name) => (
-              <figure key={name} className="flex flex-col items-baseline gap-4">
-                <SVG src={`/icons/${name}.svg`} />
+              <figure
+                key={name}
+                className="relative flex flex-col items-baseline gap-4"
+              >
+                <Image
+                  src={`/icons/${name}.svg`}
+                  className="aspect-square"
+                  width="120"
+                  height="120"
+                  alt=""
+                />
                 <figcaption className="b2">{name}</figcaption>
               </figure>
             ))}
@@ -248,7 +260,7 @@ function Guide(props) {
           <TwoUpFeature
             features={[
               {
-                icon: "/icons/progressive-web.svg",
+                Icon: ProgressiveWebIcon,
                 title: (
                   <FormattedMessage
                     id="browse_apps.progressive_web_app"
@@ -270,7 +282,7 @@ function Guide(props) {
                 cta_link: "/servers",
               },
               {
-                icon: "/icons/api-gear.svg",
+                Icon: ApiGearIcon,
                 title: (
                   <FormattedMessage
                     id="browse_apps.open_api"

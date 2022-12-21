@@ -1,5 +1,4 @@
 import Image from "next/image"
-import SVG from "react-inlinesvg"
 import { FormattedMessage, useIntl } from "react-intl"
 
 import LinkButton from "./LinkButton"

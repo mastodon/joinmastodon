@@ -1,6 +1,4 @@
-import classnames from "classnames"
 import Image from "next/image"
-import SVG from "react-inlinesvg"
 import { FormattedMessage } from "react-intl"
 
 export type AppCardProps = {

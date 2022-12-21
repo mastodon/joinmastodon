@@ -7,7 +7,7 @@ import { useState, useEffect, useRef, useId } from "react"
 import classNames from "classnames"
 import { locales } from "../data/locales"
 import MenuToggle from "./MenuToggle"
-import SVG from "react-inlinesvg"
+import DisclosureArrow from "../public/ui/disclosure-arrow.svg?inline"
 import { useRouter } from "next/router"
 
 type HeaderProps = {
@@ -137,8 +137,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
                       className="flex items-center gap-[0.125rem] whitespace-nowrap rounded-md p-3 px-5 text-h5 focus:outline-2 md:text-b2 md:font-medium"
                     >
                       {item.label}
-                      <SVG
-                        src={"/ui/disclosure-arrow.svg"}
+                      <DisclosureArrow
                         className={classNames({
                           "rotate-180": openMenuIndex === itemIndex,
                         })}

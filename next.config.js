@@ -35,6 +35,26 @@ const nextConfig = {
       },
     ]
   },
+  webpack(config, { isServer, isdev }) {
+    // custom rule for SVGr
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      resourceQuery: /inline/, // Only for *.svg?inline
+      use: ["@svgr/webpack"],
+    })
+
+    // we need to add this, as the previous rule disabled the default SVG loader
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      resourceQuery: { not: [/inline/] },
+      loader: "next-image-loader",
+      options: { assetPrefix: "", basePath: "", isServer, isDev: isdev },
+    })
+
+    return config
+  },
 }
 
 module.exports = nextConfig

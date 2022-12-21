@@ -2,8 +2,8 @@ import React from "react"
 import Link from "next/link"
 import { FormattedMessage } from "react-intl"
 import Image from "next/image"
-import SVG from "react-inlinesvg"
 import footerImage from "../public/illustrations/footer.png"
+import LogoWhite from "../public/logos/logo-white.svg?inline"
 
 /** Sitewide footer component */
 export const Footer = () => (
@@ -23,11 +23,7 @@ export const Footer = () => (
     <nav className="full-width-bg__inner relative z-10">
       <div className="grid gap-x-4 gap-y-16 md:grid-cols-12 md:gap-x-5">
         <div className="flex flex-col items-center gap-8 text-nightshade-50 md:col-start-1 md:col-end-5 md:items-start lg:col-start-1 lg:col-end-5">
-          <SVG
-            src="/logos/logo-white.svg"
-            className="w-20 max-w-full"
-            fill="currentColor"
-          />
+          <LogoWhite className="w-20 max-w-full" fill="currentColor" />
           <p className="mt-2 max-w-[28ch]">
             <FormattedMessage
               id="footer.quip"
@@ -205,11 +201,7 @@ export const Footer = () => (
             rel="me"
             className="text-nightshade-100 hover:text-nightshade-50"
           >
-            <SVG
-              src="/logos/logo-white.svg"
-              className="h-5 w-5"
-              fill="currentColor"
-            />
+            <LogoWhite className="h-5 w-5" fill="currentColor" />
             <span className="sr-only">
               <FormattedMessage
                 id="footer.follow_us_on_mastodon"
