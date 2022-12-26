@@ -44,7 +44,7 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.svg$/i,
       resourceQuery: /inline/, // Only for *.svg?inline
-      use: ["@svgr/webpack"],
+      use: [{ loader: "@svgr/webpack", options: { svgo: false } }],
     })
 
     // we need to add this, as the previous rule disabled the default SVG loader
