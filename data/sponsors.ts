@@ -196,7 +196,7 @@ const sponsors = {
     }, // Custom
     {
       url: "https://www.completewebresources.com/",
-      logo: require("../public/sponsors/complete seo logo lg.jpg"),
+      logo: require("../public/sponsors/complete-seo-logo-padding.png"),
       name: "Complete SEO",
     }, // Custom
     {
@@ -370,6 +370,11 @@ const sponsors = {
       url: "http://www.reboot.io/",
       logo: require("../public/sponsors/reboot-fullstacked-trademark-color-small.jpg"),
       name: "Better Humans Make Better Leaders",
+    }, // Custom
+    {
+      url: "https://sdf.org/",
+      logo: require("../public/sponsors/sdf.png"),
+      name: "SDF Public Access UNIX System",
     }, // Custom
   ],
   silver: patreonData.silver,
