@@ -376,6 +376,11 @@ const sponsors = {
       logo: require("../public/sponsors/sdf.png"),
       name: "SDF Public Access UNIX System",
     }, // Custom
+    {
+      url: "http://awisee.com",
+      logo: require("../public/sponsors/awisee.jpg"),
+      name: "AWISEE.com",
+    }, // Custom
   ],
   silver: patreonData.silver,
   generalHighlighted: patreonData.generalHighlighted,
