@@ -5,6 +5,7 @@ import { useState } from "react"
 import SelectMenu from "../components/SelectMenu"
 import { sortBy as _sortBy } from "lodash"
 import type { appsList } from "../data/apps"
+import Category from "../components/Category"
 
 export type AppsGridProps = {
   apps: appsList
@@ -62,25 +63,13 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
         <div className="-mx-gutter pis-gutter mb-6 overflow-x-auto">
           <div className="flex flex-wrap gap-gutter md:flex-nowrap">
             {categories.map((category) => (
-              <label
+              <Category
                 key={category.key}
-                className={classNames(
-                  "b3 block cursor-pointer whitespace-nowrap rounded-md border-2 p-4 text-center !font-semibold transition-all md:w-full",
-                  category.key === activeCategory
-                    ? "border-blurple-500 bg-blurple-500 text-white hover:border-blurple-600 hover:bg-blurple-600 focus-visible-within:border-blurple-600 focus-visible-within:bg-blurple-600"
-                    : "border-blurple-500 bg-white text-blurple-500 hover:border-blurple-600 hover:text-blurple-600"
-                )}
-              >
-                <input
-                  className="sr-only"
-                  type="radio"
-                  name="apps-selection"
-                  id=""
-                  value={category.key}
-                  onChange={(e) => setActiveCategory(e.target.value)}
-                />
-                {category.label}
-              </label>
+                value={category.key}
+                currentValue={activeCategory}
+                label={category.label}
+                onChange={(e) => setActiveCategory(e.target.value)}
+              />
             ))}
           </div>
         </div>
