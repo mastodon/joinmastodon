@@ -46,8 +46,8 @@ const Roadmap = () => {
           </title>
 
           <meta property="og:title" content={intl.formatMessage({ id: "roadmap.page_title", defaultMessage: "Public Roadmap" })} />
-          <meta name="description" content={intl.formatMessage({ id: "roadmap.page_description", defaultMessage: "" })} />
-          <meta name="og:description" content={intl.formatMessage({ id: "roadmap.page_description", defaultMessage: "" })} />
+          <meta name="description" content={intl.formatMessage({ id: "roadmap.page_description", defaultMessage: "Learn what we are working on in Mastodon" })} />
+          <meta name="og:description" content={intl.formatMessage({ id: "roadmap.page_description", defaultMessage: "Learn what we are working on in Mastodon" })} />
         </Head>
       </div>
     </Layout>
