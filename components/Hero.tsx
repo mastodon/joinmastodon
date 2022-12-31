@@ -18,6 +18,8 @@ export type HeroProps = {
   homepage?: boolean
   /** Adds a text shadow to the hero's content */
   safeTextShadow?: boolean
+  /** Don't set a height on the container **/
+  noHeight?: boolean
 }
 
 /**
@@ -33,6 +35,7 @@ const Hero = ({
   children,
   homepage,
   safeTextShadow = true,
+  noHeight,
 }: HeroProps) => {
   const { locale } = useRouter()
   const dir = getDirForLocale(locale)
@@ -40,10 +43,9 @@ const Hero = ({
   return (
     <section
       className={classNames(
-        "full-width-bg relative h-[var(--mobile-hero-height)] pt-[var(--header-area)] text-white",
-        homepage
-          ? "2xl:h-[var(--desktop-hero-height)]"
-          : "xl:h-[var(--desktop-hero-height)]"
+        "full-width-bg relative pt-[var(--header-area)] text-white",
+        noHeight ? "" : "h-[var(--mobile-hero-height)]",
+        noHeight ? "" : (homepage ? "2xl:h-[var(--desktop-hero-height)]" : "xl:h-[var(--desktop-hero-height)]")
       )}
       style={
         {
@@ -73,8 +75,9 @@ const Hero = ({
 
       <div
         className={classNames(
-          "absolute inset-0 -z-10",
+          "absolute inset-0 -z-10 h-[var(--mobile-hero-height)]",
           homepage ? "md:mis-[-25%] 2xl:hidden" : "xl:hidden",
+          homepage ? "2xl:h-[var(--desktop-hero-height)]" : "xl:h-[var(--desktop-hero-height)]",
           dir === "rtl" && "-scale-x-100"
         )}
       >
@@ -92,8 +95,9 @@ const Hero = ({
 
       <div
         className={classNames(
-          "absolute inset-0 -z-10 hidden",
+          "absolute inset-0 -z-10 hidden h-[var(--mobile-hero-height)]",
           homepage ? "2xl:block" : "xl:block",
+          homepage ? "2xl:h-[var(--desktop-hero-height)]" : "xl:h-[var(--desktop-hero-height)]",
           dir === "rtl" && "-scale-x-100"
         )}
       >

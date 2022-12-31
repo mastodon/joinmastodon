@@ -66,6 +66,14 @@ export const Footer = () => (
                     />
                   </a>
                 </Link>,
+                <Link key="roadmap" href="/roadmap">
+                  <a className="inline-block py-2 hover:underline">
+                    <FormattedMessage
+                      id="nav.roadmap.title"
+                      defaultMessage="Roadmap"
+                    />
+                  </a>
+                </Link>,
               ],
             },
             {

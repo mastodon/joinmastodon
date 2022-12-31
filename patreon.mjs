@@ -1,5 +1,4 @@
 import * as dotenv from "dotenv"
-import { stringify } from "javascript-stringify"
 import fs from "fs"
 
 dotenv.config({ path: ".env.local" })
