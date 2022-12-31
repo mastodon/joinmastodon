@@ -16,23 +16,21 @@ const Roadmap = () => {
       <div dir="ltr" className="[unicode-bidi:plaintext]">
         <Hero homepage safeTextShadow={false} noHeight>
           <div className="grid gap-x-gutter gap-y-16 md:grid-cols-12">
-            <div className="md:col-span-5 text-end">
-              <div>
-                <h1 className="h1 mb-8 pt-16"><FormattedMessage id="roadmap.title" defaultMessage="Roadmap" /></h1>
-                <p className="sh1 mb-11"><FormattedMessage id="roadmap.lead" defaultMessage="This is a glimpse into what we're working on and what we're planning to work on." /></p>
+            <div className="full-width-bg__inner md:col-span-5 md:text-end">
+              <h1 className="h1 mb-8 pt-16"><FormattedMessage id="roadmap.title" defaultMessage="Roadmap" /></h1>
+              <p className="sh1 mb-11"><FormattedMessage id="roadmap.lead" defaultMessage="This is a glimpse into what we're working on and what we're planning to work on." /></p>
 
-                <div className="flex justify-end">
-                  <LinkButton size="large" href="https://github.com/mastodon/mastodon/issues">
-                    <FormattedMessage
-                      id="roadmap.suggest_a_feature"
-                      defaultMessage="Suggest a feature"
-                    />
-                  </LinkButton>
-                </div>
+              <div className="flex justify-center md:justify-end">
+                <LinkButton size="large" href="https://github.com/mastodon/mastodon/issues">
+                  <FormattedMessage
+                    id="roadmap.suggest_a_feature"
+                    defaultMessage="Suggest a feature"
+                  />
+                </LinkButton>
               </div>
             </div>
 
-            <div className="md:col-span-7 text-start">
+            <div className="md:col-span-7 text-start max-w-[100vw]">
               <IssueTimeline roadmap={data} />
             </div>
           </div>

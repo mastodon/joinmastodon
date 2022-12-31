@@ -35,8 +35,8 @@ export const IssueTimeline = ({ roadmap }) => {
   ]
 
   return (
-    <div className="bg-white rounded-md p-6 pl-8">
-      <div className="-mx-gutter pis-gutter mb-6 overflow-x-auto">
+    <div className="mt-64 md:mt-0 md:bg-white md:rounded-md md:p-6 pl-8">
+      <div className="-mx-gutter pis-gutter mb-12 md:mb-6 overflow-x-auto">
         <div className="flex flex-wrap gap-gutter md:flex-nowrap">
           {categories.map(category => (
             <Category

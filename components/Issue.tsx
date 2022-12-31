@@ -25,10 +25,10 @@ export const Issue = ({ id, title, priority, state }: IssueProps) => {
         {(state === "started" && priority === 1) && <div className="absolute animate-ping h-full w-full rounded-full bg-eggplant opacity-75" />}
       </div>
 
-      <div className="flex gap-3 items-center">
+      <div className="relative flex gap-3 items-center truncate">
         <div className="flex-shrink-0 text-nightshade-300"><BarIcon priority={priority} size={16} /></div>
-        <div className="flex-shrink-0 w-14 text-gray-2">{id}</div>
-        <div className="text-black gap-1 truncate">{title}</div>
+        <div className="flex-shrink-0 w-16 text-gray-2 truncate">{id}</div>
+        <div className="text-black truncate">{title}</div>
       </div>
     </div>
   )
