@@ -91,7 +91,7 @@
   "roadmap.state.in_progress": "Wird vorbereitet",
   "roadmap.state.in_review": "Wird geprüft",
   "roadmap.state.todo": "Ausstehend",
-  "roadmap.state.waiting_on_design": "Aufs Design warten",
+  "roadmap.state.waiting_on_design": "Aufs Design wird gewartet",
   "roadmap.suggest_a_feature": "Funktion vorschlagen",
   "roadmap.title": "Entwicklungsplan",
   "server.filter_by.category": "Thema",
