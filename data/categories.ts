@@ -9,10 +9,13 @@ export const categoriesMessages = defineMessages({
   },
   art: { id: "server.category.art", defaultMessage: "Art" },
   books: { id: "server.category.books", defaultMessage: "Books" },
+  culture: { id: "server.category.culture", defaultMessage: "Culture" },
   food: { id: "server.category.food", defaultMessage: "Food" },
   furry: { id: "server.category.furry", defaultMessage: "Furry" },
   games: { id: "server.category.gaming", defaultMessage: "Gaming" },
+  geek: { id: "server.category.geek", defaultMessage: "Geek" },
   general: { id: "server.category.general", defaultMessage: "General" },
+  hobbys: { id: "server.category.hobbys", defaultMessage: "Hobbys" },
   humor: { id: "server.category.humor", defaultMessage: "Humour" },
   journalism: {
     id: "server.category.journalism",
