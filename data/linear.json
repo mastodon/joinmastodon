@@ -58,6 +58,11 @@
         "priority": 3
       },
       {
+        "id": "IOS-31",
+        "title": "Implement iOS Action Extension",
+        "priority": 3
+      },
+      {
         "id": "AND-3",
         "title": "Use markers API to sync timeline position",
         "priority": 3
@@ -140,11 +145,6 @@
       {
         "id": "MAS-33",
         "title": "Add ability to import lists",
-        "priority": 3
-      },
-      {
-        "id": "IOS-31",
-        "title": "Implement iOS Action Extension",
         "priority": 3
       },
       {
