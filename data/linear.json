@@ -33,6 +33,11 @@
         "priority": 2
       },
       {
+        "id": "IOS-24",
+        "title": "Pinned posts on profiles",
+        "priority": 2
+      },
+      {
         "id": "IOS-2",
         "title": "Post editing",
         "priority": 2
@@ -73,8 +78,8 @@
         "priority": 4
       },
       {
-        "id": "IOS-12",
-        "title": "Support landscape orientation for full-screen video",
+        "id": "AND-6",
+        "title": "Pinned posts on profiles",
         "priority": 4
       }
     ]
@@ -82,6 +87,11 @@
   {
     "type": "unstarted",
     "items": [
+      {
+        "id": "IOS-47",
+        "title": "Limit max height of media in status and center to focal point",
+        "priority": 0
+      },
       {
         "id": "MAS-21",
         "title": "Add delay to account deletions and allow cancelling them",
@@ -100,11 +110,6 @@
       {
         "id": "AND-8",
         "title": "Filters",
-        "priority": 2
-      },
-      {
-        "id": "IOS-24",
-        "title": "Pinned posts on profiles",
         "priority": 2
       },
       {
@@ -208,14 +213,14 @@
         "priority": 3
       },
       {
-        "id": "IOS-8",
-        "title": "Copyable username on profiles",
-        "priority": 3
-      },
-      {
         "id": "IOS-5",
         "title": "Block domain option in dropdowns",
         "priority": 3
+      },
+      {
+        "id": "IOS-46",
+        "title": "Save alt text expanded state when transitioning from inline to lightbox",
+        "priority": 4
       },
       {
         "id": "MAS-32",
@@ -230,11 +235,6 @@
       {
         "id": "AND-14",
         "title": "Thread depth indicators",
-        "priority": 4
-      },
-      {
-        "id": "AND-6",
-        "title": "Pinned posts on profiles",
         "priority": 4
       },
       {
