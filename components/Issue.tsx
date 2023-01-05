@@ -32,8 +32,8 @@ export const Issue = ({ id, title, priority, state }: IssueProps) => {
       </div>
 
       <div className="relative flex gap-3 items-center truncate">
-        <div className="flex-shrink-0 text-nightshade-300 w-[16px]">{priority !== PRIORITY_UNSET && <BarIcon priority={priority} size={16} />}</div>
-        <div className="flex-shrink-0 w-16 text-gray-2 truncate">{id}</div>
+        <div className="hidden md:block flex-shrink-0 text-nightshade-300 w-[16px]">{priority !== PRIORITY_UNSET && <BarIcon priority={priority} size={16} />}</div>
+        <div className="hidden md:block flex-shrink-0 w-16 text-gray-2 truncate">{id}</div>
         <div className="text-black truncate">{title}</div>
       </div>
     </div>

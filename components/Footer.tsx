@@ -192,7 +192,7 @@ export const Footer = () => (
 
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-center text-nightshade-100 md:text-start">
-          Copyright © 2022 Mastodon gGmbH.{" "}
+          Copyright © 2023 Mastodon gGmbH.{" "}
 
           <Link href="/trademark">
             <a className="ml-4 pl-4 border-l border-nightshade-600 hover:underline">
