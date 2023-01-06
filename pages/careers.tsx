@@ -17,7 +17,7 @@ const Careers = () => (
 
         <h1 className="h1 mb-4">Join our team</h1>
 
-        <p className="sh1 mb-11 max-w-[50ch]">We're building open source, decentralized social media that gives people back control over their data and their reach.</p>
+        <p className="sh1 mb-11 max-w-[50ch]">We&apos;re building open source, decentralized social media that gives people back control over their data and their reach.</p>
 
         <div className="flex justify-center gap-12">
           <LinkButton size="large" href="/about">
