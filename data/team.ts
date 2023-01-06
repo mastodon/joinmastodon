@@ -12,31 +12,47 @@ export type TeamMember = {
 const team: TeamMember[] = [
   {
     name: "Eugen Rochko",
-    position: "Founder / CEO",
+    position: "Founder, CEO",
     socials: {
       mastodon: "https://mastodon.social/@Gargron",
     },
   },
 
   {
-    name: "Claire",
-    position: "Developer",
-    socials: {
-      mastodon: "https://social.sitedethib.com/@Claire",
-    },
-  },
-
-  {
     name: "Felix Hlatky",
-    position: "Finance",
+    position: "CFO",
     socials: {
       mastodon: "https://mastodon.social/@mellifluousbox",
     },
   },
 
   {
+    name: "Claire",
+    position: "Engineering",
+    socials: {
+      mastodon: "https://social.sitedethib.com/@Claire",
+    },
+  },
+
+  {
+    name: "Nathan Mattes",
+    position: "Engineering",
+    socials: {
+      mastodon: "https://chaos.social/@zeitschlag",
+    },
+  },
+
+  {
+    name: "Marcus Kida",
+    position: "Engineering",
+    socials: {
+      mastodon: "https://bearologics.social/@marcus",
+    },
+  },
+
+  {
     name: "Dopatwo",
-    position: "Artist",
+    position: "Illustrations",
     socials: {
       mastodon: "https://mastodon.social/@dopatwo",
     },

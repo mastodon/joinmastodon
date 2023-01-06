@@ -18,6 +18,7 @@ import press from "../data/press"
 import PersonIcon from "../public/ui/person.svg?inline"
 import FiltersIcon from "../public/ui/filters.svg?inline"
 import LogoWhite from "../public/logos/logo-white.svg?inline"
+import Arrow from "../public/ui/arrow-right.svg?inline"
 
 const About = () => (
   <Layout>
@@ -56,20 +57,27 @@ const About = () => (
                 April 2017 it received its first big break and garnered
                 world-wide attention and press coverage.
               </p>
-              <p className="b1">
+              <p className="b1 mb-6">
                 The project was officially incorporated as a gGmbH (a German
                 form of non-profit LLC) in 2021.
               </p>
+
+              <ul className="b1 space-y-4">
+                <li><Link href="/branding"><a className="font-semibold text-blurple-600 hocus:underline flex items-center gap-1">Branding <Arrow className="h-[1em]" /></a></Link></li>
+                <li><Link href="/trademark"><a className="font-semibold text-blurple-600 hocus:underline flex items-center gap-1">Trademark Policy <Arrow className="h-[1em]" /></a></Link></li>
+              </ul>
             </div>
 
             <div className="col-span-12 md:col-span-6">
               <h2 className="h3 mb-6">Meet the team</h2>
 
+              <p className="mb-6 b1"><Link href="/careers"><a className="font-semibold text-blurple-600 hocus:underline flex items-center gap-1">Join the team <Arrow className="h-[1em]" /></a></Link></p>
+
               <div className="grid grid-cols-12 gap-gutter">
                 {team.map((member) => (
                   <div
                     key={member.name}
-                    className="col-span-12 md:col-span-6 lg:col-span-4"
+                    className="col-span-12 sm:col-span-6 lg:col-span-4"
                   >
                     <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-lg bg-blurple-gradient shadow">
                       {member.image && (
@@ -84,15 +92,15 @@ const About = () => (
                     </div>
 
                     <span className="b2 block !font-bold">{member.name}</span>
-                    <span className="b2 block !font-semibold text-blurple-600">
+                    <span className="b2 block !font-semibold text-gray-1">
                       {member.position}
                     </span>
 
                     {member.socials && (
-                      <div className="mt-2 flex">
+                      <div className="mt-1 flex">
                         <a
                           href={member.socials.mastodon}
-                          className="b2 relative block text-gray-2 hover:text-blurple-500"
+                          className="b2 relative block text-blurple-600 hover:text-blurple-500"
                         >
                           <LogoWhite className="h-4 w-4" fill="currentColor" />
                         </a>

@@ -4,6 +4,7 @@ import { FormattedMessage } from "react-intl"
 import Image from "next/image"
 import footerImage from "../public/illustrations/footer.png"
 import LogoWhite from "../public/logos/logo-white.svg?inline"
+import GitHub from "../public/ui/github.svg?inline"
 
 /** Sitewide footer component */
 export const Footer = () => (
@@ -155,6 +156,14 @@ export const Footer = () => (
                     />
                   </a>
                 </Link>,
+                <Link key="/careers" href="/careers">
+                  <a className="inline-block py-2 hover:underline">
+                    <FormattedMessage
+                      id="nav.careers.title"
+                      defaultMessage="Careers"
+                    />
+                  </a>
+                </Link>,
                 <Link key="/impressum" href="/about#impressum">
                   <a className="inline-block py-2 hover:underline">
                     <FormattedMessage
@@ -163,16 +172,6 @@ export const Footer = () => (
                     />
                   </a>
                 </Link>,
-                <a
-                  key="contact-us"
-                  href="mailto:hello@joinmastodon.org"
-                  className="inline-block py-2 hover:underline"
-                >
-                  <FormattedMessage
-                    id="nav.contact_us.title"
-                    defaultMessage="Contact us"
-                  />
-                </a>,
               ],
             },
           ].map((menu, i) => (
@@ -225,6 +224,17 @@ export const Footer = () => (
                 id="footer.follow_us_on_mastodon"
                 defaultMessage="Follow us on Mastodon"
               />
+            </span>
+          </a>
+
+          <a
+            href="https://github.com/mastodon"
+            rel="me"
+            className="text-nightshade-100 hover:text-nightshade-50"
+          >
+            <GitHub className="h-5 w-5" fill="currentColor" />
+            <span className="sr-only">
+              GitHub
             </span>
           </a>
         </div>
