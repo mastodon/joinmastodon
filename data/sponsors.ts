@@ -1,18 +1,7 @@
 import patreonData from "./patreon.json"
 
 const sponsors = {
-  additionalFunding: [
-    {
-      url: "https://nlnet.nl/",
-      logo: require("../public/sponsors/nlnet.png"),
-      name: "NLNet Foundation",
-    },
-    {
-      url: "https://nlnet.nl/NGI0",
-      logo: require("../public/sponsors/NGI0Discovery_tag.svg"),
-      name: "NGI Zero Discovery",
-    },
-  ],
+  additionalFunding: [],
   platinum: [
     {
       url: "https://mobi.com/",

@@ -503,18 +503,22 @@ const Sponsors = ({ sponsors }) => {
         <SponsorLogoGroup sponsors={sponsors.platinum} />
       </div>
 
-      <h4 className="h5 mb-8 pt-20 text-center lg:col-span-12">
-        <FormattedMessage
-          id="home.additional_support_from"
-          defaultMessage="Additional support from"
-        />
-      </h4>
+      {sponsors.additionalFunding.length > 0 && (
+        <>
+          <h4 className="h5 mb-8 pt-20 text-center lg:col-span-12">
+            <FormattedMessage
+              id="home.additional_support_from"
+              defaultMessage="Additional support from"
+            />
+          </h4>
 
-      <div className="mb-8 lg:col-start-4 lg:col-end-10 lg:mb-16">
-        <SponsorLogoGroup sponsors={sponsors.additionalFunding} />
-      </div>
+          <div className="lg:col-start-4 lg:col-end-10 lg:mb-16">
+            <SponsorLogoGroup sponsors={sponsors.additionalFunding} />
+          </div>
+        </>
+      )}
 
-      <p className="text-gray-2 lg:col-span-12 lg:mb-16">
+      <p className="mt-8 text-gray-2 lg:col-span-12 lg:mb-16">
         Sponsorship does not equal influence. Mastodon is fully independent.
       </p>
     </section>
