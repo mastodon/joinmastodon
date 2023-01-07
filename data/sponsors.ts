@@ -9,19 +9,9 @@ const sponsors = {
       name: "Mobi",
     }, // Custom
     {
-      url: "https://www.spacesquad.de/",
-      logo: require("../public/sponsors/spacesquad-logo-72.png"),
-      name: "SPACE SQUAD",
-    }, // Custom
-    {
-      url: "https://oak.is/",
-      logo: require("../public/sponsors/oak.svg"),
-      name: "Oak Studios",
-    },
-    {
-      url: "https://www.lunanode.com/",
-      logo: require("../public/sponsors/lunanode.png"),
-      name: "Lunanode",
+      url: "https://medium.com/",
+      logo: require("../public/sponsors/medium.png"),
+      name: "Medium",
     },
     {
       url: "https://www.ramotion.com/agency/ui-ux-design",
@@ -53,11 +43,6 @@ const sponsors = {
       logo: require("../public/sponsors/vpsserver.png"),
       name: "VPS Server",
     },
-    {
-      url: "https://mask.io/",
-      logo: require("../public/sponsors/mask-network.png"),
-      name: "Mask Network",
-    }, // Custom/other
     {
       url: "https://www.bestecasinosonline.at/",
       name: "Online Casino Österreich",
@@ -114,16 +99,6 @@ const sponsors = {
       name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
     }, // Custom
     {
-      url: "https://www.movavi.com/imovie-for-windows.html",
-      logo: require("../public/sponsors/movavi.svg"),
-      name: "Movavi",
-    }, // Custom
-    {
-      url: "https://internxt.com/",
-      logo: require("../public/sponsors/internxt.png"),
-      name: "Internxt",
-    }, // Custom
-    {
       url: "https://krystal.uk/",
       logo: require("../public/sponsors/Krystal_Logo.svg"),
       name: "Krystal Hosting",
@@ -137,11 +112,6 @@ const sponsors = {
       url: "https://bibly.com/",
       logo: require("../public/sponsors/bibly-logo.png"),
       name: "Bibly",
-    }, // Custom
-    {
-      url: "https://ndash.com/?utm_campaign=mastodon_v2",
-      logo: require("../public/sponsors/nDash.png"),
-      name: "nDash Content Creation Platform",
     }, // Custom
     {
       url: "https://www.zerotier.com/",
@@ -198,8 +168,18 @@ const sponsors = {
       logo: require("../public/sponsors/intellifluence logos.png"),
       name: "Intellifluence supports all influencers",
     },
+    {
+      url: "https://toot.io/mastodon_hosting.html",
+      logo: require("../public/sponsors/toot_io_logo.png"),
+      name: "toot.io",
+    }, // Custom
   ],
   gold: [
+    {
+      url: "https://mask.io/",
+      logo: require("../public/sponsors/mask-network.png"),
+      name: "Mask Network",
+    }, // Custom/other
     {
       url: "https://easydns.com/",
       logo: require("../public/sponsors/easydns.png"),
@@ -276,11 +256,6 @@ const sponsors = {
       name: "Onestein B.V.",
     }, // Custom
     {
-      url: "https://www.r2c.io/",
-      logo: require("../public/sponsors/r2-logo.png"),
-      name: "R2 Consulting",
-    }, // Custom
-    {
       url: "https://home.social/@ralf",
       logo: require("../public/sponsors/Rottmann_Ventures.png"),
       name: "Rottmann Ventures GmbH",
@@ -289,16 +264,6 @@ const sponsors = {
       url: "https://customcomet.com/",
       logo: require("../public/sponsors/custom-comet.png"),
       name: "Custom Comet",
-    }, // Custom
-    {
-      url: "https://iatro.health/",
-      logo: require("../public/sponsors/iatro.jpeg"),
-      name: "iatro",
-    }, // Custom
-    {
-      url: "https://tooting.social/",
-      logo: require("../public/sponsors/tooting-social.png"),
-      name: "Tooting Social",
     }, // Custom
     {
       url: "https://archive.org/",
@@ -321,11 +286,6 @@ const sponsors = {
       name: "Blind Five Year Old",
     }, // Custom
     {
-      url: "https://stoners.social/invite/8rYLTCGW",
-      logo: require("../public/sponsors/chill.jpg"),
-      name: "Stoners Social | The Weed Platform",
-    }, // Custom
-    {
       url: "https://j15r.com/",
       logo: require("../public/sponsors/j15r.png"),
       name: "Joel Webber",
@@ -336,24 +296,9 @@ const sponsors = {
       name: "Goody Feed",
     }, // Custom
     {
-      url: "https://supertokens.com/",
-      logo: require("../public/sponsors/supertokens.svg"),
-      name: "SuperTokens",
-    }, // Custom
-    {
-      url: "https://client.zealous.host/aff.php?aff=7",
-      logo: require("../public/sponsors/zealous.png"),
-      name: "Zealous Host | Gameservers",
-    }, // Custom
-    {
       url: "https://pillarwm.com/best-wealth-management-firms/",
       logo: require("../public/sponsors/pillar.jpg"),
       name: "Best Wealth Management Firms",
-    }, // Custom
-    {
-      url: "https://toot.io/mastodon_hosting.html",
-      logo: require("../public/sponsors/toot_io_logo.png"),
-      name: "toot.io",
     }, // Custom
     {
       url: "http://www.reboot.io/",
@@ -364,11 +309,6 @@ const sponsors = {
       url: "https://sdf.org/",
       logo: require("../public/sponsors/sdf.png"),
       name: "SDF Public Access UNIX System",
-    }, // Custom
-    {
-      url: "http://awisee.com",
-      logo: require("../public/sponsors/awisee.jpg"),
-      name: "AWISEE.com",
     }, // Custom
   ],
   silver: patreonData.silver,
