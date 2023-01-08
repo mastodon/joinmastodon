@@ -37,10 +37,21 @@ const processIssues = async (stateMap, issues) => {
       continue
     }
 
+    const labels = await issue.labels()
+    const parent = await issue.parent
+
+    if (!labels?.nodes?.find(item => item.name === "Public roadmap")) {
+      continue
+    }
+
     list.push({
       id: issue.identifier,
       title: issue.title,
       priority: issue.priority,
+      parent: parent ? {
+        id: parent.identifier,
+        title: parent.title,
+      } : null,
     })
 
     stateMap[state.type] = {
