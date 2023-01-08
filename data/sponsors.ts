@@ -173,6 +173,11 @@ const sponsors = {
       logo: require("../public/sponsors/toot_io_logo.png"),
       name: "toot.io",
     }, // Custom
+    {
+      url: "https://www.daniweb.com/",
+      logo: require("../public/sponsors/daniweb.png"),
+      name: "DaniWeb",
+    }, // Custom
   ],
   gold: [
     {
