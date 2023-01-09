@@ -7,7 +7,7 @@ import Layout from "../components/Layout"
 import LinkButton from "../components/LinkButton"
 import Link from "next/link"
 import Arrow from "../public/ui/arrow-right.svg?inline"
-import type { JobsResponse } from "../types/api"
+import type { JobsResponse, Job } from "../types/api"
 import { fetchEndpoint } from "../utils/api"
 import SkeletonText from "../components/SkeletonText"
 
@@ -19,7 +19,7 @@ const Careers = () => {
 
   const jobsResponse = useQuery<JobsResponse>(
     ["jobs"],
-    () => fetchEndpoint("jobs"),
+    () => fetchEndpoint("jobs", {}),
     queryOptions
   )
 
@@ -66,7 +66,7 @@ const Careers = () => {
   )
 }
 
-const Job = ({ job }) => (
+const Job = ({ job }: { job?: Job }) => (
   <li className="border-b last:border-0 border-gray-3 flex py-4">
     <div className="flex-1 b1 !font-semibold">
       {job ? job.title : <SkeletonText className="w-[20ch]" />}
