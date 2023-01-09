@@ -13,6 +13,7 @@ import type { Server, Category, Language, Day, Region } from "../types/api"
 import Hero from "../components/Hero"
 import loadIntlMessages from "../utils/loadIntlMessages"
 import { formatNumber } from "../utils/numbers"
+import { fetchEndpoint } from "../utils/api"
 
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
@@ -23,8 +24,6 @@ import Head from "next/head"
 import Layout from "../components/Layout"
 import Link from "next/link"
 
-const apiBase = `https://api.joinmastodon.org/`
-const getApiUrl = (path, params = "") => `${apiBase}${path}?${params}`
 const DUNBAR = Math.log(800)
 
 const Servers = () => {
@@ -39,12 +38,9 @@ const Servers = () => {
   })
 
   const params = new URLSearchParams(filters)
+
   const queryOptions = {
     cacheTime: 30 * 60 * 1000, // 30 minutes
-  }
-  const fetchEndpoint = async function (endpoint, params): Promise<any[]> {
-    const res = await fetch(getApiUrl(endpoint, params.toString()))
-    return await res.json()
   }
 
   const allCategories = useQuery<Category[]>(

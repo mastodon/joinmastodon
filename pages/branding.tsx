@@ -200,7 +200,7 @@ const Branding = () => (
             </p>
           }
           preview={
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-32">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-32 overflow-hidden">
               {[LogoPurple, WordmarkWhiteText].map((Svg, i) => (
                 <div
                   className="relative rounded bg-eggplant p-[36px] text-blurple-600 shadow-[currentColor_0_0_0_1px_inset]"
@@ -236,7 +236,7 @@ const Branding = () => (
                       style={{ backgroundColor: hex }}
                       className="h-20 rounded md:h-24"
                     >
-                      <div className="p-4 pt-14 font-black text-white/60">
+                      <div className="p-4 pt-14 font-black text-white">
                         {hex}
                       </div>
                     </div>
@@ -250,7 +250,7 @@ const Branding = () => (
                       style={{ backgroundColor: hex }}
                       className="h-20 rounded md:h-24"
                     >
-                      <div className="p-4 pt-14 font-black text-white/60">
+                      <div className="p-4 pt-14 font-black text-white">
                         {hex}
                       </div>
                     </div>
