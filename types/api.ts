@@ -35,3 +35,17 @@ export type Region = {
   value: string
   label: string
 }
+
+export type Job = {
+  id: string
+  title: string
+  departmentName: string
+  externalLink: string
+  locationName: string
+  employmentType: string
+}
+
+export type JobsResponse = {
+  success: boolean
+  results: Job[]
+}
