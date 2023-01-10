@@ -14,11 +14,12 @@ import { Day } from "../types/api"
 import team from "../data/team"
 import interviews from "../data/interviews"
 import press from "../data/press"
+import LinkWithArrow from "../components/LinkWithArrow"
+import PressArticle from "../components/PressArticle"
 
 import PersonIcon from "../public/ui/person.svg?inline"
 import FiltersIcon from "../public/ui/filters.svg?inline"
 import LogoWhite from "../public/logos/logo-white.svg?inline"
-import Arrow from "../public/ui/arrow-right.svg?inline"
 
 const About = () => (
   <Layout>
@@ -63,15 +64,15 @@ const About = () => (
               </p>
 
               <ul className="b1 space-y-4">
-                <li><Link href="/branding"><a className="font-semibold text-blurple-600 hocus:underline flex items-center gap-1">Branding <Arrow className="h-[1em]" /></a></Link></li>
-                <li><Link href="/trademark"><a className="font-semibold text-blurple-600 hocus:underline flex items-center gap-1">Trademark Policy <Arrow className="h-[1em]" /></a></Link></li>
+                <li><LinkWithArrow href="/branding">Branding</LinkWithArrow></li>
+                <li><LinkWithArrow href="/trademark">Trademark Policy</LinkWithArrow></li>
               </ul>
             </div>
 
             <div className="col-span-12 md:col-span-6">
-              <h2 className="h3 mb-6">Meet the team</h2>
+              <h2 className="h3 mb-6" id="team">Meet the team</h2>
 
-              <p className="mb-6 b1"><Link href="/careers"><a className="font-semibold text-blurple-600 hocus:underline flex items-center gap-1">Join the team <Arrow className="h-[1em]" /></a></Link></p>
+              <p className="mb-6 b1"><LinkWithArrow href="/careers">Join the team</LinkWithArrow></p>
 
               <div className="grid grid-cols-12 gap-gutter">
                 {team.map((member) => (
@@ -184,27 +185,7 @@ const About = () => (
                 {press
                   .sort((a, b) => a.date.localeCompare(b.date) * -1)
                   .map((story) => (
-                    <a
-                      key={story.url}
-                      href={story.url}
-                      rel="nofollow noopener"
-                      className="col-span-12 block rounded-md bg-gray-4 ring-blurple-500 hocus:ring md:col-span-6 lg:col-span-3"
-                    >
-                      <div className="flex w-full items-center justify-center py-20 px-16">
-                        <div className="relative h-10 w-full">
-                          <Image
-                            src={story.logo}
-                            alt=""
-                            layout="fill"
-                            objectFit="contain"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="h6 block p-8 !font-medium">
-                        {story.title}
-                      </div>
-                    </a>
+                    <PressArticle key={story.url} story={story} />
                   ))}
               </div>
             </div>
