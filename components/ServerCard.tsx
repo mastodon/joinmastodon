@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { FormattedMessage, useIntl } from "react-intl"
+import { Blurhash } from "react-blurhash"
 
 import LinkButton from "./LinkButton"
 import type { Server } from "../types/api"
@@ -15,16 +16,19 @@ const ServerCard = ({ server }: { server?: Server }) => {
   const intl = useIntl()
   return (
     <div className="grid grid-rows-[auto_1fr_auto] rounded-md border border-gray-3 p-4">
-      <div className="relative h-26 lg:h-40">
+      <div className="relative h-26 lg:h-40 rounded-md overflow-hidden bg-gray-2">
         {server ? (
-          <Image
-            className="rounded-md bg-gray-2"
-            src={server.proxied_thumbnail}
-            layout="fill"
-            objectFit="cover"
-            alt=""
-            unoptimized
-          />
+          <>
+            {server.blurhash && <Blurhash hash={server.blurhash} width='100%' height='100%' />}
+
+            <Image
+              src={server.proxied_thumbnail}
+              layout="fill"
+              objectFit="cover"
+              alt=""
+              unoptimized
+            />
+          </>
         ) : (
           <div className="h-full w-full rounded-md bg-gray-3" />
         )}

@@ -17,7 +17,7 @@ export type Server = {
   region: string
   categories: string[]
   proxied_thumbnail: string
-  total_users: number
+  blurhash: string
   last_week_users: number
   approval_required: boolean
   language: string
