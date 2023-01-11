@@ -46,7 +46,7 @@ const Careers = () => {
             <div className="grid grid-cols-12 gap-y-24 py-20 md:gap-x-12">
               <div className="col-span-12 md:col-span-4">
                 <h2 className="h3 mb-4">Work with us</h2>
-                <p className="b1 mb-4">Mastodon is German non-profit with a remote-only, primarily English-speaking team distributed across the world.</p>
+                <p className="b1 mb-4">Mastodon is a German non-profit with a remote-only, primarily English-speaking team distributed across the world.</p>
                 <p className="mb-6 b1"><LinkWithArrow href="/about#team">Meet the team</LinkWithArrow></p>
 
                 <ul className="list-disc b1 space-y-2">
