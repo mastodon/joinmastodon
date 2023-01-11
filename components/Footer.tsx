@@ -201,12 +201,21 @@ export const Footer = () => (
               />
             </a>
           </Link>
-          {" • "}
+          <span aria-hidden>{" • "}</span>
           <Link href="/privacy-policy">
             <a className="hover:underline">
               <FormattedMessage
                 id="nav.privacy_policy.title"
                 defaultMessage="Privacy Policy"
+              />
+            </a>
+          </Link>
+          <span aria-hidden>{" • "}</span>
+          <Link href="https://joinmastodon.instatus.com">
+            <a className="hover:underline">
+              <FormattedMessage
+                id="nav.status.title"
+                defaultMessage="Status"
               />
             </a>
           </Link>
