@@ -9,12 +9,6 @@
         "parent": null
       },
       {
-        "id": "IOS-1",
-        "title": "Update onboarding flow",
-        "priority": 1,
-        "parent": null
-      },
-      {
         "id": "MAS-35",
         "title": "Rename \"Everything\" in OAuth permissions",
         "priority": 2,
@@ -48,6 +42,12 @@
         "id": "IOS-2",
         "title": "Post editing",
         "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-42",
+        "title": "Add option to exclude list members from home feed",
+        "priority": 3,
         "parent": null
       },
       {
@@ -110,8 +110,8 @@
         "parent": null
       },
       {
-        "id": "IOS-44",
-        "title": "Sharing link to reblog uses wrong permalink",
+        "id": "IOS-37",
+        "title": "Home Screen Widgets",
         "priority": 2,
         "parent": null
       },
@@ -143,6 +143,12 @@
         "id": "IOS-4",
         "title": "Follow and unfollow in post dropdowns",
         "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "IOS-45",
+        "title": "Custom app icons",
+        "priority": 3,
         "parent": null
       },
       {
@@ -266,6 +272,18 @@
         "parent": null
       },
       {
+        "id": "IOS-35",
+        "title": "App rating prompt offered after posting failure",
+        "priority": 4,
+        "parent": null
+      },
+      {
+        "id": "IOS-34",
+        "title": "Password input not recognized for iCloud Keychain",
+        "priority": 4,
+        "parent": null
+      },
+      {
         "id": "MAS-32",
         "title": "Migrate lists on account migrations",
         "priority": 4,
@@ -364,12 +382,6 @@
     "type": "backlog",
     "items": [
       {
-        "id": "IOS-37",
-        "title": "Home Screen Widgets",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "MAS-25",
         "title": "Add imprint setting",
         "priority": 2,
@@ -382,8 +394,8 @@
         "parent": null
       },
       {
-        "id": "IOS-45",
-        "title": "Custom app icons",
+        "id": "MAS-41",
+        "title": "Allow searching for hashtags in admin UI",
         "priority": 3,
         "parent": null
       },
@@ -456,18 +468,6 @@
       {
         "id": "IOS-38",
         "title": "Drafts",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "IOS-35",
-        "title": "App rating prompt offered after posting failure",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "IOS-34",
-        "title": "Password input not recognized for iCloud Keychain",
         "priority": 4,
         "parent": null
       },
