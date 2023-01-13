@@ -1,6 +1,6 @@
 import app_hero_planets from "../public/illustrations/app_hero_planets.png"
 import app_hero_festival from "../public/illustrations/app_hero_festival.png"
-import loadIntlMessages from "../utils/loadIntlMessages"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import { FormattedMessage, useIntl } from "react-intl"
@@ -374,8 +374,4 @@ function Guide(props) {
 
 export default Guide
 
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
+export const getStaticProps = withDefaultStaticProps()

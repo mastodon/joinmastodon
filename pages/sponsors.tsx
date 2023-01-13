@@ -4,7 +4,7 @@ import Hero from "../components/Hero"
 import SponsorCard from "../components/SponsorCard"
 import SponsorLogoGroup from "../components/SponsorLogoGroup"
 import TwoUpFeature from "../components/TwoUpFeature"
-import loadIntlMessages from "../utils/loadIntlMessages"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import sponsors from "../data/sponsors"
 import sponsorData from "../data/sponsors"
 import Layout from "../components/Layout"
@@ -183,8 +183,4 @@ function Sponsors() {
 
 export default Sponsors
 
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
+export const getStaticProps = withDefaultStaticProps()
