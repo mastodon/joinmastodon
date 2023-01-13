@@ -8,7 +8,7 @@ import "keen-slider/keen-slider.min.css"
 import resolveConfig from "tailwindcss/resolveConfig"
 import twConfig from "../tailwind.config"
 
-import loadIntlMessages from "../utils/loadIntlMessages"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import LinkButton from "../components/LinkButton"
 import TestimonialCard from "../components/TestimonialCard"
 import SponsorLogoGroup from "../components/SponsorLogoGroup"
@@ -525,8 +525,4 @@ const Sponsors = ({ sponsors }) => {
   )
 }
 
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
+export const getStaticProps = withDefaultStaticProps()

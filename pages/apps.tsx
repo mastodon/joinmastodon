@@ -7,7 +7,7 @@ import { FormattedMessage, useIntl } from "react-intl"
 import Head from "next/head"
 import Image from "next/image"
 import AppHero from "../components/AppHero"
-import loadIntlMessages from "../utils/loadIntlMessages"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import footer_festival from "../public/illustrations/footer_festival.png"
 import AppsGrid from "../components/AppsGrid"
 import TwoUpFeature from "../components/TwoUpFeature"
@@ -171,10 +171,6 @@ const AppsPage = () => {
   )
 }
 
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
+export const getStaticProps = withDefaultStaticProps()
 
 export default AppsPage

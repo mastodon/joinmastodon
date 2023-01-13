@@ -1,8 +1,7 @@
 import BasicPage from "../components/BasicPage"
 import Head from "next/head"
 import Hero from "../components/Hero"
-import loadIntlMessages from "../utils/loadIntlMessages"
-import classNames from "classnames"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
 import Image from "next/image"
@@ -64,15 +63,25 @@ const About = () => (
               </p>
 
               <ul className="b1 space-y-4">
-                <li><LinkWithArrow href="/branding">Branding</LinkWithArrow></li>
-                <li><LinkWithArrow href="/trademark">Trademark Policy</LinkWithArrow></li>
+                <li>
+                  <LinkWithArrow href="/branding">Branding</LinkWithArrow>
+                </li>
+                <li>
+                  <LinkWithArrow href="/trademark">
+                    Trademark Policy
+                  </LinkWithArrow>
+                </li>
               </ul>
             </div>
 
             <div className="col-span-12 md:col-span-6">
-              <h2 className="h3 mb-6" id="team">Meet the team</h2>
+              <h2 className="h3 mb-6" id="team">
+                Meet the team
+              </h2>
 
-              <p className="mb-6 b1"><LinkWithArrow href="/careers">Join the team</LinkWithArrow></p>
+              <p className="b1 mb-6">
+                <LinkWithArrow href="/careers">Join the team</LinkWithArrow>
+              </p>
 
               <div className="grid grid-cols-12 gap-gutter">
                 {team.map((member) => (
@@ -392,10 +401,6 @@ const Metrics = () => {
   )
 }
 
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
+export const getStaticProps = withDefaultStaticProps()
 
 export default About

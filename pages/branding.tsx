@@ -1,7 +1,7 @@
 import BasicPage from "../components/BasicPage"
 import Head from "next/head"
 import Hero from "../components/Hero"
-import loadIntlMessages from "../utils/loadIntlMessages"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import classNames from "classnames"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
@@ -200,7 +200,7 @@ const Branding = () => (
             </p>
           }
           preview={
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-32 overflow-hidden">
+            <div className="flex flex-col items-center justify-center gap-4 overflow-hidden sm:flex-row md:gap-32">
               {[LogoPurple, WordmarkWhiteText].map((Svg, i) => (
                 <div
                   className="relative rounded bg-eggplant p-[36px] text-blurple-600 shadow-[currentColor_0_0_0_1px_inset]"
@@ -327,9 +327,5 @@ const Branding = () => (
     </div>
   </Layout>
 )
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
+export const getStaticProps = withDefaultStaticProps()
 export default Branding
