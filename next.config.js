@@ -14,6 +14,19 @@ const nextConfig = {
       "c10.patreonusercontent.com",
     ],
   },
+  async headers() {
+    return [
+      {
+        source: "/fonts/:all*(ttf|otf|woff|woff2)",
+        headers: [
+          {
+            key: "Cache-control",
+            value: "max-age=3600, stale-while-revalidate",
+          },
+        ],
+      },
+    ]
+  },
   async redirects() {
     return [
       {
