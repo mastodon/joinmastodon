@@ -1,7 +1,6 @@
 import tusky from "../public/apps/tusky.png"
 import subwayTooter from "../public/apps/subway-tooter.png"
 import fedilab from "../public/apps/fedilab.png"
-import amaroq from "../public/apps/amaroq.jpg"
 import mast from "../public/apps/mast.png"
 import mastonaut from "../public/apps/mastonaut.png"
 import tokodon from "../public/apps/tokodon.png"
@@ -75,11 +74,6 @@ export const apps: appsList = {
       icon: mast,
       url: "https://apps.apple.com/us/app/mast-for-mastodon/id1437429129",
       paid: true,
-    },
-    {
-      name: "Amaroq",
-      icon: amaroq,
-      url: "https://itunes.apple.com/us/app/amarok-for-mastodon/id1214116200?ls=1&mt=8",
     },
     {
       name: "iMast",
