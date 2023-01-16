@@ -9,6 +9,12 @@
         "parent": null
       },
       {
+        "id": "IOS-37",
+        "title": "Home Screen Widgets",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "MAS-35",
         "title": "Rename \"Everything\" in OAuth permissions",
         "priority": 2,
@@ -29,12 +35,6 @@
       {
         "id": "MAS-15",
         "title": "Groups",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "IOS-24",
-        "title": "Pinned posts on profiles",
         "priority": 2,
         "parent": null
       },
@@ -75,12 +75,6 @@
         "parent": null
       },
       {
-        "id": "IOS-31",
-        "title": "Implement iOS Action Extension",
-        "priority": 3,
-        "parent": null
-      },
-      {
         "id": "AND-3",
         "title": "Use markers API to sync timeline position",
         "priority": 3,
@@ -110,12 +104,6 @@
         "parent": null
       },
       {
-        "id": "IOS-37",
-        "title": "Home Screen Widgets",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "AND-9",
         "title": "Lists",
         "priority": 2,
@@ -124,6 +112,12 @@
       {
         "id": "AND-8",
         "title": "Filters",
+        "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "IOS-24",
+        "title": "Pinned posts on profiles",
         "priority": 2,
         "parent": null
       },
@@ -391,6 +385,18 @@
         "id": "MAS-11",
         "title": "Default and configurable terms of service",
         "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-45",
+        "title": "Home feed digest",
+        "priority": 3,
+        "parent": null
+      },
+      {
+        "id": "MAS-44",
+        "title": "Localized hashtag trends",
+        "priority": 3,
         "parent": null
       },
       {
