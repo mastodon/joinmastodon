@@ -75,7 +75,7 @@ const ServerCard = ({ server }: { server?: Server }) => {
       <div className="">
         {server ? (
           <LinkButton
-            href={`https://${server.domain}`}
+            href={`https://${server.domain}/auth/sign_up`}
             light={server.approval_required}
             fullWidth
             size="small"
