@@ -496,5 +496,143 @@
         "parent": null
       }
     ]
+  },
+  {
+    "type": "completed",
+    "items": [
+      {
+        "id": "AND-20",
+        "title": "Explore tab does not paginate",
+        "priority": 3,
+        "completedAt": "2023-01-15T15:13:17.540Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-31",
+        "title": "Implement iOS Action Extension",
+        "priority": 3,
+        "completedAt": "2023-01-12T09:24:52.799Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-44",
+        "title": "Sharing link to reblog uses wrong permalink",
+        "priority": 2,
+        "completedAt": "2023-01-10T15:36:24.134Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-1",
+        "title": "Update onboarding flow",
+        "priority": 1,
+        "completedAt": "2023-01-09T09:55:50.518Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-12",
+        "title": "Support landscape orientation for full-screen video",
+        "priority": 4,
+        "completedAt": "2023-01-05T17:33:04.800Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-8",
+        "title": "Copyable username on profiles",
+        "priority": 3,
+        "completedAt": "2023-01-05T13:15:30.296Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-41",
+        "title": "Wrong percentages on multiple choice polls",
+        "priority": 3,
+        "completedAt": "2022-12-31T01:22:26.933Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-6",
+        "title": "Short number format on post numbers",
+        "priority": 3,
+        "completedAt": "2022-12-29T07:11:04.968Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-23",
+        "title": "View image descriptions on media",
+        "priority": 2,
+        "completedAt": "2022-12-26T19:55:48.486Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-11",
+        "title": "Fix display of audio attachments",
+        "priority": 4,
+        "completedAt": "2022-12-26T18:51:37.648Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-32",
+        "title": "Fix paragraph margins",
+        "priority": 2,
+        "completedAt": "2022-12-16T15:18:37.668Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-26",
+        "title": "Add follow request banner on account header",
+        "priority": 4,
+        "completedAt": "2022-12-15T17:50:20.315Z",
+        "parent": null
+      },
+      {
+        "id": "AND-19",
+        "title": "Compose screen loses state when switching between apps",
+        "priority": 4,
+        "completedAt": "2022-12-15T17:18:17.677Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-20",
+        "title": "Add `--email` option to `tootctl accounts delete`",
+        "priority": 4,
+        "completedAt": "2022-12-15T13:52:58.146Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-19",
+        "title": "Link preview cards",
+        "priority": 4,
+        "completedAt": "2022-12-15T13:31:15.886Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-18",
+        "title": "Make it possible to refresh a remotely suspended account in admin UI",
+        "priority": 3,
+        "completedAt": "2022-12-15T13:15:55.889Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-3",
+        "title": "Translating posts",
+        "priority": 2,
+        "completedAt": "2022-12-15T09:49:54.967Z",
+        "parent": null
+      },
+      {
+        "id": "AND-1",
+        "title": "Update login flow",
+        "priority": 1,
+        "completedAt": "2022-12-04T11:37:40.377Z",
+        "parent": null
+      },
+      {
+        "id": "IOS-13",
+        "title": "Follow hashtags",
+        "priority": 2,
+        "completedAt": "2022-12-02T02:16:10.361Z",
+        "parent": null
+      }
+    ]
   }
 ]

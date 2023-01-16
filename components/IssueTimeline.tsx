@@ -7,6 +7,7 @@ const messages = defineMessages({
   started: { id: "roadmap.state.started", defaultMessage: "In Progress" },
   unstarted: { id: "roadmap.state.unstarted", defaultMessage: "Planned" },
   backlog: { id: "roadmap.state.backlog", defaultMessage: "Exploring" },
+  completed: { id: "roadmap.state.completed", defaultMessage: "Recently completed" },
 })
 
 export const IssueTimeline = ({ roadmap }) => {
