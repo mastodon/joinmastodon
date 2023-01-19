@@ -97,6 +97,7 @@ const About = () => (
                           objectFit="cover"
                           objectPosition="0% 28%"
                           alt=""
+                          className="grayscale"
                         />
                       )}
                     </div>

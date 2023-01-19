@@ -11,6 +11,7 @@ export type TeamMember = {
 
 const team: TeamMember[] = [
   {
+    image: require("../public/team/eugen-rochko.jpg"),
     name: "Eugen Rochko",
     position: "Founder, CEO",
     socials: {
