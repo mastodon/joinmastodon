@@ -117,7 +117,7 @@
   "servers.getting_started.safe_for_all.body": "Sunucuları denetleyemeyiz ama bu sayfada tanıtımını yaptığımız şeyleri denetleyebiliriz. Kuruluşumuz kendini ırkçılık, cinsel ayrımcılık ve transfobiye karşı sürekli denetime adamış sunuculara işaret ediyor.",
   "servers.getting_started.safe_for_all.title": "Herkes için güvenli",
   "servers.getting_started.servers": "İlk adım hesabınızı hangi sunucuda oluşturmak istediğiniz. Her sunucu farklı bir bağımsız kuruluş veya birey tarafından işletiliyor ve denetleme politikaları farklı olabilir.",
-  "servers.hero.body": "Mastodon tek bir web sitesi değil. Kullanmak için, Mastodon çapında diğer kullanıcılarla bağlantı kurmanızı sağlayan bir sağlayıcıda (<b>sunucular</b> da diyoruz) bir hesap oluşturmanız gerekiyor.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "Merkezi olmayan sosyal ağ Mastodon'a kayıt olacağınız yeri bulun.",
   "servers.page_title": "Sunucular",
   "silver_sponsor": "Gümüş sponsor",
