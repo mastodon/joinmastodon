@@ -233,7 +233,7 @@ const Servers = () => {
         <p className="sh1 mb-14 max-w-[36ch]">
           <FormattedMessage
             id="servers.hero.body"
-            defaultMessage="Mastodon is not a single website. To use it, you need to make an account with a provider&mdash;we call them <b>servers</b>&mdash;that lets you connect with other people across Mastodon."
+            defaultMessage="Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon."
             values={{
               b: (text) => <b>{text}</b>,
             }}
