@@ -117,7 +117,7 @@
   "servers.getting_started.safe_for_all.body": "Chúng tôi không thể kiểm soát các máy chủ, nhưng chúng tôi có thể kiểm soát những gì chúng tôi giới thiệu trên trang này. Tổ chức của chúng tôi sẽ giới thiệu các máy chủ luôn cam kết kiểm duyệt chống lại nạn phân biệt chủng tộc, phân biệt giới tính.",
   "servers.getting_started.safe_for_all.title": "An toàn cho mọi người",
   "servers.getting_started.servers": "Bước đầu tiên là quyết định máy chủ nào bạn muốn tạo tài khoản của mình. Mỗi máy chủ được vận hành bởi một tổ chức hoặc cá nhân độc lập và có thể khác nhau về các chính sách kiểm duyệt.",
-  "servers.hero.body": "Mastodon không phải là một trang web duy nhất. Để sử dụng nó, bạn cần tạo một tài khoản ở một nhà cung cấpr&mdash;chúng tôi gọi đó là <b>những máy chủ</b>&mdash;cho phép bạn kết nối với những người khác trên Mastodon.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "Tìm nơi để đăng ký mạng xã hội liên hợp Mastodon.",
   "servers.page_title": "Danh sách máy chủ",
   "silver_sponsor": "Nhà tài trợ Bạc",
