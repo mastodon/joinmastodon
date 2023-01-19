@@ -117,7 +117,7 @@
   "servers.getting_started.safe_for_all.body": "我们无法控制服务器，但我们可以控制的是我们在这个页面上宣传的内容。我们的组织只会指向始终贯彻反对种族主义、性别歧视和跨性别恐惧的服务器。",
   "servers.getting_started.safe_for_all.title": "对所有人安全",
   "servers.getting_started.servers": "第一步是决定您想在哪个服务器上创建您的账户。每个服务器均由独立的组织或个人运营，审核政策可能有所不同。",
-  "servers.hero.body": "Mastodon 不是单一的网站。您需要在某个服务提供方&mdash;处注册账户来使用它。我们称这些服务提供方为 <b>服务器</b>&mdash;，您和其他使用 Mastodon 的人们通过它们连接到一起。",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "决定在哪里注册去中心化社交网络Mastodon。",
   "servers.page_title": "服务器",
   "silver_sponsor": "银牌赞助者",
