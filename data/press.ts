@@ -14,8 +14,15 @@ import cnnLogo from "../public/press/cnn.svg"
 import guardianLogo from "../public/press/the-guardian.svg"
 import forbesLogo from "../public/press/forbes.svg"
 import techcrunchLogo from "../public/press/techcrunch.svg"
+import bloombergLogo from "../public/press/bloomberg.svg"
 
 const articles = [
+  {
+    logo: bloombergLogo,
+    url: "https://www.bloomberg.com/news/newsletters/2023-01-12/elon-musk-s-twitter-drives-even-its-early-employees-to-mastodon",
+    title: "Elon Musk Drives Even Some Twitter Founders to Mastodon",
+    date: "2023-01-12",
+  },
   {
     logo: financialTimesLogo,
     url: "https://www.ft.com/content/de808736-2e05-4c3b-a53c-55b170ae9efd",
