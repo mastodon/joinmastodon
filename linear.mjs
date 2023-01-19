@@ -16,12 +16,19 @@ const fetchIssues = async (after) => api.issues({
       },
     },
 
+    labels: {
+      name: {
+        eqIgnoreCase: "Public roadmap",
+      },
+    },
+
     state: {
       type: {
         in: [
           "backlog",
           "unstarted",
           "started",
+          "completed",
         ],
       },
     },
@@ -37,17 +44,13 @@ const processIssues = async (stateMap, issues) => {
       continue
     }
 
-    const labels = await issue.labels()
     const parent = await issue.parent
-
-    if (!labels?.nodes?.find(item => item.name === "Public roadmap")) {
-      continue
-    }
 
     list.push({
       id: issue.identifier,
       title: issue.title,
       priority: issue.priority,
+      completedAt: issue.completedAt,
       parent: parent ? {
         id: parent.identifier,
         title: parent.title,
@@ -73,7 +76,12 @@ while (issues.pageInfo.hasNextPage) {
 }
 
 Object.keys(stateMap).forEach(state => {
-  stateMap[state].items.sort((a, b) => a.priority - b.priority)
+  if (state !== "completed") {
+    stateMap[state].items.sort((a, b) => a.priority - b.priority)
+  } else {
+    stateMap[state].items.sort((a, b) => (new Date(b.completedAt)) - (new Date(a.completedAt)))
+  }
+
   roadmap.push(stateMap[state])
 })
 
@@ -85,6 +93,8 @@ const stateTypeToValue = type => {
       return 1
     case "started":
       return 2
+    case "completed":
+      return -1
   }
 }
 

@@ -1,7 +1,7 @@
 import Head from "next/head"
 import BasicPage from "../components/BasicPage"
 import Hero from "../components/Hero"
-import loadIntlMessages from "../utils/loadIntlMessages"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import LinkButton from "../components/LinkButton"
 import { FormattedMessage, useIntl } from "react-intl"
 import Layout from "../components/Layout"
@@ -39,9 +39,6 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
+export const getStaticProps = withDefaultStaticProps()
+
 export default NotFoundPage

@@ -11,7 +11,7 @@ import Statistic from "../components/Statistic"
 import { categoriesMessages } from "../data/categories"
 import type { Server, Category, Language, Day, Region } from "../types/api"
 import Hero from "../components/Hero"
-import loadIntlMessages from "../utils/loadIntlMessages"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import { formatNumber } from "../utils/numbers"
 import { fetchEndpoint } from "../utils/api"
 
@@ -700,10 +700,6 @@ const ServerFilters = ({
   )
 }
 
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
+export const getStaticProps = withDefaultStaticProps()
 
 export default Servers

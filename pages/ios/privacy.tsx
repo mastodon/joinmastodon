@@ -1,7 +1,7 @@
 import BasicPage from "../../components/BasicPage"
 import Head from "next/head"
 import Hero from "../../components/Hero"
-import loadIntlMessages from "../../utils/loadIntlMessages"
+import { withDefaultStaticProps } from "../../utils/defaultStaticProps"
 import Layout from "../../components/Layout"
 
 /** This page does not require translations */
@@ -36,9 +36,5 @@ const Privacy = () => (
     </div>
   </Layout>
 )
-export async function getStaticProps(ctx) {
-  return {
-    props: { intlMessages: await loadIntlMessages(ctx) },
-  }
-}
+export const getStaticProps = withDefaultStaticProps()
 export default Privacy
