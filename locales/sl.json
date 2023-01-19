@@ -117,7 +117,7 @@
   "servers.getting_started.safe_for_all.body": "Strežnikov ne moremo nadzirati, lahko pa nadziramo, kaj promoviramo na tej strani. Naša organizacija vas bo usmerjala le k strežnikom, ki so vseskozi zavezani k zmernosti glede rasizma, seksizma in transfobije.",
   "servers.getting_started.safe_for_all.title": "Varno za vse",
   "servers.getting_started.servers": "Prvi korak predstavlja odločitev, na katerem strežniku želite ustvariti svoj račun. Vsak strežnik upravlja neodvisna organizacija ali posameznik in med seboj se lahko razlikujejo glede na politiko zmernosti.",
-  "servers.hero.body": "Mastodon ni eno samo spletišče. Da bi ga uporabljali, morate ustvariti račun pri ponudniku (imenujemo jih <b>strežniki</b>), ki vam omogoča povezovanje z drugimi v omrežju Mastodon.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "Poiščite, kje se želite prijaviti za decentralizirano družbeno omrežje Mastodon.",
   "servers.page_title": "Strežniki",
   "silver_sponsor": "Srebrni sponzor",
