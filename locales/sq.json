@@ -117,7 +117,7 @@
   "servers.getting_started.safe_for_all.body": "S’i kontrollojmë dot shërbyesit, por mund të kontrollojmë ç’promovojnë në këtë faqe. Enti ynë do t’ju tregojë vetëm shërbyes që janë të përkushtuar pa lëkundje në moderim kundër racizmit, seksizmit dhe transfobisë.",
   "servers.getting_started.safe_for_all.title": "I parrezik për këdo",
   "servers.getting_started.servers": "Hapi i parë është të vendoset te cili shërbyes do të donit të krijohej llogaria juaj. Çdo shërbyes mbahet në punë nga një ent apo individ i pavarur dhe mund të ndryshojnë nga njëri-tjetri për sa i përket rregullave të moderimit.",
-  "servers.hero.body": "Mastodon-i s’është një saj i vetëm. Për ta përdorur, ju duhet të krijoni një llogari me një shërbim&mdash;i quajmë <b>shërbyes</b>&mdash;që ju lejon të lidheni me persona të tjerë përmes Mastodon-it.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "Gjeni ku të regjistroheni për rrjetin e decentralizuar shoqëror Mastodon.",
   "servers.page_title": "Shërbyes",
   "silver_sponsor": "Sponsor i argjendtë",
