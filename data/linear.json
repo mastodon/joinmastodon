@@ -51,26 +51,8 @@
         "parent": null
       },
       {
-        "id": "MAS-34",
-        "title": "Add option for Explore not to be the landing page",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-29",
-        "title": "Add confirmation screen to report handling flow",
-        "priority": 3,
-        "parent": null
-      },
-      {
         "id": "MAS-28",
         "title": "Add progress report to imports",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-27",
-        "title": "Add ability to edit media metadata when editing posts",
         "priority": 3,
         "parent": null
       },
@@ -500,6 +482,27 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "MAS-27",
+        "title": "Add ability to edit media metadata when editing posts",
+        "priority": 3,
+        "completedAt": "2023-01-18T16:28:42.566Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-29",
+        "title": "Add confirmation screen to report handling flow",
+        "priority": 3,
+        "completedAt": "2023-01-18T16:28:33.237Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-34",
+        "title": "Add option for Explore not to be the landing page",
+        "priority": 3,
+        "completedAt": "2023-01-18T16:28:30.772Z",
+        "parent": null
+      },
       {
         "id": "AND-20",
         "title": "Explore tab does not paginate",
