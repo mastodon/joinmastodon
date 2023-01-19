@@ -117,7 +117,7 @@
   "servers.getting_started.safe_for_all.body": "Ми не можемо контролювати сервери, але ми можемо контролювати те, що ми просуваємо на цій сторінці. Наша організація вкаже вам тільки ті сервери, які послідовно прихильні стримуванню расизму, сексизму і трансфобії.",
   "servers.getting_started.safe_for_all.title": "Безпечно для всіх",
   "servers.getting_started.servers": "Першим кроком є вибір сервера, на якому ви хотіли б зареєструватися. Кожен сервер керується незалежною організацією або окремими особами та може відрізнятися правилами користування.",
-  "servers.hero.body": "Mastodon не є одним сайтом. Для користування вам потрібно створити обліковий запис у провайдера &mdash;ми називаємо їх <b>серверами</b>&mdash;, який дозволяє вам спілкуватися з іншими людьми по всьому Mastodon.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "Знайдіть, де зареєструватися в децентралізованій соціальній мережі Mastodon.",
   "servers.page_title": "Сервери",
   "silver_sponsor": "Срібний спонсор",
