@@ -117,7 +117,7 @@
   "servers.getting_started.safe_for_all.body": "我們無法控制伺服器，但可以控制在此頁上推廣的內容。本組織只會帶領您到致力反對種族主義、性別歧視和跨性別恐懼症的伺服器。",
   "servers.getting_started.safe_for_all.title": "人人安全",
   "servers.getting_started.servers": "第一步是決定您想在哪個伺服器上建立帳戶。每台伺服器均由獨立的組織或人士經營，審核政策可能有所不同。",
-  "servers.hero.body": "Mastodon 不是一個單一的網站。您需要在提供者處建立帳戶來使用它。我們稱它為<b>伺服器</b>，它可以讓您與 Mastodon 上的人聯繫。",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "尋找可以註冊去中心化社群網絡 Mastodon 的地方。",
   "servers.page_title": "伺服器",
   "silver_sponsor": "銀級贊助者",
