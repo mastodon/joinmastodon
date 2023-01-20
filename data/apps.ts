@@ -101,7 +101,7 @@ export const apps: appsList = {
       released_on: "Jan 19, 2023",
       name: "Ice Cubes",
       icon: icecubes,
-      url: "https://appstoreconnect.apple.com/apps/6444915884",
+      url: "https://apps.apple.com/us/app/ice-cubes-for-mastodon/id6444915884",
     },
   ],
   web: [
@@ -137,12 +137,6 @@ export const apps: appsList = {
       name: "Bitlbee-Mastodon",
       icon: bitlbee,
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
-    },
-    {
-      released_on: "Jan 19, 2023",
-      name: "Ice Cubes (Mac)",
-      icon: icecubes,
-      url: "https://appstoreconnect.apple.com/apps/6444915884",
     },
   ],
   sailfish: [
