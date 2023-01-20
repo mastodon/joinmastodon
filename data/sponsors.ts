@@ -4,6 +4,11 @@ const sponsors = {
   additionalFunding: [],
   platinum: [
     {
+      url: "https://www.fastly.com/",
+      logo: require("../public/sponsors/fastly.svg"),
+      name: "Fastly",
+    }, // Custom/other
+    {
       url: "https://mobi.com/",
       logo: require("../public/sponsors/mobi-across-big.png"),
       name: "Mobi",
