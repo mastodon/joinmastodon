@@ -17,6 +17,7 @@ import sengi from "../public/apps/sengi.png"
 import metatext from "../public/apps/metatext.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
+import icecubes from "../public/apps/icecubes.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -95,6 +96,12 @@ export const apps: appsList = {
       name: "tooot",
       icon: tooot,
       url: "https://apps.apple.com/us/app/tooot/id1549772269",
+    },
+    {
+      released_on: "Jan 19, 2023",
+      name: "Ice Cubes",
+      icon: icecubes,
+      url: "https://apps.apple.com/us/app/ice-cubes-for-mastodon/id6444915884",
     },
   ],
   web: [
