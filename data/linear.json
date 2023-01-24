@@ -15,12 +15,6 @@
         "parent": null
       },
       {
-        "id": "MAS-35",
-        "title": "Rename \"Everything\" in OAuth permissions",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "MAS-30",
         "title": "Add role badges to profiles",
         "priority": 2,
@@ -482,6 +476,13 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "MAS-35",
+        "title": "Rename \"Everything\" in OAuth permissions",
+        "priority": 2,
+        "completedAt": "2023-01-23T14:52:16.834Z",
+        "parent": null
+      },
       {
         "id": "MAS-27",
         "title": "Add ability to edit media metadata when editing posts",
