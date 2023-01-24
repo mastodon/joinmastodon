@@ -18,6 +18,7 @@ import metatext from "../public/apps/metatext.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
+import tootdesk from "../public/apps/tootdesk.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -102,6 +103,12 @@ export const apps: appsList = {
       name: "Ice Cubes",
       icon: icecubes,
       url: "https://apps.apple.com/us/app/ice-cubes-for-mastodon/id6444915884",
+    },
+    {
+      released_on: "Jan 25, 2023",
+      name: "TootDesk",
+      icon: tootdesk,
+      url: "https://apps.apple.com/jp/app/tootdesk/id1591748028?",
     },
   ],
   web: [
