@@ -18,6 +18,7 @@ import metatext from "../public/apps/metatext.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
+import elk from "../public/apps/elk.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -107,6 +108,7 @@ export const apps: appsList = {
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
+    { name: "Elk", icon: elk, url: "https://elk.zone" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
@@ -138,6 +140,7 @@ export const apps: appsList = {
       icon: bitlbee,
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
     },
+    { name: "Elk", icon: elk, url: "https://github.com/elk-zone/elk-native/releases" },
   ],
   sailfish: [
     {
