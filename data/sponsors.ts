@@ -17,7 +17,7 @@ const sponsors = {
       url: "https://medium.com/",
       logo: require("../public/sponsors/medium.png"),
       name: "Medium",
-    },
+    }, // Custom
     {
       url: "https://www.ramotion.com/agency/ui-ux-design",
       logo: require("../public/sponsors/truevendor.png"),
@@ -44,11 +44,6 @@ const sponsors = {
       name: "Sex Toy Collective",
     },
     {
-      url: "https://www.vpsserver.com/",
-      logo: require("../public/sponsors/vpsserver.png"),
-      name: "VPS Server",
-    },
-    {
       url: "https://www.bestecasinosonline.at/",
       name: "Online Casino Österreich",
       logo: require("../public/sponsors/BesteCasinosOnline.webp"),
@@ -72,11 +67,6 @@ const sponsors = {
       url: "https://www.auscasinos.com/new/",
       logo: require("../public/sponsors/auscasinos.png"),
       name: "AusCasinos.com New Site Section",
-    }, // Custom
-    {
-      url: "https://www.joylovedolls.com/",
-      logo: require("../public/sponsors/jld_psd_logo_orig_black.png"),
-      name: "Joy Love Dolls",
     }, // Custom
     {
       url: "https://kasynohex.com/kasyna-online/",
@@ -129,11 +119,6 @@ const sponsors = {
       name: "Golden Eagle Coins",
     }, // Custom
     {
-      url: "https://brightstarsystems.com/",
-      logo: require("../public/sponsors/brightstarsystems.png"),
-      name: "BrightStar Systems",
-    }, // Custom
-    {
       url: "https://apernet.io/",
       logo: require("../public/sponsors/AperNetLogo.svg"),
       name: "Aperture Internet Laboratory",
@@ -164,15 +149,10 @@ const sponsors = {
       name: "Complete SEO",
     }, // Custom
     {
-      url: "https://www.drinkingquest.com/",
-      logo: require("../public/sponsors/jason-anarchy-games.jpg"),
-      name: "Jason Anarchy Games",
-    }, // Custom
-    {
       url: "https://intellifluence.com/",
       logo: require("../public/sponsors/intellifluence logos.png"),
       name: "Intellifluence supports all influencers",
-    },
+    }, // Custom
     {
       url: "https://toot.io/mastodon_hosting.html",
       logo: require("../public/sponsors/toot_io_logo.png"),
@@ -239,11 +219,6 @@ const sponsors = {
       url: "https://iboysoft.com/",
       logo: require("../public/sponsors/iboysoft-logo-dark2.png"),
       name: "iBoysoft Data Recovery",
-    }, // Custom
-    {
-      url: "https://nettikasinolista.com/",
-      logo: require("../public/sponsors/nettikasinolista-mv.png"),
-      name: "Nettikasino",
     }, // Custom
     {
       url: "http://doshfunding.com/",
