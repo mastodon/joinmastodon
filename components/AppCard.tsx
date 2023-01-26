@@ -1,10 +1,10 @@
 import Image from "next/legacy/image"
 import { FormattedMessage } from "react-intl"
-import AndroidCategory from "../public/categories/android.svg?inline"
-import DesktopCategory from "../public/categories/desktop.svg?inline"
-import IosCategory from "../public/categories/ios.svg?inline"
-import SailfishCategory from "../public/categories/sailfish.svg?inline"
-import WebCategory from "../public/categories/web.svg?inline"
+import { AndroidCategory } from "../components/categories/AndroidCategory"
+import { DesktopCategory } from "../components/categories/DesktopCategory"
+import { IosCategory } from "../components/categories/IosCategory"
+import { SailfishCategory } from "../components/categories/SailfishCategory"
+import { WebCategory } from "../components/categories/WebCategory"
 
 export interface AppCardProps {
   name: React.ReactNode
@@ -56,15 +56,15 @@ export const AppCard: React.FC<AppCardProps> = ({
       {activeCategory === "all" ? (
         <span className="app-category absolute top-0 p-1 text-blurple-500">
           {category === "desktop" ? (
-            <DesktopCategory width="24" height="24" />
+            <DesktopCategory />
           ) : category === "web" ? (
-            <WebCategory width="24" height="24" />
+            <WebCategory />
           ) : category === "ios" ? (
-            <IosCategory width="24" height="24" />
+            <IosCategory />
           ) : category === "android" ? (
-            <AndroidCategory width="24" height="24" />
+            <AndroidCategory />
           ) : category === "sailfish" ? (
-            <SailfishCategory width="24" height="24" />
+            <SailfishCategory />
           ) : (
             ""
           )}
