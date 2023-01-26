@@ -42,7 +42,7 @@ export const AppCard = (activeCategory, { name, icon, url, paid, category }) => 
         </h3>
       </div>
       {activeCategory === 'all' ? (
-        <span className="absolute top-0 p-1 text-blurple-500">
+        <span className="app-category absolute top-0 p-1 text-blurple-500">
           {category === 'desktop' ? (
             <DesktopCategory width="24" height="24" />
           ) : category === 'web' ? (

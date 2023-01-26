@@ -132,11 +132,11 @@
   }
 }
 
-span.absolute:has(svg) {
+span.app-category {
   right: 0;
 }
 
-html[dir="rtl"] span.absolute:has(svg) {
+html[dir="rtl"] span.app-category {
   left: 0;
   right: auto;
 }
