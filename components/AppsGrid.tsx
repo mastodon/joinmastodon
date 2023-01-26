@@ -87,7 +87,7 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
         />
       </div>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
-        {sortedAndFilteredApps.map(AppCard)}
+        {sortedAndFilteredApps.map(entry => AppCard(activeCategory, entry))}
       </div>
     </div>
   )

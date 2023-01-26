@@ -1,5 +1,10 @@
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
+import AndroidCategory from "../public/categories/android.svg?inline"
+import DesktopCategory from "../public/categories/desktop.svg?inline"
+import IosCategory from "../public/categories/ios.svg?inline"
+import SailfishCategory from "../public/categories/sailfish.svg?inline"
+import WebCategory from "../public/categories/web.svg?inline"
 
 export type AppCardProps = {
   name: React.ReactNode
@@ -12,14 +17,14 @@ export type AppCardProps = {
  * Renders a card with app data.
  * Layout (width, height, positioning) can be set from the parent.
  */
-export const AppCard = ({ name, icon, url, paid }) => {
+export const AppCard = (activeCategory, { name, icon, url, paid, category }) => {
   return (
     <a
       key={url}
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-stretch justify-start gap-4 rounded border border-gray-3 bg-white p-2 hover:bg-gray-4 md:p-4"
+      className="flex items-stretch justify-start gap-4 rounded border border-gray-3 bg-white p-2 hover:bg-gray-4 md:p-4 relative"
     >
       <div className="h-[3.5rem] w-[3.5rem] flex-shrink-0 overflow-hidden rounded-sm">
         <Image src={icon} alt={`Logo for ${name}`} />
@@ -36,6 +41,21 @@ export const AppCard = ({ name, icon, url, paid }) => {
           <span dir="ltr">{name}</span>
         </h3>
       </div>
+      {activeCategory === 'all' ? (
+        <span className="absolute top-0 p-1 text-blurple-500">
+          {category === 'desktop' ? (
+            <DesktopCategory width="24" height="24" />
+          ) : category === 'web' ? (
+            <WebCategory width="24" height="24" />
+          ) : category === 'ios' ? (
+            <IosCategory width="24" height="24" />
+          ) : category === 'android' ? (
+            <AndroidCategory width="24" height="24" />
+          ) : category === 'sailfish' ? (
+            <SailfishCategory width="24" height="24" />
+          ) : '' }
+        </span>
+      ) : '' }
     </a>
   )
 }

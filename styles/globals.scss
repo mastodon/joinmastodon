@@ -131,3 +131,12 @@
     @apply bg-blurple-500;
   }
 }
+
+span.absolute:has(svg) {
+  right: 0;
+}
+
+html[dir="rtl"] span.absolute:has(svg) {
+  left: 0;
+  right: auto;
+}
