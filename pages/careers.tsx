@@ -56,7 +56,7 @@ const Careers = () => {
               <div className="col-span-12 md:col-span-4">
                 <h2 className="h3 mb-4">Work with us</h2>
                 <p className="b1 mb-4">
-                  Mastodon is German non-profit with a remote-only, primarily
+                  Mastodon is a German non-profit with a remote-only, primarily
                   English-speaking team distributed across the world.
                 </p>
                 <p className="b1 mb-6">
