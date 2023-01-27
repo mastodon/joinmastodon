@@ -19,6 +19,11 @@ const sponsors = {
       name: "Medium",
     }, // Custom
     {
+      url: "https://oak.is/",
+      logo: require("../public/sponsors/oak.svg"),
+      name: "Oak Studios",
+    }, // Custom/other
+    {
       url: "https://www.ramotion.com/agency/ui-ux-design",
       logo: require("../public/sponsors/truevendor.png"),
       name: "Ramotion",
@@ -294,6 +299,16 @@ const sponsors = {
       url: "https://sdf.org/",
       logo: require("../public/sponsors/sdf.png"),
       name: "SDF Public Access UNIX System",
+    }, // Custom
+    {
+      url: "http://awisee.com",
+      logo: require("../public/sponsors/awisee.jpg"),
+      name: "AWISEE.com",
+    }, // Custom
+    {
+      url: "https://awisee.agency/",
+      logo: require("../public/sponsors/awisee2.jpg"),
+      name: "Data-Driven SEO Agency",
     }, // Custom
   ],
   silver: patreonData.silver,
