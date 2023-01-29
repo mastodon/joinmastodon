@@ -376,6 +376,12 @@
         "parent": null
       },
       {
+        "id": "MAS-48",
+        "title": "Quote posts",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "MAS-45",
         "title": "Home feed digest",
         "priority": 3,
