@@ -108,7 +108,7 @@ export const apps: appsList = {
       released_on: "Jan 25, 2023",
       name: "TootDesk",
       icon: tootdesk,
-      url: "https://apps.apple.com/jp/app/tootdesk/id1591748028?",
+      url: "https://apps.apple.com/app/tootdesk/id1591748028",
     },
   ],
   web: [
