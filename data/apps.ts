@@ -18,6 +18,7 @@ import metatext from "../public/apps/metatext.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
+import buffer from "../public/apps/buffer.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -62,6 +63,12 @@ export const apps: appsList = {
       icon: tooot,
       url: "https://play.google.com/store/apps/details?id=com.xmflsct.app.tooot",
     },
+    {
+      released_on: "Jan 31st, 2023",
+      name: "Buffer",
+      icon: buffer,
+      url: "https://play.google.com/store/apps/details?id=org.buffer.android",
+    },
   ],
   ios: [
     {
@@ -103,10 +110,17 @@ export const apps: appsList = {
       icon: icecubes,
       url: "https://apps.apple.com/us/app/ice-cubes-for-mastodon/id6444915884",
     },
+    {
+      released_on: "Jan 31st, 2023",
+      name: "Buffer",
+      icon: buffer,
+      url: "https://apps.apple.com/us/app/buffer-plan-schedule-posts/id490474324",
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
+    { name: "Buffer", icon: buffer, url: "https://buffer.com" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
