@@ -34,6 +34,8 @@ export type appsList = {
     released_on?: string
     /** whether the app requires a fee to access. defaults to false */
     paid?: boolean
+    /** whether the app should be hidden from all, used to avoid duplicates */
+    hidden_from_all?: boolean
   }[]
 }
 export const apps: appsList = {
@@ -68,6 +70,7 @@ export const apps: appsList = {
       name: "Buffer",
       icon: buffer,
       url: "https://play.google.com/store/apps/details?id=org.buffer.android",
+      hidden_from_all: true,
     },
   ],
   ios: [
@@ -115,6 +118,7 @@ export const apps: appsList = {
       name: "Buffer",
       icon: buffer,
       url: "https://apps.apple.com/us/app/buffer-plan-schedule-posts/id490474324",
+      hidden_from_all: true,
     },
   ],
   web: [
