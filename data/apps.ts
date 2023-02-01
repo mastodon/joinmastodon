@@ -125,7 +125,8 @@ export const apps: appsList = {
       released_on: "Jan 24, 2023",
       name: "Ivory",
       icon: ivory,
-      url: "https://apps.apple.com/us/app/ivory-for-mastodon-by-tapbots/id6444602274"
+      url: "https://apps.apple.com/us/app/ivory-for-mastodon-by-tapbots/id6444602274",
+      paid: true
     },
   ],
   web: [
