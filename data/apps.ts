@@ -19,6 +19,7 @@ import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
 import buffer from "../public/apps/buffer.png"
+import ivory from "../public/apps/ivory.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -119,6 +120,12 @@ export const apps: appsList = {
       icon: buffer,
       url: "https://apps.apple.com/us/app/buffer-plan-schedule-posts/id490474324",
       hidden_from_all: true,
+    },
+    {
+      released_on: "Jan 24, 2023",
+      name: "Ivory",
+      icon: ivory,
+      url: "https://apps.apple.com/us/app/ivory-for-mastodon-by-tapbots/id6444602274"
     },
   ],
   web: [
