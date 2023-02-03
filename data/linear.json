@@ -9,6 +9,12 @@
         "parent": null
       },
       {
+        "id": "MAS-53",
+        "title": "Add status page setting",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "IOS-37",
         "title": "Home Screen Widgets",
         "priority": 2,
@@ -48,6 +54,12 @@
         "id": "IOS-2",
         "title": "Post editing",
         "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-49",
+        "title": "Optimize batch file deletion",
+        "priority": 3,
         "parent": null
       },
       {
@@ -500,6 +512,20 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "MAS-60",
+        "title": "Report open connections in streaming API",
+        "priority": 2,
+        "completedAt": "2023-02-03T23:09:41.669Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-50",
+        "title": "Remove avatar from OpenGraph tags",
+        "priority": 2,
+        "completedAt": "2023-02-03T09:16:52.270Z",
+        "parent": null
+      },
       {
         "id": "MAS-35",
         "title": "Rename \"Everything\" in OAuth permissions",
