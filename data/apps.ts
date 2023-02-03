@@ -20,6 +20,7 @@ import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
+import litterbox from "../public/apps/litterbox.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -133,6 +134,7 @@ export const apps: appsList = {
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
+    { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
