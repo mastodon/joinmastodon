@@ -20,6 +20,7 @@ import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
+import megalodon from "../public/apps/megalodon.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -65,6 +66,12 @@ export const apps: appsList = {
       name: "tooot",
       icon: tooot,
       url: "https://play.google.com/store/apps/details?id=com.xmflsct.app.tooot",
+    },
+    {
+      released_on: "Nov 28, 2022",
+      name: "Megalodon",
+      icon: megalodon,
+      url: "https://play.google.com/store/apps/details?id=org.joinmastodon.android.sk",
     },
     {
       released_on: "Jan 31st, 2023",
