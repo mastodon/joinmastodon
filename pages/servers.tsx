@@ -31,10 +31,10 @@ const Servers = () => {
   const { locale } = useRouter()
   const [filters, setFilters] = useState({
     language: locale === "en" ? "en" : "",
-    category: "",
+    category: "general",
     region: "",
     ownership: "",
-    registrations: "",
+    registrations: "instant",
   })
 
   const params = new URLSearchParams(filters)
@@ -474,10 +474,15 @@ const ServerList = ({ servers }) => {
                 .map((_el, i) => <ServerCard key={i} />)
             : servers.data
                 .sort((a, b) => {
-                  const aa = Math.abs(DUNBAR - Math.log(a.last_week_users))
-                  const bb = Math.abs(DUNBAR - Math.log(b.last_week_users))
-
-                  return aa > bb ? 1 : aa < bb ? -1 : 0
+                  if (a.approval_required === b.approval_required) {
+                    return b.last_week_users - a.last_week_users
+                  } else if (a.approval_required) {
+                    return 1
+                  } else if (b.approval_required) {
+                    return -1
+                  } else {
+                    return b.last_week_users - a.last_week_users
+                  }
                 })
                 .map((server) => (
                   <ServerCard key={server.domain} server={server} />
