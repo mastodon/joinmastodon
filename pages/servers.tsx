@@ -263,7 +263,7 @@ const Servers = () => {
               label={
                 <FormattedMessage
                   id="wizard.filter_by_registrations"
-                  defaultMessage="Sign-up speed"
+                  defaultMessage="Sign-up process"
                 />
               }
               onChange={(v) => {
