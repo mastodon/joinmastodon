@@ -101,7 +101,7 @@ const Servers = () => {
       }),
     },
     {
-      value: "",
+      value: "all",
       label: intl.formatMessage({
         id: "wizard.filter.sign_up.all",
         defaultMessage: "All",
@@ -269,7 +269,7 @@ const Servers = () => {
               onChange={(v) => {
                 setFilters({ ...filters, registrations: v })
               }}
-              value={filters.registrations}
+              value={filters.registrations || "instant" }
               options={registrationsOptions}
             />
 
