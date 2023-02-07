@@ -87,13 +87,6 @@ const Servers = () => {
 
   const registrationsOptions = [
     {
-      value: "",
-      label: intl.formatMessage({
-        id: "wizard.filter.sign_up.all",
-        defaultMessage: "All",
-      }),
-    },
-    {
       value: "instant",
       label: intl.formatMessage({
         id: "wizard.filter.sign_up.instant",
@@ -105,6 +98,13 @@ const Servers = () => {
       label: intl.formatMessage({
         id: "wizard.filter.sign_up.manual",
         defaultMessage: "Manual review",
+      }),
+    },
+    {
+      value: "",
+      label: intl.formatMessage({
+        id: "wizard.filter.sign_up.all",
+        defaultMessage: "All",
       }),
     },
   ]
