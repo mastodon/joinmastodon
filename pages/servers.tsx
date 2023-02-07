@@ -248,15 +248,15 @@ const Servers = () => {
             <SelectMenu
               label={
                 <FormattedMessage
-                  id="wizard.filter_by_structure"
-                  defaultMessage="Legal structure"
+                  id="wizard.filter_by_language"
+                  defaultMessage="Language"
                 />
               }
               onChange={(v) => {
-                setFilters({ ...filters, ownership: v })
+                setFilters({ ...filters, language: v })
               }}
-              value={filters.ownership}
-              options={ownershipOptions}
+              value={filters.language}
+              options={apiLanguages.data || [defaultOption]}
             />
 
             <SelectMenu
@@ -276,15 +276,15 @@ const Servers = () => {
             <SelectMenu
               label={
                 <FormattedMessage
-                  id="wizard.filter_by_language"
-                  defaultMessage="Language"
+                  id="wizard.filter_by_structure"
+                  defaultMessage="Legal structure"
                 />
               }
               onChange={(v) => {
-                setFilters({ ...filters, language: v })
+                setFilters({ ...filters, ownership: v })
               }}
-              value={filters.language}
-              options={apiLanguages.data || [defaultOption]}
+              value={filters.ownership}
+              options={ownershipOptions}
             />
           </div>
           <div className="col-span-4 mb-8 md:col-span-3 md:mb-0">
