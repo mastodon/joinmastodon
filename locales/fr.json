@@ -89,7 +89,7 @@
   "roadmap.page_description": "Découvrez ce sur quoi nous sommes en train de travailler pour améliorer Mastodon",
   "roadmap.page_title": "Feuille de route publique",
   "roadmap.state.backlog": "En exploration",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Récemment terminé",
   "roadmap.state.started": "En cours",
   "roadmap.state.unstarted": "Prévu",
   "roadmap.suggest_a_feature": "Suggérer une fonctionnalité",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Instantanée",
   "wizard.filter.sign_up.manual": "Approbation manuelle",
   "wizard.filter_by_language": "Langue",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Processus d'inscription",
   "wizard.filter_by_structure": "Structure légale",
   "wizard.no_results": "Il semble qu’il n’y ait actuellement aucun serveur correspondant à vos critères de recherche. Rappelez-voud que nous n’affichons qu’un ensemble de serveurs supervisés qui acceptent actuellement de nouvelles inscriptions."
 }
