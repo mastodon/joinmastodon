@@ -34,7 +34,7 @@ const Servers = () => {
     category: "general",
     region: "",
     ownership: "",
-    registrations: "instant",
+    registrations: "",
   })
 
   const params = new URLSearchParams(filters)
