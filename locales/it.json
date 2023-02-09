@@ -89,7 +89,7 @@
   "roadmap.page_description": "Scopri a cosa stiamo lavorando su Mastodon",
   "roadmap.page_title": "Tabella di marcia pubblica",
   "roadmap.state.backlog": "In esplorazione",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Completati recentemente",
   "roadmap.state.started": "In corso",
   "roadmap.state.unstarted": "Pianificato",
   "roadmap.suggest_a_feature": "Suggerisci una funzionalità",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Immediata",
   "wizard.filter.sign_up.manual": "Revisione manuale",
   "wizard.filter_by_language": "Lingua",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Processo di registrazione",
   "wizard.filter_by_structure": "Struttura legale",
   "wizard.no_results": "Sembra che, al momento, non esistano server che soddisfino i tuoi criteri di ricerca. Tieni presente che mostriamo soltanto una serie curata di server che accetta, correntemente, le nuove registrazioni."
 }
