@@ -89,6 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "خارطة الطريق العمومية",
   "roadmap.state.backlog": "Exploring",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "In Progress",
   "roadmap.state.unstarted": "Planned",
   "roadmap.suggest_a_feature": "اقتراح ميزة",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "آني",
   "wizard.filter.sign_up.manual": "مراجعة يدوية",
   "wizard.filter_by_language": "اللغة",
-  "wizard.filter_by_registrations": "سرعة التسجيل",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "الهيكل القانوني",
   "wizard.no_results": "يبدو أنه لا توجد حاليا خوادم تناسب معايير البحث الخاصة بك. ضع في عين الاعتبارن أننا نعرض فقط مجموعة منتقات من الخوادم التي تقبل حاليا تسجيلات جديدة."
 }
