@@ -89,7 +89,7 @@
   "roadmap.page_description": "了解我們在 Mastodon 中的工作",
   "roadmap.page_title": "公開的開發藍圖",
   "roadmap.state.backlog": "探索",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "最近完成",
   "roadmap.state.started": "進行中",
   "roadmap.state.unstarted": "計畫",
   "roadmap.suggest_a_feature": "提出建議",
@@ -118,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "我們無法控制伺服器，但可以控制在此頁上推廣的內容。本組織只會帶領您到致力反對種族主義、性別歧視和跨性別恐懼症的伺服器。",
   "servers.getting_started.safe_for_all.title": "人人安全",
   "servers.getting_started.servers": "第一步是決定您想在哪個伺服器上建立帳戶。每台伺服器均由獨立的組織或人士經營，審核政策可能有所不同。",
-  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
+  "servers.hero.body": "Mastodon 不是一個單一的網站。您需要在提供者處建立帳戶來使用它。我們稱它為<b>伺服器</b>，它可以讓您與 Mastodon 上的人聯繫。",
   "servers.page_description": "尋找可以註冊去中心化社群網絡 Mastodon 的地方。",
   "servers.page_title": "伺服器",
   "silver_sponsor": "銀級贊助者",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "即時",
   "wizard.filter.sign_up.manual": "手動審核",
   "wizard.filter_by_language": "語言",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "註冊流程",
   "wizard.filter_by_structure": "法定架構",
   "wizard.no_results": "目前似乎沒有符合您搜尋條件的伺服器。請注意，我們僅顯示一組當前接受新註冊的伺服器。"
 }
