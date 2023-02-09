@@ -89,6 +89,7 @@
   "roadmap.page_description": "Erfahre, woran wir bei Mastodon arbeiten",
   "roadmap.page_title": "Öffentlicher Entwicklungsplan",
   "roadmap.state.backlog": "Erkundung",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "In Arbeit",
   "roadmap.state.unstarted": "Geplant",
   "roadmap.suggest_a_feature": "Funktion vorschlagen",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Sofort",
   "wizard.filter.sign_up.manual": "Manuelle Überprüfung",
   "wizard.filter_by_language": "Sprache",
-  "wizard.filter_by_registrations": "Registrierungsdauer",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Rechtsform",
   "wizard.no_results": "Es scheint, als gäbe es derzeit keine Server, die deinen Suchkriterien entsprechen. Beachte, dass wir nur eine Auswahl von Servern anzeigen, die derzeit neue Anmeldungen akzeptieren."
 }
