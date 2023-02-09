@@ -89,7 +89,7 @@
   "roadmap.page_description": "Isto é no que estamos traballando en Mastodon",
   "roadmap.page_title": "Plan público",
   "roadmap.state.backlog": "Explorar",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Completado recentemente",
   "roadmap.state.started": "En Curso",
   "roadmap.state.unstarted": "En Proxecto",
   "roadmap.suggest_a_feature": "Suxire unha funcionalidade",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Instantáneo",
   "wizard.filter.sign_up.manual": "Revisión manual",
   "wizard.filter_by_language": "Idioma",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Pasos para o rexistro",
   "wizard.filter_by_structure": "Estructura legal",
   "wizard.no_results": "Semella que non atopamos servidores que cumplan cos teus requisitos. Ten en conta que só se amosan servidores que verificamos e que actualmente aceptan novos rexistros."
 }
