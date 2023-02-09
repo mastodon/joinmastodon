@@ -89,6 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "Offentlig Fremdriftsplan",
   "roadmap.state.backlog": "Exploring",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "In Progress",
   "roadmap.state.unstarted": "Planned",
   "roadmap.suggest_a_feature": "Foreslå en funksjon",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Øyeblikkelig",
   "wizard.filter.sign_up.manual": "Manuell gjennomgang",
   "wizard.filter_by_language": "Språk",
-  "wizard.filter_by_registrations": "Registrerings hastighet",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Juridisk struktur",
   "wizard.no_results": "Ser ut til at det ikke er noen servere som passer dine søkekriterier. Husk på at vi bare viser et kurert sett med servere som for øyeblikket mottar nye signaturer."
 }
