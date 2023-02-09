@@ -89,7 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "Julkinen etenemissuunnitelma",
   "roadmap.state.backlog": "Exploring",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Hiljattain valmistunut",
   "roadmap.state.started": "In Progress",
   "roadmap.state.unstarted": "Planned",
   "roadmap.suggest_a_feature": "Ehdota ominaisuutta",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Välitön",
   "wizard.filter.sign_up.manual": "Manuaalinen hyväksyntä",
   "wizard.filter_by_language": "Kieli",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Rekisteröitymisprosessi",
   "wizard.filter_by_structure": "Oikeudellinen rakenne",
   "wizard.no_results": "Näyttää siltä, että tällä hetkellä ei ole palvelimia, jotka sopivat hakukriteereihisi. Otathan huomioon, että näytämme vain kuratoidun joukon palvelimia, jotka tällä hetkellä hyväksyvät uusia rekisteröitymisiä."
 }
