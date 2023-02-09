@@ -89,7 +89,7 @@
   "roadmap.page_description": "Mastodon'da ne üzerine çalıştığımızı öğrenin",
   "roadmap.page_title": "Genel Yol Haritası",
   "roadmap.state.backlog": "Keşif",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Yakın zamanda tamamlanan",
   "roadmap.state.started": "Sürüyor",
   "roadmap.state.unstarted": "Planlandı",
   "roadmap.suggest_a_feature": "Bir özellik öner",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Anlık",
   "wizard.filter.sign_up.manual": "Manuel inceleme",
   "wizard.filter_by_language": "Dil",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Kayıt süreci",
   "wizard.filter_by_structure": "Yasal yapı",
   "wizard.no_results": "Şu an da süzgecinize uyan bir sunucu mevcut değil gibi gözüküyor. Unutmayın ki şu an yeni kayıtları kabul eden seçilmiş bir sunucu kümesi görüntülüyoruz."
 }
