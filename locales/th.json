@@ -86,10 +86,10 @@
   "roadmap.ios": "ระบบ iOS",
   "roadmap.lead": "This is a glimpse into what we're working on and what we're planning to work on.",
   "roadmap.mastodon": "เว็บ / API",
-  "roadmap.page_description": "Learn what we are working on in Mastodon",
+  "roadmap.page_description": "เรียนรู้ว่าเรากำลังทำอะไรใน Mastodon",
   "roadmap.page_title": "โรดแม็ป สาธารณะ",
   "roadmap.state.backlog": "กำลังสำรวจ",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "สร้างเสร็จเรียบร้อย",
   "roadmap.state.started": "อยู่ระหว่างดำเนินการ",
   "roadmap.state.unstarted": "แผนที่วางไว้",
   "roadmap.suggest_a_feature": "แนะนำคุณสมบัติที่ต้องการให้มี",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "ทันที",
   "wizard.filter.sign_up.manual": "ตรวจสอบด้วยบุคคล",
   "wizard.filter_by_language": "ภาษา",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "ขั้นตอนการสมัคร",
   "wizard.filter_by_structure": "โครงสร้างตามกฎหมาย",
   "wizard.no_results": "ดูเหมือนว่าตอนนี้ไม่มีเซิร์ฟเวอร์ใด ๆ ที่ตรงกับการค้นหาของคุณ โปรดทราบว่าเราแสดงเฉพาะเซิร์ฟเวอร์บางส่วนที่คัดสรรแล้วและเปิดให้สร้างบัญชีใหม่เท่านั้น"
 }
