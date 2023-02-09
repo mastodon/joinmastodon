@@ -9,12 +9,6 @@
         "parent": null
       },
       {
-        "id": "MAS-53",
-        "title": "Add status page setting",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "IOS-37",
         "title": "Home Screen Widgets",
         "priority": 2,
@@ -41,12 +35,6 @@
       {
         "id": "MAS-15",
         "title": "Groups",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "IOS-21",
-        "title": "Lists",
         "priority": 2,
         "parent": null
       },
@@ -128,9 +116,21 @@
         "parent": null
       },
       {
+        "id": "IOS-21",
+        "title": "Lists",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "IOS-4",
         "title": "Follow and unfollow in post dropdowns",
         "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-62",
+        "title": "Confirmation screen with impact summary when suspending domain",
+        "priority": 3,
         "parent": null
       },
       {
@@ -388,6 +388,12 @@
         "parent": null
       },
       {
+        "id": "MAS-63",
+        "title": "Notify users when relationships are severed due to domain block",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "MAS-48",
         "title": "Quote posts",
         "priority": 3,
@@ -466,6 +472,12 @@
         "parent": null
       },
       {
+        "id": "MAS-68",
+        "title": "Hashtag annotations",
+        "priority": 4,
+        "parent": null
+      },
+      {
         "id": "MAS-38",
         "title": "End-to-end encrypted messages",
         "priority": 4,
@@ -512,6 +524,13 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "MAS-53",
+        "title": "Add status page setting",
+        "priority": 2,
+        "completedAt": "2023-02-04T03:56:09.206Z",
+        "parent": null
+      },
       {
         "id": "MAS-60",
         "title": "Report open connections in streaming API",
