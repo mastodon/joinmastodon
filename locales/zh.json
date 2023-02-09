@@ -89,6 +89,7 @@
   "roadmap.page_description": "了解我们对 Mastodon 正在进行的工作",
   "roadmap.page_title": "Public Roadmap",
   "roadmap.state.backlog": "Exploring",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "进行中",
   "roadmap.state.unstarted": "已计划",
   "roadmap.suggest_a_feature": "提出建议",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "立即开通",
   "wizard.filter.sign_up.manual": "人工审核",
   "wizard.filter_by_language": "语言",
-  "wizard.filter_by_registrations": "注册速度",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "组织类型",
   "wizard.no_results": "目前似乎没有符合您搜索条件的服务器。 请知晓，我们只显示部分符合要求，并且接受新用户注册的服务器。"
 }
