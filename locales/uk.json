@@ -89,7 +89,7 @@
   "roadmap.page_description": "Дізнайтеся над чим ми працюємо в Mastodon",
   "roadmap.page_title": "Публічний графік-дій",
   "roadmap.state.backlog": "Огляд",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Нещодавно завершені",
   "roadmap.state.started": "Виконується",
   "roadmap.state.unstarted": "Заплановано",
   "roadmap.suggest_a_feature": "Запропонувати функцію",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Миттєво",
   "wizard.filter.sign_up.manual": "Ручна перевірка",
   "wizard.filter_by_language": "Мова",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Процес реєстрації",
   "wizard.filter_by_structure": "Правова структура",
   "wizard.no_results": "Схоже, що зараз немає серверів, які відповідають вашим критеріям пошуку. Зверніть увагу, що ми показуємо тільки курований набір серверів, які зараз приймають нові реєстрації."
 }
