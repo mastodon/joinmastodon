@@ -89,6 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "Public Roadmap",
   "roadmap.state.backlog": "Exploring",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "In Progress",
   "roadmap.state.unstarted": "Planned",
   "roadmap.suggest_a_feature": "Suggest a feature",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Sa bhad",
   "wizard.filter.sign_up.manual": "Lèirmheas a làimh",
   "wizard.filter_by_language": "Cànan",
-  "wizard.filter_by_registrations": "Luaths a’ chlàraidh",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Structar fon lagh",
   "wizard.no_results": "Tha colas nach eil frithealaiche an-seo a fhreagras ris na cumhaidhean luirg agad aig an àm seo. Thoir an aire nach seall sinn ach liosta de fhrithealaichean air an do rinn sinn lèirmheas agus a tha a’ gabhail ri clàraidhean ùra an-dràsta."
 }
