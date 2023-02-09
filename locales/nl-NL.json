@@ -89,7 +89,7 @@
   "roadmap.page_description": "Lees waar we in Mastodon aan werken",
   "roadmap.page_title": "Openbare roadmap",
   "roadmap.state.backlog": "Ontdekken",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Onlangs voltooid",
   "roadmap.state.started": "In uitvoering",
   "roadmap.state.unstarted": "Gepland",
   "roadmap.suggest_a_feature": "Een functie voorstellen",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Meteen",
   "wizard.filter.sign_up.manual": "Handmatige beoordeling",
   "wizard.filter_by_language": "Taal",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Aanmeldproces",
   "wizard.filter_by_structure": "Rechtsvorm",
   "wizard.no_results": "Het lijkt er op dat er momenteel geen servers zijn die aan jouw zoekcriteria voldoen. Let op dat we alleen een gepersonaliseerde set servers weergeven die momenteel nieuwe aanmeldingen accepteren."
 }
