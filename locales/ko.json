@@ -89,6 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "공개 로드맵",
   "roadmap.state.backlog": "훑어보는 중",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "진행 중",
   "roadmap.state.unstarted": "계획됨",
   "roadmap.suggest_a_feature": "기능 제안",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "즉시",
   "wizard.filter.sign_up.manual": "수동 리뷰",
   "wizard.filter_by_language": "언어",
-  "wizard.filter_by_registrations": "가입 속도",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "운영주체",
   "wizard.no_results": "Seems like there are currently no servers that fit your search criteria. Mind that we only display a curated set of servers that currently accept new sign-ups."
 }
