@@ -89,6 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "โรดแม็ป สาธารณะ",
   "roadmap.state.backlog": "กำลังสำรวจ",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "อยู่ระหว่างดำเนินการ",
   "roadmap.state.unstarted": "แผนที่วางไว้",
   "roadmap.suggest_a_feature": "แนะนำคุณสมบัติที่ต้องการให้มี",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "ทันที",
   "wizard.filter.sign_up.manual": "ตรวจสอบด้วยบุคคล",
   "wizard.filter_by_language": "ภาษา",
-  "wizard.filter_by_registrations": "ความเร็วสร้างบัญชี",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "โครงสร้างตามกฎหมาย",
   "wizard.no_results": "ดูเหมือนว่าตอนนี้ไม่มีเซิร์ฟเวอร์ใด ๆ ที่ตรงกับการค้นหาของคุณ โปรดทราบว่าเราแสดงเฉพาะเซิร์ฟเวอร์บางส่วนที่คัดสรรแล้วและเปิดให้สร้างบัญชีใหม่เท่านั้น"
 }
