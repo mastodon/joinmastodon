@@ -89,6 +89,7 @@
   "roadmap.page_description": "Fêr bibe em çi dixebitin li ser Mastodon",
   "roadmap.page_title": "Nexşeya rê yên gelemperî",
   "roadmap.state.backlog": "Vekoladin",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "Di pêvajoyê de",
   "roadmap.state.unstarted": "Plankirî",
   "roadmap.suggest_a_feature": "Taybetmendiyekê pêşniyar bike",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Demkî",
   "wizard.filter.sign_up.manual": "Nirxandinê bi destan",
   "wizard.filter_by_language": "Ziman",
-  "wizard.filter_by_registrations": "Leza tomarkirinê",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Avahiya yasayî",
   "wizard.no_results": "Xuye ku heya niha rajekarek ku li gorî pîvanên lêgerîna te bicîh bibe tune. Hişyar bibe ku em tenê komek rajekarên hilbijartî yên ku niha tomarkirinên nû dipejirînin nîşan didin."
 }
