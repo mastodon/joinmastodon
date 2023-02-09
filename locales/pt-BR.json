@@ -89,6 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "Public Roadmap",
   "roadmap.state.backlog": "Exploring",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "In Progress",
   "roadmap.state.unstarted": "Planned",
   "roadmap.suggest_a_feature": "Suggest a feature",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Instantâneo",
   "wizard.filter.sign_up.manual": "Revisão manual",
   "wizard.filter_by_language": "Idioma",
-  "wizard.filter_by_registrations": "Velocidade da inscrição",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Estrutura jurídica",
   "wizard.no_results": "Parece que não há servidores que correspondam aos seus critérios de pesquisa. Lembre-se de que só mostramos um conjunto de servidores que atualmente aceitam novas inscrições."
 }
