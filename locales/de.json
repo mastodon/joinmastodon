@@ -89,7 +89,7 @@
   "roadmap.page_description": "Erfahre, woran wir bei Mastodon arbeiten",
   "roadmap.page_title": "Öffentlicher Entwicklungsplan",
   "roadmap.state.backlog": "Erkundung",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Kürzlich abgeschlossen",
   "roadmap.state.started": "In Arbeit",
   "roadmap.state.unstarted": "Geplant",
   "roadmap.suggest_a_feature": "Funktion vorschlagen",
@@ -118,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "Wir haben keine Kontrolle über die Server, aber wir können festlegen, wofür wir auf dieser Seite werben. Unsere Organisation verweist nur auf Server, die sich konsequent zur Moderation gegen Rassismus, Sexismus und Transphobie verpflichten.",
   "servers.getting_started.safe_for_all.title": "Sicher für alle",
   "servers.getting_started.servers": "Der erste Schritt ist zu entscheiden, auf welchem Server du dein Konto erstellen möchtest. Jeder Server wird von einer unabhängigen Organisation oder Einzelperson betrieben und kann sich in Moderationsstrategien unterscheiden.",
-  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
+  "servers.hero.body": "Mastodon ist keine einzelne Webseite. Um es nutzen zu können, musst du ein Konto bei einem Anbieter erstellen – wir nennen sie <b>Server</b> – der dich mit anderen Personen über Mastodon hinweg vernetzen lässt.",
   "servers.page_description": "Finde, wo du dich auf dem dezentralisierten sozialem Netzwerk Mastodon registrieren kannst.",
   "servers.page_title": "Server",
   "silver_sponsor": "Silber-Sponsor",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Sofort",
   "wizard.filter.sign_up.manual": "Manuelle Überprüfung",
   "wizard.filter_by_language": "Sprache",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Anmeldeprozess",
   "wizard.filter_by_structure": "Rechtsform",
   "wizard.no_results": "Es scheint, als gäbe es derzeit keine Server, die deinen Suchkriterien entsprechen. Beachte, dass wir nur eine Auswahl von Servern anzeigen, die derzeit neue Anmeldungen akzeptieren."
 }
