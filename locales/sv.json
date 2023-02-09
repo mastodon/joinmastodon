@@ -89,6 +89,7 @@
   "roadmap.page_description": "Läs om vad vi arbetar på i Mastodon",
   "roadmap.page_title": "Offentlig tidsplan",
   "roadmap.state.backlog": "Utforskar",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "Pågående",
   "roadmap.state.unstarted": "Planerade",
   "roadmap.suggest_a_feature": "Föreslå en funktion",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Direkt",
   "wizard.filter.sign_up.manual": "Manuell granskning",
   "wizard.filter_by_language": "Språk",
-  "wizard.filter_by_registrations": "Registreringshastighet",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Juridisk struktur",
   "wizard.no_results": "Det verkar som att det för närvarande inte finns några servrar som passar in på dina sökkriterier. Tänk på att vi bara visar en kurerad uppsättning servrar som för närvarande tar emot nya registreringar."
 }
