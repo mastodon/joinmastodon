@@ -89,6 +89,7 @@
   "roadmap.page_description": "Saber sus que trabalhan dins Mastodon",
   "roadmap.page_title": "Programa public",
   "roadmap.state.backlog": "Explorar",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "En cors",
   "roadmap.state.unstarted": "Planificat",
   "roadmap.suggest_a_feature": "Suggerir una foncionalitat",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Instantanèu",
   "wizard.filter.sign_up.manual": "Aprobacion manuala",
   "wizard.filter_by_language": "Lenga",
-  "wizard.filter_by_registrations": "Velocitat d’inscripcion",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Estructura legala",
   "wizard.no_results": "Sembla que i a pas cap de servidor pel moment que correspond a vòstres critèris de recèrca. Gardatz a l’esperit qu’aficham sonque una lista de servidors seleccionats qu’accèptan actualament de novèlas inscripcions."
 }
