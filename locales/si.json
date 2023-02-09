@@ -89,6 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "Public Roadmap",
   "roadmap.state.backlog": "Exploring",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "In Progress",
   "roadmap.state.unstarted": "Planned",
   "roadmap.suggest_a_feature": "Suggest a feature",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "ක්‍ෂණික",
   "wizard.filter.sign_up.manual": "අතින් සමාලෝචනය",
   "wizard.filter_by_language": "භාෂාව",
-  "wizard.filter_by_registrations": "ලියාපදිංචි වේගය",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "නෛතික ව්‍යුහය",
   "wizard.no_results": "ඔබගේ සෙවුම් නිර්ණායකයට ගැළපෙන සේවාදායක දැනට නැති බව පෙනේ. මෙහි දී නව ලියාපදිංචි කිරීම් පිළිගන්නා සේවාදායක කට්ටලයක් පමණක් පෙන්වන බව මතක තබා ගන්න."
 }
