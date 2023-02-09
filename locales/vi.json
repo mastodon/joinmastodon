@@ -89,7 +89,7 @@
   "roadmap.page_description": "Tìm hiểu chúng tôi làm gì ở Mastodon",
   "roadmap.page_title": "Định hướng sắp tới",
   "roadmap.state.backlog": "Đang thảo luận",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Mới hoàn thành",
   "roadmap.state.started": "Đang tiến hành",
   "roadmap.state.unstarted": "Đã lên kế hoạch",
   "roadmap.suggest_a_feature": "Đề xuất tính năng",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Lập tức",
   "wizard.filter.sign_up.manual": "Duyệt thủ công",
   "wizard.filter_by_language": "Ngôn ngữ",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Quy trình đăng ký",
   "wizard.filter_by_structure": "Cơ cấu pháp lý",
   "wizard.no_results": "Hiện tại không có máy chủ nào phù hợp với tiêu chí tìm kiếm của bạn. Xin lưu ý rằng chúng tôi chỉ hiển thị chọn lọc một nhóm máy chủ hiện cho phép đăng ký mới."
 }
