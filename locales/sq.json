@@ -89,6 +89,7 @@
   "roadmap.page_description": "Mësoni se me se po merremi në Mastodon",
   "roadmap.page_title": "Plan Publik",
   "roadmap.state.backlog": "Eksplorim",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "Në Ecuri e Sipër",
   "roadmap.state.unstarted": "Vënë në plan",
   "roadmap.suggest_a_feature": "Sugjeroni një veçori",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Menjëherë",
   "wizard.filter.sign_up.manual": "Shqyrtim dorazi",
   "wizard.filter_by_language": "Gjuhë",
-  "wizard.filter_by_registrations": "Shpejtësi regjistrimi",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Strukturë ligjore",
   "wizard.no_results": "Duket sikur aktualisht nuk ka shërbyes që plotësojnë kriteret tuaja të kërkimit. Kini parasysh se shfaqim vetëm një grup shërbyesish hartuar prej nesh që pranojnë aktualisht regjistrime të reja."
 }
