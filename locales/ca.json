@@ -89,6 +89,7 @@
   "roadmap.page_description": "Aprèn el que estem treballant a Mastodon",
   "roadmap.page_title": "Full de Ruta públic",
   "roadmap.state.backlog": "Explorant",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "En curs",
   "roadmap.state.unstarted": "Planificat",
   "roadmap.suggest_a_feature": "Sugereix algun canvi",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Instantani",
   "wizard.filter.sign_up.manual": "Revisió manual",
   "wizard.filter_by_language": "Llengua",
-  "wizard.filter_by_registrations": "Velocitat de registre",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Estructura legal",
   "wizard.no_results": "Sembla que ara mateix no hi ha cap servidor que s'ajusti als teus criteris de cerca. Tingues present que només mostrem la llista de servidors que consta que actualment accepten nous registres."
 }
