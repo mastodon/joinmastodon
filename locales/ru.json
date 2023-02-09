@@ -89,6 +89,7 @@
   "roadmap.page_description": "Узнайте, над чем мы работаем в Mastodon",
   "roadmap.page_title": "Публичная дорожная карта",
   "roadmap.state.backlog": "Исследование",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "В процессе",
   "roadmap.state.unstarted": "Запланировано",
   "roadmap.suggest_a_feature": "Предложить улучшение",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Мгновенно",
   "wizard.filter.sign_up.manual": "Ручная проверка",
   "wizard.filter_by_language": "Язык",
-  "wizard.filter_by_registrations": "Скорость регистрации",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Правовая структура",
   "wizard.no_results": "Похоже, на данный момент нет серверов, удовлетворяющих вашим критериям поиска. Помните, что мы выводим только курируемый набор серверов, которые принимают новые регистрации."
 }
