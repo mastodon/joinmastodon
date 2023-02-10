@@ -108,7 +108,7 @@
   "server.safety": "Sicherheit",
   "servers": "Server",
   "servers.apply_for_an_account": "Konto anfragen",
-  "servers.approval_required": "Registrierungen manuell geprüft",
+  "servers.approval_required": "Manuell geprüfte Registrierungen",
   "servers.create_account": "Konto erstellen",
   "servers.getting_started.feed.body": "Mit einem Konto auf deinem Server kannst du jeder anderen Person im Netzwerk folgen, unabhängig davon, wo deren Konto gehostet wird. Du wirst die Beiträge auf deinem Home-Feed sehen, und wenn diese Person dir folgt, wird sie auch deine Beiträge auf ihrem Home-Feed sehen.",
   "servers.getting_started.feed.title": "Dein Feed",
