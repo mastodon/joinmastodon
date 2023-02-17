@@ -3,12 +3,6 @@
     "type": "started",
     "items": [
       {
-        "id": "AND-2",
-        "title": "Update onboarding flow",
-        "priority": 1,
-        "parent": null
-      },
-      {
         "id": "IOS-37",
         "title": "Home Screen Widgets",
         "priority": 2,
@@ -23,12 +17,6 @@
       {
         "id": "AND-9",
         "title": "Lists",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "AND-7",
-        "title": "View image descriptions on media",
         "priority": 2,
         "parent": null
       },
@@ -69,8 +57,8 @@
         "parent": null
       },
       {
-        "id": "AND-3",
-        "title": "Use markers API to sync timeline position",
+        "id": "MAS-22",
+        "title": "Add explicit flag to differentiate suspended accounts from deleted accounts",
         "priority": 3,
         "parent": null
       },
@@ -128,6 +116,12 @@
         "parent": null
       },
       {
+        "id": "MAS-80",
+        "title": "Replace Webpack with Vite in build pipeline",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "MAS-62",
         "title": "Confirmation screen with impact summary when suspending domain",
         "priority": 3,
@@ -170,8 +164,8 @@
         "parent": null
       },
       {
-        "id": "MAS-22",
-        "title": "Add explicit flag to differentiate suspended accounts from deleted accounts",
+        "id": "MAS-16",
+        "title": "Tokenize URLs, usernames and emojis before translation",
         "priority": 3,
         "parent": null
       },
@@ -388,6 +382,12 @@
         "parent": null
       },
       {
+        "id": "MAS-81",
+        "title": "Login with Passkeys",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "MAS-63",
         "title": "Notify users when relationships are severed due to domain block",
         "priority": 3,
@@ -460,15 +460,15 @@
         "parent": null
       },
       {
-        "id": "MAS-16",
-        "title": "Tokenize URLs, usernames and emojis before translation",
+        "id": "MAS-13",
+        "title": "Featured profiles on profiles",
         "priority": 3,
         "parent": null
       },
       {
-        "id": "MAS-13",
-        "title": "Featured profiles on profiles",
-        "priority": 3,
+        "id": "MAS-82",
+        "title": "Change light and dark themes to switch based on browser preferences",
+        "priority": 4,
         "parent": null
       },
       {
@@ -524,6 +524,27 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "AND-3",
+        "title": "Use markers API to sync timeline position",
+        "priority": 3,
+        "completedAt": "2023-02-13T23:53:30.635Z",
+        "parent": null
+      },
+      {
+        "id": "AND-7",
+        "title": "View image descriptions on media",
+        "priority": 2,
+        "completedAt": "2023-02-13T23:53:29.049Z",
+        "parent": null
+      },
+      {
+        "id": "AND-2",
+        "title": "Update onboarding flow",
+        "priority": 1,
+        "completedAt": "2023-02-11T05:01:05.741Z",
+        "parent": null
+      },
       {
         "id": "MAS-53",
         "title": "Add status page setting",
