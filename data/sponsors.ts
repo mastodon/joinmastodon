@@ -99,6 +99,11 @@ const sponsors = {
       name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
     }, // Custom
     {
+      url: "https://www.movavi.com/imovie-for-windows.html",
+      logo: require("../public/sponsors/movavi.svg"),
+      name: "Movavi",
+    }, // Custom/other
+    {
       url: "https://krystal.uk/",
       logo: require("../public/sponsors/Krystal_Logo.svg"),
       name: "Krystal Hosting",
