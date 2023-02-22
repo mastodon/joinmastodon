@@ -89,6 +89,7 @@
   "roadmap.page_description": "了解我們在 Mastodon 中的工作",
   "roadmap.page_title": "公開的開發藍圖",
   "roadmap.state.backlog": "探索",
+  "roadmap.state.completed": "最近完成",
   "roadmap.state.started": "進行中",
   "roadmap.state.unstarted": "計畫",
   "roadmap.suggest_a_feature": "提出建議",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "即時",
   "wizard.filter.sign_up.manual": "手動審核",
   "wizard.filter_by_language": "語言",
-  "wizard.filter_by_registrations": "註冊速度",
+  "wizard.filter_by_registrations": "註冊流程",
   "wizard.filter_by_structure": "法定架構",
   "wizard.no_results": "目前似乎沒有符合您搜尋條件的伺服器。請注意，我們僅顯示一組當前接受新註冊的伺服器。"
 }

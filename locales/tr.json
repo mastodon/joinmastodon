@@ -89,6 +89,7 @@
   "roadmap.page_description": "Mastodon'da ne üzerine çalıştığımızı öğrenin",
   "roadmap.page_title": "Genel Yol Haritası",
   "roadmap.state.backlog": "Keşif",
+  "roadmap.state.completed": "Yakın zamanda tamamlanan",
   "roadmap.state.started": "Sürüyor",
   "roadmap.state.unstarted": "Planlandı",
   "roadmap.suggest_a_feature": "Bir özellik öner",
@@ -117,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "Sunucuları denetleyemeyiz ama bu sayfada tanıtımını yaptığımız şeyleri denetleyebiliriz. Kuruluşumuz kendini ırkçılık, cinsel ayrımcılık ve transfobiye karşı sürekli denetime adamış sunuculara işaret ediyor.",
   "servers.getting_started.safe_for_all.title": "Herkes için güvenli",
   "servers.getting_started.servers": "İlk adım hesabınızı hangi sunucuda oluşturmak istediğiniz. Her sunucu farklı bir bağımsız kuruluş veya birey tarafından işletiliyor ve denetleme politikaları farklı olabilir.",
-  "servers.hero.body": "Mastodon tek bir web sitesi değil. Kullanmak için, Mastodon çapında diğer kullanıcılarla bağlantı kurmanızı sağlayan bir sağlayıcıda (<b>sunucular</b> da diyoruz) bir hesap oluşturmanız gerekiyor.",
+  "servers.hero.body": "Mastodon tek bir web sitesi değil. Kullanmak için, Mastodon çapında diğer kullanıcılarla bağlantı kurmanızı sağlayan bir sağlayıcıda (<b>sunucular</b> diyoruz) bir hesap oluşturmanız gerekiyor.",
   "servers.page_description": "Merkezi olmayan sosyal ağ Mastodon'a kayıt olacağınız yeri bulun.",
   "servers.page_title": "Sunucular",
   "silver_sponsor": "Gümüş sponsor",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Anlık",
   "wizard.filter.sign_up.manual": "Manuel inceleme",
   "wizard.filter_by_language": "Dil",
-  "wizard.filter_by_registrations": "Kayıt olma hızı",
+  "wizard.filter_by_registrations": "Kayıt süreci",
   "wizard.filter_by_structure": "Yasal yapı",
   "wizard.no_results": "Şu an da süzgecinize uyan bir sunucu mevcut değil gibi gözüküyor. Unutmayın ki şu an yeni kayıtları kabul eden seçilmiş bir sunucu kümesi görüntülüyoruz."
 }
