@@ -496,7 +496,7 @@ const ServerList = ({ servers }) => {
 const ServerStats = ({ days }) => {
   const intl = useIntl()
 
-  if (days.isError) {
+  if (days.isError || days.data.length < 3) {
     return null
   }
 
@@ -687,7 +687,7 @@ const ServerFilters = ({
                           id: "wizard.filter.all_categories",
                           defaultMessage: "All topics",
                         })
-                      : intl.formatMessage(categoriesMessages[item.category])}
+                      : (categoriesMessages[item.category] ? intl.formatMessage(categoriesMessages[item.category]) : item.category)}
 
                     <span
                       className={
