@@ -496,7 +496,7 @@ const ServerList = ({ servers }) => {
 const ServerStats = ({ days }) => {
   const intl = useIntl()
 
-  if (days.isError || days.data.length < 3) {
+  if (days.isError) {
     return null
   }
 
@@ -522,6 +522,10 @@ const ServerStats = ({ days }) => {
         </p>
       </div>
     )
+  }
+
+  if (days.data.length < 3) {
+    return null
   }
 
   const currentDay = days.data[days.data.length - 2]
