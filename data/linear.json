@@ -39,6 +39,12 @@
         "parent": null
       },
       {
+        "id": "MAS-47",
+        "title": "Increase media upload limits",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "MAS-46",
         "title": "Webhook templating",
         "priority": 3,
@@ -124,12 +130,6 @@
       {
         "id": "MAS-62",
         "title": "Confirmation screen with impact summary when suspending domain",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-47",
-        "title": "Increase media upload limits",
         "priority": 3,
         "parent": null
       },
