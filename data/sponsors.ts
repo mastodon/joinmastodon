@@ -49,11 +49,6 @@ const sponsors = {
       name: "Sex Toy Collective",
     },
     {
-      url: "https://www.bestecasinosonline.at/",
-      name: "Online Casino Österreich",
-      logo: require("../public/sponsors/BesteCasinosOnline.webp"),
-    }, // Custom
-    {
       url: "https://www.sister-sites.co.uk/",
       logo: require("../public/sponsors/sistersites-logo.png"),
       name: "sister-sites.co.uk",
