@@ -88,7 +88,7 @@
   "roadmap.mastodon": "Web / API",
   "roadmap.page_description": "Mastodonで取り組んでいることを確認できます",
   "roadmap.page_title": "公開ロードマップ",
-  "roadmap.state.backlog": "Exploring",
+  "roadmap.state.backlog": "検討中",
   "roadmap.state.completed": "最近完了",
   "roadmap.state.started": "進行中",
   "roadmap.state.unstarted": "計画済み",
