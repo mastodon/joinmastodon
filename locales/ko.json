@@ -108,7 +108,7 @@
   "server.safety": "안전성",
   "servers": "서버",
   "servers.apply_for_an_account": "계정 신청하기",
-  "servers.approval_required": "수동으로 검토된 회원가입",
+  "servers.approval_required": "수동으로 회원가입 검토",
   "servers.create_account": "계정 생성",
   "servers.getting_started.feed.body": "서버에 계정이 있으면 계정이 호스팅되는 위치에 관계없이 네트워크에 있는 다른 사람을 팔로우할 수 있습니다. 내 홈 피드에서 상대방의 게시물을 볼 수 있으며, 상대방이 나를 팔로우하면 상대방의 피드에서도 내 게시물을 볼 수 있습니다.",
   "servers.getting_started.feed.title": "내 피드",
