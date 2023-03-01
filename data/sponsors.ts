@@ -9,6 +9,11 @@ const sponsors = {
       name: "Fastly",
     }, // Custom/other
     {
+      url: "https://www.datadoghq.com",
+      logo: require("../public/sponsors/datadog.avif"),
+      name: "Datadog",
+    }, // Custom/other
+    {
       url: "https://mobi.com/",
       logo: require("../public/sponsors/mobi-across-big.png"),
       name: "Mobi",
