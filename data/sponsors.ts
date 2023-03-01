@@ -69,11 +69,6 @@ const sponsors = {
       name: "AusCasinos.com New Site Section",
     }, // Custom
     {
-      url: "https://kasynohex.com/kasyna-online/",
-      logo: require("../public/sponsors/kasynohex.svg"),
-      name: "Casino online PL",
-    }, // Custom
-    {
       url: "https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html",
       logo: require("../public/sponsors/alt-casino-1.png"),
       name: "Online Casinos Australia",
@@ -311,7 +306,15 @@ const sponsors = {
       name: "Data-Driven SEO Agency",
     }, // Custom
   ],
-  silver: patreonData.silver,
+  silver: [
+    {
+      url: "https://ichiji.social/@tnzk",
+      logo: require("../public/sponsors/tnzk.png"),
+      name: "Kyohei Hamaguchi / @tnzk",
+      nofollow: false
+    },
+    ...patreonData.silver
+  ],
   generalHighlighted: patreonData.generalHighlighted,
   general: patreonData.general,
 }
