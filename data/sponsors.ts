@@ -10,7 +10,7 @@ const sponsors = {
     }, // Custom/other
     {
       url: "https://www.datadoghq.com",
-      logo: require("../public/sponsors/datadog.avif"),
+      logo: require("../public/sponsors/datadog.png"),
       name: "Datadog",
     }, // Custom/other
     {
