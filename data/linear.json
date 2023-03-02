@@ -92,6 +92,12 @@
         "parent": null
       },
       {
+        "id": "MAS-87",
+        "title": "Add artificial delay to streaming API to account for replication lag",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "AND-8",
         "title": "Filters",
         "priority": 2,
@@ -119,6 +125,12 @@
         "id": "IOS-4",
         "title": "Follow and unfollow in post dropdowns",
         "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-88",
+        "title": "Additional search syntax",
+        "priority": 3,
         "parent": null
       },
       {
@@ -379,6 +391,12 @@
         "id": "MAS-11",
         "title": "Default and configurable terms of service",
         "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-86",
+        "title": "Markdown formatting for posts",
+        "priority": 3,
         "parent": null
       },
       {
