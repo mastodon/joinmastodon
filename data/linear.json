@@ -27,12 +27,6 @@
         "parent": null
       },
       {
-        "id": "IOS-2",
-        "title": "Post editing",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "MAS-49",
         "title": "Optimize batch file deletion",
         "priority": 3,
@@ -542,6 +536,13 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "IOS-2",
+        "title": "Post editing",
+        "priority": 2,
+        "completedAt": "2023-03-02T14:09:21.705Z",
+        "parent": null
+      },
       {
         "id": "AND-3",
         "title": "Use markers API to sync timeline position",
