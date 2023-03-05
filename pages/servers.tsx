@@ -34,7 +34,7 @@ const Servers = () => {
     category: "general",
     region: "",
     ownership: "",
-    registrations: "instant",
+    registrations: "",
   })
 
   const params = new URLSearchParams(filters)
@@ -524,6 +524,10 @@ const ServerStats = ({ days }) => {
     )
   }
 
+  if (days.data.length < 3) {
+    return null
+  }
+
   const currentDay = days.data[days.data.length - 2]
   const compareDay = days.data[0]
 
@@ -687,7 +691,7 @@ const ServerFilters = ({
                           id: "wizard.filter.all_categories",
                           defaultMessage: "All topics",
                         })
-                      : intl.formatMessage(categoriesMessages[item.category])}
+                      : (categoriesMessages[item.category] ? intl.formatMessage(categoriesMessages[item.category]) : item.category)}
 
                     <span
                       className={

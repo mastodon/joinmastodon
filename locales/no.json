@@ -89,6 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "Offentlig Fremdriftsplan",
   "roadmap.state.backlog": "Exploring",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "In Progress",
   "roadmap.state.unstarted": "Planned",
   "roadmap.suggest_a_feature": "Foreslå en funksjon",
@@ -117,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "Vi kan ikke kontrollere serverne, men vi kan kontrollere hva vi fremmer på denne siden. Vår organisasjon vil kun peke på deg til servere som konsekvent er forpliktet til å moderere seg til rasisme, sexisme og transpbia.",
   "servers.getting_started.safe_for_all.title": "Trygt for alle",
   "servers.getting_started.servers": "Det første trinnet er å bestemme hvilken server du vil ha kontoen på. Hver server betjenes av en uavhengig organisasjon eller enkeltpersoner, og kan variere i moderasjonspolitikk.",
-  "servers.hero.body": "Mastodon er ikke et enkelt nettsted. Å bruke det må du lage en konto hos en leverandør&mdash;vi kaller dem <b>servere</b>&mdash;som lar deg koble til andre personer over Mastodon.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "Finn hvor du kan registrere deg for det desentraliserte sosiale nettverket Mastodon.",
   "servers.page_title": "Servere",
   "silver_sponsor": "Sølv bidragsyter",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Øyeblikkelig",
   "wizard.filter.sign_up.manual": "Manuell gjennomgang",
   "wizard.filter_by_language": "Språk",
-  "wizard.filter_by_registrations": "Registrerings hastighet",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Juridisk struktur",
   "wizard.no_results": "Ser ut til at det ikke er noen servere som passer dine søkekriterier. Husk på at vi bare viser et kurert sett med servere som for øyeblikket mottar nye signaturer."
 }

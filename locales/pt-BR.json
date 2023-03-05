@@ -89,6 +89,7 @@
   "roadmap.page_description": "Learn what we are working on in Mastodon",
   "roadmap.page_title": "Public Roadmap",
   "roadmap.state.backlog": "Exploring",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "In Progress",
   "roadmap.state.unstarted": "Planned",
   "roadmap.suggest_a_feature": "Suggest a feature",
@@ -117,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "Não podemos controlar os servidores, mas podemos controlar o que promovemos nesta página. Nossa organização apenas indicará servidores que estejam consistentemente comprometidos com a moderação contra o racismo, o sexismo e a transfobia.",
   "servers.getting_started.safe_for_all.title": "Seguro para todos",
   "servers.getting_started.servers": "O primeiro passo é decidir qual servidor você gostaria de criar sua conta. Todo servidor é operado por uma organização ou indivíduo independente e pode diferir em políticas de moderação.",
-  "servers.hero.body": "O Mastodon não é um único site. Para usá-lo, você precisa criar uma conta com um provedor—nós os chamamos de <b>servidores</b>—que permitem que você se conecte com outras pessoas no Mastodon.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "Encontre onde se inscrever para a rede social descentralizada Mastodon.",
   "servers.page_title": "Servidores",
   "silver_sponsor": "Patrocinador de prata",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Instantâneo",
   "wizard.filter.sign_up.manual": "Revisão manual",
   "wizard.filter_by_language": "Idioma",
-  "wizard.filter_by_registrations": "Velocidade da inscrição",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Estrutura jurídica",
   "wizard.no_results": "Parece que não há servidores que correspondam aos seus critérios de pesquisa. Lembre-se de que só mostramos um conjunto de servidores que atualmente aceitam novas inscrições."
 }

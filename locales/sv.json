@@ -89,6 +89,7 @@
   "roadmap.page_description": "Läs om vad vi arbetar på i Mastodon",
   "roadmap.page_title": "Offentlig tidsplan",
   "roadmap.state.backlog": "Utforskar",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "Pågående",
   "roadmap.state.unstarted": "Planerade",
   "roadmap.suggest_a_feature": "Föreslå en funktion",
@@ -117,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "Vi kan inte styra servrarna men vi kan styra vad vi väljer att visa på denna sida. Vi kommer bara att föreslå servrar som är konsekvent engagerade för att moderera mot rasism, sexism och transfobi.",
   "servers.getting_started.safe_for_all.title": "Tryggt för alla",
   "servers.getting_started.servers": "Det första steget är att bestämma vilken server du vill skapa ditt konto på. Varje server drivs av en oberoende organisation eller individ och kan skilja sig åt i vilka modereringspolicyer som tillämpas.",
-  "servers.hero.body": "Mastodon är inte en enda webbplats. För att använda det behöver du skapa ett konto hos en leverantör &mdash; vi kallar dem <b>servrar</b> &mdash; som låter dig kommunicera med andra personer över Mastodon.",
+  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
   "servers.page_description": "Hitta var du kan registrera dig på det decentraliserade sociala nätverket Mastodon.",
   "servers.page_title": "Servrar",
   "silver_sponsor": "Silversponsorer",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Direkt",
   "wizard.filter.sign_up.manual": "Manuell granskning",
   "wizard.filter_by_language": "Språk",
-  "wizard.filter_by_registrations": "Registreringshastighet",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Juridisk struktur",
   "wizard.no_results": "Det verkar som att det för närvarande inte finns några servrar som passar in på dina sökkriterier. Tänk på att vi bara visar en kurerad uppsättning servrar som för närvarande tar emot nya registreringar."
 }

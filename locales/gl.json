@@ -89,6 +89,7 @@
   "roadmap.page_description": "Isto é no que estamos traballando en Mastodon",
   "roadmap.page_title": "Plan público",
   "roadmap.state.backlog": "Explorar",
+  "roadmap.state.completed": "Completado recentemente",
   "roadmap.state.started": "En Curso",
   "roadmap.state.unstarted": "En Proxecto",
   "roadmap.suggest_a_feature": "Suxire unha funcionalidade",
@@ -117,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "Non podemos controlar os servidores, pero si podemos controlar a quen damos voz nesta páxina. A nosa organización só che ofrece servidores que se comprometen de xeito consistente a moderar en contra do racismo, sexismo e transfobia.",
   "servers.getting_started.safe_for_all.title": "Entorno seguro",
   "servers.getting_started.servers": "O primeiro paso é decidir en que servidor queres crear unha conta. Cada servidor está xestionado por unha entidade ou persoa independente e podería ter diferentes políticas de moderación.",
-  "servers.hero.body": "Mastodon non é un sitio web único. Para usalo, tes que crear unha conta cun provedor&mdash;chamámoslle <b>servidores</b>&mdash;que che permite conectar con outras persoas en todo Mastodon.",
+  "servers.hero.body": "Mastodon non é un sitio web único. Para usalo, tes que crear unha conta cun provedor —chamámoslle <b>servidores</b> —que che permite conectar con outras persoas en todo Mastodon.",
   "servers.page_description": "Atopa onde crear a conta para acceder á rede social descentralizada Mastodon.",
   "servers.page_title": "Servidores",
   "silver_sponsor": "Patrocinador Prata",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Instantáneo",
   "wizard.filter.sign_up.manual": "Revisión manual",
   "wizard.filter_by_language": "Idioma",
-  "wizard.filter_by_registrations": "Rapidez no rexistro",
+  "wizard.filter_by_registrations": "Pasos para o rexistro",
   "wizard.filter_by_structure": "Estructura legal",
   "wizard.no_results": "Semella que non atopamos servidores que cumplan cos teus requisitos. Ten en conta que só se amosan servidores que verificamos e que actualmente aceptan novos rexistros."
 }

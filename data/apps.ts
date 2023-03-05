@@ -21,6 +21,7 @@ import icecubes from "../public/apps/icecubes.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
 import statuzer from "../public/apps/statuzer.png"
+import mammoth from "../public/apps/mammoth.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -129,6 +130,13 @@ export const apps: appsList = {
       url: "https://apps.apple.com/us/app/ivory-for-mastodon-by-tapbots/id6444602274",
       paid: true
     },
+    {
+      released_on: "Feb 24, 2023",
+      name: "Mammoth",
+      icon: mammoth,
+      url: "https://apps.apple.com/app/mammoth-for-mastodon/id1667573899",
+      paid: false
+    }
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },

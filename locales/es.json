@@ -89,6 +89,7 @@
   "roadmap.page_description": "Conoce en qué estamos trabajando en Mastodon",
   "roadmap.page_title": "Hoja de ruta pública",
   "roadmap.state.backlog": "Explorando",
+  "roadmap.state.completed": "Completado recientemente",
   "roadmap.state.started": "En Curso",
   "roadmap.state.unstarted": "Planificado",
   "roadmap.suggest_a_feature": "Sugerir una característica",
@@ -117,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "No podemos controlar los servidores, pero podemos controlar lo que promocionamos en esta página. Nuestra organización sólo lo señalará a servidores que estén constantemente comprometidos con la moderación contra el racismo, el sexismo y la transfobia.",
   "servers.getting_started.safe_for_all.title": "Seguro para todos",
   "servers.getting_started.servers": "El primer paso es decidir en qué servidor quiere hacer su cuenta. Cada servidor es gestionado por una organización independiente o individuo y puede diferir en políticas de moderación.",
-  "servers.hero.body": "Mastodon no es un solo sitio web. Para usarlo, necesitas crear una cuenta con un proveedor&mdash;los llamamos <b>servidores</b>&mdash;que le permiten conectarse con otras personas a través de Mastodon.",
+  "servers.hero.body": "Mastodon no es un único sitio web. Para usarlo, necesitas tener una cuenta con un proveedor —los llamamos <b>servidores</b>— que te permite conectar con otras personas a través de Mastodon.",
   "servers.page_description": "Encuentre dónde inscribirse en la red social descentralizada Mastodon.",
   "servers.page_title": "Servidores",
   "silver_sponsor": "Patrocinador de plata",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Instantáneo",
   "wizard.filter.sign_up.manual": "Revisión manual",
   "wizard.filter_by_language": "Idioma",
-  "wizard.filter_by_registrations": "Velocidad de registro",
+  "wizard.filter_by_registrations": "Proceso de registro",
   "wizard.filter_by_structure": "Estructura legal",
   "wizard.no_results": "Al parecer actualmente no hay servidores que se ajusten a sus criterios de búsqueda. Tenga en cuenta de que solo mostramos un conjunto supervisado de servidores que actualmente aceptan nuevos registros."
 }
