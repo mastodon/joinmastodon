@@ -310,6 +310,11 @@ const sponsors = {
       logo: require("../public/sponsors/awisee2.jpg"),
       name: "Data-Driven SEO Agency",
     }, // Custom
+    {
+      url: "https://kaleidos.net/products",
+      logo: require("../public/sponsors/kaleidos.png"),
+      name: "Kaleidos (Taiga & Penpot)",
+    }, // Custom
   ],
   silver: [
     {
