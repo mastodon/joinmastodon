@@ -27,6 +27,12 @@
         "parent": null
       },
       {
+        "id": "MAS-86",
+        "title": "Markdown formatting for posts",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "MAS-49",
         "title": "Optimize batch file deletion",
         "priority": 3,
@@ -385,12 +391,6 @@
         "id": "MAS-11",
         "title": "Default and configurable terms of service",
         "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "MAS-86",
-        "title": "Markdown formatting for posts",
-        "priority": 3,
         "parent": null
       },
       {
