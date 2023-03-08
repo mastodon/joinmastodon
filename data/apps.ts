@@ -21,6 +21,7 @@ import icecubes from "../public/apps/icecubes.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
+import elk from "../public/apps/A247B811-1BD2-4A12-A694-EBB741ED2174.jpeg" 
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -141,6 +142,7 @@ export const apps: appsList = {
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
+    { name  "Elk", icon: elk, url: "https://elk.zone" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
