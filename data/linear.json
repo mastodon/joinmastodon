@@ -128,6 +128,18 @@
         "parent": null
       },
       {
+        "id": "MAS-11",
+        "title": "Default and configurable terms of service",
+        "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-113",
+        "title": "Rework link previews fetching and distribution",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "MAS-88",
         "title": "Additional search syntax",
         "priority": 3,
@@ -140,6 +152,12 @@
         "parent": null
       },
       {
+        "id": "MAS-63",
+        "title": "Notify users when relationships are severed due to domain block",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "MAS-62",
         "title": "Confirmation screen with impact summary when suspending domain",
         "priority": 3,
@@ -148,6 +166,12 @@
       {
         "id": "IOS-45",
         "title": "Custom app icons",
+        "priority": 3,
+        "parent": null
+      },
+      {
+        "id": "MAS-40",
+        "title": "Explicit controls to fetch more data from origin server",
         "priority": 3,
         "parent": null
       },
@@ -178,12 +202,6 @@
       {
         "id": "MAS-16",
         "title": "Tokenize URLs, usernames and emojis before translation",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "IOS-30",
-        "title": "Visual QA pass",
         "priority": 3,
         "parent": null
       },
@@ -388,20 +406,8 @@
         "parent": null
       },
       {
-        "id": "MAS-11",
-        "title": "Default and configurable terms of service",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "MAS-81",
         "title": "Login with Passkeys",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-63",
-        "title": "Notify users when relationships are severed due to domain block",
         "priority": 3,
         "parent": null
       },
@@ -432,12 +438,6 @@
       {
         "id": "MAS-41",
         "title": "Allow searching for hashtags in admin UI",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-40",
-        "title": "Explicit controls to fetch more data from origin server",
         "priority": 3,
         "parent": null
       },
