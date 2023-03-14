@@ -58,6 +58,11 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Timothy Campbell",
+    position: "DevOps",
+  },
+
+  {
     name: "Gregory Klyushnikov",
     position: "Engineering",
     socials: {
