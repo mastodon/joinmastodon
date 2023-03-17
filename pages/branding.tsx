@@ -6,6 +6,7 @@ import classNames from "classnames"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
 import Image from "next/image"
+import colors from "../data/colors"
 
 import screenshotComposeLight from "../public/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png"
 import screenshotHomeLight from "../public/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png"
@@ -229,29 +230,31 @@ const Branding = () => (
           title="Our colors"
           preview={
             <div className="grid grid-cols-12 gap-gutter">
-              <div className="col-span-12 grid grid-cols-2 gap-gutter lg:col-span-8 lg:col-start-3">
-                {["#6364FF", "#563ACC"].map((hex) => (
+              <div className="col-span-12 grid grid-cols-2 gap-gutter">
+                {colors.slice(0, 2).map(({ hex, pantone, cmyk }) => (
                   <div key={hex} className="flex flex-col gap-2 text-left">
                     <div
                       style={{ backgroundColor: hex }}
-                      className="h-20 rounded md:h-24"
+                      className="h-28 rounded"
                     >
-                      <div className="p-4 pt-14 font-black text-white">
-                        {hex}
+                      <div className="p-4 pt-14 text-white">
+                        <div className="font-black">{hex}</div>
+                        <div className="c2">Pantone {pantone} &bull; CMYK {cmyk}</div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="col-span-12 grid grid-cols-3 gap-gutter lg:col-span-6 lg:col-start-4">
-                {["#17063B", "#2F0C7A", "#858AFA"].map((hex) => (
+              <div className="col-span-12 grid grid-cols-3 gap-gutter lg:col-span-10 lg:col-start-2">
+                {colors.slice(2).map(({ hex, pantone, cmyk }) => (
                   <div key={hex} className="flex flex-col gap-2 text-left">
                     <div
                       style={{ backgroundColor: hex }}
-                      className="h-20 rounded md:h-24"
+                      className="h-28 rounded"
                     >
-                      <div className="p-4 pt-14 font-black text-white">
-                        {hex}
+                      <div className="p-4 pt-14 text-white">
+                        <div className="font-black">{hex}</div>
+                        <div className="c2">Pantone {pantone} &bull; CMYK {cmyk}</div>
                       </div>
                     </div>
                   </div>
