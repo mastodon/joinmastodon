@@ -3,6 +3,12 @@
     "type": "started",
     "items": [
       {
+        "id": "MAS-88",
+        "title": "Additional search syntax",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "IOS-37",
         "title": "Home Screen Widgets",
         "priority": 2,
@@ -98,6 +104,24 @@
         "parent": null
       },
       {
+        "id": "MAS-63",
+        "title": "Notify users when relationships are severed due to domain block",
+        "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-40",
+        "title": "Explicit controls to fetch more data from origin server",
+        "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-16",
+        "title": "Tokenize URLs, usernames and emojis before translation",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "AND-8",
         "title": "Filters",
         "priority": 2,
@@ -140,20 +164,8 @@
         "parent": null
       },
       {
-        "id": "MAS-88",
-        "title": "Additional search syntax",
-        "priority": 3,
-        "parent": null
-      },
-      {
         "id": "MAS-80",
         "title": "Replace Webpack with Vite in build pipeline",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-63",
-        "title": "Notify users when relationships are severed due to domain block",
         "priority": 3,
         "parent": null
       },
@@ -166,12 +178,6 @@
       {
         "id": "IOS-45",
         "title": "Custom app icons",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-40",
-        "title": "Explicit controls to fetch more data from origin server",
         "priority": 3,
         "parent": null
       },
@@ -196,12 +202,6 @@
       {
         "id": "MAS-33",
         "title": "Add ability to import lists",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-16",
-        "title": "Tokenize URLs, usernames and emojis before translation",
         "priority": 3,
         "parent": null
       },
