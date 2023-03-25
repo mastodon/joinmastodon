@@ -80,54 +80,54 @@ export const apps: appsList = {
     {
       name: "Toot!",
       icon: toot,
-      url: "https://itunes.apple.com/app/toot/id1229021451?ls=1&mt=8",
+      url: "https://apps.apple.com/app/toot/id1229021451",
       paid: true,
     },
     {
       name: "Mast",
       icon: mast,
-      url: "https://apps.apple.com/us/app/mast-for-mastodon/id1437429129",
+      url: "https://apps.apple.com/app/mast-for-mastodon/id1437429129",
       paid: true,
     },
     {
       name: "iMast",
       icon: imast,
-      url: "https://apps.apple.com/us/app/imast/id1229461703",
+      url: "https://apps.apple.com/app/imast/id1229461703",
     },
     {
       name: "Mercury",
       icon: mercury,
-      url: "https://apps.apple.com/us/app/mercury-for-mastodon/id1486749200?ls=1&mt1=8",
+      url: "https://apps.apple.com/app/mercury-for-mastodon/id1486749200",
     },
     {
       name: "Metatext",
       icon: metatext,
-      url: "https://apps.apple.com/us/app/metatext/id1523996615?mt=8",
+      url: "https://apps.apple.com/app/metatext/id1523996615",
     },
     {
       released_on: "Apr 16, 2021",
       name: "tooot",
       icon: tooot,
-      url: "https://apps.apple.com/us/app/tooot/id1549772269",
+      url: "https://apps.apple.com/app/tooot/id1549772269",
     },
     {
       released_on: "Jan 19, 2023",
       name: "Ice Cubes",
       icon: icecubes,
-      url: "https://apps.apple.com/us/app/ice-cubes-for-mastodon/id6444915884",
+      url: "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
     },
     {
       released_on: "Jan 31st, 2023",
       name: "Buffer",
       icon: buffer,
-      url: "https://apps.apple.com/us/app/buffer-plan-schedule-posts/id490474324",
+      url: "https://apps.apple.com/app/buffer-plan-schedule-posts/id490474324",
       hidden_from_all: true,
     },
     {
       released_on: "Jan 24, 2023",
       name: "Ivory",
       icon: ivory,
-      url: "https://apps.apple.com/us/app/ivory-for-mastodon-by-tapbots/id6444602274",
+      url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
       paid: true
     },
     {
