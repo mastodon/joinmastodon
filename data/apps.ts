@@ -21,6 +21,7 @@ import icecubes from "../public/apps/icecubes.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
+import tuba from "../public/apps/tuba.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -171,6 +172,12 @@ export const apps: appsList = {
       name: "Bitlbee-Mastodon",
       icon: bitlbee,
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
+    },
+    {
+      released_on: "Mar 23, 2023",
+      name: "Tuba",
+      icon: tuba,
+      url: "https://flathub.org/apps/details/dev.geopjr.Tuba",
     },
   ],
   sailfish: [
