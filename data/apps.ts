@@ -22,6 +22,7 @@ import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
 import tuba from "../public/apps/tuba.png"
+import dawn from "../public/apps/dawn.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -136,7 +137,14 @@ export const apps: appsList = {
       icon: mammoth,
       url: "https://apps.apple.com/app/mammoth-for-mastodon/id1667573899",
       paid: false
-    }
+    },
+    {
+      released_on: "Mar 27, 2023",
+      name: "Nightfox DAWN",
+      icon: dawn,
+      url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
+      paid: true
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
