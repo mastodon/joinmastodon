@@ -22,6 +22,7 @@ import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
 import tuba from "../public/apps/tuba.png"
+import zonepane from "../public/apps/zonepane.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -74,6 +75,12 @@ export const apps: appsList = {
       icon: buffer,
       url: "https://play.google.com/store/apps/details?id=org.buffer.android",
       hidden_from_all: true,
+    },
+    {
+      released_on: "Feb 21, 2023",
+      name: "ZonePane",
+      icon: zonepane,
+      url: "https://play.google.com/store/apps/details?id=com.zonepane",
     },
   ],
   ios: [
