@@ -21,6 +21,7 @@ import icecubes from "../public/apps/icecubes.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
+import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
 import type { StaticImageData } from "next/image"
 
@@ -136,6 +137,13 @@ export const apps: appsList = {
       icon: mammoth,
       url: "https://apps.apple.com/app/mammoth-for-mastodon/id1667573899",
       paid: false
+    },
+    {
+      released_on: "Mar 24, 2023",
+      name: "Woolly",
+      icon: woolly,
+      url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
+      paid: true
     }
   ],
   web: [
