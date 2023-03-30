@@ -89,6 +89,7 @@
   "roadmap.page_description": "Dowiedz się, nad czym pracujemy w Mastodon",
   "roadmap.page_title": "Publiczny plan rozwoju",
   "roadmap.state.backlog": "Odkrywanie",
+  "roadmap.state.completed": "Niedawno ukończone",
   "roadmap.state.started": "W toku",
   "roadmap.state.unstarted": "Planowane",
   "roadmap.suggest_a_feature": "Zaproponuj nową funkcję",
@@ -117,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "Nie możemy kontrolować serwerów samych w sobie, ale możemy kontrolować to, co promujemy na tej stronie. Nasza organizacja będzie pokazywała tylko serwery, które zadeklarowały aktywną moderację przeciwko treściom rasistowskim, seksistowskim i transfobicznym.",
   "servers.getting_started.safe_for_all.title": "Bezpieczne dla każdego",
   "servers.getting_started.servers": "Pierwszym krokiem jest decyzja, na jakim serwerze chciał(a)byś się zarejestrować. Każdy serwer jest zarządzany przez niezależną organizację lub osobę i może się różnić pod kątem polityki moderacyjnej.",
-  "servers.hero.body": "Mastodon nie jest pojedynczą stroną internetową. Aby z niego korzystać, należy założyć konto u dostawcy—nazywamy ich <b>serwerami</b>—które pozwala ci łączyć się z innymi ludźmi na Mastodonie.",
+  "servers.hero.body": "Mastodon nie jest pojedynczą stroną internetową. Żeby z niego korzystać, należy założyć konto u jednego z dostawców (nazywamy ich serwerami), dzięki którym będziesz miał(a) opcję połączyć się z innymi osobami na Mastodonie.",
   "servers.page_description": "Znajdź gdzie się zarejestrować na zdecentralizowanej sieci społecznościowej Mastodon.",
   "servers.page_title": "Serwery",
   "silver_sponsor": "Srebrny sponsor",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Natychmiastowo",
   "wizard.filter.sign_up.manual": "Ręczne sprawdzenie",
   "wizard.filter_by_language": "Język",
-  "wizard.filter_by_registrations": "Szybkość rejestracji",
+  "wizard.filter_by_registrations": "Proces rejestracji",
   "wizard.filter_by_structure": "Struktura prawna",
   "wizard.no_results": "Wygląda na to, że nie ma obecnie serwerów spełniających Twoje kryteria wyszukiwania. Pamiętaj, że wyświetlamy tylko wybrane serwery, które aktualnie przyjmują nowych użytkowników."
 }

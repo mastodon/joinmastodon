@@ -15,17 +15,21 @@ const nextConfig = {
     ],
   },
   async headers() {
+    // These static files are references with hardcoded URLs and need proper Cache-Control headers
     return [
-      {
-        source: "/fonts/:all*(ttf|otf|woff|woff2)",
-        headers: [
-          {
-            key: "Cache-control",
-            value: "max-age=3600, stale-while-revalidate",
-          },
-        ],
-      },
-    ]
+      "/fonts/:all*(ttf|otf|woff|woff2)",
+      "/favicon-:all*(png)",
+      "/app-icon.png",
+      "/preview.png",
+    ].map((source) => ({
+      source,
+      headers: [
+        {
+          key: "Cache-control",
+          value: "max-age=3600, stale-while-revalidate",
+        },
+      ],
+    }))
   },
   async redirects() {
     return [
