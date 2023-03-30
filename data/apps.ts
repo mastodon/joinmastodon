@@ -18,6 +18,7 @@ import metatext from "../public/apps/metatext.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
+import elk from "../public/apps/elk.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
@@ -149,6 +150,7 @@ export const apps: appsList = {
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
+    { name: "Elk", icon: elk, url: "https://elk.zone" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
   ],
   desktop: [
@@ -181,6 +183,7 @@ export const apps: appsList = {
       icon: bitlbee,
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
     },
+    { name: "Elk", icon: elk, url: "https://github.com/elk-zone/elk-native/releases" },
     {
       released_on: "Mar 23, 2023",
       name: "Tuba",
