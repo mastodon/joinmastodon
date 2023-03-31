@@ -3,12 +3,6 @@
     "type": "started",
     "items": [
       {
-        "id": "MAS-100",
-        "title": "Rename DMs to private mentions",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "MAS-88",
         "title": "Additional search syntax",
         "priority": 2,
@@ -35,12 +29,6 @@
       {
         "id": "MAS-16",
         "title": "Tokenize URLs, usernames and emojis before translation",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "AND-9",
-        "title": "Lists",
         "priority": 2,
         "parent": null
       },
@@ -87,9 +75,9 @@
         "parent": null
       },
       {
-        "id": "MAS-116",
-        "title": "Add search prompts",
-        "priority": 4,
+        "id": "AND-4",
+        "title": "Follow hashtags",
+        "priority": 3,
         "parent": null
       },
       {
@@ -122,6 +110,12 @@
         "parent": null
       },
       {
+        "id": "MAS-113",
+        "title": "Rework link previews fetching and distribution",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "MAS-87",
         "title": "Add artificial delay to streaming API to account for replication lag",
         "priority": 2,
@@ -142,6 +136,12 @@
       {
         "id": "MAS-40",
         "title": "Explicit controls to fetch more data from origin server",
+        "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "AND-9",
+        "title": "Lists",
         "priority": 2,
         "parent": null
       },
@@ -182,8 +182,8 @@
         "parent": null
       },
       {
-        "id": "MAS-113",
-        "title": "Rework link previews fetching and distribution",
+        "id": "MAS-118",
+        "title": "Link to status page on error pages",
         "priority": 3,
         "parent": null
       },
@@ -256,12 +256,6 @@
       {
         "id": "AND-5",
         "title": "Translating posts",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "AND-4",
-        "title": "Follow hashtags",
         "priority": 3,
         "parent": null
       },
@@ -584,6 +578,20 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "MAS-116",
+        "title": "Add search prompts",
+        "priority": 4,
+        "completedAt": "2023-04-01T07:59:12.391Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-100",
+        "title": "Rename DMs to private mentions",
+        "priority": 2,
+        "completedAt": "2023-03-30T13:16:23.487Z",
+        "parent": null
+      },
       {
         "id": "MAS-47",
         "title": "Increase media upload limits",

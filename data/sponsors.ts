@@ -69,9 +69,9 @@ const sponsors = {
       name: "Assembly Four",
     }, // Custom
     {
-      url: "https://www.auscasinos.com/new/",
+      url: "https://www.auscasinos.com/",
       logo: require("../public/sponsors/auscasinos.png"),
-      name: "AusCasinos.com New Site Section",
+      name: "Auscasinos - Online casinos in Australia",
     }, // Custom
     {
       url: "https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html",
