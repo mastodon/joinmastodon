@@ -24,6 +24,7 @@ import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
 import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
+import fedistar from "../public/apps/fedistar.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -189,6 +190,12 @@ export const apps: appsList = {
       name: "Tuba",
       icon: tuba,
       url: "https://flathub.org/apps/details/dev.geopjr.Tuba",
+    },
+    {
+      released_on: "Mar 1, 2023",
+      name: "Fedistar",
+      icon: fedistar,
+      url: "https://fedistar.net",
     },
   ],
   sailfish: [
