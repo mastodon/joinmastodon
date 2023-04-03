@@ -89,6 +89,7 @@
   "roadmap.page_description": "Mësoni se me se po merremi në Mastodon",
   "roadmap.page_title": "Plan Publik",
   "roadmap.state.backlog": "Eksplorim",
+  "roadmap.state.completed": "Plotësuar së fundi",
   "roadmap.state.started": "Në Ecuri e Sipër",
   "roadmap.state.unstarted": "Vënë në plan",
   "roadmap.suggest_a_feature": "Sugjeroni një veçori",
@@ -117,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "S’i kontrollojmë dot shërbyesit, por mund të kontrollojmë ç’promovojnë në këtë faqe. Enti ynë do t’ju tregojë vetëm shërbyes që janë të përkushtuar pa lëkundje në moderim kundër racizmit, seksizmit dhe transfobisë.",
   "servers.getting_started.safe_for_all.title": "I parrezik për këdo",
   "servers.getting_started.servers": "Hapi i parë është të vendoset te cili shërbyes do të donit të krijohej llogaria juaj. Çdo shërbyes mbahet në punë nga një ent apo individ i pavarur dhe mund të ndryshojnë nga njëri-tjetri për sa i përket rregullave të moderimit.",
-  "servers.hero.body": "Mastodon-i s’është një saj i vetëm. Për ta përdorur, ju duhet të krijoni një llogari me një shërbim&mdash;i quajmë <b>shërbyes</b>&mdash;që ju lejon të lidheni me persona të tjerë përmes Mastodon-it.",
+  "servers.hero.body": "Mastodon s’ështënjë sajt i vetëm. Për ta përdorur, është e nevojshme të krijoni një llogari me një shërbim—i quajmë <b>shërbyes</b>—që ju lejon të lidheni me persona të tjerë nëpër Mastodon.",
   "servers.page_description": "Gjeni ku të regjistroheni për rrjetin e decentralizuar shoqëror Mastodon.",
   "servers.page_title": "Shërbyes",
   "silver_sponsor": "Sponsor i argjendtë",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Menjëherë",
   "wizard.filter.sign_up.manual": "Shqyrtim dorazi",
   "wizard.filter_by_language": "Gjuhë",
-  "wizard.filter_by_registrations": "Shpejtësi regjistrimi",
+  "wizard.filter_by_registrations": "Proces regjistrimi",
   "wizard.filter_by_structure": "Strukturë ligjore",
   "wizard.no_results": "Duket sikur aktualisht nuk ka shërbyes që plotësojnë kriteret tuaja të kërkimit. Kini parasysh se shfaqim vetëm një grup shërbyesish hartuar prej nesh që pranojnë aktualisht regjistrime të reja."
 }

@@ -9,6 +9,11 @@ const sponsors = {
       name: "Fastly",
     }, // Custom/other
     {
+      url: "https://www.datadoghq.com",
+      logo: require("../public/sponsors/datadog.png"),
+      name: "Datadog",
+    }, // Custom/other
+    {
       url: "https://mobi.com/",
       logo: require("../public/sponsors/mobi-across-big.png"),
       name: "Mobi",
@@ -49,11 +54,6 @@ const sponsors = {
       name: "Sex Toy Collective",
     },
     {
-      url: "https://www.bestecasinosonline.at/",
-      name: "Online Casino Österreich",
-      logo: require("../public/sponsors/BesteCasinosOnline.webp"),
-    }, // Custom
-    {
       url: "https://www.sister-sites.co.uk/",
       logo: require("../public/sponsors/sistersites-logo.png"),
       name: "sister-sites.co.uk",
@@ -69,14 +69,9 @@ const sponsors = {
       name: "Assembly Four",
     }, // Custom
     {
-      url: "https://www.auscasinos.com/new/",
+      url: "https://www.auscasinos.com/",
       logo: require("../public/sponsors/auscasinos.png"),
-      name: "AusCasinos.com New Site Section",
-    }, // Custom
-    {
-      url: "https://kasynohex.com/kasyna-online/",
-      logo: require("../public/sponsors/kasynohex.svg"),
-      name: "Casino online PL",
+      name: "Auscasinos - Online casinos in Australia",
     }, // Custom
     {
       url: "https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html",
@@ -98,6 +93,11 @@ const sponsors = {
       logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
       name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
     }, // Custom
+    {
+      url: "https://www.movavi.com/imovie-for-windows.html",
+      logo: require("../public/sponsors/movavi.svg"),
+      name: "Movavi",
+    }, // Custom/other
     {
       url: "https://krystal.uk/",
       logo: require("../public/sponsors/Krystal_Logo.svg"),
@@ -310,8 +310,21 @@ const sponsors = {
       logo: require("../public/sponsors/awisee2.jpg"),
       name: "Data-Driven SEO Agency",
     }, // Custom
+    {
+      url: "https://kaleidos.net/products",
+      logo: require("../public/sponsors/kaleidos.png"),
+      name: "Kaleidos (Taiga & Penpot)",
+    }, // Custom
   ],
-  silver: patreonData.silver,
+  silver: [
+    {
+      url: "https://ichiji.social/@tnzk",
+      logo: require("../public/sponsors/tnzk.png"),
+      name: "Kyohei Hamaguchi / @tnzk",
+      nofollow: false
+    },
+    ...patreonData.silver
+  ],
   generalHighlighted: patreonData.generalHighlighted,
   general: patreonData.general,
 }

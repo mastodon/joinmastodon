@@ -89,6 +89,7 @@
   "roadmap.page_description": "Zjistěte, na čem pracujeme v Mastodonu",
   "roadmap.page_title": "Veřejná roadmapa",
   "roadmap.state.backlog": "Zkoumání",
+  "roadmap.state.completed": "Recently completed",
   "roadmap.state.started": "Probíhá",
   "roadmap.state.unstarted": "Plánováno",
   "roadmap.suggest_a_feature": "Navrhněte vylepšení",
@@ -117,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "Servery nelze kontrolovat, ale můžeme kontrolovat, co propagujeme na této stránce. Naše organizace vás bude pouze upozorňovat na servery, které jsou soustavně oddány umírněnosti v boji proti rasismu, sexismu a transphobii.",
   "servers.getting_started.safe_for_all.title": "Bezpečný pro všechny",
   "servers.getting_started.servers": "Prvním krokem je rozhodování o tom, na který server byste si chtěli nastavit svůj účet. Každý server je provozován nezávislou organizací nebo jednotlivcem a může se lišit v zásadách umírněnosti.",
-  "servers.hero.body": "Mastodon není jediná webová stránka. Pro použití musíte vytvořit účet s poskytovatelem — říkáme jim <b>servery</b> — které vám umožní spojit se s ostatními lidmi napříč Mastodonem.",
+  "servers.hero.body": "Mastodon není jedna webová stránka. Chcete-li jej používat, musíte si vytvořit účet u poskytovatele — říkáme jim <b>servery</b> — který vám umožní spojit se s ostatními lidmi napříč Mastodonem.",
   "servers.page_description": "Najděte kam se přihlásit do decentralizované sociální sítě Mastodon.",
   "servers.page_title": "Servery",
   "silver_sponsor": "Stříbrný sponzor",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Okamžité",
   "wizard.filter.sign_up.manual": "Manuální revize",
   "wizard.filter_by_language": "Jazyk",
-  "wizard.filter_by_registrations": "Rychlost registrace",
+  "wizard.filter_by_registrations": "Sign-up process",
   "wizard.filter_by_structure": "Právní struktura",
   "wizard.no_results": "Zdá se, že v současné době neexistují žádné servery, které by odpovídaly vašim kritériím vyhledávání. Mějte na paměti, že zobrazujeme pouze soubor serverů, které aktuálně přijímají nové registrace."
 }

@@ -89,6 +89,7 @@
   "roadmap.page_description": "Izvejte, s čim se ukvarjamo v Mastodonu",
   "roadmap.page_title": "Javni načrt razvoja",
   "roadmap.state.backlog": "Raziskujemo",
+  "roadmap.state.completed": "Nedavno končano",
   "roadmap.state.started": "V teku",
   "roadmap.state.unstarted": "Načrtovano",
   "roadmap.suggest_a_feature": "Predlagajte funkcijo",
@@ -154,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Takojšen",
   "wizard.filter.sign_up.manual": "Ročni pregled",
   "wizard.filter_by_language": "Jezik",
-  "wizard.filter_by_registrations": "Hitrost prijave",
+  "wizard.filter_by_registrations": "Postopek prijave",
   "wizard.filter_by_structure": "Pravna struktura",
   "wizard.no_results": "Zdi se, da trenutno ni strežnikov, ki bi ustrezali vašim pogojem iskanja. Upoštevajte, da prikažemo le kurirani nabor strežnokov, ki trenutno sprejemajo nove prijave."
 }
