@@ -141,16 +141,17 @@ export const apps: appsList = {
       paid: false
     },
     {
-      released_on: "Mar 27, 2023",
-      name: "Nightfox DAWN",
-      icon: dawn,
-      url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
-      paid: true
-    },
       released_on: "Mar 24, 2023",
       name: "Woolly",
       icon: woolly,
       url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
+      paid: true
+    },
+    {
+      released_on: "Mar 27, 2023",
+      name: "Nightfox DAWN",
+      icon: dawn,
+      url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
       paid: true
     }
   ],
