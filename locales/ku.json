@@ -118,7 +118,7 @@
   "servers.getting_started.safe_for_all.body": "Em nikarin rajekaran kontrol bikin, lê em dikarin tiştên ku em li ser vê rûpelê tê nîşandan kontrol bikin. Rêxistina me tenê wê rajekarên ku bi domdarî li dijî nijadperestî, zayendperestî û transfobîyê bi çavdêrî ve girêdayî ne, nîşan bide.",
   "servers.getting_started.safe_for_all.title": "Ji bo hemûyan parastî ye",
   "servers.getting_started.servers": "Yekemîn gav ev e ku tu biryarê bidî ka tu dixwazî li kîjan rajekarê ajimêra xwe çê bikî. Her rajekar ji aliyê rêxistinekê an jî kesekî serbixwe ve tê xebitandin û dibe ku di polîtîkayên çavdêriyê de cuda bin.",
-  "servers.hero.body": "Mastodon is not a single website. To use it, you need to make an account with a provider—we call them <b>servers</b>—that lets you connect with other people across Mastodon.",
+  "servers.hero.body": "Mastodon ne malperek yekane ye. Ji bo ku bi kar bînî, divê tu bi peydekarekê re ajimêrekê çê bikîem ji wan re dibêjin <b>rajekar</b>—ku dihêle tu li seranserê Mastodon bi kesên din re girêdayî bî.",
   "servers.page_description": "Binêre ka li ku derê tomarkirin pêk tê ji bo tora civakî ya nenavedî ya Mastodon.",
   "servers.page_title": "Rajekar",
   "silver_sponsor": "Sponsorên zîv",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Demkî",
   "wizard.filter.sign_up.manual": "Nirxandinê bi destan",
   "wizard.filter_by_language": "Ziman",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Pêvajoya tomarkirinê",
   "wizard.filter_by_structure": "Avahiya yasayî",
   "wizard.no_results": "Xuye ku heya niha rajekarek ku li gorî pîvanên lêgerîna te bicîh bibe tune. Hişyar bibe ku em tenê komek rajekarên hilbijartî yên ku niha tomarkirinên nû dipejirînin nîşan didin."
 }
