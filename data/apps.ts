@@ -18,9 +18,11 @@ import metatext from "../public/apps/metatext.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
+import elk from "../public/apps/elk.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
+import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
 import dawn from "../public/apps/dawn.png"
 import type { StaticImageData } from "next/image"
@@ -145,10 +147,17 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
       paid: true
     },
+      released_on: "Mar 24, 2023",
+      name: "Woolly",
+      icon: woolly,
+      url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
+      paid: true
+    }
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
+    { name: "Elk", icon: elk, url: "https://elk.zone" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
   ],
   desktop: [
@@ -181,6 +190,7 @@ export const apps: appsList = {
       icon: bitlbee,
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
     },
+    { name: "Elk", icon: elk, url: "https://github.com/elk-zone/elk-native/releases" },
     {
       released_on: "Mar 23, 2023",
       name: "Tuba",
