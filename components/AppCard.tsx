@@ -15,7 +15,7 @@ export type AppCardProps = {
 export const AppCard = ({ name, icon, url, paid }) => {
   return (
     <a
-      key={url + name}
+      key={`${url} ${name}`}
       href={url}
       target="_blank"
       rel="noopener noreferrer"
