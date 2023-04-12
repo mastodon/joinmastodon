@@ -69,7 +69,7 @@ const sponsors = {
       name: "Assembly Four",
     }, // Custom
     {
-      url: "https://www.auscasinos.com/",
+      url: "https://www.auscasinos.net/",
       logo: require("../public/sponsors/auscasinos.png"),
       name: "Auscasinos - Online casinos in Australia",
     }, // Custom
