@@ -89,7 +89,7 @@
   "roadmap.page_description": "Zjistěte, na čem pracujeme v Mastodonu",
   "roadmap.page_title": "Veřejná roadmapa",
   "roadmap.state.backlog": "Zkoumání",
-  "roadmap.state.completed": "Recently completed",
+  "roadmap.state.completed": "Nedávno dokončené",
   "roadmap.state.started": "Probíhá",
   "roadmap.state.unstarted": "Plánováno",
   "roadmap.suggest_a_feature": "Navrhněte vylepšení",
@@ -155,7 +155,7 @@
   "wizard.filter.sign_up.instant": "Okamžité",
   "wizard.filter.sign_up.manual": "Manuální revize",
   "wizard.filter_by_language": "Jazyk",
-  "wizard.filter_by_registrations": "Sign-up process",
+  "wizard.filter_by_registrations": "Proces registrace",
   "wizard.filter_by_structure": "Právní struktura",
   "wizard.no_results": "Zdá se, že v současné době neexistují žádné servery, které by odpovídaly vašim kritériím vyhledávání. Mějte na paměti, že zobrazujeme pouze soubor serverů, které aktuálně přijímají nové registrace."
 }
