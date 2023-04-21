@@ -39,6 +39,12 @@
         "parent": null
       },
       {
+        "id": "IOS-22",
+        "title": "Filters in post layout",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "MAS-86",
         "title": "Markdown formatting for posts",
         "priority": 3,
@@ -148,12 +154,6 @@
       {
         "id": "IOS-24",
         "title": "Pinned posts on profiles",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "IOS-22",
-        "title": "Filters in post layout",
         "priority": 2,
         "parent": null
       },
