@@ -3,6 +3,12 @@
     "type": "started",
     "items": [
       {
+        "id": "MAS-127",
+        "title": "New onboarding flow",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "MAS-88",
         "title": "Additional search syntax",
         "priority": 2,
