@@ -3,12 +3,6 @@
     "type": "started",
     "items": [
       {
-        "id": "MAS-127",
-        "title": "New onboarding flow",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "MAS-88",
         "title": "Additional search syntax",
         "priority": 2,
@@ -587,6 +581,20 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "MAS-128",
+        "title": "Thread lines",
+        "priority": 4,
+        "completedAt": "2023-04-24T06:07:06.572Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-127",
+        "title": "New onboarding flow",
+        "priority": 2,
+        "completedAt": "2023-04-23T20:24:56.903Z",
+        "parent": null
+      },
       {
         "id": "MAS-116",
         "title": "Add search prompts",
