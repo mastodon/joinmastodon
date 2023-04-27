@@ -36,7 +36,7 @@ export const IssueTimeline = ({ roadmap }) => {
   ]
 
   return (
-    <div className="mt-64 md:mt-0 md:bg-white md:rounded-md md:p-6 pl-8">
+    <div className="mt-56 md:mt-0 md:bg-white md:rounded-md md:p-6 pl-3">
       <div className="-mx-gutter pis-gutter mb-12 md:mb-6 overflow-x-auto">
         <div className="flex flex-wrap gap-gutter md:flex-nowrap">
           {categories.map(category => (
@@ -55,7 +55,7 @@ export const IssueTimeline = ({ roadmap }) => {
         <div className="absolute h-full w-0 border-dashed border-l border-gray-2" />
 
         {filteredRoadmap.map(state => (
-          <div key={state.type} className="mb-8 pl-8">
+          <div key={state.type} className="mb-8 pl-4 md:pl-8">
             <h2 className="h6 mb-4 text-black">{intl.formatMessage(messages[state.type])}</h2>
 
             <div className="space-y-2">
