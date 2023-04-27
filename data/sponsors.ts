@@ -158,6 +158,16 @@ const sponsors = {
       logo: require("../public/sponsors/video-downloader.png"),
       name: "Video Downloader",
     }, // Custom
+    {
+      url: "https://www.doppler.com/",
+      logo: require("../public/sponsors/doppler.png"),
+      name: "Doppler - SecretOps",
+    }, // Custom
+    {
+      url: "https://veepn.com/vpn-apps/download-vpn-for-pc/",
+      logo: require("../public/sponsors/veepn.png"),
+      name: "Download VPN for PC by VeePN super simple, fast, and trustful VPN for all family.",
+    }, // Custom
   ],
   gold: [
     {

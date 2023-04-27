@@ -1,5 +1,12 @@
 const interviews = [
   {
+    url: "https://www.theverge.com/23658648/mastodon-ceo-twitter-interview-elon-musk-twitter",
+    title: "Can Mastodon seize the moment from Twitter?",
+    show: "Decoder",
+    date: "2023-03-28",
+    icon: require("../public/press/decoder.avif"),
+  },
+  {
     url: "https://changelog.com/podcast/315",
     title: "Join the federation?! Mastodon awaits...",
     show: "The Changelog",

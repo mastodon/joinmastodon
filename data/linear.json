@@ -116,6 +116,12 @@
         "parent": null
       },
       {
+        "id": "MAS-129",
+        "title": "Fix search being hard to find on mobile",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "MAS-113",
         "title": "Rework link previews fetching and distribution",
         "priority": 2,
@@ -140,6 +146,12 @@
         "parent": null
       },
       {
+        "id": "MAS-48",
+        "title": "Quote posts",
+        "priority": 2,
+        "parent": null
+      },
+      {
         "id": "AND-9",
         "title": "Lists",
         "priority": 2,
@@ -148,6 +160,12 @@
       {
         "id": "AND-8",
         "title": "Filters",
+        "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "AND-5",
+        "title": "Translating posts",
         "priority": 2,
         "parent": null
       },
@@ -173,6 +191,42 @@
         "id": "MAS-11",
         "title": "Default and configurable terms of service",
         "priority": 2,
+        "parent": null
+      },
+      {
+        "id": "MAS-137",
+        "title": "Sorting options for threads",
+        "priority": 3,
+        "parent": null
+      },
+      {
+        "id": "MAS-136",
+        "title": "Add server setting for default discoverability of accounts",
+        "priority": 3,
+        "parent": null
+      },
+      {
+        "id": "MAS-134",
+        "title": "Privacy settings as an onboarding step",
+        "priority": 3,
+        "parent": null
+      },
+      {
+        "id": "MAS-133",
+        "title": "Display followed hashtag above posts in home feed",
+        "priority": 3,
+        "parent": null
+      },
+      {
+        "id": "MAS-132",
+        "title": "Synchronize boost and favourite counts for remote posts",
+        "priority": 3,
+        "parent": null
+      },
+      {
+        "id": "MAS-131",
+        "title": "Privacy and verification as separate pages in settings",
+        "priority": 3,
         "parent": null
       },
       {
@@ -247,12 +301,6 @@
       {
         "id": "AND-10",
         "title": "Hint about potentially missing remote content",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "AND-5",
-        "title": "Translating posts",
         "priority": 3,
         "parent": null
       },
@@ -453,12 +501,6 @@
       {
         "id": "MAS-54",
         "title": "Allow connecting custom domain to account",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-48",
-        "title": "Quote posts",
         "priority": 3,
         "parent": null
       },
