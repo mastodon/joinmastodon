@@ -139,7 +139,7 @@ export const apps: appsList = {
       name: "Woolly",
       icon: woolly,
       url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
-      paid: true
+      paid: true,
     },
     {
       released_on: "Mar 27, 2023",
