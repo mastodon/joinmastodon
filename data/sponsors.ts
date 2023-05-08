@@ -64,12 +64,7 @@ const sponsors = {
       name: "Masto.host - Fully managed Mastodon hosting",
     }, // Custom
     {
-      url: "https://assemblyfour.com/",
-      logo: require("../public/sponsors/a4.webp"),
-      name: "Assembly Four",
-    }, // Custom
-    {
-      url: "https://www.auscasinos.com/",
+      url: "https://www.auscasinos.net/",
       logo: require("../public/sponsors/auscasinos.png"),
       name: "Auscasinos - Online casinos in Australia",
     }, // Custom
@@ -107,11 +102,6 @@ const sponsors = {
       url: "https://www.raspberrypi.com/",
       logo: require("../public/sponsors/Raspberry-Pi-Logo.png"),
       name: "Raspberry Pi",
-    }, // Custom
-    {
-      url: "https://bibly.com/",
-      logo: require("../public/sponsors/bibly-logo.png"),
-      name: "Bibly",
     }, // Custom
     {
       url: "https://www.zerotier.com/",
@@ -164,9 +154,19 @@ const sponsors = {
       name: "toot.io",
     }, // Custom
     {
-      url: "https://www.daniweb.com/",
-      logo: require("../public/sponsors/daniweb.png"),
-      name: "DaniWeb",
+      url: "https://www.4kdownload.com/products/videodownloader-24",
+      logo: require("../public/sponsors/video-downloader.png"),
+      name: "Video Downloader",
+    }, // Custom
+    {
+      url: "https://www.doppler.com/",
+      logo: require("../public/sponsors/doppler.png"),
+      name: "Doppler - SecretOps",
+    }, // Custom
+    {
+      url: "https://veepn.com/vpn-apps/download-vpn-for-pc/",
+      logo: require("../public/sponsors/veepn.png"),
+      name: "Download VPN for PC by VeePN super simple, fast, and trustful VPN for all family.",
     }, // Custom
   ],
   gold: [
@@ -226,20 +226,10 @@ const sponsors = {
       name: "iBoysoft Data Recovery",
     }, // Custom
     {
-      url: "http://doshfunding.com/",
-      logo: require("../public/sponsors/doshfunding.svg"),
-      name: "Funding Solutions for Businesses",
-    }, // Custom
-    {
       url: "https://farbridge.com/",
       logo: require("../public/sponsors/farbridge.png"),
       name: "Farbridge",
     },
-    {
-      url: "https://www.sure.bet/casinos-not-on-gamstop/",
-      logo: require("../public/sponsors/surebet.jpg"),
-      name: "non GamStop Casinos",
-    }, // Custom
     {
       url: "https://www.onestein.nl",
       logo: require("../public/sponsors/onestein.png"),
@@ -261,11 +251,6 @@ const sponsors = {
       name: "Internet Archive",
     }, // Custom
     {
-      url: "https://bookingninja.io/",
-      logo: require("../public/sponsors/booking-ninja.png"),
-      name: "BookingNinja",
-    }, // Custom
-    {
       url: "https://www.ecurium.com/",
       logo: require("../public/sponsors/ecurium-for-nonprofits.svg"),
       name: "Ecurium",
@@ -284,11 +269,6 @@ const sponsors = {
       url: "https://goodyfeed.com/",
       logo: require("../public/sponsors/goody-feed.png"),
       name: "Goody Feed",
-    }, // Custom
-    {
-      url: "https://pillarwm.com/best-wealth-management-firms/",
-      logo: require("../public/sponsors/pillar.jpg"),
-      name: "Best Wealth Management Firms",
     }, // Custom
     {
       url: "http://www.reboot.io/",

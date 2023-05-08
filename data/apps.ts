@@ -14,7 +14,6 @@ import hyperspace from "../public/apps/hyperspace.png"
 import imast from "../public/apps/imast_icon.png"
 import mercury from "../public/apps/mercury.png"
 import sengi from "../public/apps/sengi.png"
-import metatext from "../public/apps/metatext.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
@@ -103,11 +102,6 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/mercury-for-mastodon/id1486749200",
     },
     {
-      name: "Metatext",
-      icon: metatext,
-      url: "https://apps.apple.com/app/metatext/id1523996615",
-    },
-    {
       released_on: "Apr 16, 2021",
       name: "tooot",
       icon: tooot,
@@ -131,14 +125,14 @@ export const apps: appsList = {
       name: "Ivory",
       icon: ivory,
       url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
-      paid: true
+      paid: true,
     },
     {
       released_on: "Feb 24, 2023",
       name: "Mammoth",
       icon: mammoth,
       url: "https://apps.apple.com/app/mammoth-for-mastodon/id1667573899",
-      paid: false
+      paid: false,
     },
     {
       released_on: "Mar 24, 2023",
@@ -153,7 +147,8 @@ export const apps: appsList = {
       icon: dawn,
       url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
       paid: true
-    }
+      paid: true,
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
@@ -191,7 +186,11 @@ export const apps: appsList = {
       icon: bitlbee,
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
     },
-    { name: "Elk", icon: elk, url: "https://github.com/elk-zone/elk-native/releases" },
+    {
+      name: "Elk",
+      icon: elk,
+      url: "https://github.com/elk-zone/elk-native/releases",
+    },
     {
       released_on: "Mar 23, 2023",
       name: "Tuba",
