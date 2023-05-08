@@ -146,7 +146,6 @@ export const apps: appsList = {
       name: "Nightfox DAWN",
       icon: dawn,
       url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
-      paid: true
       paid: true,
     },
   ],
