@@ -109,7 +109,7 @@
   "server.safety": "Veiligheid",
   "servers": "Servers",
   "servers.apply_for_an_account": "Een account aanvragen",
-  "servers.approval_required": "Aanmeldingen worden handmatig beoordeeld",
+  "servers.approval_required": "Registraties worden handmatig beoordeeld",
   "servers.create_account": "Account registreren",
   "servers.getting_started.feed.body": "Met een account op jouw server kun je elke andere persoon op het netwerk volgen ongeacht waar hun account wordt gehost. Je ziet hun berichten op jouw starttijdlijn en als ze jou volgen zien ze die van jou op die van hen.",
   "servers.getting_started.feed.title": "Jouw tijdlijn",
@@ -173,7 +173,7 @@
   "wizard.filter.sign_up.instant": "Meteen",
   "wizard.filter.sign_up.manual": "Handmatige beoordeling",
   "wizard.filter_by_language": "Taal",
-  "wizard.filter_by_registrations": "Aanmeldproces",
+  "wizard.filter_by_registrations": "Registratieproces",
   "wizard.filter_by_structure": "Rechtsvorm",
-  "wizard.no_results": "Het lijkt er op dat er momenteel geen servers zijn die aan jouw zoekcriteria voldoen. Let op dat we alleen een gepersonaliseerde set servers weergeven die momenteel nieuwe aanmeldingen accepteren."
+  "wizard.no_results": "Het lijkt er op dat er momenteel geen servers zijn die aan jouw zoekcriteria voldoen. Let op dat we alleen een gepersonaliseerde set servers weergeven die momenteel nieuwe registraties accepteren."
 }
