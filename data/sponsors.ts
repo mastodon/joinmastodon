@@ -231,6 +231,11 @@ const sponsors = {
       name: "Farbridge",
     },
     {
+      url: "https://www.sure.bet/casinos-not-on-gamstop/",
+      logo: require("../public/sponsors/surebet.jpg"),
+      name: "non GamStop Casinos",
+    }, // Custom
+    {
       url: "https://www.onestein.nl",
       logo: require("../public/sponsors/onestein.png"),
       name: "Onestein B.V.",
