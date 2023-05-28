@@ -12,7 +12,6 @@ import thedesk from "../public/apps/thedesk.png"
 import cuckooPlus from "../public/apps/cuckoo-plus.png"
 import hyperspace from "../public/apps/hyperspace.png"
 import imast from "../public/apps/imast_icon.png"
-import mercury from "../public/apps/mercury.png"
 import sengi from "../public/apps/sengi.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
@@ -94,11 +93,6 @@ export const apps: appsList = {
       name: "iMast",
       icon: imast,
       url: "https://apps.apple.com/app/imast/id1229461703",
-    },
-    {
-      name: "Mercury",
-      icon: mercury,
-      url: "https://apps.apple.com/app/mercury-for-mastodon/id1486749200",
     },
     {
       released_on: "Apr 16, 2021",
