@@ -22,6 +22,7 @@ import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
 import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
+import fedica from "../public/apps/fedica.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -140,6 +141,7 @@ export const apps: appsList = {
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
     { name: "Elk", icon: elk, url: "https://elk.zone" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
+    { name: "Fedica", icon: fedica, url: "https://fedica.com" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
