@@ -34,6 +34,11 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Julie Inouye",
+    position: "Communications",
+  },
+
+  {
     name: "Claire",
     position: "Engineering",
     socials: {
@@ -58,16 +63,21 @@ const team: TeamMember[] = [
   },
 
   {
-    name: "Timothy Campbell",
-    position: "DevOps",
-  },
-
-  {
     name: "Gregory Klyushnikov",
     position: "Engineering",
     socials: {
       mastodon: "https://mastodon.social/@grishka",
     },
+  },
+
+  {
+    name: "Timothy Campbell",
+    position: "DevOps",
+  },
+
+  {
+    name: "Amelia Rochko",
+    position: "Customer Service",
   },
 
   {

@@ -61,6 +61,9 @@ const Header = ({ transparent = true }: HeaderProps) => {
         description: <FormattedMessage id="nav.code.description" defaultMessage="Mastodon is free and open-source software" />,
       },
     }, {
+      value: "/verification",
+      label: <FormattedMessage id="nav.verification.title" defaultMessage="Verification" />,
+    }, {
       key: "locale",
       label: <span aria-label={intl.formatMessage({
         id: "translate_site",
