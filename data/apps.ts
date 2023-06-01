@@ -22,6 +22,7 @@ import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
 import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
+import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
 import type { StaticImageData } from "next/image"
 
@@ -135,6 +136,13 @@ export const apps: appsList = {
       url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
       paid: true,
     },
+    {
+      released_on: "May 1, 2023",
+      name: "Mona",
+      icon: mona,
+      url: "https://apps.apple.com/app/id1659154653",
+      paid: true,
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
@@ -183,6 +191,14 @@ export const apps: appsList = {
       name: "Tuba",
       icon: tuba,
       url: "https://flathub.org/apps/details/dev.geopjr.Tuba",
+    },
+    {
+      released_on: "May 1, 2023",
+      name: "Mona for Mac",
+      icon: mona,
+      url: "https://apps.apple.com/app/id1659154653",
+      paid: true,
+      hidden_from_all: true,
     },
   ],
   sailfish: [
