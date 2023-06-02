@@ -25,6 +25,7 @@ import tuba from "../public/apps/tuba.png"
 import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
 import type { StaticImageData } from "next/image"
+import focus from "../public/apps/focus.png"
 
 export type appsList = {
   /** the operating system or platform the list of apps is built for */
@@ -45,6 +46,12 @@ export type appsList = {
 }
 export const apps: appsList = {
   android: [
+      {
+      released_on: "May 21, 2023",
+      name: "Focus",
+      icon: focus,
+      url: "https://play.google.com/store/apps/details?id=allen.town.focus.mastodon",
+    },
     {
       released_on: "Mar 15, 2017",
       name: "Tusky",
