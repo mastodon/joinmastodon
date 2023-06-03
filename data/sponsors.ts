@@ -300,6 +300,11 @@ const sponsors = {
       logo: require("../public/sponsors/kaleidos.png"),
       name: "Kaleidos (Taiga & Penpot)",
     }, // Custom
+    {
+      url: "https://www.bairesdev.com/sponsoring-open-source-projects/",
+      logo: require("../public/sponsors/bairesdev.png"),
+      name: "BairesDev",
+    }, // Custom
   ],
   silver: [
     {
