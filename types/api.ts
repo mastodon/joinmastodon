@@ -1,4 +1,4 @@
-export type ApiPaths = 'jobs' | 'categories' | 'languages'| 'servers' | 'statistics'
+export type ApiPaths = 'jobs' | 'categories' | 'languages' | 'servers' | 'statistics'
 
 export type Category = {
   category: string
