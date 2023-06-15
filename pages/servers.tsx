@@ -45,7 +45,7 @@ const Servers = () => {
 
   const allCategories = useQuery<Category[]>(
     ["categories", ""],
-    () => fetchEndpoint("categories", {}),
+    () => fetchEndpoint("categories"),
     { select: (data) => _orderBy(data, "servers_count", "desc") }
   )
 
@@ -167,7 +167,7 @@ const Servers = () => {
 
   const days = useQuery<Day[]>(
     ["statistics"],
-    () => fetchEndpoint("statistics", ""),
+    () => fetchEndpoint("statistics"),
     queryOptions
   )
 
