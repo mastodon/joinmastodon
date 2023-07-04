@@ -3,8 +3,8 @@
     "type": "started",
     "items": [
       {
-        "id": "AND-63",
-        "title": "Show verified links more prominently",
+        "id": "MAS-138",
+        "title": "When reporting a reply, forward report to server of parent",
         "priority": 2,
         "parent": null
       },
@@ -39,89 +39,32 @@
         "parent": null
       },
       {
-        "id": "AND-78",
-        "title": "Notifications settings",
-        "priority": 3,
-        "parent": {
-          "id": "AND-15",
-          "title": "Advanced Settings"
-        }
-      },
-      {
-        "id": "AND-77",
-        "title": "Display settings",
-        "priority": 3,
-        "parent": {
-          "id": "AND-15",
-          "title": "Advanced Settings"
-        }
-      },
-      {
-        "id": "AND-76",
-        "title": "Behavior settings",
-        "priority": 3,
-        "parent": {
-          "id": "AND-15",
-          "title": "Advanced Settings"
-        }
-      },
-      {
-        "id": "AND-74",
-        "title": "Filter settings",
-        "priority": 3,
-        "parent": {
-          "id": "AND-15",
-          "title": "Advanced Settings"
-        }
-      },
-      {
-        "id": "AND-73",
-        "title": "Server information in settings",
-        "priority": 3,
-        "parent": {
-          "id": "AND-15",
-          "title": "Advanced Settings"
-        }
-      },
-      {
-        "id": "MAS-49",
-        "title": "Optimize batch file deletion",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-46",
-        "title": "Webhook templating",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-42",
-        "title": "Add option to exclude list members from home feed",
-        "priority": 3,
-        "parent": null
-      },
-      {
         "id": "MAS-22",
         "title": "Add explicit flag to differentiate suspended accounts from deleted accounts",
         "priority": 3,
         "parent": null
       },
       {
-        "id": "AND-15",
-        "title": "Advanced Settings",
+        "id": "MAS-19",
+        "title": "Timeline of public posts talking about a trending link",
         "priority": 3,
+        "parent": null
+      },
+      {
+        "id": "IOS-14",
+        "title": "Advanced settings area",
+        "priority": 3,
+        "parent": null
+      },
+      {
+        "id": "MAS-151",
+        "title": "Change label on \"Media not available\" thumbnails",
+        "priority": 4,
         "parent": null
       },
       {
         "id": "MAS-101",
         "title": "Upgrade to Rails 7",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "AND-6",
-        "title": "Pinned posts on profiles",
         "priority": 4,
         "parent": null
       }
@@ -140,18 +83,6 @@
         "id": "MAS-21",
         "title": "Add delay to account deletions and allow cancelling them",
         "priority": 1,
-        "parent": null
-      },
-      {
-        "id": "MAS-138",
-        "title": "When reporting a reply, forward report to server of parent",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "MAS-129",
-        "title": "Fix search being hard to find on mobile",
-        "priority": 2,
         "parent": null
       },
       {
@@ -199,12 +130,6 @@
       {
         "id": "AND-9",
         "title": "Lists",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "AND-8",
-        "title": "Filtered posts in the feed",
         "priority": 2,
         "parent": null
       },
@@ -347,21 +272,9 @@
         "parent": null
       },
       {
-        "id": "IOS-14",
-        "title": "Advanced settings area",
-        "priority": 3,
-        "parent": null
-      },
-      {
         "id": "IOS-5",
         "title": "Block domain option in dropdowns",
         "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-151",
-        "title": "Change label on \"Media not available\" thumbnails",
-        "priority": 4,
         "parent": null
       },
       {
@@ -574,12 +487,6 @@
         "parent": null
       },
       {
-        "id": "MAS-19",
-        "title": "Timeline of public posts talking about a trending link",
-        "priority": 3,
-        "parent": null
-      },
-      {
         "id": "MAS-13",
         "title": "Featured profiles on profiles",
         "priority": 3,
@@ -656,6 +563,112 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "AND-6",
+        "title": "Pinned posts on profiles",
+        "priority": 4,
+        "completedAt": "2023-07-04T23:24:08.662Z",
+        "parent": null
+      },
+      {
+        "id": "AND-78",
+        "title": "Notifications settings",
+        "priority": 3,
+        "completedAt": "2023-07-04T23:24:07.783Z",
+        "parent": {
+          "id": "AND-15",
+          "title": "Advanced Settings"
+        }
+      },
+      {
+        "id": "AND-77",
+        "title": "Display settings",
+        "priority": 3,
+        "completedAt": "2023-07-04T23:24:07.733Z",
+        "parent": {
+          "id": "AND-15",
+          "title": "Advanced Settings"
+        }
+      },
+      {
+        "id": "AND-76",
+        "title": "Behavior settings",
+        "priority": 3,
+        "completedAt": "2023-07-04T23:24:07.685Z",
+        "parent": {
+          "id": "AND-15",
+          "title": "Advanced Settings"
+        }
+      },
+      {
+        "id": "AND-74",
+        "title": "Filter settings",
+        "priority": 3,
+        "completedAt": "2023-07-04T23:24:07.630Z",
+        "parent": {
+          "id": "AND-15",
+          "title": "Advanced Settings"
+        }
+      },
+      {
+        "id": "AND-73",
+        "title": "Server information in settings",
+        "priority": 3,
+        "completedAt": "2023-07-04T23:24:07.583Z",
+        "parent": {
+          "id": "AND-15",
+          "title": "Advanced Settings"
+        }
+      },
+      {
+        "id": "AND-15",
+        "title": "Advanced Settings",
+        "priority": 3,
+        "completedAt": "2023-07-04T23:24:07.534Z",
+        "parent": null
+      },
+      {
+        "id": "AND-8",
+        "title": "Filtered posts in the feed",
+        "priority": 2,
+        "completedAt": "2023-07-04T23:24:07.265Z",
+        "parent": null
+      },
+      {
+        "id": "AND-63",
+        "title": "Show verified links more prominently",
+        "priority": 2,
+        "completedAt": "2023-07-04T23:23:19.691Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-49",
+        "title": "Optimize batch file deletion",
+        "priority": 3,
+        "completedAt": "2023-06-26T12:17:44.560Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-129",
+        "title": "Fix search being hard to find on mobile",
+        "priority": 2,
+        "completedAt": "2023-06-26T03:26:44.352Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-46",
+        "title": "Webhook templating",
+        "priority": 3,
+        "completedAt": "2023-06-06T08:42:50.353Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-42",
+        "title": "Add option to exclude list members from home feed",
+        "priority": 3,
+        "completedAt": "2023-06-06T08:17:13.270Z",
+        "parent": null
+      },
       {
         "id": "MAS-33",
         "title": "Add ability to import lists",
