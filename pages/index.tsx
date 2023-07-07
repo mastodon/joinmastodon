@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { FormattedMessage, useIntl } from "react-intl"
 import Image from "next/image"
 import Head from "next/head"
@@ -26,8 +26,7 @@ import illoWorld from "../public/illustrations/home_sponsors_world.png"
 import homeHeroMobile from "../public/illustrations/home_hero_mobile.webp"
 import homeHeroDesktop from "../public/illustrations/home_hero_desktop.png"
 import Hero from "../components/Hero"
-import { getDirForLocale } from "../utils/locales"
-import { useRouter } from "next/router"
+
 import Layout from "../components/Layout"
 
 function Home() {
@@ -518,7 +517,7 @@ const Sponsors = ({ sponsors }) => {
         </>
       )}
 
-      <p className="mt-8 text-gray-2 lg:col-span-12 lg:mb-16">
+      <p className="mt-8 text-gray-1 lg:col-span-12 lg:mb-16">
         Sponsorship does not equal influence. Mastodon is fully independent.
       </p>
     </section>
