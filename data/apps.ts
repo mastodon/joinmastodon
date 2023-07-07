@@ -24,6 +24,7 @@ import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
 import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
+import radiant from "../public/apps/radiant.png"
 import phanpy from "../public/apps/phanpy.png"
 import type { StaticImageData } from "next/image"
 
@@ -142,6 +143,13 @@ export const apps: appsList = {
       name: "Mona",
       icon: mona,
       url: "https://apps.apple.com/app/id1659154653",
+      paid: true,
+    },
+    {
+      released_on: "Jun 19, 2023",
+      name: "Radiant",
+      icon: radiant,
+      url: "https://apps.apple.com/app/id6444323022",
       paid: true,
     },
   ],
