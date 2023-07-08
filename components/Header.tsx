@@ -213,7 +213,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
                               </span>
                             </span>
 
-                            <span className="b3 hidden h-12 items-center justify-center rounded-md border-2 border-blurple-500 bg-blurple-500 p-4 !font-semibold text-white transition-colors group-hover:border-blurple-600 group-hover:bg-blurple-600 md:flex">
+                            <span className="b3 hidden h-12 items-center justify-center rounded-md border-2 border-blurple-600 bg-blurple-600 p-4 !font-semibold text-white transition-colors group-hover:border-blurple-900 group-hover:bg-blurple-900 md:flex">
                               {item.footer.label}
                             </span>
                           </a>
