@@ -154,6 +154,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
                       )}
                     >
                       <ul
+                        role="menu"
                         className={classNames(
                           item.compact
                             ? "py-2 md:px-2"
@@ -162,7 +163,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
                       >
                         {item.childItems.map((child, childIndex) => (
                           // Child Items
-                          <li key={child.key || child.value}>
+                          <li key={child.key || child.value} role="menu">
                             <Link
                               href={child.value}
                               locale={child.locale || undefined}
