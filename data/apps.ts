@@ -25,6 +25,7 @@ import tuba from "../public/apps/tuba.png"
 import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
 import radiant from "../public/apps/radiant.png"
+import phanpy from "../public/apps/phanpy.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -158,6 +159,7 @@ export const apps: appsList = {
     { name: "Elk", icon: elk, url: "https://elk.zone" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
     { name: "Fedica", icon: fedica, url: "https://fedica.com" },
+    { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
