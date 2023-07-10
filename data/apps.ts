@@ -12,9 +12,7 @@ import thedesk from "../public/apps/thedesk.png"
 import cuckooPlus from "../public/apps/cuckoo-plus.png"
 import hyperspace from "../public/apps/hyperspace.png"
 import imast from "../public/apps/imast_icon.png"
-import mercury from "../public/apps/mercury.png"
 import sengi from "../public/apps/sengi.png"
-import metatext from "../public/apps/metatext.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
@@ -24,6 +22,10 @@ import ivory from "../public/apps/ivory.png"
 import mammoth from "../public/apps/mammoth.png"
 import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
+import mona from "../public/apps/mona.png"
+import fedica from "../public/apps/fedica.png"
+import radiant from "../public/apps/radiant.png"
+import phanpy from "../public/apps/phanpy.png"
 import megalodon from "../public/apps/megalodon.png"
 import type { StaticImageData } from "next/image"
 
@@ -104,16 +106,6 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/imast/id1229461703",
     },
     {
-      name: "Mercury",
-      icon: mercury,
-      url: "https://apps.apple.com/app/mercury-for-mastodon/id1486749200",
-    },
-    {
-      name: "Metatext",
-      icon: metatext,
-      url: "https://apps.apple.com/app/metatext/id1523996615",
-    },
-    {
       released_on: "Apr 16, 2021",
       name: "tooot",
       icon: tooot,
@@ -137,28 +129,44 @@ export const apps: appsList = {
       name: "Ivory",
       icon: ivory,
       url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
-      paid: true
+      paid: true,
     },
     {
       released_on: "Feb 24, 2023",
       name: "Mammoth",
       icon: mammoth,
       url: "https://apps.apple.com/app/mammoth-for-mastodon/id1667573899",
-      paid: false
+      paid: false,
     },
     {
       released_on: "Mar 24, 2023",
       name: "Woolly",
       icon: woolly,
       url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
-      paid: true
-    }
+      paid: true,
+    },
+    {
+      released_on: "May 1, 2023",
+      name: "Mona",
+      icon: mona,
+      url: "https://apps.apple.com/app/id1659154653",
+      paid: true,
+    },
+    {
+      released_on: "Jun 19, 2023",
+      name: "Radiant",
+      icon: radiant,
+      url: "https://apps.apple.com/app/id6444323022",
+      paid: true,
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
     { name: "Elk", icon: elk, url: "https://elk.zone" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
+    { name: "Fedica", icon: fedica, url: "https://fedica.com" },
+    { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
@@ -190,12 +198,24 @@ export const apps: appsList = {
       icon: bitlbee,
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
     },
-    { name: "Elk", icon: elk, url: "https://github.com/elk-zone/elk-native/releases" },
+    {
+      name: "Elk",
+      icon: elk,
+      url: "https://github.com/elk-zone/elk-native/releases",
+    },
     {
       released_on: "Mar 23, 2023",
       name: "Tuba",
       icon: tuba,
       url: "https://flathub.org/apps/details/dev.geopjr.Tuba",
+    },
+    {
+      released_on: "May 1, 2023",
+      name: "Mona for Mac",
+      icon: mona,
+      url: "https://apps.apple.com/app/id1659154653",
+      paid: true,
+      hidden_from_all: true,
     },
   ],
   sailfish: [

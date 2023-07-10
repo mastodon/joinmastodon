@@ -61,6 +61,9 @@ const Header = ({ transparent = true }: HeaderProps) => {
         description: <FormattedMessage id="nav.code.description" defaultMessage="Mastodon is free and open-source software" />,
       },
     }, {
+      value: "/verification",
+      label: <FormattedMessage id="nav.verification.title" defaultMessage="Verification" />,
+    }, {
       key: "locale",
       label: <span aria-label={intl.formatMessage({
         id: "translate_site",
@@ -151,6 +154,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
                       )}
                     >
                       <ul
+                        role="menu"
                         className={classNames(
                           item.compact
                             ? "py-2 md:px-2"
@@ -159,7 +163,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
                       >
                         {item.childItems.map((child, childIndex) => (
                           // Child Items
-                          <li key={child.key || child.value}>
+                          <li key={child.key || child.value} role="menu">
                             <Link
                               href={child.value}
                               locale={child.locale || undefined}
