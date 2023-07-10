@@ -26,6 +26,7 @@ import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
 import radiant from "../public/apps/radiant.png"
 import phanpy from "../public/apps/phanpy.png"
+import tootrain from "../public/apps/tootrain.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -209,6 +210,12 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/id1659154653",
       paid: true,
       hidden_from_all: true,
+    },
+    {
+      released_on: "Aug 10, 2021",
+      name: "TootRain (Mac)",
+      icon: tootrain,
+      url: "https://apps.apple.com/app/id1579538917",
     },
   ],
   sailfish: [
