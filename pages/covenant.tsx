@@ -108,7 +108,7 @@ const Covenant = () => (
 
         <CovenantSection
           heading="After submission"
-          description="Submissions are reviewed manually. Our service periodically checks if you server is up and if it is accepting sign-ups. We only show servers that are up and accepting sign-ups."
+          description="Submissions are reviewed manually. Our service periodically checks if your server is up and if it is accepting sign-ups. We only show servers that are up and accepting sign-ups."
         />
 
         <Head>

@@ -29,29 +29,29 @@ export const BarIcon = ({ priority, size }: BarIconProps) => (
 )
 
 export const ChevronRight = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[1em] h-[1em]">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[1em] h-[1em] inline-block">
     <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
   </svg>
 )
 
 export const Issue = ({ id, title, priority, state, parent }: IssueProps) => {
   return (
-    <div className="relative b2 p-2 rounded">
-      <div className="absolute -left-8 top-1/2 origin-center -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-lg bg-eggplant">
+    <div className="relative b2 p-2">
+      <div className="absolute -left-4 md:-left-8 top-1/2 top-0 origin-center -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-lg bg-eggplant">
         {(state === "started" && priority === PRIORITY_URGENT) && <div className="absolute animate-ping h-full w-full rounded-full bg-eggplant opacity-75" />}
       </div>
 
-      <div className="relative flex gap-3 items-center truncate">
+      <div className="flex gap-1 md:gap-3 items-center">
         <div className="hidden md:block flex-shrink-0 text-nightshade-300 w-[16px]">{priority !== PRIORITY_UNSET && <BarIcon priority={priority} size={16} />}</div>
-        <div className="hidden md:block flex-shrink-0 w-16 text-gray-2 truncate">{id}</div>
-        <div className="text-black flex items-center gap-1 truncate">
-          <span className="flex-shrink-0">{title}</span>
+        <div className="flex-shrink-0 w-20 text-gray-2 truncate">{id}</div>
+        <div className="text-black flex-auto gap-1">
+          <span>{title}</span>
 
           {parent && (
-            <>
+            <span className="hidden md:block">
               <span className="text-gray-2 flex-shrink-0"><ChevronRight /></span>
               <span className="text-gray-2 truncate">{parent.title}</span>
-            </>
+            </span>
           )}
         </div>
       </div>
