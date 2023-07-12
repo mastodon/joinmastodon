@@ -28,6 +28,17 @@ const team: TeamMember[] = [
   },
 
   {
+    image: require("../public/team/inga-driksne.jpg"),
+    name: "Inga Driksne",
+    position: "Operations/Talent",
+  },
+
+  {
+    name: "Julie Inouye",
+    position: "Communications",
+  },
+
+  {
     name: "Claire",
     position: "Engineering",
     socials: {
@@ -49,6 +60,24 @@ const team: TeamMember[] = [
     socials: {
       mastodon: "https://bearologics.social/@marcus",
     },
+  },
+
+  {
+    name: "Gregory Klyushnikov",
+    position: "Engineering",
+    socials: {
+      mastodon: "https://mastodon.social/@grishka",
+    },
+  },
+
+  {
+    name: "Timothy Campbell",
+    position: "DevOps",
+  },
+
+  {
+    name: "Amelia Rochko",
+    position: "Customer Service",
   },
 
   {

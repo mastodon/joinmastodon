@@ -95,7 +95,7 @@ const About = () => (
                           src={member.image}
                           layout="fill"
                           objectFit="cover"
-                          objectPosition="0% 28%"
+                          objectPosition="50% 50%"
                           alt=""
                           className="grayscale"
                         />
@@ -103,20 +103,21 @@ const About = () => (
                     </div>
 
                     <span className="b2 block !font-bold">{member.name}</span>
-                    <span className="b2 block !font-semibold text-gray-1">
-                      {member.position}
-                    </span>
 
-                    {member.socials && (
-                      <div className="mt-1 flex">
+                    <div className="flex items-center">
+                      <span className="b2 block flex-grow !font-semibold text-gray-1">
+                        {member.position}
+                      </span>
+
+                      {member.socials && (
                         <a
                           href={member.socials.mastodon}
-                          className="b2 relative block text-blurple-600 hover:text-blurple-500"
+                          className="b2 ml-2 block flex-shrink-0 text-blurple-600 hover:text-blurple-500"
                         >
-                          <LogoWhite className="h-4 w-4" fill="currentColor" />
+                          <LogoWhite className="h-[1em] w-[1em]" fill="currentColor" />
                         </a>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>

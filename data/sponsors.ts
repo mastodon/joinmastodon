@@ -9,6 +9,11 @@ const sponsors = {
       name: "Fastly",
     }, // Custom/other
     {
+      url: "https://www.datadoghq.com",
+      logo: require("../public/sponsors/datadog.png"),
+      name: "Datadog",
+    }, // Custom/other
+    {
       url: "https://mobi.com/",
       logo: require("../public/sponsors/mobi-across-big.png"),
       name: "Mobi",
@@ -17,7 +22,12 @@ const sponsors = {
       url: "https://medium.com/",
       logo: require("../public/sponsors/medium.png"),
       name: "Medium",
-    },
+    }, // Custom
+    {
+      url: "https://oak.is/",
+      logo: require("../public/sponsors/oak.svg"),
+      name: "Oak Studios",
+    }, // Custom/other
     {
       url: "https://www.ramotion.com/agency/ui-ux-design",
       logo: require("../public/sponsors/truevendor.png"),
@@ -44,16 +54,6 @@ const sponsors = {
       name: "Sex Toy Collective",
     },
     {
-      url: "https://www.vpsserver.com/",
-      logo: require("../public/sponsors/vpsserver.png"),
-      name: "VPS Server",
-    },
-    {
-      url: "https://www.bestecasinosonline.at/",
-      name: "Online Casino Österreich",
-      logo: require("../public/sponsors/BesteCasinosOnline.webp"),
-    }, // Custom
-    {
       url: "https://www.sister-sites.co.uk/",
       logo: require("../public/sponsors/sistersites-logo.png"),
       name: "sister-sites.co.uk",
@@ -64,29 +64,9 @@ const sponsors = {
       name: "Masto.host - Fully managed Mastodon hosting",
     }, // Custom
     {
-      url: "https://assemblyfour.com/",
-      logo: require("../public/sponsors/a4.webp"),
-      name: "Assembly Four",
-    }, // Custom
-    {
-      url: "https://www.auscasinos.com/new/",
+      url: "https://www.auscasinos.net/",
       logo: require("../public/sponsors/auscasinos.png"),
-      name: "AusCasinos.com New Site Section",
-    }, // Custom
-    {
-      url: "https://www.joylovedolls.com/",
-      logo: require("../public/sponsors/jld_psd_logo_orig_black.png"),
-      name: "Joy Love Dolls",
-    }, // Custom
-    {
-      url: "https://kasynohex.com/kasyna-online/",
-      logo: require("../public/sponsors/kasynohex.svg"),
-      name: "Casino online PL",
-    }, // Custom
-    {
-      url: "https://www.globenewswire.com/news-release/2021/04/07/2206309/0/en/10-Best-Online-Casinos-in-Australia-List-of-Real-Money-Pokies-Sites-Rated-By-Users-and-Popularity.html",
-      logo: require("../public/sponsors/alt-casino-1.png"),
-      name: "Online Casinos Australia",
+      name: "Auscasinos - Online casinos in Australia",
     }, // Custom
     {
       url: "https://www.nettikasinot.org/",
@@ -114,11 +94,6 @@ const sponsors = {
       name: "Raspberry Pi",
     }, // Custom
     {
-      url: "https://bibly.com/",
-      logo: require("../public/sponsors/bibly-logo.png"),
-      name: "Bibly",
-    }, // Custom
-    {
       url: "https://www.zerotier.com/",
       logo: require("../public/sponsors/zerotier_logo_black.png"),
       name: "ZeroTier, Inc.",
@@ -127,16 +102,6 @@ const sponsors = {
       url: "https://www.goldeneaglecoin.com/",
       logo: require("../public/sponsors/ge-logo-coin-card2.png"),
       name: "Golden Eagle Coins",
-    }, // Custom
-    {
-      url: "https://brightstarsystems.com/",
-      logo: require("../public/sponsors/brightstarsystems.png"),
-      name: "BrightStar Systems",
-    }, // Custom
-    {
-      url: "https://apernet.io/",
-      logo: require("../public/sponsors/AperNetLogo.svg"),
-      name: "Aperture Internet Laboratory",
     }, // Custom
     {
       url: "https://rubycentral.org/",
@@ -164,41 +129,41 @@ const sponsors = {
       name: "Complete SEO",
     }, // Custom
     {
-      url: "https://www.drinkingquest.com/",
-      logo: require("../public/sponsors/jason-anarchy-games.jpg"),
-      name: "Jason Anarchy Games",
-    }, // Custom
-    {
       url: "https://intellifluence.com/",
       logo: require("../public/sponsors/intellifluence logos.png"),
       name: "Intellifluence supports all influencers",
-    },
+    }, // Custom
     {
       url: "https://toot.io/mastodon_hosting.html",
       logo: require("../public/sponsors/toot_io_logo.png"),
       name: "toot.io",
     }, // Custom
     {
-      url: "https://www.daniweb.com/",
-      logo: require("../public/sponsors/daniweb.png"),
-      name: "DaniWeb",
+      url: "https://www.4kdownload.com/products/videodownloader-24",
+      logo: require("../public/sponsors/video-downloader.png"),
+      name: "Video Downloader",
     }, // Custom
-  ],
-  gold: [
+    {
+      url: "https://veepn.com/vpn-apps/download-vpn-for-pc/",
+      logo: require("../public/sponsors/veepn.png"),
+      name: "Download VPN for PC by VeePN super simple, fast, and trustful VPN for all family.",
+    }, // Custom
+    {
+      url: "https://werd.io",
+      logo: require("../public/sponsors/werdio2.png"),
+      name: "Werd I/O",
+    }, // Custom
     {
       url: "https://mask.io/",
       logo: require("../public/sponsors/mask-network.png"),
       name: "Mask Network",
-    }, // Custom/other
+    }, // Custom
+  ],
+  gold: [
     {
       url: "https://easydns.com/",
       logo: require("../public/sponsors/easydns.png"),
       name: "easyDNS",
-    },
-    {
-      url: "https://writersperhour.com/",
-      logo: require("../public/sponsors/writersperhour.jpg"),
-      name: "Writers Per Hour",
     },
     {
       url: "https://www.partitionwizard.com/",
@@ -231,24 +196,9 @@ const sponsors = {
       name: "Casino Fiables",
     },
     {
-      url: "https://rapidessay.com/",
-      logo: require("../public/sponsors/rapidessay_logo.png"),
-      name: "Rapid Essay",
-    },
-    {
       url: "https://iboysoft.com/",
       logo: require("../public/sponsors/iboysoft-logo-dark2.png"),
       name: "iBoysoft Data Recovery",
-    }, // Custom
-    {
-      url: "https://nettikasinolista.com/",
-      logo: require("../public/sponsors/nettikasinolista-mv.png"),
-      name: "Nettikasino",
-    }, // Custom
-    {
-      url: "http://doshfunding.com/",
-      logo: require("../public/sponsors/doshfunding.svg"),
-      name: "Funding Solutions for Businesses",
     }, // Custom
     {
       url: "https://farbridge.com/",
@@ -281,11 +231,6 @@ const sponsors = {
       name: "Internet Archive",
     }, // Custom
     {
-      url: "https://bookingninja.io/",
-      logo: require("../public/sponsors/booking-ninja.png"),
-      name: "BookingNinja",
-    }, // Custom
-    {
       url: "https://www.ecurium.com/",
       logo: require("../public/sponsors/ecurium-for-nonprofits.svg"),
       name: "Ecurium",
@@ -306,11 +251,6 @@ const sponsors = {
       name: "Goody Feed",
     }, // Custom
     {
-      url: "https://pillarwm.com/best-wealth-management-firms/",
-      logo: require("../public/sponsors/pillar.jpg"),
-      name: "Best Wealth Management Firms",
-    }, // Custom
-    {
       url: "http://www.reboot.io/",
       logo: require("../public/sponsors/reboot-fullstacked-trademark-color-small.jpg"),
       name: "Better Humans Make Better Leaders",
@@ -320,8 +260,31 @@ const sponsors = {
       logo: require("../public/sponsors/sdf.png"),
       name: "SDF Public Access UNIX System",
     }, // Custom
+    {
+      url: "https://awisee.agency/",
+      logo: require("../public/sponsors/awisee2.jpg"),
+      name: "Data-Driven SEO Agency",
+    }, // Custom
+    {
+      url: "https://kaleidos.net/products",
+      logo: require("../public/sponsors/kaleidos.png"),
+      name: "Kaleidos (Taiga & Penpot)",
+    }, // Custom
+    {
+      url: "https://www.bairesdev.com/sponsoring-open-source-projects/",
+      logo: require("../public/sponsors/bairesdev.png"),
+      name: "BairesDev",
+    }, // Custom
   ],
-  silver: patreonData.silver,
+  silver: [
+    {
+      url: "https://ichiji.social/@tnzk",
+      logo: require("../public/sponsors/tnzk.png"),
+      name: "Kyohei Hamaguchi / @tnzk",
+      nofollow: false
+    },
+    ...patreonData.silver
+  ],
   generalHighlighted: patreonData.generalHighlighted,
   general: patreonData.general,
 }

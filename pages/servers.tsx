@@ -31,7 +31,7 @@ const Servers = () => {
   const { locale } = useRouter()
   const [filters, setFilters] = useState({
     language: locale === "en" ? "en" : "",
-    category: "",
+    category: "general",
     region: "",
     ownership: "",
     registrations: "",
@@ -45,7 +45,7 @@ const Servers = () => {
 
   const allCategories = useQuery<Category[]>(
     ["categories", ""],
-    () => fetchEndpoint("categories", {}),
+    () => fetchEndpoint("categories"),
     { select: (data) => _orderBy(data, "servers_count", "desc") }
   )
 
@@ -167,7 +167,7 @@ const Servers = () => {
 
   const days = useQuery<Day[]>(
     ["statistics"],
-    () => fetchEndpoint("statistics", ""),
+    () => fetchEndpoint("statistics"),
     queryOptions
   )
 
@@ -248,22 +248,22 @@ const Servers = () => {
             <SelectMenu
               label={
                 <FormattedMessage
-                  id="wizard.filter_by_structure"
-                  defaultMessage="Legal structure"
+                  id="wizard.filter_by_language"
+                  defaultMessage="Language"
                 />
               }
               onChange={(v) => {
-                setFilters({ ...filters, ownership: v })
+                setFilters({ ...filters, language: v })
               }}
-              value={filters.ownership}
-              options={ownershipOptions}
+              value={filters.language}
+              options={apiLanguages.data || [defaultOption]}
             />
 
             <SelectMenu
               label={
                 <FormattedMessage
                   id="wizard.filter_by_registrations"
-                  defaultMessage="Sign-up speed"
+                  defaultMessage="Sign-up process"
                 />
               }
               onChange={(v) => {
@@ -276,15 +276,15 @@ const Servers = () => {
             <SelectMenu
               label={
                 <FormattedMessage
-                  id="wizard.filter_by_language"
-                  defaultMessage="Language"
+                  id="wizard.filter_by_structure"
+                  defaultMessage="Legal structure"
                 />
               }
               onChange={(v) => {
-                setFilters({ ...filters, language: v })
+                setFilters({ ...filters, ownership: v })
               }}
-              value={filters.language}
-              options={apiLanguages.data || [defaultOption]}
+              value={filters.ownership}
+              options={ownershipOptions}
             />
           </div>
           <div className="col-span-4 mb-8 md:col-span-3 md:mb-0">
@@ -474,10 +474,15 @@ const ServerList = ({ servers }) => {
                 .map((_el, i) => <ServerCard key={i} />)
             : servers.data
                 .sort((a, b) => {
-                  const aa = Math.abs(DUNBAR - Math.log(a.last_week_users))
-                  const bb = Math.abs(DUNBAR - Math.log(b.last_week_users))
-
-                  return aa > bb ? 1 : aa < bb ? -1 : 0
+                  if (a.approval_required === b.approval_required) {
+                    return b.last_week_users - a.last_week_users
+                  } else if (a.approval_required) {
+                    return 1
+                  } else if (b.approval_required) {
+                    return -1
+                  } else {
+                    return b.last_week_users - a.last_week_users
+                  }
                 })
                 .map((server) => (
                   <ServerCard key={server.domain} server={server} />
@@ -517,6 +522,10 @@ const ServerStats = ({ days }) => {
         </p>
       </div>
     )
+  }
+
+  if (days.data.length < 3) {
+    return null
   }
 
   const currentDay = days.data[days.data.length - 2]
@@ -682,7 +691,7 @@ const ServerFilters = ({
                           id: "wizard.filter.all_categories",
                           defaultMessage: "All topics",
                         })
-                      : intl.formatMessage(categoriesMessages[item.category])}
+                      : (categoriesMessages[item.category] ? intl.formatMessage(categoriesMessages[item.category]) : item.category)}
 
                     <span
                       className={
