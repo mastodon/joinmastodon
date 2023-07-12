@@ -224,6 +224,7 @@ export const apps: appsList = {
       name: "Elk",
       icon: elk,
       url: "https://github.com/elk-zone/elk-native/releases",
+      hidden_from_all: true,
     },
     {
       released_on: "Mar 23, 2023",
