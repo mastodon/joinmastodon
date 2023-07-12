@@ -29,6 +29,7 @@ import phanpy from "../public/apps/phanpy.png"
 import trunks from "../public/apps/trunks.png"
 import tootdesk from "../public/apps/tootdesk.png"
 import megalodon from "../public/apps/megalodon.png"
+import litterbox from "../public/apps/litterbox.png"
 
 import type { StaticImageData } from "next/image"
 
@@ -196,7 +197,8 @@ export const apps: appsList = {
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
     { name: "Fedica", icon: fedica, url: "https://fedica.com" },
     { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
-    { name: "Trunks", icon: trunks, url: "https://trunks.social" }
+    { name: "Trunks", icon: trunks, url: "https://trunks.social" },
+    { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
