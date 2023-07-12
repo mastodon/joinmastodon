@@ -6,6 +6,8 @@ Submit translations here: https://crowdin.com/project/joinmastodon
 
 ## Development
 
+To build the site, you'll need to have Node.js version 16 installed, which you can [download from their website](https://nodejs.org/download/release/v16.20.0/) or install via tools like `fnm` or `nvm`. For dependency management, `yarn` is used, it should be automatically be installed when you install Node.js, if it's not available you can use `corepack enable` and `corepack prepare yarn@1` to install it.
+
 ### Installation
 
 ```sh
@@ -14,6 +16,10 @@ yarn run dev
 ```
 
 See `/package.json` for more scripts.
+
+### Contributing
+
+See [CONTRIBUTING](./CONTRIBUTING.md) for more information. All interactions with this and other repositories that are part of the Mastodon project are subject to the [Mastodon Code of Conduct](https://github.com/mastodon/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ### Built with
 
