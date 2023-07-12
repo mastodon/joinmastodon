@@ -30,6 +30,8 @@ import trunks from "../public/apps/trunks.png"
 import tootdesk from "../public/apps/tootdesk.png"
 import megalodon from "../public/apps/megalodon.png"
 import litterbox from "../public/apps/litterbox.png"
+import zonepane from "../public/apps/zonepane.png"
+
 
 import type { StaticImageData } from "next/image"
 
@@ -99,6 +101,13 @@ export const apps: appsList = {
       icon: buffer,
       url: "https://play.google.com/store/apps/details?id=org.buffer.android",
       hidden_from_all: true,
+    },
+    {
+      released_on: "Feb 21, 2023",
+      name: "ZonePane",
+      icon: zonepane,
+      url: "https://play.google.com/store/apps/details?id=com.zonepane",
+      paid: false,
     },
   ],
   ios: [
