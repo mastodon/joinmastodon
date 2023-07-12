@@ -27,6 +27,8 @@ import fedica from "../public/apps/fedica.png"
 import radiant from "../public/apps/radiant.png"
 import phanpy from "../public/apps/phanpy.png"
 import trunks from "../public/apps/trunks.png"
+import tootdesk from "../public/apps/tootdesk.png"
+
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -170,6 +172,13 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/trunks-for-mastodon/id6444749479",
       paid: false,
       hidden_from_all: true,
+    },
+    {
+      released_on: "Jan 25, 2023",
+      name: "TootDesk",
+      icon: tootdesk,
+      url: "https://apps.apple.com/app/tootdesk/id1591748028",
+      paid: false,
     },
   ],
   web: [
