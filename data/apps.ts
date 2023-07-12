@@ -26,6 +26,7 @@ import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
 import radiant from "../public/apps/radiant.png"
 import phanpy from "../public/apps/phanpy.png"
+import trunks from "../public/apps/trunks.png"
 import type { StaticImageData } from "next/image"
 
 export type appsList = {
@@ -71,9 +72,18 @@ export const apps: appsList = {
       name: "tooot",
       icon: tooot,
       url: "https://play.google.com/store/apps/details?id=com.xmflsct.app.tooot",
+      hidden_from_all: true,
     },
     {
-      released_on: "Jan 31st, 2023",
+      released_on: "Jan 26, 2023",
+      name: "Trunks",
+      icon: trunks,
+      url: "https://play.google.com/store/apps/details?id=com.decad3nce.trunks",
+      paid: false,
+      hidden_from_all: true,
+    },
+    {
+      released_on: "Jan 31, 2023",
       name: "Buffer",
       icon: buffer,
       url: "https://play.google.com/store/apps/details?id=org.buffer.android",
@@ -103,6 +113,7 @@ export const apps: appsList = {
       name: "tooot",
       icon: tooot,
       url: "https://apps.apple.com/app/tooot/id1549772269",
+      hidden_from_all: true,
     },
     {
       released_on: "Jan 19, 2023",
@@ -111,7 +122,7 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
     },
     {
-      released_on: "Jan 31st, 2023",
+      released_on: "Jan 31, 2023",
       name: "Buffer",
       icon: buffer,
       url: "https://apps.apple.com/app/buffer-plan-schedule-posts/id490474324",
@@ -152,6 +163,14 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/id6444323022",
       paid: true,
     },
+    {
+      released_on: "Jan 26, 2023",
+      name: "Trunks",
+      icon: trunks,
+      url: "https://apps.apple.com/app/trunks-for-mastodon/id6444749479",
+      paid: false,
+      hidden_from_all: true,
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
@@ -160,6 +179,7 @@ export const apps: appsList = {
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
     { name: "Fedica", icon: fedica, url: "https://fedica.com" },
     { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
+    { name: "Trunks", icon: trunks, url: "https://trunks.social" }
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
