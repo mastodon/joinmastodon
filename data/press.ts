@@ -130,6 +130,18 @@ const articles = [
     title: "Facebook Domination vs. Self-Determination",
     date: "2018-07-18",
   },
+  {
+    logo: guardianLogo,
+    url: "https://www.theguardian.com/technology/2023/apr/18/mastodon-users-twitter-elon-musk-social-media",
+    title: "Thousands fled to Mastodon after Musk bought Twitter. Are they still ‘tooting’?",
+    date: "2023-04-18",
+  },
+  {
+    logo: pcMagLogo,
+    url: "https://www.pcmag.com/opinions/whats-happening-to-twitter-could-never-happen-to-mastodon",
+    title: "What's Happening to Twitter Could Never Happen to Mastodon",
+    date: "2023-04-18",
+  },
 ]
 
 export default articles

@@ -18,7 +18,7 @@ import press from "../data/press"
 const Careers = () => {
   const jobsResponse = useQuery<JobsResponse>(
     ["jobs"],
-    () => fetchEndpoint("jobs", {}),
+    () => fetchEndpoint("jobs"),
     {
       cacheTime: 10 * 60 * 1000, // 10 minutes
 
@@ -137,7 +137,15 @@ const Job = ({ job }: { job?: Job }) => (
 )
 
 const JobBoard = ({ jobs }) => {
-  if (jobs.data?.length === 0) {
+  if (jobs.error) {
+    return (
+      <div className="b2 flex justify-center rounded bg-gray-5 p-4 text-gray-1 md:p-8 md:py-20">
+        <p className="max-w-[48ch] text-center">
+          Failed to retrieve positions, please try again later.
+        </p>
+      </div>
+    )
+  } else if (jobs.data?.length === 0) {
     return (
       <div className="b2 flex justify-center rounded bg-gray-5 p-4 text-gray-1 md:p-8 md:py-20">
         <p className="max-w-[48ch] text-center">
