@@ -17,6 +17,10 @@ yarn run dev
 
 See `/package.json` for more scripts.
 
+### Contributing
+
+See [CONTRIBUTING](./CONTRIBUTING.md) for more information. All interactions with this and other repositories that are part of the Mastodon project are subject to the [Mastodon Code of Conduct](https://github.com/mastodon/.github/blob/main/CODE_OF_CONDUCT.md).
+
 ### Built with
 
 - [Next.js](https://nextjs.org/)
