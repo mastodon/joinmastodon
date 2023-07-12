@@ -32,6 +32,7 @@ import tootdesk from "../public/apps/tootdesk.png"
 import megalodon from "../public/apps/megalodon.png"
 import litterbox from "../public/apps/litterbox.png"
 import zonepane from "../public/apps/zonepane.png"
+import fedistar from "../public/apps/fedistar.png"
 
 
 import type { StaticImageData } from "next/image"
@@ -261,6 +262,13 @@ export const apps: appsList = {
       paid: true,
       hidden_from_all: true,
     },
+    {
+      released_on: "Mar 1, 2023",
+      name: "Fedistar",
+      icon: fedistar,
+      url: "https://fedistar.net",
+      paid: false,
+    }
   ],
   sailfish: [
     {
