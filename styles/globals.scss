@@ -131,3 +131,12 @@
     @apply bg-blurple-500;
   }
 }
+
+span.app-category {
+  right: 0;
+}
+
+html[dir="rtl"] span.app-category {
+  left: 0;
+  right: auto;
+}
