@@ -13,10 +13,10 @@ const verified = [
     username: "wikipedia@wikis.world",
   },
   {
-    url: "https://mastodon.social/@mozilla",
+    url: "https://mozilla.social/@mozilla",
     image: avatarMozilla,
     name: "Mozilla",
-    username: "mozilla@mastodon.social",
+    username: "mozilla@mozilla.social",
   },
   {
     url: "https://mastodon.world/@auschwitzmuseum",
