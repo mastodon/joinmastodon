@@ -19,6 +19,7 @@ import icecubes from "../public/apps/icecubes.png"
 import elk from "../public/apps/elk.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
+import statuzer from "../public/apps/statuzer.png"
 import mammoth from "../public/apps/mammoth.png"
 import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
@@ -204,6 +205,7 @@ export const apps: appsList = {
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
     { name: "Elk", icon: elk, url: "https://elk.zone" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
+    { name: "Statuzer", icon: statuzer, url: "https://statuzer.com" },
     { name: "Fedica", icon: fedica, url: "https://fedica.com" },
     { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
     { name: "Trunks", icon: trunks, url: "https://trunks.social" },
