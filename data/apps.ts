@@ -56,7 +56,7 @@ export type appsList = {
 }
 export const apps: appsList = {
   android: [
-      {
+    {
       released_on: "May 21, 2023",
       name: "Focus",
       icon: focus,
@@ -229,15 +229,16 @@ export const apps: appsList = {
       url: "https://hyperspace.marquiskurt.net/",
     },
     {
-      name: "Mast (Mac)",
+      name: "Mast",
       icon: mast,
       url: "https://apps.apple.com/app/mast-for-mastodon/id1437429129",
       paid: true,
+      hidden_from_all: true,
     },
     {
-      name: "Mastonaut (Mac)",
+      name: "Mastonaut",
       icon: mastonaut,
-      url: "https://itunes.apple.com/us/app/mastonaut/id1450757574",
+      url: "https://apps.apple.com/app/mastonaut/id1450757574",
     },
     {
       name: "Sengi",
@@ -259,11 +260,11 @@ export const apps: appsList = {
       released_on: "Mar 23, 2023",
       name: "Tuba",
       icon: tuba,
-      url: "https://flathub.org/apps/details/dev.geopjr.Tuba",
+      url: "https://tuba.geopjr.dev/",
     },
     {
       released_on: "May 1, 2023",
-      name: "Mona for Mac",
+      name: "Mona",
       icon: mona,
       url: "https://apps.apple.com/app/id1659154653",
       paid: true,
