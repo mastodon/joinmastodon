@@ -25,6 +25,7 @@ import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
 import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
+import focus from "../public/apps/focus.png"
 import radiant from "../public/apps/radiant.png"
 import phanpy from "../public/apps/phanpy.png"
 import trunks from "../public/apps/trunks.png"
@@ -33,9 +34,8 @@ import megalodon from "../public/apps/megalodon.png"
 import litterbox from "../public/apps/litterbox.png"
 import zonepane from "../public/apps/zonepane.png"
 import fedistar from "../public/apps/fedistar.png"
-
-
 import type { StaticImageData } from "next/image"
+
 
 export type appsList = {
   /** the operating system or platform the list of apps is built for */
@@ -56,6 +56,13 @@ export type appsList = {
 }
 export const apps: appsList = {
   android: [
+      {
+      released_on: "May 21, 2023",
+      name: "Focus",
+      icon: focus,
+      url: "https://play.google.com/store/apps/details?id=allen.town.focus.mastodon",
+      paid: true,
+    },
     {
       released_on: "Mar 15, 2017",
       name: "Tusky",
