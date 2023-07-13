@@ -300,6 +300,14 @@ export const apps: appsList = {
       paid: false,
       hidden_from_all: true,
     },
+    {
+      released_on: "May 23, 2023",
+      name: "Ivory for Mac",
+      icon: ivory,
+      url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
+      paid: true,
+      hidden_from_all: true,
+    },
   ],
   sailfish: [
     {
