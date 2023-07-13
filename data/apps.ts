@@ -28,6 +28,7 @@ import fedica from "../public/apps/fedica.png"
 import focus from "../public/apps/focus.png"
 import radiant from "../public/apps/radiant.png"
 import phanpy from "../public/apps/phanpy.png"
+import dostodon from "../public/apps/dostodon.png"
 import trunks from "../public/apps/trunks.png"
 import tootdesk from "../public/apps/tootdesk.png"
 import megalodon from "../public/apps/megalodon.png"
@@ -269,6 +270,12 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/id1659154653",
       paid: true,
       hidden_from_all: true,
+    },
+    {
+      released_on: "Nov 14, 2022",
+      name: "DOStodon",
+      icon: dostodon,
+      url: "https://github.com/SuperIlu/DOStodon",
     },
     {
       released_on: "Mar 1, 2023",
