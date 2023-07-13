@@ -28,6 +28,7 @@ import fedica from "../public/apps/fedica.png"
 import focus from "../public/apps/focus.png"
 import radiant from "../public/apps/radiant.png"
 import phanpy from "../public/apps/phanpy.png"
+import tootrain from "../public/apps/tootrain.png"
 import dostodon from "../public/apps/dostodon.png"
 import trunks from "../public/apps/trunks.png"
 import tootdesk from "../public/apps/tootdesk.png"
@@ -35,6 +36,7 @@ import megalodon from "../public/apps/megalodon.png"
 import litterbox from "../public/apps/litterbox.png"
 import zonepane from "../public/apps/zonepane.png"
 import fedistar from "../public/apps/fedistar.png"
+
 import type { StaticImageData } from "next/image"
 
 
@@ -272,6 +274,12 @@ export const apps: appsList = {
       hidden_from_all: true,
     },
     {
+      released_on: "Aug 10, 2021",
+      name: "TootRain",
+      icon: tootrain,
+      url: "https://apps.apple.com/app/id1579538917",
+    },
+    {
       released_on: "Nov 14, 2022",
       name: "DOStodon",
       icon: dostodon,
@@ -283,7 +291,7 @@ export const apps: appsList = {
       icon: fedistar,
       url: "https://fedistar.net",
       paid: false,
-    }
+    },
   ],
   sailfish: [
     {
