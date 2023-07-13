@@ -283,6 +283,13 @@ export const apps: appsList = {
       icon: fedistar,
       url: "https://fedistar.net",
       paid: false,
+    },
+    {
+      released_on: "Feb 24, 2023",
+      name: "Mammoth",
+      icon: mammoth,
+      url: "https://apps.apple.com/app/mammoth-for-mastodon/id1667573899",
+      paid: false,
     }
   ],
   sailfish: [
