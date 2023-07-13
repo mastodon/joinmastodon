@@ -290,6 +290,7 @@ export const apps: appsList = {
       icon: mammoth,
       url: "https://apps.apple.com/app/mammoth-for-mastodon/id1667573899",
       paid: false,
+      hidden_from_all:true,
     }
   ],
   sailfish: [
