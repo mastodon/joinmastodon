@@ -213,7 +213,7 @@ export const apps: appsList = {
     },
     {
       released_on: "Aug 10, 2021",
-      name: "TootRain (Mac)",
+      name: "TootRain",
       icon: tootrain,
       url: "https://apps.apple.com/app/id1579538917",
     },
