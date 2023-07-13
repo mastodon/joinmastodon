@@ -42,7 +42,7 @@ const Covenant = () => (
           <p className="mt-4">
             If you are a server owner, and your server passes these
             requirements, you can send an e-mail to{" "}
-            <span className="font-bold">hello@joinmastodon.org</span> with the
+            <span className="font-bold">servers@joinmastodon.org</span> with the
             subject &quot;Server submission&quot; to be listed on this website.
             Please include the <strong>domain name</strong>, whether you are a
             private individual or represent an organization, in which country

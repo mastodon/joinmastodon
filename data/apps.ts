@@ -19,15 +19,26 @@ import icecubes from "../public/apps/icecubes.png"
 import elk from "../public/apps/elk.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
+import statuzer from "../public/apps/statuzer.png"
 import mammoth from "../public/apps/mammoth.png"
 import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
 import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
+import focus from "../public/apps/focus.png"
 import radiant from "../public/apps/radiant.png"
 import phanpy from "../public/apps/phanpy.png"
 import tootrain from "../public/apps/tootrain.png"
+import dostodon from "../public/apps/dostodon.png"
+import trunks from "../public/apps/trunks.png"
+import tootdesk from "../public/apps/tootdesk.png"
+import megalodon from "../public/apps/megalodon.png"
+import litterbox from "../public/apps/litterbox.png"
+import zonepane from "../public/apps/zonepane.png"
+import fedistar from "../public/apps/fedistar.png"
+
 import type { StaticImageData } from "next/image"
+
 
 export type appsList = {
   /** the operating system or platform the list of apps is built for */
@@ -48,6 +59,13 @@ export type appsList = {
 }
 export const apps: appsList = {
   android: [
+    {
+      released_on: "May 21, 2023",
+      name: "Focus",
+      icon: focus,
+      url: "https://play.google.com/store/apps/details?id=allen.town.focus.mastodon",
+      paid: true,
+    },
     {
       released_on: "Mar 15, 2017",
       name: "Tusky",
@@ -72,13 +90,36 @@ export const apps: appsList = {
       name: "tooot",
       icon: tooot,
       url: "https://play.google.com/store/apps/details?id=com.xmflsct.app.tooot",
+      hidden_from_all: true,
     },
     {
-      released_on: "Jan 31st, 2023",
+      released_on: "Jan 26, 2023",
+      name: "Trunks",
+      icon: trunks,
+      url: "https://play.google.com/store/apps/details?id=com.decad3nce.trunks",
+      paid: false,
+      hidden_from_all: true,
+    },
+    {
+      released_on: "Nov 28, 2022",
+      name: "Megalodon",
+      icon: megalodon,
+      url: "https://play.google.com/store/apps/details?id=org.joinmastodon.android.sk",
+      paid: false,
+    },
+    {
+      released_on: "Jan 31, 2023",
       name: "Buffer",
       icon: buffer,
       url: "https://play.google.com/store/apps/details?id=org.buffer.android",
       hidden_from_all: true,
+    },
+    {
+      released_on: "Feb 21, 2023",
+      name: "ZonePane",
+      icon: zonepane,
+      url: "https://play.google.com/store/apps/details?id=com.zonepane",
+      paid: false,
     },
   ],
   ios: [
@@ -104,6 +145,7 @@ export const apps: appsList = {
       name: "tooot",
       icon: tooot,
       url: "https://apps.apple.com/app/tooot/id1549772269",
+      hidden_from_all: true,
     },
     {
       released_on: "Jan 19, 2023",
@@ -112,7 +154,7 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
     },
     {
-      released_on: "Jan 31st, 2023",
+      released_on: "Jan 31, 2023",
       name: "Buffer",
       icon: buffer,
       url: "https://apps.apple.com/app/buffer-plan-schedule-posts/id490474324",
@@ -153,14 +195,32 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/id6444323022",
       paid: true,
     },
+    {
+      released_on: "Jan 26, 2023",
+      name: "Trunks",
+      icon: trunks,
+      url: "https://apps.apple.com/app/trunks-for-mastodon/id6444749479",
+      paid: false,
+      hidden_from_all: true,
+    },
+    {
+      released_on: "Jan 25, 2023",
+      name: "TootDesk",
+      icon: tootdesk,
+      url: "https://apps.apple.com/app/tootdesk/id1591748028",
+      paid: false,
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
     { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
     { name: "Elk", icon: elk, url: "https://elk.zone" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
+    { name: "Statuzer", icon: statuzer, url: "https://statuzer.com" },
     { name: "Fedica", icon: fedica, url: "https://fedica.com" },
     { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
+    { name: "Trunks", icon: trunks, url: "https://trunks.social" },
+    { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
@@ -172,15 +232,16 @@ export const apps: appsList = {
       url: "https://hyperspace.marquiskurt.net/",
     },
     {
-      name: "Mast (Mac)",
+      name: "Mast",
       icon: mast,
       url: "https://apps.apple.com/app/mast-for-mastodon/id1437429129",
       paid: true,
+      hidden_from_all: true,
     },
     {
-      name: "Mastonaut (Mac)",
+      name: "Mastonaut",
       icon: mastonaut,
-      url: "https://itunes.apple.com/us/app/mastonaut/id1450757574",
+      url: "https://apps.apple.com/app/mastonaut/id1450757574",
     },
     {
       name: "Sengi",
@@ -196,16 +257,17 @@ export const apps: appsList = {
       name: "Elk",
       icon: elk,
       url: "https://github.com/elk-zone/elk-native/releases",
+      hidden_from_all: true,
     },
     {
       released_on: "Mar 23, 2023",
       name: "Tuba",
       icon: tuba,
-      url: "https://flathub.org/apps/details/dev.geopjr.Tuba",
+      url: "https://tuba.geopjr.dev/",
     },
     {
       released_on: "May 1, 2023",
-      name: "Mona for Mac",
+      name: "Mona",
       icon: mona,
       url: "https://apps.apple.com/app/id1659154653",
       paid: true,
@@ -216,6 +278,19 @@ export const apps: appsList = {
       name: "TootRain",
       icon: tootrain,
       url: "https://apps.apple.com/app/id1579538917",
+    },
+    {
+      released_on: "Nov 14, 2022",
+      name: "DOStodon",
+      icon: dostodon,
+      url: "https://github.com/SuperIlu/DOStodon",
+    },
+    {
+      released_on: "Mar 1, 2023",
+      name: "Fedistar",
+      icon: fedistar,
+      url: "https://fedistar.net",
+      paid: false,
     },
   ],
   sailfish: [
