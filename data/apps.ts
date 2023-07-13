@@ -24,8 +24,9 @@ import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
 import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
-import type { StaticImageData } from "next/image"
 import focus from "../public/apps/focus.png"
+import type { StaticImageData } from "next/image"
+
 
 export type appsList = {
   /** the operating system or platform the list of apps is built for */
@@ -51,6 +52,7 @@ export const apps: appsList = {
       name: "Focus",
       icon: focus,
       url: "https://play.google.com/store/apps/details?id=allen.town.focus.mastodon",
+      paid: true,
     },
     {
       released_on: "Mar 15, 2017",
