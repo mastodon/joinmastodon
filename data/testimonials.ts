@@ -91,9 +91,9 @@ const testimonials: Testimonial[] = [
   {
     text: "I wanted to have a federated social network since 2013 that looked and felt great and where I can connect to like-minded people. Mastodon just gave me the last puzzle piece and I absolutely love it! Probably spend more than five hours a day on my own little space with a friendly community that truly cares.",
     name: "Leonie",
-    username: "koyu@koyu.space",
+    username: "koyu@kopimi.space",
     avatar: "/testimonials/avatar_koyu.png",
-    profile_url: "https://koyu.space/@koyuchan",
+    profile_url: "https://kopimi.space/@koyu",
   },
   {
     text: "I'm personally addicted to Mastodon, for me it's like if Facebook or Twitter had a friendly version— where I can discuss things with people around the world about every single thing they love. If there's a subreddit for everything, of course there's also a Mastodon community for everything: I've got one profile for sharing art, another one for casual conversation and another one for politics.",
