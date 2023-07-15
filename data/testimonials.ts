@@ -93,7 +93,7 @@ const testimonials: Testimonial[] = [
     name: "Leonie",
     username: "koyu@kopimi.space",
     avatar: "/testimonials/avatar_koyu.png",
-    profile_url: "https://kopimi.space/@koyuchan",
+    profile_url: "https://kopimi.space/@koyu",
   },
   {
     text: "I'm personally addicted to Mastodon, for me it's like if Facebook or Twitter had a friendly version— where I can discuss things with people around the world about every single thing they love. If there's a subreddit for everything, of course there's also a Mastodon community for everything: I've got one profile for sharing art, another one for casual conversation and another one for politics.",
