@@ -302,7 +302,7 @@ export const apps: appsList = {
     },
     {
       released_on: "May 23, 2023",
-      name: "Ivory for Mac",
+      name: "Ivory",
       icon: ivory,
       url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
       paid: true,
