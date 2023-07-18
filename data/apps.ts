@@ -61,6 +61,8 @@ export type appsList = {
     paid?: boolean
     /** whether the app should be hidden from all, used to avoid duplicates */
     hidden_from_all?: boolean
+    /** The category label */
+    categoryLabel: string
   }[]
 }
 export const apps: appsList = {
