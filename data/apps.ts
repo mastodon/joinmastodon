@@ -62,7 +62,7 @@ export type appsList = {
     /** whether the app should be hidden from all, used to avoid duplicates */
     hidden_from_all?: boolean
     /** The category label */
-    categoryLabel: string
+    categoryLabel?: string
   }[]
 }
 export const apps: appsList = {
