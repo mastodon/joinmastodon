@@ -29,13 +29,19 @@ import focus from "../public/apps/focus.png"
 import radiant from "../public/apps/radiant.png"
 import phanpy from "../public/apps/phanpy.png"
 import tootrain from "../public/apps/tootrain.png"
-import dostodon from "../public/apps/dostodon.png"
 import trunks from "../public/apps/trunks.png"
 import tootdesk from "../public/apps/tootdesk.png"
 import megalodon from "../public/apps/megalodon.png"
 import litterbox from "../public/apps/litterbox.png"
 import zonepane from "../public/apps/zonepane.png"
 import fedistar from "../public/apps/fedistar.png"
+import amidon from "../public/apps/amidon.png"
+import brexxtodon from "../public/apps/brexxtodon.png"
+import dostodon from "../public/apps/dostodon.png"
+import macstodon from "../public/apps/macstodon.png"
+import mastappleiic from "../public/apps/mastappleiic.png"
+import mastodonforworkgroups from "../public/apps/mastodonforworkgroups.png"
+import mastonine from "../public/apps/mastonine.png"
 
 import type { StaticImageData } from "next/image"
 
@@ -280,12 +286,6 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/id1579538917",
     },
     {
-      released_on: "Nov 14, 2022",
-      name: "DOStodon",
-      icon: dostodon,
-      url: "https://github.com/SuperIlu/DOStodon",
-    },
-    {
       released_on: "Mar 1, 2023",
       name: "Fedistar",
       icon: fedistar,
@@ -316,4 +316,48 @@ export const apps: appsList = {
       url: "https://openrepos.net/content/dysko/tooter",
     },
   ],
+  retro: [
+    {
+      released_on: "Apr 1, 2023",
+      name: "Amidon",
+      icon: amidon,
+      url: "https://github.com/BlitterStudio/amidon",
+    },
+    {
+      released_on: "Feb 5, 2023",
+      name: "BREXXTODON",
+      icon: brexxtodon,
+      url: "https://github.com/mainframed/BREXXTODON",
+    },
+    {
+      released_on: "Nov 14, 2022",
+      name: "DOStodon",
+      icon: dostodon,
+      url: "https://github.com/SuperIlu/DOStodon",
+    },
+    {
+      released_on: "Nov 20, 2022",
+      name: "Macstodon",
+      icon: macstodon,
+      url: "https://github.com/smallsco/macstodon",
+    },
+    {
+      released_on: "Apr 14, 2023",
+      name: "Masto9",
+      icon: mastonine,
+      url: "https://sr.ht/~julienxx/Masto9/",
+    },
+    {
+      released_on: "Mar 6, 2023",
+      name: "MastApple//c",
+      icon: mastappleiic,
+      url: "https://www.colino.net/wordpress/archives/2023/03/06/binary-release-of-mastodon-for-the-apple-c/",
+    },
+    {
+      released_on: "Nov 20, 2022",
+      name: "Mastodon 3.11 for Workgroups",
+      icon: mastodonforworkgroups,
+      url: "https://github.com/meyskens/mastodon-for-workgroups",
+    },
+  ]
 }
