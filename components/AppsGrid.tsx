@@ -16,33 +16,6 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
   const intl = useIntl()
   const [activeCategory, setActiveCategory] = useState("all")
 
-  /** normalizing the apps dictionary as an array */
-  const allApps = Object.entries(apps)
-    .map(([category, apps]) =>
-      apps.map(({ name, icon, url, paid, released_on, hidden_from_all }) => ({
-        name,
-        icon,
-        url,
-        category,
-        paid: paid ?? false,
-        hidden_from_all: hidden_from_all ?? false,
-        released_on: new Date(released_on) ?? null,
-      }))
-    )
-    .flat()
-
-  //prettier-ignore
-  const sortOptions = [
-    { value: "date_added", label: intl.formatMessage({ id: "sorting.recently_added", defaultMessage: "Recently Added" }) },
-    { value: "paid", label: intl.formatMessage({ id: "sorting.free", defaultMessage: "Free" }) },
-    { value: "name", label: intl.formatMessage({ id: "sorting.name", defaultMessage: "Alphabetical" }) },
-  ]
-  const [sortOption, setSortOption] = useState(sortOptions[0].value)
-  const filteredApps = allApps.filter(
-    ({ category, hidden_from_all }) => category === activeCategory || (activeCategory === "all" && !hidden_from_all)
-  )
-  const sortedAndFilteredApps = _sortBy(filteredApps, sortOption)
-
   //prettier-ignore
   const categories = [
     { key: "all", label: intl.formatMessage({ id: "browse_apps.all", defaultMessage: "All" }) },
@@ -51,7 +24,38 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
     { key: "web", label: intl.formatMessage({ id: "browse_apps.web", defaultMessage: "Web" }) },
     { key: "sailfish", label: intl.formatMessage({ id: "browse_apps.sailfish", defaultMessage: "SailfishOS" }) },
     { key: "desktop", label: intl.formatMessage({ id: "browse_apps.desktop", defaultMessage: "Desktop" }) },
+    { key: "retro", label: intl.formatMessage({ id: "browse_apps.retro", defaultMessage: "Retro computing" }) },
   ]
+
+  /** normalizing the apps dictionary as an array */
+  const allApps = Object.entries(apps)
+    .map(([category, apps]) =>
+      apps.map(({ name, icon, url, paid, released_on, hidden_from_all }) => ({
+        name,
+        icon,
+        url,
+        paid: paid ?? false,
+        hidden_from_all: hidden_from_all ?? false,
+        released_on: new Date(released_on) ?? null,
+        category,
+        categoryLabel: categories.find(c => c.key === category)["label"]
+      }))
+    )
+    .flat()
+
+  //prettier-ignore
+  const sortOptions = [
+    { value: "date_added", label: intl.formatMessage({ id: "sorting.recently_added", defaultMessage: "Recently Added" }) },
+    { value: "paid", label: intl.formatMessage({ id: "sorting.free", defaultMessage: "Free" }) },
+    { value: "category", label: intl.formatMessage({ id: "sorting.category", defaultMessage: "Category" }) },
+    { value: "name", label: intl.formatMessage({ id: "sorting.name", defaultMessage: "Alphabetical" }) },
+  ]
+  const [sortOption, setSortOption] = useState(sortOptions[0].value)
+  const filteredApps = allApps.filter(
+    ({ category, hidden_from_all }) => category === activeCategory || (activeCategory === "all" && !hidden_from_all)
+  )
+  const sortedAndFilteredApps = _sortBy(filteredApps, sortOption)
+
   return (
     <div>
       <div>
@@ -87,7 +91,7 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
           options={sortOptions}
         />
       </div>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-4">
         {sortedAndFilteredApps.map(AppCard)}
       </div>
     </div>
