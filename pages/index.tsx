@@ -365,6 +365,7 @@ const WhyMastodon = () => {
                     "rounded-[50%] p-1.5 " +
                     (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                   }
+                  aria-label="Go to slide"
                 ></button>
               )
             })}
@@ -437,6 +438,7 @@ const Testimonials = ({ testimonials }) => {
                       "rounded-[50%] p-1.5 " +
                       (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                     }
+                    aria-label="Go to slide"
                   ></button>
                 )
               })}
