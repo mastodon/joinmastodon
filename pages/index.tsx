@@ -106,6 +106,9 @@ function Home() {
               "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform.",
           })}
         />
+
+        <link rel="me" href="https://mastodon.social/@MastodonEngineering" />
+        <link rel="me" href="https://mastodon.social/@ServerHighlights" />
       </Head>
     </Layout>
   )
