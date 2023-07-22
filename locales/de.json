@@ -18,7 +18,7 @@
   "browse_apps.page_title": "Hole dir eine App für Mastodon",
   "browse_apps.progressive_web_app": "Progressive Web-App",
   "browse_apps.pwa_feature.cta": "Einem Server beitreten",
-  "browse_apps.retro": "Retrorechner",
+  "browse_apps.retro": "Retro",
   "browse_apps.sailfish": "SailfishOS",
   "browse_apps.title2": "Drittanbieter-Apps durchsuchen",
   "browse_apps.web": "Web",
@@ -177,5 +177,5 @@
   "wizard.filter_by_language": "Sprache",
   "wizard.filter_by_registrations": "Registrierungsprozess",
   "wizard.filter_by_structure": "Rechtsform",
-  "wizard.no_results": "Es scheint, als gäbe es derzeit keine Server, die deinen Suchkriterien entsprechen. Beachte, dass wir nur eine Auswahl von Servern anzeigen, die derzeit neue Anmeldungen akzeptieren."
+  "wizard.no_results": "Es scheint, als würden aktuell keine Server deinen Kriterien entsprechen. Beachte, dass wir eine kuratierte Auswahl an Servern, die aktuell neue Registrierungen zulassen, anzeigen."
 }
