@@ -153,7 +153,7 @@
   "verification.feature_highlight": "คุณสมบัติเด่น",
   "verification.features.how_to.body": "ใส่ลิงก์ไปยังโปรไฟล์ Mastodon ของคุณบนเว็บไซต์หรือหน้าเว็บของคุณ ส่วนที่สำคัญคือลิงก์ต้องมีแอตทริบิวต์ <code>rel=\"me\"</code> จากนั้นแก้ไขโปรไฟล์ Mastodon ของคุณ และใส่ที่อยู่ของเว็บไซต์หรือหน้าเว็บของคุณในช่องโปรไฟล์ 1 ใน 4 ช่อง แล้วบันทึกโปรไฟล์ของคุณ แค่นั้นแหละ!",
   "verification.features.how_to.title": "วิธียืนยัน",
-  "verification.features.no_badge.body": "Identity is not a yes or no question. There are few truly unique names in the world, so why should only the famous ones get a \"yes\"? At Mastodon, we don't rely on legal names and blue badges. Instead, we rely on the fact that people can be identified by their official websites.",
+  "verification.features.no_badge.body": "ตัวตนไม่ใช่คำถามว่า ใช่ หรือ ไม่ใช่ บนโลกนี้มีชื่อที่ไม่เหมือนใครจริง ๆ ไม่กี่ชื่อ แล้วทำไมคนที่มีชื่อเสียงถึงได้รับการยืนยันว่า \"ใช่\" เท่านั้น? ที่ Mastodon เราไม่พึ่งพาชื่อทางกฎหมายและตราสีน้ำเงิน แต่เราอาศัยข้อเท็จจริงที่ว่าบุคคลนั้นสามารถระบุตัวตนได้จากเว็บไซต์ทางการของแต่ละคน",
   "verification.features.no_badge.title": "ไม่มีป้ายสีฟ้า",
   "verification.lead": "การยืนยันตัวตนบน Mastodon เหมาะสำหรับทุกคน สร้างขึ้นตามมาตรฐานเว็บแบบเปิด ทำได้ทันทีและฟรีตลอดไป",
   "verification.page_description": "เรียนรู้วิธีการยืนยันตัวตนบน Mastodon",
