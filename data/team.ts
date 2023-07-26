@@ -28,17 +28,6 @@ const team: TeamMember[] = [
   },
 
   {
-    image: require("../public/team/inga-driksne.jpg"),
-    name: "Inga Driksne",
-    position: "Operations/Talent",
-  },
-
-  {
-    name: "Julie Inouye",
-    position: "Communications",
-  },
-
-  {
     name: "Claire",
     position: "Engineering",
     socials: {
@@ -73,6 +62,14 @@ const team: TeamMember[] = [
   {
     name: "Timothy Campbell",
     position: "DevOps",
+  },
+
+  {
+    name: "Andy Piper",
+    position: "DevRel",
+    socials: {
+      mastodon: "https://macaw.social/@andypiper",
+    },
   },
 
   {
