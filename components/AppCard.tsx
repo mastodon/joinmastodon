@@ -28,7 +28,8 @@ export const AppCard = ({ name, icon, url, paid, category, categoryLabel }) => {
       </div>
       <div className="flex flex-auto flex-col">
         <span className="b4 block text-gray-1">
-          {categoryLabel}, {paid ? (
+          {categoryLabel},{" "}
+          {paid ? (
             <FormattedMessage id="apps.paid" defaultMessage="Paid" />
           ) : (
             <FormattedMessage id="apps.free" defaultMessage="Free" />

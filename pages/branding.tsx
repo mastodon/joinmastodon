@@ -239,7 +239,9 @@ const Branding = () => (
                     >
                       <div className="p-4 pt-14 text-white">
                         <div className="font-black">{hex}</div>
-                        <div className="c2">Pantone {pantone} &bull; CMYK {cmyk}</div>
+                        <div className="c2">
+                          Pantone {pantone} &bull; CMYK {cmyk}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -254,7 +256,9 @@ const Branding = () => (
                     >
                       <div className="p-4 pt-14 text-white">
                         <div className="font-black">{hex}</div>
-                        <div className="c2">Pantone {pantone} &bull; CMYK {cmyk}</div>
+                        <div className="c2">
+                          Pantone {pantone} &bull; CMYK {cmyk}
+                        </div>
                       </div>
                     </div>
                   </div>

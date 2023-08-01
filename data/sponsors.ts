@@ -281,9 +281,9 @@ const sponsors = {
       url: "https://ichiji.social/@tnzk",
       logo: require("../public/sponsors/tnzk.png"),
       name: "Kyohei Hamaguchi / @tnzk",
-      nofollow: false
+      nofollow: false,
     },
-    ...patreonData.silver
+    ...patreonData.silver,
   ],
   generalHighlighted: patreonData.generalHighlighted,
   general: patreonData.general,

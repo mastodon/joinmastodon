@@ -691,7 +691,9 @@ const ServerFilters = ({
                           id: "wizard.filter.all_categories",
                           defaultMessage: "All topics",
                         })
-                      : (categoriesMessages[item.category] ? intl.formatMessage(categoriesMessages[item.category]) : item.category)}
+                      : categoriesMessages[item.category]
+                      ? intl.formatMessage(categoriesMessages[item.category])
+                      : item.category}
 
                     <span
                       className={

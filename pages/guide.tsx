@@ -236,7 +236,7 @@ function Guide(props) {
                 categoryLabel: intl.formatMessage({
                   id: "browse_apps.android",
                   defaultMessage: "Android",
-                })
+                }),
               }}
             />
           </div>

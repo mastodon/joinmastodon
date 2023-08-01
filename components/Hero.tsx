@@ -45,7 +45,11 @@ const Hero = ({
       className={classNames(
         "full-width-bg relative pt-[var(--header-area)] text-white",
         noHeight ? "" : "h-[var(--mobile-hero-height)]",
-        noHeight ? "" : (homepage ? "2xl:h-[var(--desktop-hero-height)]" : "xl:h-[var(--desktop-hero-height)]")
+        noHeight
+          ? ""
+          : homepage
+          ? "2xl:h-[var(--desktop-hero-height)]"
+          : "xl:h-[var(--desktop-hero-height)]"
       )}
       style={
         {
@@ -77,7 +81,9 @@ const Hero = ({
         className={classNames(
           "absolute inset-0 -z-10 h-[var(--mobile-hero-height)]",
           homepage ? "md:mis-[-25%] 2xl:hidden" : "xl:hidden",
-          homepage ? "2xl:h-[var(--desktop-hero-height)]" : "xl:h-[var(--desktop-hero-height)]",
+          homepage
+            ? "2xl:h-[var(--desktop-hero-height)]"
+            : "xl:h-[var(--desktop-hero-height)]",
           dir === "rtl" && "-scale-x-100"
         )}
       >
@@ -97,7 +103,9 @@ const Hero = ({
         className={classNames(
           "absolute inset-0 -z-10 hidden h-[var(--mobile-hero-height)]",
           homepage ? "2xl:block" : "xl:block",
-          homepage ? "2xl:h-[var(--desktop-hero-height)]" : "xl:h-[var(--desktop-hero-height)]",
+          homepage
+            ? "2xl:h-[var(--desktop-hero-height)]"
+            : "xl:h-[var(--desktop-hero-height)]",
           dir === "rtl" && "-scale-x-100"
         )}
       >

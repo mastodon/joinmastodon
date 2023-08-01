@@ -26,25 +26,29 @@ const articles = [
   {
     logo: financialTimesLogo,
     url: "https://www.ft.com/content/de808736-2e05-4c3b-a53c-55b170ae9efd",
-    title: "Twitter rival Mastodon rejects funding to protect non-profit status",
+    title:
+      "Twitter rival Mastodon rejects funding to protect non-profit status",
     date: "2022-12-28",
   },
   {
     logo: techcrunchLogo,
     url: "https://techcrunch.com/2022/12/23/mastodon-creator-eugen-rochko-talks-funding-and-how-to-build-the-anti-twitter/",
-    title: "Mastodon creator Eugen Rochko talks funding and how to build the anti-Twitter",
+    title:
+      "Mastodon creator Eugen Rochko talks funding and how to build the anti-Twitter",
     date: "2022-12-23",
   },
   {
     logo: forbesLogo,
     url: "https://fortune.com/2022/11/28/mastodon-social-ceo-eugen-rochko-twitter-elon-musk/",
-    title: "Mastodon’s 29-year-old CEO wants his Twitter alternative to ‘replace’ its rival some day, but he’s taking an anti–Elon Musk approach to growing it",
+    title:
+      "Mastodon’s 29-year-old CEO wants his Twitter alternative to ‘replace’ its rival some day, but he’s taking an anti–Elon Musk approach to growing it",
     date: "2022-11-28",
   },
   {
     logo: timeLogo,
     url: "https://time.com/6229230/mastodon-eugen-rochko-interview/",
-    title: "Thousands Have Joined Mastodon Since Twitter Changed Hands. Its Founder Has a Vision for Democratizing Social Media",
+    title:
+      "Thousands Have Joined Mastodon Since Twitter Changed Hands. Its Founder Has a Vision for Democratizing Social Media",
     date: "2022-11-06",
   },
   {
@@ -133,7 +137,8 @@ const articles = [
   {
     logo: guardianLogo,
     url: "https://www.theguardian.com/technology/2023/apr/18/mastodon-users-twitter-elon-musk-social-media",
-    title: "Thousands fled to Mastodon after Musk bought Twitter. Are they still ‘tooting’?",
+    title:
+      "Thousands fled to Mastodon after Musk bought Twitter. Are they still ‘tooting’?",
     date: "2023-04-18",
   },
   {

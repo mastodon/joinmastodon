@@ -192,9 +192,8 @@ export const Footer = () => (
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-center text-nightshade-100 md:text-start">
           Copyright © 2023 Mastodon gGmbH.{" "}
-
           <Link href="/trademark">
-            <a className="sm:ml-4 sm:pl-4 sm:border-l border-nightshade-600 hover:underline">
+            <a className="border-nightshade-600 hover:underline sm:ml-4 sm:border-l sm:pl-4">
               <FormattedMessage
                 id="nav.trademark_policy.title"
                 defaultMessage="Trademark Policy"
@@ -213,15 +212,12 @@ export const Footer = () => (
           <span aria-hidden>{" • "}</span>
           <Link href="https://joinmastodon.instatus.com">
             <a className="hover:underline">
-              <FormattedMessage
-                id="nav.status.title"
-                defaultMessage="Status"
-              />
+              <FormattedMessage id="nav.status.title" defaultMessage="Status" />
             </a>
           </Link>
         </span>
 
-        <div className="mt-4 flex space-x-2 justify-center md:mt-0 md:space-x-6">
+        <div className="mt-4 flex justify-center space-x-2 md:mt-0 md:space-x-6">
           <a
             href="https://mastodon.social/@Mastodon"
             rel="me"
@@ -242,9 +238,7 @@ export const Footer = () => (
             className="text-nightshade-100 hover:text-nightshade-50"
           >
             <GitHub className="h-5 w-5" fill="currentColor" />
-            <span className="sr-only">
-              GitHub
-            </span>
+            <span className="sr-only">GitHub</span>
           </a>
         </div>
       </div>

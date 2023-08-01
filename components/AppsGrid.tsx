@@ -38,7 +38,7 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
         hidden_from_all: hidden_from_all ?? false,
         released_on: new Date(released_on) ?? null,
         category,
-        categoryLabel: categories.find(c => c.key === category)["label"]
+        categoryLabel: categories.find((c) => c.key === category)["label"],
       }))
     )
     .flat()
@@ -52,7 +52,9 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
   ]
   const [sortOption, setSortOption] = useState(sortOptions[0].value)
   const filteredApps = allApps.filter(
-    ({ category, hidden_from_all }) => category === activeCategory || (activeCategory === "all" && !hidden_from_all)
+    ({ category, hidden_from_all }) =>
+      category === activeCategory ||
+      (activeCategory === "all" && !hidden_from_all)
   )
   const sortedAndFilteredApps = _sortBy(filteredApps, sortOption)
 

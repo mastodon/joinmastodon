@@ -114,7 +114,10 @@ const About = () => (
                           href={member.socials.mastodon}
                           className="b2 ml-2 block flex-shrink-0 text-blurple-600 hover:text-blurple-500"
                         >
-                          <LogoWhite className="h-[1em] w-[1em]" fill="currentColor" />
+                          <LogoWhite
+                            className="h-[1em] w-[1em]"
+                            fill="currentColor"
+                          />
                         </a>
                       )}
                     </div>

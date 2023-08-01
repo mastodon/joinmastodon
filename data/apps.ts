@@ -45,7 +45,6 @@ import mastonine from "../public/apps/mastonine.png"
 
 import type { StaticImageData } from "next/image"
 
-
 export type appsList = {
   /** the operating system or platform the list of apps is built for */
   [platform: string]: {
@@ -361,5 +360,5 @@ export const apps: appsList = {
       icon: mastodonforworkgroups,
       url: "https://github.com/meyskens/mastodon-for-workgroups",
     },
-  ]
+  ],
 }
