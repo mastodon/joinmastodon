@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { FormattedMessage, useIntl } from "react-intl"
 import { Blurhash } from "react-blurhash"
 

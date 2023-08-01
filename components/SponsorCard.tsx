@@ -1,5 +1,5 @@
 import classNames from "classnames"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { FormattedMessage } from "react-intl"
 
 /** Sponsor Card, supporting data from `silver`, `generalHighlighted`, and `general` */

@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import { FormattedMessage } from "react-intl"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import footerImage from "../public/illustrations/footer.png"
 import LogoWhite from "../public/logos/logo-white.svg?inline"
 import GitHub from "../public/ui/github.svg?inline"

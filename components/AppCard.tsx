@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { FormattedMessage } from "react-intl"
 
 export type AppCardProps = {

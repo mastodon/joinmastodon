@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import Image, { StaticImageData } from "next/image"
+import Image, { StaticImageData } from "next/legacy/image"
 import { CSSProperties } from "react"
 import { getDirForLocale } from "../utils/locales"
 

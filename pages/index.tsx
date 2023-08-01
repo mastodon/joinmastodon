@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { FormattedMessage, useIntl } from "react-intl"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import Head from "next/head"
 import classnames from "classnames"
 import { useKeenSlider } from "keen-slider/react"

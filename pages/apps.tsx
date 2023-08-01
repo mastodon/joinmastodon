@@ -5,7 +5,7 @@ import downloadOnAppStore from "../public/badges/app-store.svg"
 
 import { FormattedMessage, useIntl } from "react-intl"
 import Head from "next/head"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import AppHero from "../components/AppHero"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import footer_festival from "../public/illustrations/footer_festival.png"
