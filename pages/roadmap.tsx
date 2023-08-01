@@ -48,11 +48,10 @@ const Roadmap = () => {
 
         <Head>
           <title>
-            {intl.formatMessage({
+            {`${intl.formatMessage({
               id: "roadmap.page_title",
               defaultMessage: "Public Roadmap",
-            })}{" "}
-            - Mastodon
+            })} - Mastodon`}
           </title>
 
           <meta

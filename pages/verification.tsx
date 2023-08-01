@@ -221,11 +221,10 @@ const Verification = () => {
 
       <Head>
         <title>
-          {intl.formatMessage({
+          {`${intl.formatMessage({
             id: "verification.page_title",
             defaultMessage: "Verification",
-          })}{" "}
-          - Mastodon
+          })} - Mastodon`}
         </title>
 
         <meta

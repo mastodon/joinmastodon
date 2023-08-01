@@ -323,11 +323,10 @@ const Servers = () => {
       </div>
       <Head>
         <title>
-          {intl.formatMessage({
+          {`${intl.formatMessage({
             id: "servers.page_title",
             defaultMessage: "Servers",
-          })}{" "}
-          - Mastodon
+          })} - Mastodon`}
         </title>
         <meta
           property="og:title"

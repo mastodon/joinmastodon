@@ -137,11 +137,10 @@ const AppsPage = () => {
       />
       <Head>
         <title>
-          {intl.formatMessage({
+          {`${intl.formatMessage({
             id: "browse_apps.page_title",
             defaultMessage: "Get an app for Mastodon",
-          })}{" "}
-          - Mastodon
+          })} - Mastodon`}
         </title>
         <meta
           property="og:title"

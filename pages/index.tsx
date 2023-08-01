@@ -76,11 +76,10 @@ function Home() {
       <Sponsors sponsors={{ platinum, additionalFunding }} />
       <Head>
         <title>
-          Mastodon -{" "}
-          {intl.formatMessage({
+          {`Mastodon - ${intl.formatMessage({
             id: "home.page_title",
             defaultMessage: "Decentralized social media",
-          })}
+          })}`}
         </title>
 
         <meta
