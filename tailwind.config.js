@@ -102,7 +102,6 @@ const config = {
   plugins: [
     /** CSS Logical Properties https://github.com/stevecochrane/tailwindcss-logical */
     require("tailwindcss-logical"),
-    require("@tailwindcss/line-clamp"),
     plugin(function ({ addVariant }) {
       /** A good default for hover states */
       addVariant("hocus", ["&:hover", "&:focus-visible"])

@@ -127,7 +127,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 w-screen flex-col overflow-auto bg-black px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1 md:-mie-1 md:mis-0",
+              "md:ms-0 md:-me-1 fixed inset-0 w-screen flex-col overflow-auto bg-black px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
@@ -150,7 +150,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
 
                     <div
                       className={classNames(
-                        "top-full rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-white md:text-black md:shadow-lg",
+                        "end-0 top-full rounded-md md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-white md:text-black md:shadow-lg",
                         openMenuIndex === itemIndex ? "overflow-auto" : "hidden"
                       )}
                     >

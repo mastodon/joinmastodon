@@ -40,7 +40,7 @@ export const IssueTimeline = ({ roadmap }) => {
 
   return (
     <div className="mt-56 pl-3 md:mt-0 md:rounded-md md:bg-white md:p-6">
-      <div className="-mx-gutter pis-gutter mb-12 overflow-x-auto md:mb-6">
+      <div className="-mx-gutter ps-gutter mb-12 overflow-x-auto md:mb-6">
         <div className="flex flex-wrap gap-gutter md:flex-nowrap">
           {categories.map((category) => (
             <Category

@@ -80,7 +80,7 @@ const Hero = ({
       <div
         className={classNames(
           "absolute inset-0 -z-10 h-[var(--mobile-hero-height)]",
-          homepage ? "md:mis-[-25%] 2xl:hidden" : "xl:hidden",
+          homepage ? "md:ms-[-25%] 2xl:hidden" : "xl:hidden",
           homepage
             ? "2xl:h-[var(--desktop-hero-height)]"
             : "xl:h-[var(--desktop-hero-height)]",

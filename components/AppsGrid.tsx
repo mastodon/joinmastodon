@@ -67,7 +67,7 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
             defaultMessage="Browse third-party apps"
           />
         </h2>
-        <div className="-mx-gutter pis-gutter mb-6 overflow-x-auto">
+        <div className="-mx-gutter ps-gutter mb-6 overflow-x-auto">
           <div className="flex flex-wrap gap-gutter md:flex-nowrap">
             {categories.map((category) => (
               <Category
