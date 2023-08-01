@@ -53,25 +53,33 @@ const nextConfig = {
     ]
   },
   webpack(config, { isServer, isdev }) {
-    // custom rule for SVGR
+    // Grab the existing rule that handles SVG imports
+    const fileLoaderRule = config.module.rules.find(
+      (rule) => rule.test && rule.test.test?.(".svg")
+    )
 
-    // warning: do not specify `issuer` key here, it is broken with dynamic require
-    // see https://github.com/webpack/webpack/issues/9309
-    //     https://github.com/vercel/next.js/discussions/15437
     config.module.rules.push({
-      test: /\.svg$/i,
-      resourceQuery: /inline/, // Only for *.svg?inline
-      use: [{ loader: "@svgr/webpack", options: { svgo: false } }],
+      oneOf: [
+        // warning: do not specify `issuer` key here, it is broken with dynamic require
+        // see https://github.com/webpack/webpack/issues/9309
+        //     https://github.com/vercel/next.js/discussions/15437
+        {
+          test: /\.svg$/i,
+          resourceQuery: /inline/, // Only for *.svg?inline
+          use: [{ loader: "@svgr/webpack", options: { svgo: false } }],
+        },
+
+        // we need to add this, as the previous rule disabled the default SVG loader
+        {
+          ...fileLoaderRule,
+          test: /\.svg$/i,
+          resourceQuery: { not: [/inline/] },
+        },
+      ],
     })
 
-    // we need to add this, as the previous rule disabled the default SVG loader
-    config.module.rules.push({
-      test: /\.svg$/i,
-      resourceQuery: { not: [/inline/] },
-      loader: "next-image-loader",
-      options: { assetPrefix: "", basePath: "", isServer, isDev: isdev },
-    })
-
+    // Modify the file loader rule to ignore *.svg, since we have it handled now.
+    fileLoaderRule.exclude = /\.svg$/i
     return config
   },
   output: "standalone",
