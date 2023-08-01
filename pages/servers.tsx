@@ -298,8 +298,8 @@ const Servers = () => {
                 defaultMessage="All servers listed here have committed to the <link>Mastodon Server Covenant</link>."
                 values={{
                   link: (chunks) => (
-                    <Link href="/covenant">
-                      <a className="underline">{chunks}</a>
+                    <Link href="/covenant" className="underline">
+                      {chunks}
                     </Link>
                   ),
                 }}

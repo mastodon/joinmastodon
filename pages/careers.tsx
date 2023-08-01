@@ -123,11 +123,12 @@ const Job = ({ job }: { job?: Job }) => (
 
     <div className="b2 flex-shrink-0">
       {job ? (
-        <Link href={job.externalLink}>
-          <a className="flex items-center gap-2 font-semibold text-blurple-600 hocus:underline">
-            {job.locationName}
-            <Arrow className="h-[1em]" />
-          </a>
+        <Link
+          href={job.externalLink}
+          className="flex items-center gap-2 font-semibold text-blurple-600 hocus:underline"
+        >
+          {job.locationName}
+          <Arrow className="h-[1em]" />
         </Link>
       ) : (
         <SkeletonText className="w-[7ch]" />

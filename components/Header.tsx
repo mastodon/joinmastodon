@@ -114,10 +114,11 @@ const Header = ({ transparent = true }: HeaderProps) => {
     >
       <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
         <div>
-          <Link href="/">
-            <a className="relative z-10 flex max-w-[11.375rem] pt-[6%] md:max-w-[12.625rem]">
-              <Image src={mastodonLogo} alt="Mastodon" />
-            </a>
+          <Link
+            href="/"
+            className="relative z-10 flex max-w-[11.375rem] pt-[6%] md:max-w-[12.625rem]"
+          >
+            <Image src={mastodonLogo} alt="Mastodon" />
           </Link>
         </div>
 
@@ -168,32 +169,27 @@ const Header = ({ transparent = true }: HeaderProps) => {
                               href={child.value}
                               locale={child.locale || undefined}
                               scroll={child.scroll ?? true}
+                              {...bindSecondaryMenuItem(child)}
+                              className={classNames(
+                                "block rounded-md hover:md:bg-nightshade-50",
+                                item.compact
+                                  ? "py-2 px-5 md:px-4"
+                                  : "py-3 px-5 md:px-4",
+                                item.compact && child.active && "font-extrabold"
+                              )}
+                              aria-current={child.active ? "page" : undefined}
                             >
-                              <a
-                                {...bindSecondaryMenuItem(child)}
+                              <span
                                 className={classNames(
-                                  "block rounded-md hover:md:bg-nightshade-50",
-                                  item.compact
-                                    ? "py-2 px-5 md:px-4"
-                                    : "py-3 px-5 md:px-4",
-                                  item.compact &&
-                                    child.active &&
-                                    "font-extrabold"
+                                  "block",
+                                  !item.compact && "font-extrabold"
                                 )}
-                                aria-current={child.active ? "page" : undefined}
                               >
-                                <span
-                                  className={classNames(
-                                    "block",
-                                    !item.compact && "font-extrabold"
-                                  )}
-                                >
-                                  {child.label}
-                                </span>
-                                <span className="mt-1 block font-extranormal text-gray-1">
-                                  {child.description}
-                                </span>
-                              </a>
+                                {child.label}
+                              </span>
+                              <span className="mt-1 block font-extranormal text-gray-1">
+                                {child.description}
+                              </span>
                             </Link>
                           </li>
                         ))}
@@ -224,17 +220,16 @@ const Header = ({ transparent = true }: HeaderProps) => {
                   </>
                 ) : (
                   // Top-level Link
-                  <Link href={item.value}>
-                    <a
-                      className={classNames(
-                        "block whitespace-nowrap rounded-md p-3 px-5 text-h5 font-medium md:text-b2",
-                        item.active && "font-extrabold"
-                      )}
-                      aria-current={item.active ? "page" : undefined}
-                      {...bindPrimaryMenuItem(itemIndex)}
-                    >
-                      {item.label}
-                    </a>
+                  <Link
+                    href={item.value}
+                    className={classNames(
+                      "block whitespace-nowrap rounded-md p-3 px-5 text-h5 font-medium md:text-b2",
+                      item.active && "font-extrabold"
+                    )}
+                    aria-current={item.active ? "page" : undefined}
+                    {...bindPrimaryMenuItem(itemIndex)}
+                  >
+                    {item.label}
                   </Link>
                 )}
               </li>
