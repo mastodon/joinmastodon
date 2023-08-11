@@ -31,7 +31,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
       label: <FormattedMessage id="nav.apps.title" defaultMessage="Apps" />,
     }, {
       value: "https://freshstore.co/collections/mastodon",
-      label: <div className="flex gap-2 items-center"><FormattedMessage id="nav.merch.title" defaultMessage="Merch" /><span class="bg-goldenrod/[0.5] text-goldenrod c2 px-1.5 rounded border border-goldenrod"><FormattedMessage id='nav.new' defaultMessage='New' /></span></div>,
+      label: <div className="flex gap-2 items-center"><FormattedMessage id="nav.merch.title" defaultMessage="Merch" /><span className="bg-goldenrod/[0.5] text-goldenrod c2 px-1.5 rounded border border-goldenrod"><FormattedMessage id='nav.new' defaultMessage='New' /></span></div>,
     }, {
       value: "/sponsors",
       label: <FormattedMessage id="nav.sponsors.title" defaultMessage="Sponsors" />,
