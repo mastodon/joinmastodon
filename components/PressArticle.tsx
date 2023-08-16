@@ -1,19 +1,14 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 const PressArticle = ({ story }) => (
   <a
     href={story.url}
     rel="nofollow noopener"
-    className="col-span-12 block rounded-md ring-blurple-500 focus:ring hover:text-blurple-600 md:col-span-6 lg:col-span-3"
+    className="col-span-12 block rounded-md ring-blurple-500 hover:text-blurple-600 focus:ring md:col-span-6 lg:col-span-3"
   >
-    <div className="flex w-full items-center justify-center py-20 px-16 bg-gray-4 rounded-md">
+    <div className="flex w-full items-center justify-center rounded-md bg-gray-4 py-20 px-16">
       <div className="relative h-10 w-full">
-        <Image
-          src={story.logo}
-          alt=""
-          layout="fill"
-          objectFit="contain"
-        />
+        <Image src={story.logo} alt="" layout="fill" objectFit="contain" />
       </div>
     </div>
 

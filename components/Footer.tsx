@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import { FormattedMessage } from "react-intl"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import footerImage from "../public/illustrations/footer.png"
 import LogoWhite from "../public/logos/logo-white.svg?inline"
 import GitHub from "../public/ui/github.svg?inline"
@@ -43,37 +43,42 @@ export const Footer = () => (
                 />
               ),
               links: [
-                <Link key="servers" href="/servers">
-                  <a className="inline-block py-2 hover:underline">
-                    <FormattedMessage
-                      id="nav.servers.title"
-                      defaultMessage="Servers"
-                    />
-                  </a>
+                <Link
+                  key="servers"
+                  href="/servers"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage
+                    id="nav.servers.title"
+                    defaultMessage="Servers"
+                  />
                 </Link>,
-                <Link key="apps" href="/apps">
-                  <a className="inline-block py-2 hover:underline">
-                    <FormattedMessage
-                      id="nav.apps.title"
-                      defaultMessage="Apps"
-                    />
-                  </a>
+                <Link
+                  key="apps"
+                  href="/apps"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage id="nav.apps.title" defaultMessage="Apps" />
                 </Link>,
-                <Link key="sponsors" href="/sponsors">
-                  <a className="inline-block py-2 hover:underline">
-                    <FormattedMessage
-                      id="nav.sponsors.title"
-                      defaultMessage="Sponsors"
-                    />
-                  </a>
+                <Link
+                  key="sponsors"
+                  href="/sponsors"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage
+                    id="nav.sponsors.title"
+                    defaultMessage="Sponsors"
+                  />
                 </Link>,
-                <Link key="roadmap" href="/roadmap">
-                  <a className="inline-block py-2 hover:underline">
-                    <FormattedMessage
-                      id="nav.roadmap.title"
-                      defaultMessage="Roadmap"
-                    />
-                  </a>
+                <Link
+                  key="roadmap"
+                  href="/roadmap"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage
+                    id="nav.roadmap.title"
+                    defaultMessage="Roadmap"
+                  />
                 </Link>,
               ],
             },
@@ -140,37 +145,45 @@ export const Footer = () => (
                 />
               ),
               links: [
-                <Link key="/about" href="/about">
-                  <a className="inline-block py-2 hover:underline">
-                    <FormattedMessage
-                      id="nav.about_us.title"
-                      defaultMessage="About us"
-                    />
-                  </a>
+                <Link
+                  key="/about"
+                  href="/about"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage
+                    id="nav.about_us.title"
+                    defaultMessage="About us"
+                  />
                 </Link>,
-                <Link key="/branding" href="/branding">
-                  <a className="inline-block py-2 hover:underline">
-                    <FormattedMessage
-                      id="nav.branding.title"
-                      defaultMessage="Branding"
-                    />
-                  </a>
+                <Link
+                  key="/branding"
+                  href="/branding"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage
+                    id="nav.branding.title"
+                    defaultMessage="Branding"
+                  />
                 </Link>,
-                <Link key="/careers" href="/careers">
-                  <a className="inline-block py-2 hover:underline">
-                    <FormattedMessage
-                      id="nav.careers.title"
-                      defaultMessage="Careers"
-                    />
-                  </a>
+                <Link
+                  key="/careers"
+                  href="/careers"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage
+                    id="nav.careers.title"
+                    defaultMessage="Careers"
+                  />
                 </Link>,
-                <Link key="/impressum" href="/about#impressum">
-                  <a className="inline-block py-2 hover:underline">
-                    <FormattedMessage
-                      id="nav.impressum.title"
-                      defaultMessage="Impressum"
-                    />
-                  </a>
+                <Link
+                  key="/impressum"
+                  href="/about#impressum"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage
+                    id="nav.impressum.title"
+                    defaultMessage="Impressum"
+                  />
                 </Link>,
               ],
             },
@@ -192,36 +205,32 @@ export const Footer = () => (
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-center text-nightshade-100 md:text-start">
           Copyright © 2023 Mastodon gGmbH.{" "}
-
-          <Link href="/trademark">
-            <a className="sm:ml-4 sm:pl-4 sm:border-l border-nightshade-600 hover:underline">
-              <FormattedMessage
-                id="nav.trademark_policy.title"
-                defaultMessage="Trademark Policy"
-              />
-            </a>
+          <Link
+            href="/trademark"
+            className="border-nightshade-600 hover:underline sm:ml-4 sm:border-l sm:pl-4"
+          >
+            <FormattedMessage
+              id="nav.trademark_policy.title"
+              defaultMessage="Trademark Policy"
+            />
           </Link>
           <span aria-hidden>{" • "}</span>
-          <Link href="/privacy-policy">
-            <a className="hover:underline">
-              <FormattedMessage
-                id="nav.privacy_policy.title"
-                defaultMessage="Privacy Policy"
-              />
-            </a>
+          <Link href="/privacy-policy" className="hover:underline">
+            <FormattedMessage
+              id="nav.privacy_policy.title"
+              defaultMessage="Privacy Policy"
+            />
           </Link>
           <span aria-hidden>{" • "}</span>
-          <Link href="https://joinmastodon.instatus.com">
-            <a className="hover:underline">
-              <FormattedMessage
-                id="nav.status.title"
-                defaultMessage="Status"
-              />
-            </a>
+          <Link
+            href="https://joinmastodon.instatus.com"
+            className="hover:underline"
+          >
+            <FormattedMessage id="nav.status.title" defaultMessage="Status" />
           </Link>
         </span>
 
-        <div className="mt-4 flex space-x-2 justify-center md:mt-0 md:space-x-6">
+        <div className="mt-4 flex justify-center space-x-2 md:mt-0 md:space-x-6">
           <a
             href="https://mastodon.social/@Mastodon"
             rel="me"
@@ -242,9 +251,7 @@ export const Footer = () => (
             className="text-nightshade-100 hover:text-nightshade-50"
           >
             <GitHub className="h-5 w-5" fill="currentColor" />
-            <span className="sr-only">
-              GitHub
-            </span>
+            <span className="sr-only">GitHub</span>
           </a>
         </div>
       </div>

@@ -298,8 +298,8 @@ const Servers = () => {
                 defaultMessage="All servers listed here have committed to the <link>Mastodon Server Covenant</link>."
                 values={{
                   link: (chunks) => (
-                    <Link href="/covenant">
-                      <a className="underline">{chunks}</a>
+                    <Link href="/covenant" className="underline">
+                      {chunks}
                     </Link>
                   ),
                 }}
@@ -323,11 +323,10 @@ const Servers = () => {
       </div>
       <Head>
         <title>
-          {intl.formatMessage({
+          {`${intl.formatMessage({
             id: "servers.page_title",
             defaultMessage: "Servers",
-          })}{" "}
-          - Mastodon
+          })} - Mastodon`}
         </title>
         <meta
           property="og:title"
@@ -691,7 +690,9 @@ const ServerFilters = ({
                           id: "wizard.filter.all_categories",
                           defaultMessage: "All topics",
                         })
-                      : (categoriesMessages[item.category] ? intl.formatMessage(categoriesMessages[item.category]) : item.category)}
+                      : categoriesMessages[item.category]
+                      ? intl.formatMessage(categoriesMessages[item.category])
+                      : item.category}
 
                     <span
                       className={

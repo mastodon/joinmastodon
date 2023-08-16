@@ -147,11 +147,10 @@ function Sponsors() {
       </section>
       <Head>
         <title>
-          {intl.formatMessage({
+          {`${intl.formatMessage({
             id: "sponsors.page_title",
             defaultMessage: "Sponsors of Mastodon",
-          })}{" "}
-          - Mastodon
+          })} - Mastodon`}
         </title>
         <meta
           property="og:title"

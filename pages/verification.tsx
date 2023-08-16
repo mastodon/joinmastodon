@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
@@ -221,11 +221,10 @@ const Verification = () => {
 
       <Head>
         <title>
-          {intl.formatMessage({
+          {`${intl.formatMessage({
             id: "verification.page_title",
             defaultMessage: "Verification",
-          })}{" "}
-          - Mastodon
+          })} - Mastodon`}
         </title>
 
         <meta

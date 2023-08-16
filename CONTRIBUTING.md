@@ -28,7 +28,8 @@ In an effort to offer choice but to limit confusion, there are a number of consi
 
 - Apps should be current and maintained; please submit issues or pull requests to remove Apps that are known to have been deprecated or retired.
 
-- Apps must be *generally available*
+- Apps must be _generally available_
+
   - do not add apps that are only available to a limited set of users (e.g. TestFlight/beta testing)
   - do not add apps that are only available in certain countries (people may click through and find that they are not available for them to install, which may be disappointing)
 
@@ -43,9 +44,10 @@ In an effort to offer choice but to limit confusion, there are a number of consi
 - fork the repository and create a branch for your app addition
 
 - add the icon (under `public/apps`) and the corresponding information to the file that generates the page (in `data/apps.ts`).
-  - images must be PNG format, and *ideally* at least 512x512 pixels square (although some existing icons are smaller than this).
 
-- if the app is multiplatform, only one icon should appear in the All apps view. This means that you *must* add `hidden_from_all: true,` to all except one of the entries in the list. We suggest that if the app has a web version, that should be the version that is not hidden (as it will be clickable directly from the All apps list)
+  - images must be PNG format, and _ideally_ at least 512x512 pixels square (although some existing icons are smaller than this).
+
+- if the app is multiplatform, only one icon should appear in the All apps view. This means that you _must_ add `hidden_from_all: true,` to all except one of the entries in the list. We suggest that if the app has a web version, that should be the version that is not hidden (as it will be clickable directly from the All apps list)
 
 - please ensure that the correct value for `paid: true|false` is specified for the app entry.
 

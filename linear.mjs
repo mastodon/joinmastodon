@@ -8,39 +8,35 @@ const api = new LinearClient({
   apiKey: process.env.LINEAR_API_KEY,
 })
 
-const fetchIssues = async (after) => api.issues({
-  filter: {
-    team: {
-      key: {
-        in: ["MAS", "IOS", "AND"],
+const fetchIssues = async (after) =>
+  api.issues({
+    filter: {
+      team: {
+        key: {
+          in: ["MAS", "IOS", "AND"],
+        },
       },
-    },
 
-    labels: {
-      name: {
-        eqIgnoreCase: "Public roadmap",
+      labels: {
+        name: {
+          eqIgnoreCase: "Public roadmap",
+        },
       },
-    },
 
-    state: {
-      type: {
-        in: [
-          "backlog",
-          "unstarted",
-          "started",
-          "completed",
-        ],
+      state: {
+        type: {
+          in: ["backlog", "unstarted", "started", "completed"],
+        },
       },
     },
-  },
-})
+  })
 
 const processIssues = async (stateMap, issues) => {
   for (const issue of issues.nodes) {
     const state = await issue.state
-    const list  = (stateMap[state.type] || { items: [] }).items
+    const list = (stateMap[state.type] || { items: [] }).items
 
-    if (list.find(item => item.id === issue.identifier)) {
+    if (list.find((item) => item.id === issue.identifier)) {
       continue
     }
 
@@ -51,10 +47,12 @@ const processIssues = async (stateMap, issues) => {
       title: issue.title,
       priority: issue.priority,
       completedAt: issue.completedAt,
-      parent: parent ? {
-        id: parent.identifier,
-        title: parent.title,
-      } : null,
+      parent: parent
+        ? {
+            id: parent.identifier,
+            title: parent.title,
+          }
+        : null,
     })
 
     stateMap[state.type] = {
@@ -75,18 +73,20 @@ while (issues.pageInfo.hasNextPage) {
   await processIssues(stateMap, issues)
 }
 
-Object.keys(stateMap).forEach(state => {
+Object.keys(stateMap).forEach((state) => {
   if (state !== "completed") {
     stateMap[state].items.sort((a, b) => a.priority - b.priority)
   } else {
-    stateMap[state].items.sort((a, b) => (new Date(b.completedAt)) - (new Date(a.completedAt)))
+    stateMap[state].items.sort(
+      (a, b) => new Date(b.completedAt) - new Date(a.completedAt)
+    )
   }
 
   roadmap.push(stateMap[state])
 })
 
-const stateTypeToValue = type => {
-  switch(type) {
+const stateTypeToValue = (type) => {
+  switch (type) {
     case "backlog":
       return 0
     case "unstarted":

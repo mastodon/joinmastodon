@@ -5,7 +5,7 @@ import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import classNames from "classnames"
 import Layout from "../components/Layout"
 import heroImage from "../public/illustrations/apps_hero_desktop.png"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import colors from "../data/colors"
 
 import screenshotComposeLight from "../public/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png"
@@ -239,7 +239,9 @@ const Branding = () => (
                     >
                       <div className="p-4 pt-14 text-white">
                         <div className="font-black">{hex}</div>
-                        <div className="c2">Pantone {pantone} &bull; CMYK {cmyk}</div>
+                        <div className="c2">
+                          Pantone {pantone} &bull; CMYK {cmyk}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -254,7 +256,9 @@ const Branding = () => (
                     >
                       <div className="p-4 pt-14 text-white">
                         <div className="font-black">{hex}</div>
-                        <div className="c2">Pantone {pantone} &bull; CMYK {cmyk}</div>
+                        <div className="c2">
+                          Pantone {pantone} &bull; CMYK {cmyk}
+                        </div>
                       </div>
                     </div>
                   </div>

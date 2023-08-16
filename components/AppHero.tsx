@@ -1,4 +1,4 @@
-import Image, { ImageProps } from "next/image"
+import Image, { ImageProps } from "next/legacy/image"
 import { FormattedMessage } from "react-intl"
 
 import downloadOnGooglePlay from "../public/badges/google-play.svg"

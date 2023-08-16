@@ -34,7 +34,7 @@ export const SelectMenu = ({
               <span className="font-bold">{selectedLabel}</span>
             </span>
 
-            <span className="pointer-events-none absolute inline-end-3 block-start-5">
+            <span className="end-3 pointer-events-none absolute block-start-5">
               <DisclosureArrow
                 className="h-4 w-4 text-gray-2"
                 fill="currentColor"

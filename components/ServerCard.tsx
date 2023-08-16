@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { FormattedMessage, useIntl } from "react-intl"
 import { Blurhash } from "react-blurhash"
 
@@ -16,10 +16,12 @@ const ServerCard = ({ server }: { server?: Server }) => {
   const intl = useIntl()
   return (
     <div className="grid grid-rows-[auto_1fr_auto] rounded-md border border-gray-3 p-4">
-      <div className="relative h-26 lg:h-40 rounded-md overflow-hidden bg-gray-2">
+      <div className="relative h-26 overflow-hidden rounded-md bg-gray-2 lg:h-40">
         {server ? (
           <>
-            {server.blurhash && <Blurhash hash={server.blurhash} width='100%' height='100%' />}
+            {server.blurhash && (
+              <Blurhash hash={server.blurhash} width="100%" height="100%" />
+            )}
 
             <Image
               src={server.proxied_thumbnail}

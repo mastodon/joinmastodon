@@ -2,7 +2,7 @@ import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
 
 import mastodonLogo from "../public/logos/wordmark-white-text.svg"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { useState, useEffect, useRef, useId } from "react"
 import classNames from "classnames"
 import { locales } from "../data/locales"
@@ -117,10 +117,11 @@ const Header = ({ transparent = true }: HeaderProps) => {
     >
       <div className="full-width-bg__inner flex h-[var(--header-height)] items-center justify-between">
         <div>
-          <Link href="/">
-            <a className="relative z-10 flex max-w-[11.375rem] pt-[6%] md:max-w-[12.625rem]">
-              <Image src={mastodonLogo} alt="Mastodon" />
-            </a>
+          <Link
+            href="/"
+            className="relative z-10 flex max-w-[11.375rem] pt-[6%] md:max-w-[12.625rem]"
+          >
+            <Image src={mastodonLogo} alt="Mastodon" />
           </Link>
         </div>
 
@@ -129,7 +130,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
           <ul
             {...bindPrimaryMenu()}
             className={classNames(
-              "fixed inset-0 w-screen flex-col overflow-auto bg-black px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1 md:-mie-1 md:mis-0",
+              "md:ms-0 md:-me-1 fixed inset-0 w-screen flex-col overflow-auto bg-black px-1 pt-[calc(var(--header-area)_+_1rem)] pb-8 md:relative md:w-auto md:flex-row md:gap-1 md:overflow-visible md:rounded-md md:bg-[transparent] md:p-1",
               mobileMenuOpen ? "flex" : "hidden md:flex"
             )}
           >
@@ -152,7 +153,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
 
                     <div
                       className={classNames(
-                        "top-full rounded-md inline-end-0 md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-white md:text-black md:shadow-lg",
+                        "end-0 top-full rounded-md md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-white md:text-black md:shadow-lg",
                         openMenuIndex === itemIndex ? "overflow-auto" : "hidden"
                       )}
                     >
@@ -171,32 +172,27 @@ const Header = ({ transparent = true }: HeaderProps) => {
                               href={child.value}
                               locale={child.locale || undefined}
                               scroll={child.scroll ?? true}
+                              {...bindSecondaryMenuItem(child)}
+                              className={classNames(
+                                "block rounded-md hover:md:bg-nightshade-50",
+                                item.compact
+                                  ? "py-2 px-5 md:px-4"
+                                  : "py-3 px-5 md:px-4",
+                                item.compact && child.active && "font-extrabold"
+                              )}
+                              aria-current={child.active ? "page" : undefined}
                             >
-                              <a
-                                {...bindSecondaryMenuItem(child)}
+                              <span
                                 className={classNames(
-                                  "block rounded-md hover:md:bg-nightshade-50",
-                                  item.compact
-                                    ? "py-2 px-5 md:px-4"
-                                    : "py-3 px-5 md:px-4",
-                                  item.compact &&
-                                    child.active &&
-                                    "font-extrabold"
+                                  "block",
+                                  !item.compact && "font-extrabold"
                                 )}
-                                aria-current={child.active ? "page" : undefined}
                               >
-                                <span
-                                  className={classNames(
-                                    "block",
-                                    !item.compact && "font-extrabold"
-                                  )}
-                                >
-                                  {child.label}
-                                </span>
-                                <span className="mt-1 block font-extranormal text-gray-1">
-                                  {child.description}
-                                </span>
-                              </a>
+                                {child.label}
+                              </span>
+                              <span className="mt-1 block font-extranormal text-gray-1">
+                                {child.description}
+                              </span>
                             </Link>
                           </li>
                         ))}
@@ -227,17 +223,16 @@ const Header = ({ transparent = true }: HeaderProps) => {
                   </>
                 ) : (
                   // Top-level Link
-                  <Link href={item.value}>
-                    <a
-                      className={classNames(
-                        "block whitespace-nowrap rounded-md p-3 px-5 text-h5 font-medium md:text-b2",
-                        item.active && "font-extrabold"
-                      )}
-                      aria-current={item.active ? "page" : undefined}
-                      {...bindPrimaryMenuItem(itemIndex)}
-                    >
-                      {item.label}
-                    </a>
+                  <Link
+                    href={item.value}
+                    className={classNames(
+                      "block whitespace-nowrap rounded-md p-3 px-5 text-h5 font-medium md:text-b2",
+                      item.active && "font-extrabold"
+                    )}
+                    aria-current={item.active ? "page" : undefined}
+                    {...bindPrimaryMenuItem(itemIndex)}
+                  >
+                    {item.label}
                   </Link>
                 )}
               </li>

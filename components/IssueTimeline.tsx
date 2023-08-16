@@ -7,25 +7,28 @@ const messages = defineMessages({
   started: { id: "roadmap.state.started", defaultMessage: "In Progress" },
   unstarted: { id: "roadmap.state.unstarted", defaultMessage: "Planned" },
   backlog: { id: "roadmap.state.backlog", defaultMessage: "Exploring" },
-  completed: { id: "roadmap.state.completed", defaultMessage: "Recently completed" },
+  completed: {
+    id: "roadmap.state.completed",
+    defaultMessage: "Recently completed",
+  },
 })
 
 export const IssueTimeline = ({ roadmap }) => {
   const intl = useIntl()
   const [activeCategory, setActiveCategory] = useState("all")
 
-  const filteredRoadmap = roadmap.map(state => {
-    const filteredIssues = state.items.filter(
-      ({ id }) => id.startsWith(activeCategory) || activeCategory === "all"
-    )
+  const filteredRoadmap = roadmap
+    .map((state) => {
+      const filteredIssues = state.items.filter(
+        ({ id }) => id.startsWith(activeCategory) || activeCategory === "all"
+      )
 
-    return {
-      ...state,
-      items: filteredIssues
-    }
-  }).filter(
-    ({ items }) => items.length > 0
-  )
+      return {
+        ...state,
+        items: filteredIssues,
+      }
+    })
+    .filter(({ items }) => items.length > 0)
 
   //prettier-ignore
   const categories = [
@@ -36,10 +39,10 @@ export const IssueTimeline = ({ roadmap }) => {
   ]
 
   return (
-    <div className="mt-56 md:mt-0 md:bg-white md:rounded-md md:p-6 pl-3">
-      <div className="-mx-gutter pis-gutter mb-12 md:mb-6 overflow-x-auto">
+    <div className="mt-56 pl-3 md:mt-0 md:rounded-md md:bg-white md:p-6">
+      <div className="-mx-gutter ps-gutter mb-12 overflow-x-auto md:mb-6">
         <div className="flex flex-wrap gap-gutter md:flex-nowrap">
-          {categories.map(category => (
+          {categories.map((category) => (
             <Category
               key={category.key}
               label={category.label}
@@ -52,14 +55,18 @@ export const IssueTimeline = ({ roadmap }) => {
       </div>
 
       <div className="relative">
-        <div className="absolute h-full w-0 border-dashed border-l border-gray-2" />
+        <div className="absolute h-full w-0 border-l border-dashed border-gray-2" />
 
-        {filteredRoadmap.map(state => (
+        {filteredRoadmap.map((state) => (
           <div key={state.type} className="mb-8 pl-4 md:pl-8">
-            <h2 className="h6 mb-4 text-black">{intl.formatMessage(messages[state.type])}</h2>
+            <h2 className="h6 mb-4 text-black">
+              {intl.formatMessage(messages[state.type])}
+            </h2>
 
             <div className="space-y-2">
-              {state.items.map(issue => <Issue key={issue.id} state={state.type} {...issue} />)}
+              {state.items.map((issue) => (
+                <Issue key={issue.id} state={state.type} {...issue} />
+              ))}
             </div>
           </div>
         ))}

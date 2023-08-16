@@ -43,8 +43,7 @@ import mastappleiic from "../public/apps/mastappleiic.png"
 import mastodonforworkgroups from "../public/apps/mastodonforworkgroups.png"
 import mastonine from "../public/apps/mastonine.png"
 
-import type { StaticImageData } from "next/image"
-
+import type { StaticImageData } from "next/legacy/image"
 
 export type appsList = {
   /** the operating system or platform the list of apps is built for */
@@ -361,5 +360,5 @@ export const apps: appsList = {
       icon: mastodonforworkgroups,
       url: "https://github.com/meyskens/mastodon-for-workgroups",
     },
-  ]
+  ],
 }
