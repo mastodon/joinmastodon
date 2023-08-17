@@ -9,7 +9,6 @@ import tooter from "../public/apps/tooter.png"
 import pinafore from "../public/apps/pinafore.png"
 import whalebird from "../public/apps/whalebird.png"
 import thedesk from "../public/apps/thedesk.png"
-import cuckooPlus from "../public/apps/cuckoo-plus.png"
 import hyperspace from "../public/apps/hyperspace.png"
 import imast from "../public/apps/imast_icon.png"
 import sengi from "../public/apps/sengi.png"
@@ -220,7 +219,6 @@ export const apps: appsList = {
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
-    { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
     { name: "Elk", icon: elk, url: "https://elk.zone" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
     { name: "Statuzer", icon: statuzer, url: "https://statuzer.com" },
