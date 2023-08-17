@@ -41,6 +41,7 @@ import macstodon from "../public/apps/macstodon.png"
 import mastappleiic from "../public/apps/mastappleiic.png"
 import mastodonforworkgroups from "../public/apps/mastodonforworkgroups.png"
 import mastonine from "../public/apps/mastonine.png"
+import mastodeck from "../public/apps/mastodeck.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -226,6 +227,7 @@ export const apps: appsList = {
     { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
     { name: "Trunks", icon: trunks, url: "https://trunks.social" },
     { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
+    { name: "Mastodeck", icon: mastodeck, url: "https://mastodeck.com/" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
