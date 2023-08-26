@@ -275,6 +275,11 @@ const sponsors = {
       logo: require("../public/sponsors/bairesdev.png"),
       name: "BairesDev",
     }, // Custom
+    {
+      url: "https://www.happeo.com",
+      logo: require("../public/sponsors/happeo.png"),
+      name: "Happeo intranet",
+    }, // Custom
   ],
   silver: [
     {
