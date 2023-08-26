@@ -3,32 +3,8 @@
     "type": "started",
     "items": [
       {
-        "id": "MAS-138",
-        "title": "When reporting a reply, forward report to server of parent",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "MAS-115",
-        "title": "Rework interaction modal",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "MAS-52",
         "title": "Batch fetch APIs",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "MAS-30",
-        "title": "Add role badges to profiles",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "MAS-16",
-        "title": "Tokenize URLs, usernames and emojis before translation",
         "priority": 2,
         "parent": null
       },
@@ -54,18 +30,6 @@
         "id": "IOS-14",
         "title": "Advanced settings area",
         "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-151",
-        "title": "Change label on \"Media not available\" thumbnails",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "MAS-101",
-        "title": "Upgrade to Rails 7",
-        "priority": 4,
         "parent": null
       }
     ]
@@ -94,12 +58,6 @@
       {
         "id": "MAS-113",
         "title": "Rework link previews fetching and distribution",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "MAS-88",
-        "title": "Improved account and content search",
         "priority": 2,
         "parent": null
       },
@@ -164,6 +122,12 @@
         "parent": null
       },
       {
+        "id": "AND-90",
+        "title": "Signing up with an invite link",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "MAS-137",
         "title": "Sorting options for threads",
         "priority": 3,
@@ -190,12 +154,6 @@
       {
         "id": "MAS-132",
         "title": "Synchronize boost and favourite counts for remote posts",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "MAS-131",
-        "title": "Privacy and verification as separate pages in settings",
         "priority": 3,
         "parent": null
       },
@@ -272,26 +230,14 @@
         "parent": null
       },
       {
-        "id": "IOS-5",
-        "title": "Block domain option in dropdowns",
-        "priority": 3,
+        "id": "IOS-169",
+        "title": "Signing up with an invite link",
+        "priority": 4,
         "parent": null
       },
       {
         "id": "IOS-53",
         "title": "Audio player",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "IOS-47",
-        "title": "Limit max height of media in status and center to focal point",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "IOS-46",
-        "title": "Save alt text expanded state when transitioning from inline to lightbox",
         "priority": 4,
         "parent": null
       },
@@ -352,18 +298,6 @@
       {
         "id": "IOS-10",
         "title": "Use markers API to sync timeline position",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "IOS-9",
-        "title": "Pull to refresh on threads",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "IOS-7",
-        "title": "Clear in-app browser cookies on sign-out",
         "priority": 4,
         "parent": null
       }
@@ -493,6 +427,12 @@
         "parent": null
       },
       {
+        "id": "IOS-5",
+        "title": "Block domain option in dropdowns",
+        "priority": 3,
+        "parent": null
+      },
+      {
         "id": "AND-83",
         "title": "Home Screen Widgets",
         "priority": 4,
@@ -517,6 +457,12 @@
         "parent": null
       },
       {
+        "id": "IOS-47",
+        "title": "Limit max height of media in status and center to focal point",
+        "priority": 4,
+        "parent": null
+      },
+      {
         "id": "MAS-38",
         "title": "End-to-end encrypted messages",
         "priority": 4,
@@ -525,18 +471,6 @@
       {
         "id": "IOS-42",
         "title": "App clip for sign-up from QR code",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "IOS-40",
-        "title": "Empty state for lists",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "IOS-38",
-        "title": "Drafts",
         "priority": 4,
         "parent": null
       },
@@ -557,12 +491,74 @@
         "title": "Configurable favicon and app logo",
         "priority": 4,
         "parent": null
+      },
+      {
+        "id": "IOS-9",
+        "title": "Pull to refresh on threads",
+        "priority": 4,
+        "parent": null
       }
     ]
   },
   {
     "type": "completed",
     "items": [
+      {
+        "id": "MAS-88",
+        "title": "Improved account and content search",
+        "priority": 2,
+        "completedAt": "2023-08-24T14:40:07.642Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-16",
+        "title": "Tokenize URLs, usernames and emojis before translation",
+        "priority": 2,
+        "completedAt": "2023-08-08T21:03:04.128Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-131",
+        "title": "Privacy and verification as separate pages in settings",
+        "priority": 3,
+        "completedAt": "2023-07-30T12:40:28.817Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-30",
+        "title": "Add role badges to profiles",
+        "priority": 2,
+        "completedAt": "2023-07-30T12:39:40.156Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-115",
+        "title": "Rework interaction modal",
+        "priority": 2,
+        "completedAt": "2023-07-27T14:11:19.730Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-101",
+        "title": "Upgrade to Rails 7",
+        "priority": 4,
+        "completedAt": "2023-07-21T13:07:57.251Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-151",
+        "title": "Change label on \"Media not available\" thumbnails",
+        "priority": 4,
+        "completedAt": "2023-07-08T18:05:35.820Z",
+        "parent": null
+      },
+      {
+        "id": "MAS-138",
+        "title": "When reporting a reply, forward report to server of parent",
+        "priority": 2,
+        "completedAt": "2023-07-08T18:00:04.974Z",
+        "parent": null
+      },
       {
         "id": "AND-6",
         "title": "Pinned posts on profiles",
@@ -796,27 +792,6 @@
         "parent": null
       },
       {
-        "id": "AND-3",
-        "title": "Use markers API to sync timeline position",
-        "priority": 3,
-        "completedAt": "2023-02-13T23:53:30.635Z",
-        "parent": null
-      },
-      {
-        "id": "AND-7",
-        "title": "View image descriptions on media",
-        "priority": 2,
-        "completedAt": "2023-02-13T23:53:29.049Z",
-        "parent": null
-      },
-      {
-        "id": "AND-2",
-        "title": "Update onboarding flow",
-        "priority": 1,
-        "completedAt": "2023-02-11T05:01:05.741Z",
-        "parent": null
-      },
-      {
         "id": "IOS-98",
         "title": "Haptic feedback on navigation",
         "priority": 4,
@@ -824,73 +799,10 @@
         "parent": null
       },
       {
-        "id": "MAS-53",
-        "title": "Add status page setting",
-        "priority": 2,
-        "completedAt": "2023-02-04T03:56:09.206Z",
-        "parent": null
-      },
-      {
-        "id": "MAS-60",
-        "title": "Report open connections in streaming API",
-        "priority": 2,
-        "completedAt": "2023-02-03T23:09:41.669Z",
-        "parent": null
-      },
-      {
-        "id": "MAS-50",
-        "title": "Remove avatar from OpenGraph tags",
-        "priority": 2,
-        "completedAt": "2023-02-03T09:16:52.270Z",
-        "parent": null
-      },
-      {
-        "id": "MAS-35",
-        "title": "Rename \"Everything\" in OAuth permissions",
-        "priority": 2,
-        "completedAt": "2023-01-23T14:52:16.834Z",
-        "parent": null
-      },
-      {
-        "id": "MAS-27",
-        "title": "Add ability to edit media metadata when editing posts",
-        "priority": 3,
-        "completedAt": "2023-01-18T16:28:42.566Z",
-        "parent": null
-      },
-      {
-        "id": "MAS-29",
-        "title": "Add confirmation screen to report handling flow",
-        "priority": 3,
-        "completedAt": "2023-01-18T16:28:33.237Z",
-        "parent": null
-      },
-      {
-        "id": "MAS-34",
-        "title": "Add option for Explore not to be the landing page",
-        "priority": 3,
-        "completedAt": "2023-01-18T16:28:30.772Z",
-        "parent": null
-      },
-      {
-        "id": "AND-20",
-        "title": "Explore tab does not paginate",
-        "priority": 3,
-        "completedAt": "2023-01-15T15:13:17.540Z",
-        "parent": null
-      },
-      {
         "id": "IOS-31",
         "title": "Implement iOS Action Extension",
         "priority": 3,
         "completedAt": "2023-01-12T09:24:52.799Z",
-        "parent": null
-      },
-      {
-        "id": "IOS-44",
-        "title": "Sharing link to reblog uses wrong permalink",
-        "priority": 2,
-        "completedAt": "2023-01-10T15:36:24.134Z",
         "parent": null
       },
       {
@@ -940,69 +852,6 @@
         "title": "Fix display of audio attachments",
         "priority": 4,
         "completedAt": "2022-12-26T18:51:37.648Z",
-        "parent": null
-      },
-      {
-        "id": "IOS-32",
-        "title": "Fix paragraph margins",
-        "priority": 2,
-        "completedAt": "2022-12-16T15:18:37.668Z",
-        "parent": null
-      },
-      {
-        "id": "MAS-26",
-        "title": "Add follow request banner on account header",
-        "priority": 4,
-        "completedAt": "2022-12-15T17:50:20.315Z",
-        "parent": null
-      },
-      {
-        "id": "AND-19",
-        "title": "Compose screen loses state when switching between apps",
-        "priority": 4,
-        "completedAt": "2022-12-15T17:18:17.677Z",
-        "parent": null
-      },
-      {
-        "id": "MAS-20",
-        "title": "Add `--email` option to `tootctl accounts delete`",
-        "priority": 4,
-        "completedAt": "2022-12-15T13:52:58.146Z",
-        "parent": null
-      },
-      {
-        "id": "IOS-19",
-        "title": "Link preview cards",
-        "priority": 4,
-        "completedAt": "2022-12-15T13:31:15.886Z",
-        "parent": null
-      },
-      {
-        "id": "MAS-18",
-        "title": "Make it possible to refresh a remotely suspended account in admin UI",
-        "priority": 3,
-        "completedAt": "2022-12-15T13:15:55.889Z",
-        "parent": null
-      },
-      {
-        "id": "IOS-3",
-        "title": "Translating posts",
-        "priority": 2,
-        "completedAt": "2022-12-15T09:49:54.967Z",
-        "parent": null
-      },
-      {
-        "id": "AND-1",
-        "title": "Update login flow",
-        "priority": 1,
-        "completedAt": "2022-12-04T11:37:40.377Z",
-        "parent": null
-      },
-      {
-        "id": "IOS-13",
-        "title": "Follow hashtags",
-        "priority": 2,
-        "completedAt": "2022-12-02T02:16:10.361Z",
         "parent": null
       }
     ]
