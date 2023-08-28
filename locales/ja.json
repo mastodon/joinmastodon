@@ -26,7 +26,7 @@
   "covenant.learn_more": "ここに記載されているすべてのサーバーは、 <link>Mastodon Server Covenant</link> に適合する必要があります。",
   "credits.view_sponsors": "スポンサーを表示",
   "footer.follow_us_on_mastodon": "Mastodonでフォロー",
-  "footer.quip": "無料でオープンソースの分散型ソーシャルメディアプラットフォーム。",
+  "footer.quip": "自由でオープンソースの分散型ソーシャルメディアプラットフォーム。",
   "home.additional_support_from": "追加サポーター",
   "home.create_account": "アカウントを作成",
   "home.features.audience.body": "Mastodonでは、誰の仲介もなく、あなた自身でオーディエンスの管理を行うことができます。あなたのインフラストラクチャー上にデプロイされたMastodon上でも、ほかのどんなMastodonサーバーのアカウントをフォローすることも、フォローされることもでき、それらはもちろんあなた自身で制御できます。",
