@@ -9,7 +9,6 @@ import tooter from "../public/apps/tooter.png"
 import pinafore from "../public/apps/pinafore.png"
 import whalebird from "../public/apps/whalebird.png"
 import thedesk from "../public/apps/thedesk.png"
-import cuckooPlus from "../public/apps/cuckoo-plus.png"
 import hyperspace from "../public/apps/hyperspace.png"
 import imast from "../public/apps/imast_icon.png"
 import sengi from "../public/apps/sengi.png"
@@ -43,6 +42,7 @@ import macstodon from "../public/apps/macstodon.png"
 import mastappleiic from "../public/apps/mastappleiic.png"
 import mastodonforworkgroups from "../public/apps/mastodonforworkgroups.png"
 import mastonine from "../public/apps/mastonine.png"
+import mastodeck from "../public/apps/mastodeck.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -221,7 +221,6 @@ export const apps: appsList = {
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
-    { name: "Cuckoo+", icon: cuckooPlus, url: "https://www.cuckoo.social" },
     { name: "Elk", icon: elk, url: "https://elk.zone" },
     { name: "Buffer", icon: buffer, url: "https://buffer.com" },
     { name: "Statuzer", icon: statuzer, url: "https://statuzer.com" },
@@ -230,6 +229,7 @@ export const apps: appsList = {
     { name: "Trunks", icon: trunks, url: "https://trunks.social" },
     { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
     { name: "Tooty", icon: tooty, url: "https://n1k0.github.io/tooty/v2/" },
+    { name: "Mastodeck", icon: mastodeck, url: "https://mastodeck.com/" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },

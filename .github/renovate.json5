@@ -1,0 +1,47 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "config:recommended",
+    ":labels(dependencies)",
+    ":prConcurrentLimitNone", // Remove limit for open PRs at any time.
+  ],
+  minimumReleaseAge: "3", // Wait 3 days after the package has been published before upgrading it
+  packageRules: [
+    {
+      // Update Github Actions and Docker images weekly
+      matchManagers: ["github-actions", "dockerfile", "docker-compose"],
+      extends: ["schedule:weekly"],
+    },
+    {
+      // Update devDependencies every week, with one grouped PR
+      matchDepTypes: "devDependencies",
+      matchUpdateTypes: ["patch", "minor"],
+      groupName: "devDependencies (non-major)",
+      extends: ["schedule:weekly"],
+    },
+    {
+      // Group all eslint-related packages with `eslint` in the same PR
+      matchManagers: ["npm"],
+      matchPackageNames: ["eslint"],
+      matchPackagePrefixes: ["eslint-", "@typescript-eslint/"],
+      matchUpdateTypes: ["patch", "minor"],
+      groupName: "eslint (non-major)",
+    },
+    {
+      // Update @types/* packages every week, with one grouped PR
+      matchPackagePrefixes: "@types/",
+      matchUpdateTypes: ["patch", "minor"],
+      groupName: "DefinitelyTyped types (non-major)",
+      extends: ["schedule:weekly"],
+      addLabels: ["typescript"],
+    },
+    {
+      // We want those packages to always have their own PR
+      matchManagers: ["npm"],
+      matchPackageNames: [
+        "typescript", // Typescript has code-impacting changes in minor versions
+      ],
+      groupName: null, // We dont want them to belong to any group
+    },
+  ],
+}
