@@ -30,6 +30,7 @@ import phanpy from "../public/apps/phanpy.png"
 import tootrain from "../public/apps/tootrain.png"
 import trunks from "../public/apps/trunks.png"
 import tootdesk from "../public/apps/tootdesk.png"
+import tooty from "../public/apps/tooty.png"
 import megalodon from "../public/apps/megalodon.png"
 import litterbox from "../public/apps/litterbox.png"
 import zonepane from "../public/apps/zonepane.png"
@@ -227,6 +228,7 @@ export const apps: appsList = {
     { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
     { name: "Trunks", icon: trunks, url: "https://trunks.social" },
     { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
+    { name: "Tooty", icon: tooty, url: "https://n1k0.github.io/tooty/v2/" },
     { name: "Mastodeck", icon: mastodeck, url: "https://mastodeck.com/" },
   ],
   desktop: [
