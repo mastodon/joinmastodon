@@ -229,7 +229,7 @@ export const apps: appsList = {
     { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
     { name: "Trunks", icon: trunks, url: "https://trunks.social" },
     { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
-    { name: "Tooty", icon: tooty, url: "https://litterbox.koyu.space" },
+    { name: "Tooty", icon: tooty, url: "https://n1k0.github.io/tooty/v2/" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
