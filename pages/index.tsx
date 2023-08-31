@@ -57,8 +57,8 @@ function Home() {
         <div className="flex justify-center gap-12">
           <LinkButton size="large" href="/apps">
             <FormattedMessage
-              id="home.get_the_app"
-              defaultMessage="Get the app"
+              id="home.get_an_app"
+              defaultMessage="Get an app"
             />
           </LinkButton>
 
