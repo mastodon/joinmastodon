@@ -54,21 +54,36 @@ function Home() {
           />
         </p>
 
-        <div className="flex justify-center gap-12">
-          <LinkButton size="large" href="/apps">
-            <FormattedMessage
-              id="home.get_the_app"
-              defaultMessage="Get the app"
-            />
-          </LinkButton>
+        <p className="sh1 mb-11 max-w-[50ch]">
+          <FormattedMessage
+            id="home.create_an_account_hint"
+            defaultMessage="Looking to create an account?"
+          />
+          <div className="flex justify-center gap-12">
+            <LinkButton size="large" href="/servers" light borderless>
+              <FormattedMessage
+                id="home.browse_servers"
+                defaultMessage="Browse Servers"
+              />
+            </LinkButton>
+          </div>
+        </p>
 
-          <LinkButton size="large" href="/servers" light borderless>
-            <FormattedMessage
-              id="home.create_account"
-              defaultMessage="Create account"
-            />
-          </LinkButton>
-        </div>
+        <p className="sh1 mb-11 max-w-[50ch]">
+          <FormattedMessage
+            id="home.have_an_account_hint"
+            defaultMessage="Already have an account?"
+          />
+
+          <div className="flex justify-center gap-12">
+            <LinkButton size="large" href="/apps">
+              <FormattedMessage
+                id="home.get_the_app"
+                defaultMessage="Get the app"
+              />
+            </LinkButton>
+          </div>
+        </p>
       </Hero>
       <Features />
       <WhyMastodon />
