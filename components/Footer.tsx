@@ -67,7 +67,7 @@ export const Footer = () => (
                 >
                   <FormattedMessage
                     id="nav.sponsors.title"
-                    defaultMessage="Sponsors"
+                    defaultMessage="Donate"
                   />
                 </Link>,
                 <Link

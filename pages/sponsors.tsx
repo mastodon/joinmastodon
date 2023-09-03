@@ -18,12 +18,12 @@ function Sponsors() {
     <Layout>
       <Hero>
         <h1 className="h1 mb-5 lg:col-start-2">
-          <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
+          <FormattedMessage id="sponsors.hero.title" defaultMessage="Donate" />
         </h1>
         <p className="sh1 lg:col-start-2 lg:col-end-6">
           <FormattedMessage
             id="sponsors.hero.body"
-            defaultMessage="You can back us on a monthly basis through Patreon or pledge to become a sponsor through our own platform. We are grateful for the companies and people who make Mastodon possible."
+            defaultMessage="We develop and maintain the free and open-source software that powers the social web. There is no capital behind this—we rely entirely on your support through platforms like Patreon."
           />
         </p>
       </Hero>
@@ -36,13 +36,13 @@ function Sponsors() {
             title: (
               <FormattedMessage
                 id="sponsors.sponsorship.title"
-                defaultMessage="Sponsorship"
+                defaultMessage="Commercial sponsorship"
               />
             ),
             copy: (
               <FormattedMessage
                 id="sponsors.sponsorship.body"
-                defaultMessage="If you would like to see your company's logo with a go follow link on this site, you can become a sponsor directly through our own platform!"
+                defaultMessage="If you would like to see your company's logo with a do-follow link on this site, you can become a sponsor directly through our own platform!"
               />
             ),
             cta: (
@@ -149,14 +149,14 @@ function Sponsors() {
         <title>
           {`${intl.formatMessage({
             id: "sponsors.page_title",
-            defaultMessage: "Sponsors of Mastodon",
+            defaultMessage: "Donate to Mastodon",
           })} - Mastodon`}
         </title>
         <meta
           property="og:title"
           content={intl.formatMessage({
             id: "sponsors.page_title",
-            defaultMessage: "Sponsors of Mastodon",
+            defaultMessage: "Donate to Mastodon",
           })}
         />
         <meta
