@@ -55,17 +55,18 @@ function Home() {
         </p>
 
         <div className="flex justify-center gap-12">
-          <LinkButton size="large" href="/apps">
+          <LinkButton size="large" href="https://mastodon.social/auth/sign_up">
             <FormattedMessage
-              id="home.get_the_app"
-              defaultMessage="Get the app"
+              id="home.join_now"
+              defaultMessage="Join {domain}"
+              values={{ domain: 'mastodon.social' }}
             />
           </LinkButton>
 
           <LinkButton size="large" href="/servers" light borderless>
             <FormattedMessage
-              id="home.create_account"
-              defaultMessage="Create account"
+              id="home.pick_another_server"
+              defaultMessage="Pick another server"
             />
           </LinkButton>
         </div>
