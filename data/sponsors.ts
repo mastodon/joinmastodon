@@ -280,6 +280,11 @@ const sponsors = {
       logo: require("../public/sponsors/happeo.png"),
       name: "Happeo intranet",
     }, // Custom
+    {
+      url: "https://nongamstopcasinos.net/uk/",
+      logo: require("../public/sponsors/nongamstop.png"),
+      name: "https://nongamstopcasinos.net/uk/",
+    }, // Custom
   ],
   silver: [
     {

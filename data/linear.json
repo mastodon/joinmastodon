@@ -3,6 +3,18 @@
     "type": "started",
     "items": [
       {
+        "id": "AND-5",
+        "title": "Translating posts",
+        "priority": 1,
+        "parent": null
+      },
+      {
+        "id": "AND-4",
+        "title": "Follow hashtags",
+        "priority": 1,
+        "parent": null
+      },
+      {
         "id": "MAS-52",
         "title": "Batch fetch APIs",
         "priority": 2,
@@ -88,12 +100,6 @@
       {
         "id": "AND-9",
         "title": "Lists",
-        "priority": 2,
-        "parent": null
-      },
-      {
-        "id": "AND-5",
-        "title": "Translating posts",
         "priority": 2,
         "parent": null
       },
@@ -208,12 +214,6 @@
       {
         "id": "AND-10",
         "title": "Hint about potentially missing remote content",
-        "priority": 3,
-        "parent": null
-      },
-      {
-        "id": "AND-4",
-        "title": "Follow hashtags",
         "priority": 3,
         "parent": null
       },
@@ -477,12 +477,6 @@
       {
         "id": "MAS-24",
         "title": "Paid sign-ups, pay per use storage",
-        "priority": 4,
-        "parent": null
-      },
-      {
-        "id": "MAS-17",
-        "title": "Respect `twitter:card` to display link previews differently",
         "priority": 4,
         "parent": null
       },
