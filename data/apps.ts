@@ -43,6 +43,7 @@ import mastappleiic from "../public/apps/mastappleiic.png"
 import mastodonforworkgroups from "../public/apps/mastodonforworkgroups.png"
 import mastonine from "../public/apps/mastonine.png"
 import mastodeck from "../public/apps/mastodeck.png"
+import stomp from "../public/apps/stomp.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -217,6 +218,13 @@ export const apps: appsList = {
       icon: tootdesk,
       url: "https://apps.apple.com/app/tootdesk/id1591748028",
       paid: false,
+    },
+    {
+      released_on: "Aug 4, 2023",
+      name: "Stomp (watchOS)",
+      icon: stomp,
+      url: "https://apps.apple.com/app/stomp-for-mastodon/id1670866247",
+      paid: true,
     },
   ],
   web: [
