@@ -154,7 +154,7 @@
   "verification.examples.lead": "Alle können sich auf Mastodon verifizieren. Hier ein paar prominente Konten, die das bereits getan haben …",
   "verification.examples.title": "In freier Wildbahn",
   "verification.feature_highlight": "Besonderes Highlight",
-  "verification.features.how_to.body": "Verlinke dein Mastodon-Profil auf deiner Website oder Webseite. Der wichtige Teil ist, dass der Link ein <code>rel=\"me\"</code>-Attribut hat. Bearbeite anschließend dein Mastodon-Profil und füge den Link zu deiner Website in einen der vier Zusatzfelder hinzu. Speichere anschließend die Änderung und du hast es geschafft!",
+  "verification.features.how_to.body": "Verlinke dein Mastodon-Profil auf deiner Website oder Webseite. Der wichtige Teil ist, dass der Link ein <code>rel=\"me\"</code>-Attribut hat. Bearbeite anschließend dein Mastodon-Profil und füge den Link zu deiner Website oder Webseite in einen der vier Zusatzfelder hinzu. Speichere anschließend die Änderung und du hast es geschafft!",
   "verification.features.how_to.title": "So funktioniert's",
   "verification.features.no_badge.body": "Die Identität ist keine Frage, die mit ja oder nein beantwortet werden kann. Es gibt nur wenige wirklich einzigartige Namen auf dieser Welt, warum sollten also nur Prominente ein „Ja“ erhalten? Bei Mastodon sind wir nicht auf rechtliche Namen und blaue Haken angewiesen. Wir verlassen uns stattdessen auf die Tatsache, dass Menschen über ihre offiziellen Websites identifiziert werden können.",
   "verification.features.no_badge.title": "Es gibt keinen blauen Haken",
