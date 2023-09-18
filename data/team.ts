@@ -11,11 +11,18 @@ export type TeamMember = {
 
 const team: TeamMember[] = [
   {
-    image: require("../public/team/eugen-rochko.jpg"),
     name: "Eugen Rochko",
     position: "Founder, CEO",
     socials: {
       mastodon: "https://mastodon.social/@Gargron",
+    },
+  },
+
+  {
+    name: "Renaud Chaput",
+    position: "CTO",
+    socials: {
+      mastodon: "https://oisaur.com/@renchap",
     },
   },
 
