@@ -39,7 +39,7 @@ import amidon from "../public/apps/amidon.png"
 import brexxtodon from "../public/apps/brexxtodon.png"
 import dostodon from "../public/apps/dostodon.png"
 import macstodon from "../public/apps/macstodon.png"
-import mastappleiic from "../public/apps/mastappleiic.png"
+import mastodonforappleii from "../public/apps/mastodonforappleii.png"
 import mastodonforworkgroups from "../public/apps/mastodonforworkgroups.png"
 import mastonine from "../public/apps/mastonine.png"
 import mastodeck from "../public/apps/mastodeck.png"
@@ -360,9 +360,9 @@ export const apps: appsList = {
     },
     {
       released_on: "Mar 6, 2023",
-      name: "MastApple//c",
-      icon: mastappleiic,
-      url: "https://www.colino.net/wordpress/archives/2023/03/06/binary-release-of-mastodon-for-the-apple-c/",
+      name: "Mastodon for Apple II",
+      icon: mastodonforappleii,
+      url: "https://www.colino.net/wordpress/en/binary-release-of-mastodon-for-the-apple-c/",
     },
     {
       released_on: "Nov 20, 2022",
