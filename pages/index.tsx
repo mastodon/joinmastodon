@@ -480,17 +480,24 @@ const Sponsors = ({ sponsors }) => {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-            <LinkButton href="https://sponsor.joinmastodon.org/" size="large">
+            <LinkButton href="https://patreon.com/mastodon" size="large">
               <FormattedMessage
-                id="sponsors.become_a_sponsor"
-                defaultMessage="Become a sponsor"
+                id="sponsors.donate_on_patreon"
+                defaultMessage="Donate on Patreon"
+              />
+            </LinkButton>
+
+            <LinkButton href="https://donate.stripe.com/00g5l42h8ezY3YcaEE" size="large">
+              <FormattedMessage
+                id="sponsors.donate_directly"
+                defaultMessage="Donate directly"
               />
             </LinkButton>
 
             <LinkButton href="/sponsors" light size="large">
               <FormattedMessage
-                id="credits.view_sponsors"
-                defaultMessage="View sponsors"
+                id="sponsors.learn_more"
+                defaultMessage="Learn more"
               />
             </LinkButton>
           </div>
