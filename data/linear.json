@@ -62,12 +62,6 @@
         "parent": null
       },
       {
-        "id": "IOS-141",
-        "title": "Improve search flow",
-        "priority": 2,
-        "parent": null
-      },
-      {
         "id": "MAS-113",
         "title": "Rework link previews fetching and distribution",
         "priority": 2,
@@ -497,6 +491,13 @@
   {
     "type": "completed",
     "items": [
+      {
+        "id": "IOS-141",
+        "title": "Improve search flow",
+        "priority": 2,
+        "completedAt": "2023-09-20T19:34:22.719Z",
+        "parent": null
+      },
       {
         "id": "MAS-88",
         "title": "Improved account and content search",
