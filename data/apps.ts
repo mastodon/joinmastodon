@@ -12,6 +12,7 @@ import thedesk from "../public/apps/thedesk.png"
 import hyperspace from "../public/apps/hyperspace.png"
 import imast from "../public/apps/imast_icon.png"
 import sengi from "../public/apps/sengi.png"
+import sora from "../public/apps/sora.png"
 import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
@@ -233,7 +234,13 @@ export const apps: appsList = {
       icon: feather,
       url: "https://apps.apple.com/app/feather-for-mastodon/id6446263061",
       paid: false,
-    }
+    },
+    {
+      released_on: "Aug 10, 2023",
+      name: "SoraSNS",
+      icon: sora,
+      url: "https://apps.apple.com/app/sora-for-mastodon-bluesky/id6450969760?platform=iphone",
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
