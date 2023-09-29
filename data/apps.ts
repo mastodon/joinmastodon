@@ -240,6 +240,7 @@ export const apps: appsList = {
       name: "SoraSNS",
       icon: sora,
       url: "https://apps.apple.com/app/sora-for-mastodon-bluesky/id6450969760?platform=iphone",
+      paid: false,
     },
   ],
   web: [
