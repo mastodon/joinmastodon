@@ -138,6 +138,16 @@ const About = () => (
               <ul className="list-disc pl-3">
                 <li>
                   <a
+                    href="/reports/Mastodon Annual Report 2022.pdf"
+                    className="b2 block hover:text-blurple-500"
+                  >
+                    <span className="h5 block">2022</span>
+                    <span className="text-gray-2">PDF, 6 MB</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
                     href="/reports/Mastodon Annual Report 2021.pdf"
                     className="b2 block hover:text-blurple-500"
                   >

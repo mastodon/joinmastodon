@@ -18,6 +18,12 @@ import bloombergLogo from "../public/press/bloomberg.svg"
 
 const articles = [
   {
+    logo: techcrunchLogo,
+    url: "https://techcrunch.com/2023/09/21/mastodons-latest-release-makes-the-open-source-twitter-alternative-easier-to-use/",
+    title: "Mastodon’s latest release makes the open source Twitter alternative easier to use",
+    date: "2023-09-21",
+  },
+  {
     logo: bloombergLogo,
     url: "https://www.bloomberg.com/news/newsletters/2023-01-12/elon-musk-s-twitter-drives-even-its-early-employees-to-mastodon",
     title: "Elon Musk Drives Even Some Twitter Founders to Mastodon",
