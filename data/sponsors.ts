@@ -285,6 +285,11 @@ const sponsors = {
       logo: require("../public/sponsors/nongamstop.png"),
       name: "https://nongamstopcasinos.net/uk/",
     }, // Custom
+    {
+      url: "https://www.grabmyessay.com/pay-for-essay",
+      logo: require("../public/sponsors/gme.jpg"),
+      name: "Grabmyessay",
+    }, // Custom
   ],
   silver: [
     {
