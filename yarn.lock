@@ -1329,10 +1329,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@linear/sdk@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@linear/sdk/-/sdk-7.0.1.tgz#4f24b391457b0f8175376a57224c32b16b94d226"
-  integrity sha512-+t5yW3gHZHOvMCpK4wn7ucC3BATkody3MSL0QxrtL6JaqNPMfdDHYEI8J34A38IBpCudvNCugi5jqOewvwt+jg==
+"@linear/sdk@^9.0.0":
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/@linear/sdk/-/sdk-9.0.1.tgz#04a4ab134974af53e194a1301685d7c7ba8a2732"
+  integrity sha512-ABgIYJV19rmYEdcBnfNRCV2zJP2j3k9ruKvz8G4RnmSL3K7eNowCDjEPhmHrEoDivrYpQMG+B2RtD4PDujzFmQ==
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.0"
     graphql "^15.4.0"
