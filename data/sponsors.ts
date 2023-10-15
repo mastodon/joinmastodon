@@ -14,6 +14,11 @@ const sponsors = {
       name: "Datadog",
     }, // Custom/other
     {
+      url: "https://postmarkapp.com",
+      logo: require("../public/sponsors/postmark.svg"),
+      name: "Postmark",
+    }, // Custom/other
+    {
       url: "https://mobi.com/",
       logo: require("../public/sponsors/mobi-across-big.png"),
       name: "Mobi",
