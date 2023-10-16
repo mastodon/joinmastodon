@@ -29,9 +29,9 @@ const sponsors = {
       name: "Medium",
     }, // Custom
     {
-      url: "https://oak.is/",
-      logo: require("../public/sponsors/oak.svg"),
-      name: "Oak Studios",
+      url: "https://lickability.com/",
+      logo: require("../public/sponsors/lickability-logo.svg"),
+      name: "Lickability",
     }, // Custom/other
     {
       url: "https://www.ramotion.com/agency/ui-ux-design",
@@ -286,9 +286,9 @@ const sponsors = {
       name: "Happeo intranet",
     }, // Custom
     {
-      url: "https://nongamstopcasinos.net/uk/",
+      url: "https://nongamstopcasinos.net/gb/",
       logo: require("../public/sponsors/nongamstop.png"),
-      name: "https://nongamstopcasinos.net/uk/",
+      name: "https://nongamstopcasinos.net/gb/",
     }, // Custom
     {
       url: "https://www.grabmyessay.com/pay-for-essay",
