@@ -14,7 +14,7 @@ const sponsors = {
       name: "Datadog",
     }, // Custom/other
     {
-      url: "https://postmarkapp.com",
+      url: "https://www.postmarkapp.com?utm_source=mastodon&utm_medium=referral&utm_campaign=2023_mastodon-sponsorship",
       logo: require("../public/sponsors/postmark.svg"),
       name: "Postmark",
     }, // Custom/other
