@@ -175,7 +175,7 @@ const Verification = () => {
                 <p className="sh1 mb-8 text-gray-1">
                   <FormattedMessage
                     id="verification.features.how_to.body"
-                    defaultMessage={`Put a link to your Mastodon profile on your website or webpage. The important part is that the link has to have a <code>rel="me"</code> attribute on it. Then edit your Mastodon profile and put the address of your website or web page in one of your four profile fields. Save your profile, that's it!`}
+                    defaultMessage={`Put a link to your Mastodon profile on your website or webpage. The important part is that the link has to have <a href="https://docs.joinmastodon.org/user/profile/#verification">a <code>rel="me"</code> attribute</a> on it. Then edit your Mastodon profile and put the address of your website or web page in one of your four profile fields. Save your profile, that's it!`}
                     values={{
                       code: (text) => (
                         <code className="font-mono font-medium text-blurple-600">
