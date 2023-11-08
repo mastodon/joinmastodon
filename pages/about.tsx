@@ -112,6 +112,7 @@ const About = () => (
                       {member.socials && (
                         <a
                           href={member.socials.mastodon}
+                          rel="me"
                           className="b2 ml-2 block flex-shrink-0 text-blurple-600 hover:text-blurple-500"
                         >
                           <LogoWhite
