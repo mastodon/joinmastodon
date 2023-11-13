@@ -48,6 +48,7 @@ import mastodonforworkgroups from "../public/apps/mastodonforworkgroups.png"
 import mastonine from "../public/apps/mastonine.png"
 import mastodeck from "../public/apps/mastodeck.png"
 import stomp from "../public/apps/stomp.png"
+import pipilo from "../public/apps/pipilo.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -256,6 +257,13 @@ export const apps: appsList = {
       icon: sora,
       url: "https://apps.apple.com/app/sora-for-mastodon-bluesky/id6450969760?platform=iphone",
       paid: false,
+    },
+    {
+      released_on: "Nov 7, 2023",
+      name: "Pipilo",
+      icon: pipilo,
+      url: "https://apps.apple.com/app/pipilo/id1584544719",
+      paid: true,
     },
   ],
   web: [
