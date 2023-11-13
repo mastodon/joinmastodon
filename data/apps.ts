@@ -23,6 +23,7 @@ import statuzer from "../public/apps/statuzer.png"
 import mammoth from "../public/apps/mammoth.png"
 import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
+import dawn from "../public/apps/dawn.png"
 import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
 import feather from "../public/apps/feather.png"
@@ -199,6 +200,12 @@ export const apps: appsList = {
       icon: woolly,
       url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
       paid: true,
+    },
+    {
+      released_on: "Mar 27, 2023",
+      name: "DAWN for Mastodon",
+      icon: dawn,
+      url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
     },
     {
       released_on: "May 1, 2023",
