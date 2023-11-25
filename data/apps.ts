@@ -49,6 +49,7 @@ import mastonine from "../public/apps/mastonine.png"
 import mastodeck from "../public/apps/mastodeck.png"
 import stomp from "../public/apps/stomp.png"
 import pipilo from "../public/apps/pipilo.png"
+import rodent from "../public/apps/rodent.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -73,6 +74,13 @@ export type appsList = {
 }
 export const apps: appsList = {
   android: [
+    {
+      released_on: "Nov 23, 2023",
+      name: "Rodent",
+      icon: rodent,
+      url: "https://play.google.com/store/apps/details?id=social.rodent",
+      paid: false,
+    },
     {
       released_on: "May 21, 2023",
       name: "Focus",
