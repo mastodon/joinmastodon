@@ -207,6 +207,7 @@ export const apps: appsList = {
       name: "DAWN for Mastodon",
       icon: dawn,
       url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
+      paid: true,
     },
     {
       released_on: "May 1, 2023",
