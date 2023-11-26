@@ -50,6 +50,7 @@ import mastodeck from "../public/apps/mastodeck.png"
 import stomp from "../public/apps/stomp.png"
 import pipilo from "../public/apps/pipilo.png"
 import rodent from "../public/apps/rodent.png"
+import heffalump from "../public/apps/heffalump.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -417,6 +418,12 @@ export const apps: appsList = {
       name: "Mastodon 3.11 for Workgroups",
       icon: mastodonforworkgroups,
       url: "https://github.com/meyskens/mastodon-for-workgroups",
+    },
+    {
+      released_on: "Sep 12, 2023",
+      name: "Heffalump",
+      icon: heffalump,
+      url: "https://github.com/knickish/heffalump",
     },
   ],
 }
