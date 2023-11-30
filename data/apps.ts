@@ -23,6 +23,7 @@ import statuzer from "../public/apps/statuzer.png"
 import mammoth from "../public/apps/mammoth.png"
 import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
+import dawn from "../public/apps/dawn.png"
 import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
 import feather from "../public/apps/feather.png"
@@ -48,6 +49,9 @@ import mastonine from "../public/apps/mastonine.png"
 import mastodeck from "../public/apps/mastodeck.png"
 import stomp from "../public/apps/stomp.png"
 import pachli from "../public/apps/pachli.png"
+import pipilo from "../public/apps/pipilo.png"
+import rodent from "../public/apps/rodent.png"
+import heffalump from "../public/apps/heffalump.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -72,6 +76,13 @@ export type appsList = {
 }
 export const apps: appsList = {
   android: [
+    {
+      released_on: "Nov 23, 2023",
+      name: "Rodent",
+      icon: rodent,
+      url: "https://play.google.com/store/apps/details?id=social.rodent",
+      paid: false,
+    },
     {
       released_on: "May 21, 2023",
       name: "Focus",
@@ -209,6 +220,13 @@ export const apps: appsList = {
       paid: true,
     },
     {
+      released_on: "Mar 27, 2023",
+      name: "DAWN for Mastodon",
+      icon: dawn,
+      url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
+      paid: true,
+    },
+    {
       released_on: "May 1, 2023",
       name: "Mona",
       icon: mona,
@@ -257,6 +275,13 @@ export const apps: appsList = {
       icon: sora,
       url: "https://apps.apple.com/app/sora-for-mastodon-bluesky/id6450969760?platform=iphone",
       paid: false,
+    },
+    {
+      released_on: "Nov 7, 2023",
+      name: "Pipilo",
+      icon: pipilo,
+      url: "https://apps.apple.com/app/pipilo/id1584544719",
+      paid: true,
     },
   ],
   web: [
@@ -401,6 +426,12 @@ export const apps: appsList = {
       name: "Mastodon 3.11 for Workgroups",
       icon: mastodonforworkgroups,
       url: "https://github.com/meyskens/mastodon-for-workgroups",
+    },
+    {
+      released_on: "Sep 12, 2023",
+      name: "Heffalump",
+      icon: heffalump,
+      url: "https://github.com/knickish/heffalump",
     },
   ],
 }

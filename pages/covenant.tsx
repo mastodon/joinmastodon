@@ -74,7 +74,7 @@ const Covenant = () => (
             },
             {
               heading: "Language",
-              text: "If you are running a language-specific server, make sure to set DEFAULT_LANGUAGE in your configuration to prevent Mastodon from showing the interface in the language of the visitor.",
+              text: "If you are running a language-specific server, make sure to set DEFAULT_LOCALE in your configuration to prevent Mastodon from showing the interface in the language of the visitor.",
             },
             {
               heading: "Rules",
