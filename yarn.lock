@@ -1896,14 +1896,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@linear/sdk@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "@linear/sdk@npm:7.0.1"
+"@linear/sdk@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "@linear/sdk@npm:12.0.0"
   dependencies:
     "@graphql-typed-document-node/core": "npm:^3.1.0"
     graphql: "npm:^15.4.0"
     isomorphic-unfetch: "npm:^3.1.0"
-  checksum: 3242a251b729c5a6b487042acdaf367a23f0aa2a9afcf2dc3f90d90c406c36e7cd04fdbd8f06c46477c49d536eaebe10edd829fba9e8801197eff46e9fc2b3da
+  checksum: 4f2ec09ffc51dcfc1b03c7ce596f99a231504cc192c239a7ee0cb5d61c988479d591136a7370a4811f75571ff77b44522c0d631a46cfc1d28a31de698115a529
   languageName: node
   linkType: hard
 
@@ -4901,7 +4901,7 @@ __metadata:
   dependencies:
     "@formatjs/cli": "npm:^6.2.4"
     "@headlessui/react": "npm:^1.7.17"
-    "@linear/sdk": "npm:^7.0.1"
+    "@linear/sdk": "npm:^12.0.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-query": "npm:^5.12.2"
     "@tanstack/react-query-devtools": "npm:^5.12.2"
