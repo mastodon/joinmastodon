@@ -4993,7 +4993,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-intl: "npm:^6.4.4"
     sass: "npm:^1.64.2"
-    sharp: "npm:^0.32.4"
+    sharp: "npm:^0.32.6"
     tailwindcss: "npm:^3.3.3"
     tailwindcss-logical: "npm:^3.0.1"
     typescript: "npm:^5.1.6"
@@ -6722,9 +6722,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.32.4":
-  version: 0.32.4
-  resolution: "sharp@npm:0.32.4"
+"sharp@npm:^0.32.6":
+  version: 0.32.6
+  resolution: "sharp@npm:0.32.6"
   dependencies:
     color: "npm:^4.2.3"
     detect-libc: "npm:^2.0.2"
@@ -6735,7 +6735,7 @@ __metadata:
     simple-get: "npm:^4.0.1"
     tar-fs: "npm:^3.0.4"
     tunnel-agent: "npm:^0.6.0"
-  checksum: 8a9f006d53835731975cea5a20d82ad107f4aefa4b821d546cdd08ddf6afaf8b57507c9433a5d84216f6503f67a4c1f44d7591bc8724388d82a122053b0e9eca
+  checksum: f6a756fec5051ef2f9341e0543cde1da4e822982dd5398010baad92e2262bd177e08b753eb19b2fbee30f2fcb0e8756f24088fafc48293a364e9a8f8dc65a300
   languageName: node
   linkType: hard
 
