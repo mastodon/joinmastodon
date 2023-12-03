@@ -1662,16 +1662,16 @@ __metadata:
   linkType: hard
 
 "@formatjs/cli@npm:^6.1.3":
-  version: 6.1.3
-  resolution: "@formatjs/cli@npm:6.1.3"
+  version: 6.2.4
+  resolution: "@formatjs/cli@npm:6.2.4"
   peerDependencies:
-    "@vue/compiler-sfc": ^3.2.34
+    vue: ^3.3.4
   peerDependenciesMeta:
-    "@vue/compiler-sfc":
+    vue:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: d7f069b4813c7c1a4fd7e16906da6bc024553c5df3d3ebb0b3da12ec23bb763d184c0424c562bc7ef89d62a963dadd114dd5acb5acec8f0c9160a36bb79f05c2
+  checksum: 3f6bbbc633a3a6ebd4e6fcfc3a9f889bc044043452cbc8f81abcaee97aaef991a778ae785d3b9d21ecc5f55b147eb0009b44520bb895fe244b4c14a36d9b05bd
   languageName: node
   linkType: hard
 
@@ -2110,12 +2110,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/babel-plugin-transform-react-native-svg@npm:8.0.0":
-  version: 8.0.0
-  resolution: "@svgr/babel-plugin-transform-react-native-svg@npm:8.0.0"
+"@svgr/babel-plugin-transform-react-native-svg@npm:8.1.0":
+  version: 8.1.0
+  resolution: "@svgr/babel-plugin-transform-react-native-svg@npm:8.1.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 6bac146b0b2a61b934302c5e32784ef66d1990bcf0dd6409c102f62efbc640c513b0a8f30d7046d53517b10a0dc75b532783c2e04bb151caa0c649d6177eb206
+  checksum: 655ed6bc7a208ceaa4ecff0a54ccc36008c3cb31efa90d11e171cab325ebbb21aa78f09c7b65f9b3ddeda3a85f348c0c862902c48be13c14b4de165c847974e3
   languageName: node
   linkType: hard
 
@@ -2128,9 +2128,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/babel-preset@npm:8.0.0":
-  version: 8.0.0
-  resolution: "@svgr/babel-preset@npm:8.0.0"
+"@svgr/babel-preset@npm:8.1.0":
+  version: 8.1.0
+  resolution: "@svgr/babel-preset@npm:8.1.0"
   dependencies:
     "@svgr/babel-plugin-add-jsx-attribute": "npm:8.0.0"
     "@svgr/babel-plugin-remove-jsx-attribute": "npm:8.0.0"
@@ -2138,24 +2138,24 @@ __metadata:
     "@svgr/babel-plugin-replace-jsx-attribute-value": "npm:8.0.0"
     "@svgr/babel-plugin-svg-dynamic-title": "npm:8.0.0"
     "@svgr/babel-plugin-svg-em-dimensions": "npm:8.0.0"
-    "@svgr/babel-plugin-transform-react-native-svg": "npm:8.0.0"
+    "@svgr/babel-plugin-transform-react-native-svg": "npm:8.1.0"
     "@svgr/babel-plugin-transform-svg-component": "npm:8.0.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: b8793c16862fef9244b4b9e96aee61af74d2f07b5f3c221008b45b1edb8c3454b3723ed04ab665b51e582bc3aad4c0e88435a526cddaa2fa3ca729695f18bb95
+  checksum: 49367d3ad0831f79b1056871b91766246f449d4d1168623af5e283fbaefce4a01d77ab00de6b045b55e956f9aae27895823198493cd232d88d3435ea4517ffc5
   languageName: node
   linkType: hard
 
-"@svgr/core@npm:8.0.0":
-  version: 8.0.0
-  resolution: "@svgr/core@npm:8.0.0"
+"@svgr/core@npm:8.1.0":
+  version: 8.1.0
+  resolution: "@svgr/core@npm:8.1.0"
   dependencies:
     "@babel/core": "npm:^7.21.3"
-    "@svgr/babel-preset": "npm:8.0.0"
+    "@svgr/babel-preset": "npm:8.1.0"
     camelcase: "npm:^6.2.0"
     cosmiconfig: "npm:^8.1.3"
     snake-case: "npm:^3.0.4"
-  checksum: aea5e55948e8f188a91faddcd011f134e6a2d994afb1bdd769b881ff4e8c734749a8a4b278ee5575f2b7e53ec9ce0535b33e1b3a0d1827a2a350abcb91d1841f
+  checksum: 6a2f6b1bc79bce39f66f088d468985d518005fc5147ebf4f108570a933818b5951c2cb7da230ddff4b7c8028b5a672b2d33aa2acce012b8b9770073aa5a2d041
   languageName: node
   linkType: hard
 
@@ -2169,46 +2169,46 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/plugin-jsx@npm:8.0.1":
-  version: 8.0.1
-  resolution: "@svgr/plugin-jsx@npm:8.0.1"
+"@svgr/plugin-jsx@npm:8.1.0":
+  version: 8.1.0
+  resolution: "@svgr/plugin-jsx@npm:8.1.0"
   dependencies:
     "@babel/core": "npm:^7.21.3"
-    "@svgr/babel-preset": "npm:8.0.0"
+    "@svgr/babel-preset": "npm:8.1.0"
     "@svgr/hast-util-to-babel-ast": "npm:8.0.0"
     svg-parser: "npm:^2.0.4"
   peerDependencies:
     "@svgr/core": "*"
-  checksum: c3c440d9f8723b2320fcf183da760799534ef998bfcfc5c848d66feab614f02980c9c313bc7c0488202affbdd216ee9381afbe948ecbcea718c19632138dc4d9
+  checksum: 07b4d9e00de795540bf70556fa2cc258774d01e97a12a26234c6fdf42b309beb7c10f31ee24d1a71137239347b1547b8bb5587d3a6de10669f95dcfe99cddc56
   languageName: node
   linkType: hard
 
-"@svgr/plugin-svgo@npm:8.0.1":
-  version: 8.0.1
-  resolution: "@svgr/plugin-svgo@npm:8.0.1"
+"@svgr/plugin-svgo@npm:8.1.0":
+  version: 8.1.0
+  resolution: "@svgr/plugin-svgo@npm:8.1.0"
   dependencies:
     cosmiconfig: "npm:^8.1.3"
     deepmerge: "npm:^4.3.1"
     svgo: "npm:^3.0.2"
   peerDependencies:
     "@svgr/core": "*"
-  checksum: 9eb87b7eeee85df812a31a73b755843ab701e5f8f9b659090d9cc168cec917b62dc3d9461849c2382935fcf8c23b5d286c17efeea9b9d6ce693cf028da6e163f
+  checksum: bfd25460f23f1548bfb8f6f3bedd6d6972c1a4f8881bd35a4f8c115218da6e999e8f9ac0ef0ed88c4e0b93fcec37f382b94c0322f4ec2b26752a89e5cc8b9d7a
   languageName: node
   linkType: hard
 
 "@svgr/webpack@npm:^8.0.1":
-  version: 8.0.1
-  resolution: "@svgr/webpack@npm:8.0.1"
+  version: 8.1.0
+  resolution: "@svgr/webpack@npm:8.1.0"
   dependencies:
     "@babel/core": "npm:^7.21.3"
     "@babel/plugin-transform-react-constant-elements": "npm:^7.21.3"
     "@babel/preset-env": "npm:^7.20.2"
     "@babel/preset-react": "npm:^7.18.6"
     "@babel/preset-typescript": "npm:^7.21.0"
-    "@svgr/core": "npm:8.0.0"
-    "@svgr/plugin-jsx": "npm:8.0.1"
-    "@svgr/plugin-svgo": "npm:8.0.1"
-  checksum: 6a847eeb1b8d0efcf08910af09515a1b29e33f720852758f93cecffa1534d20fc47a7a2e2bb2a650627c85a2c53a7f02fb8ba010b5c518c2d777a5cc6e746fc2
+    "@svgr/core": "npm:8.1.0"
+    "@svgr/plugin-jsx": "npm:8.1.0"
+    "@svgr/plugin-svgo": "npm:8.1.0"
+  checksum: 4c1cac45bd5890de8643e5a7bfb71f3bcd8b85ae5bbacf10b8ad9f939b7a98e8d601c3ada204ffb95223abf4a24beeac5a2a0d6928a52a1ab72a29da3c015c22
   languageName: node
   linkType: hard
 
@@ -2238,17 +2238,17 @@ __metadata:
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^4.32.1":
-  version: 4.32.1
-  resolution: "@tanstack/react-query-devtools@npm:4.32.1"
+  version: 4.36.1
+  resolution: "@tanstack/react-query-devtools@npm:4.36.1"
   dependencies:
     "@tanstack/match-sorter-utils": "npm:^8.7.0"
     superjson: "npm:^1.10.0"
     use-sync-external-store: "npm:^1.2.0"
   peerDependencies:
-    "@tanstack/react-query": 4.32.1
+    "@tanstack/react-query": ^4.36.1
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: bf526baf83ba3223741efbcce39824fdfc57decfef2ccb525383b26386eaf3941e95a2699968c58a18f324f70af92870120787ce09fb521093a02deb09278ed3
+  checksum: 7b5f31a90474bf45fce627d6831537a8a8e2fe5b588e9149ca00af3c443d1eed772c55bbbf1093071a29bf9a8267f662bbc4618a9c98c3225f501f7fa1cfa958
   languageName: node
   linkType: hard
 
@@ -2628,12 +2628,12 @@ __metadata:
   linkType: hard
 
 "autoprefixer@npm:^10.4.14":
-  version: 10.4.14
-  resolution: "autoprefixer@npm:10.4.14"
+  version: 10.4.16
+  resolution: "autoprefixer@npm:10.4.16"
   dependencies:
-    browserslist: "npm:^4.21.5"
-    caniuse-lite: "npm:^1.0.30001464"
-    fraction.js: "npm:^4.2.0"
+    browserslist: "npm:^4.21.10"
+    caniuse-lite: "npm:^1.0.30001538"
+    fraction.js: "npm:^4.3.6"
     normalize-range: "npm:^0.1.2"
     picocolors: "npm:^1.0.0"
     postcss-value-parser: "npm:^4.2.0"
@@ -2641,7 +2641,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 66ce961b86acd2a46e05ac1eece8657b3d9edfd2ee3abddd6cfcb32755e6865409f57acf11fe05990d6f166afda85a603678435916267a09652265cfff7b5706
+  checksum: e00256e754d481a026d928bca729b25954074dd142dbec022f0a7db0d3bbc0dc2e2dc7542e94fec22eff81e21fe140e6856448e2d9a002660cb1e2ad434daee0
   languageName: node
   linkType: hard
 
@@ -2799,7 +2799,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.21.5, browserslist@npm:^4.21.9":
+"browserslist@npm:^4.21.10":
+  version: 4.22.2
+  resolution: "browserslist@npm:4.22.2"
+  dependencies:
+    caniuse-lite: "npm:^1.0.30001565"
+    electron-to-chromium: "npm:^1.4.601"
+    node-releases: "npm:^2.0.14"
+    update-browserslist-db: "npm:^1.0.13"
+  bin:
+    browserslist: cli.js
+  checksum: 2a331aab90503130043ca41dd5d281fa1e89d5e076d07a2d75e76bf4d693bd56e73d5abcd8c4f39119da6328d450578c216cf1cd5c99b82d8a90a2ae6271b465
+  languageName: node
+  linkType: hard
+
+"browserslist@npm:^4.21.9":
   version: 4.21.10
   resolution: "browserslist@npm:4.21.10"
   dependencies:
@@ -2899,10 +2913,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001464, caniuse-lite@npm:^1.0.30001517":
+"caniuse-lite@npm:^1.0.30001517":
   version: 1.0.30001518
   resolution: "caniuse-lite@npm:1.0.30001518"
   checksum: 24df49dd1124e621c8f8d025a3940ccda99539a2f247bebb81675b320f64c521f808a0c4cb3b19ae18da4dd2d8c2ac1fe8eb222f40a4a189833508454217e37d
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001538, caniuse-lite@npm:^1.0.30001565":
+  version: 1.0.30001565
+  resolution: "caniuse-lite@npm:1.0.30001565"
+  checksum: b400e0364651a700e39d59449ca6c65b26e2caceecc4b93ae54a01ed1f62d2a7e1333b1dc640d95fbe620ffa5be38fe4dbacd880cd7a1f42fc72bb8de9a2d0c9
   languageName: node
   linkType: hard
 
@@ -3411,6 +3432,13 @@ __metadata:
   version: 1.4.479
   resolution: "electron-to-chromium@npm:1.4.479"
   checksum: c512f99e2be4edc3f534d068ae3fe1e6c781826944e3b9d327f6299fbb922cf3ff9dc5826c24510edbc38de8f59f1364ad4181d06960107c7d7bb4d41feae727
+  languageName: node
+  linkType: hard
+
+"electron-to-chromium@npm:^1.4.601":
+  version: 1.4.601
+  resolution: "electron-to-chromium@npm:1.4.601"
+  checksum: 345226e9edff5b72bd431b5bec1eaabc3c85e430fa0171586b539c64e5bde7c161cad6387e657ab8e0f197a894c1679f19c60f687baad12118a06e1db543cf95
   languageName: node
   linkType: hard
 
@@ -4086,10 +4114,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fraction.js@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "fraction.js@npm:4.2.0"
-  checksum: b16c0a6a7f045b3416c1afbb174b7afca73bd7eb0c62598a0c734a8b1f888cb375684174daf170abfba314da9f366b7d6445e396359d5fae640883bdb2ed18cb
+"fraction.js@npm:^4.3.6":
+  version: 4.3.7
+  resolution: "fraction.js@npm:4.3.7"
+  checksum: df291391beea9ab4c263487ffd9d17fed162dbb736982dee1379b2a8cc94e4e24e46ed508c6d278aded9080ba51872f1bc5f3a5fd8d7c74e5f105b508ac28711
   languageName: node
   linkType: hard
 
@@ -4954,12 +4982,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^1.17.2, jiti@npm:^1.18.2":
+"jiti@npm:^1.17.2":
   version: 1.19.1
   resolution: "jiti@npm:1.19.1"
   bin:
     jiti: bin/jiti.js
   checksum: c09f15b3ef81f0fcda45f96aaecd130213c81d8a9b8a92f5eb4f8d21972b833b2ef494db8fb3e819b258ceb569b9d5cfa3facbd2d786ecf0bc0fd0e98cc862f7
+  languageName: node
+  linkType: hard
+
+"jiti@npm:^1.19.1":
+  version: 1.21.0
+  resolution: "jiti@npm:1.21.0"
+  bin:
+    jiti: bin/jiti.js
+  checksum: 7f361219fe6c7a5e440d5f1dba4ab763a5538d2df8708cdc22561cf25ea3e44b837687931fca7cdd8cdd9f567300e90be989dd1321650045012d8f9ed6aab07f
   languageName: node
   linkType: hard
 
@@ -4987,7 +5024,7 @@ __metadata:
     next: "npm:^13.4.12"
     postcss: "npm:^8.4.27"
     prettier: "npm:^3.0.0"
-    prettier-plugin-tailwindcss: "npm:^0.4.1"
+    prettier-plugin-tailwindcss: "npm:^0.5.0"
     react: "npm:^18.2.0"
     react-blurhash: "npm:^0.3.0"
     react-dom: "npm:^18.2.0"
@@ -5463,12 +5500,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.4, nanoid@npm:^3.3.6":
+"nanoid@npm:^3.3.4":
   version: 3.3.6
   resolution: "nanoid@npm:3.3.6"
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 606b355960d0fcbe3d27924c4c52ef7d47d3b57208808ece73279420d91469b01ec1dce10fae512b6d4a8c5a5432b352b228336a8b2202a6ea68e67fa348e2ee
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^3.3.7":
+  version: 3.3.7
+  resolution: "nanoid@npm:3.3.7"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: e3fb661aa083454f40500473bb69eedb85dc160e763150b9a2c567c7e9ff560ce028a9f833123b618a6ea742e311138b591910e795614a629029e86e180660f3
   languageName: node
   linkType: hard
 
@@ -5615,6 +5661,13 @@ __metadata:
   version: 2.0.13
   resolution: "node-releases@npm:2.0.13"
   checksum: 2fb44bf70fc949d27f3a48a7fd1a9d1d603ddad4ccd091f26b3fb8b1da976605d919330d7388ccd55ca2ade0dc8b2e12841ba19ef249c8bb29bf82532d401af7
+  languageName: node
+  linkType: hard
+
+"node-releases@npm:^2.0.14":
+  version: 2.0.14
+  resolution: "node-releases@npm:2.0.14"
+  checksum: 199fc93773ae70ec9969bc6d5ac5b2bbd6eb986ed1907d751f411fef3ede0e4bfdb45ceb43711f8078bea237b6036db8b1bf208f6ff2b70c7d615afd157f3ab9
   languageName: node
   linkType: hard
 
@@ -6120,13 +6173,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8.0.9, postcss@npm:^8.4.23, postcss@npm:^8.4.27":
-  version: 8.4.27
-  resolution: "postcss@npm:8.4.27"
+  version: 8.4.32
+  resolution: "postcss@npm:8.4.32"
   dependencies:
-    nanoid: "npm:^3.3.6"
+    nanoid: "npm:^3.3.7"
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.0.2"
-  checksum: 41a0476e05cb97514ff8d75e4ff9fdcf778f22b2e0d25b7028f219cd408e01d3c4f50459d4a1cd9a430d8ef08202c881374a4fa4ea6009f4a135a07315d606e5
+  checksum: 39308a9195fa34d4dbdd7b58a896cff0c7809f84f7a4ac1b95b68ca86c9138a395addff33075668ed3983d41b90aac05754c445237a9365eb1c3a5602ebd03ad
   languageName: node
   linkType: hard
 
@@ -6159,26 +6212,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "prettier-plugin-tailwindcss@npm:0.4.1"
+"prettier-plugin-tailwindcss@npm:^0.5.0":
+  version: 0.5.7
+  resolution: "prettier-plugin-tailwindcss@npm:0.5.7"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-pug": "*"
     "@shopify/prettier-plugin-liquid": "*"
     "@shufo/prettier-plugin-blade": "*"
     "@trivago/prettier-plugin-sort-imports": "*"
-    prettier: ^2.2 || ^3.0
+    prettier: ^3.0
     prettier-plugin-astro: "*"
     prettier-plugin-css-order: "*"
     prettier-plugin-import-sort: "*"
     prettier-plugin-jsdoc: "*"
-    prettier-plugin-marko: "*"
     prettier-plugin-organize-attributes: "*"
     prettier-plugin-organize-imports: "*"
     prettier-plugin-style-order: "*"
     prettier-plugin-svelte: "*"
-    prettier-plugin-twig-melody: "*"
   peerDependenciesMeta:
     "@ianvs/prettier-plugin-sort-imports":
       optional: true
@@ -6210,16 +6261,16 @@ __metadata:
       optional: true
     prettier-plugin-twig-melody:
       optional: true
-  checksum: da9dc4c8c80b5510d51e671de61bc230e2b076bd4c14ddd3e8bd4fa5395373800d10473718bbf22e1cabe09167e8d2eb1bedaa06587ee905d6e6106003b69d11
+  checksum: 581820b6b7c9a3dee623b8ad720f1e0b3be36d97e5bb5d51d8734edd31271d763a33e285205f397633ff03a27c82e48aed40103c7d326bce44f47fdf94958deb
   languageName: node
   linkType: hard
 
 "prettier@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "prettier@npm:3.0.0"
+  version: 3.1.0
+  resolution: "prettier@npm:3.1.0"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 113e2828c6487f10e19e7c30598e8810684b827f2a1b7747f113728d1049da15583b77cc5e907f37b371b08c49cfdd900aebe5c2a2077be3f0cccb73cca1133b
+  checksum: a45ea70aa97fde162ea4c4aba3dfc7859aa6a732a1db34458d9535dc3c2c16d3bc3fb5689e6cd76aa835562555303b02d9449fd2e15af3b73c8053557e25c5b6
   languageName: node
   linkType: hard
 
@@ -7195,18 +7246,18 @@ __metadata:
   linkType: hard
 
 "tailwindcss@npm:^3.3.3":
-  version: 3.3.3
-  resolution: "tailwindcss@npm:3.3.3"
+  version: 3.3.5
+  resolution: "tailwindcss@npm:3.3.5"
   dependencies:
     "@alloc/quick-lru": "npm:^5.2.0"
     arg: "npm:^5.0.2"
     chokidar: "npm:^3.5.3"
     didyoumean: "npm:^1.2.2"
     dlv: "npm:^1.1.3"
-    fast-glob: "npm:^3.2.12"
+    fast-glob: "npm:^3.3.0"
     glob-parent: "npm:^6.0.2"
     is-glob: "npm:^4.0.3"
-    jiti: "npm:^1.18.2"
+    jiti: "npm:^1.19.1"
     lilconfig: "npm:^2.1.0"
     micromatch: "npm:^4.0.5"
     normalize-path: "npm:^3.0.0"
@@ -7223,7 +7274,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: c2435382cd27522a988aaba7e7d98a5ac20f4b3cb5049deb0c58d128302e4158bcca5e7bffbdc97927b6eedba45f0ca1abe76cbae8041e2c3fb3e1c001fe44d2
+  checksum: a57c0a9cdba9db19097e34e25b7e4690fab43f31ba200afc3bb9635a03036ca93e9884a17b616fb8a2486d57d2ecc9a06862ce4685b3ace57f7a67436e7594a0
   languageName: node
   linkType: hard
 
@@ -7563,6 +7614,20 @@ __metadata:
   bin:
     update-browserslist-db: cli.js
   checksum: 280d5cf92e302d8de0c12ef840a6af26ec024a5158aa2020975cd01bf0ded09c709793a6f421e6d0f1a47557d6a1a10dc43af80f9c30b8fd0df9691eb98c1c69
+  languageName: node
+  linkType: hard
+
+"update-browserslist-db@npm:^1.0.13":
+  version: 1.0.13
+  resolution: "update-browserslist-db@npm:1.0.13"
+  dependencies:
+    escalade: "npm:^3.1.1"
+    picocolors: "npm:^1.0.0"
+  peerDependencies:
+    browserslist: ">= 4.21.0"
+  bin:
+    update-browserslist-db: cli.js
+  checksum: e52b8b521c78ce1e0c775f356cd16a9c22c70d25f3e01180839c407a5dc787fb05a13f67560cbaf316770d26fa99f78f1acd711b1b54a4f35d4820d4ea7136e6
   languageName: node
   linkType: hard
 
