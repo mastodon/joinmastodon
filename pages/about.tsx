@@ -354,14 +354,16 @@ const About = () => (
 )
 
 const Metrics = () => {
-  const days = useQuery<Day[]>(
-    ["statistics"],
-    () =>
+  const days = useQuery({
+    queryKey: ["statistics"],
+
+    queryFn: () =>
       fetch("https://api.joinmastodon.org/statistics").then((res) =>
         res.json()
       ),
-    { cacheTime: 30 * 60 * 1000 }
-  )
+
+    gcTime: 30 * 60 * 1000,
+  })
 
   if (days.isError || days.isLoading) {
     return null

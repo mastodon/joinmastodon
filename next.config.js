@@ -8,10 +8,10 @@ const nextConfig = {
     defaultLocale,
   },
   images: {
-    domains: [
-      "proxy.joinmastodon.org",
-      "c8.patreon.com",
-      "c10.patreonusercontent.com",
+    remotePatterns: [
+      { hostname: "proxy.joinmastodon.org" },
+      { hostname: "c8.patreon.com" },
+      { hostname: "c10.patreonusercontent.com" },
     ],
   },
   async headers() {
