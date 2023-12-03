@@ -12,14 +12,9 @@ COPY .yarnrc.yml package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
 RUN \
   # Configure Corepack
   corepack enable; \
-  corepack prepare --immutable;
+  corepack prepare --activate;
 
-RUN \
-  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-  elif [ -f package-lock.json ]; then npm ci; \
-  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
+RUN yarn install --immutable
 
 # Rebuild the source code only when needed
 FROM node:20-alpine AS builder
