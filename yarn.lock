@@ -3646,14 +3646,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.9.0":
-  version: 8.9.0
-  resolution: "eslint-config-prettier@npm:8.9.0"
+"eslint-config-prettier@npm:^9.0.0":
+  version: 9.1.0
+  resolution: "eslint-config-prettier@npm:9.1.0"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
     eslint-config-prettier: bin/cli.js
-  checksum: 75388ef59acd24b23a55ca7d662e639a75b0982fcc95da546a01f0ab9a38c67e35a6b06d9f72ebb274f569d06dcaa1ab3e7016900c34a1df3e29664c3f1ce777
+  checksum: 6d332694b36bc9ac6fdb18d3ca2f6ac42afa2ad61f0493e89226950a7091e38981b66bac2b47ba39d15b73fff2cd32c78b850a9cf9eed9ca9a96bfb2f3a2f10d
   languageName: node
   linkType: hard
 
@@ -4980,7 +4980,7 @@ __metadata:
     dotenv: "npm:^16.3.1"
     eslint: "npm:^8.46.0"
     eslint-config-next: "npm:^13.4.12"
-    eslint-config-prettier: "npm:^8.9.0"
+    eslint-config-prettier: "npm:^9.0.0"
     javascript-stringify: "npm:^2.1.0"
     keen-slider: "npm:^6.8.6"
     lodash: "npm:^4.17.21"
