@@ -25,10 +25,10 @@ jobs:
           upload_translations: false
           download_translations: true
           crowdin_branch_name: main
-          push_translations: false
+          push_translations: true
           create_pull_request: true
           localization_branch_name: i18n_crowdin_translations
-          pull_request_base_branch_name: "main"
+          pull_request_base_branch_name: main
           pull_request_title: "New Crowdin translations (automated)"
           pull_request_body: |
             New Crowdin translations, automated with Github Actions
@@ -38,6 +38,6 @@ jobs:
             This PR will be updated every day with new translations.
           pull_request_labels: "i18n"
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CROWDIN_PROJECT_ID: ${{ vars.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
