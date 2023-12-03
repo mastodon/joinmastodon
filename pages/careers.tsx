@@ -16,17 +16,17 @@ import press from "../data/press"
 
 /** This page does not require translations */
 const Careers = () => {
-  const jobsResponse = useQuery<JobsResponse>(
-    ["jobs"],
-    () => fetchEndpoint("jobs"),
-    {
-      cacheTime: 10 * 60 * 1000, // 10 minutes
+  const jobsResponse = useQuery({
+    queryKey: ["jobs"],
+    queryFn: () => fetchEndpoint("jobs"),
 
-      select: (data) => {
-        return _groupBy(data.results, "departmentName")
-      },
-    }
-  )
+    // 10 minutes
+    gcTime: 10 * 60 * 1000,
+
+    select: (data) => {
+      return _groupBy(data.results, "departmentName")
+    },
+  })
 
   return (
     <Layout>

@@ -108,7 +108,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
   }, [])
 
   return (
-    <header
+    (<header
       // background needs to be on the ::before for now to get around nested compositing bug in chrome
       className={classNames(
         'full-width-bg sticky -top-[var(--header-offset)] z-20 -mb-[var(--header-area)] pt-[var(--header-offset)] text-white before:absolute before:inset-0 before:bg-nightshade-900/[0.9] before:backdrop-blur before:transition-opacity before:content-[""]',
@@ -138,7 +138,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
               <li className="relative" key={item.key || item.value}>
                 {"childItems" in item ? (
                   // Top-level Dropdown
-                  <>
+                  (<>
                     <button
                       {...bindPrimaryMenuItem(itemIndex, { hasPopup: true })}
                       className="flex items-center gap-[0.125rem] whitespace-nowrap rounded-md p-3 px-5 text-h5 focus:outline-2 md:text-b2 md:font-medium"
@@ -150,7 +150,6 @@ const Header = ({ transparent = true }: HeaderProps) => {
                         })}
                       />
                     </button>
-
                     <div
                       className={classNames(
                         "end-0 top-full rounded-md md:absolute md:max-h-[calc(100vh_-_var(--header-height))] md:bg-white md:text-black md:shadow-lg",
@@ -167,7 +166,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
                       >
                         {item.childItems.map((child, childIndex) => (
                           // Child Items
-                          <li key={child.key || child.value} role="menu">
+                          (<li key={child.key || child.value} role="menu">
                             <Link
                               href={child.value}
                               locale={child.locale || undefined}
@@ -194,7 +193,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
                                 {child.description}
                               </span>
                             </Link>
-                          </li>
+                          </li>)
                         ))}
                       </ul>
 
@@ -220,10 +219,10 @@ const Header = ({ transparent = true }: HeaderProps) => {
                         </div>
                       )}
                     </div>
-                  </>
+                  </>)
                 ) : (
                   // Top-level Link
-                  <Link
+                  (<Link
                     href={item.value}
                     className={classNames(
                       "block whitespace-nowrap rounded-md p-3 px-5 text-h5 font-medium md:text-b2",
@@ -233,15 +232,15 @@ const Header = ({ transparent = true }: HeaderProps) => {
                     {...bindPrimaryMenuItem(itemIndex)}
                   >
                     {item.label}
-                  </Link>
+                  </Link>)
                 )}
               </li>
             ))}
           </ul>
         </nav>
       </div>
-    </header>
-  )
+    </header>)
+  );
 }
 
 /**

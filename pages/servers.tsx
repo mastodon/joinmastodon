@@ -1,4 +1,8 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query"
+import {
+  useQuery,
+  useQueryClient,
+  keepPreviousData,
+} from "@tanstack/react-query"
 import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/router"
 import { FormattedMessage, FormattedDate, useIntl } from "react-intl"
@@ -40,42 +44,38 @@ const Servers = () => {
   const params = new URLSearchParams(filters)
 
   const queryOptions = {
-    cacheTime: 30 * 60 * 1000, // 30 minutes
+    gcTime: 30 * 60 * 1000, // 30 minutes
   }
 
-  const allCategories = useQuery<Category[]>(
-    ["categories", ""],
-    () => fetchEndpoint("categories"),
-    { select: (data) => _orderBy(data, "servers_count", "desc") }
-  )
+  const allCategories = useQuery({
+    queryKey: ["categories", ""],
+    queryFn: () => fetchEndpoint("categories"),
+    select: (data) => _orderBy(data, "servers_count", "desc"),
+  })
 
-  const apiCategories = useQuery<Category[]>(
-    ["categories", filters.language],
-    () => fetchEndpoint("categories", params),
-    {
-      ...queryOptions,
-      keepPreviousData: true,
-      select: (data) => {
-        let updated = allCategories.data.map(({ category }) => {
-          let match = data.find((el) => {
-            return el.category === category
-          })
+  const apiCategories = useQuery({
+    queryKey: ["categories", filters.language],
+    queryFn: () => fetchEndpoint("categories", params),
+    ...queryOptions,
+    placeholderData: keepPreviousData,
 
-          return { category, servers_count: match ? match.servers_count : 0 }
+    select: (data) => {
+      let updated = allCategories.data.map(({ category }) => {
+        let match = data.find((el) => {
+          return el.category === category
         })
 
-        const totalServersCount =
-          updated?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
+        return { category, servers_count: match ? match.servers_count : 0 }
+      })
 
-        updated = [
-          { category: "", servers_count: totalServersCount },
-          ...updated,
-        ]
+      const totalServersCount =
+        updated?.reduce((acc, el) => acc + el.servers_count, 0) ?? 0
 
-        return updated
-      },
-    }
-  )
+      updated = [{ category: "", servers_count: totalServersCount }, ...updated]
+
+      return updated
+    },
+  })
 
   let defaultOption = {
     value: "",
@@ -133,27 +133,26 @@ const Servers = () => {
     },
   ]
 
-  const apiLanguages = useQuery<any[]>(
-    ["languages", filters.category],
-    () => fetchEndpoint("languages", params),
-    {
-      ...queryOptions,
-      select: (data) => {
-        let updated = data
-          .filter((language) => language.language && language.locale)
-          .map((language) => ({
-            label: language.language,
-            value: language.locale,
-          }))
+  const apiLanguages = useQuery({
+    queryKey: ["languages", filters.category],
+    queryFn: () => fetchEndpoint("languages", params),
+    ...queryOptions,
 
-        updated = [defaultOption, ...updated]
-        return updated
-      },
-    }
-  )
+    select: (data) => {
+      let updated = data
+        .filter((language) => language.language && language.locale)
+        .map((language) => ({
+          label: language.language,
+          value: language.locale,
+        }))
 
-  const servers = useQuery<Server[]>(
-    [
+      updated = [defaultOption, ...updated]
+      return updated
+    },
+  })
+
+  const servers = useQuery({
+    queryKey: [
       "servers",
       filters.language,
       filters.category,
@@ -161,15 +160,16 @@ const Servers = () => {
       filters.registrations,
       filters.region,
     ],
-    () => fetchEndpoint("servers", params),
-    queryOptions
-  )
 
-  const days = useQuery<Day[]>(
-    ["statistics"],
-    () => fetchEndpoint("statistics"),
-    queryOptions
-  )
+    queryFn: () => fetchEndpoint("servers", params),
+    ...queryOptions,
+  })
+
+  const days = useQuery({
+    queryKey: ["statistics"],
+    queryFn: () => fetchEndpoint("statistics"),
+    ...queryOptions,
+  })
 
   const regions = [
     {
