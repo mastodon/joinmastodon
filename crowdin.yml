@@ -1,4 +1,9 @@
+# This is needed for the Github Action
+project_id_env: CROWDIN_PROJECT_ID
+api_token_env: CROWDIN_PERSONAL_TOKEN
+
 commit_message: "[ci skip]"
+preserve_hierarchy: true
 files:
   - source: /locales/en.json
     translation: /locales/%two_letters_code%.json
