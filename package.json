@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
-    "@linear/sdk": "^7.0.1",
+    "@linear/sdk": "^12.0.0",
     "@tanstack/react-query": "^5.12.2",
     "blurhash": "^2.0.5",
     "classnames": "^2.3.2",
