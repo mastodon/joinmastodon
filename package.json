@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "^18.0.0"
+    "node": "^20.0.0"
   },
   "scripts": {
     "dev": "next dev",
@@ -47,5 +47,6 @@
     "tailwindcss": "^3.3.3",
     "tailwindcss-logical": "^3.0.1",
     "typescript": "^5.1.6"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
