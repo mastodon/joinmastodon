@@ -1,0 +1,43 @@
+name: Crowdin / Download translations
+on:
+  schedule:
+    - cron: "27 4 1 * *" # Every week
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  download-translations:
+    runs-on: ubuntu-latest
+    if: github.repository == 'mastodon/joinmastodon'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Download the translation files from Crowdin
+      - name: crowdin action
+        uses: crowdin/github-action@v1
+        with:
+          upload_sources: false
+          upload_translations: false
+          download_translations: true
+          crowdin_branch_name: main
+          push_translations: false
+          create_pull_request: true
+          localization_branch_name: i18n_crowdin_translations
+          pull_request_base_branch_name: "main"
+          pull_request_title: "New Crowdin translations (automated)"
+          pull_request_body: |
+            New Crowdin translations, automated with Github Actions
+
+            See `.github/workflows/crowdin-download.yml`
+
+            This PR will be updated every day with new translations.
+          pull_request_labels: "i18n"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ vars.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}

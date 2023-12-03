@@ -1,8 +1,6 @@
 name: Crowdin / Upload translations
 
 on:
-  # TODO: remove me
-  pull_request:
   push:
     branches:
       - main
