@@ -2,6 +2,7 @@ const defaultLocale = "en"
 
 const locales = [
   { code: "ar", language: "العربية", dir: "rtl" },
+  { code: "be", language: "Беларуская" },
   { code: "bn", language: "বাংলা" },
   { code: "ca", language: "Català" },
   { code: "cs", language: "Čeština" },
