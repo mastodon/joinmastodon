@@ -3,7 +3,7 @@ name: Release Docker image
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 env:
   REGISTRY: ghcr.io
