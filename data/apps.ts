@@ -48,6 +48,7 @@ import mastodonforworkgroups from "../public/apps/mastodonforworkgroups.png"
 import mastonine from "../public/apps/mastonine.png"
 import mastodeck from "../public/apps/mastodeck.png"
 import stomp from "../public/apps/stomp.png"
+import pachli from "../public/apps/pachli.png"
 import pipilo from "../public/apps/pipilo.png"
 import rodent from "../public/apps/rodent.png"
 import heffalump from "../public/apps/heffalump.png"
@@ -151,6 +152,13 @@ export const apps: appsList = {
       url: "https://play.google.com/store/apps/details?id=com.zonepane",
       paid: false,
     },
+    {
+      released_on: "Sep 6, 2023",
+      name: "Pachli",
+      icon: pachli,
+      url: "https://play.google.com/store/apps/details?id=app.pachli",
+      paid: false,
+    },    
   ],
   ios: [
     {
