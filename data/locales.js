@@ -16,6 +16,7 @@ const locales = [
   { code: "fr", language: "Français" },
   { code: "ga", language: "Gaeilge" },
   { code: "gd", language: "Gàidhlig" },
+  { code: "gl", language: "Galego" },
   { code: "he", language: "עברית", dir: "rtl" },
   { code: "is", language: "Íslenska" },
   { code: "it", language: "Italiano" },
