@@ -9,6 +9,7 @@ const locales = [
   { code: "cy", language: "Cymraeg" },
   { code: "de", language: "Deutsch" },
   { code: "en", language: "English" },
+  { code: "eo", language: "Esperanto" },
   { code: "es", language: "Español" },
   { code: "eu", language: "Euskara" },
   { code: "fa", language: "فارسی", dir: "rtl" },
