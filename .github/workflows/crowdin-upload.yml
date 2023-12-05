@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - crowdin.yml
-      - locales/en.yml
+      - locales/en.json
 
 jobs:
   upload-translations:
