@@ -59,7 +59,7 @@ function Home() {
             <FormattedMessage
               id="home.join_now"
               defaultMessage="Join {domain}"
-              values={{ domain: 'mastodon.social' }}
+              values={{ domain: "mastodon.social" }}
             />
           </LinkButton>
 
@@ -280,6 +280,8 @@ const WhyMastodon = () => {
   }
   const [sliderRef, instanceRef] = useKeenSlider(options)
 
+  const intl = useIntl()
+
   return (
     <section className="py-20">
       <h3 className="h3 pb-16 text-center">
@@ -368,7 +370,10 @@ const WhyMastodon = () => {
                     "rounded-[50%] p-1.5 " +
                     (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                   }
-                  aria-label="Go to slide"
+                  aria-label={intl.formatMessage({
+                    id: "home.slider.go_to_slide",
+                    defaultMessage: "Go to slide",
+                  })}
                 ></button>
               )
             })}
@@ -407,6 +412,8 @@ const Testimonials = ({ testimonials }) => {
   }
   const [sliderRef, instanceRef] = useKeenSlider(options)
 
+  const intl = useIntl()
+
   return (
     <section className="full-width-bg bg-gray-5 pt-20 pb-28">
       <div className="full-width-bg__inner">
@@ -441,7 +448,10 @@ const Testimonials = ({ testimonials }) => {
                       "rounded-[50%] p-1.5 " +
                       (currentSlide === idx ? "bg-blurple-500" : "bg-gray-3")
                     }
-                    aria-label="Go to slide"
+                    aria-label={intl.formatMessage({
+                      id: "home.slider.go_to_slide",
+                      defaultMessage: "Go to slide",
+                    })}
                   ></button>
                 )
               })}
@@ -487,7 +497,10 @@ const Sponsors = ({ sponsors }) => {
               />
             </LinkButton>
 
-            <LinkButton href="https://donate.stripe.com/00g5l42h8ezY3YcaEE" size="large">
+            <LinkButton
+              href="https://donate.stripe.com/00g5l42h8ezY3YcaEE"
+              size="large"
+            >
               <FormattedMessage
                 id="sponsors.donate_directly"
                 defaultMessage="Donate directly"
