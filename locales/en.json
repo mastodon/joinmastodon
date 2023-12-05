@@ -148,6 +148,7 @@
   "sponsors.patreon.cta": "Go to Patreon",
   "sponsors.patreon.title": "Support us on Patreon",
   "sponsors.sponsorship.body": "If you would like to see your company's logo with a do-follow link on this site, you can become a sponsor directly through our own platform!",
+  "sponsors.sponsorship.statement": "Sponsorship does not equal influence. Mastodon is fully independent.",
   "sponsors.sponsorship.title": "Commercial sponsorship",
   "sponsors.supported_by": "Supported by",
   "stats.disclaimer": "Data collected by crawling all accessible Mastodon servers on {date}.",

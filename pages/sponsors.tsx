@@ -142,7 +142,10 @@ function Sponsors() {
         </div>
 
         <p className="mt-8 text-gray-2 lg:mt-16">
-          Sponsorship does not equal influence. Mastodon is fully independent.
+          <FormattedMessage
+            id="sponsors.sponsorship.statement"
+            defaultMessage="Sponsorship does not equal influence. Mastodon is fully independent."
+          />
         </p>
       </section>
       <Head>
