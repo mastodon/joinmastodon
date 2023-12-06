@@ -45,7 +45,7 @@ Localized versions of each page are hosted at dedicated URLs, making it easier f
 
 ### Image optimization
 
-Raster images should be added at the maximum resolution they'll be displayed at. If art direction is not required, mobile images will be generated automatically. ([docs](https://nextjs.org/docs/basic-features/image-optimization))
+Raster images should be added at the maximum resolution they'll be displayed at. If art direction is not required, mobile images will be generated automatically. ([docs](https://nextjs.org/docs/pages/building-your-application/optimizing/images))
 
 ## Deployment
 
