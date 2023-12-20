@@ -2243,14 +2243,14 @@ __metadata:
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.12.2":
-  version: 5.13.5
-  resolution: "@tanstack/react-query-devtools@npm:5.13.5"
+  version: 5.14.2
+  resolution: "@tanstack/react-query-devtools@npm:5.14.2"
   dependencies:
     "@tanstack/query-devtools": "npm:5.13.5"
   peerDependencies:
-    "@tanstack/react-query": ^5.13.4
+    "@tanstack/react-query": ^5.14.2
     react: ^18.0.0
-  checksum: 91d1e79f4e0691fb7cbcf69b58659f6c499ba230b22b235df3478da05693b9d21808695cf40520f30e129ff54bbc8c547c5f722d6beb6597b9aee2e292851682
+  checksum: 1a9ab4c95822a8d8fe991741f20da68e7a760f768f8a7c40b483debf063333b8c0efdec591515a44fff3bd57e1ea8c6ca912805e794974b28878310e4eb96b21
   languageName: node
   linkType: hard
 
@@ -6885,8 +6885,8 @@ __metadata:
   linkType: hard
 
 "tailwindcss@npm:^3.3.5":
-  version: 3.3.6
-  resolution: "tailwindcss@npm:3.3.6"
+  version: 3.4.0
+  resolution: "tailwindcss@npm:3.4.0"
   dependencies:
     "@alloc/quick-lru": "npm:^5.2.0"
     arg: "npm:^5.0.2"
@@ -6913,7 +6913,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 69caade773249cb963c33e81f85b7fc423dcb74b416727483f434f4e12874187f633970c9de864fa96736289abaf71189314a53589ada0be6c09ccb0e8b78391
+  checksum: 0a1cef7468e6d17c2857d0b3c4017af2cb37ed8ba27dfb14780c517b8a74f6786970227c400ac1325fc8bcfc09099d8e990fa7c60924bf945f3d0a912d63f546
   languageName: node
   linkType: hard
 
