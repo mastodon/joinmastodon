@@ -3000,9 +3000,9 @@ __metadata:
   linkType: hard
 
 "classnames@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "classnames@npm:2.3.2"
-  checksum: cd50ead57b4f97436aaa9f9885c6926323efc7c2bea8e3d4eb10e4e972aa6a1cfca1c7a0e06f8a199ca7498d4339e30bb6002e589e61c9f21248cbf3e8b0b18d
+  version: 2.4.0
+  resolution: "classnames@npm:2.4.0"
+  checksum: 059c2c7e58ef69d6e9fc0f9861d22e94af9a7e73256c42fc539698472cb37e4dcef861acb9820bd2852a13767e62705d80a0aa399201cc1917556a2d9dfcdc5a
   languageName: node
   linkType: hard
 
