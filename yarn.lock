@@ -2235,22 +2235,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-devtools@npm:5.14.7":
-  version: 5.14.7
-  resolution: "@tanstack/query-devtools@npm:5.14.7"
-  checksum: ab0b5752953ba2e02a981a8eea41b33a2cd53c37cd80569ff80f04190e4dc8cc6ab8c68adabd7db822f6e3d191f0ec12d6292e380ef6b11af1ffc44e356180e3
+"@tanstack/query-devtools@npm:5.15.0":
+  version: 5.15.0
+  resolution: "@tanstack/query-devtools@npm:5.15.0"
+  checksum: f4582a032ab0f72f9561b6bd1fd99e40e3cfb6b0cda56921628e31625f11d3d114ea5135ab2886e443b3c88b2923c8594bf80cc60158d9d5e655857795e93ab0
   languageName: node
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.12.2":
-  version: 5.14.7
-  resolution: "@tanstack/react-query-devtools@npm:5.14.7"
+  version: 5.17.0
+  resolution: "@tanstack/react-query-devtools@npm:5.17.0"
   dependencies:
-    "@tanstack/query-devtools": "npm:5.14.7"
+    "@tanstack/query-devtools": "npm:5.15.0"
   peerDependencies:
-    "@tanstack/react-query": ^5.14.6
+    "@tanstack/react-query": ^5.17.0
     react: ^18.0.0
-  checksum: 2f7853712175df45ffa630cf883a4784ff9df97debfc55e5cfcca52401e68b5b29139505f3daf9ff2598eefec683e56c32a43228c522b05acfe2a6a6e0235fdc
+  checksum: 8ce06938eb706385dd8d8e1f959fd057fd5a053ec88092567626c9c29b06254a5dedf009aa3701bf6eeb8ab53c8bdf7c04f338d0f78a842ee3846f9930f4528e
   languageName: node
   linkType: hard
 
@@ -5961,8 +5961,8 @@ __metadata:
   linkType: hard
 
 "prettier-plugin-tailwindcss@npm:^0.5.7":
-  version: 0.5.9
-  resolution: "prettier-plugin-tailwindcss@npm:0.5.9"
+  version: 0.5.10
+  resolution: "prettier-plugin-tailwindcss@npm:0.5.10"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-pug": "*"
@@ -6007,7 +6007,7 @@ __metadata:
       optional: true
     prettier-plugin-twig-melody:
       optional: true
-  checksum: 6f2827214adf169de80ce4e2c278b94bb4d06d2a432204ef86a609c4e4c517e2b1281e70a0777762b0916927599e7dba6ad45802f55509f93a1ca393dc3265cb
+  checksum: 88929782379c27f9ece7e9d638da11549bf641295be632dee1f8f2e1b2c99de395da198de28de41926ed7c35c574586febf973335979fced2f1cdfc006e6fa32
   languageName: node
   linkType: hard
 
