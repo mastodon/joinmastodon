@@ -52,7 +52,7 @@ import pachli from "../public/apps/pachli.png"
 import pipilo from "../public/apps/pipilo.png"
 import rodent from "../public/apps/rodent.png"
 import heffalump from "../public/apps/heffalump.png"
-import mostodon from "../public/apps/MOStodon.png"
+import mostodon from "../public/apps/mostodon.png"
 import type { StaticImageData } from "next/legacy/image"
 
 export type appsList = {
@@ -438,6 +438,7 @@ export const apps: appsList = {
       name: "MOStodon",
       icon: mostodon,
       url: "https://github.com/Havoc6502/MOStodon",
+      paid: false,
     },
   ],
 }
