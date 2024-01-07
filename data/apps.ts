@@ -52,7 +52,7 @@ import pachli from "../public/apps/pachli.png"
 import pipilo from "../public/apps/pipilo.png"
 import rodent from "../public/apps/rodent.png"
 import heffalump from "../public/apps/heffalump.png"
-
+import mostodon from "../public/apps/MOStodon.png"
 import type { StaticImageData } from "next/legacy/image"
 
 export type appsList = {
@@ -432,6 +432,12 @@ export const apps: appsList = {
       name: "Heffalump",
       icon: heffalump,
       url: "https://github.com/knickish/heffalump",
+    },
+    {
+      released_on: "Sep 17, 2023",
+      name: "MOStodon",
+      icon: mostodon,
+      url: "https://github.com/Havoc6502/MOStodon",
     },
   ],
 }
