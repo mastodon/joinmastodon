@@ -2244,14 +2244,14 @@ __metadata:
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.12.2":
-  version: 5.17.8
-  resolution: "@tanstack/react-query-devtools@npm:5.17.8"
+  version: 5.17.9
+  resolution: "@tanstack/react-query-devtools@npm:5.17.9"
   dependencies:
     "@tanstack/query-devtools": "npm:5.17.7"
   peerDependencies:
-    "@tanstack/react-query": ^5.17.8
+    "@tanstack/react-query": ^5.17.9
     react: ^18.0.0
-  checksum: cf1e9d0db6a94424352a0ba3ad2cec16deae03eb1f144c1db599f5e413fb369771c51397180406a1700b6c0714461a73a49149533f063e8e873f2462378eedc8
+  checksum: f4454dbf231dd2f11bfdd874cb37d4c0029f5f4485f477840639de88fb5e71083f1abcc6f2b4c7471635d65e78f69628e25b857ba0a539822252ddb4190dcfcb
   languageName: node
   linkType: hard
 
