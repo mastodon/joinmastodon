@@ -146,7 +146,7 @@ const JobBoard = ({ jobs }) => {
         </p>
       </div>
     )
-  } else if (jobs.data?.length === 0) {
+  } else if (!jobs.data || Object.keys(jobs.data).length === 0) {
     return (
       <div className="b2 flex justify-center rounded bg-gray-5 p-4 text-gray-1 md:p-8 md:py-20">
         <p className="max-w-[48ch] text-center">
