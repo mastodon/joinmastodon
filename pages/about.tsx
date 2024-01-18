@@ -134,6 +134,7 @@ const About = () => (
             </div>
 
             <div className="col-span-12 md:col-span-3">
+              <a id="reports" className="invisible relative -top-32"/>
               <h2 className="h3 mb-4">Reports</h2>
 
               <ul className="list-disc pl-3">
