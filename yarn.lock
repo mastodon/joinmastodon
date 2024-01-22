@@ -1515,8 +1515,8 @@ __metadata:
   linkType: hard
 
 "@formatjs/cli@npm:^6.2.4":
-  version: 6.2.4
-  resolution: "@formatjs/cli@npm:6.2.4"
+  version: 6.2.6
+  resolution: "@formatjs/cli@npm:6.2.6"
   peerDependencies:
     vue: ^3.3.4
   peerDependenciesMeta:
@@ -1524,7 +1524,7 @@ __metadata:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: 3f6bbbc633a3a6ebd4e6fcfc3a9f889bc044043452cbc8f81abcaee97aaef991a778ae785d3b9d21ecc5f55b147eb0009b44520bb895fe244b4c14a36d9b05bd
+  checksum: f8b0bc45c72b83437f0dc91a2d3ea513852c11bfd8eedbc2f255b19552f153bccb4d38fcd281f897ca60d0dfddf2b99de22e5a87cb1e173ca11df88c61cde2e4
   languageName: node
   linkType: hard
 
@@ -2236,22 +2236,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-devtools@npm:5.17.7":
-  version: 5.17.7
-  resolution: "@tanstack/query-devtools@npm:5.17.7"
-  checksum: 96bb17aec640e23150154e9f7eb7b841a5931bb748a86fe06946b307ab3832a94cbf065f1d394d26c576ab620d4f9e59f9518947acf569a7a42b83fd2421b209
+"@tanstack/query-devtools@npm:5.17.21":
+  version: 5.17.21
+  resolution: "@tanstack/query-devtools@npm:5.17.21"
+  checksum: bf3db47e4b825adf77b6c31b218feee469bdb8e7493898f6eddc84e11dc60d90a11a78f406ac6f8ce90661af668051937c8a47ff69faa60272d78c1afef24903
   languageName: node
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.12.2":
-  version: 5.17.12
-  resolution: "@tanstack/react-query-devtools@npm:5.17.12"
+  version: 5.17.21
+  resolution: "@tanstack/react-query-devtools@npm:5.17.21"
   dependencies:
-    "@tanstack/query-devtools": "npm:5.17.7"
+    "@tanstack/query-devtools": "npm:5.17.21"
   peerDependencies:
-    "@tanstack/react-query": ^5.17.12
+    "@tanstack/react-query": ^5.17.19
     react: ^18.0.0
-  checksum: 7feccb72098f68b28f77d052e6da5e2cd5e3815ea38faa80d13edcf1b43309cf6b471f9f4b2df2e676d30bb5ee74e240430d8806dd2f04697307aaca79ef9fc8
+  checksum: f568617056450bb6b117a1cd28e0eb1b3592a474efc89ef0ed478c46dfe9b60b5062eda041186f62d580c7bb3d9ce8611b2ce4df18dcb0a9238d57cf1b024e00
   languageName: node
   linkType: hard
 
@@ -2734,12 +2734,12 @@ __metadata:
   linkType: hard
 
 "autoprefixer@npm:^10.4.16":
-  version: 10.4.16
-  resolution: "autoprefixer@npm:10.4.16"
+  version: 10.4.17
+  resolution: "autoprefixer@npm:10.4.17"
   dependencies:
-    browserslist: "npm:^4.21.10"
-    caniuse-lite: "npm:^1.0.30001538"
-    fraction.js: "npm:^4.3.6"
+    browserslist: "npm:^4.22.2"
+    caniuse-lite: "npm:^1.0.30001578"
+    fraction.js: "npm:^4.3.7"
     normalize-range: "npm:^0.1.2"
     picocolors: "npm:^1.0.0"
     postcss-value-parser: "npm:^4.2.0"
@@ -2747,7 +2747,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: e00256e754d481a026d928bca729b25954074dd142dbec022f0a7db0d3bbc0dc2e2dc7542e94fec22eff81e21fe140e6856448e2d9a002660cb1e2ad434daee0
+  checksum: 1d21cc8edb7bf993682094ceed03a32c18f5293f071182a64c2c6defb44bbe91d576ad775d2347469a81997b80cea0bbc4ad3eeb5b12710f9feacf2e6c04bb51
   languageName: node
   linkType: hard
 
@@ -2882,7 +2882,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.21.10, browserslist@npm:^4.21.9":
+"browserslist@npm:^4.21.9":
   version: 4.22.1
   resolution: "browserslist@npm:4.22.1"
   dependencies:
@@ -2893,6 +2893,20 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 6810f2d63f171d0b7b8d38cf091708e00cb31525501810a507839607839320d66e657293b0aa3d7f051ecbc025cb07390a90c037682c1d05d12604991e41050b
+  languageName: node
+  linkType: hard
+
+"browserslist@npm:^4.22.2":
+  version: 4.22.2
+  resolution: "browserslist@npm:4.22.2"
+  dependencies:
+    caniuse-lite: "npm:^1.0.30001565"
+    electron-to-chromium: "npm:^1.4.601"
+    node-releases: "npm:^2.0.14"
+    update-browserslist-db: "npm:^1.0.13"
+  bin:
+    browserslist: cli.js
+  checksum: 2a331aab90503130043ca41dd5d281fa1e89d5e076d07a2d75e76bf4d693bd56e73d5abcd8c4f39119da6328d450578c216cf1cd5c99b82d8a90a2ae6271b465
   languageName: node
   linkType: hard
 
@@ -2966,14 +2980,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001538, caniuse-lite@npm:^1.0.30001541":
+"caniuse-lite@npm:^1.0.30001541":
   version: 1.0.30001565
   resolution: "caniuse-lite@npm:1.0.30001565"
   checksum: b400e0364651a700e39d59449ca6c65b26e2caceecc4b93ae54a01ed1f62d2a7e1333b1dc640d95fbe620ffa5be38fe4dbacd880cd7a1f42fc72bb8de9a2d0c9
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001579":
+"caniuse-lite@npm:^1.0.30001565, caniuse-lite@npm:^1.0.30001578, caniuse-lite@npm:^1.0.30001579":
   version: 1.0.30001579
   resolution: "caniuse-lite@npm:1.0.30001579"
   checksum: 4003970f8d01a5fa314e39f4a21751dc750a530f3d19aed225e18e8e02892b590b8b0debfa0961eae9bc0e49b77bfb17cf30d2469540e428a8305e3cc9164fb8
@@ -3439,6 +3453,13 @@ __metadata:
   version: 1.4.601
   resolution: "electron-to-chromium@npm:1.4.601"
   checksum: 345226e9edff5b72bd431b5bec1eaabc3c85e430fa0171586b539c64e5bde7c161cad6387e657ab8e0f197a894c1679f19c60f687baad12118a06e1db543cf95
+  languageName: node
+  linkType: hard
+
+"electron-to-chromium@npm:^1.4.601":
+  version: 1.4.640
+  resolution: "electron-to-chromium@npm:1.4.640"
+  checksum: fe5e2eaf3bdd73c1628ed0a7856a1d6afad99bdcceec6cacf87e7bac31db8514a52084d040b95b956ceba4f95723a6f3cf40a91f21b0061e6490328c9099dc4a
   languageName: node
   linkType: hard
 
@@ -4046,7 +4067,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fraction.js@npm:^4.3.6":
+"fraction.js@npm:^4.3.7":
   version: 4.3.7
   resolution: "fraction.js@npm:4.3.7"
   checksum: df291391beea9ab4c263487ffd9d17fed162dbb736982dee1379b2a8cc94e4e24e46ed508c6d278aded9080ba51872f1bc5f3a5fd8d7c74e5f105b508ac28711
@@ -5511,6 +5532,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-releases@npm:^2.0.14":
+  version: 2.0.14
+  resolution: "node-releases@npm:2.0.14"
+  checksum: 199fc93773ae70ec9969bc6d5ac5b2bbd6eb986ed1907d751f411fef3ede0e4bfdb45ceb43711f8078bea237b6036db8b1bf208f6ff2b70c7d615afd157f3ab9
+  languageName: node
+  linkType: hard
+
 "nopt@npm:^7.0.0":
   version: 7.2.0
   resolution: "nopt@npm:7.2.0"
@@ -6032,11 +6060,11 @@ __metadata:
   linkType: hard
 
 "prettier@npm:^3.1.0":
-  version: 3.2.2
-  resolution: "prettier@npm:3.2.2"
+  version: 3.2.4
+  resolution: "prettier@npm:3.2.4"
   bin:
     prettier: bin/prettier.cjs
-  checksum: e84d0d2a4ce2b88ee1636904effbdf68b59da63d9f887128f2ed5382206454185432e7c0a9578bc4308bc25d099cfef47fd0b9c211066777854e23e65e34044d
+  checksum: 88dfeb78ac6096522c9a5b81f1413d875f568420d9bb6a5e5103527912519b993f2bcdcac311fcff5718d5869671d44e4f85827d3626f3a6ce32b9abc65d88e0
   languageName: node
   linkType: hard
 
