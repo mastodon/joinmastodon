@@ -1515,8 +1515,8 @@ __metadata:
   linkType: hard
 
 "@formatjs/cli@npm:^6.2.4":
-  version: 6.2.6
-  resolution: "@formatjs/cli@npm:6.2.6"
+  version: 6.2.7
+  resolution: "@formatjs/cli@npm:6.2.7"
   peerDependencies:
     vue: ^3.3.4
   peerDependenciesMeta:
@@ -1524,7 +1524,7 @@ __metadata:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: 10c0/f8b0bc45c72b83437f0dc91a2d3ea513852c11bfd8eedbc2f255b19552f153bccb4d38fcd281f897ca60d0dfddf2b99de22e5a87cb1e173ca11df88c61cde2e4
+  checksum: 10c0/ee7b0873a734e02721ce1ee107ee60845bb30855f4ca686bfb6c5e9862353249d5d20748b18db93200aabc7a59875ff062f485c64d41cb8e61f1d43e2bb5eceb
   languageName: node
   linkType: hard
 
@@ -2236,22 +2236,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-devtools@npm:5.17.21":
-  version: 5.17.21
-  resolution: "@tanstack/query-devtools@npm:5.17.21"
-  checksum: 10c0/bf3db47e4b825adf77b6c31b218feee469bdb8e7493898f6eddc84e11dc60d90a11a78f406ac6f8ce90661af668051937c8a47ff69faa60272d78c1afef24903
+"@tanstack/query-devtools@npm:5.18.1":
+  version: 5.18.1
+  resolution: "@tanstack/query-devtools@npm:5.18.1"
+  checksum: 10c0/ba2103b4ce56221ab57ccf026bb127cb58aba490cff9755074422ab4c657d0ef8e4bd22b1d292a027ac68b53f7c74084a9dcaf79c3c3d18f5724a8455225cb10
   languageName: node
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.12.2":
-  version: 5.17.21
-  resolution: "@tanstack/react-query-devtools@npm:5.17.21"
+  version: 5.18.1
+  resolution: "@tanstack/react-query-devtools@npm:5.18.1"
   dependencies:
-    "@tanstack/query-devtools": "npm:5.17.21"
+    "@tanstack/query-devtools": "npm:5.18.1"
   peerDependencies:
-    "@tanstack/react-query": ^5.17.19
+    "@tanstack/react-query": ^5.18.1
     react: ^18.0.0
-  checksum: 10c0/f568617056450bb6b117a1cd28e0eb1b3592a474efc89ef0ed478c46dfe9b60b5062eda041186f62d580c7bb3d9ce8611b2ce4df18dcb0a9238d57cf1b024e00
+  checksum: 10c0/ccd77c27516764c73374b4917f9a6b203acbbf5e844d5796f2469eef16ffd73168e88745af291bc16d9bbc169336888c435c258fae396f7f39b3d648e315f276
   languageName: node
   linkType: hard
 
@@ -6046,11 +6046,11 @@ __metadata:
   linkType: hard
 
 "prettier@npm:^3.1.0":
-  version: 3.2.4
-  resolution: "prettier@npm:3.2.4"
+  version: 3.2.5
+  resolution: "prettier@npm:3.2.5"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/88dfeb78ac6096522c9a5b81f1413d875f568420d9bb6a5e5103527912519b993f2bcdcac311fcff5718d5869671d44e4f85827d3626f3a6ce32b9abc65d88e0
+  checksum: 10c0/ea327f37a7d46f2324a34ad35292af2ad4c4c3c3355da07313339d7e554320f66f65f91e856add8530157a733c6c4a897dc41b577056be5c24c40f739f5ee8c6
   languageName: node
   linkType: hard
 
