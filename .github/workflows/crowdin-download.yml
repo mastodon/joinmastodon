@@ -1,7 +1,7 @@
 name: Crowdin / Download translations
 on:
   schedule:
-    - cron: "27 4 1 * *" # Every week
+    - cron: "27 4 */7 * *" # Every week
   workflow_dispatch:
 
 permissions:
