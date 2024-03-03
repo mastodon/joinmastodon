@@ -1898,13 +1898,13 @@ __metadata:
   linkType: hard
 
 "@linear/sdk@npm:^15.0.0":
-  version: 15.0.0
-  resolution: "@linear/sdk@npm:15.0.0"
+  version: 15.0.1
+  resolution: "@linear/sdk@npm:15.0.1"
   dependencies:
     "@graphql-typed-document-node/core": "npm:^3.1.0"
     graphql: "npm:^15.4.0"
     isomorphic-unfetch: "npm:^3.1.0"
-  checksum: 10c0/7a3cb4b59b384d2955a79493313d2d2604b2ce0d47403b4c7122eef90308ee254da78572ec10ec1cb18ba1a46d0e480bc8cc0fb692218b23bd86268fc87caeaa
+  checksum: 10c0/d3f3f40ebb063bb923aa303640a40a12a1ba37bbe3f3c0e94d5c335dc7a3e258c5c59cf5a5cf5368c0d51b665a8471a3758aad117ec9fd1ee4ad012a3a2d804b
   languageName: node
   linkType: hard
 
