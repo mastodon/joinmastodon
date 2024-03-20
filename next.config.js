@@ -1,5 +1,10 @@
 const { locales, defaultLocale } = require("./data/locales.js")
 
+function notIfProduction(param) {
+  if (process.env.NODE_ENV === "production") return ""
+  else return param
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -53,8 +58,7 @@ const nextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; child-src 'none'; object-src 'none'; img-src 'self' proxy.joinmastodon.org blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' api.joinmastodon.org; block-all-mixed-content",
+            value: `default-src 'self'; child-src 'none'; object-src 'none'; img-src 'self' proxy.joinmastodon.org blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self' ${notIfProduction("'unsafe-inline' 'unsafe-eval'")}; connect-src 'self' api.joinmastodon.org; block-all-mixed-content`,
           },
         ],
       })
