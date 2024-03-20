@@ -1,5 +1,10 @@
 const { locales, defaultLocale } = require("./data/locales.js")
 
+function notIfProduction(param) {
+  if (process.env.NODE_ENV === "production") return ""
+  else return param
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -21,15 +26,42 @@ const nextConfig = {
       "/favicon-:all*(png)",
       "/app-icon.png",
       "/preview.png",
-    ].map((source) => ({
-      source,
-      headers: [
-        {
-          key: "Cache-control",
-          value: "max-age=3600, stale-while-revalidate",
-        },
-      ],
-    }))
+    ]
+      .map((source) => ({
+        source,
+        headers: [
+          {
+            key: "Cache-control",
+            value: "max-age=3600, stale-while-revalidate",
+          },
+        ],
+      }))
+      .concat({
+        source: "/(.*)?",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Permissions-Policy",
+            value:
+              "camera=(), microphone=(), geolocation=(), browsing-topics=()",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "origin-when-cross-origin",
+          },
+          {
+            key: "Content-Security-Policy",
+            value: `default-src 'self'; child-src 'none'; object-src 'none'; img-src 'self' proxy.joinmastodon.org blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self' ${notIfProduction("'unsafe-inline' 'unsafe-eval'")}; connect-src 'self' api.joinmastodon.org; block-all-mixed-content`,
+          },
+        ],
+      })
   },
   async redirects() {
     return [
@@ -82,6 +114,7 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i
     return config
   },
+  poweredByHeader: false,
   output: "standalone",
 }
 
