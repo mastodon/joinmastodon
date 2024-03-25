@@ -1515,8 +1515,8 @@ __metadata:
   linkType: hard
 
 "@formatjs/cli@npm:^6.2.4":
-  version: 6.2.7
-  resolution: "@formatjs/cli@npm:6.2.7"
+  version: 6.2.8
+  resolution: "@formatjs/cli@npm:6.2.8"
   peerDependencies:
     vue: ^3.3.4
   peerDependenciesMeta:
@@ -1524,7 +1524,7 @@ __metadata:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: 10c0/ee7b0873a734e02721ce1ee107ee60845bb30855f4ca686bfb6c5e9862353249d5d20748b18db93200aabc7a59875ff062f485c64d41cb8e61f1d43e2bb5eceb
+  checksum: 10c0/5d8f95434f4522eee7dd3acf54e5265289ec7e72812448cd7c7547bdedaba8927719800dfa2fc92fb82c609f34255367a80d18bf6c064540d5e11ec6b9d4603e
   languageName: node
   linkType: hard
 
@@ -2236,22 +2236,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-devtools@npm:5.28.3":
-  version: 5.28.3
-  resolution: "@tanstack/query-devtools@npm:5.28.3"
-  checksum: 10c0/5a7db6e96ce0a4ca28eb121cb6d49d4e1de605b814cc5cd213a9300136d50187cc6ca07642ffa02a5ecb4085b66eb55a9a584e21a88ddb981c7aecab5ef79386
+"@tanstack/query-devtools@npm:5.28.6":
+  version: 5.28.6
+  resolution: "@tanstack/query-devtools@npm:5.28.6"
+  checksum: 10c0/f11dc9fac3f8a929918ab01409eb3389c974d68f1f4766f3b1233ff9cdbbb515c3bf1c91fb8aaa4fb877c69b3caa9a08053a7cb1da4be22d1e97a25b86ff1d1f
   languageName: node
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.12.2":
-  version: 5.28.4
-  resolution: "@tanstack/react-query-devtools@npm:5.28.4"
+  version: 5.28.8
+  resolution: "@tanstack/react-query-devtools@npm:5.28.8"
   dependencies:
-    "@tanstack/query-devtools": "npm:5.28.3"
+    "@tanstack/query-devtools": "npm:5.28.6"
   peerDependencies:
-    "@tanstack/react-query": ^5.28.4
+    "@tanstack/react-query": ^5.28.8
     react: ^18.0.0
-  checksum: 10c0/f790247887cc1991e986351cd071092215222b1e7c8349b4183b53dfa1f40e1f7ea410b79011b3dcb591089ffa3d9fe47359bfea77c48f36904255776cbe6324
+  checksum: 10c0/21c8bcfcf3d9fcbf71fee76c6334d8d431ab3d746a027c7a75ac31407bbfbe2dd53d7f5ccda96bae6098dbcbe8e14b575918fab9638838f0f54d6fdd0c566278
   languageName: node
   linkType: hard
 
@@ -2798,11 +2798,11 @@ __metadata:
   linkType: hard
 
 "autoprefixer@npm:^10.4.16":
-  version: 10.4.18
-  resolution: "autoprefixer@npm:10.4.18"
+  version: 10.4.19
+  resolution: "autoprefixer@npm:10.4.19"
   dependencies:
     browserslist: "npm:^4.23.0"
-    caniuse-lite: "npm:^1.0.30001591"
+    caniuse-lite: "npm:^1.0.30001599"
     fraction.js: "npm:^4.3.7"
     normalize-range: "npm:^0.1.2"
     picocolors: "npm:^1.0.0"
@@ -2811,7 +2811,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 10c0/b6e1c1ba2fc6c09360cdcd75b00ce809c5dbe1ad4c30f0186764609a982aa5563d45965cb9e6a9d195c639a9fb1dcac2594484fc41624050195f626e9add666e
+  checksum: 10c0/fe0178eb8b1da4f15c6535cd329926609b22d1811e047371dccce50563623f8075dd06fb167daff059e4228da651b0bdff6d9b44281541eaf0ce0b79125bfd19
   languageName: node
   linkType: hard
 
@@ -3058,10 +3058,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001587, caniuse-lite@npm:^1.0.30001591":
+"caniuse-lite@npm:^1.0.30001587":
   version: 1.0.30001594
   resolution: "caniuse-lite@npm:1.0.30001594"
   checksum: 10c0/738b4ea8b12f040baafe5fe4c63f16f27c10334e0a36cc9786811b781a92c749523abc88cf20a4f4f9da0413e1c13b0482ee8e8b7398a3554742fba036b8ed91
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001599":
+  version: 1.0.30001600
+  resolution: "caniuse-lite@npm:1.0.30001600"
+  checksum: 10c0/b4f764db5d4f8cb3eb2827a170a20e6b2f4b8c3d80169efcf56bf3d6b8b3e6dd1c740141f0d0b10b2233f49ee8b496e2d1e044a36c54750a106bad2f6477f2db
   languageName: node
   linkType: hard
 
@@ -6048,13 +6055,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8.0.9, postcss@npm:^8.4.23, postcss@npm:^8.4.32":
-  version: 8.4.36
-  resolution: "postcss@npm:8.4.36"
+  version: 8.4.38
+  resolution: "postcss@npm:8.4.38"
   dependencies:
     nanoid: "npm:^3.3.7"
     picocolors: "npm:^1.0.0"
-    source-map-js: "npm:^1.1.0"
-  checksum: 10c0/e7c834e31d8f4e8dfd0a427df36fdc7bdc58a16e373551618e2c3ac172019eb816b24f1b4709311ebcade8d3ba31b2d75522d28ef45ecbbeb11eb01f265579fb
+    source-map-js: "npm:^1.2.0"
+  checksum: 10c0/955407b8f70cf0c14acf35dab3615899a2a60a26718a63c848cf3c29f2467b0533991b985a2b994430d890bd7ec2b1963e36352b0774a19143b5f591540f7c06
   languageName: node
   linkType: hard
 
@@ -6732,10 +6739,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "source-map-js@npm:1.1.0"
-  checksum: 10c0/d1f016efe4fcf67fd92e36da0670f2889b13a36cc453329758336450e811c61164376eb451b453b4dd4e89a760f841b0a014942d54f240af31a791829bc0e336
+"source-map-js@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "source-map-js@npm:1.2.0"
+  checksum: 10c0/7e5f896ac10a3a50fe2898e5009c58ff0dc102dcb056ed27a354623a0ece8954d4b2649e1a1b2b52ef2e161d26f8859c7710350930751640e71e374fe2d321a4
   languageName: node
   linkType: hard
 
