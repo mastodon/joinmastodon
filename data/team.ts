@@ -72,6 +72,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Inga Driksne",
+    position: "Operations",
+    socials: {
+      mastodon: "https://mastodon.social/@inganomads",
+    },
+  },
+
+  {
     name: "Andy Piper",
     position: "DevRel",
     socials: {
