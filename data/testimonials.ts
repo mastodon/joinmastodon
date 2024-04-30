@@ -102,12 +102,5 @@ const testimonials: Testimonial[] = [
     avatar: "/testimonials/avatar_guedes.jpg",
     profile_url: "https://mastodon.social/@guedes",
   },
-  {
-    text: "So far I'm absolutely loving Mastodon! It it everything I looked to get rid of in Facebook/Twitter etc...",
-    name: "biomedmax",
-    username: "biomedmex@qoto.org",
-    avatar: "/testimonials/avatar_biomedmax.jpg",
-    profile_url: "https://qoto.org/@biomedmax",
-  },
 ]
 export default testimonials
