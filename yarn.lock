@@ -1515,16 +1515,37 @@ __metadata:
   linkType: hard
 
 "@formatjs/cli@npm:^6.2.4":
-  version: 6.2.9
-  resolution: "@formatjs/cli@npm:6.2.9"
+  version: 6.2.10
+  resolution: "@formatjs/cli@npm:6.2.10"
   peerDependencies:
+    "@glimmer/env": ^0.1.7
+    "@glimmer/reference": ^0.91.1
+    "@glimmer/syntax": ^0.91.1
+    "@glimmer/validator": ^0.91.1
+    "@vue/compiler-core": ^3.4.0
+    content-tag: ^2.0.1
+    ember-template-recast: ^6.1.4
     vue: ^3.4.0
   peerDependenciesMeta:
+    "@glimmer/env":
+      optional: true
+    "@glimmer/reference":
+      optional: true
+    "@glimmer/syntax":
+      optional: true
+    "@glimmer/validator":
+      optional: true
+    "@vue/compiler-core":
+      optional: true
+    content-tag:
+      optional: true
+    ember-template-recast:
+      optional: true
     vue:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: 10c0/498383bcdca7f8f8a748c1151be17392f71eb1861f6a23bc714280533167cba7cdc35a470a380113f6111236e721ff43cbee7b084939dac67b6a5d9b04c0587c
+  checksum: 10c0/34b1b0b3be25d945111c1f57913f50da7308ecd05501a27eaca210a774eb50c616b5706ba796d37ffa223ac4c5cddd5f36fe0ca8d31ad8c8ade79cdd497ccfb9
   languageName: node
   linkType: hard
 
@@ -2251,22 +2272,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-devtools@npm:5.28.10":
-  version: 5.28.10
-  resolution: "@tanstack/query-devtools@npm:5.28.10"
-  checksum: 10c0/7d055a1f189096a60a0e45623042aeeca285176d15bc0830a0c71c551f7065961ead1a1ae4dce8e189af11b39e2ee0c07aa05f4cf0e32e9e245881b02d7504e5
+"@tanstack/query-devtools@npm:5.32.1":
+  version: 5.32.1
+  resolution: "@tanstack/query-devtools@npm:5.32.1"
+  checksum: 10c0/ad13f04641cae4c6ac70094d4979a5b1cbf3dc7a4795fce6847eb645ba06bd9e0e7057af3204c5ee9170c011290504d0edf26a8cdb920a65c4b1bb97bcbe037a
   languageName: node
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.12.2":
-  version: 5.32.0
-  resolution: "@tanstack/react-query-devtools@npm:5.32.0"
+  version: 5.35.1
+  resolution: "@tanstack/react-query-devtools@npm:5.35.1"
   dependencies:
-    "@tanstack/query-devtools": "npm:5.28.10"
+    "@tanstack/query-devtools": "npm:5.32.1"
   peerDependencies:
-    "@tanstack/react-query": ^5.32.0
+    "@tanstack/react-query": ^5.35.1
     react: ^18.0.0
-  checksum: 10c0/79bd124c834eb367b4bf89e7960c504c71b02dbe3db959f8fc4a4479e7b65614f6ec669c0a5a97db3fdb0f2995db00ebf7fff041ee620c9bd18c0e7aa2d9ae38
+  checksum: 10c0/030ed59d06824fa08d676855c1d008ded16bbc76ad4cf0fb375cacc36da4dfd3bc72b315a74f3570db7795a84601a7059d97520e1247d0084df0e1677dde198d
   languageName: node
   linkType: hard
 
