@@ -1702,8 +1702,8 @@ __metadata:
   linkType: hard
 
 "@headlessui/react@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@headlessui/react@npm:2.0.0"
+  version: 2.0.3
+  resolution: "@headlessui/react@npm:2.0.3"
   dependencies:
     "@floating-ui/react": "npm:^0.26.13"
     "@react-aria/focus": "npm:^3.16.2"
@@ -1712,7 +1712,7 @@ __metadata:
   peerDependencies:
     react: ^18
     react-dom: ^18
-  checksum: 10c0/e2c8dcb571c42a6dc2b19c7038c03eba011d7fb9c818511eb81ba961a2fc3044c5728124f9995723b70224111da5e1922aa8f890413702523ef249ab85fe3f28
+  checksum: 10c0/5584b3291f79ae94f8789650244388220b28e049248897cdd54778250e8aa8802589676c2ccbf4e9af8edcfaa6d532f92754d24863b11b5cf99a59d1ed7fe79c
   languageName: node
   linkType: hard
 
