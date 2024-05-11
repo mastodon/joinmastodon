@@ -87,9 +87,9 @@ const About = () => (
                 {team.map((member) => (
                   <div
                     key={member.name}
-                    className="col-span-12 sm:col-span-6 lg:col-span-4"
+                    className="col-span-6 lg:col-span-4 mb-6"
                   >
-                    <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-lg bg-blurple-gradient shadow">
+                    {/* <div className="relative mb-4 aspect-video w-full overflow-hidden rounded-lg bg-blurple-gradient shadow">
                       {member.image && (
                         <Image
                           src={member.image}
@@ -100,13 +100,11 @@ const About = () => (
                           className="grayscale"
                         />
                       )}
-                    </div>
-
-                    <span className="b2 block !font-bold">{member.name}</span>
+                    </div> */}
 
                     <div className="flex items-center">
-                      <span className="b2 block flex-grow !font-semibold text-gray-1">
-                        {member.position}
+                      <span className="b2 block flex-grow !font-bold">
+                        {member.name}
                       </span>
 
                       {member.socials && (
@@ -122,6 +120,12 @@ const About = () => (
                         </a>
                       )}
                     </div>
+
+                    <div className="flex items-center">
+                      <span className="b2 block flex-grow !font-semibold text-gray-1">
+                        {member.position}
+                      </span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -134,7 +138,7 @@ const About = () => (
             </div>
 
             <div className="col-span-12 md:col-span-3">
-              <a id="reports" className="invisible relative -top-32"/>
+              <a id="reports" className="invisible relative -top-32" />
               <h2 className="h3 mb-4">Reports</h2>
 
               <ul className="list-disc pl-3">
