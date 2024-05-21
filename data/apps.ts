@@ -54,6 +54,7 @@ import rodent from "../public/apps/rodent.png"
 import heffalump from "../public/apps/heffalump.png"
 import mostodon from "../public/apps/mostodon.png"
 import brutaldon from "../public/apps/brutaldon.png"
+import fcli from "../public/apps/fcli.png"
 import type { StaticImageData } from "next/legacy/image"
 
 export type appsList = {
@@ -376,6 +377,13 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
       paid: true,
       hidden_from_all: true,
+    },
+    {
+      released_on: "Apr 15, 2024",
+      name: "fcli",
+      icon: fcli,
+      url: "https://github.com/philcowans/fcli",
+      paid: false,
     },
   ],
   sailfish: [
