@@ -19,11 +19,6 @@ const sponsors = {
       name: "Postmark",
     }, // Custom/other
     {
-      url: "https://mobi.com/",
-      logo: require("../public/sponsors/mobi-across-big.png"),
-      name: "Mobi",
-    }, // Custom
-    {
       url: "https://medium.com/",
       logo: require("../public/sponsors/medium.png"),
       name: "Medium",
@@ -94,69 +89,9 @@ const sponsors = {
       name: "Krystal Hosting",
     }, // Custom
     {
-      url: "https://www.raspberrypi.com/",
-      logo: require("../public/sponsors/Raspberry-Pi-Logo.png"),
-      name: "Raspberry Pi",
-    }, // Custom
-    {
-      url: "https://www.zerotier.com/",
-      logo: require("../public/sponsors/zerotier_logo_black.png"),
-      name: "ZeroTier, Inc.",
-    }, // Custom
-    {
       url: "https://www.goldeneaglecoin.com/",
       logo: require("../public/sponsors/ge-logo-coin-card2.png"),
       name: "Golden Eagle Coins",
-    }, // Custom
-    {
-      url: "https://rubycentral.org/",
-      logo: require("../public/sponsors/ruby-central.jpeg"),
-      name: "Ruby Central",
-    }, // Custom
-    {
-      url: "https://opalstack.com/?utm_campaign=mastodon2022&utm_source=joinmastodon&utm_term=mastodon%2Bhosting",
-      logo: require("../public/sponsors/opal-stack.svg"),
-      name: "Managed Hosting for developers, entrepreneurs, and businesses like yours.",
-    }, // Custom
-    {
-      url: "https://allbursaries.co.za/",
-      logo: require("../public/sponsors/AMP All Bursaries South Africa.png"),
-      name: "AllBursaries",
-    }, // Custom
-    {
-      url: "https://theoatmeal.com/",
-      logo: require("../public/sponsors/oatmeal_logo_2020_square@5x.png"),
-      name: "The Oatmeal",
-    }, // Custom
-    {
-      url: "https://www.completewebresources.com/",
-      logo: require("../public/sponsors/complete-seo-logo-padding.png"),
-      name: "Complete SEO",
-    }, // Custom
-    {
-      url: "https://intellifluence.com/",
-      logo: require("../public/sponsors/intellifluence logos.png"),
-      name: "Intellifluence supports all influencers",
-    }, // Custom
-    {
-      url: "https://toot.io/mastodon_hosting.html",
-      logo: require("../public/sponsors/toot_io_logo.png"),
-      name: "toot.io",
-    }, // Custom
-    {
-      url: "https://www.4kdownload.com/products/videodownloader-24",
-      logo: require("../public/sponsors/video-downloader.png"),
-      name: "Video Downloader",
-    }, // Custom
-    {
-      url: "https://veepn.com/vpn-apps/download-vpn-for-pc/",
-      logo: require("../public/sponsors/veepn.png"),
-      name: "Download VPN for PC by VeePN super simple, fast, and trustful VPN for all family.",
-    }, // Custom
-    {
-      url: "https://werd.io",
-      logo: require("../public/sponsors/werdio2.png"),
-      name: "Werd I/O",
     }, // Custom
     {
       url: "https://mask.io/",
@@ -174,11 +109,6 @@ const sponsors = {
       url: "https://www.partitionwizard.com/",
       logo: require("../public/sponsors/minitool.png"),
       name: "MiniTool Partition Wizard",
-    },
-    {
-      url: "https://www.mysextoyguide.com/",
-      logo: require("../public/sponsors/mysextoyguide.jpg"),
-      name: "MySexToyGuide",
     },
     {
       url: "https://www.kevani.com/",
@@ -211,17 +141,12 @@ const sponsors = {
       name: "Farbridge",
     },
     {
-      url: "https://www.sure.bet/casinos-not-on-gamstop/",
-      logo: require("../public/sponsors/surebet.jpg"),
-      name: "non GamStop Casinos",
-    }, // Custom
-    {
       url: "https://www.onestein.nl",
       logo: require("../public/sponsors/onestein.png"),
       name: "Onestein B.V.",
     }, // Custom
     {
-      url: "https://home.social/@ralf",
+      url: "https://rottmann.social/@ralf",
       logo: require("../public/sponsors/Rottmann_Ventures.png"),
       name: "Rottmann Ventures GmbH",
     }, // Custom
@@ -236,24 +161,9 @@ const sponsors = {
       name: "Internet Archive",
     }, // Custom
     {
-      url: "https://www.ecurium.com/",
-      logo: require("../public/sponsors/ecurium-for-nonprofits.svg"),
-      name: "Ecurium",
-    }, // Custom
-    {
       url: "https://www.blindfiveyearold.com/",
       logo: require("../public/sponsors/BFYO-Logo.png"),
       name: "Blind Five Year Old",
-    }, // Custom
-    {
-      url: "https://j15r.com/",
-      logo: require("../public/sponsors/j15r.png"),
-      name: "Joel Webber",
-    }, // Custom
-    {
-      url: "https://goodyfeed.com/",
-      logo: require("../public/sponsors/goody-feed.png"),
-      name: "Goody Feed",
     }, // Custom
     {
       url: "http://www.reboot.io/",
@@ -264,11 +174,6 @@ const sponsors = {
       url: "https://sdf.org/",
       logo: require("../public/sponsors/sdf.png"),
       name: "SDF Public Access UNIX System",
-    }, // Custom
-    {
-      url: "https://awisee.agency/",
-      logo: require("../public/sponsors/awisee2.jpg"),
-      name: "Data-Driven SEO Agency",
     }, // Custom
     {
       url: "https://kaleidos.net/products",
@@ -286,15 +191,10 @@ const sponsors = {
       name: "Happeo intranet",
     }, // Custom
     {
-      url: "https://nongamstopcasinos.net/gb/",
-      logo: require("../public/sponsors/nongamstop.png"),
-      name: "https://nongamstopcasinos.net/gb/",
-    }, // Custom
-    {
-      url: "https://www.grabmyessay.com/pay-for-essay",
-      logo: require("../public/sponsors/gme.jpg"),
-      name: "Grabmyessay",
-    }, // Custom
+      url: "https://bountii.coupons/",
+      logo: require("../public/sponsors/bountii.png"),
+      name: "Bountii",
+    },
   ],
   silver: [
     {
