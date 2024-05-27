@@ -1,24 +1,25 @@
-import BasicPage from "../components/BasicPage"
+import BasicPage from "../../components/BasicPage"
 import Head from "next/head"
-import Hero from "../components/Hero"
-import { withDefaultStaticProps } from "../utils/defaultStaticProps"
-import Layout from "../components/Layout"
-import heroImage from "../public/illustrations/apps_hero_desktop.png"
+import Hero from "../../components/Hero"
+import { withDefaultStaticProps } from "../../utils/defaultStaticProps"
+import Layout from "../../components/Layout"
+import heroImage from "../../public/illustrations/apps_hero_desktop.png"
 import Image from "next/legacy/image"
 import { FormattedDate, FormattedMessage } from "react-intl"
 import Link from "next/link"
 import { useQuery } from "@tanstack/react-query"
-import Statistic from "../components/Statistic"
-import { Day } from "../types/api"
-import team from "../data/team"
-import interviews from "../data/interviews"
-import press from "../data/press"
-import LinkWithArrow from "../components/LinkWithArrow"
-import PressArticle from "../components/PressArticle"
+import Statistic from "../../components/Statistic"
+import { Day } from "../../types/api"
+import team from "../../data/team"
+import board from "../../data/board"
+import interviews from "../../data/interviews"
+import press from "../../data/press"
+import LinkWithArrow from "../../components/LinkWithArrow"
+import PressArticle from "../../components/PressArticle"
 
-import PersonIcon from "../public/ui/person.svg?inline"
-import FiltersIcon from "../public/ui/filters.svg?inline"
-import LogoWhite from "../public/logos/logo-white.svg?inline"
+import PersonIcon from "../../public/ui/person.svg?inline"
+import FiltersIcon from "../../public/ui/filters.svg?inline"
+import LogoWhite from "../../public/logos/logo-white.svg?inline"
 
 const About = () => (
   <Layout>
@@ -126,6 +127,71 @@ const About = () => (
                         {member.position}
                       </span>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="col-span-12 md:col-span-6">
+              <h2 className="h3 mb-6">Mastodon, Inc.</h2>
+
+              <p className="b1 mb-4">
+                Mastodon, Inc. (EIN 92-3333630) is a 501(c)(3) non-profit entity in the United States
+                that supports the growth and operational capabilities of Mastodon, including being able
+                to receive tax-deductible U.S. donations and in-kind support.
+              </p>
+            </div>
+
+            <div className="col-span-12 md:col-span-6">
+              <a id="board" className="invisible block relative -top-32"/>
+              <h2 className="h3 mb-6" id="board_of_directors">
+                Meet the Board
+              </h2>
+              <div className="grid grid-cols-12 gap-gutter">
+                {board.map((member) => (
+                  <div
+                    key={member.name}
+                    className="col-span-6 lg:col-span-4 mb-6"
+                  >
+                    <div className="flex items-center">
+                      <span className="b2 block flex-grow !font-bold">
+                        {member.slug ? (
+                          <Link
+                            key={`about/${member.slug}`}
+                            href={`/about/${member.slug}`}
+                            className="text-blurple-600 hocus:underline"
+                          >
+                            {member.name}
+                          </Link>
+                        ) : member.name}
+                      </span>
+
+                      {member.socials && (
+                        <a
+                          href={member.socials.mastodon}
+                          rel="me"
+                          className="b2 ml-2 block flex-shrink-0 text-blurple-600 hover:text-blurple-500"
+                        >
+                          <LogoWhite
+                            className="h-[1em] w-[1em]"
+                            fill="currentColor"
+                          />
+                        </a>
+                      )}
+                    </div>
+
+                    <div className="flex items-center">
+                      <span className="b2 block flex-grow !font-semibold text-gray-1">
+                        {member.position}
+                      </span>
+                    </div>
+                    {member.title && (
+                      <div className="flex items-center">
+                        <span className="b2 block flex-grow !font-bold">
+                          {member.title}  
+                        </span>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
