@@ -103,6 +103,11 @@ const sponsors = {
       logo: require("../public/sponsors/earthweb.png"),
       name: "EarthWeb",
     }, // Custom
+    {
+      url: "https://sidesmedia.com/",
+      logo: require("../public/sponsors/sides-media.png"),
+      name: "SidesMedia",
+    }, // Custom
   ],
   gold: [
     {
