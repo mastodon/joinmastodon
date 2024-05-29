@@ -98,6 +98,11 @@ const sponsors = {
       logo: require("../public/sponsors/mask-network.png"),
       name: "Mask Network",
     }, // Custom
+    {
+      url: "https://earthweb.com/",
+      logo: require("../public/sponsors/earthweb.png"),
+      name: "EarthWeb",
+    }, // Custom
   ],
   gold: [
     {
