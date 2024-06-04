@@ -108,6 +108,16 @@ const sponsors = {
       logo: require("../public/sponsors/sides-media.png"),
       name: "SidesMedia",
     }, // Custom
+    {
+      url: "https://bountii.coupons/",
+      logo: require("../public/sponsors/bountii.png"),
+      name: "Bountii",
+    }, // Custom
+    {
+      url: "https://veepn.com/vpn-apps/download-vpn-for-pc/",
+      logo: require("../public/sponsors/veepn.png"),
+      name: "Download VPN for PC by VeePN super simple, fast and trustful VPN for all family.",
+    }, // Custom
   ],
   gold: [
     {
@@ -200,11 +210,6 @@ const sponsors = {
       logo: require("../public/sponsors/happeo.png"),
       name: "Happeo intranet",
     }, // Custom
-    {
-      url: "https://bountii.coupons/",
-      logo: require("../public/sponsors/bountii.png"),
-      name: "Bountii",
-    },
   ],
   silver: [
     {
