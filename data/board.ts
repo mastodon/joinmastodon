@@ -12,8 +12,8 @@ export type BoardMember = {
   avatar?: string
 }
 
-export const BOARD_POSITION_DIRECTOR = "Board Director";
-export const BOARD_POSITION_OBSERVER = "Board Observer";
+export const BOARD_POSITION_DIRECTOR = "director";
+export const BOARD_POSITION_OBSERVER = "observer";
 
 export const board: BoardMember[] = [
   {
@@ -34,6 +34,7 @@ export const board: BoardMember[] = [
       mastodon: "https://mastodon.social/@aghavi"
     },
     slug: "amir-ghavi",
+    avatar: require("../public/avatars/aghavi.jpg"),
   },
   {
     name: "Felix Hlatky",

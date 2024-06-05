@@ -1,24 +1,31 @@
 import { useRouter } from "next/router"
 import Image from "next/legacy/image"
-import { FormattedMessage, useIntl } from 'react-intl'
 import bios from "../../data/bio"
-import board from "../../data/board"
+import board, { BOARD_POSITION_DIRECTOR, BOARD_POSITION_OBSERVER } from "../../data/board"
 import { withDefaultStaticProps } from "../../utils/defaultStaticProps"
 import Layout from "../../components/Layout"
 import LogoWhite from "../../public/logos/logo-white.svg?inline"
 
 const missingAvatarSrc = require("../../public/avatars/missing_avatar.png");
 
-function mapMastodonUrlToHandle(mastodonUrl: string) {
+function mapMastodonUrlToHandle(mastodonUrl: string): string {
   let parts = mastodonUrl.match(/https:\/\/([\w\.]+)\/@([\w]+)/);
   return `${parts[2]}@${parts[1]}`;
 }
 
+function mapBoardPositionToLabel(position: string): string {
+  switch (position) {
+    case BOARD_POSITION_DIRECTOR: return "Board Director";
+    case BOARD_POSITION_OBSERVER: return "Board Observer";
+    default: return "";
+  }
+}
+
 const AboutMember = () => {
   const router = useRouter()
-  const intl = useIntl()
   const member = board.find(member => member.slug === router.query.slug)
   const avatarSrc = member.avatar || missingAvatarSrc;
+  const boardPositionLabel = mapBoardPositionToLabel(member.position);
 
   return (
     <Layout transparentHeader={false}>
@@ -27,15 +34,7 @@ const AboutMember = () => {
         <div className="mx-auto w-full max-w-site px-6 sm:px-20 lg:px-32 xl:px-52">
           <div className="md:grid md:grid-cols-12 md:gap-y-24 pt-40 pb-10 md:gap-x-12 border-b border-gray-3 ">
             <div className="md:col-span-7 md:col-start-6">
-              <FormattedMessage
-                  id="about.title"
-                  defaultMessage="About {name}"
-                  values={{
-                    name: member.name
-                  }}
-                >
-                  {txt => <span className="h3">{txt}</span>}
-                </FormattedMessage>
+              <span className="h3">{member.name}</span>
             </div>
           </div>
           <div className="md:grid md:grid-cols-12 md:gap-y-24 pt-10 pb-60 md:gap-x-12">
@@ -48,7 +47,7 @@ const AboutMember = () => {
                   <div className="b2 mt-2">{member.otherTitle}</div>
                 )}
                 <div className="b2 mt-2">
-                  {member.title ? `${member.position}, ${member.title}` : member.position}
+                  {member.title ? `${boardPositionLabel}, ${member.title}` : boardPositionLabel}
                 </div>
                 {member.socials && (
                   <div className="flex flex-row items-center mt-2">
@@ -69,7 +68,7 @@ const AboutMember = () => {
             </div>
             <div className="md:col-span-7 lg:col-span-6 md:col-start-6">
               <p className="b2">
-                {intl.formatMessage(bios[member.slug])}
+                {bios[member.slug]}
               </p>
             </div>
           </div>
