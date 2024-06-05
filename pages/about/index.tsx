@@ -16,6 +16,7 @@ import interviews from "../../data/interviews"
 import press from "../../data/press"
 import LinkWithArrow from "../../components/LinkWithArrow"
 import PressArticle from "../../components/PressArticle"
+import { mapBoardPositionToLabel } from "../../utils/map"
 
 import PersonIcon from "../../public/ui/person.svg?inline"
 import FiltersIcon from "../../public/ui/filters.svg?inline"
@@ -182,7 +183,7 @@ const About = () => (
 
                     <div className="flex items-center">
                       <span className="b2 block flex-grow !font-semibold text-gray-1">
-                        {member.position}
+                        {mapBoardPositionToLabel(member.position)}
                       </span>
                     </div>
                     {member.title && (

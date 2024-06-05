@@ -1,25 +1,13 @@
 import { useRouter } from "next/router"
 import Image from "next/legacy/image"
 import bios from "../../data/bio"
-import board, { BOARD_POSITION_DIRECTOR, BOARD_POSITION_OBSERVER } from "../../data/board"
+import board from "../../data/board"
 import { withDefaultStaticProps } from "../../utils/defaultStaticProps"
+import { mapMastodonUrlToHandle, mapBoardPositionToLabel } from "../../utils/map"
 import Layout from "../../components/Layout"
 import LogoWhite from "../../public/logos/logo-white.svg?inline"
 
-const missingAvatarSrc = require("../../public/avatars/missing_avatar.png");
-
-function mapMastodonUrlToHandle(mastodonUrl: string): string {
-  let parts = mastodonUrl.match(/https:\/\/([\w\.]+)\/@([\w]+)/);
-  return `${parts[2]}@${parts[1]}`;
-}
-
-function mapBoardPositionToLabel(position: string): string {
-  switch (position) {
-    case BOARD_POSITION_DIRECTOR: return "Board Director";
-    case BOARD_POSITION_OBSERVER: return "Board Observer";
-    default: return "";
-  }
-}
+const missingAvatarSrc = require("../../public/avatars/missing_avatar.png")
 
 const AboutMember = () => {
   const router = useRouter()
