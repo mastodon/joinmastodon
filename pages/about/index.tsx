@@ -143,7 +143,7 @@ const About = () => (
             </div>
 
             <div className="col-span-12 md:col-span-6">
-              <a id="board" className="invisible block relative -top-32"/>
+              <a id="us-board" className="invisible block relative -top-32"/>
               <h2 className="h3 mb-6" id="board_of_directors">
                 Meet the Board
               </h2>
