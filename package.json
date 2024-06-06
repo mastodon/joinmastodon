@@ -12,7 +12,7 @@
     "lint": "next lint",
     "update-sponsors": "node --experimental-fetch patreon.mjs",
     "update-roadmap": "node linear.mjs",
-    "extract": "formatjs extract '{components,pages}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'"
+    "extract": "formatjs extract '{components,pages,data}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'"
   },
   "dependencies": {
     "@headlessui/react": "^2.0.0",
