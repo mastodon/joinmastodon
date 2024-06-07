@@ -55,6 +55,7 @@ import heffalump from "../public/apps/heffalump.png"
 import mostodon from "../public/apps/mostodon.png"
 import brutaldon from "../public/apps/brutaldon.png"
 import oxpecker from "../public/apps/oxpecker.png"
+
 import type { StaticImageData } from "next/legacy/image"
 
 export type appsList = {
@@ -291,7 +292,7 @@ export const apps: appsList = {
       icon: oxpecker,
       url: "https://apps.apple.com/app/oxpecker-for-mastodon/id6474893905?platform=appleWatch",
       paid: true,
-    }
+    },
   ],
   web: [
     { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
