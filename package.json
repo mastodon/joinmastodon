@@ -50,5 +50,5 @@
     "tailwindcss-logical": "^3.0.1",
     "typescript": "^5.3.2"
   },
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.3.0"
 }
