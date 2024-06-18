@@ -110,7 +110,7 @@ export const apps: appsList = {
       name: "Fedilab",
       icon: fedilab,
       url: "https://play.google.com/store/apps/details?id=app.fedilab.android",
-      paid: true,
+      paid: false,
     },
     {
       released_on: "Apr 16, 2021",
