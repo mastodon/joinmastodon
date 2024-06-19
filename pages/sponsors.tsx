@@ -17,6 +17,8 @@ import MastodonWithLaptopIllustration from "../public/illustrations/mastodon_wit
 import MasotodonFediverseIllustration from "../public/illustrations/mastodon_fediverse.png"
 import MastodonsCheeringIllustration from "../public/illustrations/mastodons_cheering.png"
 
+import previewImage from "../public/sponsors_preview.png"
+
 const DonateCard = ({ title, copy, cta, cta_link}) => (
   <div className="flex flex-col basis-full items-center text-center md:items-start md:text-left">
     <h3 className="h5 mb-5 after:block after:h-1 after:rounded-md after:w-32 after:mt-2 after:bg-blurple-500">
@@ -38,7 +40,7 @@ const Emphasis = ({ children }) => (
 function Sponsors() {
   const intl = useIntl()
   return (
-    <Layout>
+    <Layout previewImage={previewImage}>
       <Hero>
         <h1 className="h2 xl:mt-8 mb-5 lg:col-start-2">
           <FormattedMessage id="sponsors.hero.title" defaultMessage="Reimagining online discourse" />
@@ -401,7 +403,7 @@ function Sponsors() {
           content={intl.formatMessage({
             id: "sponsors.page_description",
             defaultMessage:
-              "View people and companies who crowdfund the development of the decentralized, open-source social media platform Mastodon.",
+              "Donate or become a sponsor and help us build the social web for everyone!",
           })}
         />
         <meta
@@ -409,7 +411,7 @@ function Sponsors() {
           content={intl.formatMessage({
             id: "sponsors.page_description",
             defaultMessage:
-              "View people and companies who crowdfund the development of the decentralized, open-source social media platform Mastodon.",
+              "Donate or become a sponsor and help us build the social web for everyone!",
           })}
         />
       </Head>
