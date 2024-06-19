@@ -1,11 +1,12 @@
 import Head from "next/head"
+import { StaticImageData } from "next/image"
+import { useRouter } from "next/router"
+
 import Footer from "./Footer"
 import Header from "./Header"
 
 import { locales, defaultLocale } from "../data/locales"
-import { useRouter } from "next/router"
-
-import previewImage from "../public/preview.png"
+import defaultPreviewImage from "../public/preview.png"
 
 const BASE_URL = "https://joinmastodon.org"
 
@@ -13,14 +14,17 @@ const BASE_URL = "https://joinmastodon.org"
 export const Layout = ({
   children,
   transparentHeader,
+  previewImage,
 }: {
   children: React.ReactNode
   transparentHeader?: boolean
+  previewImage?: StaticImageData
 }) => {
   const router = useRouter()
 
   const currentLocale = router.locale
   const currentPath = router.asPath
+  const metaPreviewImage = previewImage || defaultPreviewImage;
 
   return (
     <div className="mx-auto max-w-site px-6 lg:px-16">
@@ -36,7 +40,7 @@ export const Layout = ({
       <Footer />
 
       <Head>
-        <meta property="og:image" content={`${BASE_URL}${previewImage.src}`} />
+        <meta property="og:image" content={`${BASE_URL}${metaPreviewImage.src}`} />
         <meta property="twitter:card" content="summary_large_image" />
 
         {locales
