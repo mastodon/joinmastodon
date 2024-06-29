@@ -141,6 +141,18 @@ const About = () => (
                 that supports the growth and operational capabilities of Mastodon, including being able
                 to receive tax-deductible U.S. donations and in-kind support.
               </p>
+              <dl className="b1">
+                <dt className="font-bold">Address:</dt>
+                <dd>
+                    <address className="not-italic">
+                    Mastodon Inc,
+                    <br/>
+                    228 East 45th Street Suite 9E
+                    <br/>
+                    New York, New York 10017
+                  </address>
+                </dd>
+              </dl>
             </div>
 
             <div className="col-span-12 md:col-span-6">
