@@ -2,6 +2,17 @@ import classNames from "classnames"
 import Image from "next/legacy/image"
 import { FormattedMessage } from "react-intl"
 
+const tierName = (tierId) => {
+  switch(tierId) {
+  case 'gold':
+    return <FormattedMessage id="gold_sponsor" defaultMessage="Gold sponsor" />;
+  case 'silver':
+    return <FormattedMessage id="silver_sponsor" defaultMessage="Silver sponsor" />;
+  default:
+    return <FormattedMessage id="sponsor" defaultMessage="Sponsor" />;
+  }
+};
+
 /** Sponsor Card, supporting data from `silver`, `generalHighlighted`, and `general` */
 const SponsorCard = ({ sponsor, tier }) => {
   return (
@@ -9,10 +20,10 @@ const SponsorCard = ({ sponsor, tier }) => {
       className={classNames(
         "grid grid-cols-[auto_1fr] gap-4 rounded p-4",
         tier === "generalHighlighted" && "bg-nightshade-900 text-white",
-        tier === "silver" && "border border-gray-3 hover:bg-gray-4"
+        (tier === "silver" || tier === "gold") && "border border-gray-3 hover:bg-gray-4"
       )}
     >
-      {tier === "silver" && (
+      {(tier === "silver" || tier === "gold") && (
         <div className="relative h-[56px] w-[56px] overflow-hidden rounded-md bg-blurple-gradient">
           {sponsor.logo && (
             <Image src={sponsor.logo} alt="" layout="fill" objectFit="cover" />
@@ -31,14 +42,7 @@ const SponsorCard = ({ sponsor, tier }) => {
               : "text-gray-1"
           )}
         >
-          {tier === "silver" ? (
-            <FormattedMessage
-              id="silver_sponsor"
-              defaultMessage="Silver sponsor"
-            />
-          ) : (
-            <FormattedMessage id="sponsor" defaultMessage="Sponsor" />
-          )}
+          {tierName(tier)}
         </span>
 
         <p className="b2 truncate !font-semibold">{sponsor.name || sponsor}</p>

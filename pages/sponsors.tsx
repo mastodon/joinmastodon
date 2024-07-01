@@ -219,7 +219,7 @@ function Sponsors() {
                   defaultMessage={`We welcome donations from commercial sponsors to help continue our work. If you would like to see your company's logo with a link to your website, you can become a sponsor directly through our own platform! You can also use <benevity_link>Benevity</benevity_link> if your company provides corporate matching.\n\nWe’re grateful for everyone building the social web, especially <support_link>our sponsors</support_link>.`}
                   values={{
                     benevity_link: (text) => (
-                      <Link 
+                      <Link
                         href="https://causes.benevity.org/causes/276-5575947211653_d7e4"
                         className="text-blurple-500 font-semibold"
                       >
@@ -339,11 +339,11 @@ function Sponsors() {
                   href={sponsor.url}
                   rel={sponsor.nofollow ? "nofollow" : undefined}
                 >
-                  <SponsorCard sponsor={sponsor} tier="silver" />
+                  <SponsorCard sponsor={sponsor} tier={sponsor.gold ? "gold" : "silver"} />
                 </a>
               )
             } else {
-              return <SponsorCard key={i} sponsor={sponsor} tier="silver" />
+              return <SponsorCard key={i} sponsor={sponsor} tier={sponsor.gold ? "gold" : "silver"} />
             }
           })}
         </div>

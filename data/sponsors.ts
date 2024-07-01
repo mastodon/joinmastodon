@@ -217,6 +217,7 @@ const sponsors = {
       logo: require("../public/sponsors/tnzk.png"),
       name: "Kyohei Hamaguchi / @tnzk",
       nofollow: false,
+      gold: true,
     },
     ...patreonData.silver,
   ],
