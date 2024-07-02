@@ -1,5 +1,13 @@
 import patreonData from "./patreon.json"
 
+interface Sponsor {
+  url: string
+  logo: string
+  name: string
+  nofollow?: boolean
+  gold?: boolean
+}
+
 const sponsors = {
   additionalFunding: [],
   platinum: [
@@ -118,7 +126,7 @@ const sponsors = {
       logo: require("../public/sponsors/veepn.png"),
       name: "Download VPN for PC by VeePN super simple, fast and trustful VPN for all family.",
     }, // Custom
-  ],
+  ] as Sponsor[],
   gold: [
     {
       url: "https://easydns.com/",
@@ -210,7 +218,7 @@ const sponsors = {
       logo: require("../public/sponsors/happeo.png"),
       name: "Happeo intranet",
     }, // Custom
-  ],
+  ] as Sponsor[],
   silver: [
     {
       url: "https://ichiji.social/@tnzk",
@@ -220,7 +228,7 @@ const sponsors = {
       gold: true,
     },
     ...patreonData.silver,
-  ],
+  ] as Sponsor[],
   generalHighlighted: patreonData.generalHighlighted,
   general: patreonData.general,
 }
