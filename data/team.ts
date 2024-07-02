@@ -67,6 +67,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "David Roetzel",
+    position: "Engineering",
+    socials: {
+      mastodon: "https://upp2.com/@dave",
+    },
+  },
+
+  {
     name: "Timothy Campbell",
     position: "DevOps",
   },
