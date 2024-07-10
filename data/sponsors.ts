@@ -218,6 +218,11 @@ const sponsors = {
       logo: require("../public/sponsors/happeo.png"),
       name: "Happeo intranet",
     }, // Custom
+    {
+      url: "https://www.igaming.com/",
+      logo: require("../public/sponsors/igaming-com-logotype.png"),
+      name: "iGaming.com",
+    }, // GitHub
   ] as Sponsor[],
   silver: [
     {
