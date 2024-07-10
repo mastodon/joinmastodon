@@ -90,8 +90,8 @@ export const apps: appsList = {
       released_on: "May 21, 2023",
       name: "Focus",
       icon: focus,
-      url: "https://play.google.com/store/apps/details?id=allen.town.focus.mastodon",
-      paid: true,
+      url: "https://github.com/allentown521/FocusMastodon",
+      paid: false,
     },
     {
       released_on: "Mar 15, 2017",
