@@ -298,7 +298,7 @@ export const apps: appsList = {
       released_on: "July 10th, 2024",
       name: "Threaded",
       icon: threaded,
-      url: "https://apps.apple.com/us/app/threaded/id6477757490",
+      url: "https://apps.apple.com/app/threaded/id6477757490",
       paid: false
     },
   ],
