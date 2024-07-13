@@ -24,7 +24,7 @@ The idea of the third-party apps section is to provide a showcase for apps built
 
 In an effort to offer choice but to limit confusion, there are a number of considerations:
 
-- the Mastodon team may not able able to test all apps that are submitted, and do not endorse third-party apps simply due to their inclusion on the website. There is no fixed schedule for pull requests to be reviewed for the site - in most cases, other code maintenance tasks have a higher priority.
+- the Mastodon team may not be able to test all apps that are submitted, and do not endorse third-party apps simply due to their inclusion on the website. There is no fixed schedule for pull requests to be reviewed for the site - in most cases, other code maintenance tasks have a higher priority.
 
 - Apps should be current and maintained; please submit issues or pull requests to remove Apps that are known to have been deprecated or retired.
 
