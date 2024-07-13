@@ -55,6 +55,7 @@ import heffalump from "../public/apps/heffalump.png"
 import mostodon from "../public/apps/mostodon.png"
 import brutaldon from "../public/apps/brutaldon.png"
 import oxpecker from "../public/apps/oxpecker.png"
+import threaded from "../public/apps/threaded.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -292,6 +293,13 @@ export const apps: appsList = {
       icon: oxpecker,
       url: "https://apps.apple.com/app/oxpecker-for-mastodon/id6474893905?platform=appleWatch",
       paid: true,
+    },
+    {
+      released_on: "July 10th, 2024",
+      name: "Threaded",
+      icon: threaded,
+      url: "https://apps.apple.com/us/app/threaded/id6477757490",
+      paid: false
     },
   ],
   web: [
