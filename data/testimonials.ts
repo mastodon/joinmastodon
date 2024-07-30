@@ -33,13 +33,6 @@ const testimonials: Testimonial[] = [
     profile_url: "https://mastodon.social/@dansup",
   },
   {
-    text: "I've been on federated platforms since 2008. Mastodon is the best iteration of federated platforms with a user interface that is pleasant to use and a community of folks that I consider friends.",
-    name: "Craig Maloney",
-    username: "craigmaloney@octodon.social",
-    avatar: "/testimonials/avatar_craigmaloney.jpeg",
-    profile_url: "https://octodon.social/@craigmaloney",
-  },
-  {
     text: "Mastodon is a privacy-friendly way to communicate with people which are interested in my work and the work of my authority. social.bund.de gives us the opportunity to incubate Mastodon accounts even for other federal authorities.",
     name: "Ulrich Kelber",
     username: "ulrichkelber@bonn.social",
