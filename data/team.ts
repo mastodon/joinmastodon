@@ -43,14 +43,6 @@ const team: TeamMember[] = [
   },
 
   {
-    name: "Nathan Mattes",
-    position: "Engineering",
-    socials: {
-      mastodon: "https://chaos.social/@zeitschlag",
-    },
-  },
-
-  {
     name: "Marcus Kida",
     position: "Engineering",
     socials: {
