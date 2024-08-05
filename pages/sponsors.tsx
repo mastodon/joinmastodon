@@ -180,6 +180,7 @@ function Sponsors() {
                         className="aspect-square"
                         width="20"
                         height="20"
+                        alt="Direct tax deductable donation for American residents"
                       />
                     </>
                   )}
