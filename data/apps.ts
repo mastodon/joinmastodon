@@ -56,6 +56,7 @@ import mostodon from "../public/apps/mostodon.png"
 import brutaldon from "../public/apps/brutaldon.png"
 import oxpecker from "../public/apps/oxpecker.png"
 import threaded from "../public/apps/threaded.png"
+import odous from "../public/apps/odous.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -162,7 +163,7 @@ export const apps: appsList = {
       icon: pachli,
       url: "https://play.google.com/store/apps/details?id=app.pachli",
       paid: false,
-    },    
+    },
   ],
   ios: [
     {
@@ -300,6 +301,13 @@ export const apps: appsList = {
       icon: threaded,
       url: "https://apps.apple.com/app/threaded/id6477757490",
       paid: false
+    },
+    {
+      released_on: "Jan 1, 2024",
+      name: "Odous (watchOS)",
+      icon: odous,
+      url: "https://apps.apple.com/us/app/id6446084064",
+      paid: true,
     },
   ],
   web: [
