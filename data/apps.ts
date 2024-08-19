@@ -161,7 +161,7 @@ export const apps: appsList = {
       icon: pachli,
       url: "https://play.google.com/store/apps/details?id=app.pachli",
       paid: false,
-    },    
+    },
   ],
   ios: [
     {
@@ -291,6 +291,13 @@ export const apps: appsList = {
       name: "Oxpecker (watchOS)",
       icon: oxpecker,
       url: "https://apps.apple.com/app/oxpecker-for-mastodon/id6474893905?platform=appleWatch",
+      paid: true,
+    },
+    {
+      released_on: "Jan 1, 2024",
+      name: "Odous (watchOS)",
+      icon: odous,
+      url: "https://apps.apple.com/us/app/id6446084064",
       paid: true,
     },
   ],
