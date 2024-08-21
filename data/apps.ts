@@ -34,7 +34,6 @@ import tootrain from "../public/apps/tootrain.png"
 import trunks from "../public/apps/trunks.png"
 import tootdesk from "../public/apps/tootdesk.png"
 import tooty from "../public/apps/tooty.png"
-import megalodon from "../public/apps/megalodon.png"
 import moshidon from "../public/apps/moshidon.png"
 import litterbox from "../public/apps/litterbox.png"
 import zonepane from "../public/apps/zonepane.png"
@@ -128,13 +127,6 @@ export const apps: appsList = {
       url: "https://play.google.com/store/apps/details?id=com.decad3nce.trunks",
       paid: false,
       hidden_from_all: true,
-    },
-    {
-      released_on: "Nov 28, 2022",
-      name: "Megalodon",
-      icon: megalodon,
-      url: "https://play.google.com/store/apps/details?id=org.joinmastodon.android.sk",
-      paid: false,
     },
     {
       released_on: "Dec 6, 2022",
