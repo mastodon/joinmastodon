@@ -54,7 +54,7 @@ function Home() {
           />
         </p>
 
-        <div className="flex justify-center gap-12">
+        <div className="flex flex-wrap justify-center gap-4  md:gap-12">
           <LinkButton size="large" href="https://mastodon.social/auth/sign_up">
             <FormattedMessage
               id="home.join_now"
