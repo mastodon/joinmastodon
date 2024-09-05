@@ -223,6 +223,11 @@ const sponsors = {
       logo: require("../public/sponsors/igaming-com-logotype.png"),
       name: "iGaming.com",
     }, // GitHub
+    {
+      url: "https://www.dotcom-monitor.com/sponsoring-open-source-projects/",
+      logo: require("../public/sponsors/DCM-Logo-54.png"),
+      name: "Dotcom-Monitor",
+    },
   ] as Sponsor[],
   silver: [
     {
