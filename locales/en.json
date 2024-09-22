@@ -164,6 +164,7 @@
   "sponsors.donate.corporate_sponsorship.copy": "We welcome corporate sponsors! Sponsorship includes your company’s logo with a link to your website.",
   "sponsors.donate.corporate_sponsorship.cta": "Become a sponsor",
   "sponsors.donate.corporate_sponsorship.title": "Corporate Sponsorship",
+  "sponsors.donate.footer.donor_policy": "To ensure you qualify to make a donation, please refer to our donor policies: <link_mastodon_inc>Mastodon, Inc</link_mastodon_inc> <middot></middot> <link_mastodon_ggmbh>Mastodon gGmbH</link_mastodon_ggmbh>",
   "sponsors.donate.github.copy": "GitHub Sponsors receive a Mastodon badge to their Org or Personal profile. Plus we don’t pay fees!",
   "sponsors.donate.github.cta": "Donate on GitHub",
   "sponsors.donate.github.title": "GitHub",
