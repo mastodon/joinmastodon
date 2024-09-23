@@ -54,7 +54,7 @@ import heffalump from "../public/apps/heffalump.png"
 import mostodon from "../public/apps/mostodon.png"
 import brutaldon from "../public/apps/brutaldon.png"
 import oxpecker from "../public/apps/oxpecker.png"
-import threaded from "../public/apps/threaded.png"
+import bubble from "../public/apps/bubble.png"
 import odous from "../public/apps/odous.png"
 
 import type { StaticImageData } from "next/legacy/image"
@@ -289,9 +289,9 @@ export const apps: appsList = {
     },
     {
       released_on: "July 10th, 2024",
-      name: "Threaded",
-      icon: threaded,
-      url: "https://apps.apple.com/app/threaded/id6477757490",
+      name: "Bubble",
+      icon: bubble,
+      url: "https://apps.apple.com/app/bubble/id6477757490",
       paid: false
     },
     {
