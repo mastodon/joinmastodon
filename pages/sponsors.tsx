@@ -18,6 +18,7 @@ import MastodonsCheeringIllustration from "../public/illustrations/mastodons_che
 
 import previewImage from "../public/sponsors_preview.png"
 import usFlagIcon from "../public/united_states_flag_icon_round.svg"
+import Link from "next/link"
 
 const DonateCard = ({
   title, 
@@ -132,7 +133,6 @@ function Sponsors() {
               </p>
             </div>
 
-
             <div className="row-span-full md:col-start-6 md:col-span-6 mx-auto pt-8 md:pt-0 px-12 max-w-md md:pb-0 md:px-0">
               <Image src={MastodonsCheeringIllustration} alt="" />
             </div>
@@ -142,7 +142,7 @@ function Sponsors() {
 
       <div className="full-width-bg">
         <div className="full-width-bg__inner">
-          <div className="md:grid md:items-center md:gap-gutter md:grid-cols-12 pb-16">
+          <div className="md:grid md:items-center md:gap-gutter md:grid-cols-12 pb-1">
             <div className="md:col-span-12 md:col-start-1 xl:col-span-10 xl:col-start-2 border border-blurple-500 xl:p-16 px-12 py-12 sm:px-24 sm:py-16 md:p-12 rounded-md">
               <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 gap-16 md:grid-cols-3">
                 <DonateCard
@@ -294,6 +294,25 @@ function Sponsors() {
                   )}
                   ctaLink="https://causes.benevity.org/causes/276-5575947211653_d7e4"
                   ctaLight
+                />
+              </div>
+            </div>
+          </div>
+          <div className="md:grid md:items-center md:gap-gutter md:grid-cols-12 pb-16">
+            <div className="md:col-span-12 md:col-start-1 xl:col-span-10 xl:col-start-2">
+              <div className="b4 mt-4 text-gray-2 italic pr-4 text-left md:text-right">
+                <FormattedMessage
+                  id="sponsors.donate.footer.donor_policy"
+                  defaultMessage={`To ensure you qualify to make a donation, please refer to our donor policies: <link_mastodon_inc>Mastodon, Inc</link_mastodon_inc> <middot></middot> <link_mastodon_ggmbh>Mastodon gGmbH</link_mastodon_ggmbh>`}
+                  values={{
+                    link_mastodon_inc: (text) => (
+                      <Link className="hover:text-blurple-600 ml-0.5" href="/donor-policy/mastodon-inc" target="_blank">{text}</Link>
+                    ),
+                    link_mastodon_ggmbh: (text) => (
+                      <Link className="hover:text-blurple-600" href="/donor-policy/mastodon-ggmbh" target="_blank">{text}</Link>
+                    ),
+                    middot: () => (<span className="px-0.5">&middot;</span>)
+                  }}
                 />
               </div>
             </div>
