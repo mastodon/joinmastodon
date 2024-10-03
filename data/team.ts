@@ -93,6 +93,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Philip Schröpel",
+    position: "Finance",
+    socials: {
+      mastodon: "https://mastodon.social/@philipkristians",
+    },
+  },
+
+  {
     name: "Dopatwo",
     position: "Illustrations",
     socials: {
