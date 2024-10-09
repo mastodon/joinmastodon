@@ -154,7 +154,7 @@ const sponsors = {
       name: "inkedin.com",
     },
     {
-      url: "https://casinofiables.com/",
+      url: "https://casinosfiables.ca/",
       logo: require("../public/sponsors/logo-fiables.png"),
       name: "Casino Fiables",
     },
