@@ -47,11 +47,6 @@ const sponsors = {
       name: "AirVPN",
     },
     {
-      url: "https://www.firesticktricks.com/",
-      logo: require("../public/sponsors/firesticktricks.webp"),
-      name: "Fire Stick Tricks",
-    },
-    {
       url: "https://papersowl.com/write-my-essay-please",
       logo: require("../public/sponsors/papersowl.png"),
       name: "Papers Owl",
@@ -117,7 +112,7 @@ const sponsors = {
       name: "SidesMedia",
     }, // Custom
     {
-      url: "https://bountii.coupons/",
+      url: "https://bountii.co/",
       logo: require("../public/sponsors/bountii.png"),
       name: "Bountii",
     }, // Custom
@@ -227,7 +222,7 @@ const sponsors = {
       url: "https://www.dotcom-monitor.com/sponsoring-open-source-projects/",
       logo: require("../public/sponsors/DCM-Logo-54.png"),
       name: "Dotcom-Monitor",
-    },
+    }, // Custom
   ] as Sponsor[],
   silver: [
     {
