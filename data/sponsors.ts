@@ -67,11 +67,6 @@ const sponsors = {
       name: "Masto.host - Fully managed Mastodon hosting",
     }, // Custom
     {
-      url: "https://www.auscasinos.net/",
-      logo: require("../public/sponsors/auscasinos.png"),
-      name: "Auscasinos - Online casinos in Australia",
-    }, // Custom
-    {
       url: "https://www.nettikasinot.org/",
       logo: require("../public/sponsors/nettikasinot.svg"),
       name: "Nettikasinot",
