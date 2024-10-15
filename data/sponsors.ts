@@ -27,15 +27,25 @@ const sponsors = {
       name: "Postmark",
     }, // Custom/other
     {
-      url: "https://medium.com/",
-      logo: require("../public/sponsors/medium.png"),
-      name: "Medium",
+      url: "https://mask.io/",
+      logo: require("../public/sponsors/mask-network.png"),
+      name: "Mask Network",
     }, // Custom
     {
       url: "https://lickability.com/",
       logo: require("../public/sponsors/lickability-logo.svg"),
       name: "Lickability",
     }, // Custom/other
+     {
+      url: "https://medium.com/",
+      logo: require("../public/sponsors/medium.png"),
+      name: "Medium",
+    }, // Custom
+     {
+      url: "https://krystal.uk/",
+      logo: require("../public/sponsors/Krystal_Logo.svg"),
+      name: "Krystal Hosting",
+    }, // Custom
     {
       url: "https://www.ramotion.com/agency/ui-ux-design",
       logo: require("../public/sponsors/truevendor.png"),
@@ -56,10 +66,15 @@ const sponsors = {
       logo: require("../public/sponsors/sextoycollective.webp"),
       name: "Sex Toy Collective",
     },
+     {
+      url: "https://www.noneedtostudy.com/take-my-online-class/",
+      logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
+      name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
+    }, // Custom
     {
-      url: "https://www.sister-sites.co.uk/",
-      logo: require("../public/sponsors/sistersites-logo.png"),
-      name: "sister-sites.co.uk",
+      url: "https://www.goldeneaglecoin.com/",
+      logo: require("../public/sponsors/ge-logo-coin-card2.png"),
+      name: "Golden Eagle Coins",
     }, // Custom
     {
       url: "https://masto.host/",
@@ -72,29 +87,14 @@ const sponsors = {
       name: "Nettikasinot",
     },
     {
+      url: "https://www.sister-sites.co.uk/",
+      logo: require("../public/sponsors/sistersites-logo.png"),
+      name: "sister-sites.co.uk",
+    }, // Custom
+    {
       url: "https://wideangle.co",
       logo: require("../public/sponsors/wide-angle-analytics.webp"),
       name: "Wide Angle Analytics",
-    }, // Custom
-    {
-      url: "https://www.noneedtostudy.com/take-my-online-class/",
-      logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
-      name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
-    }, // Custom
-    {
-      url: "https://krystal.uk/",
-      logo: require("../public/sponsors/Krystal_Logo.svg"),
-      name: "Krystal Hosting",
-    }, // Custom
-    {
-      url: "https://www.goldeneaglecoin.com/",
-      logo: require("../public/sponsors/ge-logo-coin-card2.png"),
-      name: "Golden Eagle Coins",
-    }, // Custom
-    {
-      url: "https://mask.io/",
-      logo: require("../public/sponsors/mask-network.png"),
-      name: "Mask Network",
     }, // Custom
     {
       url: "https://earthweb.com/",
