@@ -36,12 +36,12 @@ const sponsors = {
       logo: require("../public/sponsors/lickability-logo.svg"),
       name: "Lickability",
     }, // Custom/other
-     {
+    {
       url: "https://medium.com/",
       logo: require("../public/sponsors/medium.png"),
       name: "Medium",
     }, // Custom
-     {
+    {
       url: "https://krystal.uk/",
       logo: require("../public/sponsors/Krystal_Logo.svg"),
       name: "Krystal Hosting",
@@ -66,7 +66,7 @@ const sponsors = {
       logo: require("../public/sponsors/sextoycollective.webp"),
       name: "Sex Toy Collective",
     },
-     {
+    {
       url: "https://www.noneedtostudy.com/take-my-online-class/",
       logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
       name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
@@ -194,7 +194,7 @@ const sponsors = {
       name: "SDF Public Access UNIX System",
     }, // Custom
     {
-      url: "https://kaleidos.net/products",
+      url: "https://kaleidos.net/",
       logo: require("../public/sponsors/kaleidos.png"),
       name: "Kaleidos (Taiga & Penpot)",
     }, // Custom
