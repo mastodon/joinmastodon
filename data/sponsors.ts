@@ -27,15 +27,25 @@ const sponsors = {
       name: "Postmark",
     }, // Custom/other
     {
-      url: "https://medium.com/",
-      logo: require("../public/sponsors/medium.png"),
-      name: "Medium",
+      url: "https://mask.io/",
+      logo: require("../public/sponsors/mask-network.png"),
+      name: "Mask Network",
     }, // Custom
     {
       url: "https://lickability.com/",
       logo: require("../public/sponsors/lickability-logo.svg"),
       name: "Lickability",
     }, // Custom/other
+    {
+      url: "https://medium.com/",
+      logo: require("../public/sponsors/medium.png"),
+      name: "Medium",
+    }, // Custom
+    {
+      url: "https://krystal.uk/",
+      logo: require("../public/sponsors/Krystal_Logo.svg"),
+      name: "Krystal Hosting",
+    }, // Custom
     {
       url: "https://www.ramotion.com/agency/ui-ux-design",
       logo: require("../public/sponsors/truevendor.png"),
@@ -57,39 +67,9 @@ const sponsors = {
       name: "Sex Toy Collective",
     },
     {
-      url: "https://www.sister-sites.co.uk/",
-      logo: require("../public/sponsors/sistersites-logo.png"),
-      name: "sister-sites.co.uk",
-    }, // Custom
-    {
-      url: "https://masto.host/",
-      logo: require("../public/sponsors/MH-horizontal-white.png"),
-      name: "Masto.host - Fully managed Mastodon hosting",
-    }, // Custom
-    {
-      url: "https://www.auscasinos.net/",
-      logo: require("../public/sponsors/auscasinos.png"),
-      name: "Auscasinos - Online casinos in Australia",
-    }, // Custom
-    {
-      url: "https://www.nettikasinot.org/",
-      logo: require("../public/sponsors/nettikasinot.svg"),
-      name: "Nettikasinot",
-    },
-    {
-      url: "https://wideangle.co",
-      logo: require("../public/sponsors/wide-angle-analytics.webp"),
-      name: "Wide Angle Analytics",
-    }, // Custom
-    {
       url: "https://www.noneedtostudy.com/take-my-online-class/",
       logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
       name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
-    }, // Custom
-    {
-      url: "https://krystal.uk/",
-      logo: require("../public/sponsors/Krystal_Logo.svg"),
-      name: "Krystal Hosting",
     }, // Custom
     {
       url: "https://www.goldeneaglecoin.com/",
@@ -97,9 +77,24 @@ const sponsors = {
       name: "Golden Eagle Coins",
     }, // Custom
     {
-      url: "https://mask.io/",
-      logo: require("../public/sponsors/mask-network.png"),
-      name: "Mask Network",
+      url: "https://masto.host/",
+      logo: require("../public/sponsors/MH-horizontal-white.png"),
+      name: "Masto.host - Fully managed Mastodon hosting",
+    }, // Custom
+    {
+      url: "https://www.nettikasinot.org/",
+      logo: require("../public/sponsors/nettikasinot.svg"),
+      name: "Nettikasinot",
+    },
+    {
+      url: "https://www.sister-sites.co.uk/",
+      logo: require("../public/sponsors/sistersites-logo.png"),
+      name: "sister-sites.co.uk",
+    }, // Custom
+    {
+      url: "https://wideangle.co",
+      logo: require("../public/sponsors/wide-angle-analytics.webp"),
+      name: "Wide Angle Analytics",
     }, // Custom
     {
       url: "https://earthweb.com/",
@@ -199,7 +194,7 @@ const sponsors = {
       name: "SDF Public Access UNIX System",
     }, // Custom
     {
-      url: "https://kaleidos.net/products",
+      url: "https://kaleidos.net/",
       logo: require("../public/sponsors/kaleidos.png"),
       name: "Kaleidos (Taiga & Penpot)",
     }, // Custom
