@@ -221,7 +221,7 @@ const sponsors = {
   ] as Sponsor[],
   silver: [
     {
-      url: "https://ichiji.social/@tnzk",
+      url: "https://tnzk.org/about",
       logo: require("../public/sponsors/tnzk.png"),
       name: "Kyohei Hamaguchi / @tnzk",
       nofollow: false,
