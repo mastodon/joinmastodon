@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for considering contributing to the Mastodon website 🐘
+Thank you for considering contributing to the Mastodon website 🦣
 
 You may want to contribute in the following ways:
 
