@@ -1,12 +1,17 @@
 # Contributing
 
-Thank you for considering contributing to the Mastodon website 🦣
+Thank you for considering contributing to the Mastodon project website 🦣
 
 You may want to contribute in the following ways:
 
 - Finding and reporting bugs
 - Translating the site into various languages
 - Adding apps
+
+> [!NOTE]
+> This is not the correct repository for contributions to the code that runs mastodon.social (ie the Mastodon server run by the code Mastodon team).
+> 
+> Go back up to the [top level Mastodon organisation](https://github.com/mastodon).
 
 ## Bug reports
 
