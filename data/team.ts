@@ -36,33 +36,33 @@ const team: TeamMember[] = [
 
   {
     name: "Claire",
-    position: "Engineering",
+    position: "Engineering (web)",
     socials: {
       mastodon: "https://social.sitedethib.com/@Claire",
     },
   },
 
   {
-    name: "Marcus Kida",
-    position: "Engineering",
+    name: "David Roetzel",
+    position: "Engineering (web)",
     socials: {
-      mastodon: "https://bearologics.social/@marcus",
+      mastodon: "https://upp2.com/@dave",
+    },
+  },
+
+  {
+    name: "Shannon Hughes",
+    position: "Engineering (iOS)",
+    socials: {
+      mastodon: "https://mastodon.social/@whattherestimefor",
     },
   },
 
   {
     name: "Gregory Klyushnikov",
-    position: "Engineering",
+    position: "Engineering (Android)",
     socials: {
       mastodon: "https://mastodon.social/@grishka",
-    },
-  },
-
-  {
-    name: "David Roetzel",
-    position: "Engineering",
-    socials: {
-      mastodon: "https://upp2.com/@dave",
     },
   },
 

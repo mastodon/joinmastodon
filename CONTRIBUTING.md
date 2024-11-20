@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for considering contributing to the Mastodon website 🐘
+Thank you for considering contributing to the Mastodon project website 🦣
 
 You may want to contribute in the following ways:
 
@@ -8,25 +8,30 @@ You may want to contribute in the following ways:
 - Translating the site into various languages
 - Adding apps
 
+> [!NOTE]
+> This is not the correct repository for contributions to the code that runs mastodon.social (ie the Mastodon server run by the code Mastodon team).
+> 
+> Go back up to the [top level Mastodon organisation](https://github.com/mastodon).
+
 ## Bug reports
 
-Bug reports and feature suggestions must use descriptive and concise titles and be submitted to [GitHub Issues](https://github.com/mastodon/joinmastodon/issues). Please use the search function to make sure that you are not submitting duplicates, and that a similar report or request has not already been resolved or rejected.
+Bug reports and feature suggestions must use descriptive and concise titles, and be submitted to [GitHub Issues](https://github.com/mastodon/joinmastodon/issues). Please use the search function to make sure that you are not submitting duplicates, and that a similar report or request has not already been resolved or rejected.
 
 ## Translations
 
-You can submit translations via [Crowdin](https://crowdin.com/project/joinmastodon). They are periodically merged into the codebase. See the [README](./README.md) for more information.
+You can submit translations for the website via [Crowdin](https://crowdin.com/project/joinmastodon). They are periodically merged into the codebase. See the [README](./README.md) for more information.
 
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mastodon/localized.svg)](https://crowdin.com/project/joinmastodon)
 
 ## Adding apps
 
-The idea of the third-party apps section is to provide a showcase for apps built for the Mastodon platform. Inclusion in the list is not an endorsement, and is also not guaranteed - this is not intended to be an exhaustive list.
+The idea of the third party apps section is to provide a showcase for apps built for the Mastodon platform. Inclusion in the list is not an endorsement, and is also not guaranteed - this is not intended to be an exhaustive list.
 
 In an effort to offer choice but to limit confusion, there are a number of considerations:
 
-- the Mastodon team may not be able to test all apps that are submitted, and do not endorse third-party apps simply due to their inclusion on the website. There is no fixed schedule for pull requests to be reviewed for the site - in most cases, other code maintenance tasks have a higher priority.
+- the Mastodon team may not be able to test all apps that are submitted, and do not endorse third party apps simply based on their inclusion on the website. There is no fixed schedule for pull requests to be reviewed - in most cases, other code maintenance tasks have a higher priority.
 
-- Apps should be current and maintained; please submit issues or pull requests to remove Apps that are known to have been deprecated or retired.
+- Apps should be current and maintained; please submit issues or pull requests to remove Apps that are known to have been deprecated or retired. We will periodically remove apps that appear to no longer be maintained or usable, but feel free to notify us if this happens in error.
 
 - Apps must be _generally available_
 
@@ -37,7 +42,7 @@ In an effort to offer choice but to limit confusion, there are a number of consi
 
 ### Basic process
 
-**Please use clean, concise titles for your pull requests.**
+**Please use clear and concise titles for your pull requests.**
 
 **The smaller the set of changes in the pull request is, the quicker it can be reviewed and merged.** Splitting tasks into multiple smaller pull requests is often preferable. One PR to add an app is preferred.
 

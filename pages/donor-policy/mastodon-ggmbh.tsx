@@ -1,24 +1,45 @@
+import Image from "next/legacy/image"
+
+import Link from "next/link"
+import Head from "next/head";
+
 import Hero from "../../components/Hero"
 import Layout from "../../components/Layout"
 import heroImage from "../../public/illustrations/apps_hero_desktop.png"
+import deFlagIcon from "../../public/german_flag_icon_round.svg"
 import PolicyPage from "../../components/PolicyPage";
-import Head from "next/head";
+
 
 const MastodonGGmbHDonorPolicy = () => (
     <Layout>
       <div dir="ltr" className="[unicode-bidi:plaintext]">
         <Hero desktopImage={heroImage} mobileImage={heroImage}>
-          <h1 className="h2 mb-4">Mastodon gGmbH Donor Policy</h1>
-          <p className="sh1">Last updated September 16, 2024</p>
+          <h1 lang="en" className="h2 mb-4">Mastodon gGmbH Donor Policy</h1>
+          <p  lang="en" className="sh1">Last updated October 14, 2024</p>
         </Hero>
       </div>
 
       <PolicyPage>
-        <section>
+        <section lang="en">
+          <p className="mt-4 flex justify-end pb-2">
+            <Link
+              className="flex content-center gap-x-1"
+              href="/donor-policy/de/mastodon-ggmbh"
+            >
+              <span className="hover:text-blurple-600">German translation</span>
+              <Image 
+                src={deFlagIcon}
+                className="aspect-square"
+                width="20"
+                height="20"
+                alt="German translation"
+              />
+            </Link>
+          </p>
           <p className="mt-4">
-            Mastodon’s vision is to reimagine the social media landscape, replacing centralised platforms with
-            robust social networking software that is inherently decentralised, open source and fully interoperable,
-            with a commitment to privacy. 
+            Mastodon’s vision is to reimagine the social media landscape, one that is inclusive, diverse, user driven and
+            supports dialogue. Our mission is to replace centralised platforms with robust social networking software that
+            is inherently decentralised, open source and fully interoperable, with a commitment to privacy. 
           </p>
           <p className="mt-4">
             This work is made possible, in part, by donations made by individuals and organisations from around
@@ -26,8 +47,8 @@ const MastodonGGmbHDonorPolicy = () => (
             of gifts and grants to further its mission.
           </p>
           <p className="mt-4">
-            Any funding towards Mastodon gGmbH must be consistent with the organisation’s stated mission and purposes,
-            and which prioritises its independence.
+            Any funding towards Mastodon gGmbH must be consistent with the organisation’s stated mission and purposes which
+            prioritises its independence.
           </p>
           <p className="mt-4">
             To ensure this, below is an outline of the criteria to reject any form of support that is counter to Mastodon’s
@@ -44,13 +65,13 @@ const MastodonGGmbHDonorPolicy = () => (
             <li className="mt-2">Any other statements or actions that causes the organisation to question the advisability of accepting a contribution</li>
           </ul>
           <p className="mt-4">
-            Mastodon gGmbH takes its funding sources very seriously. Funding is essential to adequately support its growth,
-            but will not be allowed to compromise its values. Decisions are taken after examination of each funder and funding
-            source. If a donor does not meet the above criteria, they will be refunded within 30 days of their donation via the
+            Mastodon gGmbH takes compliance and origin of funding sources very seriously. Funding is essential to adequately support
+            its growth, but will not be allowed to compromise its values. Decisions are taken after examination of each funder and
+            funding source. If a donor does not meet the above criteria, they will be refunded within 30 days of their donation via the
             original payment method where possible.
           </p>
         </section>
-        <section  className="mt-8">
+        <section lang="en" className="mt-8">
           <h4 className="h4 mb-6">Tax Consequences</h4>
           <p>
             Mastodon gGmbH is unable to offer tax advice to would-be donors. Donors who are concerned about tax-deductibility of
@@ -58,7 +79,7 @@ const MastodonGGmbHDonorPolicy = () => (
             form of non-profit LLC) in 2021.
           </p>
         </section>
-        <section className="mt-8">
+        <section lang="en" className="mt-8">
           <h4 className="h4 mb-6">Accepting Gifts-in-Kind</h4>
           <p>
             Gifts-in-kind may only be accepted by the Executive Director or by an officer delegated in writing by the Executive
@@ -67,7 +88,7 @@ const MastodonGGmbHDonorPolicy = () => (
         </section>
 
         <Head>
-          <title>Mastodon gGmbH Donor Policy - Mastodon</title>
+          <title lang="en">Mastodon gGmbH Donor Policy - Mastodon</title>
           <meta
             property="og:title"
             content="Mastodon gGmbH Donor Policy"
