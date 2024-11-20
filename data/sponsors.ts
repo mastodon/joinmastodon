@@ -93,7 +93,7 @@ const sponsors = {
     }, // Custom
     {
       url: "https://wideangle.co",
-      logo: require("../public/sponsors/wide-angle-analytics.webp"),
+      logo: require("../public/sponsors/Wide Angle Analytics_horizontal-logo.png"),
       name: "Wide Angle Analytics",
     }, // Custom
     {
@@ -204,11 +204,6 @@ const sponsors = {
       name: "BairesDev",
     }, // Custom
     {
-      url: "https://www.happeo.com",
-      logo: require("../public/sponsors/happeo.png"),
-      name: "Happeo intranet",
-    }, // Custom
-    {
       url: "https://www.igaming.com/",
       logo: require("../public/sponsors/igaming-com-logotype.png"),
       name: "iGaming.com",
@@ -221,7 +216,7 @@ const sponsors = {
   ] as Sponsor[],
   silver: [
     {
-      url: "https://ichiji.social/@tnzk",
+      url: "https://tnzk.org/about",
       logo: require("../public/sponsors/tnzk.png"),
       name: "Kyohei Hamaguchi / @tnzk",
       nofollow: false,
