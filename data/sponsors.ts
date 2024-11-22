@@ -119,6 +119,11 @@ const sponsors = {
   ] as Sponsor[],
   gold: [
     {
+      url: "https://fosstodon.org",
+      logo: require("../public/sponsors/fosstodon.svg"),
+      name: "Fosstodon",
+    }, // GitHub
+    {
       url: "https://easydns.com/",
       logo: require("../public/sponsors/easydns.png"),
       name: "easyDNS",
