@@ -97,7 +97,7 @@ const sponsors = {
       name: "Wide Angle Analytics",
     }, // Custom
     {
-      url: "https://earthweb.com/",
+      url: "https://couponmister.com/",
       logo: require("../public/sponsors/earthweb.png"),
       name: "EarthWeb",
     }, // Custom
@@ -107,7 +107,7 @@ const sponsors = {
       name: "SidesMedia",
     }, // Custom
     {
-      url: "https://bountii.co/",
+      url: "https://bountii.net/",
       logo: require("../public/sponsors/bountii.png"),
       name: "Bountii",
     }, // Custom
