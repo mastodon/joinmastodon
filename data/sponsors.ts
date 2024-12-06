@@ -57,7 +57,7 @@ const sponsors = {
       name: "AirVPN",
     },
     {
-      url: "https://papersowl.com/write-my-essay-please",
+      url: "https://papersowl.com/",
       logo: require("../public/sponsors/papersowl.png"),
       name: "Papers Owl",
     },
