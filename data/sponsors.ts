@@ -98,8 +98,8 @@ const sponsors = {
     }, // Custom
     {
       url: "https://couponmister.com/",
-      logo: require("../public/sponsors/earthweb.png"),
-      name: "EarthWeb",
+      logo: require("../public/sponsors/Coupon Mister.jpg"),
+      name: "Coupon Mister",
     }, // Custom
     {
       url: "https://sidesmedia.com/",
