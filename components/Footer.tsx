@@ -70,16 +70,6 @@ export const Footer = () => (
                     defaultMessage="Donate"
                   />
                 </Link>,
-                <Link
-                  key="roadmap"
-                  href="/roadmap"
-                  className="inline-block py-2 hover:underline"
-                >
-                  <FormattedMessage
-                    id="nav.roadmap.title"
-                    defaultMessage="Roadmap"
-                  />
-                </Link>,
               ],
             },
             {
