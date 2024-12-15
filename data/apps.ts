@@ -56,6 +56,7 @@ import brutaldon from "../public/apps/brutaldon.png"
 import oxpecker from "../public/apps/oxpecker.png"
 import bubble from "../public/apps/bubble.png"
 import odous from "../public/apps/odous.png"
+import fread from "../public/apps/fread.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -154,6 +155,13 @@ export const apps: appsList = {
       name: "Pachli",
       icon: pachli,
       url: "https://play.google.com/store/apps/details?id=app.pachli",
+      paid: false,
+    },
+    {
+      released_on: "Aug 1, 2024",
+      name: "Fread",
+      icon: fread,
+      url: "https://play.google.com/store/apps/details?id=com.zhangke.fread",
       paid: false,
     },
   ],
