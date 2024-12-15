@@ -56,6 +56,7 @@ import brutaldon from "../public/apps/brutaldon.png"
 import oxpecker from "../public/apps/oxpecker.png"
 import bubble from "../public/apps/bubble.png"
 import odous from "../public/apps/odous.png"
+import dowstodon from "../public/apps/dowstodon.png"
 import fread from "../public/apps/fread.png"
 
 import type { StaticImageData } from "next/legacy/image"
@@ -401,6 +402,13 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
       paid: true,
       hidden_from_all: true,
+    },
+    {
+      released_on: "Aug 26, 2024",
+      name: "Dowstodon",
+      icon: dowstodon,
+      url: "https://www.microsoft.com/store/productId/9PHNV45JVR2S",
+      paid: false,
     },
   ],
   sailfish: [
