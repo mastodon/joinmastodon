@@ -335,6 +335,14 @@ export const apps: appsList = {
       hidden_from_all: true,
     },
     {
+      released_on: "Jan 19, 2023",
+      name: "Ice Cubes",
+      icon: icecubes,
+      url: "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
+      paid: true,
+      hidden_from_all: true,
+    },
+    {
       name: "Mastonaut",
       icon: mastonaut,
       url: "https://apps.apple.com/app/mastonaut/id1450757574",
