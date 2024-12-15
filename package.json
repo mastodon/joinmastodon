@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "^20.0.0"
+    "node": "^22.0.0"
   },
   "scripts": {
     "dev": "next dev",
@@ -36,7 +36,7 @@
     "@formatjs/cli": "^6.2.12",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-query-devtools": "^5.51.21",
-    "@types/node": "^20.14.14",
+    "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "autoprefixer": "^10.4.20",
