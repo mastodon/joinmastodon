@@ -10,6 +10,8 @@ const fetchJson = async (url) => {
   return await res.json()
 }
 
+const sleep = (waitTime) => new Promise(resolve => setTimeout(resolve, waitTime))
+
 let url = `https://www.patreon.com/api/oauth2/v2/campaigns/${process.env.PATREON_CAMPAIGN_ID}/members?include=user,currently_entitled_tiers&fields%5Bmember%5D=full_name,lifetime_support_cents,patron_status,pledge_relationship_start,note&fields%5Buser%5D=image_url&fields%5Btier%5D=title`
 
 const membersByTiers = {}
@@ -20,6 +22,11 @@ while (true) {
 
   const data = await fetchJson(url)
   const profilePictureMap = {}
+
+  if (!data.included) {
+    console.log("Unexpected response:", data)
+    break;
+  }
 
   data.included.forEach((included) => {
     switch (included.type) {
@@ -68,6 +75,8 @@ while (true) {
   if (!url) {
     break
   }
+
+  await sleep(1000)
 }
 
 // Sponsors are sorted by lifetimeSupportCents desc

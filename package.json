@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "^20.0.0"
+    "node": "^22.0.0"
   },
   "scripts": {
     "dev": "next dev",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
-    "@linear/sdk": "^31.0.0",
+    "@linear/sdk": "^35.0.0",
     "@tanstack/react-query": "^5.51.21",
     "blurhash": "^2.0.5",
     "classnames": "^2.5.1",
@@ -25,6 +25,7 @@
     "keen-slider": "^6.8.6",
     "lodash": "^4.17.21",
     "next": "^14.2.5",
+    "node-gyp": "^11.0.0",
     "react": "^18.3.1",
     "react-blurhash": "^0.3.0",
     "react-dom": "^18.3.1",
@@ -36,7 +37,7 @@
     "@formatjs/cli": "^6.2.12",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-query-devtools": "^5.51.21",
-    "@types/node": "^20.14.14",
+    "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "autoprefixer": "^10.4.20",
@@ -50,5 +51,5 @@
     "tailwindcss-logical": "^3.0.1",
     "typescript": "^5.5.4"
   },
-  "packageManager": "yarn@4.4.0"
+  "packageManager": "yarn@4.5.3"
 }
