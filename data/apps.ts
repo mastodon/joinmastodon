@@ -93,7 +93,7 @@ export const apps: appsList = {
       released_on: "May 21, 2023",
       name: "Focus",
       icon: focus,
-      url: "https://github.com/allentown521/FocusMastodon",
+      url: "https://play.google.com/store/apps/details?id=allen.town.focus.mastodon",
       paid: false,
     },
     {
@@ -318,20 +318,15 @@ export const apps: appsList = {
     { name: "Statuzer", icon: statuzer, url: "https://statuzer.com" },
     { name: "Fedica", icon: fedica, url: "https://fedica.com" },
     { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
-    { name: "Trunks", icon: trunks, url: "https://trunks.social" },
     { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
     { name: "Tooty", icon: tooty, url: "https://n1k0.github.io/tooty/v2/" },
     { name: "Mastodeck", icon: mastodeck, url: "https://mastodeck.com/" },
+    { name: "Sengi", icon: sengi, url: "https://nicolasconstant.github.io/sengi/" },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
     { name: "Whalebird", icon: whalebird, url: "https://whalebird.social" },
     { name: "TheDesk", icon: thedesk, url: "https://thedesk.top/en" },
-    {
-      name: "Hyper­space",
-      icon: hyperspace,
-      url: "https://hyperspace.marquiskurt.net/",
-    },
     {
       name: "Mast",
       icon: mast,
@@ -348,17 +343,12 @@ export const apps: appsList = {
       name: "Sengi",
       icon: sengi,
       url: "https://nicolasconstant.github.io/sengi/",
+      hidden_from_all: true,
     },
     {
       name: "Bitlbee-Mastodon",
       icon: bitlbee,
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
-    },
-    {
-      name: "Elk",
-      icon: elk,
-      url: "https://github.com/elk-zone/elk-native/releases",
-      hidden_from_all: true,
     },
     {
       released_on: "Mar 23, 2023",
@@ -409,13 +399,6 @@ export const apps: appsList = {
       icon: dowstodon,
       url: "https://www.microsoft.com/store/productId/9PHNV45JVR2S",
       paid: false,
-    },
-  ],
-  sailfish: [
-    {
-      name: "Tooter",
-      icon: tooter,
-      url: "https://openrepos.net/content/dysko/tooter",
     },
   ],
   retro: [

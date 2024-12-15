@@ -22,7 +22,6 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
     { key: "android", label: intl.formatMessage({ id: "browse_apps.android", defaultMessage: "Android" }) },
     { key: "ios", label: intl.formatMessage({ id: "browse_apps.ios", defaultMessage: "iOS" }) },
     { key: "web", label: intl.formatMessage({ id: "browse_apps.web", defaultMessage: "Web" }) },
-    { key: "sailfish", label: intl.formatMessage({ id: "browse_apps.sailfish", defaultMessage: "SailfishOS" }) },
     { key: "desktop", label: intl.formatMessage({ id: "browse_apps.desktop", defaultMessage: "Desktop" }) },
     { key: "retro", label: intl.formatMessage({ id: "browse_apps.retro", defaultMessage: "Retro computing" }) },
   ]
