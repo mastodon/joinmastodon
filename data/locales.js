@@ -35,7 +35,6 @@ const locales = [
   { code: "oc",     language: "Occitan" },
   { code: "pl",     language: "Polski" },
   { code: "pt-BR",  language: "Português (Brasil)" },
-  { code: "pt",     language: "Português" },
   { code: "ru",     language: "Русский" },
   { code: "si",     language: "සිංහල" },
   { code: "sl",     language: "Slovenščina" },
@@ -59,6 +58,7 @@ const locales_disabled = [
   { code: "he", language: "עברית", dir: "rtl" },
   { code: "kab", language: "Taqbaylit" },
   { code: "lv", language: "Latviešu" },
+  { code: "pt", language: "Português" },
   { code: "sk", language: "Slovenčina" }
 ];
 
