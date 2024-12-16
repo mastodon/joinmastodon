@@ -20,7 +20,6 @@ import elk from "../public/apps/elk.png"
 import buffer from "../public/apps/buffer.png"
 import ivory from "../public/apps/ivory.png"
 import statuzer from "../public/apps/statuzer.png"
-import mammoth from "../public/apps/mammoth.png"
 import woolly from "../public/apps/woolly.png"
 import tuba from "../public/apps/tuba.png"
 import dawn from "../public/apps/dawn.png"
@@ -212,13 +211,6 @@ export const apps: appsList = {
       paid: true,
     },
     {
-      released_on: "Feb 24, 2023",
-      name: "Mammoth",
-      icon: mammoth,
-      url: "https://apps.apple.com/app/mammoth-for-mastodon/id1667573899",
-      paid: false,
-    },
-    {
       released_on: "Mar 24, 2023",
       name: "Woolly",
       icon: woolly,
@@ -384,14 +376,6 @@ export const apps: appsList = {
       icon: fedistar,
       url: "https://fedistar.net",
       paid: false,
-    },
-    {
-      released_on: "Feb 24, 2023",
-      name: "Mammoth",
-      icon: mammoth,
-      url: "https://apps.apple.com/app/mammoth-for-mastodon/id1667573899",
-      paid: false,
-      hidden_from_all: true,
     },
     {
       released_on: "May 23, 2023",
