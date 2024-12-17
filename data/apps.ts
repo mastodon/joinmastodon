@@ -5,11 +5,9 @@ import mast from "../public/apps/mast.png"
 import mastonaut from "../public/apps/mastonaut.png"
 import tokodon from "../public/apps/tokodon.png"
 import toot from "../public/apps/toot.jpg"
-import tooter from "../public/apps/tooter.png"
 import pinafore from "../public/apps/pinafore.png"
 import whalebird from "../public/apps/whalebird.png"
 import thedesk from "../public/apps/thedesk.png"
-import hyperspace from "../public/apps/hyperspace.png"
 import imast from "../public/apps/imast_icon.png"
 import sengi from "../public/apps/sengi.png"
 import sora from "../public/apps/sora.png"
@@ -331,7 +329,6 @@ export const apps: appsList = {
       name: "Ice Cubes",
       icon: icecubes,
       url: "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
-      paid: true,
       hidden_from_all: true,
     },
     {
