@@ -57,7 +57,7 @@ const sponsors = {
       name: "AirVPN",
     },
     {
-      url: "https://papersowl.com/write-my-essay-please",
+      url: "https://papersowl.com/",
       logo: require("../public/sponsors/papersowl.png"),
       name: "Papers Owl",
     },
@@ -98,8 +98,8 @@ const sponsors = {
     }, // Custom
     {
       url: "https://couponmister.com/",
-      logo: require("../public/sponsors/earthweb.png"),
-      name: "EarthWeb",
+      logo: require("../public/sponsors/coupon-mister.jpg"),
+      name: "Coupon Mister",
     }, // Custom
     {
       url: "https://sidesmedia.com/",
