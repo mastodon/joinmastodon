@@ -19,7 +19,7 @@ Bug reports and feature suggestions must use descriptive and concise titles, and
 
 ## Translations
 
-You can submit translations for the website via [Crowdin](https://crowdin.com/project/joinmastodon). They are periodically merged into the codebase. See the [README](./README.md) for more information.
+You can submit translations for the website via [Crowdin](https://crowdin.com/project/joinmastodon). They are periodically merged into the codebase. Translations should cover a reasonable amount of the content, and in particular at least the whole of the main landing page, before they will be merged. See the [README](./README.md) for more information.
 
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/mastodon/localized.svg)](https://crowdin.com/project/joinmastodon)
 
