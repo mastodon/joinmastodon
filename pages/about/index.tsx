@@ -137,18 +137,19 @@ const About = () => (
               <h2 className="h3 mb-6">Mastodon, Inc.</h2>
 
               <p className="b1 mb-4">
-                Mastodon, Inc. (EIN 92-3333630) is a 501(c)(3) non-profit entity in the United States
-                that supports the growth and operational capabilities of Mastodon, including being able
-                to receive tax-deductible U.S. donations and in-kind support.
+                Mastodon, Inc. (EIN 92-3333630) is a 501(c)(3) non-profit entity
+                in the United States that supports the growth and operational
+                capabilities of Mastodon, including being able to receive
+                tax-deductible U.S. donations and in-kind support.
               </p>
               <dl className="b1">
                 <dt className="font-bold">Address:</dt>
                 <dd>
-                    <address className="not-italic">
+                  <address className="not-italic">
                     Mastodon Inc,
-                    <br/>
+                    <br />
                     228 East 45th Street Suite 9E
-                    <br/>
+                    <br />
                     New York, New York 10017
                   </address>
                 </dd>
@@ -156,7 +157,7 @@ const About = () => (
             </div>
 
             <div className="col-span-12 md:col-span-6">
-              <a id="us-board" className="invisible block relative -top-32"/>
+              <a id="us-board" className="invisible block relative -top-32" />
               <h2 className="h3 mb-6" id="board_of_directors">
                 Meet the Board
               </h2>
@@ -176,7 +177,9 @@ const About = () => (
                           >
                             {member.name}
                           </Link>
-                        ) : member.name}
+                        ) : (
+                          member.name
+                        )}
                       </span>
 
                       {member.socials && (
@@ -201,7 +204,7 @@ const About = () => (
                     {member.title && (
                       <div className="flex items-center">
                         <span className="b2 block flex-grow !font-bold">
-                          {member.title}  
+                          {member.title}
                         </span>
                       </div>
                     )}
@@ -221,6 +224,16 @@ const About = () => (
               <h2 className="h3 mb-4">Reports</h2>
 
               <ul className="list-disc pl-3">
+                <li>
+                  <a
+                    href="/reports/Mastodon Annual Report 2023.pdf"
+                    className="b2 block hover:text-blurple-500"
+                  >
+                    <span className="h5 block">2023</span>
+                    <span className="text-gray-2">PDF, 4 MB</span>
+                  </a>
+                </li>
+
                 <li>
                   <a
                     href="/reports/Mastodon Annual Report 2022.pdf"
