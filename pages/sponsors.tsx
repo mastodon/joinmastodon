@@ -21,14 +21,14 @@ import usFlagIcon from "../public/united_states_flag_icon_round.svg"
 import Link from "next/link"
 
 const DonateCard = ({
-  title, 
+  title,
   titleClassName = "",
   titleInnerClassName = "",
-  className = null, 
-  copy, 
-  cta, 
-  ctaLink, 
-  ctaLight = false
+  className = null,
+  copy,
+  cta,
+  ctaLink,
+  ctaLight = false,
 }) => (
   <div
     className={classNames(
@@ -43,22 +43,16 @@ const DonateCard = ({
         titleClassName
       )}
     >
-      <span className={titleInnerClassName}>
-        {title}
-      </span>
+      <span className={titleInnerClassName}>{title}</span>
     </h3>
-    <p className="b2 mb-8 text-gray-1 grow">
-      {copy}
-    </p>
+    <p className="b2 mb-8 text-gray-1 grow">{copy}</p>
     <LinkButton light={ctaLight} size="medium" href={ctaLink}>
       {cta}
     </LinkButton>
   </div>
-);
+)
 
-const Emphasis = ({ children }) => (
-  <span className="font-bold">{children}</span>
-);
+const Emphasis = ({ children }) => <span className="font-bold">{children}</span>
 
 function Sponsors() {
   const intl = useIntl()
@@ -66,7 +60,10 @@ function Sponsors() {
     <Layout previewImage={previewImage}>
       <Hero>
         <h1 className="h2 xl:mt-8 mb-5 lg:col-start-2">
-          <FormattedMessage id="sponsors.hero.title" defaultMessage="Reimagining online discourse" />
+          <FormattedMessage
+            id="sponsors.hero.title"
+            defaultMessage="Reimagining online discourse"
+          />
         </h1>
         <p className="sh1 pb-20 lg:col-start-2 lg:col-end-6">
           <FormattedMessage
@@ -116,7 +113,7 @@ function Sponsors() {
 
       <div className="full-width-bg">
         <div className="full-width-bg__inner">
-          <a id="donate" className="invisible block relative -top-32"/>
+          <a id="donate" className="invisible block relative -top-32" />
           <section className="md:grid md:items-center md:gap-gutter md:grid-cols-12 pb-8 lg:pb-12">
             <div className="md:col-start-1 md:col-span-5 xl:col-start-2 xl:col-span-4">
               <h2 className="h4 md:h3 mb-5">
@@ -146,28 +143,28 @@ function Sponsors() {
             <div className="md:col-span-12 md:col-start-1 xl:col-span-10 xl:col-start-2 border border-blurple-500 xl:p-16 px-12 py-12 sm:px-24 sm:py-16 md:p-12 rounded-md">
               <div className="grid max-sm:grid-cols-1 sm:grid-cols-2 gap-16 md:grid-cols-3">
                 <DonateCard
-                  title={(
+                  title={
                     <FormattedMessage
                       id="sponsors.donate_direct.stripe.title"
                       defaultMessage="Direct"
                     />
-                  )}
-                  copy={(
+                  }
+                  copy={
                     <FormattedMessage
                       id="sponsors.donate_direct.stripe.copy"
                       defaultMessage="Direct donations are very welcome and it's easy to do using Stripe. A direct donation also makes for a great gift."
                     />
-                  )}
-                  cta={(
+                  }
+                  cta={
                     <FormattedMessage
                       id="sponsors.donate_direct.stripe.cta"
                       defaultMessage="Donate directly"
                     />
-                  )}
+                  }
                   ctaLink="https://donate.stripe.com/00g5l42h8ezY3YcaEE"
                 />
                 <DonateCard
-                  title={(
+                  title={
                     <>
                       <span className="mr-2">
                         <FormattedMessage
@@ -175,7 +172,7 @@ function Sponsors() {
                           defaultMessage="Direct"
                         />
                       </span>
-                      <Image 
+                      <Image
                         src={usFlagIcon}
                         className="aspect-square"
                         width="20"
@@ -183,115 +180,111 @@ function Sponsors() {
                         alt="Direct tax deductable donation for American residents"
                       />
                     </>
-                  )}
-                  copy={(
+                  }
+                  copy={
                     <FormattedMessage
                       id="sponsors.donate_direct.givebutter.copy"
                       defaultMessage="Are you an American resident? If so, you can make a tax deductable donation using Givebutter."
                     />
-                  )}
-                  cta={(
+                  }
+                  cta={
                     <FormattedMessage
                       id="sponsors.donate_direct.givebutter.cta"
                       defaultMessage="Donate directly"
                     />
-                  )}
+                  }
                   ctaLink="https://givebutter.com/nAk74p"
                 />
                 <DonateCard
-                  title={(
+                  title={
                     <FormattedMessage
                       id="sponsors.donate.patreon.title"
                       defaultMessage="Patreon"
                     />
-                  )}
-                  copy={(
+                  }
+                  copy={
                     <FormattedMessage
                       id="sponsors.donate.patreon.copy"
                       defaultMessage="Patreon donors gain access to <emphasis>Mastodon’s Discord</emphasis> for developers, server admins, and social web supporters."
                       values={{
-                        emphasis: (text) => (
-                          <Emphasis>
-                            {text}
-                          </Emphasis>
-                        ),
+                        emphasis: (text) => <Emphasis>{text}</Emphasis>,
                       }}
                     />
-                  )}
-                  cta={(
+                  }
+                  cta={
                     <FormattedMessage
                       id="sponsors.donate.patreon.cta"
                       defaultMessage="Donate on Patreon"
                     />
-                  )}
+                  }
                   ctaLink="https://patreon.com/mastodon"
                 />
                 <DonateCard
-                  title={(
+                  title={
                     <FormattedMessage
                       id="sponsors.donate.github.title"
                       defaultMessage="GitHub"
                     />
-                  )}
+                  }
                   titleInnerClassName="md:before:content-['-'] md:before:block md:before:w-16 md:before:invisible"
-                  copy={(
+                  copy={
                     <FormattedMessage
                       id="sponsors.donate.github.copy"
                       defaultMessage="GitHub Sponsors receive a Mastodon badge to their Org or Personal profile. Plus we don’t pay fees!"
                     />
-                  )}
-                  cta={(
+                  }
+                  cta={
                     <FormattedMessage
                       id="sponsors.donate.github.cta"
                       defaultMessage="Donate on GitHub"
                     />
-                  )}
+                  }
                   ctaLink="https://github.com/sponsors/mastodon"
                   ctaLight
                 />
                 <DonateCard
-                  title={(
+                  title={
                     <FormattedMessage
                       id="sponsors.donate.corporate_sponsorship.title"
                       defaultMessage="Corporate Sponsorship"
                     />
-                  )}
+                  }
                   titleInnerClassName="md:pr-16"
-                  copy={(
+                  copy={
                     <FormattedMessage
                       id="sponsors.donate.corporate_sponsorship.copy"
                       defaultMessage="We welcome corporate sponsors! Sponsorship includes your company’s logo with a link to your website."
                     />
-                  )}
-                  cta={(
+                  }
+                  cta={
                     <FormattedMessage
                       id="sponsors.donate.corporate_sponsorship.cta"
                       defaultMessage="Become a sponsor"
                     />
-                  )}
+                  }
                   ctaLink="https://sponsor.joinmastodon.org/"
                   ctaLight
                 />
                 <DonateCard
-                  title={(
+                  title={
                     <FormattedMessage
                       id="sponsors.donate.corporate_matching.title"
                       defaultMessage="Corporate Matching"
                     />
-                  )}
+                  }
                   titleInnerClassName="md:pr-16"
-                  copy={(
+                  copy={
                     <FormattedMessage
                       id="sponsors.donate.corporate_matching.copy"
                       defaultMessage="Does your company provide corporate matching? If so, you can use Benevity to donate!"
                     />
-                  )}
-                  cta={(
+                  }
+                  cta={
                     <FormattedMessage
                       id="sponsors.donate.corporate_matching.cta"
                       defaultMessage="Donate on Benevity"
                     />
-                  )}
+                  }
                   ctaLink="https://causes.benevity.org/causes/276-5575947211653_d7e4"
                   ctaLight
                 />
@@ -306,12 +299,24 @@ function Sponsors() {
                   defaultMessage={`To ensure you qualify to make a donation, please refer to our donor policies: <link_mastodon_inc>Mastodon, Inc</link_mastodon_inc> <middot></middot> <link_mastodon_ggmbh>Mastodon gGmbH</link_mastodon_ggmbh>`}
                   values={{
                     link_mastodon_inc: (text) => (
-                      <Link className="hover:text-blurple-600 ml-0.5" href="/donor-policy/mastodon-inc" target="_blank">{text}</Link>
+                      <Link
+                        className="hover:text-blurple-600 ml-0.5"
+                        href="/donor-policy/mastodon-inc"
+                        target="_blank"
+                      >
+                        {text}
+                      </Link>
                     ),
                     link_mastodon_ggmbh: (text) => (
-                      <Link className="hover:text-blurple-600" href="/donor-policy/mastodon-ggmbh" target="_blank">{text}</Link>
+                      <Link
+                        className="hover:text-blurple-600"
+                        href="/donor-policy/mastodon-ggmbh"
+                        target="_blank"
+                      >
+                        {text}
+                      </Link>
                     ),
-                    middot: () => (<span className="px-0.5">&middot;</span>)
+                    middot: () => <span className="px-0.5">&middot;</span>,
                   }}
                 />
               </div>
@@ -341,13 +346,17 @@ function Sponsors() {
                 />
               </p>
               <div className="flex gap-4 items-center">
-                <LinkButton size="large" href="/reports/Mastodon%20Annual%20Report%202022.pdf">
+                <LinkButton
+                  size="large"
+                  href="/reports/Mastodon%20Annual%20Report%202023.pdf"
+                >
                   <FormattedMessage
                     id="sponsors.cta.annual_reports"
                     defaultMessage="Annual Report"
-                  />
+                  />{" "}
+                  — 2023
                 </LinkButton>
-                <span className="font-semibold">PDF, 6MB</span>
+                <span className="font-semibold">PDF, 4MB</span>
               </div>
             </div>
           </section>
@@ -374,7 +383,12 @@ function Sponsors() {
                   defaultMessage={`We’re looking for developers to help build the future of online communities with Mastodon. There’s a lot to do — we need help with new features, scaling operations, improving documentation, and more — but the work doesn’t stop here. We contribute to the decentralized social media protocol underlying Mastodon, ActivityPub, and collaborate with the social web community that uses it.\n\nJoin the social web revolution!`}
                 />
               </p>
-              <LinkButton size="large" href={'https://github.com/mastodon/mastodon/blob/main/CONTRIBUTING.md'}>
+              <LinkButton
+                size="large"
+                href={
+                  "https://github.com/mastodon/mastodon/blob/main/CONTRIBUTING.md"
+                }
+              >
                 <FormattedMessage
                   id="sponsors.cta.contribute_to_mastodon"
                   defaultMessage="Contribute to Mastodon"
@@ -386,7 +400,7 @@ function Sponsors() {
       </div>
 
       <section className="platinum-gold-sponsors mb-32 pt-16">
-        <a id="supported_by" className="invisible block relative -top-32"/>
+        <a id="supported_by" className="invisible block relative -top-32" />
         <h2 className="h4 mb-10 text-center">
           <FormattedMessage
             id="sponsors.supported_by"
@@ -411,11 +425,20 @@ function Sponsors() {
                   href={sponsor.url}
                   rel={sponsor.nofollow ? "nofollow" : undefined}
                 >
-                  <SponsorCard sponsor={sponsor} tier={sponsor.gold ? "gold" : "silver"} />
+                  <SponsorCard
+                    sponsor={sponsor}
+                    tier={sponsor.gold ? "gold" : "silver"}
+                  />
                 </a>
               )
             } else {
-              return <SponsorCard key={i} sponsor={sponsor} tier={sponsor.gold ? "gold" : "silver"} />
+              return (
+                <SponsorCard
+                  key={i}
+                  sponsor={sponsor}
+                  tier={sponsor.gold ? "gold" : "silver"}
+                />
+              )
             }
           })}
         </div>
