@@ -56,6 +56,12 @@ const AppsPage = () => {
           </h2>
 
           <div className="grid grid-cols-2 justify-center gap-gutter md:justify-start">
+            <a href={`https://f-droid.org/${intl.locale}/packages/org.joinmastodon.android`}>
+              <img
+                src={`/badges/f-droid-${intl.locale}.svg`}
+                alt="Get it on F-Droid"
+              />
+            </a>
             <a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974">
               <Image
                 src={downloadOnAppStore}
