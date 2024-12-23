@@ -11,7 +11,6 @@ import thedesk from "../public/apps/thedesk.png"
 import imast from "../public/apps/imast_icon.png"
 import sengi from "../public/apps/sengi.png"
 import sora from "../public/apps/sora.png"
-import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
 import elk from "../public/apps/elk.png"
@@ -55,6 +54,9 @@ import bubble from "../public/apps/bubble.png"
 import odous from "../public/apps/odous.png"
 import dowstodon from "../public/apps/dowstodon.png"
 import fread from "../public/apps/fread.png"
+import raccoon from "../public/apps/raccoonforfriendica.png"
+import husky from "../public/apps/husky.png"
+import shitter from "../public/apps/shitter.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -66,7 +68,11 @@ export type appsList = {
     /** app's icon or logo */
     icon: StaticImageData
     /** link to the app on its website or respective app store */
-    url: string
+    url?: string
+    /** package name on fdroid */
+    fdroid?: string
+    /** package name on google play */
+    gplay?: string
     /** the date the app was first released on */
     released_on?: string
     /** whether the app requires a fee to access. defaults to false */
@@ -83,47 +89,43 @@ export const apps: appsList = {
       released_on: "Nov 23, 2023",
       name: "Rodent",
       icon: rodent,
-      url: "https://play.google.com/store/apps/details?id=social.rodent",
+      gplay: "social.rodent",
       paid: false,
     },
     {
       released_on: "May 21, 2023",
       name: "Focus",
       icon: focus,
-      url: "https://play.google.com/store/apps/details?id=allen.town.focus.mastodon",
+      gplay: "allen.town.focus.mastodon",
+      fdroid: "allen.town.focus.mastodon",
       paid: false,
     },
     {
       released_on: "Mar 15, 2017",
       name: "Tusky",
       icon: tusky,
-      url: "https://play.google.com/store/apps/details?id=com.keylesspalace.tusky",
+      gplay: "com.keylesspalace.tusky",
+      fdroid: "com.keylesspalace.tusky",
     },
     {
       released_on: "Apr 23, 2017",
       name: "Subway Tooter",
       icon: subwayTooter,
-      url: "https://play.google.com/store/apps/details?id=jp.juggler.subwaytooter",
+      gplay: "jp.juggler.subwaytooter",
     },
     {
       released_on: "May 18, 2019",
       name: "Fedilab",
       icon: fedilab,
-      url: "https://play.google.com/store/apps/details?id=app.fedilab.android",
+      gplay: "app.fedilab.android",
+      fdroid: "fr.gouv.etalab.mastodon", // ¯\_(ツ)_/¯
       paid: false,
-    },
-    {
-      released_on: "Apr 16, 2021",
-      name: "tooot",
-      icon: tooot,
-      url: "https://play.google.com/store/apps/details?id=com.xmflsct.app.tooot",
-      hidden_from_all: true,
     },
     {
       released_on: "Jan 26, 2023",
       name: "Trunks",
       icon: trunks,
-      url: "https://play.google.com/store/apps/details?id=com.decad3nce.trunks",
+      gplay: "com.decad3nce.trunks",
       paid: false,
       hidden_from_all: true,
     },
@@ -131,35 +133,51 @@ export const apps: appsList = {
       released_on: "Dec 6, 2022",
       name: "Moshidon",
       icon: moshidon,
-      url: "https://play.google.com/store/apps/details?id=org.joinmastodon.android.moshinda",
+      gplay: "org.joinmastodon.android.moshinda",
+      fdroid: "org.joinmastodon.android.moshinda",
       paid: false,
     },
     {
       released_on: "Jan 31, 2023",
       name: "Buffer",
       icon: buffer,
-      url: "https://play.google.com/store/apps/details?id=org.buffer.android",
+      gplay: "org.buffer.android",
       hidden_from_all: true,
     },
     {
       released_on: "Feb 21, 2023",
       name: "ZonePane",
       icon: zonepane,
-      url: "https://play.google.com/store/apps/details?id=com.zonepane",
+      gplay: "com.zonepane",
       paid: false,
     },
     {
       released_on: "Sep 6, 2023",
       name: "Pachli",
       icon: pachli,
-      url: "https://play.google.com/store/apps/details?id=app.pachli",
+      gplay: "app.pachli",
+      fdroid: "app.pachli",
       paid: false,
     },
     {
       released_on: "Aug 1, 2024",
       name: "Fread",
       icon: fread,
-      url: "https://play.google.com/store/apps/details?id=com.zhangke.fread",
+      gplay: "com.zhangke.fread",
+      paid: false,
+    },
+    {
+      released_on: "Apr 17, 2024",
+      name: "Husky",
+      icon: husky,
+      fdroid: "su.xash.husky",
+      paid: false,
+    },
+    {
+      released_on: "Nov 13, 2024",
+      name: "Raccoon",
+      icon: raccoon,
+      fdroid: "com.livefast.eattrash.raccoonforfriendica",
       paid: false,
     },
   ],
@@ -180,13 +198,6 @@ export const apps: appsList = {
       name: "iMast",
       icon: imast,
       url: "https://apps.apple.com/app/imast/id1229461703",
-    },
-    {
-      released_on: "Apr 16, 2021",
-      name: "tooot",
-      icon: tooot,
-      url: "https://apps.apple.com/app/tooot/id1549772269",
-      hidden_from_all: true,
     },
     {
       released_on: "Jan 19, 2023",
