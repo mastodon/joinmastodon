@@ -1,5 +1,8 @@
 import Image from "next/legacy/image"
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage, useIntl } from "react-intl"
+
+import FDroidLogo from "../public/badges/f-droid-logo.svg"
+import GooglePlayLogo from "../public/badges/google-play-logo.svg"
 
 export type AppCardProps = {
   name: React.ReactNode
@@ -14,7 +17,12 @@ export type AppCardProps = {
  * Renders a card with app data.
  * Layout (width, height, positioning) can be set from the parent.
  */
-export const AppCard = ({ name, icon, url, paid, category, categoryLabel }) => {
+export const AppCard = ({ name, icon, url, fdroid, gplay, paid, category, categoryLabel }) => {
+  const intl = useIntl()
+  if (!url && (fdroid || gplay)) {
+    if (gplay) url = `https://play.google.com/store/apps/details?id=${gplay}`;
+    if (fdroid) url = `https://f-droid.org/${intl.locale}/packages/${fdroid}`; // default to the better one
+  }
   return (
     <a
       key={`${url} ${name}`}
@@ -38,6 +46,19 @@ export const AppCard = ({ name, icon, url, paid, category, categoryLabel }) => {
         <h3 className="b1 !font-700 flex flex-auto items-center !leading-[1] rtl:text-right">
           <span dir="ltr">{name}</span>
         </h3>
+      </div>
+      <div className="flex flex-col float-right">
+        {/*what about just turning the opacity down if it's no available there?*/}
+        {fdroid ?
+          <Image
+            onClick={() => window.open(`https://f-droid.org/${intl.locale}/packages/${fdroid}`)}
+            src={FDroidLogo} alt="Logo for F-Droid" width={25} height={25} />
+          : undefined}
+        {gplay ?
+          <Image
+            onClick={() => window.open(`https://play.google.com/store/apps/details?id=${gplay}`)}
+            src={GooglePlayLogo} alt="Logo for Google Play" width={25} height={25} />
+          : undefined}
       </div>
     </a>
   )
