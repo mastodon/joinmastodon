@@ -1,5 +1,5 @@
 import Image, { ImageProps } from "next/legacy/image"
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage, useIntl } from "react-intl"
 
 import downloadOnGooglePlay from "../public/badges/google-play.svg"
 import downloadOnAppStore from "../public/badges/app-store.svg"
@@ -15,6 +15,7 @@ export const AppHero = ({
   backgroundImage,
   backgroundImagePosition = "center center",
 }: AppHeroProps) => {
+  const intl = useIntl()
   return (
     <section className="full-width-bg relative -mb-footer-offset pb-footer-offset pt-32">
       <div className="absolute inset-0 -z-10">
@@ -36,6 +37,12 @@ export const AppHero = ({
 
         <div className="grid-cols-12 justify-center gap-gutter md:grid">
           <div className="col-span-6 col-start-4 mx-auto grid max-w-xs grid-cols-2 justify-center gap-gutter md:mx-0 md:max-w-none md:justify-start xl:col-span-4 xl:col-start-5">
+            <a href={`https://f-droid.org/${intl.locale}/packages/org.joinmastodon.android`}>
+              <img
+                src={`/badges/f-droid-${intl.locale}.svg`}
+                alt="Get it on F-Droid"
+              />
+            </a>
             <a href="https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974">
               <Image
                 src={downloadOnAppStore}
