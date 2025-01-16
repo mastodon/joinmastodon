@@ -15,13 +15,32 @@ import guardianLogo from "../public/press/the-guardian.svg"
 import forbesLogo from "../public/press/forbes.svg"
 import techcrunchLogo from "../public/press/techcrunch.svg"
 import bloombergLogo from "../public/press/bloomberg.svg"
+import macstoriesLogo from "../public/press/macstories.svg"
 
 const articles = [
   {
+    logo: pcMagLogo,
+    url: "https://uk.pcmag.com/social-media/156251/mastodon-transitioning-to-a-nonprofit-structure/",
+    title: "Mastodon Transitioning to a Nonprofit Structure",
+    date: "2025-01-13",
+  },
+  {
     logo: techcrunchLogo,
-    url: "https://techcrunch.com/2023/09/21/mastodons-latest-release-makes-the-open-source-twitter-alternative-easier-to-use/",
-    title: "Mastodon’s latest release makes the open source Twitter alternative easier to use",
-    date: "2023-09-21",
+    url: "https://techcrunch.com/2025/01/13/mastodon-announces-transition-to-nonprofit-structure/",
+    title: "Mastodon announces transition to nonprofit structure",
+    date: "2025-01-13",
+  },
+  {
+    logo: theVergeLogo,
+    url: "https://www.theverge.com/2024/10/8/24265201/mastodon-4-3-update-grouped-notifications-design-discover-carousel",
+    title: "Mastodon switches things up to make its app a little easier to use",
+    date: "2024-10-08",
+  },
+  {
+    logo: macstoriesLogo,
+    url: "https://www.macstories.net/linked/highlighting-journalism-on-mastodon/",
+    title: "Highlighting Journalism on Mastodon",
+    date: "2024-07-02",
   },
   {
     logo: bloombergLogo,
