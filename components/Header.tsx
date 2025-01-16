@@ -42,6 +42,10 @@ const Header = ({ transparent = true }: HeaderProps) => {
       label: <FormattedMessage id="nav.resources.title" defaultMessage="Resources" />,
       childItems: [
         {
+          value: "/about",
+          label: <FormattedMessage id="nav.about_us.title" defaultMessage="About us" />,
+          description: <FormattedMessage id="nav.about_us.description" defaultMessage="Read about our story, the team, and recent media coverage" />
+        }, {
           value: "https://blog.joinmastodon.org/",
           label: <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />,
           description: <FormattedMessage id="nav.blog.description" defaultMessage="Get the latest news about the platform" />,
@@ -54,6 +58,10 @@ const Header = ({ transparent = true }: HeaderProps) => {
           label: <FormattedMessage id="nav.support.title" defaultMessage="Support" />,
           description: <FormattedMessage id="nav.support.description" defaultMessage="Get help or suggest a feature on GitHub" />,
         }, {
+          value: "/verification",
+          label: <FormattedMessage id="nav.verification.title" defaultMessage="Verification" />,
+          description: <FormattedMessage id="nav.verification.description" defaultMessage="Learn about verified profile links on Mastodon" />
+        }, {
           value: "/branding",
           label: <FormattedMessage id="nav.branding.title" defaultMessage="Branding" />,
           description: <FormattedMessage id="nav.branding.description" defaultMessage="Download our logos and learn how to use them" />,
@@ -65,9 +73,6 @@ const Header = ({ transparent = true }: HeaderProps) => {
         title: <FormattedMessage id="nav.code.title" defaultMessage="Source code" />,
         description: <FormattedMessage id="nav.code.description" defaultMessage="Mastodon is free and open-source software" />,
       },
-    }, {
-      value: "/verification",
-      label: <FormattedMessage id="nav.verification.title" defaultMessage="Verification" />,
     }, {
       key: "locale",
       label: <span aria-label={intl.formatMessage({
