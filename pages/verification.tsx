@@ -204,7 +204,7 @@ const Verification = () => {
                 <p className="b1 mb-16 text-center ">
                   <FormattedMessage
                     id="verification.examples.lead"
-                    defaultMessage="Anyone can use verification on Mastodon, but here are just some of the most recognizable names that do…"
+                    defaultMessage="Anyone can use verification on Mastodon, but here are some of the well-known names that do…"
                   />
                 </p>
 
