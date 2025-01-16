@@ -1,9 +1,13 @@
 import avatarWikipedia from "../public/accounts/wikipedia.png"
-import avatarMozilla from "../public/accounts/mozilla.jpg"
-import avatarStephenFry from "../public/accounts/stephenfry.jpeg"
-import avatarGeorgeTakei from "../public/accounts/georgetakei.jpg"
-import avatarMarkRuffalo from "../public/accounts/markruffalo.jpeg"
-import avatarNeilGaiman from "../public/accounts/neilgaiman.jpeg"
+import avatarBaratunde from "../public/accounts/baratunde.jpg"
+import avatarProPublica from "../public/accounts/propublica.png"
+import avatarEff from "../public/accounts/eff.png"
+import avatarRollingStone from "../public/accounts/rollingstone.jpeg"
+import avatarSignalApp from "../public/accounts/signalapp.png"
+import avatarCoryDoctorow from "../public/accounts/cory.png"
+import avatarNiemanLab from "../public/accounts/niemanlab.jpeg"
+import avatarCreativeCommons from "../public/accounts/creativecommons.png"
+
 
 const verified = [
   {
@@ -13,34 +17,52 @@ const verified = [
     username: "wikipedia@wikis.world",
   },
   {
-    url: "https://mozilla.social/@mozilla",
-    image: avatarMozilla,
-    name: "Mozilla",
-    username: "mozilla@mozilla.social",
-  },
-  {
-    url: "https://mastodon.world/@auschwitzmuseum",
-    image: require("../public/accounts/auschwitzmuseum.jpg"),
-    name: "Auschwitz Memorial ",
-    username: "auschwitzmuseum@mastodon.world",
-  },
-  {
     url: "https://mastodon.social/@baratunde",
-    image: require("../public/accounts/baratunde.jpg"),
+    image: avatarBaratunde,
     name: "Baratunde",
-    username: "baratunde@mastodon.social ",
+    username: "baratunde@mastodon.social",
   },
   {
-    url: "https://mastodonapp.uk/@stephenfry",
-    image: avatarStephenFry,
-    name: "Stephen Fry",
-    username: "stephenfry@mastodonapp.uk",
+    url: "https://newsie.social/@ProPublica",
+    image: avatarProPublica,
+    name: "ProPublica",
+    username: "ProPublica@newsie.social ",
   },
   {
-    url: "https://mastodon.social/@neilhimself",
-    image: avatarNeilGaiman,
-    name: "Neil Gaiman",
-    username: "neilhimself@mastodon.social",
+    url: "https://mastodon.social/@eff",
+    image: avatarEff,
+    name: "Electronic Frontier Foundation",
+    username: "eff@mastodon.social",
+  },
+  {
+    url: "https://mstdn.social/@RollingStone",
+    image: avatarRollingStone,
+    name: "Rolling Stone",
+    username: "rollingstone@mastdn.social",
+  },
+  {
+    url: "https://mastodon.world/@signalapp",
+    image: avatarSignalApp,
+    name: "Signal",
+    username: "signalapp@mastodon.world",
+  },
+  {
+    url: "https://mamot.fr/@pluralistic",
+    image: avatarCoryDoctorow,
+    name: "Cory Doctorow",
+    username: "pluralistic@mamot.fr",
+  },
+  {
+    url: "https://mastodon.social/@niemanlab",
+    image: avatarNiemanLab,
+    name: "Nieman Journalism Lab",
+    username: "niemanlab@mastodon.social",
+  },
+  {
+    url: "https://mastodon.social/@creativecommons",
+    image: avatarCreativeCommons,
+    name: "Creative Commons",
+    username: "creativecommons@mastodon.social",
   },
 ]
 
