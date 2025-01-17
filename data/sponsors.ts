@@ -116,6 +116,11 @@ const sponsors = {
       logo: require("../public/sponsors/veepn.png"),
       name: "Download VPN for PC by VeePN super simple, fast and trustful VPN for all family.",
     }, // Custom
+    {
+      url: "https://embryo.com/",
+      logo: require("../public/sponsors/embryo.png"),
+      name: "Embryo",
+    }, // Custom
   ] as Sponsor[],
   gold: [
     {
@@ -228,6 +233,16 @@ const sponsors = {
       gold: true,
     },
     ...patreonData.silver,
+    {
+      url: "https://www.passbolt.com/",
+      name: "passbolt",
+      nofollow: true,
+    }, // GitHub
+    {
+      url: "https://healthchecks.io/",
+      name: "healthchecks",
+      nofollow: true,
+    }, // GitHub
   ] as Sponsor[],
   generalHighlighted: patreonData.generalHighlighted,
   general: patreonData.general,
