@@ -28,8 +28,8 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
 
   /** normalizing the apps dictionary as an array */
   const allApps = Object.entries(apps)
-    .map(([category, apps]) =>
-      apps.map(({ name, icon, url, paid, released_on, hidden_from_all }) => ({
+    .flatMap(([category, apps]) =>
+      apps.map(({ name, icon, url, paid, released_on, hidden_from_all, open }) => ({
         name,
         icon,
         url,
@@ -38,9 +38,9 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
         released_on: new Date(released_on) ?? null,
         category,
         categoryLabel: categories.find((c) => c.key === category)["label"],
+        open,
       }))
     )
-    .flat()
 
   //prettier-ignore
   const sortOptions = [
