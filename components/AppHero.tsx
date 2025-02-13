@@ -38,7 +38,7 @@ export const AppHero = ({
         <div className="grid-cols-12 justify-center gap-gutter md:grid">
           <div className="col-span-6 col-start-4 mx-auto grid max-w-xs grid-cols-2 justify-center gap-gutter md:mx-0 md:max-w-none md:justify-start xl:col-span-4 xl:col-start-5">
             <a href={`https://f-droid.org/${intl.locale}/packages/org.joinmastodon.android`}>
-              <img
+              <img // "Image" seemingly cant have a dynamic src
                 src={`/badges/f-droid-${intl.locale}.svg`}
                 alt="Get it on F-Droid"
               />

@@ -60,416 +60,496 @@ import smither from "../public/apps/smither.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
-export type appsList = {
+export type app = {
   /** the operating system or platform the list of apps is built for */
-  [platform: string]: {
-    /** the name of the app */
-    name: string
-    /** app's icon or logo */
-    icon: StaticImageData
-    /** link to the app on its website or respective app store */
-    url?: string
-    /** package name on fdroid */
-    fdroid?: string
-    /** package name on google play */
-    gplay?: string
-    /** the date the app was first released on */
-    released_on?: string
-    /** whether the app requires a fee to access. defaults to false */
-    paid?: boolean
-    /** whether the app should be hidden from all, used to avoid duplicates */
-    hidden_from_all?: boolean
-    /** The category label */
-    categoryLabel?: string
-  }[]
+  /** the name of the app */
+  name: string
+  /** app's icon or logo */
+  icon: StaticImageData
+  /** link to the app on its website */
+  url?: string
+
+  /** if the store data is just "true" then just link to url */
+
+  /** web interface link */
+  web?: string
+
+  /** package name on f-droid.org */
+  fdroid?: string
+  /** package name on android.izzysoft.de */
+  izzy?: string
+  /** package name on google play */
+  gplay?: string
+  /** is available on android but isn't on fdroid */
+  android?: true
+  /** if the app is for apple's internet os, link to it here */
+  ios?: string
+  /** if the app is for apple's watch os, link to it here */
+  watchos?: string
+  // do people make apps ONLY for iPads? https://apps.apple.com/us/app/ivory-for-mastodon-by-tapbots/id6444602274?platform=ipad
+
+  /** link to the generic linux binary (appimage is just the popular one) */
+  appimage?: string
+  /** link flatpak repo and flatpak id e.g flathub.org/org.kde.tokodon */
+  flatpak?: string
+  /** snap store id */
+  snap?: string
+  /** link to .deb file download */
+  debian?: string
+  /** arch package name */
+  arch?: string
+  /** arch user repository package name */
+  arch_aur?: string
+  /** fedora package name */
+  rpm?: string
+  // https://apps.kde.org/ exists but that's ONLY for kde apps and links to flathub
+  // TODO add other distro specifc repos
+
+  /** id on the microsoft store */
+  micestore?: string
+  /** link to windows exe/msi page */
+  windows?: string
+  /** if the app is for apple's macos, link to it here 
+   * e.g ivory-for-mastodon-by-tapbots/id6444602274 
+   * or set to "true" if there's a dmg */
+  macos?: string
+  /** brew.sh package */
+  brew?: string
+  /** generic retro */
+  retro?: true
+
+  /** the date the app was first released on */
+  released_on?: string | Date
+  /** whether the app requires a fee to access. defaults to false */
+  paid?: boolean
+  /** link to source code */
+  source?: string
 }
-export const apps: appsList = {
-  android: [
-    {
-      released_on: "Nov 23, 2023",
-      name: "Rodent",
-      icon: rodent,
-      gplay: "social.rodent",
-      paid: false,
-    },
-    {
-      released_on: "May 21, 2023",
-      name: "Focus",
-      icon: focus,
-      gplay: "allen.town.focus.mastodon",
-      fdroid: "allen.town.focus.mastodon",
-      paid: false,
-    },
-    {
-      released_on: "Mar 15, 2017",
-      name: "Tusky",
-      icon: tusky,
-      gplay: "com.keylesspalace.tusky",
-      fdroid: "com.keylesspalace.tusky",
-    },
-    {
-      released_on: "Apr 23, 2017",
-      name: "Subway Tooter",
-      icon: subwayTooter,
-      gplay: "jp.juggler.subwaytooter",
-    },
-    {
-      released_on: "May 18, 2019",
-      name: "Fedilab",
-      icon: fedilab,
-      gplay: "app.fedilab.android",
-      fdroid: "fr.gouv.etalab.mastodon", // ¯\_(ツ)_/¯
-      paid: false,
-    },
-    {
-      released_on: "Jan 26, 2023",
-      name: "Trunks",
-      icon: trunks,
-      gplay: "com.decad3nce.trunks",
-      paid: false,
-      hidden_from_all: true,
-    },
-    {
-      released_on: "Dec 6, 2022",
-      name: "Moshidon",
-      icon: moshidon,
-      gplay: "org.joinmastodon.android.moshinda",
-      fdroid: "org.joinmastodon.android.moshinda",
-      paid: false,
-    },
-    {
-      released_on: "Jan 31, 2023",
-      name: "Buffer",
-      icon: buffer,
-      gplay: "org.buffer.android",
-      hidden_from_all: true,
-    },
-    {
-      released_on: "Feb 21, 2023",
-      name: "ZonePane",
-      icon: zonepane,
-      gplay: "com.zonepane",
-      paid: false,
-    },
-    {
-      released_on: "Sep 6, 2023",
-      name: "Pachli",
-      icon: pachli,
-      gplay: "app.pachli",
-      fdroid: "app.pachli",
-      paid: false,
-    },
-    {
-      released_on: "Aug 1, 2024",
-      name: "Fread",
-      icon: fread,
-      gplay: "com.zhangke.fread",
-      paid: false,
-    },
-    {
-      released_on: "Apr 17, 2024",
-      name: "Husky",
-      icon: husky,
-      fdroid: "su.xash.husky",
-      paid: false,
-    },
-    {
-      released_on: "Aug 16, 2024",
-      name: "Raccoon",
-      icon: raccoon,
-      fdroid: "com.livefast.eattrash.raccoonforfriendica",
-      paid: false,
-    },
-    {
-      released_on: "Aug 18, 2018",
-      name: "Smither",
-      icon: smither,
-      fdroid: "org.nuclearfog.smither",
-      paid: false,
-    },
-  ],
-  ios: [
-    {
-      name: "Toot!",
-      icon: toot,
-      url: "https://apps.apple.com/app/toot/id1229021451",
-      paid: true,
-    },
-    {
-      name: "Mast",
-      icon: mast,
-      url: "https://apps.apple.com/app/mast-for-mastodon/id1437429129",
-      paid: true,
-    },
-    {
-      name: "iMast",
-      icon: imast,
-      url: "https://apps.apple.com/app/imast/id1229461703",
-    },
-    {
-      released_on: "Jan 19, 2023",
-      name: "Ice Cubes",
-      icon: icecubes,
-      url: "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
-    },
-    {
-      released_on: "Jan 31, 2023",
-      name: "Buffer",
-      icon: buffer,
-      url: "https://apps.apple.com/app/buffer-plan-schedule-posts/id490474324",
-      hidden_from_all: true,
-    },
-    {
-      released_on: "Jan 24, 2023",
-      name: "Ivory",
-      icon: ivory,
-      url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
-      paid: true,
-    },
-    {
-      released_on: "Mar 24, 2023",
-      name: "Woolly",
-      icon: woolly,
-      url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
-      paid: true,
-    },
-    {
-      released_on: "Mar 27, 2023",
-      name: "DAWN for Mastodon",
-      icon: dawn,
-      url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
-      paid: true,
-    },
-    {
-      released_on: "May 1, 2023",
-      name: "Mona",
-      icon: mona,
-      url: "https://apps.apple.com/app/id1659154653",
-      paid: true,
-    },
-    {
-      released_on: "Jun 19, 2023",
-      name: "Radiant",
-      icon: radiant,
-      url: "https://apps.apple.com/app/id6444323022",
-      paid: true,
-    },
-    {
-      released_on: "Jan 26, 2023",
-      name: "Trunks",
-      icon: trunks,
-      url: "https://apps.apple.com/app/trunks-for-mastodon/id6444749479",
-      paid: false,
-      hidden_from_all: true,
-    },
-    {
-      released_on: "Jan 25, 2023",
-      name: "TootDesk",
-      icon: tootdesk,
-      url: "https://apps.apple.com/app/tootdesk/id1591748028",
-      paid: false,
-    },
-    {
-      released_on: "Aug 4, 2023",
-      name: "Stomp (watchOS)",
-      icon: stomp,
-      url: "https://apps.apple.com/app/stomp-for-mastodon/id1670866247",
-      paid: true,
-    },
-    {
-      released_on: "Jun 22, 2023",
-      name: "feather",
-      icon: feather,
-      url: "https://apps.apple.com/app/feather-for-mastodon/id6446263061",
-      paid: false,
-    },
-    {
-      released_on: "Aug 10, 2023",
-      name: "SoraSNS",
-      icon: sora,
-      url: "https://apps.apple.com/app/sora-for-mastodon-bluesky/id6450969760?platform=iphone",
-      paid: false,
-    },
-    {
-      released_on: "Nov 7, 2023",
-      name: "Pipilo",
-      icon: pipilo,
-      url: "https://apps.apple.com/app/pipilo/id1584544719",
-      paid: true,
-    },
-    {
-      released_on: "Jun 3, 2024",
-      name: "Oxpecker (watchOS)",
-      icon: oxpecker,
-      url: "https://apps.apple.com/app/oxpecker-for-mastodon/id6474893905?platform=appleWatch",
-      paid: true,
-    },
-    {
-      released_on: "July 10th, 2024",
-      name: "Bubble",
-      icon: bubble,
-      url: "https://apps.apple.com/app/bubble/id6477757490",
-      paid: false
-    },
-    {
-      released_on: "Jan 1, 2024",
-      name: "Odous (watchOS)",
-      icon: odous,
-      url: "https://apps.apple.com/us/app/id6446084064",
-      paid: true,
-    },
-  ],
-  web: [
-    { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
-    { name: "Elk", icon: elk, url: "https://elk.zone" },
-    { name: "Buffer", icon: buffer, url: "https://buffer.com" },
-    { name: "Statuzer", icon: statuzer, url: "https://statuzer.com" },
-    { name: "Fedica", icon: fedica, url: "https://fedica.com" },
-    { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
-    { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
-    { name: "Tooty", icon: tooty, url: "https://n1k0.github.io/tooty/v2/" },
-    { name: "Mastodeck", icon: mastodeck, url: "https://mastodeck.com/" },
-    { name: "Sengi", icon: sengi, url: "https://nicolasconstant.github.io/sengi/" },
-  ],
-  desktop: [
-    { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
-    { name: "Whalebird", icon: whalebird, url: "https://whalebird.social" },
-    { name: "TheDesk", icon: thedesk, url: "https://thedesk.top/en" },
-    {
-      name: "Mast",
-      icon: mast,
-      url: "https://apps.apple.com/app/mast-for-mastodon/id1437429129",
-      paid: true,
-      hidden_from_all: true,
-    },
-    {
-      released_on: "Jan 19, 2023",
-      name: "Ice Cubes",
-      icon: icecubes,
-      url: "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
-      hidden_from_all: true,
-    },
-    {
-      name: "Mastonaut",
-      icon: mastonaut,
-      url: "https://apps.apple.com/app/mastonaut/id1450757574",
-    },
-    {
-      name: "Sengi",
-      icon: sengi,
-      url: "https://nicolasconstant.github.io/sengi/",
-      hidden_from_all: true,
-    },
-    {
-      name: "Bitlbee-Mastodon",
-      icon: bitlbee,
-      url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
-    },
-    {
-      released_on: "Mar 23, 2023",
-      name: "Tuba",
-      icon: tuba,
-      url: "https://tuba.geopjr.dev/",
-    },
-    {
-      released_on: "May 1, 2023",
-      name: "Mona",
-      icon: mona,
-      url: "https://apps.apple.com/app/id1659154653",
-      paid: true,
-      hidden_from_all: true,
-    },
-    {
-      released_on: "Aug 10, 2021",
-      name: "TootRain",
-      icon: tootrain,
-      url: "https://apps.apple.com/app/id1579538917",
-    },
-    {
-      released_on: "Mar 1, 2023",
-      name: "Fedistar",
-      icon: fedistar,
-      url: "https://fedistar.net",
-      paid: false,
-    },
-    {
-      released_on: "May 23, 2023",
-      name: "Ivory",
-      icon: ivory,
-      url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
-      paid: true,
-      hidden_from_all: true,
-    },
-    {
-      released_on: "Aug 26, 2024",
-      name: "Dowstodon",
-      icon: dowstodon,
-      url: "https://www.microsoft.com/store/productId/9PHNV45JVR2S",
-      paid: false,
-    },
-  ],
-  retro: [
-    {
-      released_on: "Apr 1, 2023",
-      name: "Amidon",
-      icon: amidon,
-      url: "https://github.com/BlitterStudio/amidon",
-    },
-    {
-      released_on: "Feb 5, 2023",
-      name: "BREXXTODON",
-      icon: brexxtodon,
-      url: "https://github.com/mainframed/BREXXTODON",
-    },
-    {
-      released_on: "Nov 14, 2022",
-      name: "DOStodon",
-      icon: dostodon,
-      url: "https://github.com/SuperIlu/DOStodon",
-    },
-    {
-      released_on: "Nov 20, 2022",
-      name: "Macstodon",
-      icon: macstodon,
-      url: "https://github.com/smallsco/macstodon",
-    },
-    {
-      released_on: "Apr 14, 2023",
-      name: "Masto9",
-      icon: mastonine,
-      url: "https://sr.ht/~julienxx/Masto9/",
-    },
-    {
-      released_on: "Mar 6, 2023",
-      name: "Mastodon for Apple II",
-      icon: mastodonforappleii,
-      url: "https://www.colino.net/wordpress/en/binary-release-of-mastodon-for-the-apple-c/",
-    },
-    {
-      released_on: "Nov 20, 2022",
-      name: "Mastodon 3.11 for Workgroups",
-      icon: mastodonforworkgroups,
-      url: "https://github.com/meyskens/mastodon-for-workgroups",
-    },
-    {
-      released_on: "Sep 12, 2023",
-      name: "Heffalump",
-      icon: heffalump,
-      url: "https://github.com/knickish/heffalump",
-    },
-    {
-      released_on: "Sep 17, 2023",
-      name: "MOStodon",
-      icon: mostodon,
-      url: "https://github.com/Havoc6502/MOStodon",
-      paid: false,
-    },
-    {
-      released_on: "Jan 06, 2018",
-      name: "Brutaldon",
-      icon: brutaldon,
-      url: "https://brutaldon.org",
-      paid: false,
-    },
-  ],
-}
+
+export const apps: app[] = [
+  {
+    released_on: "Nov 23, 2023",
+    name: "Rodent",
+    icon: rodent,
+    gplay: "social.rodent",
+  },
+  {
+    released_on: "May 21, 2023",
+    name: "Focus",
+    icon: focus,
+    gplay: "allen.town.focus.mastodon",
+    fdroid: "allen.town.focus.mastodon",
+    source: 'https://github.com/allentown521/FocusMastodon',
+  },
+  {
+    released_on: "Mar 15, 2017",
+    name: "Tusky",
+    icon: tusky,
+    gplay: "com.keylesspalace.tusky",
+    fdroid: "com.keylesspalace.tusky",
+    source: "https://github.com/tuskyapp/Tusky"
+  },
+  {
+    released_on: "Apr 23, 2017",
+    name: "Subway Tooter",
+    icon: subwayTooter,
+    gplay: "jp.juggler.subwaytooter",
+    izzy: "jp.juggler.subwaytooter",
+    source: "https://github.com/tateisu/SubwayTooter"
+  },
+  {
+    released_on: "May 18, 2019",
+    name: "Fedilab",
+    icon: fedilab,
+    gplay: "app.fedilab.android",
+    fdroid: "fr.gouv.etalab.mastodon", // ¯\_(ツ)_/¯
+    source: "https://codeberg.org/tom79/Fedilab",
+  },
+  {
+    released_on: "Jan 26, 2023",
+    name: "Trunks",
+    icon: trunks,
+    gplay: "com.decad3nce.trunks",
+    ios: "id6444749479",
+  },
+  {
+    released_on: "Dec 6, 2022",
+    name: "Moshidon",
+    icon: moshidon,
+    gplay: "org.joinmastodon.android.moshinda",
+    fdroid: "org.joinmastodon.android.moshinda",
+    source: "https://github.com/LucasGGamerM/moshidon",
+  },
+  {
+    released_on: "Jan 31, 2023",
+    name: "Buffer",
+    icon: buffer,
+    gplay: "org.buffer.android",
+    ios: "buffer-plan-schedule-posts/id490474324",
+    web: "https://buffer.com",
+  },
+  {
+    released_on: "Feb 21, 2023",
+    name: "ZonePane",
+    icon: zonepane,
+    gplay: "com.zonepane",
+  },
+  {
+    released_on: "Sep 6, 2023",
+    name: "Pachli",
+    icon: pachli,
+    gplay: "app.pachli",
+    fdroid: "app.pachli",
+    url: "https://pachli.app/",
+    source: "https://github.com/pachli/pachli-android",
+  },
+  {
+    released_on: "Aug 1, 2024",
+    name: "Fread",
+    icon: fread,
+    gplay: "com.zhangke.fread",
+  },
+  {
+    released_on: "Apr 17, 2024",
+    name: "Husky",
+    icon: husky,
+    fdroid: "su.xash.husky",
+    source: "https://github.com/captainepoch/husky",
+  },
+  {
+    released_on: "Aug 16, 2024",
+    name: "Raccoon",
+    icon: raccoon,
+    fdroid: "com.livefast.eattrash.raccoonforfriendica",
+    source: "https://github.com/LiveFastEatTrashRaccoon/RaccoonForFriendica",
+  },
+  {
+    released_on: "Aug 18, 2018",
+    name: "Smither",
+    icon: smither,
+    fdroid: "org.nuclearfog.smither",
+    source: "https://codeberg.org/nuclearfog/Smither",
+  },
+  {
+    name: "Toot!",
+    icon: toot,
+    ios: "id1229021451",
+    paid: true,
+  },
+  {
+    name: "Mast",
+    icon: mast,
+    macos: "id1437429129",
+    ios: "id1437429129",
+    paid: true,
+  },
+  {
+    name: "iMast",
+    icon: imast,
+    ios: "imast/id1229461703",
+  },
+  {
+    released_on: "Jan 19, 2023",
+    name: "Ice Cubes",
+    icon: icecubes,
+    ios: "id6444915884",
+    macos: "id6444915884",
+  },
+  {
+    released_on: "Jan 24, 2023",
+    name: "Ivory",
+    icon: ivory,
+    ios: "id6444602274",
+    macos: "id6444602274",
+    paid: true,
+  },
+  {
+    released_on: "Mar 24, 2023",
+    name: "Woolly",
+    icon: woolly,
+    ios: "id6444360628",
+    paid: true,
+  },
+  {
+    released_on: "Mar 27, 2023",
+    name: "DAWN for Mastodon",
+    icon: dawn,
+    ios: "id1668645019",
+    paid: true,
+  },
+  {
+    released_on: "Jun 19, 2023",
+    name: "Radiant",
+    icon: radiant,
+    ios: "id6444323022",
+    paid: true,
+  },
+  {
+    released_on: "Jan 25, 2023",
+    name: "TootDesk",
+    icon: tootdesk,
+    ios: "tootdesk/id1591748028",
+  },
+  {
+    released_on: "Aug 4, 2023",
+    name: "Stomp",
+    icon: stomp,
+    ios: "id1670866247",
+    watchos: "id1670866247",
+    paid: true,
+  },
+  {
+    released_on: "Jun 22, 2023",
+    name: "feather",
+    icon: feather,
+    ios: "id6446263061",
+  },
+  {
+    released_on: "Aug 10, 2023",
+    name: "SoraSNS",
+    icon: sora,
+    ios: "id6450969760",
+  },
+  {
+    released_on: "Nov 7, 2023",
+    name: "Pipilo",
+    icon: pipilo,
+    ios: "id1584544719",
+    paid: true,
+  },
+  {
+    released_on: "Jun 3, 2024",
+    name: "Oxpecker",
+    icon: oxpecker,
+    ios: "id6474893905",
+    watchos: "id6474893905",
+    paid: true,
+  },
+  {
+    released_on: "July 10, 2024",
+    name: "Bubble",
+    icon: bubble,
+    ios: "bubble/id6477757490",
+  },
+  {
+    released_on: "Jan 1, 2024",
+    name: "Odous",
+    icon: odous,
+    ios: "id6446084064",
+    watchos: "id6446084064",
+    paid: true,
+  },
+  {
+    name: "Pinafore",
+    icon: pinafore,
+    web: "https://pinafore.social"
+  },
+  {
+    name: "Elk",
+    icon: elk,
+    web: "https://elk.zone"
+  },
+  {
+    name: "Statuzer",
+    icon: statuzer,
+    web: "https://statuzer.com"
+  },
+  {
+    name: "Fedica",
+    icon: fedica,
+    web: "https://fedica.com"
+  },
+  {
+    name: "Phanpy",
+    icon: phanpy,
+    web: "https://phanpy.social"
+  },
+  {
+    name: "Litterbox",
+    icon: litterbox,
+    web: "https://litterbox.koyu.space"
+  },
+  {
+    name: "Tooty",
+    icon: tooty,
+    web: "https://n1k0.github.io/tooty/v2/"
+  },
+  {
+    name: "Mastodeck",
+    icon: mastodeck,
+    web: "https://mastodeck.com/"
+  },
+  {
+    name: "Sengi",
+    icon: sengi,
+    web: "https://nicolasconstant.github.io/sengi/"
+  },
+  {
+    name: "Tokodon",
+    icon: tokodon,
+    url: "https://apps.kde.org/tokodon/",
+    flatpak: "flathub.org/org.kde.tokodon",
+    snap: "tokodon",
+  },
+  {
+    name: "Whalebird",
+    icon: whalebird,
+    url: "https://whalebird.social",
+    micestore: '9NBW4CSDV5HC',
+    macos: 'whalebird/id6445864587',
+    appimage: 'https://whalebird.social/en/downloads',
+    brew: 'whalebird',
+    arch_aur: `whalebird`,
+    flatpak: "social.whalebird.WhalebirdDesktop", // unverified
+    rpm: 'https://whalebird.social/en/downloads',
+  },
+  {
+    name: "TheDesk",
+    icon: thedesk,
+    url: "https://thedesk.top/en",
+    windows: 'https://github.com/cutls/thedesk-next/releases/latest',
+    debian: 'https://github.com/cutls/thedesk-next/releases/latest',
+    macos: 'https://github.com/cutls/thedesk-next/releases/latest',
+    source: "https://github.com/cutls/thedesk-next",
+  },
+  {
+    name: "Mastonaut",
+    icon: mastonaut,
+    macos: "mastonaut/id1450757574",
+  },
+  {
+    name: "Bitlbee-Mastodon",
+    icon: bitlbee,
+    url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
+    source: "https://src.alexschroeder.ch/bitlbee-mastodon.git",
+  },
+  {
+    released_on: "Mar 23, 2023",
+    name: "Tuba",
+    icon: tuba,
+    url: "https://tuba.geopjr.dev/",
+    flatpak: "dev.geopjr.Tuba",
+    windows: "https://github.com/GeopJr/Tuba/releases/latest/download/Tuba.Setup.exe",
+    source: "https://github.com/GeopJr/Tuba",
+    snap: "tuba", // thirdparty, but it's on the website
+  },
+  {
+    released_on: "May 1, 2023",
+    name: "Mona",
+    icon: mona,
+    macos: "id1659154653",
+    paid: true,
+  },
+  {
+    released_on: "Aug 10, 2021",
+    name: "TootRain",
+    icon: tootrain,
+    macos: "id1579538917",
+    ios: "id1659154653",
+  },
+  {
+    released_on: "Mar 1, 2023",
+    name: "Fedistar",
+    icon: fedistar,
+    url: "https://fedistar.net",
+    windows: 'https://github.com/h3poteto/fedistar/releases/latest',
+    macos: 'fedistar/id6445863996',
+    snap: 'fedistar',
+    appimage: 'https://github.com/h3poteto/fedistar/releases/latest',
+    debian: 'https://github.com/h3poteto/fedistar/releases/latest',
+    source: "https://github.com/h3poteto/fedistar"
+  },
+  {
+    released_on: "Aug 26, 2024",
+    name: "Dowstodon",
+    icon: dowstodon,
+    micestore: "9PHNV45JVR2S",
+  },
+  {
+    released_on: "Apr 1, 2023",
+    name: "Amidon",
+    icon: amidon,
+    source: "https://github.com/BlitterStudio/amidon",
+    retro: true,
+  },
+  {
+    released_on: "Feb 5, 2023",
+    name: "BREXXTODON",
+    icon: brexxtodon,
+    source: "https://github.com/mainframed/BREXXTODON",
+    retro: true,
+  },
+  {
+    released_on: "Nov 14, 2022",
+    name: "DOStodon",
+    icon: dostodon,
+    source: "https://github.com/SuperIlu/DOStodon",
+    retro: true,
+  },
+  {
+    released_on: "Nov 20, 2022",
+    name: "Macstodon",
+    icon: macstodon,
+    source: "https://github.com/smallsco/macstodon",
+    retro: true,
+  },
+  {
+    released_on: "Apr 14, 2023",
+    name: "Masto9",
+    icon: mastonine,
+    source: "https://sr.ht/~julienxx/Masto9/",
+    retro: true,
+  },
+  {
+    released_on: "Mar 6, 2023",
+    name: "Mastodon for Apple II",
+    icon: mastodonforappleii,
+    url: "https://www.colino.net/wordpress/en/binary-release-of-mastodon-for-the-apple-c/",
+    retro: true,
+  },
+  {
+    released_on: "Nov 20, 2022",
+    name: "Mastodon 3.11 for Workgroups",
+    icon: mastodonforworkgroups,
+    source: "https://github.com/meyskens/mastodon-for-workgroups",
+    retro: true,
+    windows: 'https://github.com/meyskens/mastodon-for-workgroups/releases',
+  },
+  {
+    released_on: "Sep 12, 2023",
+    name: "Heffalump",
+    icon: heffalump,
+    source: "https://github.com/knickish/heffalump",
+    retro: true,
+  },
+  {
+    released_on: "Sep 17, 2023",
+    name: "MOStodon",
+    icon: mostodon,
+    source: "https://github.com/Havoc6502/MOStodon",
+    retro: true,
+  },
+  {
+    released_on: "Jan 06, 2018",
+    name: "Brutaldon",
+    icon: brutaldon,
+    url: "https://brutaldon.org",
+    source: "https://gitlab.com/brutaldon/brutaldon",
+    retro: true,
+  },
+]
+// verify
+apps.forEach(x => {
+  x.released_on = new Date(x.released_on ?? 0);
+  if (isNaN(x.released_on.getTime())) throw new Error(`Invalid released_on for ${x.name}`);
+  if (x.paid === false) throw new Error(`paid should only be true or undefined for ${x.name}`);
+  x.paid = x.paid ?? false;
+  //if(x.released_on.getTime() === 0 )console.warn(`${x.name} missing release_on`)
+})
+
+// check for duplicates by name & icon
+apps.forEach((x, i) => {
+  let firstsIndex = apps.findIndex(y => y.name === x.name || y.icon === x.icon);
+  if (firstsIndex === i) return;
+  throw new Error(`Duplicate app name/icon: ${x.name}`);
+})

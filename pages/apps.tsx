@@ -57,7 +57,7 @@ const AppsPage = () => {
 
           <div className="grid grid-cols-2 justify-center gap-gutter md:justify-start">
             <a href={`https://f-droid.org/${intl.locale}/packages/org.joinmastodon.android`}>
-              <img
+              <img // "Image" seemingly cant have a dynamic src
                 src={`/badges/f-droid-${intl.locale}.svg`}
                 alt="Get it on F-Droid"
               />
