@@ -56,7 +56,7 @@ import dowstodon from "../public/apps/dowstodon.png"
 import fread from "../public/apps/fread.png"
 import raccoon from "../public/apps/raccoonforfriendica.png"
 import husky from "../public/apps/husky.png"
-import shitter from "../public/apps/shitter.png"
+import smither from "../public/apps/smither.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -174,10 +174,17 @@ export const apps: appsList = {
       paid: false,
     },
     {
-      released_on: "Nov 13, 2024",
+      released_on: "Aug 16, 2024",
       name: "Raccoon",
       icon: raccoon,
       fdroid: "com.livefast.eattrash.raccoonforfriendica",
+      paid: false,
+    },
+    {
+      released_on: "Aug 18, 2018",
+      name: "Smither",
+      icon: smither,
+      fdroid: "org.nuclearfog.smither",
       paid: false,
     },
   ],
