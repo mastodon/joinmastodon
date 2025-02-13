@@ -57,6 +57,8 @@ import fread from "../public/apps/fread.png"
 import raccoon from "../public/apps/raccoonforfriendica.png"
 import husky from "../public/apps/husky.png"
 import smither from "../public/apps/smither.png"
+import streetpass from "../public/apps/streetpass.png"
+import postthis from "../public/apps/postthis.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -104,6 +106,10 @@ export type app = {
   rpm?: string
   // https://apps.kde.org/ exists but that's ONLY for kde apps and links to flathub
   // TODO add other distro specifc repos
+  /** firefox addon/extension name */
+  firefox?: string
+  /** chrome addon/extension name */
+  chrome?: string
 
   /** id on the microsoft store */
   micestore?: string
@@ -536,6 +542,23 @@ export const apps: app[] = [
     url: "https://brutaldon.org",
     source: "https://gitlab.com/brutaldon/brutaldon",
     retro: true,
+  },
+  {
+    name: "StreetPass",
+    icon: streetpass,
+    url: "https://streetpass.social",
+    firefox: "streetpass-for-mastodon",
+    chrome: "streetpass-for-mastodon/fphjfedjhinpnjblomfebcjjpdpakhhn",
+    // safari https://apps.apple.com/us/app/streetpass-for-mastodon/id6446224821
+    source: "https://github.com/tvler/streetpass",
+  },
+  {
+    name: "Share to Mastodon",
+    icon: postthis,
+    firefox: "streetpass-for-mastodon",
+    chrome: "share-to-mastodon/bibnjflclpdmbbcncejifemmbggkcjde",
+    // edge https://microsoftedge.microsoft.com/addons/detail/share-to-mastodon/ppgabkpkgkkcejnnmgckomgfdeanejnc
+    source: "https://github.com/corbindavenport/post-this",
   },
 ]
 // verify

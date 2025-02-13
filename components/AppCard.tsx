@@ -19,12 +19,14 @@ function getAppUrl(app: app, activeCategory: string, intl: IntlShape) {
       `fdroid`,
       `arch`,
       `arch_aur`,
+      `firefox`,
       `snap`,
       `gplay`,
       `ios`,
       `macos`,
       `watchos`,
       `micestore`,
+      `chrome`,
       `source`,
     ];
     for (let i = 0; i < defaultRepos.length; i++) {
@@ -64,6 +66,10 @@ function getAppUrl(app: app, activeCategory: string, intl: IntlShape) {
       return `https://f-droid.org/${intl.locale}/packages/${app.fdroid}`;
     case `flatpak`:
       return `https://${app.flatpak.replace(`/`, `/apps/`)}`;
+    case `firefox`:
+      return `https://addons.mozilla.org/en-US/firefox/addon/${app.firefox}`;
+    case `chrome`:
+      return `https://chromewebstore.google.com/detail/${app.chrome}`;
     case `web`:
       return app.web;
     case `source`:
@@ -86,8 +92,8 @@ export const AppCard = (app: app, activeCategory: string) => {
   const categoryLabels = [];
 
   // add supported OS'
-   Object.keys(categories).forEach(cat => {
-    if (!app[cat])return;
+  Object.keys(categories).forEach(cat => {
+    if (!app[cat]) return;
     categoryLabels.push(
       <a href={getAppUrl(app, cat, intl)}>
         {intl.formatMessage({ id: cat, defaultMessage: categories[cat] })}

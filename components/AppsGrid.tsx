@@ -19,7 +19,9 @@ export const categories = {
   flatpak: "Flatpak",
   debian: "Debian",
   arch: "Arch",
+  firefox: "Firefox",
 
+  chrome: "Chrome",
   snap: "Snap",
   micestore: "Microsoft Store",
   windows: "Windows",
@@ -84,12 +86,20 @@ export const AppsGrid = ({ apps }: AppsGridProps) => {
   return (
     <div>
       <div>
-        <h2 className="h4 mb-8">
-          <FormattedMessage
-            id="browse_apps.title2"
-            defaultMessage="Browse third-party apps"
-          />
-        </h2>
+        <div className="mb-8">
+          <h2 className="h4">
+            <FormattedMessage
+              id="browse_apps.title2"
+              defaultMessage="Browse third-party apps"
+            />
+          </h2>
+          <span>
+            <FormattedMessage
+              id="browse_apps.title_sub2"
+              defaultMessage="(and extensions)"
+            />
+          </span>
+        </div>
         <div className="-mx-gutter ps-gutter mb-6 overflow-x-auto">
           <div className="flex flex-wrap gap-gutter md:flex-nowrap">
             {Object.keys(categories)
