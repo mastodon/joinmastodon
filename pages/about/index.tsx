@@ -344,6 +344,23 @@ const About = () => (
               </div>
 
               <div className="b1 mb-4">
+                <dt className="font-bold">Sponsor assistance:</dt>
+                <dd className="b3">Support for sponsor listings, donations (
+                  <Link
+                    key="sponsorship"
+                    href="/sponsors"
+                    className="text-blurple-500 hocus:underline">sponsorship info</Link>)</dd>
+                <dd>
+                  <a
+                    href="mailto:sponsorships@joinmastodon.org"
+                    className="text-blurple-500 hover:underline"
+                  >
+                    sponsorships@joinmastodon.org
+                  </a>
+                </dd>
+              </div>
+
+              <div className="b1 mb-4">
                 <dt className="font-bold">Legal and trademarks:</dt>
                 <dd className="b3">Legal and compliance, trademarks (
                   <Link
