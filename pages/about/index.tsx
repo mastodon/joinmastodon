@@ -344,8 +344,11 @@ const About = () => (
 
               <div className="b1 mb-4">
                 <dt className="font-bold">Legal and trademarks:</dt>
-                <dd className="b3">Legal and compliance, trademarks (<a className="text-blurple-500 hocus:underline" href="/trademark">policy</a>) & brand mark usage</dd>
-                <dd>
+                <dd className="b3">Legal and compliance, trademarks (
+                  <Link
+                    key="trademark"
+                    href="/trademark"
+                    className="text-blurple-500 hocus:underline">policy</Link>)</dd>                <dd>
                   <a
                     href="mailto:legal@joinmastodon.org"
                     className="text-blurple-500 hover:underline"
@@ -357,7 +360,11 @@ const About = () => (
 
               <div className="b1 mb-4">
                 <dt className="font-bold">Server instance list:</dt>
-                <dd className="b3">Submissions to the server directory (<a className="text-blurple-500 hocus:underline"  href="/covenant">policy</a>)</dd>
+                <dd className="b3">Submissions to the server directory (
+                  <Link
+                    key="servers"
+                    href="/covenant"
+                    className="text-blurple-500 hocus:underline">policy</Link>)</dd>
                 <dd>
                   <a
                     href="mailto:servers@joinmastodon.org"
