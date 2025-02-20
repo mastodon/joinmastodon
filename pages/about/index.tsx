@@ -393,10 +393,10 @@ const About = () => (
                 <dd className="b3">For general questions and all other matters</dd>
                 <dd>
                   <a
-                    href="mailto:team@joinmastodon.org"
+                    href="mailto:hello@joinmastodon.org"
                     className="text-blurple-500 hover:underline"
                   >
-                    team@joinmastodon.org
+                    hello@joinmastodon.org
                   </a>
                 </dd>
               </div>
@@ -429,10 +429,10 @@ const About = () => (
                     <dt className="font-bold">Kontakt:</dt>
                     <dd>
                       <a
-                        href="mailto:team@joinmastodon.org"
+                        href="mailto:hello@joinmastodon.org"
                         className="text-blurple-500 hover:underline"
                       >
-                        team@joinmastodon.org
+                        hello@joinmastodon.org
                       </a>
                     </dd>
                   </div>
