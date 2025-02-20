@@ -62,7 +62,7 @@ export const Footer = () => (
                 </Link>,
                 <Link
                   key="sponsors"
-                  href="/sponsors"
+                  href="/sponsors#donate"
                   className="inline-block py-2 hover:underline"
                 >
                   <FormattedMessage
@@ -156,6 +156,16 @@ export const Footer = () => (
                   />
                 </Link>,
                 <Link
+                  key="/about#contact"
+                  href="/about#contact"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage
+                    id="nav.contact.title"
+                    defaultMessage="Contact"
+                  />
+                </Link>,
+                <Link
                   key="/branding"
                   href="/branding"
                   className="inline-block py-2 hover:underline"
@@ -165,16 +175,18 @@ export const Footer = () => (
                     defaultMessage="Branding"
                   />
                 </Link>,
-                <Link
-                  key="/careers"
-                  href="/careers"
-                  className="inline-block py-2 hover:underline"
-                >
-                  <FormattedMessage
-                    id="nav.careers.title"
-                    defaultMessage="Careers"
-                  />
-                </Link>,
+                // temporarily removed from footer
+                // to retain balance of columns
+                // <Link
+                //   key="/careers"
+                //   href="/careers"
+                //   className="inline-block py-2 hover:underline"
+                // >
+                //   <FormattedMessage
+                //     id="nav.careers.title"
+                //     defaultMessage="Careers"
+                //   />
+                // </Link>,
                 <Link
                   key="/impressum"
                   href="/about#impressum"

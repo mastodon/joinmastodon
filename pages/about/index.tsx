@@ -313,10 +313,12 @@ const About = () => (
             </div>
 
             <div className="col-span-12 md:col-span-6">
+              <a id="contact" className="invisible block relative -top-32" />
               <h2 className="h3 mb-4">Contact us</h2>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Press inquiries:</dt>
+                <dt className="font-bold">Press and media:</dt>
+                <dd className="b3">Media requests, interviews, and press-related questions</dd>
                 <dd>
                   <a
                     href="mailto:press@joinmastodon.org"
@@ -328,7 +330,21 @@ const About = () => (
               </div>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Legal inquiries:</dt>
+                <dt className="font-bold">Business hosting:</dt>
+                <dd className="b3">Supporting organisations joining Mastodon</dd>
+                <dd>
+                  <a
+                    href="mailto:hosting@joinmastodon.org"
+                    className="text-blurple-500 hover:underline"
+                  >
+                    hosting@joinmastodon.org
+                  </a>
+                </dd>
+              </div>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Legal and trademarks:</dt>
+                <dd className="b3">Legal and compliance, trademarks (<a className="text-blurple-500 hocus:underline" href="/trademark">policy</a>) & brand mark usage</dd>
                 <dd>
                   <a
                     href="mailto:legal@joinmastodon.org"
@@ -340,19 +356,21 @@ const About = () => (
               </div>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Trademark inquiries:</dt>
+                <dt className="font-bold">Server instance list:</dt>
+                <dd className="b3">Submissions to the server directory (<a className="text-blurple-500 hocus:underline"  href="/covenant">policy</a>)</dd>
                 <dd>
                   <a
-                    href="mailto:trademark@joinmastodon.org"
+                    href="mailto:servers@joinmastodon.org"
                     className="text-blurple-500 hover:underline"
                   >
-                    trademark@joinmastodon.org
+                    servers@joinmastodon.org
                   </a>
                 </dd>
               </div>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Security inquiries:</dt>
+                <dt className="font-bold">Security issue reporting:</dt>
+                <dd className="b3">For reporting security vulnerabilities or concerns</dd>
                 <dd>
                   <a
                     href="mailto:security@joinmastodon.org"
@@ -364,13 +382,14 @@ const About = () => (
               </div>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Other inquiries:</dt>
+                <dt className="font-bold">Any other inquiries:</dt>
+                <dd className="b3">For general questions and all other matters</dd>
                 <dd>
                   <a
-                    href="mailto:hello@joinmastodon.org"
+                    href="mailto:team@joinmastodon.org"
                     className="text-blurple-500 hover:underline"
                   >
-                    hello@joinmastodon.org
+                    team@joinmastodon.org
                   </a>
                 </dd>
               </div>
@@ -403,10 +422,10 @@ const About = () => (
                     <dt className="font-bold">Kontakt:</dt>
                     <dd>
                       <a
-                        href="mailto:hello@joinmastodon.org"
+                        href="mailto:team@joinmastodon.org"
                         className="text-blurple-500 hover:underline"
                       >
-                        hello@joinmastodon.org
+                        team@joinmastodon.org
                       </a>
                     </dd>
                   </div>
