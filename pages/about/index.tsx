@@ -1,3 +1,4 @@
+// About
 import BasicPage from "../../components/BasicPage"
 import Head from "next/head"
 import Hero from "../../components/Hero"
@@ -545,3 +546,4 @@ const Metrics = () => {
 export const getStaticProps = withDefaultStaticProps()
 
 export default About
+
