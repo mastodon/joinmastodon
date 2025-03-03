@@ -81,7 +81,7 @@ const team: TeamMember[] = [
 
   {
     name: "Andy Piper",
-    position: "DevRel",
+    position: "Communications & DevRel",
     socials: {
       mastodon: "https://macaw.social/@andypiper",
     },
