@@ -22,7 +22,7 @@ const SafetyStandards = () => (
             </blockquote>
             <p className="text-gray-1">— <a className="hover:text-blurple-500" href="https://support.google.com/googleplay/android-developer/answer/14747720#zippy=%2Chow-do-you-define-csae">Google Child Safety Standards Policy</a></p>
           </div>
-          <p className="b1 mb-6">The "Mastodon" app for Android ("the application") allows you to connect to the Mastodon server where your account is hosted ("the server") and create new posts. <strong>Using the application to post or link to CSAE is strictly prohibited.</strong></p>
+          <p className="b1 mb-6">The &quot;Mastodon&quot; app for Android (&quot;the application&quot;) allows you to connect to the Mastodon server where your account is hosted (&quot;the server&quot;) and create new posts. <strong>Using the application to post or link to CSAE is strictly prohibited.</strong></p>
           <h3 className="h5 mb-6">Reporting accounts posting or linking to CSAE</h3>
           <p className="b1 mb-6">If you see an account posting CSAE you can report it to your server’s moderators for further action. The option to report an account is available on the dropdown menu next to a post as well as the individual profile.</p>
           <h3 className="h5 mb-6">Additional reporting</h3>
