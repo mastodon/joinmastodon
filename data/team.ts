@@ -51,6 +51,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Echo",
+    position: "Engineering (web)",
+    socials: {
+      mastodon: "https://tech.lgbt/@chaosexanima",
+    },
+  },
+
+  {
     name: "Shannon Hughes",
     position: "Engineering (iOS)",
     socials: {
