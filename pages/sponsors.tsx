@@ -20,16 +20,27 @@ import previewImage from "../public/sponsors_preview.png"
 import usFlagIcon from "../public/united_states_flag_icon_round.svg"
 import Link from "next/link"
 
+interface DonateCardProps {
+  title: React.ReactNode
+  titleClassName?: string
+  titleInnerClassName?: string
+  className?: string
+  copy: React.ReactNode
+  cta: React.ReactNode
+  ctaLink: string
+  ctaLight?: boolean
+}
+
 const DonateCard = ({
   title,
   titleClassName = "",
   titleInnerClassName = "",
-  className = null,
+  className,
   copy,
   cta,
   ctaLink,
   ctaLight = false,
-}) => (
+}: DonateCardProps) => (
   <div
     className={classNames(
       "flex flex-col items-center text-center sm:items-start sm:text-left",
