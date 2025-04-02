@@ -1,11 +1,10 @@
-import { FormattedMessage } from "react-intl"
 import { ParsedUrlQuery } from "node:querystring"
 import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
 
 import { fetchEndpoint } from "../../utils/api"
 import { CampaignResponse } from "../../types/api"
 import DonateWidget from "../../components/DonateWidget"
-import { getIronSession, IronSession } from "iron-session"
+import { getIronSession } from "iron-session"
 
 interface DonatePageQuery {
   theme: "light" | "dark"
