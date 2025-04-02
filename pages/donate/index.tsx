@@ -12,15 +12,27 @@ interface DonatePageQuery {
   callback?: string
 }
 
-function DonatePage(
-  props: InferGetServerSidePropsType<typeof getServerSideProps>
-) {
-  return <DonateWidget {...props} />
+export default function DonatePage({
+  theme,
+  default_currency,
+  donation_message,
+  donation_button_text,
+  amounts,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const handleDonate = console.log
+  return (
+    <DonateWidget
+      theme={theme}
+      defaultCurrency={default_currency}
+      messages={{ donation_message, donation_button_text }}
+      amounts={amounts}
+      onDonate={handleDonate}
+    />
+  )
 }
 
 interface DonateSessionData {
   seed?: number
-  sessionId?: string
 }
 
 type DonatePageProps = DonatePageQuery & CampaignResponse
@@ -69,8 +81,6 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
     }
   }
 }
-
-export default DonatePage
 
 function parseQuery(query: ParsedUrlQuery): DonatePageQuery {
   const result: DonatePageQuery = {
