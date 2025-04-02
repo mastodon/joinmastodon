@@ -11,6 +11,7 @@ const config = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "selector",
   theme: {
     fontSize: {
       h1: rem(68),
