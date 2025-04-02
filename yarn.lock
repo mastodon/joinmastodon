@@ -2612,6 +2612,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4.17.16":
+  version: 4.17.16
+  resolution: "@types/lodash@npm:4.17.16"
+  checksum: 10c0/cf017901b8ab1d7aabc86d5189d9288f4f99f19a75caf020c0e2c77b8d4cead4db0d0b842d009b029339f92399f49f34377dd7c2721053388f251778b4c23534
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^22.0.0":
   version: 22.14.1
   resolution: "@types/node@npm:22.14.1"
@@ -5796,6 +5803,7 @@ __metadata:
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-query": "npm:^5.72.1"
     "@tanstack/react-query-devtools": "npm:^5.72.1"
+    "@types/lodash": "npm:^4.17.16"
     "@types/node": "npm:^22.0.0"
     "@types/react": "npm:18"
     "@typescript-eslint/eslint-plugin": "npm:^8.0.0"
