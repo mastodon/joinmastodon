@@ -41,6 +41,7 @@
     "@formatjs/cli": "^6.7.1",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-query-devtools": "^5.75.2",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^22.15.6",
     "@types/react": "18.3.23",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
