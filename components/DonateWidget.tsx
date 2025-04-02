@@ -1,8 +1,9 @@
 import classNames from "classnames"
-import { ReactNode, useCallback, useMemo, useState } from "react"
-import { FormattedMessage, useIntl } from "react-intl"
+import { ReactNode, useCallback, useState } from "react"
+import { FormattedMessage } from "react-intl"
 
 import CheckIcon from "../public/icons/check.svg?inline"
+import { useCurrencyFormatter } from "../utils/use-currency-formatter"
 
 import type {
   Currency,
@@ -10,22 +11,32 @@ import type {
   DonationFrequency,
 } from "../types/api"
 
-interface DonateWidgetProps extends CampaignResponse {
+interface DonateWidgetProps {
   theme: "light" | "dark"
+  className?: string
+  onDonate: (
+    amount: number,
+    frequency: DonationFrequency,
+    currency: Currency
+  ) => void
+  messages: Pick<CampaignResponse, "donation_message" | "donation_button_text">
+  defaultCurrency: Currency
+  amounts: CampaignResponse["amounts"]
 }
 
 export default function DonateWidget({
+  className,
   theme,
-  donation_message,
-  donation_button_text,
-  default_currency,
+  messages: { donation_message, donation_button_text },
+  defaultCurrency,
   amounts,
+  onDonate,
 }: DonateWidgetProps) {
   const frequencies = Object.keys(amounts) as DonationFrequency[]
   const [frequency, setFrequency] = useState<DonationFrequency>(
     () => frequencies.at(-1) as DonationFrequency
   )
-  const [currency, setCurrency] = useState<Currency>(default_currency)
+  const [currency, setCurrency] = useState<Currency>(defaultCurrency)
   const [currentAmount, setCurrentAmount] = useState(
     () => amounts[frequency][currency][0]
   )
@@ -46,11 +57,16 @@ export default function DonateWidget({
     [amounts, frequency]
   )
 
+  const handleDonate = useCallback(() => {
+    onDonate(currentAmount, frequency, currency)
+  }, [currency, currentAmount, frequency, onDonate])
+
   return (
     <div
       className={classNames(
         theme,
-        "bg-white dark:bg-black p-4 min-h-screen max-w-[400px]"
+        "bg-white dark:bg-black p-4 min-h-screen max-w-[400px]",
+        className
       )}
     >
       <p className="">{donation_message}</p>
@@ -97,7 +113,10 @@ export default function DonateWidget({
         ))}
       </div>
 
-      <button className="bg-blurple-300 p-2 text-center rounded-full mt-4 w-full border hover:bg-blurple-500 transition-colors">
+      <button
+        className="bg-blurple-300 p-2 text-center rounded-full mt-4 w-full border hover:bg-blurple-500 transition-colors"
+        onClick={handleDonate}
+      >
         {donation_button_text}
       </button>
     </div>
@@ -147,16 +166,4 @@ function FrequencyLabel({ frequency }: { frequency: DonationFrequency }) {
         <FormattedMessage id="donate_widget.yearly" defaultMessage="Yearly" />
       )
   }
-}
-
-function useCurrencyFormatter(currency: Currency) {
-  const intl = useIntl()
-  return useMemo(() => {
-    const formatter = new Intl.NumberFormat(intl.locale, {
-      style: "currency",
-      currency,
-      maximumFractionDigits: 0,
-    })
-    return formatter
-  }, [currency, intl.locale])
 }
