@@ -62,17 +62,14 @@ export default function DonateWidget({
             onClick={handleChangeFrequency(freq)}
           >
             <CheckIcon className="fill-black w-auto h-4" />
-            <FormattedMessage
-              id={`donate_widget.${freq}`}
-              defaultMessage="Just once"
-            />
+            <FrequencyLabel frequency={freq} />
           </ToggleButton>
         ))}
       </div>
 
       <div className="flex gap-2 items-center pr-2 border rounded-lg overflow-hidden">
         <select
-          className="p-2 bg-blurple-300 hover:bg-blurple-500 cursor-pointer"
+          className="p-2 bg-gray-3 cursor-pointer"
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
         >
@@ -125,7 +122,6 @@ function ToggleButton({
       onClick={onClick}
       className={classNames(
         "w-full p-2 flex gap-2 items-center justify-center",
-        "transition-colors",
         selected && "bg-blurple-300 hover:bg-blurple-500",
         !selected && "hover:bg-gray-4",
         className
@@ -134,6 +130,23 @@ function ToggleButton({
       {children}
     </button>
   )
+}
+
+function FrequencyLabel({ frequency }: { frequency: DonationFrequency }) {
+  switch (frequency) {
+    case "one_time":
+      return (
+        <FormattedMessage id="donate_widget.once" defaultMessage="Just once" />
+      )
+    case "monthly":
+      return (
+        <FormattedMessage id="donate_widget.monthly" defaultMessage="Monthly" />
+      )
+    case "yearly":
+      return (
+        <FormattedMessage id="donate_widget.yearly" defaultMessage="Yearly" />
+      )
+  }
 }
 
 function useCurrencyFormatter(currency: Currency) {
