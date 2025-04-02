@@ -5,6 +5,7 @@ import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { fetchEndpoint } from "../../utils/api"
 import { CampaignResponse } from "../../types/api"
 import DonateWidget from "../../components/DonateWidget"
+import { getIronSession, IronSession } from "iron-session"
 
 interface DonatePageQuery {
   theme: "light" | "dark"
@@ -18,22 +19,40 @@ function DonatePage(
   return <DonateWidget {...props} />
 }
 
+interface DonateSessionData {
+  seed?: number
+  sessionId?: string
+}
+
 type DonatePageProps = DonatePageQuery & CampaignResponse
 
 export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
   query,
   locale,
+  req,
+  res,
 }) => {
-  const seed = Math.floor(Math.random() * 99).toString()
+  const session = await getIronSession<DonateSessionData>(req, res, {
+    cookieName: "session",
+    password: process.env.SESSION_SECRET,
+    ttl: 60 * 5, // Five minutes
+    cookieOptions: {
+      secure: process.env.NODE_ENV === "production",
+    },
+  })
+  session.seed ??= Math.floor(Math.random() * 99)
   const queryParams = new URLSearchParams({
     locale,
     platform: "android",
-    seed,
+    seed: session.seed.toString(),
     source: "menu",
   })
   if (process.env.NODE_ENV !== "production") {
     queryParams.append("environment", "staging")
   }
+
+  await session.save()
+
   try {
     const apiRes = await fetchEndpoint<CampaignResponse>(
       "v1/donations/campaigns/active",
