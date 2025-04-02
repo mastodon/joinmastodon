@@ -61,14 +61,13 @@ export type JobsResponse = {
 
 export type Currency = "EUR" | "USD"
 
+export type DonationFrequency = "one_time" | "monthly" | "yearly"
+
 export type DonationAmounts = Record<Currency, number[]>
 
 export type CampaignResponse = {
   id: string
-  amounts: {
-    one_time: DonationAmounts
-    monthly: DonationAmounts
-  }
+  amounts: Record<DonationFrequency, DonationAmounts>
   donation_url: string
   banner_message: string
   banner_button_text: string

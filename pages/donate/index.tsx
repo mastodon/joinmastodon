@@ -4,6 +4,7 @@ import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
 
 import { fetchEndpoint } from "../../utils/api"
 import { CampaignResponse } from "../../types/api"
+import DonateWidget from "../../components/DonateWidget"
 
 interface DonatePageQuery {
   theme: "light" | "dark"
@@ -14,7 +15,7 @@ interface DonatePageQuery {
 function DonatePage(
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
-  return <DonateWidget />
+  return <DonateWidget {...props} />
 }
 
 type DonatePageProps = DonatePageQuery & CampaignResponse
@@ -53,25 +54,15 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
 
 export default DonatePage
 
-function DonateWidget() {
-  return (
-    <div>
-      <FormattedMessage
-        id="donate.cta"
-        defaultMessage="By supporting Mastodon"
-      />
-    </div>
-  )
-}
-
 function parseQuery(query: ParsedUrlQuery): DonatePageQuery {
-  return {
+  const result: DonatePageQuery = {
     theme: query.theme === "dark" ? "dark" : "light",
-    campaign: Array.isArray(query.campaign)
-      ? query.campaign[0]
-      : query.campaign,
-    callback: Array.isArray(query.callback)
-      ? query.callback[0]
-      : query.callback,
   }
+  if (typeof query.campaign === "string") {
+    result.campaign = query.campaign
+  }
+  if (typeof query.callback === "string") {
+    result.callback = query.callback
+  }
+  return result
 }
