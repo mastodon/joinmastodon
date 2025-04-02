@@ -17,10 +17,12 @@
   "dependencies": {
     "@headlessui/react": "^2.1.2",
     "@linear/sdk": "^38.0.0",
+    "@stripe/stripe-js": "^7.0.0",
     "@tanstack/react-query": "^5.51.21",
     "blurhash": "^2.0.5",
     "classnames": "^2.5.1",
     "dotenv": "^16.4.5",
+    "iron-session": "^8.0.4",
     "javascript-stringify": "^2.1.0",
     "keen-slider": "^6.8.6",
     "lodash": "^4.17.21",
@@ -31,7 +33,8 @@
     "react-dom": "^18.3.1",
     "react-intl": "^6.6.8",
     "sass": "^1.77.8",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.4",
+    "stripe": "^18.0.0"
   },
   "devDependencies": {
     "@formatjs/cli": "^6.2.12",
