@@ -1,9 +1,5 @@
-import {
-  useQuery,
-  useQueryClient,
-  keepPreviousData,
-} from "@tanstack/react-query"
-import { useState, useEffect, useRef } from "react"
+import { useQuery, keepPreviousData } from "@tanstack/react-query"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { FormattedMessage, FormattedDate, useIntl } from "react-intl"
 import classnames from "classnames"
@@ -13,10 +9,9 @@ import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import Statistic from "../components/Statistic"
 import { categoriesMessages } from "../data/categories"
-import type { Server, Category, Language, Day, Region } from "../types/api"
+import type { Day, Category, Language, Region, Server } from "../types/api"
 import Hero from "../components/Hero"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
-import { formatNumber } from "../utils/numbers"
 import { fetchEndpoint } from "../utils/api"
 
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
@@ -27,8 +22,6 @@ import SkeletonText from "../components/SkeletonText"
 import Head from "next/head"
 import Layout from "../components/Layout"
 import Link from "next/link"
-
-const DUNBAR = Math.log(800)
 
 const Servers = () => {
   const intl = useIntl()
@@ -49,13 +42,13 @@ const Servers = () => {
 
   const allCategories = useQuery({
     queryKey: ["categories", ""],
-    queryFn: () => fetchEndpoint("categories"),
+    queryFn: () => fetchEndpoint<Category[]>("categories"),
     select: (data) => _orderBy(data, "servers_count", "desc"),
   })
 
   const apiCategories = useQuery({
     queryKey: ["categories", filters.language],
-    queryFn: () => fetchEndpoint("categories", params),
+    queryFn: () => fetchEndpoint<Category[]>("categories", params),
     ...queryOptions,
     placeholderData: keepPreviousData,
 
@@ -135,7 +128,7 @@ const Servers = () => {
 
   const apiLanguages = useQuery({
     queryKey: ["languages", filters.category],
-    queryFn: () => fetchEndpoint("languages", params),
+    queryFn: () => fetchEndpoint<Language[]>("languages", params),
     ...queryOptions,
 
     select: (data) => {
@@ -161,13 +154,13 @@ const Servers = () => {
       filters.region,
     ],
 
-    queryFn: () => fetchEndpoint("servers", params),
+    queryFn: () => fetchEndpoint<Server[]>("servers", params),
     ...queryOptions,
   })
 
   const days = useQuery({
     queryKey: ["statistics"],
-    queryFn: () => fetchEndpoint("statistics"),
+    queryFn: () => fetchEndpoint<Day[]>("statistics"),
     ...queryOptions,
   })
 
@@ -469,23 +462,23 @@ const ServerList = ({ servers }) => {
         <div className="grid gap-gutter sm:grid-cols-2 xl:grid-cols-3">
           {servers.isLoading
             ? Array(8)
-              .fill(null)
-              .map((_el, i) => <ServerCard key={i} />)
+                .fill(null)
+                .map((_el, i) => <ServerCard key={i} />)
             : servers.data
-              .sort((a, b) => {
-                if (a.approval_required === b.approval_required) {
-                  return b.last_week_users - a.last_week_users
-                } else if (a.approval_required) {
-                  return 1
-                } else if (b.approval_required) {
-                  return -1
-                } else {
-                  return b.last_week_users - a.last_week_users
-                }
-              })
-              .map((server) => (
-                <ServerCard key={server.domain} server={server} />
-              ))}
+                .sort((a, b) => {
+                  if (a.approval_required === b.approval_required) {
+                    return b.last_week_users - a.last_week_users
+                  } else if (a.approval_required) {
+                    return 1
+                  } else if (b.approval_required) {
+                    return -1
+                  } else {
+                    return b.last_week_users - a.last_week_users
+                  }
+                })
+                .map((server) => (
+                  <ServerCard key={server.domain} server={server} />
+                ))}
         </div>
       )}
     </div>
@@ -658,53 +651,53 @@ const ServerFilters = ({
       <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:-ml-3 md:grid-cols-1 md:gap-x-3">
         {!initialCategories
           ? new Array(11).fill(null).map((_, i) => (
-            <li className="h-8 p-3" key={i}>
-              <SkeletonText className="!h-full" />
-            </li>
-          ))
-          : categories?.map((item, i) => {
-            const isActive = filters.category === item.category
-
-            return (
-              <li key={i}>
-                <label
-                  className={classnames(
-                    "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
-                    isActive && "bg-nightshade-50 !font-extrabold",
-                    item.servers_count === 0 && "text-gray-2"
-                  )}
-                >
-                  <input
-                    className="sr-only"
-                    type="checkbox"
-                    name="filters-category"
-                    onChange={() => {
-                      setFilters({
-                        ...filters,
-                        category: isActive ? "" : item.category,
-                      })
-                    }}
-                  />
-                  {item.category === ""
-                    ? intl.formatMessage({
-                      id: "wizard.filter.all_categories",
-                      defaultMessage: "All topics",
-                    })
-                    : categoriesMessages[item.category]
-                      ? intl.formatMessage(categoriesMessages[item.category])
-                      : item.category}
-
-                  <span
-                    className={
-                      isActive ? "text-nightshade-100" : "text-gray-2"
-                    }
-                  >
-                    ({item.servers_count})
-                  </span>
-                </label>
+              <li className="h-8 p-3" key={i}>
+                <SkeletonText className="!h-full" />
               </li>
-            )
-          })}
+            ))
+          : categories?.map((item, i) => {
+              const isActive = filters.category === item.category
+
+              return (
+                <li key={i}>
+                  <label
+                    className={classnames(
+                      "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
+                      isActive && "bg-nightshade-50 !font-extrabold",
+                      item.servers_count === 0 && "text-gray-2"
+                    )}
+                  >
+                    <input
+                      className="sr-only"
+                      type="checkbox"
+                      name="filters-category"
+                      onChange={() => {
+                        setFilters({
+                          ...filters,
+                          category: isActive ? "" : item.category,
+                        })
+                      }}
+                    />
+                    {item.category === ""
+                      ? intl.formatMessage({
+                          id: "wizard.filter.all_categories",
+                          defaultMessage: "All topics",
+                        })
+                      : categoriesMessages[item.category]
+                        ? intl.formatMessage(categoriesMessages[item.category])
+                        : item.category}
+
+                    <span
+                      className={
+                        isActive ? "text-nightshade-100" : "text-gray-2"
+                      }
+                    >
+                      ({item.servers_count})
+                    </span>
+                  </label>
+                </li>
+              )
+            })}
       </ul>
     </div>
   )
