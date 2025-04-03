@@ -95,7 +95,7 @@ export default function DonateWidget({
         <input
           className="w-full"
           type="number"
-          value={currentAmount}
+          value={currentAmount / 100}
           onChange={(e) => setCurrentAmount(e.currentTarget.valueAsNumber)}
           min={0}
         />
@@ -108,7 +108,7 @@ export default function DonateWidget({
             onClick={() => setCurrentAmount(amount)}
             selected={amount === currentAmount}
           >
-            {formatter.format(amount)}
+            {formatter.format(amount / 100)}
           </ToggleButton>
         ))}
       </div>
