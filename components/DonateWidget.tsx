@@ -71,9 +71,10 @@ export default function DonateWidget({
     >
       <p className="">{donation_message}</p>
       <div className="flex rounded-full overflow-hidden border text-center my-4">
-        {frequencies.map((freq) => (
+        {frequencies.map((freq, index) => (
           <ToggleButton
             key={freq}
+            className={classNames(index > 0 && "border-l")}
             selected={freq === frequency}
             onClick={handleChangeFrequency(freq)}
           >
