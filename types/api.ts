@@ -59,9 +59,11 @@ export type JobsResponse = {
   results: Job[]
 }
 
-export type Currency = "EUR" | "USD"
+export const CURRENCIES = ["EUR", "USD"] as const
+export type Currency = (typeof CURRENCIES)[number]
 
-export type DonationFrequency = "one_time" | "monthly" | "yearly"
+export const DONATION_FREQUENCIES = ["one_time", "monthly", "yearly"] as const
+export type DonationFrequency = (typeof DONATION_FREQUENCIES)[number]
 
 export type DonationAmounts = Record<Currency, number[]>
 
