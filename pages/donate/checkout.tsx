@@ -6,14 +6,13 @@ import {
 import { z } from "zod"
 import { loadStripe } from "@stripe/stripe-js"
 
-const stripePromise = loadStripe("pk_test_f3duw0VsAEM2TJFMtWQ90QAT")
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
 export default function DonateCheckoutPage({
   clientSecret,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <div>
-      <h1>Donate Checkout</h1>
       <EmbeddedCheckoutProvider
         stripe={stripePromise}
         options={{ clientSecret }}
@@ -31,7 +30,7 @@ interface DonateCheckoutPageProps {
 const querySchema = z.object({
   url: z.string().url(),
   frequency: z.enum(["one-time", "monthly", "yearly"]),
-  amount: z.coerce.number().int().positive().gt(100),
+  amount: z.coerce.number().int().positive().gte(100),
   currency: z.enum(["EUR", "USD"]),
 })
 
