@@ -5,6 +5,11 @@ import {
 } from "@stripe/react-stripe-js"
 import { z } from "zod"
 import { loadStripe } from "@stripe/stripe-js"
+import {
+  CURRENCIES,
+  DONATION_FREQUENCIES,
+  DonationFrequency,
+} from "../../types/api"
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
@@ -29,9 +34,9 @@ interface DonateCheckoutPageProps {
 
 const querySchema = z.object({
   url: z.string().url(),
-  frequency: z.enum(["one-time", "monthly", "yearly"]),
+  frequency: z.enum(DONATION_FREQUENCIES),
   amount: z.coerce.number().int().positive().gte(100),
-  currency: z.enum(["EUR", "USD"]),
+  currency: z.enum(CURRENCIES),
 })
 
 export const getServerSideProps: GetServerSideProps<
