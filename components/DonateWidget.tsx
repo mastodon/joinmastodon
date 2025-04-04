@@ -11,14 +11,16 @@ import type {
   DonationFrequency,
 } from "../types/api"
 
+export type OnDonateFn = (
+  amount: number,
+  frequency: DonationFrequency,
+  currency: Currency
+) => void
+
 interface DonateWidgetProps {
   theme: "light" | "dark"
   className?: string
-  onDonate: (
-    amount: number,
-    frequency: DonationFrequency,
-    currency: Currency
-  ) => void
+  onDonate: OnDonateFn
   messages: Pick<CampaignResponse, "donation_message" | "donation_button_text">
   defaultCurrency: Currency
   amounts: CampaignResponse["amounts"]

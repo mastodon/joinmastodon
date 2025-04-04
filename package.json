@@ -17,6 +17,7 @@
   "dependencies": {
     "@headlessui/react": "^2.1.2",
     "@linear/sdk": "^38.0.0",
+    "@stripe/react-stripe-js": "^3.6.0",
     "@stripe/stripe-js": "^7.0.0",
     "@tanstack/react-query": "^5.51.21",
     "blurhash": "^2.0.5",
@@ -34,7 +35,8 @@
     "react-intl": "^6.6.8",
     "sass": "^1.77.8",
     "sharp": "^0.33.4",
-    "stripe": "^18.0.0"
+    "stripe": "^18.0.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@formatjs/cli": "^6.2.12",
