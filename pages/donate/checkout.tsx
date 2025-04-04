@@ -49,19 +49,9 @@ export const getServerSideProps: GetServerSideProps<
     environment: "staging",
   })
   const response = await fetch(`${url}?${params}`, {
-    // method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    // body: JSON.stringify({
-    //   platform: "web",
-    //   frequency,
-    //   amount,
-    //   currency,
-    //   locale,
-    //   source: "menu",
-    //   environment: "staging",
-    // }),
   })
   if (!response.ok) {
     throw new Error("Failed to get donation URL")
