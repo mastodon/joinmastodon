@@ -1,25 +1,34 @@
-import { ParsedUrlQuery } from "node:querystring"
 import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
+import { getIronSession } from "iron-session"
+import { useRouter } from "next/navigation"
+import { useCallback } from "react"
+import { z } from "zod"
 
 import { fetchEndpoint } from "../../utils/api"
 import { CampaignResponse } from "../../types/api"
-import DonateWidget from "../../components/DonateWidget"
-import { getIronSession } from "iron-session"
-
-interface DonatePageQuery {
-  theme: "light" | "dark"
-  campaign?: string
-  callback?: string
-}
+import DonateWidget, { OnDonateFn } from "../../components/DonateWidget"
 
 export default function DonatePage({
   theme,
   default_currency,
   donation_message,
   donation_button_text,
+  donation_url,
   amounts,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const handleDonate = console.log
+  const router = useRouter()
+  const handleDonate: OnDonateFn = useCallback(
+    async (amount, frequency, currency) => {
+      const params = new URLSearchParams({
+        url: donation_url,
+        frequency,
+        amount: amount.toString(),
+        currency,
+      })
+      router.push(`/donate/checkout?${params.toString()}`)
+    },
+    [donation_url, router]
+  )
   return (
     <DonateWidget
       theme={theme}
@@ -36,6 +45,13 @@ interface DonateSessionData {
 }
 
 type DonatePageProps = DonatePageQuery & CampaignResponse
+
+const querySchema = z.object({
+  theme: z.enum(["light", "dark"]).default("light"),
+  campaign: z.string().optional(),
+  callback: z.string().optional(),
+})
+type DonatePageQuery = z.infer<typeof querySchema>
 
 export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
   query,
@@ -72,7 +88,7 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
     return {
       props: {
         ...apiRes,
-        ...parseQuery(query),
+        ...querySchema.parse(query),
       },
     }
   } catch {
@@ -80,17 +96,4 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
       notFound: true,
     }
   }
-}
-
-function parseQuery(query: ParsedUrlQuery): DonatePageQuery {
-  const result: DonatePageQuery = {
-    theme: query.theme === "dark" ? "dark" : "light",
-  }
-  if (typeof query.campaign === "string") {
-    result.campaign = query.campaign
-  }
-  if (typeof query.callback === "string") {
-    result.callback = query.callback
-  }
-  return result
 }
