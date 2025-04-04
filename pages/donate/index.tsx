@@ -1,5 +1,5 @@
+import * as cookie from "cookie"
 import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
-import { getIronSession } from "iron-session"
 import { useRouter } from "next/navigation"
 import { useCallback } from "react"
 import { z } from "zod"
@@ -59,26 +59,27 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
   req,
   res,
 }) => {
-  const session = await getIronSession<DonateSessionData>(req, res, {
-    cookieName: "session",
-    password: process.env.SESSION_SECRET,
-    ttl: 60 * 5, // Five minutes
-    cookieOptions: {
-      secure: process.env.NODE_ENV === "production",
-    },
-  })
-  session.seed ??= Math.floor(Math.random() * 99)
+  let seed = req.cookies.seed
+  if (!seed) {
+    seed = Math.floor(Math.random() * 99).toString()
+    res.setHeader(
+      "Set-Cookie",
+      cookie.serialize("seed", seed, {
+        httpOnly: true,
+        maxAge: 60 * 15,
+        secure: process.env.NODE_ENV === "production",
+      })
+    )
+  }
   const queryParams = new URLSearchParams({
     locale,
     platform: "android",
-    seed: session.seed.toString(),
+    seed,
     source: "menu",
   })
   if (process.env.NODE_ENV !== "production") {
     queryParams.append("environment", "staging")
   }
-
-  await session.save()
 
   try {
     const apiRes = await fetchEndpoint<CampaignResponse>(
