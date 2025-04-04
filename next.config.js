@@ -36,28 +36,64 @@ const nextConfig = {
           },
         ],
       }))
-      .concat({
-        source: "/(.*)?",
-        headers: [
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-          {
-            key: "Permissions-Policy",
-            value:
-              "camera=(), microphone=(), geolocation=(), browsing-topics=()",
-          },
-          {
-            key: "Referrer-Policy",
-            value: "origin-when-cross-origin",
-          },
-          {
-            key: "Content-Security-Policy",
-            value: `default-src 'self'; child-src 'none'; object-src 'none'; img-src 'self' proxy.joinmastodon.org blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self' ${notIfProduction("'unsafe-inline' 'unsafe-eval'")}; connect-src 'self' api.joinmastodon.org; block-all-mixed-content`,
-          },
-        ],
-      })
+      .concat(
+        {
+          source: "/(.*)?",
+          headers: [
+            {
+              key: "X-Content-Type-Options",
+              value: "nosniff",
+            },
+            {
+              key: "Permissions-Policy",
+              value:
+                "camera=(), microphone=(), geolocation=(), browsing-topics=()",
+            },
+            {
+              key: "Referrer-Policy",
+              value: "origin-when-cross-origin",
+            },
+            {
+              key: "Content-Security-Policy",
+              value: cspMapToString({
+                "default-src": ["self"],
+                "child-src": ["none"],
+                "object-src": ["none"],
+                "img-src": ["self", "proxy.joinmastodon.org", "blob:", "data:"],
+                "style-src": ["self", "unsafe-inline"],
+                "script-src": [
+                  "self",
+                  notIfProduction("unsafe-inline"),
+                  notIfProduction("unsafe-eval"),
+                ],
+                "connect-src": ["self", "api.joinmastodon.org"],
+                "block-all-mixed-content": [],
+              }),
+            },
+          ],
+        },
+        {
+          source: "/donate/(.*)?",
+          headers: [
+            {
+              key: "Content-Security-Policy",
+              value: cspMapToString({
+                "default-src": ["self"],
+                "child-src": ["js.stripe.com"],
+                "img-src": ["self", "blob:", "data:"],
+                "style-src": ["self", "unsafe-inline"],
+                "script-src": [
+                  "self",
+                  "unsafe-inline",
+                  "unsafe-eval",
+                  "js.stripe.com",
+                ],
+                "block-all-mixed-content": [],
+              }),
+            },
+          ],
+        }
+      )
   },
   async redirects() {
     return [
@@ -80,7 +116,7 @@ const nextConfig = {
       },
     ]
   },
-  webpack(config, { isServer, isdev }) {
+  webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find(
       (rule) => rule.test && rule.test.test?.(".svg")
@@ -112,6 +148,22 @@ const nextConfig = {
   },
   poweredByHeader: false,
   output: "standalone",
+}
+
+/**
+ * @param {Record<string, string[]>} map
+ * @returns {string}
+ */
+function cspMapToString(map) {
+  return Object.entries(map)
+    .map(([key, values]) => {
+      const valuesString = values
+        .filter(Boolean)
+        .map((value) => (value.includes(".") ? value : `'${value}'`))
+        .join(" ")
+      return `${key} ${valuesString}`
+    })
+    .join("; ")
 }
 
 module.exports = nextConfig
