@@ -2156,6 +2156,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stripe/react-stripe-js@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "@stripe/react-stripe-js@npm:3.6.0"
+  dependencies:
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    "@stripe/stripe-js": ">=1.44.1 <8.0.0"
+    react: ">=16.8.0 <20.0.0"
+    react-dom: ">=16.8.0 <20.0.0"
+  checksum: 10c0/bcf0f89f17d31e7a60d34cf6c170a060c4e884614d0d73066c03187fdb1894f7359966d00abbc4cd49b52541d9f122008762d82b8233ac6f3e222ad736ce4af5
+  languageName: node
+  linkType: hard
+
 "@stripe/stripe-js@npm:^7.0.0":
   version: 7.0.0
   resolution: "@stripe/stripe-js@npm:7.0.0"
@@ -5257,6 +5270,7 @@ __metadata:
     "@formatjs/cli": "npm:^6.7.1"
     "@headlessui/react": "npm:^2.2.2"
     "@linear/sdk": "npm:^41.0.0"
+    "@stripe/react-stripe-js": "npm:^3.6.0"
     "@stripe/stripe-js": "npm:^7.0.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-query": "npm:^5.75.2"
@@ -5294,6 +5308,7 @@ __metadata:
     tailwindcss: "npm:^3.4.17"
     tailwindcss-logical: "npm:^3.0.1"
     typescript: "npm:^5.8.3"
+    zod: "npm:^3.24.2"
   languageName: unknown
   linkType: soft
 
@@ -6488,7 +6503,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8087,5 +8102,12 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10c0/dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.24.2":
+  version: 3.24.2
+  resolution: "zod@npm:3.24.2"
+  checksum: 10c0/c638c7220150847f13ad90635b3e7d0321b36cce36f3fc6050ed960689594c949c326dfe2c6fa87c14b126ee5d370ccdebd6efb304f41ef5557a4aaca2824565
   languageName: node
   linkType: hard
