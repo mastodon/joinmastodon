@@ -18,7 +18,6 @@ export type OnDonateFn = (
 ) => void
 
 interface DonateWidgetProps {
-  theme: "light" | "dark"
   className?: string
   onDonate: OnDonateFn
   messages: Pick<CampaignResponse, "donation_message" | "donation_button_text">
@@ -28,7 +27,6 @@ interface DonateWidgetProps {
 
 export default function DonateWidget({
   className,
-  theme,
   messages: { donation_message, donation_button_text },
   defaultCurrency,
   amounts,
@@ -64,19 +62,15 @@ export default function DonateWidget({
   }, [currency, currentAmount, frequency, onDonate])
 
   return (
-    <div
-      className={classNames(
-        theme,
-        "bg-white dark:bg-black p-4 min-h-screen max-w-[400px]",
-        className
-      )}
-    >
-      <p className="">{donation_message}</p>
-      <div className="flex rounded-full overflow-hidden border text-center my-4">
-        {frequencies.map((freq, index) => (
+    <div className={classNames("p-4 dark:text-white", className)}>
+      <p>{donation_message}</p>
+      <div className="flex text-center my-4">
+        {frequencies.map((freq) => (
           <ToggleButton
             key={freq}
-            className={classNames(index > 0 && "border-l")}
+            className={classNames(
+              "border first:border-r-0 first:rounded-l-full last:rounded-r-full transition-colors"
+            )}
             selected={freq === frequency}
             onClick={handleChangeFrequency(freq)}
           >
@@ -88,7 +82,7 @@ export default function DonateWidget({
 
       <div className="flex gap-2 items-center pr-2 border rounded-lg overflow-hidden">
         <select
-          className="p-2 bg-gray-3 cursor-pointer"
+          className="p-2 bg-gray-3 dark:bg-gray-1 hover:bg-gray-2 hover:dark:bg-gray-0 transition-colors cursor-pointer border-r"
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
         >
@@ -96,7 +90,7 @@ export default function DonateWidget({
           <option value="EUR">EUR</option>
         </select>
         <input
-          className="w-full"
+          className="w-full dark:bg-black"
           type="number"
           value={currentAmount / 100}
           onChange={(e) => setCurrentAmount(e.currentTarget.valueAsNumber)}
@@ -117,7 +111,7 @@ export default function DonateWidget({
       </div>
 
       <button
-        className="bg-blurple-300 p-2 text-center rounded-full mt-4 w-full border hover:bg-blurple-500 transition-colors"
+        className="bg-blurple-300 hover:bg-blurple-500 dark:bg-nightshade-300 dark:hover:bg-nightshade-600 p-2 text-center rounded-full mt-4 w-full border transition-colors"
         onClick={handleDonate}
       >
         {donation_button_text}
@@ -144,8 +138,9 @@ function ToggleButton({
       onClick={onClick}
       className={classNames(
         "w-full p-2 flex gap-2 items-center justify-center",
-        selected && "bg-blurple-300 hover:bg-blurple-500",
-        !selected && "hover:bg-gray-4",
+        selected &&
+          "bg-blurple-300 hover:bg-blurple-500 dark:bg-nightshade-300 dark:hover:bg-nightshade-600",
+        !selected && "hover:bg-gray-4 dark:hover:bg-nightshade-900",
         className
       )}
     >

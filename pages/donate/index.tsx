@@ -7,6 +7,7 @@ import { z } from "zod"
 import { fetchEndpoint } from "../../utils/api"
 import { CampaignResponse } from "../../types/api"
 import DonateWidget, { OnDonateFn } from "../../components/DonateWidget"
+import classNames from "classnames"
 
 export default function DonatePage({
   theme,
@@ -30,13 +31,15 @@ export default function DonatePage({
     [donation_url, router]
   )
   return (
-    <DonateWidget
-      theme={theme}
-      defaultCurrency={default_currency}
-      messages={{ donation_message, donation_button_text }}
-      amounts={amounts}
-      onDonate={handleDonate}
-    />
+    <div className={classNames(theme, "min-h-screen bg-white dark:bg-black")}>
+      <DonateWidget
+        className="max-w-[400px] mx-auto"
+        defaultCurrency={default_currency}
+        messages={{ donation_message, donation_button_text }}
+        amounts={amounts}
+        onDonate={handleDonate}
+      />
+    </div>
   )
 }
 
