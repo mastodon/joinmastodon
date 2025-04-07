@@ -5,11 +5,7 @@ import {
 } from "@stripe/react-stripe-js"
 import { z } from "zod"
 import { loadStripe } from "@stripe/stripe-js"
-import {
-  CURRENCIES,
-  DONATION_FREQUENCIES,
-  DonationFrequency,
-} from "../../types/api"
+import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
@@ -42,32 +38,42 @@ const querySchema = z.object({
 export const getServerSideProps: GetServerSideProps<
   DonateCheckoutPageProps
 > = async ({ query, locale }) => {
-  const { url, frequency, amount, currency } = querySchema.parse(query)
+  try {
+    const { url, frequency, amount, currency } = querySchema.parse(query)
 
-  const params = new URLSearchParams({
-    platform: "web",
-    frequency,
-    amount: amount.toString(),
-    currency,
-    locale,
-    source: "menu",
-    environment: "staging",
-  })
-  const response = await fetch(`${url}?${params}`, {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-  if (!response.ok) {
-    throw new Error("Failed to get donation URL")
-  }
-  const body = await response.json()
-  if ("clientSecret" in body) {
+    const params = new URLSearchParams({
+      platform: "web",
+      frequency,
+      amount: amount.toString(),
+      currency,
+      locale,
+      source: "menu",
+      environment: "staging",
+    })
+    const response = await fetch(`${url}?${params}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    if (!response.ok) {
+      throw new Error("Failed to get donation URL")
+    }
+    const body = await response.json()
+    if ("clientSecret" in body) {
+      return {
+        props: {
+          clientSecret: body.clientSecret,
+        },
+      }
+    }
+    throw new Error("Invalid response from server")
+  } catch (error) {
+    console.error("Error with checkout:", error)
     return {
-      props: {
-        clientSecret: body.clientSecret,
+      redirect: {
+        statusCode: 302,
+        destination: "/donate",
       },
     }
   }
-  throw new Error("Invalid response from server")
 }
