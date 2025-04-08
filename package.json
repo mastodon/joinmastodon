@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint && tsc --noEmit",
     "update-sponsors": "node --experimental-fetch patreon.mjs",
     "update-roadmap": "node linear.mjs",
     "extract": "formatjs extract '{components,pages,data}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'"

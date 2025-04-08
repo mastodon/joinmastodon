@@ -112,6 +112,9 @@ const nextConfig = {
   },
   poweredByHeader: false,
   output: "standalone",
+  eslint: {
+    dirs: ["."], // Check all files in the project
+  },
 }
 
 module.exports = nextConfig
