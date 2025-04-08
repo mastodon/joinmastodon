@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && tsc --noEmit",
+    "lint": "tsc --noEmit && next lint",
     "update-sponsors": "node --experimental-fetch patreon.mjs",
     "update-roadmap": "node linear.mjs",
     "extract": "formatjs extract '{components,pages,data}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'"
@@ -44,6 +44,8 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.0.0",
     "eslint-config-prettier": "^10.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "postcss": "^8.4.40",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
@@ -51,5 +53,9 @@
     "tailwindcss-logical": "^3.0.1",
     "typescript": "^5.5.4"
   },
-  "packageManager": "yarn@4.7.0"
+  "packageManager": "yarn@4.7.0",
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write",
+    "*.{js,mjs,ts,tsx}": "lint --fix"
+  }
 }
