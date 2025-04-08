@@ -319,7 +319,9 @@ const About = () => (
 
               <div className="b1 mb-4">
                 <dt className="font-bold">Press and media:</dt>
-                <dd className="b3">Media requests, interviews, and press-related questions</dd>
+                <dd className="b3">
+                  Media requests, interviews, and press-related questions
+                </dd>
                 <dd>
                   <a
                     href="mailto:press@joinmastodon.org"
@@ -332,7 +334,9 @@ const About = () => (
 
               <div className="b1 mb-4">
                 <dt className="font-bold">Business hosting:</dt>
-                <dd className="b3">Supporting organisations joining Mastodon</dd>
+                <dd className="b3">
+                  Supporting organisations joining Mastodon
+                </dd>
                 <dd>
                   <a
                     href="mailto:hosting@joinmastodon.org"
@@ -345,11 +349,17 @@ const About = () => (
 
               <div className="b1 mb-4">
                 <dt className="font-bold">Sponsor assistance:</dt>
-                <dd className="b3">Support for sponsor listings, donations (
+                <dd className="b3">
+                  Support for sponsor listings, donations (
                   <Link
                     key="sponsorship"
                     href="/sponsors"
-                    className="text-blurple-500 hocus:underline">sponsorship info</Link>)</dd>
+                    className="text-blurple-500 hocus:underline"
+                  >
+                    sponsorship info
+                  </Link>
+                  )
+                </dd>
                 <dd>
                   <a
                     href="mailto:sponsorships@joinmastodon.org"
@@ -362,11 +372,18 @@ const About = () => (
 
               <div className="b1 mb-4">
                 <dt className="font-bold">Legal and trademarks:</dt>
-                <dd className="b3">Legal and compliance, trademarks (
+                <dd className="b3">
+                  Legal and compliance, trademarks (
                   <Link
                     key="trademark"
                     href="/trademark"
-                    className="text-blurple-500 hocus:underline">policy</Link>)</dd>                <dd>
+                    className="text-blurple-500 hocus:underline"
+                  >
+                    policy
+                  </Link>
+                  )
+                </dd>{" "}
+                <dd>
                   <a
                     href="mailto:legal@joinmastodon.org"
                     className="text-blurple-500 hover:underline"
@@ -378,11 +395,17 @@ const About = () => (
 
               <div className="b1 mb-4">
                 <dt className="font-bold">Server instance list:</dt>
-                <dd className="b3">Submissions to the server directory (
+                <dd className="b3">
+                  Submissions to the server directory (
                   <Link
                     key="servers"
                     href="/covenant"
-                    className="text-blurple-500 hocus:underline">policy</Link>)</dd>
+                    className="text-blurple-500 hocus:underline"
+                  >
+                    policy
+                  </Link>
+                  )
+                </dd>
                 <dd>
                   <a
                     href="mailto:servers@joinmastodon.org"
@@ -395,7 +418,9 @@ const About = () => (
 
               <div className="b1 mb-4">
                 <dt className="font-bold">Security issue reporting:</dt>
-                <dd className="b3">For reporting security vulnerabilities or concerns</dd>
+                <dd className="b3">
+                  For reporting security vulnerabilities or concerns
+                </dd>
                 <dd>
                   <a
                     href="mailto:security@joinmastodon.org"
@@ -408,7 +433,9 @@ const About = () => (
 
               <div className="b1 mb-4">
                 <dt className="font-bold">Any other inquiries:</dt>
-                <dd className="b3">For general questions and all other matters</dd>
+                <dd className="b3">
+                  For general questions and all other matters
+                </dd>
                 <dd>
                   <a
                     href="mailto:hello@joinmastodon.org"
@@ -563,4 +590,3 @@ const Metrics = () => {
 export const getStaticProps = withDefaultStaticProps()
 
 export default About
-

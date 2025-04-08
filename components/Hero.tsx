@@ -48,8 +48,8 @@ const Hero = ({
         noHeight
           ? ""
           : homepage
-          ? "2xl:h-[var(--desktop-hero-height)]"
-          : "xl:h-[var(--desktop-hero-height)]"
+            ? "2xl:h-[var(--desktop-hero-height)]"
+            : "xl:h-[var(--desktop-hero-height)]"
       )}
       style={
         {
