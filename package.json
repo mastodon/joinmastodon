@@ -9,10 +9,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "tsc --noEmit && next lint",
+    "lint": "yarn typecheck && yarn lint-js",
+    "lint-js": "next lint",
+    "fix": "yarn lint --fix",
+    "format": "prettier --write --log-level warn --ignore-unknown .",
     "update-sponsors": "node --experimental-fetch patreon.mjs",
     "update-roadmap": "node linear.mjs",
-    "extract": "formatjs extract '{components,pages,data}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'"
+    "extract": "formatjs extract '{components,pages,data}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
@@ -55,7 +59,7 @@
   },
   "packageManager": "yarn@4.7.0",
   "lint-staged": {
-    "*": "prettier --ignore-unknown --write",
-    "*.{js,mjs,ts,tsx}": "lint --fix"
+    "*": "yarn format",
+    "*.{js,mjs,ts,tsx}": "yarn fix"
   }
 }
