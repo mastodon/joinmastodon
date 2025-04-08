@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "yarn typecheck & yarn lint-js",
+    "lint": "yarn typecheck && yarn lint-js",
     "lint-js": "next lint",
     "fix": "yarn lint --fix",
     "format": "prettier --write --log-level warn --ignore-unknown .",
@@ -57,9 +57,5 @@
     "tailwindcss-logical": "^3.0.1",
     "typescript": "^5.5.4"
   },
-  "packageManager": "yarn@4.7.0",
-  "lint-staged": {
-    "*": "yarn format",
-    "*.{js,mjs,ts,tsx}": "yarn fix"
-  }
+  "packageManager": "yarn@4.7.0"
 }
