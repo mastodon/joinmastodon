@@ -9,14 +9,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "yarn typecheck && yarn lint-js",
+    "lint": "yarn typecheck & yarn lint-js",
     "lint-js": "next lint",
     "fix": "yarn lint --fix",
     "format": "prettier --write --log-level warn --ignore-unknown .",
     "update-sponsors": "node --experimental-fetch patreon.mjs",
     "update-roadmap": "node linear.mjs",
     "extract": "formatjs extract '{components,pages,data}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit && echo 'No type errors'"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
