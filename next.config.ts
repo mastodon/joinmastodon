@@ -1,3 +1,5 @@
+import { NextConfig } from "next"
+
 const { locales, defaultLocale } = require("./data/locales.js")
 
 function notIfProduction(param) {
@@ -5,8 +7,7 @@ function notIfProduction(param) {
   else return param
 }
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   i18n: {
     locales: locales.map((l) => l.code),
@@ -80,7 +81,7 @@ const nextConfig = {
       },
     ]
   },
-  webpack(config, { isServer, isdev }) {
+  webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find(
       (rule) => rule.test && rule.test.test?.(".svg")
@@ -112,6 +113,9 @@ const nextConfig = {
   },
   poweredByHeader: false,
   output: "standalone",
+  eslint: {
+    dirs: ["."], // Check all files in the project
+  },
 }
 
 module.exports = nextConfig
