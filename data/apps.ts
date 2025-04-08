@@ -276,7 +276,7 @@ export const apps: appsList = {
       name: "Bubble",
       icon: bubble,
       url: "https://apps.apple.com/app/bubble/id6477757490",
-      paid: false
+      paid: false,
     },
     {
       released_on: "Jan 1, 2024",
@@ -296,7 +296,11 @@ export const apps: appsList = {
     { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
     { name: "Tooty", icon: tooty, url: "https://n1k0.github.io/tooty/v2/" },
     { name: "Mastodeck", icon: mastodeck, url: "https://mastodeck.com/" },
-    { name: "Sengi", icon: sengi, url: "https://nicolasconstant.github.io/sengi/" },
+    {
+      name: "Sengi",
+      icon: sengi,
+      url: "https://nicolasconstant.github.io/sengi/",
+    },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },

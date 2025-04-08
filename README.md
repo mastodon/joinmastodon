@@ -51,7 +51,6 @@ Raster images should be added at the maximum resolution they'll be displayed at.
 
 Next.js should be hosted using a Node.js server. ([see instructions](https://nextjs.org/docs/pages/building-your-application/deploying#self-hosting)). The reasons that this has been chosen over a static HTML export are:
 
-- [image optimization]([#image-optimization](https://nextjs.org/docs/pages/building-your-application/deploying#image-optimization)) (for automatic webp conversion and compression)
+- [image optimization](<[#image-optimization](https://nextjs.org/docs/pages/building-your-application/deploying#image-optimization)%3E>) (for automatic webp conversion and compression)
 - [internationalized routing](https://nextjs.org/docs/pages/building-your-application/routing/internationalization) ([code reference](https://github.com/mastodon/joinmastodon/blob/87a3c1df9dce50141e097f26ebd1483b0c1bce4a/next.config.js#L9-L12))
 - and redirects ([code reference](https://github.com/mastodon/joinmastodon/blob/87a3c1df9dce50141e097f26ebd1483b0c1bce4a/next.config.js#L16-L24))
-

@@ -9,8 +9,8 @@ You may want to contribute in the following ways:
 - Adding apps
 
 > [!NOTE]
-> This is *not* the repository for contributions to the code that runs mastodon.social (ie the Mastodon server instance run by the core Mastodon team).
-> 
+> This is _not_ the repository for contributions to the code that runs mastodon.social (ie the Mastodon server instance run by the core Mastodon team).
+>
 > Go back up to the [top level Mastodon organisation](https://github.com/mastodon).
 
 ## Bug reports

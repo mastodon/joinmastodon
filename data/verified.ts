@@ -8,7 +8,6 @@ import avatarCoryDoctorow from "../public/accounts/cory.png"
 import avatarNiemanLab from "../public/accounts/niemanlab.jpeg"
 import avatarCreativeCommons from "../public/accounts/creativecommons.png"
 
-
 const verified = [
   {
     url: "https://wikis.world/@wikipedia",
