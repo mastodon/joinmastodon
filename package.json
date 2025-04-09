@@ -30,9 +30,9 @@
     "lodash": "^4.17.21",
     "next": "^15.2.5",
     "node-gyp": "^11.2.0",
-    "react": "^18.3.1",
+    "react": "^19.0.0",
     "react-blurhash": "^0.3.0",
-    "react-dom": "^18.3.1",
+    "react-dom": "^19.0.0",
     "react-intl": "^6.8.9",
     "sass": "^1.86.3",
     "sharp": "^0.34.1"
