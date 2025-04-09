@@ -2832,6 +2832,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:18":
+  version: 18.3.20
+  resolution: "@types/react@npm:18.3.20"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10c0/65fa867c91357e4c4c646945c8b99044360f8973cb7f928ec4de115fe3207827985d45be236e6fd6c092b09f631c2126ce835c137be30718419e143d73300d8f
+  languageName: node
+  linkType: hard
+
 "@types/scheduler@npm:*":
   version: 0.16.2
   resolution: "@types/scheduler@npm:0.16.2"
@@ -5971,6 +5981,7 @@ __metadata:
     "@tanstack/react-query": "npm:^5.72.1"
     "@tanstack/react-query-devtools": "npm:^5.72.1"
     "@types/node": "npm:^22.0.0"
+    "@types/react": "npm:18"
     "@typescript-eslint/eslint-plugin": "npm:^8.0.0"
     "@typescript-eslint/parser": "npm:^8.29.1"
     autoprefixer: "npm:^10.4.20"
