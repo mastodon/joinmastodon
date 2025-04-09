@@ -34,6 +34,9 @@ yarn-error.log*
 # jetbrains stuff
 .idea
 
+# VSCode
+.vscode
+
 # From https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 .pnp.*
 .yarn/*

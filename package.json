@@ -9,10 +9,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && tsc --noEmit",
+    "lint": "yarn typecheck && yarn lint-js",
+    "lint-js": "next lint",
+    "fix": "yarn lint --fix",
+    "format": "prettier --write --log-level warn --ignore-unknown .",
     "update-sponsors": "node --experimental-fetch patreon.mjs",
     "update-roadmap": "node linear.mjs",
-    "extract": "formatjs extract '{components,pages,data}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'"
+    "extract": "formatjs extract '{components,pages,data}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'",
+    "typecheck": "tsc --noEmit && echo 'No type errors'"
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
@@ -44,6 +48,8 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.0.0",
     "eslint-config-prettier": "^10.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "postcss": "^8.4.40",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
