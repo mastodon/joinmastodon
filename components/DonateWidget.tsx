@@ -1,15 +1,11 @@
 import classNames from "classnames"
 import { useCallback, useState } from "react"
-import { FormattedMessage } from "react-intl"
-import {
-  Input,
-  Select,
-  Button as HeadlessButton,
-  ButtonProps as HeadlessButtonProps,
-} from "@headlessui/react"
+import { defineMessages, useIntl } from "react-intl"
+import { Input, Select } from "@headlessui/react"
 
 import CheckIcon from "../public/icons/check.svg?inline"
 import { useCurrencyFormatter } from "../utils/use-currency-formatter"
+import { Button } from "./Button"
 
 import type {
   Currency,
@@ -31,6 +27,21 @@ interface DonateWidgetProps {
   amounts: CampaignResponse["amounts"]
 }
 
+const messages = defineMessages({
+  one_time: {
+    id: "donate_widget.frequency.once",
+    defaultMessage: "Just once",
+  },
+  monthly: {
+    id: "donate_widget.frequency.monthly",
+    defaultMessage: "Monthly",
+  },
+  yearly: {
+    id: "donate_widget.frequency.yearly",
+    defaultMessage: "Yearly",
+  },
+})
+
 export function DonateWidget({
   className,
   messages: { donation_message, donation_button_text },
@@ -47,7 +58,9 @@ export function DonateWidget({
     () => amounts[frequency][currency][0]
   )
   const [dirty, setDirty] = useState(false)
+
   const formatter = useCurrencyFormatter(currency)
+  const intl = useIntl()
 
   const handleChangeFrequency = useCallback(
     (toFrequency: DonationFrequency) => () => {
@@ -93,7 +106,7 @@ export function DonateWidget({
             onClick={handleChangeFrequency(freq)}
           >
             <CheckIcon className="fill-black w-auto h-4" />
-            <FrequencyLabel frequency={freq} />
+            {intl.formatMessage(messages[freq])}
           </Button>
         ))}
       </div>
@@ -138,49 +151,4 @@ export function DonateWidget({
       </Button>
     </div>
   )
-}
-
-type ButtonProps = HeadlessButtonProps & {
-  dark?: boolean
-}
-
-function Button({
-  children,
-  className,
-  dark = false,
-  ...props
-}: React.PropsWithChildren<ButtonProps>) {
-  return (
-    <HeadlessButton
-      {...props}
-      className={classNames(
-        className,
-        "w-full p-2 flex gap-2 items-center justify-center rounded-md",
-        "text-center font-semibold transition-colors focus:outline-none border-2",
-        !dark &&
-          "bg-white hocus:bg-blurple-600 border-blurple-500 hocus:border-blurple-600 text-blurple-500 hocus:text-white",
-        dark &&
-          "bg-blurple-500 hocus:bg-blurple-600 border-[transparent] text-white"
-      )}
-    >
-      {children}
-    </HeadlessButton>
-  )
-}
-
-function FrequencyLabel({ frequency }: { frequency: DonationFrequency }) {
-  switch (frequency) {
-    case "one_time":
-      return (
-        <FormattedMessage id="donate_widget.once" defaultMessage="Just once" />
-      )
-    case "monthly":
-      return (
-        <FormattedMessage id="donate_widget.monthly" defaultMessage="Monthly" />
-      )
-    case "yearly":
-      return (
-        <FormattedMessage id="donate_widget.yearly" defaultMessage="Yearly" />
-      )
-  }
 }
