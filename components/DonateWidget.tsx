@@ -117,7 +117,6 @@ export function DonateWidget({
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
           aria-label="Select currency"
-          defaultValue={defaultCurrency}
         >
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
