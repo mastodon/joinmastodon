@@ -154,11 +154,7 @@ const nextConfig: NextConfig = {
   },
 }
 
-/**
- * @param {Record<string, string[]>} map
- * @returns {string}
- */
-function cspMapToString(map) {
+function cspMapToString(map: Record<string, string[]>) {
   return Object.entries(map)
     .map(([key, values]) => {
       const valuesString = values
