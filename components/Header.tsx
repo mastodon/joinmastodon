@@ -32,7 +32,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
     },
     {
       value: "https://shop.joinmastodon.org/",
-      label: <div className="flex gap-2 items-center"><FormattedMessage id="nav.merch.title" defaultMessage="Merch" /><span className="bg-goldenrod/[0.5] text-goldenrod c2 px-1.5 rounded border border-goldenrod"><FormattedMessage id='nav.new' defaultMessage='New' /></span></div>,
+      label: <FormattedMessage id="nav.merch.title" defaultMessage="Merch" />,
     },
     {
       value: "/sponsors",
