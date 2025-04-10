@@ -1,6 +1,7 @@
 import classNames from "classnames"
-import { ReactNode, useCallback, useState } from "react"
+import { useCallback, useState } from "react"
 import { FormattedMessage } from "react-intl"
+import { Input, Select } from "@headlessui/react"
 
 import CheckIcon from "../public/icons/check.svg?inline"
 import { useCurrencyFormatter } from "../utils/use-currency-formatter"
@@ -40,12 +41,14 @@ export function DonateWidget({
   const [currentAmount, setCurrentAmount] = useState(
     () => amounts[frequency][currency][0]
   )
+  const [dirty, setDirty] = useState(false)
   const formatter = useCurrencyFormatter(currency)
 
   const handleChangeFrequency = useCallback(
     (toFrequency: DonationFrequency) => () => {
       setFrequency(toFrequency)
       setCurrentAmount(amounts[toFrequency][currency][0])
+      setDirty(false)
     },
     [amounts, currency]
   )
@@ -53,9 +56,19 @@ export function DonateWidget({
     (toCurrency: Currency) => {
       setCurrency(toCurrency)
       setCurrentAmount(amounts[frequency][toCurrency][0])
+      setDirty(false)
     },
     [amounts, frequency]
   )
+  const handleChangeAmount: React.ChangeEventHandler<HTMLInputElement> =
+    useCallback((event) => {
+      setCurrentAmount(event.currentTarget.valueAsNumber * 100)
+      setDirty(true)
+    }, [])
+  const handleClickAmount = useCallback((amount: number) => {
+    setCurrentAmount(amount)
+    setDirty(false)
+  }, [])
 
   const handleDonate = useCallback(() => {
     onDonate(currentAmount, frequency, currency)
@@ -66,47 +79,52 @@ export function DonateWidget({
       <p>{donation_message}</p>
       <div className="flex text-center my-4">
         {frequencies.map((freq) => (
-          <ToggleButton
+          <Button
             key={freq}
             className={classNames(
               "rounded-none first:rounded-l-md last:rounded-r-md"
             )}
-            selected={freq === frequency}
+            dark={freq === frequency}
             onClick={handleChangeFrequency(freq)}
           >
             <CheckIcon className="fill-black w-auto h-4" />
             <FrequencyLabel frequency={freq} />
-          </ToggleButton>
+          </Button>
         ))}
       </div>
 
-      <div className="flex gap-2 items-center pr-2 border border-gray-3 dark:border-gray-2 rounded-md overflow-hidden">
-        <select
-          className="p-2 bg-gray-3 hover:bg-gray-2 transition-colors cursor-pointer font-medium"
+      <div className="w-full flex items-stretch">
+        <Select
+          className="p-2 rounded-l-md outline-none bg-gray-3 hocus:bg-gray-2 transition-colors cursor-pointer font-medium"
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
+          aria-label="Select currency"
+          defaultValue={defaultCurrency}
         >
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
-        </select>
-        <input
-          className="w-full dark:bg-black font-bold"
+        </Select>
+        <Input
+          className="grow px-2 rounded-r-md font-bold outline-none dark:bg-black border border-gray-3 hocus:border-gray-2 dark:border-gray-2"
           type="number"
           value={currentAmount / 100}
-          onChange={(e) => setCurrentAmount(e.currentTarget.valueAsNumber)}
+          onChange={handleChangeAmount}
           min={0}
+          step={1}
+          aria-label="Amount to donate"
         />
       </div>
       <div className="flex gap-2 mt-2">
         {amounts[frequency][currency].map((amount) => (
-          <ToggleButton
+          <Button
             className="transition-none"
             key={amount}
-            onClick={() => setCurrentAmount(amount)}
-            selected={amount === currentAmount}
+            onClick={() => handleClickAmount(amount)}
+            dark={amount === currentAmount && !dirty}
+            aria-label={`Select ${formatter.format(amount / 100)}`}
           >
             {formatter.format(amount / 100)}
-          </ToggleButton>
+          </Button>
         ))}
       </div>
 
@@ -115,17 +133,6 @@ export function DonateWidget({
       </Button>
     </div>
   )
-}
-
-interface ToggleButtonProps extends ButtonProps {
-  selected: boolean
-  onClick: () => void
-  children: ReactNode
-  className?: string
-}
-
-function ToggleButton({ selected, ...props }: ToggleButtonProps) {
-  return <Button {...props} dark={selected} />
 }
 
 type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
