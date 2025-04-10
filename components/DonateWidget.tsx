@@ -69,7 +69,7 @@ export function DonateWidget({
           <ToggleButton
             key={freq}
             className={classNames(
-              "border first:border-r-0 first:rounded-l-full last:rounded-r-full transition-colors"
+              "border dark:border-gray-2 first:border-r-0 first:rounded-l-full last:rounded-r-full transition-colors"
             )}
             selected={freq === frequency}
             onClick={handleChangeFrequency(freq)}
@@ -80,9 +80,9 @@ export function DonateWidget({
         ))}
       </div>
 
-      <div className="flex gap-2 items-center pr-2 border rounded-lg overflow-hidden">
+      <div className="flex gap-2 items-center pr-2 border dark:border-gray-2 rounded-lg overflow-hidden">
         <select
-          className="p-2 bg-gray-3 dark:bg-gray-1 hover:bg-gray-2 hover:dark:bg-gray-0 transition-colors cursor-pointer border-r"
+          className="p-2 bg-gray-3 dark:bg-gray-1 hover:bg-gray-2 hover:dark:bg-gray-0 transition-colors cursor-pointer border-r dark:border-gray-2"
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
         >
@@ -100,7 +100,7 @@ export function DonateWidget({
       <div className="flex gap-2 mt-2">
         {amounts[frequency][currency].map((amount) => (
           <ToggleButton
-            className="border rounded-lg"
+            className="border dark:border-gray-2 dark:bg-gray-1 rounded-lg"
             key={amount}
             onClick={() => setCurrentAmount(amount)}
             selected={amount === currentAmount}
@@ -111,7 +111,7 @@ export function DonateWidget({
       </div>
 
       <button
-        className="bg-blurple-300 hover:bg-blurple-500 dark:bg-nightshade-300 dark:hover:bg-nightshade-600 p-2 text-center rounded-full mt-4 w-full border transition-colors"
+        className="bg-blurple-300 hover:bg-blurple-500 dark:bg-nightshade-300 dark:hover:bg-nightshade-600 p-2 text-center rounded-full mt-4 w-full border dark:border-gray-2 transition-colors"
         onClick={handleDonate}
       >
         {donation_button_text}
