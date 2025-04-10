@@ -11,7 +11,6 @@ import thedesk from "../public/apps/thedesk.png"
 import imast from "../public/apps/imast_icon.png"
 import sengi from "../public/apps/sengi.png"
 import sora from "../public/apps/sora.png"
-import tooot from "../public/apps/tooot.png"
 import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
 import elk from "../public/apps/elk.png"
@@ -122,15 +121,6 @@ export const apps: appsList = {
       icon: fedilab,
       url: "https://play.google.com/store/apps/details?id=app.fedilab.android",
       paid: false,
-      open: true,
-      source_url: "https://github.com/caraesten/Fedilab",
-    },
-    {
-      released_on: "Apr 16, 2021",
-      name: "tooot",
-      icon: tooot,
-      url: "https://play.google.com/store/apps/details?id=com.xmflsct.app.tooot",
-      hidden_from_all: true,
     },
     {
       released_on: "Jan 26, 2023",
@@ -201,15 +191,6 @@ export const apps: appsList = {
       name: "iMast",
       icon: imast,
       url: "https://apps.apple.com/app/imast/id1229461703",
-      open: true,
-      source_url: "https://github.com/cinderella-project/iMast",
-    },
-    {
-      released_on: "Apr 16, 2021",
-      name: "tooot",
-      icon: tooot,
-      url: "https://apps.apple.com/app/tooot/id1549772269",
-      hidden_from_all: true,
     },
     {
       released_on: "Jan 19, 2023",
@@ -328,7 +309,7 @@ export const apps: appsList = {
       name: "Bubble",
       icon: bubble,
       url: "https://apps.apple.com/app/bubble/id6477757490",
-      paid: false,
+      paid: false,,
       open: true,
       osource_url: "https://github.com/lumaa-dev/BubbleApp",
     },
@@ -351,7 +332,11 @@ export const apps: appsList = {
     { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
     { name: "Tooty", icon: tooty, url: "https://n1k0.github.io/tooty/v2/" },
     { name: "Mastodeck", icon: mastodeck, url: "https://mastodeck.com/" },
-    { name: "Sengi", icon: sengi, url: "https://nicolasconstant.github.io/sengi/" },
+    {
+      name: "Sengi",
+      icon: sengi,
+      url: "https://nicolasconstant.github.io/sengi/",
+    },
   ],
   desktop: [
     { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },

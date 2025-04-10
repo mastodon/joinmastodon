@@ -3,7 +3,10 @@ import Image from "next/legacy/image"
 import bios from "../../data/bio"
 import board from "../../data/board"
 import { withDefaultStaticProps } from "../../utils/defaultStaticProps"
-import { mapMastodonUrlToHandle, mapBoardPositionToLabel } from "../../utils/map"
+import {
+  mapMastodonUrlToHandle,
+  mapBoardPositionToLabel,
+} from "../../utils/map"
 import Layout from "../../components/Layout"
 import LogoWhite from "../../public/logos/logo-white.svg?inline"
 
@@ -11,9 +14,9 @@ const missingAvatarSrc = require("../../public/avatars/missing_avatar.png")
 
 const AboutMember = () => {
   const router = useRouter()
-  const member = board.find(member => member.slug === router.query.slug)
-  const avatarSrc = member.avatar || missingAvatarSrc;
-  const boardPositionLabel = mapBoardPositionToLabel(member.position);
+  const member = board.find((member) => member.slug === router.query.slug)
+  const avatarSrc = member.avatar || missingAvatarSrc
+  const boardPositionLabel = mapBoardPositionToLabel(member.position)
 
   return (
     <Layout transparentHeader={false}>
@@ -29,13 +32,21 @@ const AboutMember = () => {
             <div className="md:col-span-5 mb-10">
               <div className="flex flex-col text-center items-center">
                 <div className="mb-4">
-                  <Image src={avatarSrc} width="170" height="170" alt="" className="rounded-full"/>
+                  <Image
+                    src={avatarSrc}
+                    width="170"
+                    height="170"
+                    alt=""
+                    className="rounded-full"
+                  />
                 </div>
                 {member.otherTitle && (
                   <div className="b2 mt-2">{member.otherTitle}</div>
                 )}
                 <div className="b2 mt-2">
-                  {member.title ? `${boardPositionLabel}, ${member.title}` : boardPositionLabel}
+                  {member.title
+                    ? `${boardPositionLabel}, ${member.title}`
+                    : boardPositionLabel}
                 </div>
                 {member.socials && (
                   <div className="flex flex-row items-center mt-2">
@@ -55,9 +66,7 @@ const AboutMember = () => {
               </div>
             </div>
             <div className="md:col-span-7 lg:col-span-6 md:col-start-6">
-              <p className="b2">
-                {bios[member.slug]}
-              </p>
+              <p className="b2">{bios[member.slug]}</p>
             </div>
           </div>
         </div>
@@ -67,10 +76,12 @@ const AboutMember = () => {
 }
 
 export async function getStaticPaths() {
-  const paths = board.filter(member => member.slug).map((member) => ({
-    params: { slug: member.slug },
-  }))
- 
+  const paths = board
+    .filter((member) => member.slug)
+    .map((member) => ({
+      params: { slug: member.slug },
+    }))
+
   return { paths, fallback: false }
 }
 

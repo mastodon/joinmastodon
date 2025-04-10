@@ -32,7 +32,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
     },
     {
       value: "https://shop.joinmastodon.org/",
-      label: <div className="flex gap-2 items-center"><FormattedMessage id="nav.merch.title" defaultMessage="Merch" /><span className="bg-goldenrod/[0.5] text-goldenrod c2 px-1.5 rounded border border-goldenrod"><FormattedMessage id='nav.new' defaultMessage='New' /></span></div>,
+      label: <FormattedMessage id="nav.merch.title" defaultMessage="Merch" />,
     },
     {
       value: "/sponsors",
@@ -46,6 +46,11 @@ const Header = ({ transparent = true }: HeaderProps) => {
           label: <FormattedMessage id="nav.about_us.title" defaultMessage="About us" />,
           description: <FormattedMessage id="nav.about_us.description" defaultMessage="Read about our story, the team, and recent media coverage" />
         }, {
+          value: "/about#contact",
+          label: <FormattedMessage id="nav.contact.title" defaultMessage="Contact" />,
+          description: <FormattedMessage id="nav.contact.description" defaultMessage="Get in touch for press, business, legal and other inquiries" />
+        },
+        {
           value: "https://blog.joinmastodon.org/",
           label: <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />,
           description: <FormattedMessage id="nav.blog.description" defaultMessage="Get the latest news about the platform" />,

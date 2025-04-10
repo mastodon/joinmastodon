@@ -24,7 +24,7 @@ export const Layout = ({
 
   const currentLocale = router.locale
   const currentPath = router.asPath
-  const metaPreviewImage = previewImage || defaultPreviewImage;
+  const metaPreviewImage = previewImage || defaultPreviewImage
 
   return (
     <div className="mx-auto max-w-site px-6 lg:px-16">
@@ -40,7 +40,10 @@ export const Layout = ({
       <Footer />
 
       <Head>
-        <meta property="og:image" content={`${BASE_URL}${metaPreviewImage.src}`} />
+        <meta
+          property="og:image"
+          content={`${BASE_URL}${metaPreviewImage.src}`}
+        />
         <meta property="twitter:card" content="summary_large_image" />
 
         {locales

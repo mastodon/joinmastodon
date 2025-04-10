@@ -1,3 +1,4 @@
+// About
 import BasicPage from "../../components/BasicPage"
 import Head from "next/head"
 import Hero from "../../components/Hero"
@@ -313,10 +314,14 @@ const About = () => (
             </div>
 
             <div className="col-span-12 md:col-span-6">
+              <a id="contact" className="invisible block relative -top-32" />
               <h2 className="h3 mb-4">Contact us</h2>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Press inquiries:</dt>
+                <dt className="font-bold">Press and media:</dt>
+                <dd className="b3">
+                  Media requests, interviews, and press-related questions
+                </dd>
                 <dd>
                   <a
                     href="mailto:press@joinmastodon.org"
@@ -328,7 +333,56 @@ const About = () => (
               </div>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Legal inquiries:</dt>
+                <dt className="font-bold">Business hosting:</dt>
+                <dd className="b3">
+                  Supporting organisations joining Mastodon
+                </dd>
+                <dd>
+                  <a
+                    href="mailto:hosting@joinmastodon.org"
+                    className="text-blurple-500 hover:underline"
+                  >
+                    hosting@joinmastodon.org
+                  </a>
+                </dd>
+              </div>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Sponsor assistance:</dt>
+                <dd className="b3">
+                  Support for sponsor listings, donations (
+                  <Link
+                    key="sponsorship"
+                    href="/sponsors"
+                    className="text-blurple-500 hocus:underline"
+                  >
+                    sponsorship info
+                  </Link>
+                  )
+                </dd>
+                <dd>
+                  <a
+                    href="mailto:sponsorships@joinmastodon.org"
+                    className="text-blurple-500 hover:underline"
+                  >
+                    sponsorships@joinmastodon.org
+                  </a>
+                </dd>
+              </div>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Legal and trademarks:</dt>
+                <dd className="b3">
+                  Legal and compliance, trademarks (
+                  <Link
+                    key="trademark"
+                    href="/trademark"
+                    className="text-blurple-500 hocus:underline"
+                  >
+                    policy
+                  </Link>
+                  )
+                </dd>{" "}
                 <dd>
                   <a
                     href="mailto:legal@joinmastodon.org"
@@ -340,19 +394,33 @@ const About = () => (
               </div>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Trademark inquiries:</dt>
+                <dt className="font-bold">Server instance list:</dt>
+                <dd className="b3">
+                  Submissions to the server directory (
+                  <Link
+                    key="servers"
+                    href="/covenant"
+                    className="text-blurple-500 hocus:underline"
+                  >
+                    policy
+                  </Link>
+                  )
+                </dd>
                 <dd>
                   <a
-                    href="mailto:trademark@joinmastodon.org"
+                    href="mailto:servers@joinmastodon.org"
                     className="text-blurple-500 hover:underline"
                   >
-                    trademark@joinmastodon.org
+                    servers@joinmastodon.org
                   </a>
                 </dd>
               </div>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Security inquiries:</dt>
+                <dt className="font-bold">Security issue reporting:</dt>
+                <dd className="b3">
+                  For reporting security vulnerabilities or concerns
+                </dd>
                 <dd>
                   <a
                     href="mailto:security@joinmastodon.org"
@@ -364,7 +432,10 @@ const About = () => (
               </div>
 
               <div className="b1 mb-4">
-                <dt className="font-bold">Other inquiries:</dt>
+                <dt className="font-bold">Any other inquiries:</dt>
+                <dd className="b3">
+                  For general questions and all other matters
+                </dd>
                 <dd>
                   <a
                     href="mailto:hello@joinmastodon.org"

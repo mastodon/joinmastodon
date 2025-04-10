@@ -1,7 +1,8 @@
 const interviews = [
   {
     url: "https://techcrunch.com/podcast/social-media-should-be-built-on-protocols-not-platforms-says-mastodon-ceo-eugen-rochko/",
-    title: "Social media should be built on protocols, not platforms says Mastodon CEO Eugen Rochko",
+    title:
+      "Social media should be built on protocols, not platforms says Mastodon CEO Eugen Rochko",
     show: "Equity",
     date: "2025-01-15",
     icon: require("../public/press/equity.png"),

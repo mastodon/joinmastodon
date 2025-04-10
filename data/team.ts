@@ -51,6 +51,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Echo",
+    position: "Engineering (web)",
+    socials: {
+      mastodon: "https://tech.lgbt/@chaosexanima",
+    },
+  },
+
+  {
     name: "Shannon Hughes",
     position: "Engineering (iOS)",
     socials: {
@@ -81,7 +89,7 @@ const team: TeamMember[] = [
 
   {
     name: "Andy Piper",
-    position: "DevRel",
+    position: "Head of Communications",
     socials: {
       mastodon: "https://macaw.social/@andypiper",
     },

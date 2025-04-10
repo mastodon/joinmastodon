@@ -12,8 +12,8 @@ export type BoardMember = {
   avatar?: string
 }
 
-export const BOARD_POSITION_DIRECTOR = "director";
-export const BOARD_POSITION_OBSERVER = "observer";
+export const BOARD_POSITION_DIRECTOR = "director"
+export const BOARD_POSITION_OBSERVER = "observer"
 
 export const board: BoardMember[] = [
   {
@@ -21,7 +21,7 @@ export const board: BoardMember[] = [
     position: BOARD_POSITION_DIRECTOR,
     title: "Chair",
     socials: {
-      mastodon: "https://mastodon.online/@karienbez"
+      mastodon: "https://mastodon.online/@karienbez",
     },
     slug: "karien-bezuidenhout",
     avatar: require("../public/avatars/karienbez.jpg"),
@@ -31,7 +31,7 @@ export const board: BoardMember[] = [
     position: BOARD_POSITION_DIRECTOR,
     title: "Secretary",
     socials: {
-      mastodon: "https://mastodon.social/@aghavi"
+      mastodon: "https://mastodon.social/@aghavi",
     },
     slug: "amir-ghavi",
     avatar: require("../public/avatars/aghavi.jpg"),
@@ -42,7 +42,7 @@ export const board: BoardMember[] = [
     title: "Treasurer",
     otherTitle: "CFO",
     socials: {
-      mastodon: "https://mastodon.social/@mellifluousbox"
+      mastodon: "https://mastodon.social/@mellifluousbox",
     },
     slug: "felix-hlatky",
     avatar: require("../public/avatars/mellifluousbox.jpg"),
@@ -51,7 +51,7 @@ export const board: BoardMember[] = [
     name: "Esra’a Al Shafei",
     position: BOARD_POSITION_DIRECTOR,
     socials: {
-      mastodon: "https://mastodon.social/@alshafei"
+      mastodon: "https://mastodon.social/@alshafei",
     },
     slug: "esraa-al-shafei",
     avatar: require("../public/avatars/alshafei.png"),
@@ -60,7 +60,7 @@ export const board: BoardMember[] = [
     name: "Biz Stone",
     position: BOARD_POSITION_DIRECTOR,
     socials: {
-      mastodon: "https://me.dm/@biz"
+      mastodon: "https://me.dm/@biz",
     },
     slug: "biz-stone",
     avatar: require("../public/avatars/biz.jpg"),
@@ -69,16 +69,16 @@ export const board: BoardMember[] = [
     name: "Eugen Rochko",
     position: BOARD_POSITION_OBSERVER,
     socials: {
-      mastodon: "https://mastodon.social/@Gargron"
+      mastodon: "https://mastodon.social/@Gargron",
     },
   },
   {
     name: "Renaud Chaput",
     position: BOARD_POSITION_OBSERVER,
     socials: {
-      mastodon: "https://oisaur.com/@renchap"
+      mastodon: "https://oisaur.com/@renchap",
     },
-  }
+  },
 ]
 
 export default board
