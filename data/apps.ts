@@ -73,7 +73,7 @@ export type appsList = {
     /** whether the app should be hidden from all, used to avoid duplicates */
     hidden_from_all?: boolean
     /** The category label */
-    categoryLabel?: string,
+    categoryLabel?: string
     /** Whether the application is considered open, defaults to false */
     open?: boolean
     /** The link to the application's source code if known */
@@ -323,19 +323,60 @@ export const apps: appsList = {
     },
   ],
   web: [
-    { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
-    { name: "Elk", icon: elk, url: "https://elk.zone" },
-    { name: "Buffer", icon: buffer, url: "https://buffer.com" },
-    { name: "Statuzer", icon: statuzer, url: "https://statuzer.com" },
-    { name: "Fedica", icon: fedica, url: "https://fedica.com" },
-    { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
-    { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
-    { name: "Tooty", icon: tooty, url: "https://n1k0.github.io/tooty/v2/" },
-    { name: "Mastodeck", icon: mastodeck, url: "https://mastodeck.com/" },
+    {
+      name: "Pinafore",
+      icon: pinafore,
+      url: "https://pinafore.social",
+      open: true,
+      source_url: "https://github.com/nolanlawson/pinafore",
+    },
+    {
+      name: "Elk",
+      icon: elk,
+      url: "https://elk.zone",
+      open: true,
+      source_url: "https://github.com/elk-zone/elk",
+    },
+    { name: "Buffer", icon: buffer, url: "https://buffer.com", open: false },
+    {
+      name: "Statuzer",
+      icon: statuzer,
+      url: "https://statuzer.com",
+      open: false,
+    },
+    { name: "Fedica", icon: fedica, url: "https://fedica.com", open: false },
+    {
+      name: "Phanpy",
+      icon: phanpy,
+      url: "https://phanpy.social",
+      open: true,
+      source_url: "https://github.com/cheeaun/phanpy",
+    },
+    {
+      name: "Litterbox",
+      icon: litterbox,
+      url: "https://litterbox.koyu.space",
+      open: false,
+    },
+    {
+      name: "Tooty",
+      icon: tooty,
+      url: "https://n1k0.github.io/tooty/v2/",
+      open: true,
+      source_url: "https://github.com/n1k0/tooty ",
+    },
+    {
+      name: "Mastodeck",
+      icon: mastodeck,
+      url: "https://mastodeck.com/",
+      open: false,
+    },
     {
       name: "Sengi",
       icon: sengi,
       url: "https://nicolasconstant.github.io/sengi/",
+      open: true,
+      source_url: "https://github.com/NicolasConstant/sengi",
     },
   ],
   desktop: [
