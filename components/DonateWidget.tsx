@@ -69,7 +69,7 @@ export function DonateWidget({
           <ToggleButton
             key={freq}
             className={classNames(
-              "border dark:border-gray-2 first:border-r-0 first:rounded-l-full last:rounded-r-full transition-colors"
+              "rounded-none first:rounded-l-md last:rounded-r-md"
             )}
             selected={freq === frequency}
             onClick={handleChangeFrequency(freq)}
@@ -80,9 +80,9 @@ export function DonateWidget({
         ))}
       </div>
 
-      <div className="flex gap-2 items-center pr-2 border dark:border-gray-2 rounded-lg overflow-hidden">
+      <div className="flex gap-2 items-center pr-2 border border-gray-3 dark:border-gray-2 rounded-md overflow-hidden">
         <select
-          className="p-2 bg-gray-3 dark:bg-gray-1 hover:bg-gray-2 hover:dark:bg-gray-0 transition-colors cursor-pointer border-r dark:border-gray-2"
+          className="p-2 bg-gray-3 hover:bg-gray-2 transition-colors cursor-pointer font-medium"
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
         >
@@ -90,7 +90,7 @@ export function DonateWidget({
           <option value="EUR">EUR</option>
         </select>
         <input
-          className="w-full dark:bg-black"
+          className="w-full dark:bg-black font-bold"
           type="number"
           value={currentAmount / 100}
           onChange={(e) => setCurrentAmount(e.currentTarget.valueAsNumber)}
@@ -100,7 +100,7 @@ export function DonateWidget({
       <div className="flex gap-2 mt-2">
         {amounts[frequency][currency].map((amount) => (
           <ToggleButton
-            className="border dark:border-gray-2 dark:bg-gray-1 rounded-lg"
+            className="transition-none"
             key={amount}
             onClick={() => setCurrentAmount(amount)}
             selected={amount === currentAmount}
@@ -110,38 +110,45 @@ export function DonateWidget({
         ))}
       </div>
 
-      <button
-        className="bg-blurple-300 hover:bg-blurple-500 dark:bg-nightshade-300 dark:hover:bg-nightshade-600 p-2 text-center rounded-full mt-4 w-full border dark:border-gray-2 transition-colors"
-        onClick={handleDonate}
-      >
+      <Button className="mt-4" onClick={handleDonate} dark>
         {donation_button_text}
-      </button>
+      </Button>
     </div>
   )
 }
 
-interface ToggleButtonProps {
+interface ToggleButtonProps extends ButtonProps {
   selected: boolean
   onClick: () => void
   children: ReactNode
   className?: string
 }
 
-function ToggleButton({
-  selected,
-  onClick,
+function ToggleButton({ selected, ...props }: ToggleButtonProps) {
+  return <Button {...props} dark={selected} />
+}
+
+type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
+  dark?: boolean
+}
+
+function Button({
   children,
   className,
-}: ToggleButtonProps) {
+  dark = false,
+  ...props
+}: React.PropsWithChildren<ButtonProps>) {
   return (
     <button
-      onClick={onClick}
+      {...props}
       className={classNames(
-        "w-full p-2 flex gap-2 items-center justify-center",
-        selected &&
-          "bg-blurple-300 hover:bg-blurple-500 dark:bg-nightshade-300 dark:hover:bg-nightshade-600",
-        !selected && "hover:bg-gray-4 dark:hover:bg-nightshade-900",
-        className
+        className,
+        "w-full p-2 flex gap-2 items-center justify-center rounded-md",
+        "text-center font-semibold transition-colors focus:outline-none border-2",
+        !dark &&
+          "bg-white hocus:bg-blurple-600 border-blurple-500 hocus:border-blurple-600 text-blurple-500 hocus:text-white",
+        dark &&
+          "bg-blurple-500 hocus:bg-blurple-600 border-[transparent] text-white"
       )}
     >
       {children}
