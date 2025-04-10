@@ -31,7 +31,7 @@ export default function DonatePage({
     [donation_url, router]
   )
   return (
-    <div className={classNames(theme, "min-h-screen bg-white dark:bg-black")}>
+    <div className={classNames(theme, "bg-white dark:bg-black min-h-screen")}>
       <DonateWidget
         className="max-w-[400px] mx-auto"
         defaultCurrency={default_currency}
