@@ -198,7 +198,7 @@ export const apps: appsList = {
       icon: icecubes,
       url: "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
       open: true,
-      osource_url: "https://github.com/Dimillian/IceCubesApp",
+      source_url: "https://github.com/Dimillian/IceCubesApp",
     },
     {
       released_on: "Jan 31, 2023",
@@ -309,9 +309,9 @@ export const apps: appsList = {
       name: "Bubble",
       icon: bubble,
       url: "https://apps.apple.com/app/bubble/id6477757490",
-      paid: false,,
+      paid: false,
       open: true,
-      osource_url: "https://github.com/lumaa-dev/BubbleApp",
+      source_url: "https://github.com/lumaa-dev/BubbleApp",
     },
     {
       released_on: "Jan 1, 2024",
