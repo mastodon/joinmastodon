@@ -6,7 +6,7 @@ import { z } from "zod"
 
 import { fetchEndpoint } from "../../utils/api"
 import { CampaignResponse } from "../../types/api"
-import DonateWidget, { OnDonateFn } from "../../components/DonateWidget"
+import { OnDonateFn, DonateWidget } from "../../components/DonateWidget"
 import classNames from "classnames"
 
 export default function DonatePage({
@@ -41,10 +41,6 @@ export default function DonatePage({
       />
     </div>
   )
-}
-
-interface DonateSessionData {
-  seed?: number
 }
 
 type DonatePageProps = DonatePageQuery & CampaignResponse

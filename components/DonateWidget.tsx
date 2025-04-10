@@ -25,7 +25,7 @@ interface DonateWidgetProps {
   amounts: CampaignResponse["amounts"]
 }
 
-export default function DonateWidget({
+export function DonateWidget({
   className,
   messages: { donation_message, donation_button_text },
   defaultCurrency,
