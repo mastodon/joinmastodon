@@ -1,7 +1,12 @@
 import classNames from "classnames"
 import { useCallback, useState } from "react"
 import { FormattedMessage } from "react-intl"
-import { Input, Select } from "@headlessui/react"
+import {
+  Input,
+  Select,
+  Button as HeadlessButton,
+  ButtonProps as HeadlessButtonProps,
+} from "@headlessui/react"
 
 import CheckIcon from "../public/icons/check.svg?inline"
 import { useCurrencyFormatter } from "../utils/use-currency-formatter"
@@ -76,7 +81,7 @@ export function DonateWidget({
 
   return (
     <div className={classNames("p-4 dark:text-white", className)}>
-      <p>{donation_message}</p>
+      <p className="sh1">{donation_message}</p>
       <div className="flex text-center my-4">
         {frequencies.map((freq) => (
           <Button
@@ -135,7 +140,7 @@ export function DonateWidget({
   )
 }
 
-type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
+type ButtonProps = HeadlessButtonProps & {
   dark?: boolean
 }
 
@@ -146,7 +151,7 @@ function Button({
   ...props
 }: React.PropsWithChildren<ButtonProps>) {
   return (
-    <button
+    <HeadlessButton
       {...props}
       className={classNames(
         className,
@@ -159,7 +164,7 @@ function Button({
       )}
     >
       {children}
-    </button>
+    </HeadlessButton>
   )
 }
 
