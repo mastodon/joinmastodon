@@ -22,7 +22,7 @@ export function Button({
         "w-full p-2 flex gap-2 items-center justify-center rounded-md",
         "text-center font-semibold transition-colors focus:outline-none border-2",
         !dark &&
-          "bg-white hocus:bg-blurple-600 border-blurple-500 hocus:border-blurple-600 text-blurple-500 hocus:text-white",
+          "bg-white dark:bg-black hocus:bg-blurple-600 border-blurple-500 hocus:border-blurple-600 text-blurple-500 hocus:text-white",
         dark &&
           "bg-blurple-500 hocus:bg-blurple-600 border-[transparent] text-white"
       )}
