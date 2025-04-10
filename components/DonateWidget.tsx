@@ -113,7 +113,7 @@ export function DonateWidget({
 
       <div className="w-full flex items-stretch">
         <Select
-          className="p-2 rounded-l-md outline-none bg-gray-3 hocus:bg-gray-2 transition-colors cursor-pointer font-medium"
+          className="p-2 rounded-l-md outline-none bg-gray-3 hocus:bg-gray-2 dark:bg-gray-1 transition-colors cursor-pointer font-medium"
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
           aria-label="Select currency"
@@ -123,7 +123,7 @@ export function DonateWidget({
           <option value="EUR">EUR</option>
         </Select>
         <Input
-          className="grow px-2 rounded-r-md font-bold outline-none dark:bg-black border border-gray-3 hocus:border-gray-2 dark:border-gray-2"
+          className="grow px-2 rounded-r-md font-bold outline-none transition-colors dark:bg-black border border-gray-3 hocus:border-gray-2 dark:border-gray-1"
           type="number"
           value={currentAmount / 100}
           onChange={handleChangeAmount}
