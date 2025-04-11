@@ -5,17 +5,22 @@ import {
 } from "@stripe/react-stripe-js"
 import { z } from "zod"
 import { loadStripe } from "@stripe/stripe-js"
-import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
+import { useMemo } from "react"
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
+import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
 
 export default function DonateCheckoutPage({
   clientSecret,
+  stripePublicKey,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const loadStripePromise = useMemo(
+    () => loadStripe(stripePublicKey),
+    [stripePublicKey]
+  )
   return (
     <div>
       <EmbeddedCheckoutProvider
-        stripe={stripePromise}
+        stripe={loadStripePromise}
         options={{ clientSecret }}
       >
         <EmbeddedCheckout />
@@ -26,6 +31,7 @@ export default function DonateCheckoutPage({
 
 interface DonateCheckoutPageProps {
   clientSecret: string
+  stripePublicKey: string
 }
 
 const querySchema = z.object({
@@ -63,10 +69,11 @@ export const getServerSideProps: GetServerSideProps<
       return {
         props: {
           clientSecret: body.clientSecret,
+          stripePublicKey: process.env.STRIPE_PUBLIC_KEY ?? "",
         },
       }
     }
-    throw new Error("Invalid response from server")
+    throw new Error("Invalid response from server: " + JSON.stringify(body))
   } catch (error) {
     console.error("Error with checkout:", error)
     return {

@@ -20,7 +20,8 @@ export function Button({
       className={classNames(
         className,
         "w-full p-2 flex gap-2 items-center justify-center rounded-md",
-        "text-center font-semibold transition-colors focus:outline-none border-2",
+        "text-center font-semibold transition-colors focus:outline-none border-2 disabled:cursor-default",
+        "disabled:bg-gray-2 disabled:hocus:bg-gray-2 disabled:border-gray-2 disabled:hocus:border-gray-2 disabled:text-white",
         !dark &&
           "bg-white dark:bg-black hocus:bg-blurple-600 border-blurple-500 hocus:border-blurple-600 text-blurple-500 hocus:text-white",
         dark &&
