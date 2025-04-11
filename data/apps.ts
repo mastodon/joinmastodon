@@ -380,7 +380,13 @@ export const apps: appsList = {
     },
   ],
   desktop: [
-    { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
+    {
+      name: "Tokodon",
+      icon: tokodon,
+      url: "https://apps.kde.org/tokodon/",
+      open: true,
+      source_url: "https://github.com/KDE/tokodon",
+    },
     { name: "Whalebird", icon: whalebird, url: "https://whalebird.social" },
     { name: "TheDesk", icon: thedesk, url: "https://thedesk.top/en" },
     {
