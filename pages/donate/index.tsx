@@ -1,4 +1,5 @@
 import * as cookie from "cookie"
+import classNames from "classnames"
 import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/navigation"
 import { useCallback } from "react"
@@ -7,7 +8,6 @@ import { z } from "zod"
 import { fetchEndpoint } from "../../utils/api"
 import { CampaignResponse } from "../../types/api"
 import { OnDonateFn, DonateWidget } from "../../components/DonateWidget"
-import classNames from "classnames"
 
 export default function DonatePage({
   theme,
@@ -30,6 +30,7 @@ export default function DonatePage({
     },
     [donation_url, router]
   )
+
   return (
     <div className={classNames(theme, "bg-white dark:bg-black min-h-screen")}>
       <DonateWidget
@@ -58,6 +59,10 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
   req,
   res,
 }) => {
+  if (!process.env.STRIPE_PUBLIC_KEY) {
+    throw new Error("No Stripe public key set")
+  }
+
   let seed = req.cookies.seed
   if (!seed) {
     seed = Math.floor(Math.random() * 99).toString()
@@ -75,10 +80,8 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
     platform: "android",
     seed,
     source: "menu",
+    environment: "staging",
   })
-  if (process.env.NODE_ENV !== "production") {
-    queryParams.append("environment", "staging")
-  }
 
   try {
     const apiRes = await fetchEndpoint<CampaignResponse>(

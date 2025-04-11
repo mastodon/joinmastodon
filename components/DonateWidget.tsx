@@ -40,6 +40,10 @@ const messages = defineMessages({
     id: "donate_widget.frequency.yearly",
     defaultMessage: "Yearly",
   },
+  loadingCheckout: {
+    id: "donate_widget.loading_checkout",
+    defaultMessage: "Loading…",
+  },
 })
 
 export function DonateWidget({
@@ -58,6 +62,7 @@ export function DonateWidget({
     () => amounts[frequency][currency][0]
   )
   const [dirty, setDirty] = useState(false)
+  const [loadingCheckout, setLoadingCheckout] = useState(false)
 
   const formatter = useCurrencyFormatter(currency)
   const intl = useIntl()
@@ -89,6 +94,7 @@ export function DonateWidget({
   }, [])
 
   const handleDonate = useCallback(() => {
+    setLoadingCheckout(true)
     onDonate(currentAmount, frequency, currency)
   }, [currency, currentAmount, frequency, onDonate])
 
@@ -104,6 +110,7 @@ export function DonateWidget({
             )}
             dark={freq === frequency}
             onClick={handleChangeFrequency(freq)}
+            disabled={loadingCheckout}
           >
             <CheckIcon className="fill-black w-auto h-4" />
             {intl.formatMessage(messages[freq])}
@@ -113,22 +120,32 @@ export function DonateWidget({
 
       <div className="w-full flex items-stretch">
         <Select
-          className="p-2 rounded-l-md outline-none bg-gray-3 hocus:bg-gray-2 dark:bg-gray-1 transition-colors cursor-pointer font-medium"
+          className={classNames(
+            "p-2 rounded-l-md outline-none transition-colors cursor-pointer disabled:cursor-default font-medium",
+            "bg-gray-3 hocus:bg-gray-2 dark:bg-gray-1",
+            "disabled:bg-gray-3 disabled:hocus:bg-gray-3"
+          )}
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
           aria-label="Select currency"
+          disabled={loadingCheckout}
         >
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
         </Select>
         <Input
-          className="grow px-2 rounded-r-md font-bold outline-none transition-colors dark:bg-black border border-gray-3 hocus:border-gray-2 dark:border-gray-1"
+          className={classNames(
+            "grow px-2 rounded-r-md font-bold outline-none transition-colors",
+            "dark:bg-black border border-gray-3 hocus:border-gray-2 dark:border-gray-1",
+            "disabled:border-gray-3 disabled:hocus:border-gray-3"
+          )}
           type="number"
           value={currentAmount / 100}
           onChange={handleChangeAmount}
           min={0}
           step={1}
           aria-label="Amount to donate"
+          disabled={loadingCheckout}
         />
       </div>
       <div className="flex gap-2 mt-2">
@@ -139,14 +156,22 @@ export function DonateWidget({
             onClick={() => handleClickAmount(amount)}
             dark={amount === currentAmount && !dirty}
             aria-label={`Select ${formatter.format(amount / 100)}`}
+            disabled={loadingCheckout}
           >
             {formatter.format(amount / 100)}
           </Button>
         ))}
       </div>
 
-      <Button className="mt-4" onClick={handleDonate} dark>
-        {donation_button_text}
+      <Button
+        className="mt-4"
+        onClick={handleDonate}
+        dark
+        disabled={loadingCheckout}
+      >
+        {loadingCheckout
+          ? intl.formatMessage(messages.loadingCheckout)
+          : donation_button_text}
       </Button>
     </div>
   )

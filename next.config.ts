@@ -78,18 +78,32 @@ const nextConfig: NextConfig = {
           headers: [
             {
               key: "Content-Security-Policy",
+              // Policies taken from: https://docs.stripe.com/security/guide?csp=csp-js
               value: cspMapToString({
                 "default-src": ["self"],
-                "child-src": ["js.stripe.com"],
-                "img-src": ["self", "blob:", "data:"],
+                "img-src": ["self", "https://*.stripe.com"],
                 "style-src": ["self", "unsafe-inline"],
                 "script-src": [
                   "self",
-                  "unsafe-inline",
-                  "unsafe-eval",
-                  "js.stripe.com",
+                  notIfProduction("unsafe-inline"),
+                  notIfProduction("unsafe-eval"),
+                  "https://connect-js.stripe.com",
+                  "https://js.stripe.com",
+                  "https://*.js.stripe.com",
+                  "https://maps.googleapis.com",
                 ],
                 "block-all-mixed-content": [],
+                "frame-src": [
+                  "https://connect-js.stripe.com",
+                  "https://js.stripe.com",
+                  "https://*.js.stripe.com",
+                  "https://hooks.stripe.com",
+                ],
+                "connect-src": [
+                  "self",
+                  "https://api.stripe.com",
+                  "https://maps.googleapis.com",
+                ],
               }),
             },
           ],
