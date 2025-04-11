@@ -1,9 +1,5 @@
-import {
-  useQuery,
-  useQueryClient,
-  keepPreviousData,
-} from "@tanstack/react-query"
-import { useState, useEffect, useRef } from "react"
+import { useQuery, keepPreviousData } from "@tanstack/react-query"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { FormattedMessage, FormattedDate, useIntl } from "react-intl"
 import classnames from "classnames"
@@ -13,10 +9,9 @@ import { IconCard } from "../components/IconCard"
 import SelectMenu from "../components/SelectMenu"
 import Statistic from "../components/Statistic"
 import { categoriesMessages } from "../data/categories"
-import type { Server, Category, Language, Day, Region } from "../types/api"
+import type { Day, Category, Language, Region, Server } from "../types/api"
 import Hero from "../components/Hero"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
-import { formatNumber } from "../utils/numbers"
 import { fetchEndpoint } from "../utils/api"
 
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
@@ -27,8 +22,6 @@ import SkeletonText from "../components/SkeletonText"
 import Head from "next/head"
 import Layout from "../components/Layout"
 import Link from "next/link"
-
-const DUNBAR = Math.log(800)
 
 const Servers = () => {
   const intl = useIntl()
@@ -49,13 +42,13 @@ const Servers = () => {
 
   const allCategories = useQuery({
     queryKey: ["categories", ""],
-    queryFn: () => fetchEndpoint("categories"),
+    queryFn: () => fetchEndpoint<Category[]>("categories"),
     select: (data) => _orderBy(data, "servers_count", "desc"),
   })
 
   const apiCategories = useQuery({
     queryKey: ["categories", filters.language],
-    queryFn: () => fetchEndpoint("categories", params),
+    queryFn: () => fetchEndpoint<Category[]>("categories", params),
     ...queryOptions,
     placeholderData: keepPreviousData,
 
@@ -135,7 +128,7 @@ const Servers = () => {
 
   const apiLanguages = useQuery({
     queryKey: ["languages", filters.category],
-    queryFn: () => fetchEndpoint("languages", params),
+    queryFn: () => fetchEndpoint<Language[]>("languages", params),
     ...queryOptions,
 
     select: (data) => {
@@ -161,13 +154,13 @@ const Servers = () => {
       filters.region,
     ],
 
-    queryFn: () => fetchEndpoint("servers", params),
+    queryFn: () => fetchEndpoint<Server[]>("servers", params),
     ...queryOptions,
   })
 
   const days = useQuery({
     queryKey: ["statistics"],
-    queryFn: () => fetchEndpoint("statistics"),
+    queryFn: () => fetchEndpoint<Day[]>("statistics"),
     ...queryOptions,
   })
 
