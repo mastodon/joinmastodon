@@ -37,7 +37,7 @@ const AppsPage = () => {
                 <p className="sh1">
                   <FormattedMessage
                     id="apps.lead"
-                    defaultMessage="The best way to get started with Mastodon is through our official apps for iOS and Android, but many third-party apps are also available below."
+                    defaultMessage="The best way to get started with Mastodon is through our official iOS and Android apps, but many third-party apps are also available below."
                   />
                 </p>
               </div>
@@ -48,10 +48,10 @@ const AppsPage = () => {
 
       <div className="grid justify-center gap-x-gutter gap-y-16 pt-10 pb-8 text-center md:grid-cols-12 md:text-start">
         <div className="md:col-span-6 lg:col-span-5 xl:col-span-4 xl:col-start-2">
-          <h2 className="h4 mb-4">
+          <h2 className="h4 text-center mb-4">
             <FormattedMessage
               id="ios_and_android.download"
-              defaultMessage="Download the apps"
+              defaultMessage="Official apps"
             />
           </h2>
 
