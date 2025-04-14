@@ -64,7 +64,7 @@ const Verification = () => {
             <LinkButton size="large" href="/apps">
               <FormattedMessage
                 id="home.get_the_app"
-                defaultMessage="Get the app"
+                defaultMessage="Get an app"
               />
             </LinkButton>
 
