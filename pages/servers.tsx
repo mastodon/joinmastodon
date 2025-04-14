@@ -244,7 +244,7 @@ const Servers = () => {
       <div className="grid gap-20 pb-40">
         <GettingStartedCards />
         <div className="grid grid-cols-4 gap-gutter md:grid-cols-12">
-          <div className="col-span-full mb-4 flex flex-wrap gap-gutter md:mb-2 md:justify-end">
+          <div className="col-span-full mb-4 flex flex-col sm:flex-row gap-gutter md:mb-2 md:justify-end">
             <SelectMenu
               label={
                 <FormattedMessage
