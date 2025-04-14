@@ -2723,22 +2723,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-devtools@npm:5.72.1":
-  version: 5.72.1
-  resolution: "@tanstack/query-devtools@npm:5.72.1"
-  checksum: 10c0/7946f12f08124456f5e81ebfd610bc122c85bfd9bc96783f4b23eed06a72816567cf735fad9a8617da0a8b850c31efa12b0f10917d971572763e182b0e080529
+"@tanstack/query-devtools@npm:5.73.3":
+  version: 5.73.3
+  resolution: "@tanstack/query-devtools@npm:5.73.3"
+  checksum: 10c0/9a38a663626947d3b19f91aa6c80282c49dabc28ee5f51599c3fcca9567b10d57c1002e7e1c6f7fec7f16aa4cd721ddd79f0ea33357cfbdc685cb441a371594c
   languageName: node
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.72.1":
-  version: 5.72.1
-  resolution: "@tanstack/react-query-devtools@npm:5.72.1"
+  version: 5.74.0
+  resolution: "@tanstack/react-query-devtools@npm:5.74.0"
   dependencies:
-    "@tanstack/query-devtools": "npm:5.72.1"
+    "@tanstack/query-devtools": "npm:5.73.3"
   peerDependencies:
-    "@tanstack/react-query": ^5.72.1
+    "@tanstack/react-query": ^5.74.0
     react: ^18 || ^19
-  checksum: 10c0/660f1c2dd14670e86fb1a8c95d4fe254d541041e2d03e1439e9ca5f897185d854bf14b816ab0ccd8a24662a6caaef654a3cb54ef3c0ca121981c2b991e56fe24
+  checksum: 10c0/aae45a7bf1d212ebfb017554cd15d4e8618590e080a0732daa4f42e63e164264daf5fdab60a96f824fb20238a670ab2176fdd375d6b6f4110cd03700c624fd48
   languageName: node
   linkType: hard
 
@@ -6187,8 +6187,8 @@ __metadata:
   linkType: hard
 
 "lint-staged@npm:^15.5.0":
-  version: 15.5.0
-  resolution: "lint-staged@npm:15.5.0"
+  version: 15.5.1
+  resolution: "lint-staged@npm:15.5.1"
   dependencies:
     chalk: "npm:^5.4.1"
     commander: "npm:^13.1.0"
@@ -6202,7 +6202,7 @@ __metadata:
     yaml: "npm:^2.7.0"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c0/393b24d85d705a36e6556dc9d9b710594163be60f7789a2ca71bbf8f31debc10f7fde9cd0e868466ac2b7c154661983602decd7abbb6c685b21007bc70dbbdd6
+  checksum: 10c0/86deddb08bf10428f2eb96c02326a9ee403360729225f0b12afb0c0f13c287a75daa01e179d86f64e3432576446d8643d204a47417296f9ef0aa56f1340ff2af
   languageName: node
   linkType: hard
 
