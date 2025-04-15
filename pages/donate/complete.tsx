@@ -14,7 +14,7 @@ export default function DonateCompletePage() {
   }
 
   return (
-    <div className="flex flex-col p-4 gap-2">
+    <div className="flex flex-col p-8 gap-2">
       <h1 className="sh1">
         <FormattedMessage
           id="donate.success.header"
