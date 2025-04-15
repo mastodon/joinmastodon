@@ -1,13 +1,16 @@
 import Head from "next/head"
 import Image from "next/legacy/image"
 import classNames from "classnames"
+import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
+
 import Hero from "../components/Hero"
 import SponsorCard from "../components/SponsorCard"
 import SponsorLogoGroup from "../components/SponsorLogoGroup"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import sponsors from "../data/sponsors"
 import sponsorData from "../data/sponsors"
+import { DonatePopup } from "../donate/DonatePopup"
 import Layout from "../components/Layout"
 import LinkButton from "../components/LinkButton"
 
@@ -15,10 +18,8 @@ import MastodonInTheCloudsIllustration from "../public/illustrations/mastodon_in
 import MastodonWithLaptopIllustration from "../public/illustrations/mastodon_with_laptop.png"
 import MasotodonFediverseIllustration from "../public/illustrations/mastodon_fediverse.png"
 import MastodonsCheeringIllustration from "../public/illustrations/mastodons_cheering.png"
-
 import previewImage from "../public/sponsors_preview.png"
 import usFlagIcon from "../public/united_states_flag_icon_round.svg"
-import Link from "next/link"
 
 interface DonateCardProps {
   title: React.ReactNode
@@ -83,12 +84,12 @@ function Sponsors() {
           />
         </p>
         <div className="flex gap-6">
-          <LinkButton size="large" href="#donate">
+          <DonatePopup size="large" dark>
             <FormattedMessage
               id="sponsors.hero.cta.donate"
               defaultMessage="Donate"
             />
-          </LinkButton>
+          </DonatePopup>
           <LinkButton size="large" light borderless href="#supported_by">
             <FormattedMessage
               id="sponsors.hero.cta.view_sponsors"

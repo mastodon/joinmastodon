@@ -58,7 +58,7 @@ const nextConfig: NextConfig = {
               key: "Content-Security-Policy",
               value: cspMapToString({
                 "default-src": ["self"],
-                "child-src": ["none"],
+                "child-src": ["self"],
                 "object-src": ["none"],
                 "img-src": ["self", "proxy.joinmastodon.org", "blob:", "data:"],
                 "style-src": ["self", "unsafe-inline"],

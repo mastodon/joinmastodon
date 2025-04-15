@@ -3,6 +3,7 @@ import { useCallback, useState } from "react"
 import { defineMessages, useIntl } from "react-intl"
 import { Input, Select } from "@headlessui/react"
 
+import { sendMessage } from "../donate/utils"
 import CheckIcon from "../public/icons/check.svg?inline"
 import { useCurrencyFormatter } from "../utils/use-currency-formatter"
 import { Button } from "./Button"
@@ -96,6 +97,7 @@ export function DonateWidget({
   const handleDonate = useCallback(() => {
     setLoadingCheckout(true)
     onDonate(currentAmount, frequency, currency)
+    sendMessage("checkout-start")
   }, [currency, currentAmount, frequency, onDonate])
 
   return (
@@ -111,6 +113,7 @@ export function DonateWidget({
             dark={freq === frequency}
             onClick={handleChangeFrequency(freq)}
             disabled={loadingCheckout}
+            fullWidth
           >
             <CheckIcon className="fill-black w-auto h-4" />
             {intl.formatMessage(messages[freq])}
@@ -157,6 +160,7 @@ export function DonateWidget({
             dark={amount === currentAmount && !dirty}
             aria-label={`Select ${formatter.format(amount / 100)}`}
             disabled={loadingCheckout}
+            fullWidth
           >
             {formatter.format(amount / 100)}
           </Button>
@@ -168,6 +172,7 @@ export function DonateWidget({
         onClick={handleDonate}
         dark
         disabled={loadingCheckout}
+        fullWidth
       >
         {loadingCheckout
           ? intl.formatMessage(messages.loadingCheckout)

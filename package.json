@@ -49,6 +49,7 @@
     "@types/lodash": "^4.17.16",
     "@types/node": "^22.15.6",
     "@types/react": "18.3.23",
+    "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.32.0",
     "autoprefixer": "^10.4.21",
