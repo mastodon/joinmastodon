@@ -14,7 +14,7 @@ export type AppCardProps = {
  * Renders a card with app data.
  * Layout (width, height, positioning) can be set from the parent.
  */
-export const AppCard = ({ name, icon, url, paid, category, categoryLabel }) => {
+export const AppCard = ({ name, icon, url, paid, category, categoryLabel, open }) => {
   return (
     <a
       key={`${url} ${name}`}
@@ -34,6 +34,7 @@ export const AppCard = ({ name, icon, url, paid, category, categoryLabel }) => {
           ) : (
             <FormattedMessage id="apps.free" defaultMessage="Free" />
           )}
+          {open ? <>, <FormattedMessage id="apps.open" defaultMessage="Open" /></> : null}
         </span>
         <h3 className="b1 !font-700 flex flex-auto items-center !leading-[1] rtl:text-right">
           <span dir="ltr">{name}</span>

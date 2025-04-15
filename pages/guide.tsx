@@ -232,6 +232,8 @@ function Guide(props) {
                 icon: tusky,
                 url: "https://play.google.com/store/apps/details?id=com.keylesspalace.tusky",
                 paid: false,
+                open: true,
+                source_url: "https://github.com/tuskyapp/Tusky",
                 category: "android",
                 categoryLabel: intl.formatMessage({
                   id: "browse_apps.android",

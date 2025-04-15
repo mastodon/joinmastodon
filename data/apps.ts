@@ -74,6 +74,10 @@ export type appsList = {
     hidden_from_all?: boolean
     /** The category label */
     categoryLabel?: string
+    /** Whether the application is considered open, defaults to false */
+    open?: boolean
+    /** The link to the application's source code if known */
+    source_url?: string
   }[]
 }
 export const apps: appsList = {
@@ -84,6 +88,7 @@ export const apps: appsList = {
       icon: rodent,
       url: "https://play.google.com/store/apps/details?id=social.rodent",
       paid: false,
+      open: false,
     },
     {
       released_on: "May 21, 2023",
@@ -91,18 +96,24 @@ export const apps: appsList = {
       icon: focus,
       url: "https://play.google.com/store/apps/details?id=allen.town.focus.mastodon",
       paid: false,
+      open: true,
+      source_url: "https://github.com/allentown521/FocusMastodon",
     },
     {
       released_on: "Mar 15, 2017",
       name: "Tusky",
       icon: tusky,
       url: "https://play.google.com/store/apps/details?id=com.keylesspalace.tusky",
+      open: true,
+      source_url: "https://github.com/tuskyapp/Tusky",
     },
     {
       released_on: "Apr 23, 2017",
       name: "Subway Tooter",
       icon: subwayTooter,
       url: "https://play.google.com/store/apps/details?id=jp.juggler.subwaytooter",
+      open: true,
+      source_url: "https://github.com/tateisu/SubwayTooter",
     },
     {
       released_on: "May 18, 2019",
@@ -125,6 +136,8 @@ export const apps: appsList = {
       icon: moshidon,
       url: "https://play.google.com/store/apps/details?id=org.joinmastodon.android.moshinda",
       paid: false,
+      open: true,
+      source_url: "https://github.com/LucasGGamerM/moshidon",
     },
     {
       released_on: "Jan 31, 2023",
@@ -139,6 +152,7 @@ export const apps: appsList = {
       icon: zonepane,
       url: "https://play.google.com/store/apps/details?id=com.zonepane",
       paid: false,
+      open: false,
     },
     {
       released_on: "Sep 6, 2023",
@@ -146,6 +160,8 @@ export const apps: appsList = {
       icon: pachli,
       url: "https://play.google.com/store/apps/details?id=app.pachli",
       paid: false,
+      open: true,
+      source_url: "https://github.com/pachli/pachli-android",
     },
     {
       released_on: "Aug 1, 2024",
@@ -153,6 +169,7 @@ export const apps: appsList = {
       icon: fread,
       url: "https://play.google.com/store/apps/details?id=com.zhangke.fread",
       paid: false,
+      open: false,
     },
   ],
   ios: [
@@ -161,12 +178,14 @@ export const apps: appsList = {
       icon: toot,
       url: "https://apps.apple.com/app/toot/id1229021451",
       paid: true,
+      open: false,
     },
     {
       name: "Mast",
       icon: mast,
       url: "https://apps.apple.com/app/mast-for-mastodon/id1437429129",
       paid: true,
+      open: false,
     },
     {
       name: "iMast",
@@ -178,6 +197,8 @@ export const apps: appsList = {
       name: "Ice Cubes",
       icon: icecubes,
       url: "https://apps.apple.com/app/ice-cubes-for-mastodon/id6444915884",
+      open: true,
+      source_url: "https://github.com/Dimillian/IceCubesApp",
     },
     {
       released_on: "Jan 31, 2023",
@@ -192,6 +213,7 @@ export const apps: appsList = {
       icon: ivory,
       url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
       paid: true,
+      open: false,
     },
     {
       released_on: "Mar 24, 2023",
@@ -199,6 +221,7 @@ export const apps: appsList = {
       icon: woolly,
       url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
       paid: true,
+      open: false,
     },
     {
       released_on: "Mar 27, 2023",
@@ -206,6 +229,7 @@ export const apps: appsList = {
       icon: dawn,
       url: "https://apps.apple.com/app/nightfox-dawn/id1668645019",
       paid: true,
+      open: false,
     },
     {
       released_on: "May 1, 2023",
@@ -213,6 +237,7 @@ export const apps: appsList = {
       icon: mona,
       url: "https://apps.apple.com/app/id1659154653",
       paid: true,
+      open: false,
     },
     {
       released_on: "Jun 19, 2023",
@@ -220,6 +245,7 @@ export const apps: appsList = {
       icon: radiant,
       url: "https://apps.apple.com/app/id6444323022",
       paid: true,
+      open: false,
     },
     {
       released_on: "Jan 26, 2023",
@@ -235,6 +261,8 @@ export const apps: appsList = {
       icon: tootdesk,
       url: "https://apps.apple.com/app/tootdesk/id1591748028",
       paid: false,
+      open: true,
+      source_url: "https://github.com/cutls/TootDesk",
     },
     {
       released_on: "Aug 4, 2023",
@@ -242,6 +270,7 @@ export const apps: appsList = {
       icon: stomp,
       url: "https://apps.apple.com/app/stomp-for-mastodon/id1670866247",
       paid: true,
+      open: false,
     },
     {
       released_on: "Jun 22, 2023",
@@ -249,6 +278,7 @@ export const apps: appsList = {
       icon: feather,
       url: "https://apps.apple.com/app/feather-for-mastodon/id6446263061",
       paid: false,
+      open: false,
     },
     {
       released_on: "Aug 10, 2023",
@@ -256,6 +286,7 @@ export const apps: appsList = {
       icon: sora,
       url: "https://apps.apple.com/app/sora-for-mastodon-bluesky/id6450969760?platform=iphone",
       paid: false,
+      open: false,
     },
     {
       released_on: "Nov 7, 2023",
@@ -263,6 +294,7 @@ export const apps: appsList = {
       icon: pipilo,
       url: "https://apps.apple.com/app/pipilo/id1584544719",
       paid: true,
+      open: false,
     },
     {
       released_on: "Jun 3, 2024",
@@ -270,6 +302,7 @@ export const apps: appsList = {
       icon: oxpecker,
       url: "https://apps.apple.com/app/oxpecker-for-mastodon/id6474893905?platform=appleWatch",
       paid: true,
+      open: false,
     },
     {
       released_on: "July 10th, 2024",
@@ -277,6 +310,8 @@ export const apps: appsList = {
       icon: bubble,
       url: "https://apps.apple.com/app/bubble/id6477757490",
       paid: false,
+      open: true,
+      source_url: "https://github.com/lumaa-dev/BubbleApp",
     },
     {
       released_on: "Jan 1, 2024",
@@ -284,28 +319,88 @@ export const apps: appsList = {
       icon: odous,
       url: "https://apps.apple.com/us/app/id6446084064",
       paid: true,
+      open: false,
     },
   ],
   web: [
-    { name: "Pinafore", icon: pinafore, url: "https://pinafore.social" },
-    { name: "Elk", icon: elk, url: "https://elk.zone" },
-    { name: "Buffer", icon: buffer, url: "https://buffer.com" },
-    { name: "Statuzer", icon: statuzer, url: "https://statuzer.com" },
-    { name: "Fedica", icon: fedica, url: "https://fedica.com" },
-    { name: "Phanpy", icon: phanpy, url: "https://phanpy.social" },
-    { name: "Litterbox", icon: litterbox, url: "https://litterbox.koyu.space" },
-    { name: "Tooty", icon: tooty, url: "https://n1k0.github.io/tooty/v2/" },
-    { name: "Mastodeck", icon: mastodeck, url: "https://mastodeck.com/" },
+    {
+      name: "Pinafore",
+      icon: pinafore,
+      url: "https://pinafore.social",
+      open: true,
+      source_url: "https://github.com/nolanlawson/pinafore",
+    },
+    {
+      name: "Elk",
+      icon: elk,
+      url: "https://elk.zone",
+      open: true,
+      source_url: "https://github.com/elk-zone/elk",
+    },
+    { name: "Buffer", icon: buffer, url: "https://buffer.com", open: false },
+    {
+      name: "Statuzer",
+      icon: statuzer,
+      url: "https://statuzer.com",
+      open: false,
+    },
+    { name: "Fedica", icon: fedica, url: "https://fedica.com", open: false },
+    {
+      name: "Phanpy",
+      icon: phanpy,
+      url: "https://phanpy.social",
+      open: true,
+      source_url: "https://github.com/cheeaun/phanpy",
+    },
+    {
+      name: "Litterbox",
+      icon: litterbox,
+      url: "https://litterbox.koyu.space",
+      open: false,
+    },
+    {
+      name: "Tooty",
+      icon: tooty,
+      url: "https://n1k0.github.io/tooty/v2/",
+      open: true,
+      source_url: "https://github.com/n1k0/tooty ",
+    },
+    {
+      name: "Mastodeck",
+      icon: mastodeck,
+      url: "https://mastodeck.com/",
+      open: false,
+    },
     {
       name: "Sengi",
       icon: sengi,
       url: "https://nicolasconstant.github.io/sengi/",
+      open: true,
+      source_url: "https://github.com/NicolasConstant/sengi",
     },
   ],
   desktop: [
-    { name: "Tokodon", icon: tokodon, url: "https://apps.kde.org/tokodon/" },
-    { name: "Whalebird", icon: whalebird, url: "https://whalebird.social" },
-    { name: "TheDesk", icon: thedesk, url: "https://thedesk.top/en" },
+    {
+      name: "Tokodon",
+      icon: tokodon,
+      url: "https://apps.kde.org/tokodon/",
+      open: true,
+      source_url: "https://github.com/KDE/tokodon",
+    },
+    {
+      name: "Whalebird",
+      icon: whalebird,
+      url: "https://whalebird.social",
+      open: true,
+      source_url: "https://github.com/h3poteto/whalebird-desktop",
+    },
+    {
+      name: "TheDesk",
+      icon: thedesk,
+      url: "https://thedesk.top/en",
+      open: true,
+      source_url: "https://github.com/cutls/thedesk-next",
+    },
     {
       name: "Mast",
       icon: mast,
@@ -324,6 +419,8 @@ export const apps: appsList = {
       name: "Mastonaut",
       icon: mastonaut,
       url: "https://apps.apple.com/app/mastonaut/id1450757574",
+      open: true,
+      source_url: "https://github.com/chucker/Mastonaut",
     },
     {
       name: "Sengi",
@@ -335,12 +432,16 @@ export const apps: appsList = {
       name: "Bitlbee-Mastodon",
       icon: bitlbee,
       url: "https://alexschroeder.ch/cgit/bitlbee-mastodon/about/",
+      open: true,
+      source_url: "https://src.alexschroeder.ch/bitlbee-mastodon.git/",
     },
     {
       released_on: "Mar 23, 2023",
       name: "Tuba",
       icon: tuba,
       url: "https://tuba.geopjr.dev/",
+      open: true,
+      source_url: "https://github.com/GeopJr/Tuba",
     },
     {
       released_on: "May 1, 2023",
@@ -349,12 +450,15 @@ export const apps: appsList = {
       url: "https://apps.apple.com/app/id1659154653",
       paid: true,
       hidden_from_all: true,
+      open: false,
     },
     {
       released_on: "Aug 10, 2021",
       name: "TootRain",
       icon: tootrain,
       url: "https://apps.apple.com/app/id1579538917",
+      open: true,
+      source_url: "https://github.com/b123400/TootRain",
     },
     {
       released_on: "Mar 1, 2023",
@@ -362,6 +466,8 @@ export const apps: appsList = {
       icon: fedistar,
       url: "https://fedistar.net",
       paid: false,
+      open: true,
+      source_url: "https://github.com/h3poteto/fedistar",
     },
     {
       released_on: "May 23, 2023",
@@ -377,6 +483,7 @@ export const apps: appsList = {
       icon: dowstodon,
       url: "https://www.microsoft.com/store/productId/9PHNV45JVR2S",
       paid: false,
+      open: false,
     },
   ],
   retro: [
@@ -385,48 +492,57 @@ export const apps: appsList = {
       name: "Amidon",
       icon: amidon,
       url: "https://github.com/BlitterStudio/amidon",
+      open: true,
     },
     {
       released_on: "Feb 5, 2023",
       name: "BREXXTODON",
       icon: brexxtodon,
       url: "https://github.com/mainframed/BREXXTODON",
+      open: true,
     },
     {
       released_on: "Nov 14, 2022",
       name: "DOStodon",
       icon: dostodon,
       url: "https://github.com/SuperIlu/DOStodon",
+      open: true,
     },
     {
       released_on: "Nov 20, 2022",
       name: "Macstodon",
       icon: macstodon,
       url: "https://github.com/smallsco/macstodon",
+      open: true,
     },
     {
       released_on: "Apr 14, 2023",
       name: "Masto9",
       icon: mastonine,
       url: "https://sr.ht/~julienxx/Masto9/",
+      open: true,
     },
     {
       released_on: "Mar 6, 2023",
       name: "Mastodon for Apple II",
       icon: mastodonforappleii,
       url: "https://www.colino.net/wordpress/en/binary-release-of-mastodon-for-the-apple-c/",
+      open: true,
+      source_url: "https://github.com/colinleroy/a2tools/",
     },
     {
       released_on: "Nov 20, 2022",
       name: "Mastodon 3.11 for Workgroups",
       icon: mastodonforworkgroups,
       url: "https://github.com/meyskens/mastodon-for-workgroups",
+      open: true,
     },
     {
       released_on: "Sep 12, 2023",
       name: "Heffalump",
       icon: heffalump,
       url: "https://github.com/knickish/heffalump",
+      open: true,
     },
     {
       released_on: "Sep 17, 2023",
@@ -434,6 +550,7 @@ export const apps: appsList = {
       icon: mostodon,
       url: "https://github.com/Havoc6502/MOStodon",
       paid: false,
+      open: true,
     },
     {
       released_on: "Jan 06, 2018",
@@ -441,6 +558,8 @@ export const apps: appsList = {
       icon: brutaldon,
       url: "https://brutaldon.org",
       paid: false,
+      open: true,
+      source_url: "https://gitlab.com/brutaldon/brutaldon",
     },
   ],
 }
