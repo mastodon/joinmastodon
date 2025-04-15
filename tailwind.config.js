@@ -10,7 +10,9 @@ const config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./donate/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "selector",
   theme: {
     fontSize: {
       h1: rem(68),
