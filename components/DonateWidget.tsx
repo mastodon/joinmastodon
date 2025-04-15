@@ -101,7 +101,7 @@ export function DonateWidget({
   }, [currency, currentAmount, frequency, onDonate])
 
   return (
-    <div className={classNames("p-4 dark:text-white", className)}>
+    <div className={classNames("dark:text-white", className)}>
       <p className="sh1">{donation_message}</p>
       <div className="flex text-center my-4">
         {frequencies.map((freq) => (

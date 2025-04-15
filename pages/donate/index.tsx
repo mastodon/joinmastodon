@@ -35,9 +35,10 @@ export default function DonatePage({
   usePopupSizer()
 
   return (
-    <div className={classNames(theme, "bg-white dark:bg-black min-h-screen")}>
+    <div
+      className={classNames(theme, "bg-white dark:bg-black min-h-screen p-8")}
+    >
       <DonateWidget
-        className="max-w-[400px] mx-auto"
         defaultCurrency={default_currency}
         messages={{ donation_message, donation_button_text }}
         amounts={amounts}
