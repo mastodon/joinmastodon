@@ -8,8 +8,10 @@ import {
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react"
 import classNames from "classnames"
 
-import { isPopupMessage, isPopupResizeMessage } from "./utils"
 import { Button, ButtonProps } from "../components/Button"
+import CloseIcon from "../public/icons/close.svg?inline"
+import LoadingIcon from "../public/icons/loading.svg?inline"
+import { isPopupMessage, isPopupResizeMessage } from "./utils"
 
 import type { Step } from "./types"
 
@@ -47,7 +49,7 @@ export function DonatePopup({
           setCurrentStep("checkout")
           break
         }
-        case "checkout-complete": {
+        case "close": {
           handleClose()
           break
         }
@@ -80,7 +82,8 @@ export function DonatePopup({
             className={classNames(
               "w-full bg-white rounded-md overflow-hidden flex items-center justify-center transition-all relative",
               currentStep === "loading" && "p-4 min-h-40 max-w-md",
-              currentStep === "choose" && "max-w-md",
+              (currentStep === "choose" || currentStep === "complete") &&
+                "max-w-md",
               currentStep === "checkout" && "max-w-5xl"
             )}
           >
@@ -94,16 +97,19 @@ export function DonatePopup({
               onLoad={handleIframeLoad}
             ></iframe>
             {currentStep === "loading" && (
-              <p className="text-center">Loading...</p>
+              <p className="flex gap-2 items-center justify-center text-gray-2">
+                <LoadingIcon className="motion-safe:animate-spin size-5" />
+                <span>Loading&hellip;</span>
+              </p>
             )}
             <button
               className={classNames(
                 "absolute top-2 right-2",
-                currentStep === "checkout" && "text-white"
+                currentStep === "checkout" ? "text-white" : "text-gray-2"
               )}
               onClick={handleClose}
             >
-              x
+              <CloseIcon className="size-5" />
             </button>
           </DialogPanel>
         </div>
