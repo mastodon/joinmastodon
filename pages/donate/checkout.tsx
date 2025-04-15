@@ -5,8 +5,9 @@ import {
 } from "@stripe/react-stripe-js"
 import { z } from "zod"
 import { loadStripe } from "@stripe/stripe-js"
-import { useMemo } from "react"
+import { useEffect, useMemo } from "react"
 
+import { sendMessage, usePopupSizer } from "../../donate/utils"
 import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
 
 export default function DonateCheckoutPage({
@@ -17,15 +18,22 @@ export default function DonateCheckoutPage({
     () => loadStripe(stripePublicKey),
     [stripePublicKey]
   )
+
+  useEffect(() => {
+    sendMessage("checkout-loaded")
+  }, [])
+  usePopupSizer()
+
   return (
-    <div>
-      <EmbeddedCheckoutProvider
-        stripe={loadStripePromise}
-        options={{ clientSecret }}
-      >
-        <EmbeddedCheckout />
-      </EmbeddedCheckoutProvider>
-    </div>
+    <EmbeddedCheckoutProvider
+      stripe={loadStripePromise}
+      options={{
+        clientSecret,
+        onComplete: () => sendMessage("checkout-complete"),
+      }}
+    >
+      <EmbeddedCheckout />
+    </EmbeddedCheckoutProvider>
   )
 }
 

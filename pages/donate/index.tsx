@@ -5,9 +5,10 @@ import { useRouter } from "next/navigation"
 import { useCallback } from "react"
 import { z } from "zod"
 
-import { fetchEndpoint } from "../../utils/api"
-import { CampaignResponse } from "../../types/api"
+import { usePopupSizer } from "../../donate/utils"
 import { OnDonateFn, DonateWidget } from "../../components/DonateWidget"
+import { CampaignResponse } from "../../types/api"
+import { fetchEndpoint } from "../../utils/api"
 
 export default function DonatePage({
   theme,
@@ -30,6 +31,8 @@ export default function DonatePage({
     },
     [donation_url, router]
   )
+
+  usePopupSizer()
 
   return (
     <div className={classNames(theme, "bg-white dark:bg-black min-h-screen")}>
