@@ -9,6 +9,7 @@ import { useEffect, useMemo } from "react"
 
 import { sendMessage, usePopupSizer } from "../../donate/utils"
 import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
+import { useRouter } from "next/navigation"
 
 export default function DonateCheckoutPage({
   clientSecret,
@@ -18,6 +19,7 @@ export default function DonateCheckoutPage({
     () => loadStripe(stripePublicKey),
     [stripePublicKey]
   )
+  const router = useRouter()
 
   useEffect(() => {
     sendMessage("checkout-loaded")
@@ -29,7 +31,7 @@ export default function DonateCheckoutPage({
       stripe={loadStripePromise}
       options={{
         clientSecret,
-        onComplete: () => sendMessage("checkout-complete"),
+        onComplete: () => router.push("/donate/complete"),
       }}
     >
       <EmbeddedCheckout />
