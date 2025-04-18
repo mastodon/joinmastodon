@@ -32,6 +32,7 @@ import tootdesk from "../public/apps/tootdesk.png"
 import tooty from "../public/apps/tooty.png"
 import moshidon from "../public/apps/moshidon.png"
 import litterbox from "../public/apps/litterbox.png"
+import lmst from "../public/apps/lmst.png"
 import zonepane from "../public/apps/zonepane.png"
 import fedistar from "../public/apps/fedistar.png"
 import amidon from "../public/apps/amidon.png"
@@ -357,6 +358,13 @@ export const apps: appsList = {
       icon: litterbox,
       url: "https://litterbox.koyu.space",
       open: false,
+    },
+    {
+      name: "Lmst",
+      icon: lmst,
+      url: "https://lmst.online",
+      open: true,
+      source_url: "https://github.com/cyevgeniy/lmst",
     },
     {
       name: "Tooty",
