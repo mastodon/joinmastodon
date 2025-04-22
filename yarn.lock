@@ -1590,8 +1590,8 @@ __metadata:
   linkType: hard
 
 "@formatjs/cli@npm:^6.2.12":
-  version: 6.6.3
-  resolution: "@formatjs/cli@npm:6.6.3"
+  version: 6.6.4
+  resolution: "@formatjs/cli@npm:6.6.4"
   peerDependencies:
     "@glimmer/env": ^0.1.7
     "@glimmer/reference": ^0.94.0
@@ -1620,7 +1620,7 @@ __metadata:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: 10c0/8083088619946b541f1ea3913d7e30c721b810e7ae6149ed7be4403bec44872dee0b78407bee1376328b04346e3cec31df6d0232a57d9d8f6a818e5d9e538ef6
+  checksum: 10c0/983dd5cd8d8db18953561a74146809d4212d4ca6e40e8282a51223c6db70a2311a58ef67150dcbd75e2760dda978907a6062fcdbfc955f0de3fce68a598bdcd5
   languageName: node
   linkType: hard
 
@@ -2539,22 +2539,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-devtools@npm:5.73.3":
-  version: 5.73.3
-  resolution: "@tanstack/query-devtools@npm:5.73.3"
-  checksum: 10c0/9a38a663626947d3b19f91aa6c80282c49dabc28ee5f51599c3fcca9567b10d57c1002e7e1c6f7fec7f16aa4cd721ddd79f0ea33357cfbdc685cb441a371594c
+"@tanstack/query-devtools@npm:5.74.6":
+  version: 5.74.6
+  resolution: "@tanstack/query-devtools@npm:5.74.6"
+  checksum: 10c0/f0b23bccdee8bb63b3a626498449bf4abce76ee68a976ac37f51d644895367643536036f22a5f49c06510e47f4ff890e7f0934e5b2d69bfd2a04a8f1a5980c9d
   languageName: node
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.72.1":
-  version: 5.74.0
-  resolution: "@tanstack/react-query-devtools@npm:5.74.0"
+  version: 5.74.6
+  resolution: "@tanstack/react-query-devtools@npm:5.74.6"
   dependencies:
-    "@tanstack/query-devtools": "npm:5.73.3"
+    "@tanstack/query-devtools": "npm:5.74.6"
   peerDependencies:
-    "@tanstack/react-query": ^5.74.0
+    "@tanstack/react-query": ^5.74.4
     react: ^18 || ^19
-  checksum: 10c0/aae45a7bf1d212ebfb017554cd15d4e8618590e080a0732daa4f42e63e164264daf5fdab60a96f824fb20238a670ab2176fdd375d6b6f4110cd03700c624fd48
+  checksum: 10c0/a575107c7ffa0558f0f2d694ae4d4257bb6bdd0f108dc5f0b88a1fdd90bc90cfc1938bd0c2e232ad87fbe430872efcf2af5a39bb1b205bfbcf01a45f17dc37a4
   languageName: node
   linkType: hard
 
