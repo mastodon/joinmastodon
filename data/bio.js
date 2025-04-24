@@ -4,18 +4,24 @@ export const bios = {
   "karien-bezuidenhout": `Karien Bezuidenhout is an advocate for openness and supporter of social
         entrepreneurs. As the former director of the Shuttleworth Foundation, her
         core interest lies in social and policy innovation through practical interventions
-        and sustainable social enterprises. Through her experience as a board member to 
-        social change organisations and social enterprises across the world, she strives 
+        and sustainable social enterprises. Through her experience as a board member to
+        social change organisations and social enterprises across the world, she strives
         to make connections that accelerate learning.`,
-  "amir-ghavi": `Amir Ghavi leads Fried Frank’s core technology practices as the co-head of
-        the Technology Transactions Practice, where he advises clients on cutting edge
-        technology and intellectual property matters. Amir is also a regular speaker,
-        panelist and commentator to the media on digital assets and quantum computing.`,
-  "felix-hlatky": `Felix Hlatky has been the Chief Financial Officer of Mastodon since 2020.
-        Felix helped Eugen by incorporating the project in a non-profit LLC in Germany
-        and raising additional funds from Prototype Fund, NLnet and GLS Bank. Felix is
-        the CEO of SOLARYS, a company developing software for volunteer firefighters in
-        the DACH region.`,
+  "hannah-aubry": `Hannah Aubry is a community builder and an advocate for open technologies
+        with roots in communications and program management. Currently, she’s an open source
+        developer advocate for the AWS Open Source Strategy & Marketing team where she crafts
+        open source messaging and advises engineering teams on community engagement. Previously,
+        she led Fastly's $50 million commitment to the open internet through its Fast Forward
+        initiative and coordinated the world’s largest multi-team system study to date as p
+        art of the S.O.N.I.C. Research Group. If she were a bird she’d be a roseate spoonbill.`,
+  "felix-hlatky": `Felix is an accomplished financial and operational leader with over a decade
+        of experience as a CEO and CFO. As Mastodon’s first non-technical hire, he has spent
+        more than five years shaping the organisation’s financial and operational strategy while
+        remaining true to its community-driven mission. He helped Mastodon’s founder Eugen Rochko
+        to incorporate the German non-profit entity and is a co-founder and board member of
+        Mastodon’s US entity, Mastodon Inc., which has 501(c)(3) status. He is passionate about
+        sustainable growth and ethical business practices and has a deep commitment to
+        open-source principles.`,
   "esraa-al-shafei": `Esra’a Al Shafei is a human rights advocate and founder of Majal.org, a
         network of digital platforms that amplify under-reported and marginalized voices
         in Southwest Asia and North Africa. She is also the co-founder of the Numun Fund,

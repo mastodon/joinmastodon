@@ -17,6 +17,15 @@ export const BOARD_POSITION_OBSERVER = "observer"
 
 export const board: BoardMember[] = [
   {
+    name: "Hannah Aubry",
+    position: BOARD_POSITION_DIRECTOR,
+    socials: {
+      mastodon: "https://fosstodon.org/@haubles",
+    },
+    slug: "hannah-aubry",
+    avatar: require("../public/avatars/hannah.jpg"),
+  },
+  {
     name: "Karien Bezuidenhout",
     position: BOARD_POSITION_DIRECTOR,
     title: "Chair",
@@ -25,16 +34,6 @@ export const board: BoardMember[] = [
     },
     slug: "karien-bezuidenhout",
     avatar: require("../public/avatars/karienbez.jpg"),
-  },
-  {
-    name: "Amir Ghavi",
-    position: BOARD_POSITION_DIRECTOR,
-    title: "Secretary",
-    socials: {
-      mastodon: "https://mastodon.social/@aghavi",
-    },
-    slug: "amir-ghavi",
-    avatar: require("../public/avatars/aghavi.jpg"),
   },
   {
     name: "Felix Hlatky",
