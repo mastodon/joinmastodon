@@ -20,7 +20,7 @@ export const board: BoardMember[] = [
     name: "Hannah Aubry",
     position: BOARD_POSITION_DIRECTOR,
     socials: {
-      mastodon: "https://fosstodon.org/@haubles",
+      mastodon: "https://hachyderm.io/@haubles",
     },
     slug: "hannah-aubry",
     avatar: require("../public/avatars/hannah.jpg"),
