@@ -35,6 +35,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Andy Piper",
+    position: "Head of Communications",
+    socials: {
+      mastodon: "https://macaw.social/@andypiper",
+    },
+  },
+
+  {
     name: "Claire",
     position: "Engineering (web)",
     socials: {
@@ -96,14 +104,6 @@ const team: TeamMember[] = [
   },
 
   {
-    name: "Andy Piper",
-    position: "Head of Communications",
-    socials: {
-      mastodon: "https://macaw.social/@andypiper",
-    },
-  },
-
-  {
     name: "Amelia Rochko",
     position: "Customer Service",
   },
@@ -115,6 +115,15 @@ const team: TeamMember[] = [
       mastodon: "https://mastodon.social/@philipkristians",
     },
   },
+
+  {
+    name: "Zora Steiner",
+    position: "Operations",
+    socials: {
+      mastodon: "https://mastodon.social/@zoraxzora",
+    },
+  },
+
   {
     name: "Scott Jenson",
     position: "Product Strategy Adviser",
