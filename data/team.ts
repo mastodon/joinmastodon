@@ -51,6 +51,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Dion Dajka",
+    position: "Engineering (web)",
+    socials: {
+      mastodon: "https://indieweb.social/@diondiondion",
+    },
+  },
+
+  {
     name: "Echo",
     position: "Engineering (web)",
     socials: {
