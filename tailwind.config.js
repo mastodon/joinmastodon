@@ -71,6 +71,7 @@ const config = {
       },
       lime: "#baff3b",
       goldenrod: "#ffbe2e",
+      error: "#ff4d4f",
     },
     extend: {
       fontFamily: {
