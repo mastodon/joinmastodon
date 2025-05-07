@@ -139,7 +139,7 @@ export function DonateWidget({
         <Input
           className={classNames(
             "grow px-2 rounded-r-md font-bold outline-none transition-colors",
-            "dark:bg-black border border-gray-3 hocus:border-gray-2 dark:border-gray-1",
+            "dark:bg-black border-2 border-gray-3 hocus:border-gray-2 dark:border-gray-1",
             "disabled:border-gray-3 disabled:hocus:border-gray-3"
           )}
           type="number"
@@ -151,7 +151,7 @@ export function DonateWidget({
           disabled={loadingCheckout}
         />
       </div>
-      <div className="flex gap-2 mt-2">
+      <div className="flex gap-2 mt-4">
         {amounts[frequency][currency].map((amount) => (
           <Button
             className="transition-none"

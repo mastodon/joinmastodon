@@ -34,10 +34,9 @@ export function Button({
         "disabled:bg-gray-2 disabled:hocus:bg-gray-2 disabled:text-white",
         !dark &&
           "bg-white dark:bg-black hocus:bg-blurple-600 text-blurple-500 hocus:text-white",
+        dark && "bg-blurple-500 hocus:bg-blurple-600 text-white",
         !borderless &&
-          !dark &&
-          "border-2 border-blurple-500 hocus:border-blurple-600 disabled:border-gray-2 disabled:hocus:border-gray-2",
-        dark && "bg-blurple-500 hocus:bg-blurple-600 text-white"
+          "border-2 border-blurple-500 hocus:border-blurple-600 disabled:border-gray-2 disabled:hocus:border-gray-2"
       )}
     >
       {children}
