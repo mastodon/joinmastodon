@@ -64,6 +64,7 @@ export function DonateWidget({
   )
   const [dirty, setDirty] = useState(false)
   const [loadingCheckout, setLoadingCheckout] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const formatter = useCurrencyFormatter(currency)
   const intl = useIntl()
@@ -73,6 +74,7 @@ export function DonateWidget({
       setFrequency(toFrequency)
       setCurrentAmount(amounts[toFrequency][currency][0])
       setDirty(false)
+      setError(null)
     },
     [amounts, currency]
   )
@@ -81,6 +83,7 @@ export function DonateWidget({
       setCurrency(toCurrency)
       setCurrentAmount(amounts[frequency][toCurrency][0])
       setDirty(false)
+      setError(null)
     },
     [amounts, frequency]
   )
@@ -88,21 +91,28 @@ export function DonateWidget({
     useCallback((event) => {
       setCurrentAmount(event.currentTarget.valueAsNumber * 100)
       setDirty(true)
+      setError(null)
     }, [])
   const handleClickAmount = useCallback((amount: number) => {
     setCurrentAmount(amount)
     setDirty(false)
+    setError(null)
   }, [])
 
   const handleDonate = useCallback(() => {
     setLoadingCheckout(true)
     onDonate(currentAmount, frequency, currency)
     sendMessage("checkout-start")
+    setTimeout(() => {
+      setLoadingCheckout(false)
+      setError("Loading checkout timed out, please try again")
+    }, 5000)
   }, [currency, currentAmount, frequency, onDonate])
 
   return (
     <div className={classNames("dark:text-white", className)}>
       <p className="sh1">{donation_message}</p>
+      {error && <p className="text-error text-center text-sm my-4">{error}</p>}
       <div className="flex text-center my-4">
         {frequencies.map((freq) => (
           <Button
