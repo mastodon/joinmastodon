@@ -1,23 +1,28 @@
-import { GetServerSideProps, InferGetServerSidePropsType } from "next"
-import {
-  EmbeddedCheckout,
-  EmbeddedCheckoutProvider,
-} from "@stripe/react-stripe-js"
-import { z } from "zod"
+import { CheckoutProvider } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
-import { useEffect, useMemo } from "react"
+import { GetServerSideProps, InferGetServerSidePropsType } from "next"
+import { useRouter } from "next/navigation"
+import { useCallback, useEffect, useMemo } from "react"
+import { z } from "zod"
 
+import { DonateCheckout } from "../../components/DonateCheckout"
 import { sendMessage, usePopupSizer } from "../../donate/utils"
 import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
-import { useRouter } from "next/navigation"
+import classNames from "classnames"
+import { themeSchema } from "."
 
 export default function DonateCheckoutPage({
   clientSecret,
   stripePublicKey,
+  theme,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const loadStripePromise = useMemo(
     () => loadStripe(stripePublicKey),
     [stripePublicKey]
+  )
+  const fetchClientSecret = useCallback(
+    async () => clientSecret,
+    [clientSecret]
   )
   const router = useRouter()
 
@@ -27,21 +32,40 @@ export default function DonateCheckoutPage({
   usePopupSizer()
 
   return (
-    <EmbeddedCheckoutProvider
+    <CheckoutProvider
       stripe={loadStripePromise}
       options={{
-        clientSecret,
-        onComplete: () => router.push("/donate/complete"),
+        fetchClientSecret,
+        elementsOptions: {
+          appearance: {
+            theme: "flat",
+            variables: {
+              colorPrimary: "#563acc",
+              colorBackground: "#d4d4d4",
+              colorText: "#000000",
+              borderRadius: "0.5rem",
+            },
+          },
+        },
       }}
     >
-      <EmbeddedCheckout />
-    </EmbeddedCheckoutProvider>
+      <DonateCheckout
+        onComplete={() => router.push("/donate/complete")}
+        className={classNames(
+          theme,
+          "bg-white dark:bg-black p-8",
+          process.env.NODE_ENV === "development" &&
+            "max-w-lg border border-gray-0 mx-auto mt-6"
+        )}
+      />
+    </CheckoutProvider>
   )
 }
 
 interface DonateCheckoutPageProps {
   clientSecret: string
   stripePublicKey: string
+  theme: z.infer<typeof themeSchema>
 }
 
 const querySchema = z.object({
@@ -49,13 +73,20 @@ const querySchema = z.object({
   frequency: z.enum(DONATION_FREQUENCIES),
   amount: z.coerce.number().int().positive().gte(100),
   currency: z.enum(CURRENCIES),
+  theme: themeSchema,
 })
+
+const responseSchema = z.promise(
+  z.object({
+    clientSecret: z.string(),
+  })
+)
 
 export const getServerSideProps: GetServerSideProps<
   DonateCheckoutPageProps
 > = async ({ query, locale }) => {
   try {
-    const { url, frequency, amount, currency } = querySchema.parse(query)
+    const { url, frequency, amount, currency, theme } = querySchema.parse(query)
 
     const params = new URLSearchParams({
       platform: "web",
@@ -72,18 +103,18 @@ export const getServerSideProps: GetServerSideProps<
       },
     })
     if (!response.ok) {
-      throw new Error("Failed to get donation URL")
+      throw new Error(
+        `Failed to get donation URL: ${response.status} ${response.statusText}`
+      )
     }
-    const body = await response.json()
-    if ("clientSecret" in body) {
-      return {
-        props: {
-          clientSecret: body.clientSecret,
-          stripePublicKey: process.env.STRIPE_PUBLIC_KEY ?? "",
-        },
-      }
+    const { clientSecret } = await responseSchema.parse(response.json())
+    return {
+      props: {
+        clientSecret,
+        stripePublicKey: process.env.STRIPE_PUBLIC_KEY ?? "",
+        theme,
+      },
     }
-    throw new Error("Invalid response from server: " + JSON.stringify(body))
   } catch (error) {
     console.error("Error with checkout:", error)
     return {

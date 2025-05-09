@@ -50,8 +50,10 @@ export default function DonatePage({
 
 type DonatePageProps = DonatePageQuery & CampaignResponse
 
+export const themeSchema = z.enum(["light", "dark", "auto"]).default("auto")
+
 const querySchema = z.object({
-  theme: z.enum(["light", "dark"]).default("light"),
+  theme: themeSchema,
   campaign: z.string().optional(),
   callback: z.string().optional(),
 })
