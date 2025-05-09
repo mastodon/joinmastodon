@@ -2156,23 +2156,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stripe/react-stripe-js@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "@stripe/react-stripe-js@npm:3.6.0"
+"@stripe/react-stripe-js@npm:^3.7.0":
+  version: 3.7.0
+  resolution: "@stripe/react-stripe-js@npm:3.7.0"
   dependencies:
     prop-types: "npm:^15.7.2"
   peerDependencies:
     "@stripe/stripe-js": ">=1.44.1 <8.0.0"
     react: ">=16.8.0 <20.0.0"
     react-dom: ">=16.8.0 <20.0.0"
-  checksum: 10c0/bcf0f89f17d31e7a60d34cf6c170a060c4e884614d0d73066c03187fdb1894f7359966d00abbc4cd49b52541d9f122008762d82b8233ac6f3e222ad736ce4af5
+  checksum: 10c0/663e9176b0a710632abe64bb7efca63a22d8cf690942a4507d57ba1d4fb6328cd08e3cf9040ea95348540c47ed8dbc5250982b150b38eb9564861dc0ecd83d72
   languageName: node
   linkType: hard
 
-"@stripe/stripe-js@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "@stripe/stripe-js@npm:7.0.0"
-  checksum: 10c0/0d585e393a78bfd450cb6cadd1e225c35e25ae90fdf4b32b31def50a55af289ae45cfe64403066d2565deb2ea04ec412c2f2d04ac0acd8b69795ab6bb19ec8ed
+"@stripe/stripe-js@npm:^7.3.0":
+  version: 7.3.0
+  resolution: "@stripe/stripe-js@npm:7.3.0"
+  checksum: 10c0/251383a9832d711f9b31779e735b7069e8effd5f6fd382a40b8858990c17dad57e0356086441996cb5c7e91cfc73599bb279b32f5be6e76fdde6619db942c605
   languageName: node
   linkType: hard
 
@@ -2450,15 +2450,6 @@ __metadata:
   version: 4.17.16
   resolution: "@types/lodash@npm:4.17.16"
   checksum: 10c0/cf017901b8ab1d7aabc86d5189d9288f4f99f19a75caf020c0e2c77b8d4cead4db0d0b842d009b029339f92399f49f34377dd7c2721053388f251778b4c23534
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:>=8.1.0":
-  version: 22.13.17
-  resolution: "@types/node@npm:22.13.17"
-  dependencies:
-    undici-types: "npm:~6.20.0"
-  checksum: 10c0/77a052fec0fe02f60557e1c5f3f28eb09cd9bee426be88328a94689150a3c0df5b4b6b69fad28157fb34521693dad0b311ecd7f613845d681ff973991310c20e
   languageName: node
   linkType: hard
 
@@ -5261,8 +5252,8 @@ __metadata:
     "@formatjs/cli": "npm:^6.7.1"
     "@headlessui/react": "npm:^2.2.2"
     "@linear/sdk": "npm:^41.0.0"
-    "@stripe/react-stripe-js": "npm:^3.6.0"
-    "@stripe/stripe-js": "npm:^7.0.0"
+    "@stripe/react-stripe-js": "npm:^3.7.0"
+    "@stripe/stripe-js": "npm:^7.3.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-query": "npm:^5.75.2"
     "@tanstack/react-query-devtools": "npm:^5.75.2"
@@ -5296,11 +5287,11 @@ __metadata:
     react-intl: "npm:^7.1.11"
     sass: "npm:^1.87.0"
     sharp: "npm:^0.34.1"
-    stripe: "npm:^18.0.0"
+    stripe: "npm:^18.1.0"
     tailwindcss: "npm:^3.4.17"
     tailwindcss-logical: "npm:^3.0.1"
     typescript: "npm:^5.8.3"
-    zod: "npm:^3.24.2"
+    zod: "npm:^3.24.4"
   languageName: unknown
   linkType: soft
 
@@ -7349,13 +7340,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stripe@npm:^18.0.0":
-  version: 18.0.0
-  resolution: "stripe@npm:18.0.0"
+"stripe@npm:^18.1.0":
+  version: 18.1.0
+  resolution: "stripe@npm:18.1.0"
   dependencies:
-    "@types/node": "npm:>=8.1.0"
     qs: "npm:^6.11.0"
-  checksum: 10c0/26c43da3877337d09f7cb41b82ec019e5f80971652be6b4276aa69714bbef04f62e7c76ad8a1d50d21d7165f9c4b937812e0c0595fd800bdf4433c0455c8159d
+  peerDependencies:
+    "@types/node": ">=12.x.x"
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+  checksum: 10c0/5f4f7f49c3c9913d524f79f18189a2cb3b2ada0e46e38610883d5dea0cb357b0b64e0b2c1f44a18f7b70e5830d7699383194e324ac5b6d7a1a1749c43e7d771d
   languageName: node
   linkType: hard
 
@@ -7717,13 +7712,6 @@ __metadata:
     has-symbols: "npm:^1.1.0"
     which-boxed-primitive: "npm:^1.1.1"
   checksum: 10c0/7dbd35ab02b0e05fe07136c72cb9355091242455473ec15057c11430129bab38b7b3624019b8778d02a881c13de44d63cd02d122ee782fb519e1de7775b5b982
-  languageName: node
-  linkType: hard
-
-"undici-types@npm:~6.20.0":
-  version: 6.20.0
-  resolution: "undici-types@npm:6.20.0"
-  checksum: 10c0/68e659a98898d6a836a9a59e6adf14a5d799707f5ea629433e025ac90d239f75e408e2e5ff086afc3cace26f8b26ee52155293564593fbb4a2f666af57fc59bf
   languageName: node
   linkType: hard
 
@@ -8090,9 +8078,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.24.2":
-  version: 3.24.2
-  resolution: "zod@npm:3.24.2"
-  checksum: 10c0/c638c7220150847f13ad90635b3e7d0321b36cce36f3fc6050ed960689594c949c326dfe2c6fa87c14b126ee5d370ccdebd6efb304f41ef5557a4aaca2824565
+"zod@npm:^3.24.4":
+  version: 3.24.4
+  resolution: "zod@npm:3.24.4"
+  checksum: 10c0/ab3112f017562180a41a0f83d870b333677f7d6b77f106696c56894567051b91154714a088149d8387a4f50806a2520efcb666f108cd384a35c236a191186d91
   languageName: node
   linkType: hard
