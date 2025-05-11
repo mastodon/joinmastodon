@@ -55,6 +55,7 @@ import bubble from "../public/apps/bubble.png"
 import odous from "../public/apps/odous.png"
 import dowstodon from "../public/apps/dowstodon.png"
 import fread from "../public/apps/fread.png"
+import plfe from "../public/apps/pl-fe.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
@@ -385,6 +386,13 @@ export const apps: appsList = {
       url: "https://nicolasconstant.github.io/sengi/",
       open: true,
       source_url: "https://github.com/NicolasConstant/sengi",
+    },
+    {
+      name: "pl-fe",
+      icon: plfe,
+      url: "https://pl.mkljczk.pl/",
+      open: true,
+      source_url: "https://github.com/mkljczk/pl-fe",
     },
   ],
   desktop: [
