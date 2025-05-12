@@ -1,14 +1,11 @@
 import Image from "next/image"
 import { FormattedMessage } from "react-intl"
 
-import { sendMessage, usePopupSizer } from "../../donate/utils"
+import { sendMessage } from "../../donate/utils"
 import donatedImage from "../../public/illustrations/donation_successful.png"
 import { Button } from "../../components/Button"
-import AnnouncementIcon from "../../public/icons/announcement.svg?inline"
 
 export default function DonateCompletePage() {
-  usePopupSizer()
-
   const handleClose = () => {
     sendMessage("close")
   }
