@@ -70,13 +70,18 @@ export function DonatePopup({
         open={open}
         onClose={handleClose}
         transition
-        className="transition-opacity opacity-0 data-[open]:opacity-100"
+        className="sm:transition-opacity sm:opacity-0 sm:data-[open]:opacity-100"
       >
         <DialogBackdrop className="fixed inset-0 bg-black/30" />
-        <div className="fixed inset-0 flex w-screen items-center justify-center p-4 z-10">
+        <div
+          className={classNames(
+            "fixed inset-0 flex w-screen items-end sm:items-center justify-center p-4 max-sm:pb-0 z-10",
+            "transition-transform"
+          )}
+        >
           <DialogPanel
             className={classNames(
-              "w-full bg-white rounded-md overflow-hidden flex items-center justify-center transition-all relative",
+              "w-full bg-white rounded-md max-sm:rounded-b-none overflow-hidden flex items-center justify-center transition-all relative",
               currentStep !== "checkout" && "max-w-md",
               currentStep === "loading" && "p-4 min-h-40",
               currentStep === "checkout" && "max-w-3xl"
