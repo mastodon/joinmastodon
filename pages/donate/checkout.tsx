@@ -6,7 +6,7 @@ import { useCallback, useEffect, useMemo } from "react"
 import { z } from "zod"
 
 import { DonateCheckout } from "../../components/DonateCheckout"
-import { sendMessage, usePopupSizer } from "../../donate/utils"
+import { sendMessage } from "../../donate/utils"
 import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
 import classNames from "classnames"
 import { themeSchema } from "."
@@ -29,7 +29,6 @@ export default function DonateCheckoutPage({
   useEffect(() => {
     sendMessage("checkout-loaded")
   }, [])
-  usePopupSizer()
 
   return (
     <CheckoutProvider

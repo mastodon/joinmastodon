@@ -11,7 +11,7 @@ import classNames from "classnames"
 import { Button, ButtonProps } from "../components/Button"
 import CloseIcon from "../public/icons/close.svg?inline"
 import LoadingIcon from "../public/icons/loading.svg?inline"
-import { isPopupMessage, isPopupResizeMessage } from "./utils"
+import { isPopupMessage } from "./utils"
 
 import type { Step } from "./types"
 
@@ -40,10 +40,6 @@ export function DonatePopup({
         return
       }
 
-      if (isPopupResizeMessage(message)) {
-        iframeRef.current?.style.setProperty("height", `${message.height}px`)
-        return
-      }
       switch (message.action) {
         case "checkout-loaded": {
           setCurrentStep("checkout")
