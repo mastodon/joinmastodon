@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation"
 import { useCallback } from "react"
 import { z } from "zod"
 
-import { usePopupSizer } from "../../donate/utils"
 import { OnDonateFn, DonateWidget } from "../../components/DonateWidget"
 import { CampaignResponse } from "../../types/api"
 import { fetchEndpoint } from "../../utils/api"
@@ -31,8 +30,6 @@ export default function DonatePage({
     },
     [donation_url, router]
   )
-
-  usePopupSizer()
 
   return (
     <div
