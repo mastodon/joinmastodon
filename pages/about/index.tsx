@@ -1,5 +1,4 @@
 // About
-import BasicPage from "../../components/BasicPage"
 import Head from "next/head"
 import Hero from "../../components/Hero"
 import { withDefaultStaticProps } from "../../utils/defaultStaticProps"
@@ -10,7 +9,6 @@ import { FormattedDate, FormattedMessage } from "react-intl"
 import Link from "next/link"
 import { useQuery } from "@tanstack/react-query"
 import Statistic from "../../components/Statistic"
-import { Day } from "../../types/api"
 import team from "../../data/team"
 import board from "../../data/board"
 import interviews from "../../data/interviews"
