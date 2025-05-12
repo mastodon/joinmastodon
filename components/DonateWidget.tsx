@@ -131,7 +131,7 @@ export function DonateWidget({
         ))}
       </div>
 
-      <div className="w-full flex items-stretch">
+      <div className="flex">
         <Select
           className={classNames(
             "p-2 rounded-l-md outline-none transition-colors cursor-pointer disabled:cursor-default font-medium",
@@ -148,7 +148,7 @@ export function DonateWidget({
         </Select>
         <Input
           className={classNames(
-            "grow px-2 rounded-r-md font-bold outline-none transition-colors",
+            "w-full px-2 rounded-r-md font-bold outline-none transition-colors",
             "dark:bg-black border-2 border-gray-3 hocus:border-gray-2 dark:border-gray-1",
             "disabled:border-gray-3 disabled:hocus:border-gray-3"
           )}
