@@ -50,12 +50,7 @@ export default function DonateCheckoutPage({
     >
       <DonateCheckout
         onComplete={() => router.push("/donate/complete")}
-        className={classNames(
-          theme,
-          "bg-white dark:bg-black p-8",
-          process.env.NODE_ENV === "development" &&
-            "max-w-lg border border-gray-0 mx-auto mt-6"
-        )}
+        className={classNames(theme, "bg-white dark:bg-black p-8")}
       />
     </CheckoutProvider>
   )

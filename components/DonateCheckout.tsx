@@ -6,6 +6,9 @@ import {
 } from "@stripe/react-stripe-js"
 import classNames from "classnames"
 import { ChangeEvent, FormEvent, useCallback, useState } from "react"
+
+import LoadingIcon from "../public/icons/loading.svg?inline"
+
 import { Button } from "./Button"
 
 interface DonateCheckoutProps {
@@ -17,12 +20,11 @@ export function DonateCheckout({ className }: DonateCheckoutProps) {
   const checkout = useCheckout()
 
   const [email, setEmail] = useState("")
-  const [emailError, setEmailError] = useState<string | null>(null)
   const [message, setMessage] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setEmailError(null)
+    setMessage(null)
     setEmail(e.target.value)
   }, [])
 
@@ -33,9 +35,9 @@ export function DonateCheckout({ className }: DonateCheckoutProps) {
 
     const result = await checkout.updateEmail(email)
     if (result.type === "error") {
-      setEmailError(result.error.message)
+      setMessage(result.error.message)
     } else {
-      setEmailError(null)
+      setMessage(null)
     }
   }, [checkout, email])
 
@@ -47,7 +49,6 @@ export function DonateCheckout({ className }: DonateCheckoutProps) {
 
       const result = await checkout.updateEmail(email)
       if (result.type === "error") {
-        setEmailError(result.error.message)
         setMessage(result.error.message)
         setIsLoading(false)
         return
@@ -63,8 +64,6 @@ export function DonateCheckout({ className }: DonateCheckoutProps) {
       if (confirmResult.type === "error") {
         setMessage(confirmResult.error.message)
       }
-
-      setIsLoading(false)
     },
     [checkout, email]
   )
@@ -74,43 +73,55 @@ export function DonateCheckout({ className }: DonateCheckoutProps) {
       className={classNames("dark:text-white", className)}
       onSubmit={handleCheckout}
     >
-      <label className="">
-        <p className="mb-2">Email</p>
-        <Input
-          type="email"
-          value={email}
-          onChange={handleChange}
-          placeholder="me@example.com"
+      <div className="flex max-sm:flex-col gap-4">
+        <div className="w-full">
+          <label>
+            <p className="mb-2">Email</p>
+            <Input
+              type="email"
+              value={email}
+              onChange={handleChange}
+              placeholder="me@example.com"
+              className={classNames(
+                "w-full p-4 bg-gray-3 rounded-md",
+                "placeholder:text-gray-1"
+              )}
+              onBlur={handleEmailBlur}
+            />
+          </label>
+          <hr className="my-4 border-t border-gray-3" />
+          <h4 className="mb-2 mt-4">Billing Address</h4>
+          <AddressElement options={{ mode: "billing" }} />
+        </div>
+
+        <div className="w-full">
+          <h4 className="mb-2">Payment</h4>
+          <PaymentElement className="" />
+        </div>
+      </div>
+
+      <div className="mt-4">
+        {message && <p className="text-error text-b3 mb-2">{message}</p>}
+        <Button
+          disabled={isLoading}
+          dark
           className={classNames(
-            "w-full p-4 bg-gray-3 rounded-md",
-            "placeholder:text-gray-1",
-            emailError && "border-error"
+            "flex gap-2 items-center justify-center",
+            isLoading && "text-gray-2"
           )}
-          onBlur={handleEmailBlur}
-        />
-        {emailError && <p className="text-error text-sm mt-2">{emailError}</p>}
-      </label>
-      <hr className="my-4 border-t border-gray-3" />
-      <h4 className="mb-2 mt-4">Billing Address</h4>
-      <AddressElement
-        options={{ mode: "billing", autocomplete: { mode: "disabled" } }}
-      />
-      <hr className="my-4 border-t border-gray-3" />
-      <h4 className="mb-2 mt-4">Payment</h4>
-      <PaymentElement />
-      <Button
-        disabled={isLoading}
-        dark
-        className="mt-4"
-        fullWidth
-        type="submit"
-      >
-        {isLoading ? (
-          <div className="spinner"></div>
-        ) : (
-          `Pay ${checkout.total.total.amount} now`
-        )}
-      </Button>
+          fullWidth
+          type="submit"
+        >
+          {isLoading ? (
+            <>
+              <LoadingIcon className="motion-safe:animate-spin size-5" />
+              <span>Submitting&hellip;</span>
+            </>
+          ) : (
+            `Pay ${checkout.total.total.amount} now`
+          )}
+        </Button>
+      </div>
     </form>
   )
 }

@@ -73,21 +73,22 @@ export function DonatePopup({
         className="transition-opacity opacity-0 data-[open]:opacity-100"
       >
         <DialogBackdrop className="fixed inset-0 bg-black/30" />
-        <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+        <div className="fixed inset-0 flex w-screen items-center justify-center p-4 z-10">
           <DialogPanel
             className={classNames(
               "w-full bg-white rounded-md overflow-hidden flex items-center justify-center transition-all relative",
-              currentStep === "loading" && "p-4 min-h-40 max-w-md",
-              (currentStep === "choose" || currentStep === "complete") &&
-                "max-w-md",
-              currentStep === "checkout" && "max-w-5xl"
+              currentStep !== "checkout" && "max-w-md",
+              currentStep === "loading" && "p-4 min-h-40",
+              currentStep === "checkout" && "max-w-3xl"
             )}
           >
             <iframe
               src="/donate"
               className={classNames(
-                "w-full transition-all",
-                currentStep === "loading" && "hidden"
+                "w-full transition-transform",
+                currentStep === "loading" && "hidden",
+                currentStep === "choose" && "h-[28rem]",
+                currentStep === "checkout" && "h-[45rem]"
               )}
               ref={iframeRef}
               onLoad={handleIframeLoad}
@@ -99,10 +100,7 @@ export function DonatePopup({
               </p>
             )}
             <button
-              className={classNames(
-                "absolute top-2 right-2",
-                currentStep === "checkout" ? "text-white" : "text-gray-2"
-              )}
+              className={classNames("absolute top-2 right-2 text-gray-2")}
               onClick={handleClose}
             >
               <CloseIcon className="size-5" />
