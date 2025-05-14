@@ -42,7 +42,7 @@
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-query-devtools": "^5.75.2",
     "@types/node": "^22.15.6",
-    "@types/react": "18.3.20",
+    "@types/react": "18.3.21",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.32.0",
     "autoprefixer": "^10.4.21",
