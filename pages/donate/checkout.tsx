@@ -1,5 +1,6 @@
 import { CheckoutProvider } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
+import classNames from "classnames"
 import { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/navigation"
 import { useCallback, useEffect, useMemo } from "react"
@@ -8,13 +9,14 @@ import { z } from "zod"
 import { DonateCheckout } from "../../components/DonateCheckout"
 import { sendMessage } from "../../donate/utils"
 import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
-import classNames from "classnames"
-import { themeSchema } from "."
+
+import { themeSchema } from "./index"
 
 export default function DonateCheckoutPage({
   clientSecret,
   stripePublicKey,
   theme,
+  backUrl,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const loadStripePromise = useMemo(
     () => loadStripe(stripePublicKey),
@@ -51,6 +53,7 @@ export default function DonateCheckoutPage({
       <DonateCheckout
         onComplete={() => router.push("/donate/complete")}
         className={classNames(theme, "bg-white dark:bg-black p-8")}
+        backUrl={backUrl}
       />
     </CheckoutProvider>
   )
@@ -60,6 +63,7 @@ interface DonateCheckoutPageProps {
   clientSecret: string
   stripePublicKey: string
   theme: z.infer<typeof themeSchema>
+  backUrl: string
 }
 
 const querySchema = z.object({
@@ -107,6 +111,7 @@ export const getServerSideProps: GetServerSideProps<
         clientSecret,
         stripePublicKey: process.env.STRIPE_PUBLIC_KEY ?? "",
         theme,
+        backUrl: `/donate?${new URLSearchParams({ frequency, amount: amount.toString(), currency, theme }).toString()}`,
       },
     }
   } catch (error) {

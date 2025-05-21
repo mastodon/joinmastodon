@@ -26,6 +26,8 @@ interface DonateWidgetProps {
   messages: Pick<CampaignResponse, "donation_message" | "donation_button_text">
   defaultCurrency: Currency
   amounts: CampaignResponse["amounts"]
+  defaultFrequency?: DonationFrequency
+  defaultAmount?: number
 }
 
 const messages = defineMessages({
@@ -50,17 +52,19 @@ const messages = defineMessages({
 export function DonateWidget({
   className,
   messages: { donation_message, donation_button_text },
-  defaultCurrency,
   amounts,
   onDonate,
+  defaultAmount,
+  defaultCurrency,
+  defaultFrequency,
 }: DonateWidgetProps) {
   const frequencies = Object.keys(amounts) as DonationFrequency[]
   const [frequency, setFrequency] = useState<DonationFrequency>(
-    () => frequencies.at(-1) as DonationFrequency
+    () => defaultFrequency ?? (frequencies.at(-1) as DonationFrequency)
   )
   const [currency, setCurrency] = useState<Currency>(defaultCurrency)
   const [currentAmount, setCurrentAmount] = useState(
-    () => amounts[frequency][currency][0]
+    () => defaultAmount ?? amounts[frequency][currency][0]
   )
   const [dirty, setDirty] = useState(false)
   const [loadingCheckout, setLoadingCheckout] = useState(false)

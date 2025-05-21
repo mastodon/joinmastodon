@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
 } from "react"
+import { FormattedMessage } from "react-intl"
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react"
 import classNames from "classnames"
 
@@ -81,10 +82,9 @@ export function DonatePopup({
         >
           <DialogPanel
             className={classNames(
-              "w-full bg-white rounded-md max-sm:rounded-b-none overflow-hidden flex items-center justify-center transition-all relative",
+              "w-full bg-white rounded-md max-sm:rounded-b-none overflow-hidden flex items-center justify-center relative",
               currentStep !== "checkout" && "max-w-md",
-              currentStep === "loading" && "p-4 min-h-40",
-              currentStep === "checkout" && "max-w-3xl"
+              currentStep === "checkout" && "max-w-md"
             )}
           >
             <iframe
@@ -92,16 +92,19 @@ export function DonatePopup({
               className={classNames(
                 "w-full transition-transform",
                 currentStep === "loading" && "hidden",
-                currentStep === "choose" && "h-[28rem]",
-                currentStep === "checkout" && "h-[45rem]"
+                currentStep === "choose" && "h-[30rem]",
+                currentStep === "checkout" && "h-[30rem]"
               )}
               ref={iframeRef}
               onLoad={handleIframeLoad}
             ></iframe>
             {currentStep === "loading" && (
-              <p className="flex gap-2 items-center justify-center text-gray-2">
+              <p className="flex gap-2 items-center justify-center text-gray-2 p-4 h-[28rem]">
                 <LoadingIcon className="motion-safe:animate-spin size-5" />
-                <span>Loading&hellip;</span>
+                <FormattedMessage
+                  id="donate_widget.loading"
+                  defaultMessage="Loading&hellip;"
+                />
               </p>
             )}
             <button

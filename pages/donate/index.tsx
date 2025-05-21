@@ -6,7 +6,11 @@ import { useCallback } from "react"
 import { z } from "zod"
 
 import { OnDonateFn, DonateWidget } from "../../components/DonateWidget"
-import { CampaignResponse } from "../../types/api"
+import {
+  CampaignResponse,
+  CURRENCIES,
+  DONATION_FREQUENCIES,
+} from "../../types/api"
 import { fetchEndpoint } from "../../utils/api"
 
 export default function DonatePage({
@@ -16,6 +20,9 @@ export default function DonatePage({
   donation_button_text,
   donation_url,
   amounts,
+  frequency: defaultFrequency,
+  amount: defaultAmount,
+  currency: defaultCurrency,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const router = useRouter()
   const handleDonate: OnDonateFn = useCallback(
@@ -36,10 +43,12 @@ export default function DonatePage({
       className={classNames(theme, "bg-white dark:bg-black min-h-screen p-8")}
     >
       <DonateWidget
-        defaultCurrency={default_currency}
+        defaultCurrency={defaultCurrency ?? default_currency}
         messages={{ donation_message, donation_button_text }}
         amounts={amounts}
         onDonate={handleDonate}
+        defaultAmount={defaultAmount}
+        defaultFrequency={defaultFrequency}
       />
     </div>
   )
@@ -53,6 +62,9 @@ const querySchema = z.object({
   theme: themeSchema,
   campaign: z.string().optional(),
   callback: z.string().optional(),
+  frequency: z.enum(DONATION_FREQUENCIES).optional(),
+  amount: z.coerce.number().int().positive().gte(100).optional(),
+  currency: z.enum(CURRENCIES).optional(),
 })
 type DonatePageQuery = z.infer<typeof querySchema>
 
