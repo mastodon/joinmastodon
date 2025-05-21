@@ -112,7 +112,7 @@ export function DonateCheckout({ className, backUrl }: DonateCheckoutProps) {
           </Link>
         )}
       </header>
-      <hr className="my-4 border-t border-gray-3" />
+      <hr className="my-4 border-t border-gray-2" />
       <div className="flex max-sm:flex-col gap-4">
         <div className="w-full">
           <label>
@@ -128,8 +128,7 @@ export function DonateCheckout({ className, backUrl }: DonateCheckoutProps) {
               onChange={handleChange}
               placeholder="me@example.com"
               className={classNames(
-                "w-full p-4 bg-gray-3 rounded-md",
-                "placeholder:text-gray-1"
+                "w-full p-4 bg-gray-2 rounded-md placeholder:text-gray-1"
               )}
               onBlur={handleEmailBlur}
             />

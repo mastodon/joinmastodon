@@ -139,8 +139,8 @@ export function DonateWidget({
         <Select
           className={classNames(
             "p-2 rounded-l-md outline-none transition-colors cursor-pointer disabled:cursor-default font-medium",
-            "bg-gray-3 hocus:bg-gray-2 dark:bg-gray-1",
-            "disabled:bg-gray-3 disabled:hocus:bg-gray-3"
+            "bg-gray-2 hocus:bg-gray-1 dark:bg-gray-1",
+            "disabled:bg-gray-2 disabled:hocus:bg-gray-2"
           )}
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
@@ -153,8 +153,8 @@ export function DonateWidget({
         <Input
           className={classNames(
             "w-full px-2 rounded-r-md font-bold outline-none transition-colors",
-            "dark:bg-black border-2 border-gray-3 hocus:border-gray-2 dark:border-gray-1",
-            "disabled:border-gray-3 disabled:hocus:border-gray-3"
+            "dark:bg-black border-2 border-gray-2 hocus:border-gray-1 dark:border-gray-1",
+            "disabled:border-gray-2 disabled:hocus:border-gray-2"
           )}
           type="number"
           value={currentAmount / 100}
