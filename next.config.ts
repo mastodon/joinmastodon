@@ -81,7 +81,13 @@ const nextConfig: NextConfig = {
               // Policies taken from: https://docs.stripe.com/security/guide?csp=csp-js
               value: cspMapToString({
                 "default-src": ["self"],
-                "img-src": ["self", "https://*.stripe.com"],
+                "img-src": [
+                  "self",
+                  "proxy.joinmastodon.org",
+                  "https://*.stripe.com",
+                  "blob:",
+                  "data:",
+                ],
                 "style-src": ["self", "unsafe-inline"],
                 "script-src": [
                   "self",
@@ -173,7 +179,9 @@ function cspMapToString(map: Record<string, string[]>) {
     .map(([key, values]) => {
       const valuesString = values
         .filter(Boolean)
-        .map((value) => (value.includes(".") ? value : `'${value}'`))
+        .map((value) =>
+          value.includes(".") || value.includes(":") ? value : `'${value}'`
+        )
         .join(" ")
       return `${key} ${valuesString}`
     })
