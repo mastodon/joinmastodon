@@ -76,7 +76,7 @@ export function DonatePopup({
         <DialogBackdrop className="fixed inset-0 bg-black/30" />
         <div
           className={classNames(
-            "fixed inset-0 flex w-screen items-end sm:items-center justify-center p-4 max-sm:pb-0 z-10",
+            "fixed inset-0 flex w-screen items-end sm:items-center justify-center z-10",
             "transition-transform"
           )}
         >
@@ -93,7 +93,7 @@ export function DonatePopup({
                 "w-full transition-transform",
                 currentStep === "loading" && "hidden",
                 currentStep === "choose" && "h-[30rem]",
-                currentStep === "checkout" && "h-[30rem]"
+                currentStep === "checkout" && "h-[40rem]"
               )}
               ref={iframeRef}
               onLoad={handleIframeLoad}

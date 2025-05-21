@@ -41,10 +41,11 @@ export default function DonateCheckoutPage({
           appearance: {
             theme: "flat",
             variables: {
-              colorPrimary: "#563acc",
-              colorBackground: "#d4d4d4",
+              colorPrimary: "#333333",
+              colorBackground: "#9b9b9b",
               colorText: "#000000",
               borderRadius: "0.5rem",
+              logoColor: theme,
             },
           },
         },
