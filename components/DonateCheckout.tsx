@@ -15,12 +15,16 @@ import ArrowLeftIcon from "../public/ui/arrow-left.svg?inline"
 import { Button } from "./Button"
 
 interface DonateCheckoutProps {
-  onComplete: () => void
-  className?: string
   backUrl?: string
+  className?: string
+  onComplete: () => void
 }
 
-export function DonateCheckout({ className, backUrl }: DonateCheckoutProps) {
+export function DonateCheckout({
+  className,
+  backUrl,
+  onComplete,
+}: DonateCheckoutProps) {
   const checkout = useCheckout()
 
   const [email, setEmail] = useState("")
@@ -58,19 +62,17 @@ export function DonateCheckout({ className, backUrl }: DonateCheckoutProps) {
         return
       }
 
-      const confirmResult = await checkout.confirm()
+      const confirmResult = await checkout.confirm({
+        redirect: "if_required", // Only redirect if required
+      })
 
-      // This point will only be reached if there is an immediate error when
-      // confirming the payment. Otherwise, your customer will be redirected to
-      // your `return_url`. For some payment methods like iDEAL, your customer will
-      // be redirected to an intermediate site first to authorize the payment, then
-      // redirected to the `return_url`.
       if (confirmResult.type === "error") {
         setMessage(confirmResult.error.message)
         setIsLoading(false)
       }
+      onComplete()
     },
-    [checkout, email]
+    [checkout, email, onComplete]
   )
 
   return (
@@ -128,14 +130,14 @@ export function DonateCheckout({ className, backUrl }: DonateCheckoutProps) {
               onChange={handleChange}
               placeholder="me@example.com"
               className={classNames(
-                "w-full p-4 bg-gray-2 rounded-md placeholder:text-gray-1"
+                "w-full p-4 rounded-md transition-colors",
+                "border-2 border-gray-2 hocus:border-gray-1 dark:border-gray-1",
+                "disabled:border-gray-2 disabled:hocus:border-gray-2"
               )}
               onBlur={handleEmailBlur}
+              disabled={isLoading}
             />
           </label>
-          {/* <hr className="my-4 border-t border-gray-3" />
-          <h4 className="mb-2 mt-4">Billing Address</h4>
-          <AddressElement options={{ mode: "billing" }} /> */}
         </div>
 
         <div className="w-full">
