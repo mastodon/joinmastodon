@@ -158,7 +158,7 @@ export function DonateCheckout({
               <LoadingIcon className="motion-safe:animate-spin size-5" />
               <FormattedMessage
                 id="donate_widget.checkout.submitting"
-                defaultMessage="Submitting&hellip;"
+                defaultMessage="Submitting…"
               />
             </>
           ) : (
