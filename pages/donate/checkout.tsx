@@ -31,6 +31,10 @@ export default function DonateCheckoutPage({
   useEffect(() => {
     sendMessage("checkout-loaded")
   }, [])
+  const handleDonate = useCallback(() => {
+    sendMessage("checkout-complete")
+    router.push("/donate/complete")
+  }, [router])
 
   return (
     <CheckoutProvider
@@ -51,7 +55,7 @@ export default function DonateCheckoutPage({
       }}
     >
       <DonateCheckout
-        onComplete={() => router.push("/donate/complete")}
+        onComplete={handleDonate}
         className={classNames(theme, "bg-white dark:bg-black p-8")}
         backUrl={backUrl}
       />

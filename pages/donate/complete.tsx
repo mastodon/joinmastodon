@@ -4,11 +4,15 @@ import { FormattedMessage } from "react-intl"
 import { sendMessage } from "../../donate/utils"
 import donatedImage from "../../public/illustrations/donation_successful.png"
 import { Button } from "../../components/Button"
+import { useEffect } from "react"
 
 export default function DonateCompletePage() {
   const handleClose = () => {
     sendMessage("close")
   }
+  useEffect(() => {
+    sendMessage("complete-loaded")
+  }, [])
 
   return (
     <div className="flex flex-col p-8 gap-2">
@@ -29,13 +33,6 @@ export default function DonateCompletePage() {
         alt=""
         className="w-full max-w-80 mx-auto my-4"
       />
-      {/* <Button dark fullWidth>
-        <AnnouncementIcon className="size-6" />
-        <FormattedMessage
-          id="donate.success.share"
-          defaultMessage="Spread the word"
-        />
-      </Button> */}
       <Button onClick={handleClose} fullWidth dark>
         <FormattedMessage id="donate.success.close" defaultMessage="Close" />
       </Button>
