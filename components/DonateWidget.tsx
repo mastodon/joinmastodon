@@ -1,11 +1,14 @@
 import classNames from "classnames"
 import { useCallback, useState } from "react"
-import { defineMessages, useIntl } from "react-intl"
+import {
+  defineMessages,
+  FormattedMessage,
+  FormattedNumber,
+  useIntl,
+} from "react-intl"
 import { Input, Select } from "@headlessui/react"
 
-import { sendMessage } from "../donate/utils"
 import CheckIcon from "../public/icons/check.svg?inline"
-import { useCurrencyFormatter } from "../utils/use-currency-formatter"
 import { Button } from "./Button"
 
 import type {
@@ -47,6 +50,22 @@ const messages = defineMessages({
     id: "donate_widget.loading_checkout",
     defaultMessage: "Loading…",
   },
+  currencySelect: {
+    id: "donate_widget.currency_select",
+    defaultMessage: "Select currency",
+  },
+  amountSelect: {
+    id: "donate_widget.amount_select",
+    defaultMessage: "Amount to donate",
+  },
+  amountButton: {
+    id: "donate_widget.amount_button",
+    defaultMessage: "Select {amount}",
+  },
+  loadingError: {
+    id: "donate_widget.loading_error",
+    defaultMessage: "Loading checkout timed out, please try again",
+  },
 })
 
 export function DonateWidget({
@@ -70,7 +89,6 @@ export function DonateWidget({
   const [loadingCheckout, setLoadingCheckout] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  const formatter = useCurrencyFormatter(currency)
   const intl = useIntl()
 
   const handleChangeFrequency = useCallback(
@@ -106,12 +124,11 @@ export function DonateWidget({
   const handleDonate = useCallback(() => {
     setLoadingCheckout(true)
     onDonate(currentAmount, frequency, currency)
-    sendMessage("checkout-start")
     setTimeout(() => {
       setLoadingCheckout(false)
-      setError("Loading checkout timed out, please try again")
+      setError(intl.formatMessage(messages.loadingError))
     }, 5000)
-  }, [currency, currentAmount, frequency, onDonate])
+  }, [currency, currentAmount, frequency, intl, onDonate])
 
   return (
     <div className={classNames("dark:text-white", className)}>
@@ -135,33 +152,43 @@ export function DonateWidget({
         ))}
       </div>
 
-      <div className="flex">
+      <div className="flex group">
         <Select
           className={classNames(
             "p-2 rounded-l-md outline-none transition-colors cursor-pointer disabled:cursor-default font-medium",
-            "bg-gray-2 hocus:bg-gray-1 dark:bg-gray-1",
-            "disabled:bg-gray-2 disabled:hocus:bg-gray-2"
+            "text-white bg-blurple-500 group-hover:bg-blurple-600",
+            "disabled:bg-gray-2 disabled:group-hover:bg-gray-2"
           )}
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
-          aria-label="Select currency"
+          aria-label={intl.formatMessage(messages.currencySelect)}
           disabled={loadingCheckout}
         >
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
+          <option value="USD">
+            <FormattedMessage
+              id="donate_widget.currency.usd"
+              defaultMessage="USD"
+            />
+          </option>
+          <option value="EUR">
+            <FormattedMessage
+              id="donate_widget.currency.eur"
+              defaultMessage="EUR"
+            />
+          </option>
         </Select>
         <Input
           className={classNames(
             "w-full px-2 rounded-r-md font-bold outline-none transition-colors",
-            "dark:bg-black border-2 border-gray-2 hocus:border-gray-1 dark:border-gray-1",
-            "disabled:border-gray-2 disabled:hocus:border-gray-2"
+            "border border-blurple-500 group-hover:border-blurple-600",
+            "disabled:border-gray-2 disabled:group-hover:border-gray-2"
           )}
           type="number"
           value={currentAmount / 100}
           onChange={handleChangeAmount}
           min={0}
           step={1}
-          aria-label="Amount to donate"
+          aria-label={intl.formatMessage(messages.amountSelect)}
           disabled={loadingCheckout}
         />
       </div>
@@ -172,11 +199,22 @@ export function DonateWidget({
             key={amount}
             onClick={() => handleClickAmount(amount)}
             dark={amount === currentAmount && !dirty}
-            aria-label={`Select ${formatter.format(amount / 100)}`}
+            aria-label={intl.formatMessage(messages.amountButton, {
+              amount: intl.formatNumber(amount / 100, {
+                style: "currency",
+                currency,
+                maximumFractionDigits: 0,
+              }),
+            })}
             disabled={loadingCheckout}
             fullWidth
           >
-            {formatter.format(amount / 100)}
+            <FormattedNumber
+              value={amount / 100}
+              style="currency"
+              currency={currency}
+              maximumFractionDigits={0}
+            />
           </Button>
         ))}
       </div>

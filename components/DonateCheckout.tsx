@@ -1,9 +1,5 @@
 import { Input } from "@headlessui/react"
-import {
-  AddressElement,
-  PaymentElement,
-  useCheckout,
-} from "@stripe/react-stripe-js"
+import { PaymentElement, useCheckout } from "@stripe/react-stripe-js"
 import classNames from "classnames"
 import Link from "next/link"
 import { ChangeEvent, FormEvent, useCallback, useState } from "react"
