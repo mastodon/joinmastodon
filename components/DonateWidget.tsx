@@ -63,6 +63,10 @@ const messages = defineMessages({
     id: "donate_widget.amount_button",
     defaultMessage: "Select {amount}",
   },
+  amountError: {
+    id: "donate_widget.amount_error",
+    defaultMessage: "Please input an amount above 1",
+  },
   loadingError: {
     id: "donate_widget.loading_error",
     defaultMessage: "Loading checkout timed out, please try again",
@@ -111,11 +115,18 @@ export function DonateWidget({
     [amounts, frequency]
   )
   const handleChangeAmount: React.ChangeEventHandler<HTMLInputElement> =
-    useCallback((event) => {
-      setCurrentAmount(event.currentTarget.valueAsNumber * 100)
-      setDirty(true)
-      setError(null)
-    }, [])
+    useCallback(
+      (event) => {
+        setCurrentAmount(event.currentTarget.valueAsNumber * 100)
+        setDirty(true)
+        if (event.currentTarget.valueAsNumber < 1) {
+          setError(intl.formatMessage(messages.amountError))
+        } else {
+          setError(null)
+        }
+      },
+      [intl]
+    )
   const handleClickAmount = useCallback((amount: number) => {
     setCurrentAmount(amount)
     setDirty(false)
