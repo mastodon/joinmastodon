@@ -1,4 +1,3 @@
-import { Input } from "@headlessui/react"
 import { PaymentElement, useCheckout } from "@stripe/react-stripe-js"
 import classNames from "classnames"
 import Link from "next/link"
@@ -9,6 +8,7 @@ import LoadingIcon from "../public/icons/loading.svg?inline"
 import ArrowLeftIcon from "../public/ui/arrow-left.svg?inline"
 
 import { Button } from "./Button"
+import { Input } from "./Input"
 
 interface DonateCheckoutProps {
   backUrl?: string
@@ -112,29 +112,23 @@ export function DonateCheckout({
       </header>
       <hr className="my-4 border-t border-gray-2" />
       <div className="flex max-sm:flex-col gap-4">
-        <div className="w-full">
-          <label>
-            <FormattedMessage
-              id="donate_widget.checkout.email"
-              defaultMessage="Email"
-            >
-              {(text) => <p className="mb-2">{text}</p>}
-            </FormattedMessage>
-            <Input
-              type="email"
-              value={email}
-              onChange={handleChange}
-              placeholder="me@example.com"
-              className={classNames(
-                "w-full p-4 rounded-md transition-colors",
-                "border-2 border-gray-2 hocus:border-gray-1 dark:border-gray-1",
-                "disabled:border-gray-2 disabled:hocus:border-gray-2"
-              )}
-              onBlur={handleEmailBlur}
-              disabled={isLoading}
-            />
-          </label>
-        </div>
+        <label className="w-full">
+          <FormattedMessage
+            id="donate_widget.checkout.email"
+            defaultMessage="Email"
+          >
+            {(text) => <p className="mb-2">{text}</p>}
+          </FormattedMessage>
+          <Input
+            type="email"
+            value={email}
+            onChange={handleChange}
+            placeholder="me@example.com"
+            onBlur={handleEmailBlur}
+            disabled={isLoading}
+            fullWidth
+          />
+        </label>
 
         <div className="w-full">
           <h4 className="mb-2">

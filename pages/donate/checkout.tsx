@@ -10,7 +10,10 @@ import { DonateCheckout } from "../../components/DonateCheckout"
 import { sendMessage } from "../../donate/utils"
 import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
 
-import { themeSchema } from "./index"
+import { themeSchema } from "../../donate/utils"
+
+const primaryColor = "#6364ff"
+const hoverColor = "#563acc"
 
 export default function DonateCheckoutPage({
   clientSecret,
@@ -45,10 +48,32 @@ export default function DonateCheckoutPage({
           appearance: {
             theme: "flat",
             variables: {
-              colorPrimary: "#6364ff",
+              colorPrimary: primaryColor,
               colorText: "#000000",
+              colorBackground: "#ffffff",
+              colorTextSecondary: primaryColor,
               borderRadius: "0.5rem",
               logoColor: theme,
+            },
+            rules: {
+              ".AccordionItem": {
+                border: `1px solid ${primaryColor}`,
+                padding: "1rem",
+              },
+              ".AccordionItem:hover": {
+                color: hoverColor,
+                borderColor: hoverColor,
+              },
+              ".Input": {
+                border: `1px solid ${primaryColor}`,
+              },
+              ".Input::placeholder": {
+                color: "#9b9b9b",
+              },
+              ".Block": {
+                border: `1px solid #d4d4d4`,
+                boxShadow: "none",
+              },
             },
           },
         },
