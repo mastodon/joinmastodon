@@ -1,3 +1,4 @@
+import { z } from "zod"
 import type { MessageData } from "./types"
 
 export function sendMessage(action: string) {
@@ -18,3 +19,5 @@ export function isPopupMessage(data: unknown): data is MessageData {
     typeof data.action === "string"
   )
 }
+
+export const themeSchema = z.enum(["light", "dark", "auto"]).default("auto")

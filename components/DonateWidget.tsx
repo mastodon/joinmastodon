@@ -6,7 +6,7 @@ import {
   FormattedNumber,
   useIntl,
 } from "react-intl"
-import { Input, Select } from "@headlessui/react"
+import { Select } from "@headlessui/react"
 
 import CheckIcon from "../public/icons/check.svg?inline"
 import { Button } from "./Button"
@@ -16,6 +16,7 @@ import type {
   CampaignResponse,
   DonationFrequency,
 } from "../types/api"
+import { Input } from "./Input"
 
 export type OnDonateFn = (
   amount: number,
@@ -152,12 +153,12 @@ export function DonateWidget({
         ))}
       </div>
 
-      <div className="flex group">
+      <div className="flex focus-within:shadow-input rounded-md">
         <Select
           className={classNames(
             "p-2 rounded-l-md outline-none transition-colors cursor-pointer disabled:cursor-default font-medium",
-            "text-white bg-blurple-500 group-hover:bg-blurple-600",
-            "disabled:bg-gray-2 disabled:group-hover:bg-gray-2"
+            "text-white bg-blurple-500 hocus:bg-blurple-600",
+            "disabled:bg-gray-2 disabled:hocus:bg-gray-2"
           )}
           value={currency}
           onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
@@ -178,18 +179,15 @@ export function DonateWidget({
           </option>
         </Select>
         <Input
-          className={classNames(
-            "w-full px-2 rounded-r-md font-bold outline-none transition-colors",
-            "border border-blurple-500 group-hover:border-blurple-600",
-            "disabled:border-gray-2 disabled:group-hover:border-gray-2"
-          )}
+          className="rounded-l-none focus:shadow-none"
           type="number"
           value={currentAmount / 100}
           onChange={handleChangeAmount}
-          min={0}
+          min={1}
           step={1}
           aria-label={intl.formatMessage(messages.amountSelect)}
           disabled={loadingCheckout}
+          fullWidth
         />
       </div>
       <div className="flex gap-2 mt-4">

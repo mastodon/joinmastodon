@@ -91,6 +91,9 @@ const config = {
           '"Noto Color Emoji"',
         ],
       },
+      boxShadow: {
+        input: "0 0 0 3px #6364ff40, 0 0 0 1px #6364ff",
+      },
       fontWeight: {
         extranormal: 450,
       },
