@@ -41,7 +41,7 @@ export default function DonateCheckoutPage({
           appearance: {
             theme: "flat",
             variables: {
-              colorPrimary: "#333333",
+              colorPrimary: "#6364ff",
               colorText: "#000000",
               borderRadius: "0.5rem",
               logoColor: theme,
