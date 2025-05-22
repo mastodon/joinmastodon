@@ -42,14 +42,15 @@ export function DonatePopup({
       }
 
       switch (message.action) {
-        case "checkout-loaded": {
+        case "widget-loaded":
+          setCurrentStep("choose")
+          break
+        case "checkout-loaded":
           setCurrentStep("checkout")
           break
-        }
-        case "close": {
+        case "close":
           handleClose()
           break
-        }
       }
     }
     window.addEventListener("message", handleMessage)
@@ -57,10 +58,6 @@ export function DonatePopup({
       window.removeEventListener("message", handleMessage)
     }
   }, [])
-
-  const handleIframeLoad = () => {
-    setCurrentStep("choose")
-  }
 
   return (
     <>
@@ -96,7 +93,6 @@ export function DonatePopup({
                 currentStep === "checkout" && "h-[40rem]"
               )}
               ref={iframeRef}
-              onLoad={handleIframeLoad}
             ></iframe>
             {currentStep === "loading" && (
               <p className="flex gap-2 items-center justify-center text-gray-2 p-4 h-[28rem]">

@@ -2,10 +2,11 @@ import * as cookie from "cookie"
 import classNames from "classnames"
 import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/navigation"
-import { useCallback } from "react"
+import { useCallback, useEffect } from "react"
 import { z } from "zod"
 
 import { OnDonateFn, DonateWidget } from "../../components/DonateWidget"
+import { sendMessage } from "../../donate/utils"
 import {
   CampaignResponse,
   CURRENCIES,
@@ -37,6 +38,10 @@ export default function DonatePage({
     },
     [donation_url, router]
   )
+
+  useEffect(() => {
+    sendMessage("widget-loaded")
+  }, [])
 
   return (
     <div
