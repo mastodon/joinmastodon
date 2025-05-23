@@ -99,6 +99,7 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
     seed,
     source: "menu",
     environment: "staging",
+    return_url: `${req.headers.host}/sponsor`,
   })
 
   try {

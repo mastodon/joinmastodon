@@ -65,8 +65,9 @@ export function DonateCheckout({
       if (confirmResult.type === "error") {
         setMessage(confirmResult.error.message)
         setIsLoading(false)
+      } else {
+        onComplete()
       }
-      onComplete()
     },
     [checkout, email, onComplete]
   )

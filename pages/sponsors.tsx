@@ -28,8 +28,9 @@ interface DonateCardProps {
   className?: string
   copy: React.ReactNode
   cta: React.ReactNode
-  ctaLink: string
+  ctaLink?: string
   ctaLight?: boolean
+  isPopup?: boolean
 }
 
 const DonateCard = ({
@@ -41,6 +42,7 @@ const DonateCard = ({
   cta,
   ctaLink,
   ctaLight = false,
+  isPopup = false,
 }: DonateCardProps) => (
   <div
     className={classNames(
@@ -58,9 +60,16 @@ const DonateCard = ({
       <span className={titleInnerClassName}>{title}</span>
     </h3>
     <p className="b2 mb-8 text-gray-1 grow">{copy}</p>
-    <LinkButton light={ctaLight} size="medium" href={ctaLink}>
-      {cta}
-    </LinkButton>
+    {!!ctaLink && (
+      <LinkButton light={ctaLight} size="medium" href={ctaLink}>
+        {cta}
+      </LinkButton>
+    )}
+    {isPopup && (
+      <DonatePopup dark={!ctaLight} size="medium">
+        {cta}
+      </DonatePopup>
+    )}
   </div>
 )
 
@@ -84,12 +93,12 @@ function Sponsors() {
           />
         </p>
         <div className="flex gap-6">
-          <DonatePopup size="large" dark>
+          <LinkButton size="large" href="#donate">
             <FormattedMessage
               id="sponsors.hero.cta.donate"
               defaultMessage="Donate"
             />
-          </DonatePopup>
+          </LinkButton>
           <LinkButton size="large" light borderless href="#supported_by">
             <FormattedMessage
               id="sponsors.hero.cta.view_sponsors"
@@ -173,7 +182,7 @@ function Sponsors() {
                       defaultMessage="Donate directly"
                     />
                   }
-                  ctaLink="https://donate.stripe.com/00g5l42h8ezY3YcaEE"
+                  isPopup
                 />
                 <DonateCard
                   title={
