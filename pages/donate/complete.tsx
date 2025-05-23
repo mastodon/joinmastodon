@@ -15,7 +15,7 @@ export default function DonateCompletePage() {
   }, [])
 
   return (
-    <div className="flex flex-col p-8 gap-2">
+    <div className="flex flex-col p-8 gap-2 justify-between min-h-screen">
       <h1 className="sh1">
         <FormattedMessage
           id="donate_widget.success.header"

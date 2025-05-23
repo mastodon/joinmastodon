@@ -6,11 +6,12 @@ import { useRouter } from "next/navigation"
 import { useCallback, useEffect, useMemo } from "react"
 import { z } from "zod"
 
-import { DonateCheckout } from "../../components/DonateCheckout"
+import { DonateCheckout } from "../../components/donate/DonateCheckout"
 import { sendMessage } from "../../donate/utils"
 import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
 
 import { themeSchema } from "../../donate/utils"
+import { DonateFooter } from "../../components/donate/DonateFooter"
 
 const primaryColor = "#6364ff"
 const hoverColor = "#563acc"
@@ -79,11 +80,19 @@ export default function DonateCheckoutPage({
         },
       }}
     >
-      <DonateCheckout
-        onComplete={handleDonate}
-        className={classNames(theme, "bg-white dark:bg-black p-8")}
-        backUrl={backUrl}
-      />
+      <div
+        className={classNames(
+          theme,
+          "bg-white dark:bg-black min-h-screen flex flex-col"
+        )}
+      >
+        <DonateCheckout
+          onComplete={handleDonate}
+          className="p-8 pb-2 grow"
+          backUrl={backUrl}
+        />
+        <DonateFooter />
+      </div>
     </CheckoutProvider>
   )
 }

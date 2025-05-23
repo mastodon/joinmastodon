@@ -8,15 +8,15 @@ import {
 } from "react-intl"
 import { Select } from "@headlessui/react"
 
-import CheckIcon from "../public/icons/check.svg?inline"
-import { Button } from "./Button"
-
+import CheckIcon from "../../public/icons/check.svg?inline"
+import DropdownArrowIcon from "../../public/icons/dropdown-arrow.svg?inline"
 import type {
   Currency,
   CampaignResponse,
   DonationFrequency,
-} from "../types/api"
-import { Input } from "./Input"
+} from "../../types/api"
+import { Button } from "../Button"
+import { Input } from "../Input"
 
 export type OnDonateFn = (
   amount: number,
@@ -90,48 +90,70 @@ export function DonateWidget({
   const [currentAmount, setCurrentAmount] = useState(
     () => defaultAmount ?? amounts[frequency][currency][0]
   )
+  const [amountDisplay, setAmountDisplay] = useState(() =>
+    ((defaultAmount ?? amounts[frequency][currency][0]) / 100).toFixed(2)
+  )
   const [dirty, setDirty] = useState(false)
   const [loadingCheckout, setLoadingCheckout] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const intl = useIntl()
 
+  const updateAmount = useCallback((amount: number) => {
+    const intAmount = Math.round(amount)
+    if (isNaN(intAmount) || intAmount < 100) {
+      return
+    }
+    setCurrentAmount(intAmount)
+    setAmountDisplay((intAmount / 100).toFixed(2))
+  }, [])
+
   const handleChangeFrequency = useCallback(
     (toFrequency: DonationFrequency) => () => {
       setFrequency(toFrequency)
-      setCurrentAmount(amounts[toFrequency][currency][0])
+      updateAmount(amounts[toFrequency][currency][0])
       setDirty(false)
       setError(null)
     },
-    [amounts, currency]
+    [amounts, currency, updateAmount]
   )
   const handleChangeCurrency = useCallback(
     (toCurrency: Currency) => {
       setCurrency(toCurrency)
-      setCurrentAmount(amounts[frequency][toCurrency][0])
+      updateAmount(amounts[frequency][toCurrency][0])
       setDirty(false)
       setError(null)
     },
-    [amounts, frequency]
+    [amounts, frequency, updateAmount]
   )
   const handleChangeAmount: React.ChangeEventHandler<HTMLInputElement> =
     useCallback(
       (event) => {
-        setCurrentAmount(event.currentTarget.valueAsNumber * 100)
         setDirty(true)
-        if (event.currentTarget.valueAsNumber < 1) {
-          setError(intl.formatMessage(messages.amountError))
-        } else {
-          setError(null)
+        const { value, valueAsNumber } = event.currentTarget
+        setAmountDisplay(
+          value.replaceAll(/[^0-9\.]+/g, "") ||
+            valueAsNumber.toFixed(2) ||
+            (currentAmount / 100).toFixed(2)
+        )
+        if (isNaN(valueAsNumber) || valueAsNumber < 1) {
+          return
         }
+        setCurrentAmount(valueAsNumber * 100)
       },
-      [intl]
+      [currentAmount]
     )
-  const handleClickAmount = useCallback((amount: number) => {
-    setCurrentAmount(amount)
-    setDirty(false)
-    setError(null)
-  }, [])
+  const handleClickAmount = useCallback(
+    (amount: number) => {
+      updateAmount(amount)
+      setDirty(false)
+      setError(null)
+    },
+    [updateAmount]
+  )
+  const handleBlurAmount = useCallback(() => {
+    setAmountDisplay((currentAmount / 100).toFixed(2))
+  }, [currentAmount])
 
   const handleDonate = useCallback(() => {
     setLoadingCheckout(true)
@@ -150,52 +172,59 @@ export function DonateWidget({
         {frequencies.map((freq) => (
           <Button
             key={freq}
-            className={classNames(
-              "rounded-none first:rounded-l-md last:rounded-r-md"
-            )}
+            className="rounded-none first:rounded-l-md last:rounded-r-md pr-6 group"
             dark={freq === frequency}
             onClick={handleChangeFrequency(freq)}
             disabled={loadingCheckout}
             fullWidth
           >
-            <CheckIcon className="fill-black w-auto h-4" />
+            <CheckIcon
+              className={classNames(
+                "fill-black w-auto h-4 transition-opacity",
+                frequency !== freq && "opacity-0 group-hover:opacity-100"
+              )}
+            />
             {intl.formatMessage(messages[freq])}
           </Button>
         ))}
       </div>
 
       <div className="flex focus-within:shadow-input rounded-md">
-        <Select
-          className={classNames(
-            "p-2 rounded-l-md outline-none transition-colors cursor-pointer disabled:cursor-default font-medium",
-            "text-white bg-blurple-500 hocus:bg-blurple-600",
-            "disabled:bg-gray-2 disabled:hocus:bg-gray-2"
-          )}
-          value={currency}
-          onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
-          aria-label={intl.formatMessage(messages.currencySelect)}
-          disabled={loadingCheckout}
-        >
-          <option value="USD">
-            <FormattedMessage
-              id="donate_widget.currency.usd"
-              defaultMessage="USD"
-            />
-          </option>
-          <option value="EUR">
-            <FormattedMessage
-              id="donate_widget.currency.eur"
-              defaultMessage="EUR"
-            />
-          </option>
-        </Select>
+        <span className="relative">
+          <DropdownArrowIcon className="absolute left-0 top-[9px] fill-white pointer-events-none" />
+          <Select
+            className={classNames(
+              "h-full p-2 pl-6 rounded-l-md outline-none transition-colors cursor-pointer disabled:cursor-default font-medium",
+              "text-white bg-blurple-500 hocus:bg-blurple-600",
+              "disabled:bg-gray-2 disabled:hocus:bg-gray-2"
+            )}
+            value={currency}
+            onChange={(e) => handleChangeCurrency(e.target.value as Currency)}
+            aria-label={intl.formatMessage(messages.currencySelect)}
+            disabled={loadingCheckout}
+          >
+            <option value="USD">
+              <FormattedMessage
+                id="donate_widget.currency.usd"
+                defaultMessage="USD"
+              />
+            </option>
+            <option value="EUR">
+              <FormattedMessage
+                id="donate_widget.currency.eur"
+                defaultMessage="EUR"
+              />
+            </option>
+          </Select>
+        </span>
         <Input
           className="rounded-l-none focus:shadow-none"
           type="number"
-          value={currentAmount / 100}
+          value={amountDisplay}
           onChange={handleChangeAmount}
+          onBlur={handleBlurAmount}
           min={1}
-          step={1}
+          step={0.01}
           aria-label={intl.formatMessage(messages.amountSelect)}
           disabled={loadingCheckout}
           fullWidth

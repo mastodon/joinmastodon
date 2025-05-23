@@ -77,7 +77,7 @@ export function DonatePopup({
         <DialogBackdrop className="fixed inset-0 bg-black/30" />
         <div
           className={classNames(
-            "fixed inset-0 flex w-screen items-end sm:items-center justify-center z-10",
+            "fixed inset-0 flex w-screen items-end sm:items-center justify-center z-20",
             "transition-transform"
           )}
         >
@@ -92,14 +92,14 @@ export function DonatePopup({
               className={classNames(
                 "w-full transition-transform",
                 currentStep === "loading" && "hidden",
-                currentStep === "choose" && "h-[28rem]",
+                currentStep === "choose" && "h-[30rem]",
                 currentStep === "checkout" && "h-[40rem]",
-                currentStep === "complete" && "h-[28rem]"
+                currentStep === "complete" && "h-[30rem]"
               )}
               ref={iframeRef}
             ></iframe>
             {currentStep === "loading" && (
-              <p className="flex gap-2 items-center justify-center text-gray-2 p-4 h-[28rem]">
+              <p className="flex gap-2 items-center justify-center text-gray-2 p-4 h-[30rem]">
                 <LoadingIcon className="motion-safe:animate-spin size-5" />
                 <FormattedMessage
                   id="donate_widget.loading"

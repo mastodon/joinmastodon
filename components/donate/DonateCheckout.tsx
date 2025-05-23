@@ -4,11 +4,11 @@ import Link from "next/link"
 import { ChangeEvent, FormEvent, useCallback, useState } from "react"
 import { FormattedMessage } from "react-intl"
 
-import LoadingIcon from "../public/icons/loading.svg?inline"
-import ArrowLeftIcon from "../public/ui/arrow-left.svg?inline"
+import LoadingIcon from "../../public/icons/loading.svg?inline"
+import ArrowLeftIcon from "../../public/ui/arrow-left.svg?inline"
 
-import { Button } from "./Button"
-import { Input } from "./Input"
+import { Button } from "../Button"
+import { Input } from "../Input"
 
 interface DonateCheckoutProps {
   backUrl?: string
@@ -24,11 +24,11 @@ export function DonateCheckout({
   const checkout = useCheckout()
 
   const [email, setEmail] = useState("")
-  const [message, setMessage] = useState<string | null>(null)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setMessage(null)
+    setErrorMessage(null)
     setEmail(e.target.value)
   }, [])
 
@@ -39,9 +39,9 @@ export function DonateCheckout({
 
     const result = await checkout.updateEmail(email)
     if (result.type === "error") {
-      setMessage(result.error.message)
+      setErrorMessage(result.error.message)
     } else {
-      setMessage(null)
+      setErrorMessage(null)
     }
   }, [checkout, email])
 
@@ -53,7 +53,7 @@ export function DonateCheckout({
 
       const result = await checkout.updateEmail(email)
       if (result.type === "error") {
-        setMessage(result.error.message)
+        setErrorMessage(result.error.message)
         setIsLoading(false)
         return
       }
@@ -63,10 +63,11 @@ export function DonateCheckout({
       })
 
       if (confirmResult.type === "error") {
-        setMessage(confirmResult.error.message)
+        setErrorMessage(confirmResult.error.message)
         setIsLoading(false)
+      } else {
+        onComplete()
       }
-      onComplete()
     },
     [checkout, email, onComplete]
   )
@@ -142,7 +143,9 @@ export function DonateCheckout({
       </div>
 
       <div className="mt-4">
-        {message && <p className="text-error text-b3 mb-2">{message}</p>}
+        {errorMessage && (
+          <p className="text-error text-b3 mb-2">{errorMessage}</p>
+        )}
         <Button
           disabled={isLoading}
           dark

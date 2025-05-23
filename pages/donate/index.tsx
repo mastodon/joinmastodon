@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { useCallback, useEffect } from "react"
 import { z } from "zod"
 
-import { OnDonateFn, DonateWidget } from "../../components/DonateWidget"
+import { OnDonateFn, DonateWidget } from "../../components/donate/DonateWidget"
 import { sendMessage, themeSchema } from "../../donate/utils"
 import {
   CampaignResponse,
@@ -13,6 +13,7 @@ import {
   DONATION_FREQUENCIES,
 } from "../../types/api"
 import { fetchEndpoint } from "../../utils/api"
+import { DonateFooter } from "../../components/donate/DonateFooter"
 
 export default function DonatePage({
   theme,
@@ -31,7 +32,7 @@ export default function DonatePage({
       const params = new URLSearchParams({
         url: donation_url,
         frequency,
-        amount: amount.toString(),
+        amount: amount.toFixed(0),
         currency,
       })
       router.push(`/donate/checkout?${params.toString()}`)
@@ -45,16 +46,21 @@ export default function DonatePage({
 
   return (
     <div
-      className={classNames(theme, "bg-white dark:bg-black min-h-screen p-8")}
+      className={classNames(
+        theme,
+        "bg-white dark:bg-black min-h-screen flex flex-col"
+      )}
     >
       <DonateWidget
         defaultCurrency={defaultCurrency ?? default_currency}
+        className="p-8 pb-2 grow"
         messages={{ donation_message, donation_button_text }}
         amounts={amounts}
         onDonate={handleDonate}
         defaultAmount={defaultAmount}
         defaultFrequency={defaultFrequency}
       />
+      <DonateFooter />
     </div>
   )
 }
@@ -99,6 +105,7 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
     seed,
     source: "menu",
     environment: "staging",
+    return_url: `${req.headers.host}/sponsor`,
   })
 
   try {
