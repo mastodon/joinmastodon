@@ -12,6 +12,7 @@ import classNames from "classnames"
 import { Button, ButtonProps } from "../components/Button"
 import CloseIcon from "../public/icons/close.svg?inline"
 import LoadingIcon from "../public/icons/loading.svg?inline"
+
 import { isPopupMessage } from "./utils"
 
 import type { Step } from "./types"
@@ -48,6 +49,9 @@ export function DonatePopup({
         case "checkout-loaded":
           setCurrentStep("checkout")
           break
+        case "complete-loaded":
+          setCurrentStep("complete")
+          break
         case "close":
           handleClose()
           break
@@ -78,19 +82,19 @@ export function DonatePopup({
           )}
         >
           <DialogPanel
-            className={classNames(
-              "w-full bg-white rounded-md max-sm:rounded-b-none overflow-hidden flex items-center justify-center relative",
-              currentStep !== "checkout" && "max-w-md",
-              currentStep === "checkout" && "max-w-md"
-            )}
+            className={
+              "w-full max-w-md bg-white rounded-md max-sm:rounded-b-none " +
+              "overflow-hidden flex items-center justify-center relative"
+            }
           >
             <iframe
               src="/donate"
               className={classNames(
                 "w-full transition-transform",
                 currentStep === "loading" && "hidden",
-                currentStep === "choose" && "h-[30rem]",
-                currentStep === "checkout" && "h-[40rem]"
+                currentStep === "choose" && "h-[28rem]",
+                currentStep === "checkout" && "h-[40rem]",
+                currentStep === "complete" && "h-[28rem]"
               )}
               ref={iframeRef}
             ></iframe>
