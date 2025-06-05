@@ -1,4 +1,4 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query"
+import { useQuery } from "@tanstack/react-query"
 import Head from "next/head"
 import Hero from "../components/Hero"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
@@ -18,14 +18,12 @@ import press from "../data/press"
 const Careers = () => {
   const jobsResponse = useQuery({
     queryKey: ["jobs"],
-    queryFn: () => fetchEndpoint("jobs"),
+    queryFn: () => fetchEndpoint<JobsResponse>("jobs"),
 
     // 10 minutes
     gcTime: 10 * 60 * 1000,
 
-    select: (data) => {
-      return _groupBy(data.results, "departmentName")
-    },
+    select: (data) => _groupBy(data.results, "departmentName"),
   })
 
   return (
