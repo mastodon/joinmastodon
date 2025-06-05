@@ -1,39 +1,58 @@
-import {
-  useQuery,
-  useQueryClient,
-  keepPreviousData,
-} from "@tanstack/react-query"
-import { useState, useEffect, useRef } from "react"
-import { useRouter } from "next/router"
-import { FormattedMessage, FormattedDate, useIntl } from "react-intl"
+import { useQuery, keepPreviousData } from "@tanstack/react-query"
 import classnames from "classnames"
 import { orderBy as _orderBy } from "lodash"
-import ServerCard from "../components/ServerCard"
+import Head from "next/head"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import React, {
+  useState,
+  useEffect,
+  ReactElement,
+  useMemo,
+  SetStateAction,
+  Dispatch,
+} from "react"
+import {
+  FormattedMessage,
+  FormattedDate,
+  useIntl,
+  defineMessages,
+  MessageDescriptor,
+} from "react-intl"
+
+import Hero from "../components/Hero"
 import { IconCard } from "../components/IconCard"
+import Layout from "../components/Layout"
+import ServerCard from "../components/ServerCard"
 import SelectMenu from "../components/SelectMenu"
+import SkeletonText from "../components/SkeletonText"
 import Statistic from "../components/Statistic"
 import { categoriesMessages } from "../data/categories"
-import type { Server, Category, Language, Day, Region } from "../types/api"
-import Hero from "../components/Hero"
-import { withDefaultStaticProps } from "../utils/defaultStaticProps"
-import { formatNumber } from "../utils/numbers"
-import { fetchEndpoint } from "../utils/api"
-
-import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
-import PersonIcon from "../public/ui/person.svg?inline"
+import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import FiltersIcon from "../public/ui/filters.svg?inline"
-import SkeletonText from "../components/SkeletonText"
-import Head from "next/head"
-import Layout from "../components/Layout"
-import Link from "next/link"
+import PersonIcon from "../public/ui/person.svg?inline"
+import type { Category, Region } from "../types/api"
+import { fetchEndpoint } from "../utils/api"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
+import { regionsMessages } from "../data/regions"
 
-const DUNBAR = Math.log(800)
+const queryOptions = {
+  gcTime: 30 * 60 * 1000, // 30 minutes
+}
+
+interface FilterState {
+  language: string
+  category: string
+  region: string
+  ownership: string
+  registrations: string
+}
 
 const Servers = () => {
   const intl = useIntl()
   const { locale } = useRouter()
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<FilterState>({
     language: locale === "en" ? "en" : "",
     category: "",
     region: "",
@@ -41,11 +60,7 @@ const Servers = () => {
     registrations: "",
   })
 
-  const params = new URLSearchParams(filters)
-
-  const queryOptions = {
-    gcTime: 30 * 60 * 1000, // 30 minutes
-  }
+  const params = new URLSearchParams(Object.entries(filters))
 
   const allCategories = useQuery({
     queryKey: ["categories", ""],
@@ -77,7 +92,7 @@ const Servers = () => {
     },
   })
 
-  let defaultOption = {
+  const defaultLanguageOption = {
     value: "",
     label: intl.formatMessage({
       id: "wizard.filter.all_languages",
@@ -139,27 +154,18 @@ const Servers = () => {
     ...queryOptions,
 
     select: (data) => {
-      let updated = data
+      const updated = data
         .filter((language) => language.language && language.locale)
         .map((language) => ({
           label: language.language,
           value: language.locale,
         }))
-
-      updated = [defaultOption, ...updated]
-      return updated
+      return [defaultLanguageOption, ...updated]
     },
   })
 
   const servers = useQuery({
-    queryKey: [
-      "servers",
-      filters.language,
-      filters.category,
-      filters.ownership,
-      filters.registrations,
-      filters.region,
-    ],
+    queryKey: ["servers", filters],
 
     queryFn: () => fetchEndpoint("servers", params),
     ...queryOptions,
@@ -170,58 +176,6 @@ const Servers = () => {
     queryFn: () => fetchEndpoint("statistics"),
     ...queryOptions,
   })
-
-  const regions = [
-    {
-      value: "",
-      label: intl.formatMessage({
-        id: "server.regions.all",
-        defaultMessage: "All regions",
-      }),
-    },
-    {
-      value: "europe",
-      label: intl.formatMessage({
-        id: "server.regions.europe",
-        defaultMessage: "Europe",
-      }),
-    },
-    {
-      value: "north_america",
-      label: intl.formatMessage({
-        id: "server.regions.north_america",
-        defaultMessage: "North America",
-      }),
-    },
-    {
-      value: "south_america",
-      label: intl.formatMessage({
-        id: "server.regions.south_america",
-        defaultMessage: "South America",
-      }),
-    },
-    {
-      value: "africa",
-      label: intl.formatMessage({
-        id: "server.regions.africa",
-        defaultMessage: "Africa",
-      }),
-    },
-    {
-      value: "asia",
-      label: intl.formatMessage({
-        id: "server.regions.asia",
-        defaultMessage: "Asia",
-      }),
-    },
-    {
-      value: "oceania",
-      label: intl.formatMessage({
-        id: "server.regions.oceania",
-        defaultMessage: "Oceania",
-      }),
-    },
-  ]
 
   return (
     <Layout>
@@ -256,7 +210,7 @@ const Servers = () => {
                 setFilters({ ...filters, language: v })
               }}
               value={filters.language}
-              options={apiLanguages.data || [defaultOption]}
+              options={apiLanguages.data || [defaultLanguageOption]}
             />
 
             <SelectMenu
@@ -307,8 +261,6 @@ const Servers = () => {
             </p>
 
             <ServerFilters
-              initialCategories={allCategories.data}
-              regions={regions}
               categories={apiCategories.data}
               filters={filters}
               setFilters={setFilters}
@@ -493,8 +445,6 @@ const ServerList = ({ servers }) => {
 }
 
 const ServerStats = ({ days }) => {
-  const intl = useIntl()
-
   if (days.isError) {
     return null
   }
@@ -581,130 +531,164 @@ const ServerStats = ({ days }) => {
   )
 }
 
+const filtersMessages = defineMessages({
+  region: {
+    id: "server.filter_by.region",
+    defaultMessage: "Region",
+  },
+  regionLead: {
+    id: "server.filter_by.region.lead",
+    defaultMessage: "Where the provider is legally based.",
+  },
+  category: {
+    id: "server.filter_by.category",
+    defaultMessage: "Topic",
+  },
+  categoryLead: {
+    id: "server.filter_by.category.lead",
+    defaultMessage:
+      "Some providers specialize in hosting accounts from specific communities.",
+  },
+  categoryAll: {
+    id: "server.filter.all_categories",
+    defaultMessage: "All topics",
+  },
+  categoryCount: {
+    id: "server.filter_by.category.count",
+    defaultMessage: "({count})",
+  },
+})
+
+interface ServerFiltersProps {
+  filters: FilterState
+  setFilters: Dispatch<SetStateAction<FilterState>>
+  categories: Category[]
+}
+
 const ServerFilters = ({
   filters,
   setFilters,
   categories,
-  initialCategories,
-  regions,
-}: {
-  filters: any
-  setFilters: any
-  categories: Category[]
-  initialCategories: Category[]
-  regions: Region[]
+}: ServerFiltersProps) => {
+  const intl = useIntl()
+
+  const categoryOptions: ServerFilterItem[] = useMemo(
+    () =>
+      categories?.map(({ category, servers_count }) => ({
+        value: category,
+        label:
+          category === ""
+            ? filtersMessages.categoryAll
+            : categoriesMessages[category as keyof typeof categoriesMessages],
+        disabled: servers_count === 0,
+        extra: intl.formatMessage(filtersMessages.categoryCount, {
+          count: servers_count,
+        }),
+      })) ?? [],
+
+    [categories, intl]
+  )
+
+  const regions: ServerFilterItem[] = useMemo(
+    () =>
+      Object.keys(regionsMessages).map((key) => ({
+        value: key === "all" ? "" : key,
+        label: regionsMessages[key as keyof typeof regionsMessages],
+      })),
+    []
+  )
+
+  return (
+    <aside className="mb-8 flex flex-col gap-8">
+      <ServerFiltersSection
+        title={filtersMessages.category}
+        subtitle={filtersMessages.categoryLead}
+        currentValue={filters.category}
+        onSelect={(value) =>
+          setFilters((prev) => ({ ...prev, category: value }))
+        }
+        items={categoryOptions}
+      />
+      <ServerFiltersSection
+        title={filtersMessages.region}
+        subtitle={filtersMessages.regionLead}
+        currentValue={filters.region}
+        items={regions}
+        onSelect={(value) => setFilters((prev) => ({ ...prev, region: value }))}
+      />
+    </aside>
+  )
+}
+
+interface ServerFilterItem {
+  value: string
+  label: MessageDescriptor
+  disabled?: boolean
+  extra?: string
+}
+
+interface ServerFiltersSectionProps {
+  className?: string
+  title: MessageDescriptor
+  subtitle?: MessageDescriptor
+  items?: ServerFilterItem[]
+  skeletonCount?: number
+  currentValue: string
+  onSelect: (value: string) => void
+}
+
+const ServerFiltersSection: React.FC<ServerFiltersSectionProps> = ({
+  className,
+  title,
+  subtitle,
+  items,
+  skeletonCount = 10,
+  currentValue,
+  onSelect,
 }) => {
   const intl = useIntl()
   return (
-    <div className="mb-8">
-      <h3 className="h5 mb-4" id="category-group-label">
-        <FormattedMessage
-          id="server.filter_by.region"
-          defaultMessage="Region"
-        />
-      </h3>
+    <div className={classnames(className)}>
+      <h3 className="h5 mb-4">{intl.formatMessage(title)}</h3>
+      {subtitle && (
+        <p className="b3 mb-4 text-gray-2">{intl.formatMessage(subtitle)}</p>
+      )}
 
-      <p className="b3 mb-4 text-gray-2">
-        <FormattedMessage
-          id="server.filter_by.region.lead"
-          defaultMessage="Where the provider is legally based."
-        />
-      </p>
-
-      <ul className="mb-8 grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:-ml-3 md:grid-cols-1 md:gap-x-3">
-        {regions?.map((item, i) => {
-          const isActive = filters.region === item.value
-
+      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:-ml-3 md:grid-cols-1 md:gap-x-3">
+        {!items &&
+          new Array(skeletonCount).fill(null).map((_, i) => (
+            <li className="h-8 p-3" key={i}>
+              <SkeletonText className="h-full" />
+            </li>
+          ))}
+        {items?.map((item) => {
+          const isActive = currentValue === item.value
           return (
-            <li key={i}>
+            <li key={item.value}>
               <label
                 className={classnames(
                   "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
-                  isActive && "bg-nightshade-50 !font-extrabold"
+                  isActive && "bg-nightshade-50 !font-extrabold",
+                  item.disabled === true && "text-gray-2"
                 )}
               >
                 <input
                   className="sr-only"
                   type="checkbox"
-                  name="filters-region"
-                  onChange={() => {
-                    setFilters({
-                      ...filters,
-                      region: isActive ? "" : item.value,
-                    })
-                  }}
+                  onChange={() => onSelect(isActive ? "" : item.value)}
                 />
-                {item.label}
+                {item.label ? intl.formatMessage(item.label) : item.value}
+                {item.extra && (
+                  <span
+                    className={isActive ? "text-nightshade-100" : "text-gray-2"}
+                  >
+                    {item.extra}
+                  </span>
+                )}
               </label>
             </li>
           )
         })}
-      </ul>
-
-      <h3 className="h5 mb-4" id="category-group-label">
-        <FormattedMessage
-          id="server.filter_by.category"
-          defaultMessage="Topic"
-        />
-      </h3>
-
-      <p className="b3 mb-4 text-gray-2">
-        <FormattedMessage
-          id="server.filter_by.category.lead"
-          defaultMessage="Some providers specialize in hosting accounts from specific communities."
-        />
-      </p>
-
-      <ul className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1 md:-ml-3 md:grid-cols-1 md:gap-x-3">
-        {!initialCategories
-          ? new Array(11).fill(null).map((_, i) => (
-              <li className="h-8 p-3" key={i}>
-                <SkeletonText className="!h-full" />
-              </li>
-            ))
-          : categories?.map((item, i) => {
-              const isActive = filters.category === item.category
-
-              return (
-                <li key={i}>
-                  <label
-                    className={classnames(
-                      "b2 flex cursor-pointer gap-1 rounded p-3 focus-visible-within:outline focus-visible-within:outline-2 focus-visible-within:outline-blurple-500",
-                      isActive && "bg-nightshade-50 !font-extrabold",
-                      item.servers_count === 0 && "text-gray-2"
-                    )}
-                  >
-                    <input
-                      className="sr-only"
-                      type="checkbox"
-                      name="filters-category"
-                      onChange={() => {
-                        setFilters({
-                          ...filters,
-                          category: isActive ? "" : item.category,
-                        })
-                      }}
-                    />
-                    {item.category === ""
-                      ? intl.formatMessage({
-                          id: "wizard.filter.all_categories",
-                          defaultMessage: "All topics",
-                        })
-                      : categoriesMessages[item.category]
-                        ? intl.formatMessage(categoriesMessages[item.category])
-                        : item.category}
-
-                    <span
-                      className={
-                        isActive ? "text-nightshade-100" : "text-gray-2"
-                      }
-                    >
-                      ({item.servers_count})
-                    </span>
-                  </label>
-                </li>
-              )
-            })}
       </ul>
     </div>
   )

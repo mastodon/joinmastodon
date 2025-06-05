@@ -1,4 +1,4 @@
-const { defineMessages } = require("react-intl")
+import { defineMessages } from "react-intl"
 
 export const categoriesMessages = defineMessages({
   academia: { id: "server.category.academia", defaultMessage: "Academia" },
@@ -14,6 +14,7 @@ export const categoriesMessages = defineMessages({
   games: { id: "server.category.gaming", defaultMessage: "Gaming" },
   general: { id: "server.category.general", defaultMessage: "General" },
   humor: { id: "server.category.humor", defaultMessage: "Humour" },
+  hobby: { id: "server.category.hobby", defaultMessage: "Hobby" },
   journalism: {
     id: "server.category.journalism",
     defaultMessage: "Journalism",
