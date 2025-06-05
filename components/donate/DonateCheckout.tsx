@@ -4,11 +4,12 @@ import Link from "next/link"
 import { ChangeEvent, FormEvent, useCallback, useState } from "react"
 import { FormattedMessage } from "react-intl"
 
-import LoadingIcon from "../public/icons/loading.svg?inline"
-import ArrowLeftIcon from "../public/ui/arrow-left.svg?inline"
+import LoadingIcon from "../../public/icons/loading.svg?inline"
+import ArrowLeftIcon from "../../public/ui/arrow-left.svg?inline"
 
-import { Button } from "./Button"
-import { Input } from "./Input"
+import { Button } from "../Button"
+import { Input } from "../Input"
+import { DonateFooter } from "./DonateFooter"
 
 interface DonateCheckoutProps {
   backUrl?: string
@@ -173,6 +174,7 @@ export function DonateCheckout({
           )}
         </Button>
       </div>
+      <DonateFooter />
     </form>
   )
 }

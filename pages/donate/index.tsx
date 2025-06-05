@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { useCallback, useEffect } from "react"
 import { z } from "zod"
 
-import { OnDonateFn, DonateWidget } from "../../components/DonateWidget"
+import { OnDonateFn, DonateWidget } from "../../components/donate/DonateWidget"
 import { sendMessage, themeSchema } from "../../donate/utils"
 import {
   CampaignResponse,

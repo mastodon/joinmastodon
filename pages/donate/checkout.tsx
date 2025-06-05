@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 import { useCallback, useEffect, useMemo } from "react"
 import { z } from "zod"
 
-import { DonateCheckout } from "../../components/DonateCheckout"
+import { DonateCheckout } from "../../components/donate/DonateCheckout"
 import { sendMessage } from "../../donate/utils"
 import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
 

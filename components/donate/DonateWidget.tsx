@@ -8,15 +8,15 @@ import {
 } from "react-intl"
 import { Select } from "@headlessui/react"
 
-import CheckIcon from "../public/icons/check.svg?inline"
-import { Button } from "./Button"
-
+import CheckIcon from "../../public/icons/check.svg?inline"
 import type {
   Currency,
   CampaignResponse,
   DonationFrequency,
-} from "../types/api"
-import { Input } from "./Input"
+} from "../../types/api"
+import { Button } from "../Button"
+import { Input } from "../Input"
+import { DonateFooter } from "./DonateFooter"
 
 export type OnDonateFn = (
   amount: number,
@@ -239,6 +239,8 @@ export function DonateWidget({
           ? intl.formatMessage(messages.loadingCheckout)
           : donation_button_text}
       </Button>
+
+      <DonateFooter />
     </div>
   )
 }
