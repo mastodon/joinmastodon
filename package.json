@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.2",
-    "@linear/sdk": "^39.1.1",
+    "@linear/sdk": "^41.0.0",
     "@tanstack/react-query": "^5.75.2",
     "blurhash": "^2.0.5",
     "classnames": "^2.5.1",
