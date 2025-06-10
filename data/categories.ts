@@ -14,7 +14,7 @@ export const categoriesMessages = defineMessages({
   games: { id: "server.category.gaming", defaultMessage: "Gaming" },
   general: { id: "server.category.general", defaultMessage: "General" },
   humor: { id: "server.category.humor", defaultMessage: "Humour" },
-  hobby: { id: "server.category.hobby", defaultMessage: "Hobby" },
+  hobby: { id: "server.category.hobby", defaultMessage: "Hobbies" },
   journalism: {
     id: "server.category.journalism",
     defaultMessage: "Journalism",
