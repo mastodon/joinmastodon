@@ -2355,14 +2355,14 @@ __metadata:
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.75.2":
-  version: 5.80.5
-  resolution: "@tanstack/react-query-devtools@npm:5.80.5"
+  version: 5.80.7
+  resolution: "@tanstack/react-query-devtools@npm:5.80.7"
   dependencies:
     "@tanstack/query-devtools": "npm:5.80.0"
   peerDependencies:
-    "@tanstack/react-query": ^5.80.5
+    "@tanstack/react-query": ^5.80.7
     react: ^18 || ^19
-  checksum: 10c0/66e6a7465b8feb4d7c6878358f6ad19635eb92f60d8db0b4cdcc798d48af3251502b0da0002555518d6e18926a72bb556a782287a46bb14aeb6bb6f0a5cc7cae
+  checksum: 10c0/79f60f3961c8e1563d99ee94b58dbffb8e170ba6ec36f59046f1de9a054463cd7cc017fb35bd579be624b9d3c54b18f381d078c0e73261569e9ac9430532bc93
   languageName: node
   linkType: hard
 
@@ -5378,8 +5378,8 @@ __metadata:
   linkType: hard
 
 "lint-staged@npm:^16.0.0":
-  version: 16.1.0
-  resolution: "lint-staged@npm:16.1.0"
+  version: 16.1.1
+  resolution: "lint-staged@npm:16.1.1"
   dependencies:
     chalk: "npm:^5.4.1"
     commander: "npm:^14.0.0"
@@ -5393,7 +5393,7 @@ __metadata:
     yaml: "npm:^2.8.0"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c0/5cc33d61ec2c682e488eb3fcea5c153ce486623b80314f2c56af438ad78d73c7fcd3e7c911d273ac740bd34f1e030d35d4fb92d8e476984150c0c59724ac7fa4
+  checksum: 10c0/80b1945b4e7c9d6c2e08f05bd2c175465f7b8b08a7f512582027ef7da5f2e961b96d4db3e50f9946d4d11a8068658d8fd2ac946655b30883a0adaf64acbc5613
   languageName: node
   linkType: hard
 
@@ -6281,13 +6281,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8.0.9, postcss@npm:^8.4.47, postcss@npm:^8.5.3":
-  version: 8.5.4
-  resolution: "postcss@npm:8.5.4"
+  version: 8.5.5
+  resolution: "postcss@npm:8.5.5"
   dependencies:
     nanoid: "npm:^3.3.11"
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
-  checksum: 10c0/0feff648614a834f7cd5396ea6b05b658ca0507e10a4eaad03b56c348f6aec93f42a885fc1b30522630c6a7e49ae53b38a061e3cba526f2d9857afbe095a22bb
+  checksum: 10c0/6415873fab84de05c2d8fd18f72ea6654bca437bb4b9f02ca819c438501e4b3a450023e575e17587c6eaa5bedddaaa4dad3af210f5cf166e30cec09cac58baf8
   languageName: node
   linkType: hard
 
