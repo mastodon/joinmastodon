@@ -21,9 +21,12 @@
   "dependencies": {
     "@headlessui/react": "^2.2.2",
     "@linear/sdk": "^41.0.0",
+    "@stripe/react-stripe-js": "^3.7.0",
+    "@stripe/stripe-js": "^7.3.0",
     "@tanstack/react-query": "^5.75.2",
     "blurhash": "^2.0.5",
     "classnames": "^2.5.1",
+    "cookie": "^1.0.2",
     "dotenv": "^16.5.0",
     "javascript-stringify": "^2.1.0",
     "keen-slider": "^6.8.6",
@@ -35,14 +38,18 @@
     "react-dom": "^18.3.1",
     "react-intl": "^7.1.11",
     "sass": "^1.87.0",
-    "sharp": "^0.34.1"
+    "sharp": "^0.34.1",
+    "stripe": "^18.1.0",
+    "zod": "^3.24.4"
   },
   "devDependencies": {
     "@formatjs/cli": "^6.7.1",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-query-devtools": "^5.75.2",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^22.15.6",
     "@types/react": "18.3.23",
+    "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.32.0",
     "autoprefixer": "^10.4.21",

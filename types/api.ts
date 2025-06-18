@@ -4,6 +4,7 @@ export type ApiPaths =
   | "languages"
   | "servers"
   | "statistics"
+  | "v1/donations/campaigns/active"
 
 export type Category = {
   category: string
@@ -56,4 +57,24 @@ export type Job = {
 export type JobsResponse = {
   success: boolean
   results: Job[]
+}
+
+export const CURRENCIES = ["EUR", "USD"] as const
+export type Currency = (typeof CURRENCIES)[number]
+
+export const DONATION_FREQUENCIES = ["one_time", "monthly", "yearly"] as const
+export type DonationFrequency = (typeof DONATION_FREQUENCIES)[number]
+
+export type DonationAmounts = Record<Currency, number[]>
+
+export type CampaignResponse = {
+  id: string
+  amounts: Record<DonationFrequency, DonationAmounts>
+  donation_url: string
+  banner_message: string
+  banner_button_text: string
+  donation_message: string
+  donation_button_text: string
+  donation_success_post: string
+  default_currency: Currency
 }

@@ -72,7 +72,7 @@ const Logo = ({
 const UsageRule = ({ text }: { text: string }) => {
   return (
     <div className="flex items-center gap-6 text-left">
-      <CheckIcon className="shrink-0" />
+      <CheckIcon className="shrink-0 fill-blurple-500" />
       <p>{text}</p>
     </div>
   )

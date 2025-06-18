@@ -1,4 +1,3 @@
-import Link from "next/link"
 import Image from "next/legacy/image"
 import type { Testimonial } from "../data/testimonials"
 
