@@ -93,12 +93,17 @@ const team: TeamMember[] = [
   {
     name: "Imani Joy",
     position: "Product Designer",
-    socials: { mastodon: "https://mastodon.social/@imanijoy" },
+    socials: { 
+      mastodon: "https://mastodon.social/@imanijoy",
+    },
   },
 
   {
     name: "Timothy Campbell",
     position: "DevOps",
+    socials: {
+      mastodon: "https://mastodon.social/@timetinytim",
+    },
   },
 
   {
