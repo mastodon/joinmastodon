@@ -131,8 +131,10 @@ export const getServerSideProps: GetServerSideProps<
       currency,
       locale,
       source: "menu",
-      environment: "staging",
     })
+    if (process.env.APP_ENV !== "production") {
+      params.set("environment", "staging")
+    }
     const response = await fetch(`${url}?${params}`, {
       headers: {
         "Content-Type": "application/json",
