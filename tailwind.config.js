@@ -10,7 +10,9 @@ const config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./donate/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "selector",
   theme: {
     fontSize: {
       h1: rem(68),
@@ -69,6 +71,7 @@ const config = {
       },
       lime: "#baff3b",
       goldenrod: "#ffbe2e",
+      error: "#ff4d4f",
     },
     extend: {
       fontFamily: {
@@ -87,6 +90,9 @@ const config = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+      },
+      boxShadow: {
+        input: "0 0 0 3px #6364ff40, 0 0 0 1px #6364ff",
       },
       fontWeight: {
         extranormal: 450,

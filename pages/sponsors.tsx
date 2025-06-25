@@ -1,13 +1,16 @@
 import Head from "next/head"
 import Image from "next/legacy/image"
 import classNames from "classnames"
+import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
+
 import Hero from "../components/Hero"
 import SponsorCard from "../components/SponsorCard"
 import SponsorLogoGroup from "../components/SponsorLogoGroup"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import sponsors from "../data/sponsors"
 import sponsorData from "../data/sponsors"
+import { DonatePopup } from "../donate/DonatePopup"
 import Layout from "../components/Layout"
 import LinkButton from "../components/LinkButton"
 
@@ -15,21 +18,32 @@ import MastodonInTheCloudsIllustration from "../public/illustrations/mastodon_in
 import MastodonWithLaptopIllustration from "../public/illustrations/mastodon_with_laptop.png"
 import MasotodonFediverseIllustration from "../public/illustrations/mastodon_fediverse.png"
 import MastodonsCheeringIllustration from "../public/illustrations/mastodons_cheering.png"
-
 import previewImage from "../public/sponsors_preview.png"
 import usFlagIcon from "../public/united_states_flag_icon_round.svg"
-import Link from "next/link"
+
+interface DonateCardProps {
+  title: React.ReactNode
+  titleClassName?: string
+  titleInnerClassName?: string
+  className?: string
+  copy: React.ReactNode
+  cta: React.ReactNode
+  ctaLink?: string
+  ctaLight?: boolean
+  isPopup?: boolean
+}
 
 const DonateCard = ({
   title,
   titleClassName = "",
   titleInnerClassName = "",
-  className = null,
+  className,
   copy,
   cta,
   ctaLink,
   ctaLight = false,
-}) => (
+  isPopup = false,
+}: DonateCardProps) => (
   <div
     className={classNames(
       "flex flex-col items-center text-center sm:items-start sm:text-left",
@@ -46,9 +60,16 @@ const DonateCard = ({
       <span className={titleInnerClassName}>{title}</span>
     </h3>
     <p className="b2 mb-8 text-gray-1 grow">{copy}</p>
-    <LinkButton light={ctaLight} size="medium" href={ctaLink}>
-      {cta}
-    </LinkButton>
+    {!!ctaLink && (
+      <LinkButton light={ctaLight} size="medium" href={ctaLink}>
+        {cta}
+      </LinkButton>
+    )}
+    {isPopup && (
+      <DonatePopup dark={!ctaLight} size="medium">
+        {cta}
+      </DonatePopup>
+    )}
   </div>
 )
 
@@ -161,7 +182,7 @@ function Sponsors() {
                       defaultMessage="Donate directly"
                     />
                   }
-                  ctaLink="https://donate.stripe.com/00g5l42h8ezY3YcaEE"
+                  isPopup
                 />
                 <DonateCard
                   title={

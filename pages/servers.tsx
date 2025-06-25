@@ -7,7 +7,6 @@ import { useRouter } from "next/router"
 import React, {
   useState,
   useEffect,
-  ReactElement,
   useMemo,
   SetStateAction,
   Dispatch,
@@ -32,7 +31,7 @@ import serverHeroDesktop from "../public/illustrations/servers_hero_desktop.png"
 import serverHeroMobile from "../public/illustrations/servers_hero_mobile.png"
 import FiltersIcon from "../public/ui/filters.svg?inline"
 import PersonIcon from "../public/ui/person.svg?inline"
-import type { Category, Region } from "../types/api"
+import type { Category, Day, Language, Region, Server } from "../types/api"
 import { fetchEndpoint } from "../utils/api"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import { regionsMessages } from "../data/regions"
@@ -64,13 +63,13 @@ const Servers = () => {
 
   const allCategories = useQuery({
     queryKey: ["categories", ""],
-    queryFn: () => fetchEndpoint("categories"),
+    queryFn: () => fetchEndpoint<Category[]>("categories"),
     select: (data) => _orderBy(data, "servers_count", "desc"),
   })
 
   const apiCategories = useQuery({
     queryKey: ["categories", filters.language],
-    queryFn: () => fetchEndpoint("categories", params),
+    queryFn: () => fetchEndpoint<Category[]>("categories", params),
     ...queryOptions,
     placeholderData: keepPreviousData,
 
@@ -150,7 +149,7 @@ const Servers = () => {
 
   const apiLanguages = useQuery({
     queryKey: ["languages", filters.category],
-    queryFn: () => fetchEndpoint("languages", params),
+    queryFn: () => fetchEndpoint<Language[]>("languages", params),
     ...queryOptions,
 
     select: (data) => {
@@ -167,13 +166,13 @@ const Servers = () => {
   const servers = useQuery({
     queryKey: ["servers", filters],
 
-    queryFn: () => fetchEndpoint("servers", params),
+    queryFn: () => fetchEndpoint<Server[]>("servers", params),
     ...queryOptions,
   })
 
   const days = useQuery({
     queryKey: ["statistics"],
-    queryFn: () => fetchEndpoint("statistics"),
+    queryFn: () => fetchEndpoint<Day[]>("statistics"),
     ...queryOptions,
   })
 
