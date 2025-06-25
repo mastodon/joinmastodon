@@ -104,9 +104,11 @@ export const getServerSideProps: GetServerSideProps<DonatePageProps> = async ({
     platform: "android",
     seed,
     source: "menu",
-    environment: "staging",
     return_url: `${req.headers.host}/sponsor`,
   })
+  if (process.env.APP_ENV !== "production") {
+    queryParams.set("environment", "staging")
+  }
 
   try {
     const apiRes = await fetchEndpoint<CampaignResponse>(
