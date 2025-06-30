@@ -1,0 +1,84 @@
+{
+  "version": "v1.0.0",
+
+  "entity": {
+    "type": "organisation",
+    "role": "maintainer",
+    "name": "Mastodon gGmbH",
+    "email": "zora@joinmastodon.org",
+    "description": "Mastodon gGmbH (alongside Mastodon Inc., our US 501(c)(3) non-profit) is the non-profit organisation behind Mastodon, operating with 10 FTEs. Built on Ruby (backend) and Javascript/Typescript (frontend), we build and steward an open-source social infrastructure that is free — both in cost and freedom, creating authentic digital spaces where communities can flourish. We champion user sovereignty, authentic human connection, and technology that serves people rather than extracting value from them. Our mission is to provide robust, safe places for people and institutions that last forever, free from corporate control and extractive economies.",
+    "webpageUrl": {
+      "url": "https://joinmastodon.org"
+    }
+  },
+
+  "projects": [
+    {
+      "guid": "mastodon",
+      "name": "Mastodon",
+      "description": "Mastodon operates as three distinct interconnected components: First, Mastodon the free and open-source project—a global top 1% FOSS project on GitHub with over 1,000 contributors, representing cutting-edge social networking technology. Second, the Mastodon social network—software installed on 10,000 individual servers with 1 million monthly active users. Mastodon gGmbH, our German non-profit, operates the largest server (mastodon.social) with approximately 300,000 monthly active users. Third, as part of the broader ActivityPub-powered Fediverse.",
+      "webpageUrl": {
+        "url": "https://joinmastodon.org"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/mastodon/mastodon",
+        "wellKnown": "https://github.com/mastodon/mastodon/blob/main/.github/.well-known/funding-manifest-urls"
+      },
+      "licenses": ["spdx:AGPL-3.0"],
+      "tags": [
+        "social-network",
+        "decentralised",
+        "federation",
+        "activitypub",
+        "open-source",
+        "privacy",
+        "community",
+        "nonprofit"
+      ]
+    }
+  ],
+
+  "funding": {
+    "channels": [
+      {
+        "guid": "bank-transfer",
+        "type": "bank",
+        "address": "Contact zora@joinmastodon.org for bank transfer details",
+        "description": "Direct bank transfer to Mastodon Inc. Please contact us for specific banking information and transfer instructions."
+      }
+    ],
+
+    "plans": [
+      {
+        "guid": "backend-developers",
+        "status": "active",
+        "name": "Backend Developer & Infrastructure Sustainability",
+        "description": "This funding supports hiring backend developers for platform stability and performance. Key initiatives: improving ActivityPub interoperability and non-text content support; developing anti-spam/moderation tools and automated image scanning; enabling smooth server migration and exploring decentralized identity. These efforts enhance reliability, scalability, and strengthen the federated network foundation.",
+        "amount": 100000,
+        "currency": "USD",
+        "frequency": "one-time",
+        "channels": ["bank-transfer"]
+      },
+      {
+        "guid": "open-donation",
+        "status": "active",
+        "name": "Open Support",
+        "description": "Any amount welcome to support Mastodon's mission of providing decentralised, community-owned social infrastructure.",
+        "amount": 0,
+        "currency": "USD",
+        "frequency": "one-time",
+        "channels": ["bank-transfer"]
+      }
+    ],
+
+    "history": [
+      {
+        "year": 2023,
+        "income": 545000,
+        "expenses": 472083,
+        "currency": "EUR",
+        "description": "Total donations increased by 65% enabling expanded team from 1 to 3 FTEs"
+      }
+    ]
+  }
+}
