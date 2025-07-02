@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.2",
-    "@linear/sdk": "^41.0.0",
+    "@linear/sdk": "^45.0.0",
     "@stripe/react-stripe-js": "^3.7.0",
     "@stripe/stripe-js": "^7.3.0",
     "@tanstack/react-query": "^5.75.2",
