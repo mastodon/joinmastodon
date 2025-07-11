@@ -1752,14 +1752,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@linear/sdk@npm:^41.0.0":
-  version: 41.0.0
-  resolution: "@linear/sdk@npm:41.0.0"
+"@linear/sdk@npm:^49.0.0":
+  version: 49.0.0
+  resolution: "@linear/sdk@npm:49.0.0"
   dependencies:
     "@graphql-typed-document-node/core": "npm:^3.1.0"
     graphql: "npm:^15.4.0"
     isomorphic-unfetch: "npm:^3.1.0"
-  checksum: 10c0/66aa3d78fe4f2f9a6e303f4a306f68e8fc478b4070eedd914de9c2478e4284a96dc625d0b8a587d479b3a1875314c9e22e824e5f471b3162c18c51689a8c32b3
+  checksum: 10c0/bcf25f6a2a9a4135bdbc4b52de33494c07fd2347e55b547880cc9c9dce3c4f9de1b61069a2de45d2882b3c1adf2be54ec53cdfc25d9e0c15ebe17256c2abda57
   languageName: node
   linkType: hard
 
@@ -5251,7 +5251,7 @@ __metadata:
   dependencies:
     "@formatjs/cli": "npm:^6.7.1"
     "@headlessui/react": "npm:^2.2.2"
-    "@linear/sdk": "npm:^41.0.0"
+    "@linear/sdk": "npm:^49.0.0"
     "@stripe/react-stripe-js": "npm:^3.7.0"
     "@stripe/stripe-js": "npm:^7.3.0"
     "@svgr/webpack": "npm:^8.1.0"
