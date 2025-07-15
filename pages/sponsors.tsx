@@ -407,7 +407,7 @@ function Sponsors() {
               <LinkButton
                 size="large"
                 href={
-                  "https://github.com/mastodon/mastodon/blob/main/CONTRIBUTING.md"
+                  "https://github.com/mastodon/.github/blob/main/CONTRIBUTING.md"
                 }
               >
                 <FormattedMessage
