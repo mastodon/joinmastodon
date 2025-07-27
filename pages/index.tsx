@@ -108,6 +108,7 @@ function Home() {
         />
 
         <link rel="me" href="https://mastodon.social/@MastodonEngineering" />
+        <link rel="me" href="https://mastodon.social/@Staff" />
         <link rel="me" href="https://mastodon.social/@ServerHighlights" />
       </Head>
     </Layout>
