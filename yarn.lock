@@ -2447,18 +2447,18 @@ __metadata:
   linkType: hard
 
 "@types/lodash@npm:^4.17.16":
-  version: 4.17.16
-  resolution: "@types/lodash@npm:4.17.16"
-  checksum: 10c0/cf017901b8ab1d7aabc86d5189d9288f4f99f19a75caf020c0e2c77b8d4cead4db0d0b842d009b029339f92399f49f34377dd7c2721053388f251778b4c23534
+  version: 4.17.20
+  resolution: "@types/lodash@npm:4.17.20"
+  checksum: 10c0/98cdd0faae22cbb8079a01a3bb65aa8f8c41143367486c1cbf5adc83f16c9272a2a5d2c1f541f61d0d73da543c16ee1d21cf2ef86cb93cd0cc0ac3bced6dd88f
   languageName: node
   linkType: hard
 
 "@types/node@npm:^22.15.6":
-  version: 22.15.32
-  resolution: "@types/node@npm:22.15.32"
+  version: 22.17.0
+  resolution: "@types/node@npm:22.17.0"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/63a2fa52adf1134d1b3bee8b1862d4b8e4550fffc190551068d3d41a41d9e5c0c8f1cb81faa18767b260637360f662115c26c5e4e7718868ead40c4a57cbc0e3
+  checksum: 10c0/e1c603b660d3de3243dfc02ded5d40623ff3f36315ffbdd8cdc81bc2c5a8da172035879d437b72e9fa61ca01827f28e9c2b0c32898f411a8e9ba0a5efac0b4ca
   languageName: node
   linkType: hard
 
@@ -2470,11 +2470,11 @@ __metadata:
   linkType: hard
 
 "@types/react-dom@npm:^19.1.2":
-  version: 19.1.2
-  resolution: "@types/react-dom@npm:19.1.2"
+  version: 19.1.7
+  resolution: "@types/react-dom@npm:19.1.7"
   peerDependencies:
     "@types/react": ^19.0.0
-  checksum: 10c0/100c341cacba9ec8ae1d47ee051072a3450e9573bf8eeb7262490e341cb246ea0f95a07a1f2077e61cf92648f812a0324c602fcd811bd87b7ce41db2811510cd
+  checksum: 10c0/8db5751c1567552fe4e1ece9f5823b682f2994ec8d30ed34ba0ef984e3c8ace1435f8be93d02f55c350147e78ac8c4dbcd8ed2c3b6a60f575bc5374f588c51c9
   languageName: node
   linkType: hard
 
