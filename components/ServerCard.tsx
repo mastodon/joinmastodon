@@ -61,7 +61,7 @@ const ServerCard = ({ server }: { server?: Server }) => {
         <p className="b1 !font-700 mb-2">
           {server ? server.domain : <SkeletonText className="w-[14ch]" />}
         </p>
-        <p className="b3 line-clamp-5 [unicode-bidi:plaintext] break-words">
+        <p className="b3 line-clamp-5 [unicode-bidi:plaintext] break-words break-all overflow-hidden">
           {server ? (
             server.description
           ) : (
