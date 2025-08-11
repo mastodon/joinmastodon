@@ -21,11 +21,11 @@ export const regionsMessages = defineMessages({
     id: "server.regions.oceania",
     defaultMessage: "Oceania",
   },
-  northAmerica: {
+  north_america: {
     id: "server.regions.north_america",
     defaultMessage: "North America",
   },
-  southAmerica: {
+  south_america: {
     id: "server.regions.south_america",
     defaultMessage: "South America",
   },
