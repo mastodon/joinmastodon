@@ -16,7 +16,7 @@ const Covenant = () => (
             {
               heading:
                 "Active moderation against racism, sexism, homophobia and transphobia",
-              text: "Users must have the confidence that they are joining a safe space, free from white supremacy, anti-semitism and transphobia of other platforms.",
+              text: "Users must have the confidence that they are joining a safe space, free from white supremacy, anti-semitism and transphobia of other platforms. Moderation must extend to abuse originating from other servers, e.g., by limiting or suspending servers that neglect or refuse to take action against it.",
             },
             {
               heading: "Daily backups",
