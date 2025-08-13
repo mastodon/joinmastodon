@@ -7341,8 +7341,8 @@ __metadata:
   linkType: hard
 
 "stripe@npm:^18.1.0":
-  version: 18.2.1
-  resolution: "stripe@npm:18.2.1"
+  version: 18.4.0
+  resolution: "stripe@npm:18.4.0"
   dependencies:
     qs: "npm:^6.11.0"
   peerDependencies:
@@ -7350,7 +7350,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/7edef67ca27bd4e84ac24eae4e10fa1d712392c08eec62aa6748c78241ebccc2a057651716a619fcaac1b70c5f08ba5fc5adf255d67462d5a441e3a96c0dc6c5
+  checksum: 10c0/abfae24fdc8a4cd96eb494f7582418c49e4db6e8dde21a9db6af8ee0ec02565f89fcf7c41902e0a555d4a733b5162702358114b3b5475343026965cb9b9f8529
   languageName: node
   linkType: hard
 
