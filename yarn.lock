@@ -3758,10 +3758,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.5.0":
-  version: 16.5.0
-  resolution: "dotenv@npm:16.5.0"
-  checksum: 10c0/5bc94c919fbd955bf0ba44d33922a1e93d1078e64a1db5c30faeded1d996e7a83c55332cb8ea4fae5a9ca4d0be44cbceb95c5811e70f9f095298df09d1997dd9
+"dotenv@npm:^17.0.0":
+  version: 17.2.1
+  resolution: "dotenv@npm:17.2.1"
+  checksum: 10c0/918dd2f9d8b8f86b0afabad9534793d51de3718c437f9e7b6525628cf68c1d4ae768cc37a5afff38c066f58a8ecf549f4ac6cd5617485bd328e826112cc2650a
   languageName: node
   linkType: hard
 
@@ -5267,7 +5267,7 @@ __metadata:
     blurhash: "npm:^2.0.5"
     classnames: "npm:^2.5.1"
     cookie: "npm:^1.0.2"
-    dotenv: "npm:^16.5.0"
+    dotenv: "npm:^17.0.0"
     eslint: "npm:^8.57.1"
     eslint-config-next: "npm:^15.3.1"
     eslint-config-prettier: "npm:^10.1.2"
