@@ -21,69 +21,143 @@ const Header = ({ transparent = true }: HeaderProps) => {
   const router = useRouter()
   const [pageScrolled, setPageScrolled] = useState(false)
 
-  // prettier-ignore
   const navigationItems = [
     {
-      value: "/servers",
-      label: <FormattedMessage id="nav.servers.title" defaultMessage="Servers" />,
-    }, {
       value: "/apps",
       label: <FormattedMessage id="nav.apps.title" defaultMessage="Apps" />,
     },
     {
-      value: "https://shop.joinmastodon.org/",
-      label: <FormattedMessage id="nav.merch.title" defaultMessage="Merch" />,
+      value: "/sponsors",
+      label: (
+        <FormattedMessage id="nav.sponsors.title" defaultMessage="Donate" />
+      ),
     },
     {
-      value: "/sponsors",
-      label: <FormattedMessage id="nav.sponsors.title" defaultMessage="Donate" />,
-    }, {
       key: "resources",
-      label: <FormattedMessage id="nav.resources.title" defaultMessage="Resources" />,
+      label: (
+        <FormattedMessage id="nav.resources.title" defaultMessage="Resources" />
+      ),
       childItems: [
         {
           value: "/about",
-          label: <FormattedMessage id="nav.about_us.title" defaultMessage="About us" />,
-          description: <FormattedMessage id="nav.about_us.description" defaultMessage="Read about our story, the team, and recent media coverage" />
-        }, {
-          value: "/about#contact",
-          label: <FormattedMessage id="nav.contact.title" defaultMessage="Contact" />,
-          description: <FormattedMessage id="nav.contact.description" defaultMessage="Get in touch for press, business, legal and other inquiries" />
+          label: (
+            <FormattedMessage
+              id="nav.about_us.title"
+              defaultMessage="About us"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="nav.about_us.description"
+              defaultMessage="Learn about the small team behind Mastodon."
+            />
+          ),
+        },
+        {
+          value: "/servers",
+          label: (
+            <FormattedMessage id="nav.servers.title" defaultMessage="Servers" />
+          ),
+          description: (
+            <FormattedMessage
+              id="nav.servers.description"
+              defaultMessage="Browse the directory of other Mastodon servers."
+            />
+          ),
         },
         {
           value: "https://blog.joinmastodon.org/",
           label: <FormattedMessage id="nav.blog.title" defaultMessage="Blog" />,
-          description: <FormattedMessage id="nav.blog.description" defaultMessage="Get the latest news about the platform" />,
-        }, {
+          description: (
+            <FormattedMessage
+              id="nav.blog.description"
+              defaultMessage="Get the latest news about the platform."
+            />
+          ),
+        },
+        {
           value: "https://docs.joinmastodon.org",
-          label: <FormattedMessage id="nav.docs.title" defaultMessage="Documentation" />,
-          description: <FormattedMessage id="nav.docs.description" defaultMessage="Learn how Mastodon works in-depth" />,
-        }, {
+          label: (
+            <FormattedMessage
+              id="nav.docs.title"
+              defaultMessage="Documentation"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="nav.docs.description"
+              defaultMessage="Learn how Mastodon works in-depth."
+            />
+          ),
+        },
+        {
           value: "https://github.com/mastodon/mastodon/discussions",
-          label: <FormattedMessage id="nav.support.title" defaultMessage="Support" />,
-          description: <FormattedMessage id="nav.support.description" defaultMessage="Get help or suggest a feature on GitHub" />,
-        }, {
+          label: (
+            <FormattedMessage id="nav.support.title" defaultMessage="Support" />
+          ),
+          description: (
+            <FormattedMessage
+              id="nav.support.description"
+              defaultMessage="Get help or suggest a feature on GitHub."
+            />
+          ),
+        },
+        {
+          value: "https://shop.joinmastodon.org/",
+          label: (
+            <FormattedMessage id="nav.merch.title" defaultMessage="Merch" />
+          ),
+          description: (
+            <FormattedMessage
+              id="nav.merch.description"
+              defaultMessage="Support your friends building Mastodon (and look cool while doing it)."
+            />
+          ),
+        },
+        {
           value: "/verification",
-          label: <FormattedMessage id="nav.verification.title" defaultMessage="Verification" />,
-          description: <FormattedMessage id="nav.verification.description" defaultMessage="Learn about verified profile links on Mastodon" />
-        }, {
-          value: "/branding",
-          label: <FormattedMessage id="nav.branding.title" defaultMessage="Branding" />,
-          description: <FormattedMessage id="nav.branding.description" defaultMessage="Download our logos and learn how to use them" />,
+          label: (
+            <FormattedMessage
+              id="nav.verification.title"
+              defaultMessage="Verification"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="nav.verification.description"
+              defaultMessage="Learn about verified profile links on Mastodon."
+            />
+          ),
         },
       ],
       footer: {
         value: "https://github.com/mastodon/mastodon",
-        label: <FormattedMessage id="nav.code.action" defaultMessage="Browse code" />,
-        title: <FormattedMessage id="nav.code.title" defaultMessage="Source code" />,
-        description: <FormattedMessage id="nav.code.description" defaultMessage="Mastodon is free and open-source software" />,
+        label: (
+          <FormattedMessage id="nav.code.action" defaultMessage="Browse code" />
+        ),
+        title: (
+          <FormattedMessage id="nav.code.title" defaultMessage="Source code" />
+        ),
+        description: (
+          <FormattedMessage
+            id="nav.code.description"
+            defaultMessage="Mastodon is free and open-source software."
+          />
+        ),
       },
-    }, {
+    },
+    {
       key: "locale",
-      label: <span aria-label={intl.formatMessage({
-        id: "translate_site",
-        defaultMessage: "文A, Translate site",
-      })}>文A</span>,
+      label: (
+        <span
+          aria-label={intl.formatMessage({
+            id: "translate_site",
+            defaultMessage: "文A, Translate site",
+          })}
+        >
+          文A
+        </span>
+      ),
       compact: true,
       childItems: locales.map((locale) => ({
         key: locale.code,
@@ -94,7 +168,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
         label: locale.language,
         active: router.locale === locale.code,
       })),
-    }
+    },
   ]
     // set active status on links
     .map((item) => ({ ...item, active: router.asPath === item.value }))
