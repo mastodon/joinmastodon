@@ -32,11 +32,6 @@ const sponsors = {
       name: "Mask Network",
     }, // Custom
     {
-      url: "https://lickability.com/",
-      logo: require("../public/sponsors/lickability-logo.svg"),
-      name: "Lickability",
-    }, // Custom/other
-    {
       url: "https://medium.com/",
       logo: require("../public/sponsors/medium.png"),
       name: "Medium",
@@ -47,30 +42,25 @@ const sponsors = {
       name: "Krystal Hosting",
     }, // Custom
     {
-      url: "https://www.ramotion.com/agency/ui-ux-design",
-      logo: require("../public/sponsors/truevendor.png"),
+      url: "https://www.ramotion.com/branding-san-francisco/",
+      logo: require("../public/sponsors/ramotion.svg"),
       name: "Ramotion",
-    },
+    }, // Patreon
     {
       url: "https://airvpn.org/landing/mastodon",
       logo: require("../public/sponsors/airvpn.webp"),
       name: "AirVPN",
-    },
+    }, // Patreon
     {
       url: "https://papersowl.com/",
       logo: require("../public/sponsors/papersowl.png"),
       name: "Papers Owl",
-    },
+    }, // Patreon
     {
       url: "https://sextoycollective.com",
       logo: require("../public/sponsors/sextoycollective.webp"),
       name: "Sex Toy Collective",
-    },
-    {
-      url: "https://www.noneedtostudy.com/take-my-online-class/",
-      logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
-      name: "Experts Help Take My Online Classes - NoNeedToStudy.com",
-    }, // Custom
+    }, // Patreon
     {
       url: "https://www.goldeneaglecoin.com/",
       logo: require("../public/sponsors/ge-logo-coin-card2.png"),
@@ -85,79 +75,44 @@ const sponsors = {
       url: "https://www.nettikasinot.org/",
       logo: require("../public/sponsors/nettikasinot.svg"),
       name: "Nettikasinot",
-    },
+    }, // Patreon
     {
       url: "https://www.sister-sites.co.uk/",
       logo: require("../public/sponsors/sistersites-logo.png"),
       name: "sister-sites.co.uk",
     }, // Custom
     {
-      url: "https://wideangle.co",
+      url: "https://wideangle.co/?ref=joinmastodon",
       logo: require("../public/sponsors/Wide Angle Analytics_horizontal-logo.png"),
       name: "Wide Angle Analytics",
-    }, // Custom
-    {
-      url: "https://couponmister.com/",
-      logo: require("../public/sponsors/coupon-mister.jpg"),
-      name: "Coupon Mister",
-    }, // Custom
-    {
-      url: "https://sidesmedia.com/",
-      logo: require("../public/sponsors/sides-media.png"),
-      name: "SidesMedia",
-    }, // Custom
-    {
-      url: "https://bountii.net/",
-      logo: require("../public/sponsors/bountii.png"),
-      name: "Bountii",
     }, // Custom
     {
       url: "https://veepn.com/vpn-apps/download-vpn-for-pc/",
       logo: require("../public/sponsors/veepn.png"),
       name: "Download VPN for PC by VeePN super simple, fast and trustful VPN for all family.",
     }, // Custom
-    {
-      url: "https://embryo.com/",
-      logo: require("../public/sponsors/embryo.png"),
-      name: "Embryo",
-    }, // Custom
   ] as Sponsor[],
   gold: [
-    {
-      url: "https://fosstodon.org",
-      logo: require("../public/sponsors/fosstodon.svg"),
-      name: "Fosstodon",
-    }, // GitHub
     {
       url: "https://easydns.com/",
       logo: require("../public/sponsors/easydns.png"),
       name: "easyDNS",
-    },
+    }, // Patreon
     {
       url: "https://www.partitionwizard.com/",
       logo: require("../public/sponsors/minitool.png"),
       name: "MiniTool Partition Wizard",
-    },
+    }, // Patreon
     {
       url: "https://www.kevani.com/",
       logo: require("../public/sponsors/KEVANI_LOGO.png"),
       name: "Kevani",
-    },
+    }, // Patreon
     {
       url: "https://bitlaunch.io/",
       logo: require("../public/sponsors/bitlaunch.svg"),
       name: "Bitcoin VPS",
     }, // Custom
-    {
-      url: "http://inkedin.com/",
-      logo: require("../public/sponsors/inkedin-logo-small-2.webp"),
-      name: "inkedin.com",
-    },
-    {
-      url: "https://casinosfiables.ca/",
-      logo: require("../public/sponsors/logo-fiables.png"),
-      name: "Casino Fiables",
-    },
     {
       url: "https://iboysoft.com/",
       logo: require("../public/sponsors/iboysoft-logo-dark2.png"),
@@ -167,16 +122,11 @@ const sponsors = {
       url: "https://farbridge.com/",
       logo: require("../public/sponsors/farbridge.png"),
       name: "Farbridge",
-    },
+    }, // Patreon
     {
       url: "https://www.onestein.nl",
       logo: require("../public/sponsors/onestein.png"),
       name: "Onestein B.V.",
-    }, // Custom
-    {
-      url: "https://rottmann.social/@ralf",
-      logo: require("../public/sponsors/Rottmann_Ventures.png"),
-      name: "Rottmann Ventures GmbH",
     }, // Custom
     {
       url: "https://customcomet.com/",
@@ -194,16 +144,6 @@ const sponsors = {
       name: "Blind Five Year Old",
     }, // Custom
     {
-      url: "http://www.reboot.io/",
-      logo: require("../public/sponsors/reboot-fullstacked-trademark-color-small.jpg"),
-      name: "Better Humans Make Better Leaders",
-    }, // Custom
-    {
-      url: "https://sdf.org/",
-      logo: require("../public/sponsors/sdf.png"),
-      name: "SDF Public Access UNIX System",
-    }, // Custom
-    {
       url: "https://kaleidos.net/",
       logo: require("../public/sponsors/kaleidos.png"),
       name: "Kaleidos (Taiga & Penpot)",
@@ -219,9 +159,9 @@ const sponsors = {
       name: "iGaming.com",
     }, // GitHub
     {
-      url: "https://www.dotcom-monitor.com/sponsoring-open-source-projects/",
-      logo: require("../public/sponsors/DCM-Logo-54.png"),
-      name: "Dotcom-Monitor",
+      url: "https://les-tilleuls.coop",
+      logo: require("../public/sponsors/les-tilleuls-coop.png"),
+      name: "Les-Tilleuls.coop",
     }, // Custom
   ] as Sponsor[],
   silver: [
@@ -231,7 +171,7 @@ const sponsors = {
       name: "Kyohei Hamaguchi / @tnzk",
       nofollow: false,
       gold: true,
-    },
+    }, // Patreon
     ...patreonData.silver,
     {
       url: "https://www.passbolt.com/",
@@ -241,6 +181,11 @@ const sponsors = {
     {
       url: "https://healthchecks.io/",
       name: "healthchecks",
+      nofollow: true,
+    }, // GitHub
+    {
+      url: "https://www.triplebit.org/",
+      name: "triplebit",
       nofollow: true,
     }, // GitHub
   ] as Sponsor[],
