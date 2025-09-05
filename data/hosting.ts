@@ -43,6 +43,33 @@ const messages = defineMessages({
     defaultMessage:
       "Define your own server rules and moderation standards. With no third-party or outside platform algorithm. You decide how discourse is moderated and how your messages travel.",
   },
+  stepDomainTitle: {
+    id: "hosting.steps.domain.title",
+    defaultMessage: "Select your domain name",
+  },
+  stepDomainBody: {
+    id: "hosting.steps.domain.body",
+    defaultMessage:
+      "Setting your own domain name for your organizational brand will ensure you are recognizable across the Fediverse. A unique domain not only reinforces your organization’s identity but also builds trust, just like a personalized email address.",
+  },
+  stepSpaceTitle: {
+    id: "hosting.steps.space.title",
+    defaultMessage: "Tailor Your Community Space",
+  },
+  stepSpaceBody: {
+    id: "hosting.steps.space.body",
+    defaultMessage:
+      "Shape the look, feel and rules of your instance the way you need. Setting the instance description, defining server rules, adjusting look and feel and even making use of your privacy policy & terms of service.",
+  },
+  stepTeamTitle: {
+    id: "hosting.steps.team.title",
+    defaultMessage: "Invite & Onboard Your Team",
+  },
+  stepTeamBody: {
+    id: "hosting.steps.team.body",
+    defaultMessage:
+      "Lastly, you need to invite users that you want to create accounts on your instance and let them set up their individual user accounts.",
+  },
 })
 
 type MessageOrString = string | MessageDescriptor
@@ -79,5 +106,20 @@ export const benefitsCards = [
   {
     title: messages.benefitsReachTitle,
     body: messages.benefitsReachBody,
+  },
+] satisfies CardItem[]
+
+export const stepsCards = [
+  {
+    title: messages.stepDomainTitle,
+    body: messages.stepDomainBody,
+  },
+  {
+    title: messages.stepSpaceTitle,
+    body: messages.stepSpaceBody,
+  },
+  {
+    title: messages.stepTeamTitle,
+    body: messages.stepTeamBody,
   },
 ] satisfies CardItem[]
