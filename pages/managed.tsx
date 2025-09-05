@@ -7,11 +7,15 @@ import {
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
-import { Button } from "../components/Button"
 import { PropsWithChildren } from "react"
 import classNames from "classnames"
+import Head from "next/head"
 
 const messages = defineMessages({
+  title: {
+    id: "managed.title",
+    defaultMessage: "Managed Mastodon",
+  },
   managedTitle: {
     id: "managed.services.managed.title",
     defaultMessage: "All-in-One Managed Instance",
@@ -125,6 +129,7 @@ const benefitsCards = [
 ] satisfies CardItem[]
 
 const ManagedPage = () => {
+  const intl = useIntl()
   return (
     <Layout>
       <Hero>
@@ -219,6 +224,19 @@ const ManagedPage = () => {
         label={messages.benefitsLabel}
         items={benefitsCards}
       />
+
+      <section>
+        <h3 className="-order-1 font-semibold">
+          <FormattedMessage
+            id="managed.guide.title"
+            defaultMessage="How It Works"
+          />
+        </h3>
+      </section>
+
+      <Head>
+        <title>{intl.formatMessage(messages.title)}</title>
+      </Head>
     </Layout>
   )
 }
@@ -293,7 +311,7 @@ const CardList = ({ title, label, items }: CardListProps) => {
       <h3 className="-order-1 font-semibold">{intl.formatMessage(label)}</h3>
       <div className="grid grid-cols-3 gap-4">
         {items.map(({ title, description }, index) => (
-          <div className="border-2 border-gray-1 p-4 rounded-xl" key={index}>
+          <div className="border-2 border-gray-1 p-8 rounded-xl" key={index}>
             <h2 className="font-bold">
               {typeof title === "string" ? title : intl.formatMessage(title)}
             </h2>
