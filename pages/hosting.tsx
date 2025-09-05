@@ -10,7 +10,13 @@ import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import { PropsWithChildren } from "react"
 import classNames from "classnames"
 import Head from "next/head"
-import { partnerCards, benefitsCards, CardItem } from "../data/hosting"
+import {
+  partnerCards,
+  benefitsCards,
+  CardItem,
+  stepsCards,
+} from "../data/hosting"
+import ArrowRight from "../public/ui/arrow-right.svg?inline"
 
 const messages = defineMessages({
   title: {
@@ -154,13 +160,35 @@ const HostingPage = () => {
         items={benefitsCards}
       />
 
-      <section>
-        <h3 className="-order-1 font-semibold">
+      <section className="my-8">
+        <h2 className="text-h5 font-bold mb-4">
           <FormattedMessage
             id="hosting.guide.title"
             defaultMessage="How It Works"
           />
-        </h3>
+        </h2>
+        <div className="grid grid-cols-3 gap-12">
+          {stepsCards.map(({ title, body }, index) => (
+            <div
+              className="border-2 border-gray-1 p-8 rounded-xl relative"
+              key={index}
+            >
+              <span className="block text-h3 text-center text-nightshade-300 font-bold">
+                {index + 1}
+              </span>
+              <h3 className="font-bold">
+                {typeof title === "string" ? title : intl.formatMessage(title)}
+              </h3>
+              <p>{intl.formatMessage(body)}</p>
+              {index !== 0 && (
+                <ArrowRight
+                  className="absolute -left-[calc(3rem+2px)] top-0 h-full w-12 px-2"
+                  role="presentation"
+                />
+              )}
+            </div>
+          ))}
+        </div>
       </section>
 
       <Head>
@@ -231,12 +259,12 @@ const CardList = ({ title, label, items }: CardListProps) => {
     <section className="my-8 flex flex-col gap-2">
       <h2 className="text-h5 font-bold mb-4">{intl.formatMessage(title)}</h2>
       <h3 className="-order-1 font-semibold">{intl.formatMessage(label)}</h3>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-8">
         {items.map(({ title, body }, index) => (
           <div className="border-2 border-gray-1 p-8 rounded-xl" key={index}>
-            <h2 className="font-bold">
+            <h4 className="font-bold">
               {typeof title === "string" ? title : intl.formatMessage(title)}
-            </h2>
+            </h4>
             <p>{intl.formatMessage(body)}</p>
           </div>
         ))}
