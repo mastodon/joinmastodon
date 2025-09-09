@@ -24,7 +24,7 @@ import Image from "next/image"
 
 const messages = defineMessages({
   title: {
-    id: "hosting.title",
+    id: "hosting.pageTitle",
     defaultMessage: "Managed Mastodon",
   },
   managedTitle: {
