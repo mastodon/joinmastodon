@@ -4,7 +4,10 @@ import { StaticImageData } from "next/image"
 
 import AltStoreLogo from "../public/logos/hosting-partners/altstore.png"
 import EULogo from "../public/logos/hosting-partners/eu-commission.svg?inline"
+import FlipboardLogo from "../public/logos/hosting-partners/flipboard.svg?inline"
+import MediumLogo from "../public/logos/hosting-partners/medium.svg?inline"
 import SchleswigHolsteinLogo from "../public/logos/hosting-partners/sh-den-gro.jpg"
+import WikimediaLogo from "../public/logos/hosting-partners/wikimedia.svg?inline"
 
 const messages = defineMessages({
   partnersEuBody: {
@@ -81,7 +84,7 @@ const messages = defineMessages({
 export const SalesScheduleLink = "https://tally.so/r/woJ2EX"
 
 type MessageOrString = string | MessageDescriptor
-type ImageOrSvg =
+export type ImageOrSvg =
   | StaticImageData
   | ((props: SVGProps<SVGSVGElement>) => ReactElement)
 export type CardItem = {
@@ -137,3 +140,20 @@ export const stepsCards = [
     body: messages.stepTeamBody,
   },
 ] satisfies CardItem[]
+
+export type LogoItem = Pick<CardItem, "image" | "title">
+
+export const hostingLogos = [
+  {
+    title: "Medium",
+    image: MediumLogo,
+  },
+  {
+    title: "Flipboard",
+    image: FlipboardLogo,
+  },
+  {
+    title: "Wikimedia",
+    image: WikimediaLogo,
+  },
+] satisfies LogoItem[]
