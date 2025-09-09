@@ -78,6 +78,8 @@ const messages = defineMessages({
   },
 })
 
+export const SalesScheduleLink = "https://tally.so/r/woJ2EX"
+
 type MessageOrString = string | MessageDescriptor
 type ImageOrSvg =
   | StaticImageData

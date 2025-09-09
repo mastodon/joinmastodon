@@ -15,6 +15,7 @@ import {
   benefitsCards,
   CardItem,
   stepsCards,
+  SalesScheduleLink,
 } from "../data/hosting"
 import ArrowRight from "../public/ui/arrow-right.svg?inline"
 import Image from "next/image"
@@ -204,8 +205,7 @@ export default HostingPage
 
 const SalesButton = ({ className }: { className?: string }) => (
   <a
-    href="https://example.com"
-    target="_blank"
+    href={SalesScheduleLink}
     className={classNames(
       className,
       "px-4 rounded-md text-white b3 text-center bg-blurple-500 transition-colors hocus:bg-blurple-600 h-12 inline-flex items-center"
