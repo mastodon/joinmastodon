@@ -7,7 +7,7 @@ import {
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
-import { PropsWithChildren } from "react"
+import { isValidElement, PropsWithChildren } from "react"
 import classNames from "classnames"
 import Head from "next/head"
 import {
@@ -17,6 +17,7 @@ import {
   stepsCards,
 } from "../data/hosting"
 import ArrowRight from "../public/ui/arrow-right.svg?inline"
+import Image from "next/image"
 
 const messages = defineMessages({
   title: {
@@ -260,8 +261,24 @@ const CardList = ({ title, label, items }: CardListProps) => {
       <h2 className="text-h5 font-bold mb-4">{intl.formatMessage(title)}</h2>
       <h3 className="-order-1 font-semibold">{intl.formatMessage(label)}</h3>
       <div className="grid grid-cols-3 gap-8">
-        {items.map(({ title, body }, index) => (
+        {items.map(({ title, body, image: ImageOrSVG }, index) => (
           <div className="border-2 border-gray-1 p-8 rounded-xl" key={index}>
+            {ImageOrSVG && (
+              <figure className="aspect-square flex flex-col justify-center items-center m-8 mt-0">
+                {typeof ImageOrSVG === "function" ? (
+                  <ImageOrSVG className="block" />
+                ) : (
+                  <Image
+                    src={ImageOrSVG.src}
+                    alt=""
+                    className="block"
+                    role="presentation"
+                    width={ImageOrSVG.width}
+                    height={ImageOrSVG.height}
+                  />
+                )}
+              </figure>
+            )}
             <h4 className="font-bold">
               {typeof title === "string" ? title : intl.formatMessage(title)}
             </h4>

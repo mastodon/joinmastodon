@@ -1,4 +1,10 @@
+import { ReactElement, SVGProps } from "react"
 import { defineMessages, MessageDescriptor } from "react-intl"
+import { StaticImageData } from "next/image"
+
+import AltStoreLogo from "../public/logos/hosting-partners/altstore.png"
+import EULogo from "../public/logos/hosting-partners/eu-commission.svg?inline"
+import SchleswigHolsteinLogo from "../public/logos/hosting-partners/sh-den-gro.jpg"
 
 const messages = defineMessages({
   partnersEuBody: {
@@ -50,7 +56,7 @@ const messages = defineMessages({
   stepDomainBody: {
     id: "hosting.steps.domain.body",
     defaultMessage:
-      "Setting your own domain name for your organizational brand will ensure you are recognizable across the Fediverse. A unique domain not only reinforces your organization’s identity but also builds trust, just like a personalized email address.",
+      "Use your organization’s domain for account handles (for example, @name@yourcity.de). It makes every profile recognisable across the Fediverse and builds trust, just like a custom email address.",
   },
   stepSpaceTitle: {
     id: "hosting.steps.space.title",
@@ -59,7 +65,7 @@ const messages = defineMessages({
   stepSpaceBody: {
     id: "hosting.steps.space.body",
     defaultMessage:
-      "Shape the look, feel and rules of your instance the way you need. Setting the instance description, defining server rules, adjusting look and feel and even making use of your privacy policy & terms of service.",
+      "Set the look, feel, and rules to fit your organizational identity. You can add a description, set branding and define relevant server rules for your instance.",
   },
   stepTeamTitle: {
     id: "hosting.steps.team.title",
@@ -68,29 +74,35 @@ const messages = defineMessages({
   stepTeamBody: {
     id: "hosting.steps.team.body",
     defaultMessage:
-      "Lastly, you need to invite users that you want to create accounts on your instance and let them set up their individual user accounts.",
+      "The final step is about sending invites, assign roles if needed, and let community members set up their profiles. You are ready to post, follow, and connect across the Fediverse.",
   },
 })
 
 type MessageOrString = string | MessageDescriptor
+type ImageOrSvg =
+  | StaticImageData
+  | ((props: SVGProps<SVGSVGElement>) => ReactElement)
 export type CardItem = {
-  image?: string
   title: MessageOrString
   body: MessageDescriptor
+  image?: ImageOrSvg
 }
 
 export const partnerCards = [
   {
     title: "European Commission",
     body: messages.partnersEuBody,
+    image: EULogo,
   },
   {
     title: "Schleswig-Holstein",
     body: messages.partnersSchleswigHolsteinBody,
+    image: SchleswigHolsteinLogo,
   },
   {
     title: "AltStore",
     body: messages.partnersAltStoreBody,
+    image: AltStoreLogo,
   },
 ] satisfies CardItem[]
 
