@@ -7,15 +7,17 @@ import {
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
-import { isValidElement, PropsWithChildren } from "react"
+import { PropsWithChildren } from "react"
 import classNames from "classnames"
 import Head from "next/head"
 import {
   partnerCards,
   benefitsCards,
   CardItem,
+  ImageOrSvg,
   stepsCards,
   SalesScheduleLink,
+  hostingLogos,
 } from "../data/hosting"
 import ArrowRight from "../public/ui/arrow-right.svg?inline"
 import Image from "next/image"
@@ -70,7 +72,24 @@ const HostingPage = () => {
   return (
     <Layout>
       <Hero>
-        <p>100+ use mastodon</p>
+        <div className="flex gap-4 items-center text-b3 mb-4">
+          <div className="flex -space-x-3">
+            {hostingLogos.map(({ title, image }, index) => (
+              <span
+                key={index}
+                title={title}
+                className="relative flex size-8 shrink-0 overflow-hidden rounded-full bg-white border border-gray-0"
+              >
+                <ImageOrSVG data={image} className="w-full h-full" />
+              </span>
+            ))}
+          </div>
+          <FormattedMessage
+            id="hosting.label"
+            defaultMessage="{num}+ organisations use Mastodon for public communication"
+            values={{ num: 100 }}
+          />
+        </div>
         <h1 className="h2 mb-4">
           <FormattedMessage
             id="hosting.title"
@@ -261,22 +280,11 @@ const CardList = ({ title, label, items }: CardListProps) => {
       <h2 className="text-h5 font-bold mb-4">{intl.formatMessage(title)}</h2>
       <h3 className="-order-1 font-semibold">{intl.formatMessage(label)}</h3>
       <div className="grid grid-cols-3 gap-8">
-        {items.map(({ title, body, image: ImageOrSVG }, index) => (
+        {items.map(({ title, body, image }, index) => (
           <div className="border-2 border-gray-1 p-8 rounded-xl" key={index}>
-            {ImageOrSVG && (
+            {image && (
               <figure className="aspect-square flex flex-col justify-center items-center m-8 mt-0">
-                {typeof ImageOrSVG === "function" ? (
-                  <ImageOrSVG className="block" />
-                ) : (
-                  <Image
-                    src={ImageOrSVG.src}
-                    alt=""
-                    className="block"
-                    role="presentation"
-                    width={ImageOrSVG.width}
-                    height={ImageOrSVG.height}
-                  />
-                )}
+                <ImageOrSVG data={image} className="block" />
               </figure>
             )}
             <h4 className="font-bold">
@@ -287,5 +295,28 @@ const CardList = ({ title, label, items }: CardListProps) => {
         ))}
       </div>
     </section>
+  )
+}
+
+const ImageOrSVG = ({
+  className,
+  data,
+}: {
+  data: ImageOrSvg
+  className?: string
+}) => {
+  if (typeof data === "function") {
+    const SVGComponent = data
+    return <SVGComponent className={className} />
+  }
+  return (
+    <Image
+      src={data.src}
+      alt=""
+      className={className}
+      role="presentation"
+      width={data.width}
+      height={data.height}
+    />
   )
 }
