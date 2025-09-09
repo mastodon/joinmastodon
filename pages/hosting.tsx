@@ -50,7 +50,7 @@ const messages = defineMessages({
   partnersTitle: {
     id: "hosting.partners.title",
     defaultMessage:
-      "World leading organisations and institutions trust Mastodon to manage their instance.",
+      "Leading organisations and institutions trust Mastodon to manage their instance.",
   },
   partnersLabel: {
     id: "hosting.partners.label",
