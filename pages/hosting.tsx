@@ -33,7 +33,7 @@ const messages = defineMessages({
   },
   managedSubtitle: {
     id: "hosting.services.managed.subtitle",
-    defaultMessage: "Tailored for large organizations",
+    defaultMessage: "Tailored for large organisations",
   },
   singleTitle: {
     id: "hosting.services.single.title",
@@ -138,7 +138,7 @@ const HostingPage = () => {
           />
           <FormattedMessage
             id="hosting.services.managed.who"
-            defaultMessage="Perfect for organizations that want fast access to their own instance with guaranteed compliance and low resource investment."
+            defaultMessage="Perfect for organisations that want fast access to their own instance with guaranteed compliance and low resource investment."
             tagName="p"
           />
           <FormattedMessage
@@ -158,7 +158,7 @@ const HostingPage = () => {
           />
           <FormattedMessage
             id="hosting.services.single.who"
-            defaultMessage="Ideal for organizations that already have internal resources or want to build internal capabilities"
+            defaultMessage="Ideal for organisations that already have internal resources or want to build internal capabilities"
             tagName="p"
           />
           <FormattedMessage
