@@ -1,14 +1,16 @@
 import { PaymentElement, useCheckout } from "@stripe/react-stripe-js"
 import classNames from "classnames"
 import Link from "next/link"
-import { ChangeEvent, FormEvent, useCallback, useState } from "react"
+import { ChangeEvent, FormEvent, useCallback, useEffect, useState } from "react"
 import { FormattedMessage } from "react-intl"
 
 import LoadingIcon from "../../public/icons/loading.svg?inline"
 import ArrowLeftIcon from "../../public/ui/arrow-left.svg?inline"
+import ExternalLinkIcon from "../../public/ui/external-link.svg?inline"
 
 import { Button } from "../Button"
 import { Input } from "../Input"
+import { isInIframe } from "../../donate/utils"
 
 interface DonateCheckoutProps {
   backUrl?: string
@@ -72,6 +74,14 @@ export function DonateCheckout({
     [checkout, email, onComplete]
   )
 
+  // Determine if we are in an external iframe in client-side.
+  const [isExternal, setIsExternal] = useState(false)
+  useEffect(() => {
+    setIsExternal(
+      isInIframe() && window.parent.location.host !== window.location.host
+    )
+  }, [])
+
   return (
     <form className={className} onSubmit={handleCheckout}>
       <header className="mb-4 flex flex-col gap-2">
@@ -122,7 +132,8 @@ export function DonateCheckout({
           </Link>
         )}
       </header>
-      <div className="flex flex-col gap-4">
+
+      <div className="flex flex-col gap-4 mb-4">
         <label className="w-full">
           <FormattedMessage
             id="donate_widget.checkout.email"
@@ -152,23 +163,33 @@ export function DonateCheckout({
         </div>
       </div>
 
-      <div className="mt-4">
-        {errorMessage && (
-          <p className="text-error text-b3 mb-2">{errorMessage}</p>
+      {errorMessage && (
+        <p className="text-error text-b3 mb-2">{errorMessage}</p>
+      )}
+      <Button
+        disabled={isLoading}
+        dark
+        className={classNames(
+          "flex gap-2 items-center justify-center",
+          isLoading && "text-gray-2"
         )}
-        <Button
-          disabled={isLoading}
-          dark
-          className={classNames(
-            "flex gap-2 items-center justify-center",
-            isLoading && "text-gray-2"
-          )}
-          fullWidth
-          type="submit"
-        >
-          <DonateCheckoutButtonText isLoading={isLoading} />
-        </Button>
-      </div>
+        fullWidth
+        type="submit"
+      >
+        <DonateCheckoutButtonText isLoading={isLoading} />
+        {isExternal && <ExternalLinkIcon className="fill-current" />}
+      </Button>
+      {isExternal && (
+        <p className="text-b4 text-center mt-2 text-gray-1 dark:text-gray-2">
+          <FormattedMessage
+            id="donate_widget.checkout.external_notice"
+            defaultMessage="You will be redirected to {url} for secure payment."
+            values={{
+              url: typeof window !== "undefined" ? window.location.host : "",
+            }}
+          />
+        </p>
+      )}
     </form>
   )
 }

@@ -13,6 +13,7 @@ export function sendMessage(action: string) {
     } satisfies MessageData)
   }
 }
+
 export function isPopupMessage(data: unknown): data is MessageData {
   return (
     data &&
