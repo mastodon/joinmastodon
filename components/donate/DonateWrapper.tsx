@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import Head from "next/head"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useLayoutEffect, useState } from "react"
 
 import { Theme } from "../../donate/types"
 import { isInIframe } from "../../donate/utils"
@@ -25,7 +25,7 @@ export function DonateWrapper({
   // This is done this way to avoid hydration errors.
   // See: https://nextjs.org/docs/messages/react-hydration-error
   const [isClient, setIsClient] = useState(false)
-  useEffect(() => {
+  useLayoutEffect(() => {
     setIsClient(isInIframe())
   }, [])
 
