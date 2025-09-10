@@ -1,9 +1,13 @@
 import classNames from "classnames"
-import Hero from "../Hero"
-import { Theme } from "../../donate/types"
-import { useEffect, useState } from "react"
-import { isInIframe } from "../../donate/utils"
 import Head from "next/head"
+import Image from "next/image"
+import { useEffect, useState } from "react"
+
+import { Theme } from "../../donate/types"
+import { isInIframe } from "../../donate/utils"
+
+import heroDesktopImage from "../../public/illustrations/default_hero_desktop.png"
+import heroMobileImage from "../../public/illustrations/default_hero_mobile.png"
 
 interface DonateWrapperProps {
   children: React.ReactNode
@@ -40,18 +44,43 @@ export function DonateWrapper({
   }
 
   return (
-    <main className={theme}>
-      <Hero homepage noCenter className="pt-0">
-        <div
-          className={classNames(
-            "w-full max-w-md bg-white text-black flex flex-col rounded-lg overflow-hidden",
-            className
-          )}
-        >
-          {children}
-        </div>
-      </Hero>
+    <main
+      className={classNames(
+        theme,
+        "min-h-screen dark:bg-black overflow-hidden relative px-4"
+      )}
+    >
+      <div
+        className={classNames(
+          "w-full max-w-md mx-auto mt-20 flex flex-col relative z-10",
+          "bg-white dark:bg-black text-black dark:text-white dark:border dark:border-gray-0 rounded-lg overflow-hidden drop-shadow-lg",
+          className
+        )}
+      >
+        {children}
+      </div>
       {belowModal}
+
+      <div className="fixed top-0 left-0">
+        <Image
+          src={heroDesktopImage}
+          alt=""
+          role="presentation"
+          className="hidden xl:block"
+          objectFit="cover"
+          objectPosition="center bottom"
+          placeholder="empty"
+        />
+        <Image
+          src={heroMobileImage}
+          alt=""
+          role="presentation"
+          className="block xl:hidden"
+          objectFit="cover"
+          objectPosition="center bottom"
+          placeholder="empty"
+        />
+      </div>
 
       <Head>
         <title>Donate - Mastodon</title>
