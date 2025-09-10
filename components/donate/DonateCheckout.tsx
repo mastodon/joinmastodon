@@ -112,7 +112,7 @@ export function DonateCheckout({
         )}
       </header>
       <hr className="my-4 border-t border-gray-2" />
-      <div className="flex max-sm:flex-col gap-4">
+      <div className="flex flex-col gap-4">
         <label className="w-full">
           <FormattedMessage
             id="donate_widget.checkout.email"

@@ -1,5 +1,4 @@
 import * as cookie from "cookie"
-import classNames from "classnames"
 import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/navigation"
 import { useCallback, useEffect } from "react"
@@ -14,6 +13,7 @@ import {
 } from "../../types/api"
 import { fetchEndpoint } from "../../utils/api"
 import { DonateFooter } from "../../components/donate/DonateFooter"
+import { DonateWrapper } from "../../components/donate/DonateWrapper"
 
 export default function DonatePage({
   theme,
@@ -45,12 +45,7 @@ export default function DonatePage({
   }, [])
 
   return (
-    <div
-      className={classNames(
-        theme,
-        "bg-white dark:bg-black min-h-screen flex flex-col"
-      )}
-    >
+    <DonateWrapper theme={theme}>
       <DonateWidget
         defaultCurrency={defaultCurrency ?? default_currency}
         className="p-8 pb-2 grow"
@@ -61,7 +56,7 @@ export default function DonatePage({
         defaultFrequency={defaultFrequency}
       />
       <DonateFooter />
-    </div>
+    </DonateWrapper>
   )
 }
 

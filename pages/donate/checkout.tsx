@@ -1,6 +1,5 @@
 import { CheckoutProvider } from "@stripe/react-stripe-js"
 import { loadStripe } from "@stripe/stripe-js"
-import classNames from "classnames"
 import { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/navigation"
 import { useCallback, useEffect, useMemo } from "react"
@@ -12,6 +11,8 @@ import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
 
 import { themeSchema } from "../../donate/utils"
 import { DonateFooter } from "../../components/donate/DonateFooter"
+import { DonateWrapper } from "../../components/donate/DonateWrapper"
+import { Theme } from "../../donate/types"
 
 const primaryColor = "#6364ff"
 const hoverColor = "#563acc"
@@ -41,66 +42,62 @@ export default function DonateCheckoutPage({
   }, [router])
 
   return (
-    <CheckoutProvider
-      stripe={loadStripePromise}
-      options={{
-        fetchClientSecret,
-        elementsOptions: {
-          appearance: {
-            theme: "flat",
-            variables: {
-              colorPrimary: primaryColor,
-              colorText: "#000000",
-              colorBackground: "#ffffff",
-              colorTextSecondary: primaryColor,
-              borderRadius: "0.5rem",
-              logoColor: theme,
+    <DonateWrapper theme={theme}>
+      <CheckoutProvider
+        stripe={loadStripePromise}
+        options={{
+          fetchClientSecret,
+          elementsOptions: {
+            appearance: {
+              theme: "flat",
+              variables: {
+                colorPrimary: primaryColor,
+                colorText: "#000000",
+                colorBackground: "#ffffff",
+                colorTextSecondary: primaryColor,
+                borderRadius: "0.5rem",
+                logoColor: theme,
+              },
+              rules: {
+                ".AccordionItem": {
+                  border: `1px solid ${primaryColor}`,
+                  padding: "1rem",
+                },
+                ".AccordionItem:hover": {
+                  color: hoverColor,
+                  borderColor: hoverColor,
+                },
+                ".Input": {
+                  border: `1px solid ${primaryColor}`,
+                },
+                ".Input::placeholder": {
+                  color: "#9b9b9b",
+                },
+                ".Block": {
+                  border: `1px solid #d4d4d4`,
+                  boxShadow: "none",
+                },
+              },
             },
-            rules: {
-              ".AccordionItem": {
-                border: `1px solid ${primaryColor}`,
-                padding: "1rem",
-              },
-              ".AccordionItem:hover": {
-                color: hoverColor,
-                borderColor: hoverColor,
-              },
-              ".Input": {
-                border: `1px solid ${primaryColor}`,
-              },
-              ".Input::placeholder": {
-                color: "#9b9b9b",
-              },
-              ".Block": {
-                border: `1px solid #d4d4d4`,
-                boxShadow: "none",
-              },
-            },
+            loader: "always",
           },
-        },
-      }}
-    >
-      <div
-        className={classNames(
-          theme,
-          "bg-white dark:bg-black min-h-screen flex flex-col"
-        )}
+        }}
       >
         <DonateCheckout
           onComplete={handleDonate}
           className="p-8 pb-2 grow"
           backUrl={backUrl}
         />
-        <DonateFooter />
-      </div>
-    </CheckoutProvider>
+      </CheckoutProvider>
+      <DonateFooter />
+    </DonateWrapper>
   )
 }
 
 interface DonateCheckoutPageProps {
   clientSecret: string
   stripePublicKey: string
-  theme: z.infer<typeof themeSchema>
+  theme: Theme
   backUrl: string
 }
 
