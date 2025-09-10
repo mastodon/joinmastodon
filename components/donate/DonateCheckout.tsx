@@ -77,31 +77,44 @@ export function DonateCheckout({
       className={classNames("dark:text-white", className)}
       onSubmit={handleCheckout}
     >
-      <header className="mb-4">
-        <h3 className="text-b1">
-          {checkout.recurring ? (
-            <FormattedMessage
-              id="donate_widget.checkout.header.recurring"
-              defaultMessage="You are donating {total} every {frequency}"
-              values={{
-                total: checkout.total.total.amount,
-                frequency: checkout.recurring.interval,
-              }}
-            />
-          ) : (
-            <FormattedMessage
-              id="donate_widget.checkout.header.one_time"
-              defaultMessage="You are donating {total} once"
-              values={{
-                total: checkout.total.total.amount,
-              }}
-            />
+      <header className="mb-4 flex flex-col gap-2">
+        <div className="border p-4 rounded-md">
+          <h3 className="text-b1">
+            {checkout.recurring ? (
+              <FormattedMessage
+                id="donate_widget.checkout.header.recurring"
+                defaultMessage="You are donating {total} every {frequency}"
+                values={{
+                  total: checkout.total.total.amount,
+                  frequency: checkout.recurring.interval,
+                }}
+              />
+            ) : (
+              <FormattedMessage
+                id="donate_widget.checkout.header.one_time"
+                defaultMessage="You are donating {total} once"
+                values={{
+                  total: checkout.total.total.amount,
+                }}
+              />
+            )}
+          </h3>
+          {checkout.recurring && (
+            <p className="text-b3 mt-2 text-gray-1">
+              <FormattedMessage
+                id="donate_widget.checkout.header.recurring_info"
+                defaultMessage="You will be charged today for {total} and every following month. You can cancel your recurring donation at any time."
+                values={{
+                  total: checkout.total.total.amount,
+                }}
+              />
+            </p>
           )}
-        </h3>
+        </div>
         {backUrl && (
           <Link
             href={backUrl}
-            className="text-gray-1 text-b3 mt-2 flex gap-1 items-center"
+            className="text-gray-1 text-b3 mt-2 flex gap-1 items-center -order-1"
           >
             <ArrowLeftIcon className="size-4" />
             <FormattedMessage
@@ -111,7 +124,6 @@ export function DonateCheckout({
           </Link>
         )}
       </header>
-      <hr className="my-4 border-t border-gray-2" />
       <div className="flex flex-col gap-4">
         <label className="w-full">
           <FormattedMessage
