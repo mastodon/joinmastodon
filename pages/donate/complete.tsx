@@ -35,7 +35,7 @@ export default function DonateCompletePage({
             defaultMessage="Thank you for your contribution!"
           />
         </h1>
-        <p className="text-gray-1">
+        <p className="text-gray-1 dark:text-gray-2">
           <FormattedMessage
             id="donate_widget.success.subtitle"
             defaultMessage="You should receive an email confirming your donation soon."

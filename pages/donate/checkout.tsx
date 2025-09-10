@@ -39,8 +39,8 @@ export default function DonateCheckoutPage({
   }, [])
   const handleDonate = useCallback(() => {
     sendMessage("checkout-complete")
-    router.push("/donate/complete")
-  }, [router])
+    router.push(`/donate/complete?theme=${theme}`)
+  }, [router, theme])
 
   return (
     <DonateWrapper theme={theme} belowModal={<BelowModalLink />}>
@@ -100,7 +100,7 @@ function BelowModalLink() {
     return null
   }
   return (
-    <p className="text-center text-b3">
+    <p className="text-center text-b3 dark:text-gray-2 my-4">
       <FormattedMessage
         id="donate_widget.checkout.footer"
         defaultMessage="For more options on how to donate, visit {link}"

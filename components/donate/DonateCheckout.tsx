@@ -73,12 +73,9 @@ export function DonateCheckout({
   )
 
   return (
-    <form
-      className={classNames("dark:text-white", className)}
-      onSubmit={handleCheckout}
-    >
+    <form className={className} onSubmit={handleCheckout}>
       <header className="mb-4 flex flex-col gap-2">
-        <div className="border p-4 rounded-md">
+        <div className="border dark:border-gray-1 p-4 rounded-md">
           <h3 className="text-b1">
             {checkout.recurring ? (
               <FormattedMessage
@@ -100,7 +97,7 @@ export function DonateCheckout({
             )}
           </h3>
           {checkout.recurring && (
-            <p className="text-b4 mt-2 text-gray-1">
+            <p className="text-b4 mt-2 text-gray-1 dark:text-gray-2">
               <FormattedMessage
                 id="donate_widget.checkout.header.recurring_info"
                 defaultMessage="You will be charged {total} today and every following {frequency}. You can cancel your recurring donation at any time."
@@ -115,9 +112,9 @@ export function DonateCheckout({
         {backUrl && (
           <Link
             href={backUrl}
-            className="text-gray-1 text-b3 mt-2 flex gap-1 items-center -order-1"
+            className="text-gray-1 dark:text-gray-2 text-b3 mt-2 flex gap-1 items-center -order-1"
           >
-            <ArrowLeftIcon className="size-4" />
+            <ArrowLeftIcon className="size-4 fill-current" />
             <FormattedMessage
               id="donate_widget.checkout.header.back"
               defaultMessage="Edit your donation"

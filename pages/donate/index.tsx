@@ -34,10 +34,11 @@ export default function DonatePage({
         frequency,
         amount: amount.toFixed(0),
         currency,
+        theme,
       })
       router.push(`/donate/checkout?${params.toString()}`)
     },
-    [donation_url, router]
+    [donation_url, router, theme]
   )
 
   useEffect(() => {
