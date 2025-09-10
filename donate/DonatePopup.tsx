@@ -30,10 +30,10 @@ export function DonatePopup({
     setOpen(true)
     setCurrentStep("loading")
   }, [])
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setOpen(false)
     setTimeout(() => setCurrentStep("loading"), 300)
-  }
+  }, [])
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
@@ -61,7 +61,7 @@ export function DonatePopup({
     return () => {
       window.removeEventListener("message", handleMessage)
     }
-  }, [])
+  }, [handleClose])
 
   return (
     <>
