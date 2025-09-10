@@ -1,11 +1,11 @@
 import { useRouter } from "next/router"
 import Image, { StaticImageData } from "next/legacy/image"
 import { CSSProperties } from "react"
-import { getDirForLocale } from "../utils/locales"
+import classNames from "classnames"
 
 import defaultMobileImage from "../public/illustrations/default_hero_mobile.png"
 import defaultDesktopImage from "../public/illustrations/default_hero_desktop.png"
-import classNames from "classnames"
+import { getDirForLocale } from "../utils/locales"
 
 export type HeroProps = {
   /** Static import of mobile image */
@@ -20,9 +20,6 @@ export type HeroProps = {
   safeTextShadow?: boolean
   /** Don't set a height on the container **/
   noHeight?: boolean
-  // Center text inside the container
-  noCenter?: boolean
-  className?: string
 }
 
 /**
@@ -39,8 +36,6 @@ const Hero = ({
   homepage,
   safeTextShadow = true,
   noHeight,
-  noCenter,
-  className,
 }: HeroProps) => {
   const { locale } = useRouter()
   const dir = getDirForLocale(locale)
@@ -66,11 +61,9 @@ const Hero = ({
       {homepage ? (
         <div
           className={classNames(
-            className,
-            "full-width-bg__inner flex flex-col items-center justify-center py-20",
+            "full-width-bg__inner flex flex-col items-center justify-center py-20 text-center",
             {
               "drop-shadow-safe-text": safeTextShadow,
-              "text-center": !noCenter,
             }
           )}
         >
