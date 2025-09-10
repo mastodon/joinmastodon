@@ -80,7 +80,6 @@ export default function DonateCheckoutPage({
                 },
               },
             },
-            loader: "always",
           },
         }}
       >
