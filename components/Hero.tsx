@@ -13,13 +13,16 @@ export type HeroProps = {
   /** Static import of desktop image */
   desktopImage?: StaticImageData
   /** Text content */
-  children: React.ReactNode
+  children?: React.ReactNode
   /** Large, centered hero style used on the homepage */
   homepage?: boolean
   /** Adds a text shadow to the hero's content */
   safeTextShadow?: boolean
   /** Don't set a height on the container **/
   noHeight?: boolean
+  // Center text inside the container
+  noCenter?: boolean
+  className?: string
 }
 
 /**
@@ -36,6 +39,8 @@ const Hero = ({
   homepage,
   safeTextShadow = true,
   noHeight,
+  noCenter,
+  className,
 }: HeroProps) => {
   const { locale } = useRouter()
   const dir = getDirForLocale(locale)
@@ -61,9 +66,11 @@ const Hero = ({
       {homepage ? (
         <div
           className={classNames(
-            "full-width-bg__inner flex flex-col items-center justify-center py-20 text-center",
+            className,
+            "full-width-bg__inner flex flex-col items-center justify-center py-20",
             {
               "drop-shadow-safe-text": safeTextShadow,
+              "text-center": !noCenter,
             }
           )}
         >

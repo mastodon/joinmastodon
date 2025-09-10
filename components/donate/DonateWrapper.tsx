@@ -38,10 +38,10 @@ export function DonateWrapper({
 
   return (
     <main className={theme}>
-      <Hero homepage>
+      <Hero homepage noCenter className="pt-0">
         <div
           className={classNames(
-            "w-full max-w-md bg-white text-black flex flex-col",
+            "w-full max-w-md bg-white text-black flex flex-col rounded-lg overflow-hidden",
             className
           )}
         >
