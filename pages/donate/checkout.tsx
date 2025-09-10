@@ -4,9 +4,10 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/navigation"
 import { useCallback, useEffect, useMemo } from "react"
 import { z } from "zod"
+import { FormattedMessage } from "react-intl"
 
 import { DonateCheckout } from "../../components/donate/DonateCheckout"
-import { sendMessage } from "../../donate/utils"
+import { isInIframe, sendMessage } from "../../donate/utils"
 import { CURRENCIES, DONATION_FREQUENCIES } from "../../types/api"
 
 import { themeSchema } from "../../donate/utils"
@@ -42,7 +43,7 @@ export default function DonateCheckoutPage({
   }, [router])
 
   return (
-    <DonateWrapper theme={theme}>
+    <DonateWrapper theme={theme} belowModal={<BelowModalLink />}>
       <CheckoutProvider
         stripe={loadStripePromise}
         options={{
@@ -91,6 +92,27 @@ export default function DonateCheckoutPage({
       </CheckoutProvider>
       <DonateFooter />
     </DonateWrapper>
+  )
+}
+
+function BelowModalLink() {
+  if (isInIframe()) {
+    return null
+  }
+  return (
+    <p className="text-center text-b3">
+      <FormattedMessage
+        id="donate_widget.checkout.footer"
+        defaultMessage="For more options on how to donate, visit {link}"
+        values={{
+          link: (
+            <a href="https://joinmastodon.org/donate" className="underline">
+              joinmastodon.org/donate
+            </a>
+          ),
+        }}
+      />
+    </p>
   )
 }
 

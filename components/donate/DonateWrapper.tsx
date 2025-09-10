@@ -3,17 +3,20 @@ import Hero from "../Hero"
 import { Theme } from "../../donate/types"
 import { useEffect, useState } from "react"
 import { isInIframe } from "../../donate/utils"
+import Head from "next/head"
 
 interface DonateWrapperProps {
   children: React.ReactNode
   className?: string
   theme: Theme
+  belowModal?: React.ReactNode
 }
 
 export function DonateWrapper({
   children,
   className,
   theme = "auto",
+  belowModal,
 }: DonateWrapperProps) {
   // This is done this way to avoid hydration errors.
   // See: https://nextjs.org/docs/messages/react-hydration-error
@@ -48,6 +51,11 @@ export function DonateWrapper({
           {children}
         </div>
       </Hero>
+      {belowModal}
+
+      <Head>
+        <title>Donate - Mastodon</title>
+      </Head>
     </main>
   )
 }

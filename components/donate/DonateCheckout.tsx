@@ -100,12 +100,13 @@ export function DonateCheckout({
             )}
           </h3>
           {checkout.recurring && (
-            <p className="text-b3 mt-2 text-gray-1">
+            <p className="text-b4 mt-2 text-gray-1">
               <FormattedMessage
                 id="donate_widget.checkout.header.recurring_info"
-                defaultMessage="You will be charged today for {total} and every following month. You can cancel your recurring donation at any time."
+                defaultMessage="You will be charged {total} today and every following {frequency}. You can cancel your recurring donation at any time."
                 values={{
                   total: checkout.total.total.amount,
+                  frequency: checkout.recurring.interval,
                 }}
               />
             </p>
@@ -168,25 +169,47 @@ export function DonateCheckout({
           fullWidth
           type="submit"
         >
-          {isLoading ? (
-            <>
-              <LoadingIcon className="motion-safe:animate-spin size-5" />
-              <FormattedMessage
-                id="donate_widget.checkout.submitting"
-                defaultMessage="Submitting…"
-              />
-            </>
-          ) : (
-            <FormattedMessage
-              id="donate_widget.checkout.pay_button"
-              defaultMessage="Pay {total} now"
-              values={{
-                total: checkout.total.total.amount,
-              }}
-            />
-          )}
+          <DonateCheckoutButtonText isLoading={isLoading} />
         </Button>
       </div>
     </form>
+  )
+}
+
+function DonateCheckoutButtonText({ isLoading }: { isLoading: boolean }) {
+  const checkout = useCheckout()
+  if (isLoading) {
+    return (
+      <>
+        <LoadingIcon className="motion-safe:animate-spin size-5" />
+        <FormattedMessage
+          id="donate_widget.checkout.submitting"
+          defaultMessage="Submitting…"
+        />
+      </>
+    )
+  }
+
+  if (checkout.recurring) {
+    return (
+      <FormattedMessage
+        id="donate_widget.checkout.pay_button"
+        defaultMessage="Subscribe for {total} every {frequency}"
+        values={{
+          total: checkout.total.total.amount,
+          frequency: checkout.recurring.interval,
+        }}
+      />
+    )
+  }
+
+  return (
+    <FormattedMessage
+      id="donate_widget.checkout.pay_button"
+      defaultMessage="Pay {total} now"
+      values={{
+        total: checkout.total.total.amount,
+      }}
+    />
   )
 }
