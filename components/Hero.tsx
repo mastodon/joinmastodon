@@ -1,11 +1,11 @@
 import { useRouter } from "next/router"
 import Image, { StaticImageData } from "next/legacy/image"
 import { CSSProperties } from "react"
-import { getDirForLocale } from "../utils/locales"
+import classNames from "classnames"
 
 import defaultMobileImage from "../public/illustrations/default_hero_mobile.png"
 import defaultDesktopImage from "../public/illustrations/default_hero_desktop.png"
-import classNames from "classnames"
+import { getDirForLocale } from "../utils/locales"
 
 export type HeroProps = {
   /** Static import of mobile image */
@@ -13,7 +13,7 @@ export type HeroProps = {
   /** Static import of desktop image */
   desktopImage?: StaticImageData
   /** Text content */
-  children: React.ReactNode
+  children?: React.ReactNode
   /** Large, centered hero style used on the homepage */
   homepage?: boolean
   /** Adds a text shadow to the hero's content */

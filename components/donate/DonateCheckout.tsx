@@ -1,14 +1,16 @@
 import { PaymentElement, useCheckout } from "@stripe/react-stripe-js"
 import classNames from "classnames"
 import Link from "next/link"
-import { ChangeEvent, FormEvent, useCallback, useState } from "react"
+import { ChangeEvent, FormEvent, useCallback, useEffect, useState } from "react"
 import { FormattedMessage } from "react-intl"
 
 import LoadingIcon from "../../public/icons/loading.svg?inline"
 import ArrowLeftIcon from "../../public/ui/arrow-left.svg?inline"
+import ExternalLinkIcon from "../../public/ui/external-link.svg?inline"
 
 import { Button } from "../Button"
 import { Input } from "../Input"
+import { isInIframe } from "../../donate/utils"
 
 interface DonateCheckoutProps {
   backUrl?: string
@@ -72,38 +74,57 @@ export function DonateCheckout({
     [checkout, email, onComplete]
   )
 
+  // Determine if we are in an external iframe in client-side.
+  const [isExternal, setIsExternal] = useState(false)
+  useEffect(() => {
+    setIsExternal(
+      isInIframe() && window.parent.location.host !== window.location.host
+    )
+  }, [])
+
   return (
-    <form
-      className={classNames("dark:text-white", className)}
-      onSubmit={handleCheckout}
-    >
-      <header className="mb-4">
-        <h3 className="text-b1">
-          {checkout.recurring ? (
-            <FormattedMessage
-              id="donate_widget.checkout.header.recurring"
-              defaultMessage="You are donating {total} every {frequency}"
-              values={{
-                total: checkout.total.total.amount,
-                frequency: checkout.recurring.interval,
-              }}
-            />
-          ) : (
-            <FormattedMessage
-              id="donate_widget.checkout.header.one_time"
-              defaultMessage="You are donating {total} once"
-              values={{
-                total: checkout.total.total.amount,
-              }}
-            />
+    <form className={className} onSubmit={handleCheckout}>
+      <header className="mb-4 flex flex-col gap-2">
+        <div className="border dark:border-gray-1 p-4 rounded-md">
+          <h3 className="text-b1">
+            {checkout.recurring ? (
+              <FormattedMessage
+                id="donate_widget.checkout.header.recurring"
+                defaultMessage="You are donating {total} every {frequency}"
+                values={{
+                  total: checkout.total.total.amount,
+                  frequency: checkout.recurring.interval,
+                }}
+              />
+            ) : (
+              <FormattedMessage
+                id="donate_widget.checkout.header.one_time"
+                defaultMessage="You are donating {total} once"
+                values={{
+                  total: checkout.total.total.amount,
+                }}
+              />
+            )}
+          </h3>
+          {checkout.recurring && (
+            <p className="text-b4 mt-2 text-gray-1 dark:text-gray-2">
+              <FormattedMessage
+                id="donate_widget.checkout.header.recurring_info"
+                defaultMessage="You will be charged {total} today and every following {frequency}. You can cancel your recurring donation at any time."
+                values={{
+                  total: checkout.total.total.amount,
+                  frequency: checkout.recurring.interval,
+                }}
+              />
+            </p>
           )}
-        </h3>
+        </div>
         {backUrl && (
           <Link
             href={backUrl}
-            className="text-gray-1 text-b3 mt-2 flex gap-1 items-center"
+            className="text-gray-1 dark:text-gray-2 text-b3 mt-2 flex gap-1 items-center -order-1"
           >
-            <ArrowLeftIcon className="size-4" />
+            <ArrowLeftIcon className="size-4 fill-current" />
             <FormattedMessage
               id="donate_widget.checkout.header.back"
               defaultMessage="Edit your donation"
@@ -111,8 +132,8 @@ export function DonateCheckout({
           </Link>
         )}
       </header>
-      <hr className="my-4 border-t border-gray-2" />
-      <div className="flex max-sm:flex-col gap-4">
+
+      <div className="flex flex-col gap-4 mb-4">
         <label className="w-full">
           <FormattedMessage
             id="donate_widget.checkout.email"
@@ -142,39 +163,71 @@ export function DonateCheckout({
         </div>
       </div>
 
-      <div className="mt-4">
-        {errorMessage && (
-          <p className="text-error text-b3 mb-2">{errorMessage}</p>
+      {errorMessage && (
+        <p className="text-error text-b3 mb-2">{errorMessage}</p>
+      )}
+      <Button
+        disabled={isLoading}
+        dark
+        className={classNames(
+          "flex gap-2 items-center justify-center",
+          isLoading && "text-gray-2"
         )}
-        <Button
-          disabled={isLoading}
-          dark
-          className={classNames(
-            "flex gap-2 items-center justify-center",
-            isLoading && "text-gray-2"
-          )}
-          fullWidth
-          type="submit"
-        >
-          {isLoading ? (
-            <>
-              <LoadingIcon className="motion-safe:animate-spin size-5" />
-              <FormattedMessage
-                id="donate_widget.checkout.submitting"
-                defaultMessage="Submitting…"
-              />
-            </>
-          ) : (
-            <FormattedMessage
-              id="donate_widget.checkout.pay_button"
-              defaultMessage="Pay {total} now"
-              values={{
-                total: checkout.total.total.amount,
-              }}
-            />
-          )}
-        </Button>
-      </div>
+        fullWidth
+        type="submit"
+      >
+        <DonateCheckoutButtonText isLoading={isLoading} />
+        {isExternal && <ExternalLinkIcon className="fill-current" />}
+      </Button>
+      {isExternal && (
+        <p className="text-b4 text-center mt-2 text-gray-1 dark:text-gray-2">
+          <FormattedMessage
+            id="donate_widget.checkout.external_notice"
+            defaultMessage="You will be redirected to {url} for secure payment."
+            values={{
+              url: typeof window !== "undefined" ? window.location.host : "",
+            }}
+          />
+        </p>
+      )}
     </form>
+  )
+}
+
+function DonateCheckoutButtonText({ isLoading }: { isLoading: boolean }) {
+  const checkout = useCheckout()
+  if (isLoading) {
+    return (
+      <>
+        <LoadingIcon className="motion-safe:animate-spin size-5" />
+        <FormattedMessage
+          id="donate_widget.checkout.submitting"
+          defaultMessage="Submitting…"
+        />
+      </>
+    )
+  }
+
+  if (checkout.recurring) {
+    return (
+      <FormattedMessage
+        id="donate_widget.checkout.pay_button"
+        defaultMessage="Subscribe for {total} every {frequency}"
+        values={{
+          total: checkout.total.total.amount,
+          frequency: checkout.recurring.interval,
+        }}
+      />
+    )
+  }
+
+  return (
+    <FormattedMessage
+      id="donate_widget.checkout.pay_button"
+      defaultMessage="Pay {total} now"
+      values={{
+        total: checkout.total.total.amount,
+      }}
+    />
   )
 }

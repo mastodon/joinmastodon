@@ -73,6 +73,9 @@ const config = {
       goldenrod: "#ffbe2e",
       error: "#ff4d4f",
     },
+    fill: {
+      current: "currentColor",
+    },
     extend: {
       fontFamily: {
         sans: [

@@ -218,7 +218,7 @@ export function DonateWidget({
           </Select>
         </span>
         <Input
-          className="rounded-l-none focus:shadow-none"
+          className="rounded-l-none focus:shadow-none dark:bg-black"
           type="number"
           value={amountDisplay}
           onChange={handleChangeAmount}

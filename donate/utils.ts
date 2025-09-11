@@ -1,14 +1,19 @@
 import { z } from "zod"
 import type { MessageData } from "./types"
 
+export function isInIframe() {
+  return typeof window !== "undefined" && window.self !== window.top
+}
+
 export function sendMessage(action: string) {
-  if (window.parent) {
+  if (isInIframe()) {
     window.parent.postMessage({
       source: "donate-widget",
       action,
     } satisfies MessageData)
   }
 }
+
 export function isPopupMessage(data: unknown): data is MessageData {
   return (
     data &&
