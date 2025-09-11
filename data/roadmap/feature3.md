@@ -1,1 +1,4 @@
-title: Title of Feature status: working --- Here is the text of feature 3 with WORKING status.
+title: Starter Packs
+status: working
+---
+Users can create a collection of accounts that they recommend. This allows both new and existing user to easily follow some or all of the the Starter Pack  
