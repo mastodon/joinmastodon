@@ -1,1 +1,4 @@
-title: Title of Feature status: released --- Here is the text of feature 1 that we're working on.
+title: Enhanced Profile 
+status: released
+---
+Added a new "Feature on my profile" option for promoting specific posts or accounts via a dedicated "Featured" tab, alongside a carousel for pinned posts. 
