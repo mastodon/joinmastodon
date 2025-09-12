@@ -23,6 +23,7 @@ export default function DonateCheckoutPage({
   stripePublicKey,
   theme,
   backUrl,
+  source,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const loadStripePromise = useMemo(
     () => loadStripe(stripePublicKey),
@@ -37,10 +38,23 @@ export default function DonateCheckoutPage({
   useEffect(() => {
     sendMessage("checkout-loaded")
   }, [])
+
   const handleDonate = useCallback(() => {
-    sendMessage("checkout-complete")
+    if (isInIframe()) {
+      sendMessage("checkout-complete")
+    } else if (window.opener) {
+      // If opened in a popup, notify the opener window and close the window.
+      const parent = window.opener as Window
+      if (!parent.closed) {
+        if (source) {
+          parent.postMessage("payment_success", source)
+        }
+        window.close()
+        return
+      }
+    }
     router.push(`/donate/complete?theme=${theme}`)
-  }, [router, theme])
+  }, [router, source, theme])
 
   return (
     <DonateWrapper theme={theme} belowModal={<BelowModalLink />}>
@@ -120,14 +134,15 @@ interface DonateCheckoutPageProps {
   stripePublicKey: string
   theme: Theme
   backUrl: string
+  source?: string
 }
 
 const querySchema = z.object({
-  url: z.string().url(),
   frequency: z.enum(DONATION_FREQUENCIES),
   amount: z.coerce.number().int().positive().gte(100),
   currency: z.enum(CURRENCIES),
   theme: themeSchema,
+  source: z.string().url().optional(),
 })
 
 const responseSchema = z.promise(
@@ -136,11 +151,15 @@ const responseSchema = z.promise(
   })
 )
 
+// TODO: Use environment variable
+const DONATE_API_URL = "https://sponsor.staging.joinmastodon.org/donate/new"
+
 export const getServerSideProps: GetServerSideProps<
   DonateCheckoutPageProps
 > = async ({ query, locale }) => {
   try {
-    const { url, frequency, amount, currency, theme } = querySchema.parse(query)
+    const { frequency, amount, currency, theme, source } =
+      querySchema.parse(query)
 
     const params = new URLSearchParams({
       platform: "web",
@@ -153,7 +172,7 @@ export const getServerSideProps: GetServerSideProps<
     if (process.env.APP_ENV !== "production") {
       params.set("environment", "staging")
     }
-    const response = await fetch(`${url}?${params}`, {
+    const response = await fetch(`${DONATE_API_URL}?${params}`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -170,6 +189,7 @@ export const getServerSideProps: GetServerSideProps<
         stripePublicKey: process.env.STRIPE_PUBLIC_KEY ?? "",
         theme,
         backUrl: `/donate?${new URLSearchParams({ frequency, amount: amount.toString(), currency, theme }).toString()}`,
+        source,
       },
     }
   } catch (error) {
