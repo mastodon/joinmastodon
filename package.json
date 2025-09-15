@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "yarn typecheck && yarn lint-js",
-    "lint-js": "next lint",
+    "lint-js": "eslint .",
     "fix": "yarn lint --fix",
     "format": "prettier --write --log-level warn --ignore-unknown .",
     "update-sponsors": "node --experimental-fetch patreon.mjs",
@@ -31,7 +31,7 @@
     "javascript-stringify": "^2.1.0",
     "keen-slider": "^6.8.6",
     "lodash": "^4.17.21",
-    "next": "^15.3.1",
+    "next": "^15.5.2",
     "node-gyp": "^11.2.0",
     "react": "^18.3.1",
     "react-blurhash": "^0.3.0",
@@ -43,6 +43,7 @@
     "zod": "^3.24.4"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@formatjs/cli": "^6.7.1",
     "@svgr/webpack": "^8.1.0",
     "@tanstack/react-query-devtools": "^5.75.2",

@@ -22,12 +22,7 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     // These static files are references with hardcoded URLs and need proper Cache-Control headers
-    return [
-      "/fonts/:all*(ttf|otf|woff|woff2)",
-      "/favicon-:all*(png)",
-      "/app-icon.png",
-      "/preview.png",
-    ]
+    return ["/fonts/:all*(ttf|otf|woff|woff2)", "/:all*.png"]
       .map((source) => ({
         source,
         headers: [
