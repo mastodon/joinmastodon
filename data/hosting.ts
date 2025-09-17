@@ -8,6 +8,9 @@ import FlipboardLogo from "../public/logos/hosting-partners/flipboard.svg?inline
 import MediumLogo from "../public/logos/hosting-partners/medium.svg?inline"
 import SchleswigHolsteinLogo from "../public/logos/hosting-partners/sh-den-gro.jpg"
 import WikimediaLogo from "../public/logos/hosting-partners/wikimedia.svg?inline"
+import EmailIcon from "../public/ui/email.svg?inline"
+import GlobeIcon from "../public/ui/globe.svg?inline"
+import AnnouncementIcon from "../public/ui/announcement.svg?inline"
 
 const messages = defineMessages({
   partnersEuBody: {
@@ -84,13 +87,13 @@ const messages = defineMessages({
 export const SalesScheduleLink = "https://tally.so/r/woJ2EX"
 
 type MessageOrString = string | MessageDescriptor
-export type ImageOrSvg =
-  | StaticImageData
-  | ((props: SVGProps<SVGSVGElement>) => ReactElement)
+type SVGComponent = (props: SVGProps<SVGSVGElement>) => ReactElement
+export type ImageOrSvg = StaticImageData | SVGComponent
 export type CardItem = {
   title: MessageOrString
   body: MessageDescriptor
   image?: ImageOrSvg
+  icon?: SVGComponent
 }
 
 export const partnerCards = [
@@ -115,14 +118,17 @@ export const benefitsCards = [
   {
     title: messages.benefitsIdentityTitle,
     body: messages.benefitsIdentityBody,
+    icon: EmailIcon,
   },
   {
     title: messages.benefitsHostingTitle,
     body: messages.benefitsHostingBody,
+    icon: GlobeIcon,
   },
   {
     title: messages.benefitsReachTitle,
     body: messages.benefitsReachBody,
+    icon: AnnouncementIcon,
   },
 ] satisfies CardItem[]
 

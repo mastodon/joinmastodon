@@ -19,7 +19,6 @@ import {
   SalesScheduleLink,
   hostingLogos,
 } from "../data/hosting"
-import ArrowRight from "../public/ui/arrow-right.svg?inline"
 import Image from "next/image"
 
 const messages = defineMessages({
@@ -43,27 +42,15 @@ const messages = defineMessages({
     id: "hosting.services.single.subtitle",
     defaultMessage: "Designed for organisations that want to stay in control.",
   },
-  featured: {
-    id: "hosting.services.featured",
-    defaultMessage: "Most popular",
-  },
   partnersTitle: {
     id: "hosting.partners.title",
     defaultMessage:
       "Leading organisations and institutions trust Mastodon to manage their instance.",
   },
-  partnersLabel: {
-    id: "hosting.partners.label",
-    defaultMessage: "Partners",
-  },
   benefitsTitle: {
     id: "hosting.benefits.title",
     defaultMessage:
       "Your domain. Your people. Your voices. For a resilient social network.",
-  },
-  benefitsLabel: {
-    id: "hosting.benefits.label",
-    defaultMessage: "Benefits",
   },
 })
 
@@ -105,112 +92,82 @@ const HostingPage = () => {
         <SalesButton />
       </Hero>
 
-      <div className="grid grid-cols-[minmax(200px,max-content)_1fr_1fr] grid-rows-[repeat(5,min-content)] gap-8">
-        <div className="grid grid-rows-subgrid row-span-full row-start-2 items-center">
-          <ServicesLabel>
-            <FormattedMessage
-              id="hosting.services.description"
-              defaultMessage="Description"
-            />
-          </ServicesLabel>
-          <ServicesLabel>
-            <FormattedMessage
-              id="hosting.services.who"
-              defaultMessage="Who is it for"
-            />
-          </ServicesLabel>
-          <ServicesLabel>
-            <FormattedMessage
-              id="hosting.services.details"
-              defaultMessage="Offering details"
-            />
-          </ServicesLabel>
-        </div>
-        <ServicesCard
-          title={messages.managedTitle}
-          subtitle={messages.managedSubtitle}
-          featured={messages.featured}
-        >
-          <FormattedMessage
-            id="hosting.services.managed.description"
-            defaultMessage="We handle everything - from infrastructure, security, backups, updates, moderation, legal takedowns."
-            tagName="p"
-          />
-          <FormattedMessage
-            id="hosting.services.managed.who"
-            defaultMessage="Perfect for organisations that want fast access to their own instance with guaranteed compliance and low resource investment."
-            tagName="p"
-          />
-          <FormattedMessage
-            id="hosting.services.managed.details"
-            defaultMessage="Including Hosting, Moderation and Support"
-            tagName="p"
-          />
-        </ServicesCard>
-        <ServicesCard
-          title={messages.singleTitle}
-          subtitle={messages.singleSubtitle}
-        >
-          <FormattedMessage
-            id="hosting.services.single.description"
-            defaultMessage="You stay in control. Can can decide which services you want to run yourself and where to get support from Mastodon."
-            tagName="p"
-          />
-          <FormattedMessage
-            id="hosting.services.single.who"
-            defaultMessage="Ideal for organisations that already have internal resources or want to build internal capabilities"
-            tagName="p"
-          />
-          <FormattedMessage
-            id="hosting.services.single.details"
-            defaultMessage="Choose one or multiple services from Hosting, Moderation or Support."
-            tagName="p"
-          />
-        </ServicesCard>
-      </div>
-
-      <CardList
-        title={messages.partnersTitle}
-        label={messages.partnersLabel}
-        items={partnerCards}
-      />
-
-      <CardList
-        title={messages.benefitsTitle}
-        label={messages.benefitsLabel}
-        items={benefitsCards}
-      />
-
-      <section className="my-8">
-        <h2 className="text-h5 font-bold mb-4">
-          <FormattedMessage
-            id="hosting.guide.title"
-            defaultMessage="How It Works"
-          />
-        </h2>
-        <div className="grid grid-cols-3 gap-12">
-          {stepsCards.map(({ title, body }, index) => (
-            <div
-              className="border-2 border-gray-1 p-8 rounded-xl relative"
-              key={index}
+      <div className="md:grid md:grid-cols-12 md:gap-gutter">
+        <div className="md:col-span-12 xl:col-span-10 xl:col-start-2">
+          <div className="flex flex-col md:grid md:grid-rows-[repeat(5,min-content)] gap-8 mb-16">
+            <ServicesCard
+              title={messages.managedTitle}
+              subtitle={messages.managedSubtitle}
             >
-              <span className="block text-h3 text-center text-nightshade-300 font-bold">
-                {index + 1}
-              </span>
-              <h3 className="font-bold">
-                {typeof title === "string" ? title : intl.formatMessage(title)}
-              </h3>
-              <p>{intl.formatMessage(body)}</p>
-              {index !== 0 && (
-                <ArrowRight
-                  className="absolute -left-[calc(3rem+2px)] top-0 h-full w-12 px-2"
-                  role="presentation"
-                />
-              )}
+              <FormattedMessage
+                id="hosting.services.managed.description"
+                defaultMessage="We handle everything - from infrastructure, security, backups, updates, moderation, legal takedowns."
+                tagName="p"
+              />
+              <FormattedMessage
+                id="hosting.services.managed.who"
+                defaultMessage="Perfect for organisations that want fast access to their own instance with guaranteed compliance and low resource investment."
+                tagName="p"
+              />
+              <FormattedMessage
+                id="hosting.services.managed.details"
+                defaultMessage="Including Hosting, Moderation and Support"
+                tagName="p"
+              />
+            </ServicesCard>
+            <ServicesCard
+              title={messages.singleTitle}
+              subtitle={messages.singleSubtitle}
+            >
+              <FormattedMessage
+                id="hosting.services.single.description"
+                defaultMessage="You stay in control. Can can decide which services you want to run yourself and where to get support from Mastodon."
+                tagName="p"
+              />
+              <FormattedMessage
+                id="hosting.services.single.who"
+                defaultMessage="Ideal for organisations that already have internal resources or want to build internal capabilities"
+                tagName="p"
+              />
+              <FormattedMessage
+                id="hosting.services.single.details"
+                defaultMessage="Choose one or multiple services from Hosting, Moderation or Support."
+                tagName="p"
+              />
+            </ServicesCard>
+          </div>
+          <CardList title={messages.partnersTitle} items={partnerCards} />
+
+          <CardList title={messages.benefitsTitle} items={benefitsCards} />
+
+          <section className="my-8">
+            <h2 className="text-h5 font-bold mb-4">
+              <FormattedMessage
+                id="hosting.guide.title"
+                defaultMessage="How It Works"
+              />
+            </h2>
+            <div className="flex flex-col gap-8">
+              {stepsCards.map(({ title, body }, index) => (
+                <div
+                  className="p-8 rounded-xl relative bg-gray-5 shadow-lg grid grid-cols-[min-content_1fr] gap-4"
+                  key={index}
+                >
+                  <span className="flex items-center justify-center text-b1 text-white bg-black rounded-full font-bold row-span-2 size-10">
+                    {index + 1}
+                  </span>
+                  <h3 className="font-bold col-start-2 h6">
+                    {typeof title === "string"
+                      ? title
+                      : intl.formatMessage(title)}
+                  </h3>
+                  <p className="col-start-2">{intl.formatMessage(body)}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </section>
         </div>
-      </section>
+      </div>
 
       <Head>
         <title>{intl.formatMessage(messages.title)}</title>
@@ -234,12 +191,6 @@ const SalesButton = ({ className }: { className?: string }) => (
   </a>
 )
 
-const ServicesLabel = ({ children }: PropsWithChildren) => (
-  <p className="bg-gray-3 border-2 border-gray-2 rounded-lg p-2 text-center text-b3 font-bold">
-    {children}
-  </p>
-)
-
 const ServicesCard = ({
   children,
   title,
@@ -252,7 +203,7 @@ const ServicesCard = ({
 }>) => {
   const intl = useIntl()
   return (
-    <section className="grid grid-rows-subgrid row-span-full relative p-4 bg-nightshade-600 text-white rounded-lg">
+    <section className="grid grid-rows-subgrid gap-8 row-span-full relative p-4 bg-nightshade-600 text-white rounded-lg">
       <div className="flex flex-col justify-between">
         <h2 className="h5 mb-4">{intl.formatMessage(title)}</h2>
         <h3 className="italic text-b3">{intl.formatMessage(subtitle)}</h3>
@@ -270,24 +221,23 @@ const ServicesCard = ({
 
 type CardListProps = {
   title: MessageDescriptor
-  label: MessageDescriptor
   items: CardItem[]
 }
-const CardList = ({ title, label, items }: CardListProps) => {
+const CardList = ({ title, items }: CardListProps) => {
   const intl = useIntl()
   return (
-    <section className="my-8 flex flex-col gap-2">
+    <section className="my-16 flex flex-col gap-2">
       <h2 className="text-h5 font-bold mb-4">{intl.formatMessage(title)}</h2>
-      <h3 className="-order-1 font-semibold">{intl.formatMessage(label)}</h3>
-      <div className="grid grid-cols-3 gap-8">
-        {items.map(({ title, body, image }, index) => (
-          <div className="border-2 border-gray-1 p-8 rounded-xl" key={index}>
+      <div className="flex flex-col md:grid md:grid-cols-3 gap-8">
+        {items.map(({ title, body, image, icon: Icon }, index) => (
+          <div className="bg-gray-5 shadow-lg p-8 rounded-xl" key={index}>
             {image && (
-              <figure className="aspect-square flex flex-col justify-center items-center m-8 mt-0">
+              <figure className="aspect-square flex flex-col justify-center items-center p-4 lg:p-8 mb-4 rounded-xl bg-white">
                 <ImageOrSVG data={image} className="block" />
               </figure>
             )}
-            <h4 className="font-bold">
+            <h4 className="h6 mb-2 flex gap-4 items-center">
+              {Icon && <Icon className="block w-8 flex-shrink-0" />}
               {typeof title === "string" ? title : intl.formatMessage(title)}
             </h4>
             <p>{intl.formatMessage(body)}</p>
