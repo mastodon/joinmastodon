@@ -27,6 +27,15 @@ const Header = ({ transparent = true }: HeaderProps) => {
       label: <FormattedMessage id="nav.apps.title" defaultMessage="Apps" />,
     },
     {
+      value: "/hosting",
+      label: (
+        <FormattedMessage
+          id="nav.hosting.title"
+          defaultMessage="For Institutions"
+        />
+      ),
+    },
+    {
       value: "/sponsors",
       label: (
         <FormattedMessage id="nav.sponsors.title" defaultMessage="Donate" />
