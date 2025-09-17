@@ -153,7 +153,7 @@ const HostingPage = () => {
                   className="p-8 rounded-xl relative bg-gray-5 shadow-lg grid grid-cols-[min-content_1fr] gap-4"
                   key={index}
                 >
-                  <span className="flex items-center justify-center text-b1 text-white bg-black rounded-full font-bold row-span-2 size-10">
+                  <span className="flex items-center justify-center text-b1 text-white bg-blurple-900 rounded-full font-bold row-span-2 size-10">
                     {index + 1}
                   </span>
                   <h3 className="font-bold col-start-2 h6">
@@ -232,12 +232,14 @@ const CardList = ({ title, items }: CardListProps) => {
         {items.map(({ title, body, image, icon: Icon }, index) => (
           <div className="bg-gray-5 shadow-lg p-8 rounded-xl" key={index}>
             {image && (
-              <figure className="aspect-square flex flex-col justify-center items-center p-4 lg:p-8 mb-4 rounded-xl bg-white">
+              <figure className="aspect-square flex flex-col justify-center items-center p-4 lg:p-8 mb-4">
                 <ImageOrSVG data={image} className="block" />
               </figure>
             )}
             <h4 className="h6 mb-2 flex gap-4 items-center">
-              {Icon && <Icon className="block w-8 flex-shrink-0" />}
+              {Icon && (
+                <Icon className="block w-8 flex-shrink-0 text-blurple-900 fill-current" />
+              )}
               {typeof title === "string" ? title : intl.formatMessage(title)}
             </h4>
             <p>{intl.formatMessage(body)}</p>
