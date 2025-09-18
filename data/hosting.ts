@@ -16,17 +16,17 @@ const messages = defineMessages({
   partnersEuBody: {
     id: "hosting.partners.eu.body",
     defaultMessage:
-      "The European Commission runs an official Mastodon instance to broaden public engagement across the fediverse, support European open-source platforms, and provide a privacy-focused channel for official communications.",
+      "The European Commission runs an official Mastodon server to broaden public engagement across the Fediverse, support European open-source platforms, and provide a privacy-focused channel for official communications.",
   },
   partnersSchleswigHolsteinBody: {
     id: "hosting.partners.schleswig-holstein.body",
     defaultMessage:
-      "To strengthen public digital services and local collaboration, the German state of Schleswig-Holstein launched social.schleswig-holstein.de — an official, Mastodon instance open to state administrations, public-sector companies and non-profits in the region.",
+      "To strengthen public digital services and local collaboration, the German state of Schleswig-Holstein launched social.schleswig-holstein.de — an official, Mastodon server open to state administrations, public-sector companies and non-profits in the region.",
   },
   partnersAltStoreBody: {
     id: "hosting.partners.altstore.body",
     defaultMessage:
-      "Altstore is a home for apps that push the boundaries of iOS with no jailbreak required. To support decentralization, user autonomy and privacy, AltStore runs an official Mastodon instance to discuss app sovereignty, alternative app distribution, and open-source solutions outside closed app-store ecosystems.",
+      "AltStore is a home for apps that push the boundaries of iOS with no jailbreak required. An announcement from the AltStore team is coming soon with more details on our partnership.",
   },
   benefitsIdentityTitle: {
     id: "hosting.benefits.identity.title",
@@ -44,7 +44,7 @@ const messages = defineMessages({
   benefitsHostingBody: {
     id: "hosting.benefits.hosting.body",
     defaultMessage:
-      "Decide exactly where your instance is hosted, in EU, or many other approved jurisdictions - so you meet sovereignty, GDPR, or internal-policy requirements without compromise.",
+      "Decide exactly where your server is hosted, in the EU, or many other approved jurisdictions - so you meet sovereignty, GDPR, or internal policy requirements without compromise.",
   },
   benefitsReachTitle: {
     id: "hosting.benefits.reach.title",
@@ -53,7 +53,7 @@ const messages = defineMessages({
   benefitsReachBody: {
     id: "hosting.benefits.reach.body",
     defaultMessage:
-      "Define your own server rules and moderation standards. With no third-party or outside platform algorithm. You decide how discourse is moderated and how your messages travel.",
+      "Define your own server rules and moderation standards - with no third-party or outside platform algorithm. You decide how discourse is moderated and how your messages travel.",
   },
   stepDomainTitle: {
     id: "hosting.steps.domain.title",
@@ -71,7 +71,7 @@ const messages = defineMessages({
   stepSpaceBody: {
     id: "hosting.steps.space.body",
     defaultMessage:
-      "Set the look, feel, and rules to fit your organizational identity. You can add a description, set branding and define relevant server rules for your instance.",
+      "Set the look, feel, and rules to fit your organizational identity. You can add a description, set branding and define relevant rules for your server.",
   },
   stepTeamTitle: {
     id: "hosting.steps.team.title",
@@ -80,7 +80,7 @@ const messages = defineMessages({
   stepTeamBody: {
     id: "hosting.steps.team.body",
     defaultMessage:
-      "The final step is about sending invites, assign roles if needed, and let community members set up their profiles. You are ready to post, follow, and connect across the Fediverse.",
+      "The final step is about sending invites, assigning roles if needed, and letting community members set up their profiles. You are ready to post, follow, and connect across the Fediverse.",
   },
 })
 

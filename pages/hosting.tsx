@@ -28,7 +28,7 @@ const messages = defineMessages({
   },
   managedTitle: {
     id: "hosting.services.managed.title",
-    defaultMessage: "All-in-One Managed Instance",
+    defaultMessage: "All-in-One Managed Service",
   },
   managedSubtitle: {
     id: "hosting.services.managed.subtitle",
@@ -40,12 +40,12 @@ const messages = defineMessages({
   },
   singleSubtitle: {
     id: "hosting.services.single.subtitle",
-    defaultMessage: "Designed for organisations that want to stay in control.",
+    defaultMessage: "Designed for organisations that want to stay in control",
   },
   partnersTitle: {
     id: "hosting.partners.title",
     defaultMessage:
-      "Leading organisations and institutions trust Mastodon to manage their instance.",
+      "Leading organisations and institutions trust Mastodon to manage their services",
   },
   benefitsTitle: {
     id: "hosting.benefits.title",
@@ -80,13 +80,13 @@ const HostingPage = () => {
         <h1 className="h2 mb-4">
           <FormattedMessage
             id="hosting.title"
-            defaultMessage="Your fully-managed Mastodon instance"
+            defaultMessage="Your fully-managed Mastodon service"
           />
         </h1>
         <p className="my-4">
           <FormattedMessage
             id="hosting.subtitle"
-            defaultMessage="Your own Mastodon instance hosted by the team who built it"
+            defaultMessage="Your own Mastodon server hosted by the team who built it"
           />
         </p>
         <SalesButton />
@@ -106,7 +106,7 @@ const HostingPage = () => {
               />
               <FormattedMessage
                 id="hosting.services.managed.who"
-                defaultMessage="Perfect for organisations that want fast access to their own instance with guaranteed compliance and low resource investment."
+                defaultMessage="Perfect for organisations that want fast access to their own Mastodon server with guaranteed compliance and low resource investment."
                 tagName="p"
               />
               <FormattedMessage
@@ -121,17 +121,17 @@ const HostingPage = () => {
             >
               <FormattedMessage
                 id="hosting.services.single.description"
-                defaultMessage="You stay in control. Can can decide which services you want to run yourself and where to get support from Mastodon."
+                defaultMessage="You stay in control. You can decide which services you want to run yourself, and where to get support from Mastodon."
                 tagName="p"
               />
               <FormattedMessage
                 id="hosting.services.single.who"
-                defaultMessage="Ideal for organisations that already have internal resources or want to build internal capabilities"
+                defaultMessage="Ideal for organisations that already have internal resources or want to build internal capabilities."
                 tagName="p"
               />
               <FormattedMessage
                 id="hosting.services.single.details"
-                defaultMessage="Choose one or multiple services from Hosting, Moderation or Support."
+                defaultMessage="Choose one or multiple services from Hosting, Moderation or Support"
                 tagName="p"
               />
             </ServicesCard>
