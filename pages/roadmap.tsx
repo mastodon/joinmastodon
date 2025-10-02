@@ -12,9 +12,6 @@ import Layout from "../components/Layout"
 import { RoadmapStatus } from "../components/RoadmapStatus"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 
-import AppsHeroDesktop from "../public/illustrations/apps_hero_desktop.png"
-import AppsHeroMobile from "../public/illustrations/apps_hero_mobile.png"
-
 const Roadmap = ({
   features,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -23,13 +20,7 @@ const Roadmap = ({
   return (
     <Layout>
       <div dir="ltr" className="[unicode-bidi:plaintext]">
-        <Hero
-          homepage
-          safeTextShadow={false}
-          noHeight
-          desktopImage={AppsHeroDesktop}
-          mobileImage={AppsHeroMobile}
-        >
+        <Hero homepage safeTextShadow={false} noHeight>
           <div className="grid gap-x-gutter gap-y-16 lg:grid-cols-12">
             <div className="full-width-bg__inner lg:col-span-5 lg:text-end">
               <h1 className="h1 mb-8 lg:pt-16">
