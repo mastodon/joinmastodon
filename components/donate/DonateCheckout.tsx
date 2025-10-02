@@ -211,7 +211,7 @@ function DonateCheckoutButtonText({ isLoading }: { isLoading: boolean }) {
   if (checkout.recurring) {
     return (
       <FormattedMessage
-        id="donate_widget.checkout.pay_button"
+        id="donate_widget.checkout.subscribe_button"
         defaultMessage="Subscribe for {total} every {frequency}"
         values={{
           total: checkout.total.total.amount,
