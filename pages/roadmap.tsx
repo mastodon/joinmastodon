@@ -9,6 +9,7 @@ import matter from "gray-matter"
 import { InferGetStaticPropsType } from "next"
 import z from "zod"
 import { RoadmapStatus } from "../components/RoadmapStatus"
+import Markdown from "react-markdown"
 
 const Roadmap = ({
   features,
@@ -44,11 +45,11 @@ const Roadmap = ({
                   <h2 className="font-bold text-b1 mb-2 col-start-2">
                     {data.title}
                   </h2>
-                  {content.split("\n").map((line, lineIndex) => (
-                    <p key={lineIndex} className="col-start-2">
-                      {line}
-                    </p>
-                  ))}
+                  <div className="col-start-2 flex flex-col gap-1">
+                    <Markdown allowedElements={allowedElements}>
+                      {content}
+                    </Markdown>
+                  </div>
                 </section>
               ))}
             </div>
@@ -89,6 +90,16 @@ const Roadmap = ({
     </Layout>
   )
 }
+
+const allowedElements: ReadonlyArray<string> = [
+  "p",
+  "strong",
+  "em",
+  "a",
+  "ul",
+  "ol",
+  "li",
+]
 
 const featureSchema = z.object({
   data: z.object({
