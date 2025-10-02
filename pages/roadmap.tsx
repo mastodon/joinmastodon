@@ -1,14 +1,18 @@
-import BasicPage from "../components/BasicPage"
 import Head from "next/head"
 import Hero from "../components/Hero"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
 import Layout from "../components/Layout"
-import data from "../data/roadmap"
-import IssueTimeline from "../components/IssueTimeline"
-import LinkButton from "../components/LinkButton"
 import { FormattedMessage, useIntl } from "react-intl"
+import { readdir, readFile } from "node:fs/promises"
+import { resolve } from "node:path"
+import matter from "gray-matter"
+import { InferGetStaticPropsType } from "next"
+import z from "zod"
+import { RoadmapStatus } from "../components/RoadmapStatus"
 
-const Roadmap = () => {
+const Roadmap = ({
+  features,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const intl = useIntl()
 
   return (
@@ -20,28 +24,33 @@ const Roadmap = () => {
               <h1 className="h1 mb-8 pt-16">
                 <FormattedMessage id="roadmap.title" defaultMessage="Roadmap" />
               </h1>
-              <p className="sh1 mb-11">
+              <p className="sh1 mb-11 text-balance">
                 <FormattedMessage
                   id="roadmap.lead"
-                  defaultMessage="This is a glimpse into what we're working on and what we're planning to work on."
+                  defaultMessage="Here's a glimpse of what we're working on"
                 />
               </p>
-
-              <div className="flex justify-center lg:justify-end">
-                <LinkButton
-                  size="large"
-                  href="https://github.com/mastodon/mastodon/issues"
-                >
-                  <FormattedMessage
-                    id="roadmap.suggest_a_feature"
-                    defaultMessage="Suggest a feature"
-                  />
-                </LinkButton>
-              </div>
             </div>
 
-            <div className="max-w-[100vw] text-start lg:col-span-7">
-              <IssueTimeline roadmap={data} />
+            <div className="max-w-[100vw] text-start lg:col-span-7 grid grid-cols-[min-content,auto] gap-4">
+              {features.map(({ data, content }, index) => (
+                <section
+                  key={index}
+                  className="px-3 py-5 bg-white rounded-xl text-black grid grid-cols-subgrid col-span-2 border border-gray-3"
+                >
+                  <div className="mt-1">
+                    <RoadmapStatus status={data.status} />
+                  </div>
+                  <h2 className="font-bold text-b1 mb-2 col-start-2">
+                    {data.title}
+                  </h2>
+                  {content.split("\n").map((line, lineIndex) => (
+                    <p key={lineIndex} className="col-start-2">
+                      {line}
+                    </p>
+                  ))}
+                </section>
+              ))}
             </div>
           </div>
         </Hero>
@@ -81,6 +90,30 @@ const Roadmap = () => {
   )
 }
 
-export const getStaticProps = withDefaultStaticProps()
+const featureSchema = z.object({
+  data: z.object({
+    title: z.string(),
+    status: z.enum(["exploring", "working", "next", "released"]),
+  }),
+  content: z.string().trim(),
+})
+
+export const getStaticProps = withDefaultStaticProps(async () => {
+  const files = await readdir(resolve(process.cwd(), "data/roadmap"))
+  const features = await Promise.all(
+    files
+      .filter((file) => file.endsWith(".md"))
+      .map(async (file) => {
+        const contents = await readFile(
+          resolve(process.cwd(), "data/roadmap", file),
+          "utf-8"
+        )
+        return featureSchema.parse(matter(contents))
+      })
+  )
+  return {
+    props: { features },
+  }
+})
 
 export default Roadmap
