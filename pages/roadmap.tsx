@@ -1,15 +1,19 @@
 import Head from "next/head"
-import Hero from "../components/Hero"
-import { withDefaultStaticProps } from "../utils/defaultStaticProps"
-import Layout from "../components/Layout"
-import { FormattedMessage, useIntl } from "react-intl"
-import { readdir, readFile } from "node:fs/promises"
 import { resolve } from "node:path"
+import { readdir, readFile } from "node:fs/promises"
+import { FormattedMessage, useIntl } from "react-intl"
 import matter from "gray-matter"
 import { InferGetStaticPropsType } from "next"
 import z from "zod"
-import { RoadmapStatus } from "../components/RoadmapStatus"
 import Markdown from "react-markdown"
+
+import Hero from "../components/Hero"
+import Layout from "../components/Layout"
+import { RoadmapStatus } from "../components/RoadmapStatus"
+import { withDefaultStaticProps } from "../utils/defaultStaticProps"
+
+import AppsHeroDesktop from "../public/illustrations/apps_hero_desktop.png"
+import AppsHeroMobile from "../public/illustrations/apps_hero_mobile.png"
 
 const Roadmap = ({
   features,
@@ -19,13 +23,19 @@ const Roadmap = ({
   return (
     <Layout>
       <div dir="ltr" className="[unicode-bidi:plaintext]">
-        <Hero homepage safeTextShadow={false} noHeight>
+        <Hero
+          homepage
+          safeTextShadow={false}
+          noHeight
+          desktopImage={AppsHeroDesktop}
+          mobileImage={AppsHeroMobile}
+        >
           <div className="grid gap-x-gutter gap-y-16 lg:grid-cols-12">
             <div className="full-width-bg__inner lg:col-span-5 lg:text-end">
-              <h1 className="h1 mb-8 pt-16">
+              <h1 className="h1 mb-8 lg:pt-16">
                 <FormattedMessage id="roadmap.title" defaultMessage="Roadmap" />
               </h1>
-              <p className="sh1 mb-11 text-balance">
+              <p className="sh1 lg:mb-11 text-balance">
                 <FormattedMessage
                   id="roadmap.lead"
                   defaultMessage="Here's a glimpse of what we're working on"
@@ -33,16 +43,16 @@ const Roadmap = ({
               </p>
             </div>
 
-            <div className="max-w-[100vw] text-start lg:col-span-7 grid grid-cols-[min-content,auto] gap-4">
+            <div className="max-w-[100vw] text-start lg:col-span-7 grid grid-cols-1 md:grid-cols-[min-content,auto] gap-4">
               {features.map(({ data, content }, index) => (
                 <section
                   key={index}
-                  className="px-3 py-5 bg-white rounded-xl text-black grid grid-cols-subgrid col-span-2 border border-gray-3"
+                  className="px-3 py-5 bg-white rounded-xl text-black grid grid-cols-subgrid gap-y-2 md:col-span-2 border border-gray-3"
                 >
                   <div className="mt-1">
                     <RoadmapStatus status={data.status} />
                   </div>
-                  <h2 className="font-bold text-b1 mb-2 col-start-2">
+                  <h2 className="font-bold text-b1 col-start-2">
                     {data.title}
                   </h2>
                   <div className="col-start-2 flex flex-col gap-1">
