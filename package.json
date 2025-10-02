@@ -14,13 +14,11 @@
     "fix": "yarn lint --fix",
     "format": "prettier --write --log-level warn --ignore-unknown .",
     "update-sponsors": "node --experimental-fetch patreon.mjs",
-    "update-roadmap": "node linear.mjs",
     "extract": "formatjs extract '{components,pages,data}/**/*.{js,jsx,ts,tsx}' --out-file 'locales/en.json' --format 'locales/locale_format.js'",
     "typecheck": "tsc --noEmit && echo 'No type errors'"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.2",
-    "@linear/sdk": "^41.0.0",
     "@stripe/react-stripe-js": "^3.7.0",
     "@stripe/stripe-js": "^7.3.0",
     "@tanstack/react-query": "^5.75.2",
