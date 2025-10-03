@@ -172,6 +172,7 @@ const About = () => (
                           <Link
                             key={`about/${member.slug}`}
                             href={`/about/${member.slug}`}
+                            locale={false}
                             className="text-blurple-600 hocus:underline"
                           >
                             {member.name}
