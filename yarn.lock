@@ -1797,14 +1797,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@linear/sdk@npm:^41.0.0":
-  version: 41.0.0
-  resolution: "@linear/sdk@npm:41.0.0"
+"@linear/sdk@npm:^62.0.0":
+  version: 62.0.0
+  resolution: "@linear/sdk@npm:62.0.0"
   dependencies:
     "@graphql-typed-document-node/core": "npm:^3.1.0"
     graphql: "npm:^15.4.0"
     isomorphic-unfetch: "npm:^3.1.0"
-  checksum: 10c0/66aa3d78fe4f2f9a6e303f4a306f68e8fc478b4070eedd914de9c2478e4284a96dc625d0b8a587d479b3a1875314c9e22e824e5f471b3162c18c51689a8c32b3
+  checksum: 10c0/3b7f88cbc459c9da17cb9b29e3ad0b6e751826ef9c7552782fa0184bdb2c0da6ff2ca2ca04dc1f16b54350f03495c36c478f5170e5d63206a974547d4c506d47
   languageName: node
   linkType: hard
 
@@ -5282,7 +5282,7 @@ __metadata:
     "@eslint/eslintrc": "npm:^3"
     "@formatjs/cli": "npm:^6.7.1"
     "@headlessui/react": "npm:^2.2.2"
-    "@linear/sdk": "npm:^41.0.0"
+    "@linear/sdk": "npm:^62.0.0"
     "@stripe/react-stripe-js": "npm:^3.7.0"
     "@stripe/stripe-js": "npm:^7.3.0"
     "@svgr/webpack": "npm:^8.1.0"
