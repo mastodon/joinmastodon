@@ -1,4 +1,4 @@
-title: Enhanced Profile 
+title: Quote Posts 
 status: released
 ---
-Added a new "Feature on my profile" option for promoting specific posts or accounts via a dedicated "Featured" tab, alongside a carousel for pinned posts. 
+Version 4.5: Users can now quote others posts. Users can opt out entirely from all quoting or remove themselves from a quoted post if they wish.
