@@ -1,4 +1,4 @@
-title: Quote Posts
+title: Fetch all replies
 status: next
 ---
-Users can now quote post other users with the ability to opt out entirely from all posting or remove themselves from a quoted post if they wish 
+Version 4.5: No more missing replies to your posts! Threads now search for all replies and display them.
