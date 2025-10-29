@@ -1,4 +1,4 @@
-title: Starter Packs
-status: working
+title: Collections
+status: next release
 ---
-Users can create a collection of accounts that they recommend. This allows both new and existing user to easily follow some or all of the the Starter Pack  
+4.6 Users and admins can create a collection of accounts they recommend. This allows both new and existing user to easily follow a range of curated users quickly. 
