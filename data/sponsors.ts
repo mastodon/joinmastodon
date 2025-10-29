@@ -62,6 +62,11 @@ const sponsors = {
       name: "Sex Toy Collective",
     }, // Patreon
     {
+      url: "https://www.noneedtostudy.com/pay-to-take-gre-for-me",
+      logo: require("../public/sponsors/noneedtostudy.com-logo-wide.png"),
+      name: "Get Help Taking GRE - Pay For GRE High Score",
+    }, // Custom
+    {
       url: "https://www.goldeneaglecoin.com/",
       logo: require("../public/sponsors/ge-logo-coin-card2.png"),
       name: "Golden Eagle Coins",
