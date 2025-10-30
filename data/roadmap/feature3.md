@@ -1,3 +1,4 @@
+---
 title: Collections
 status: next release
 ---
