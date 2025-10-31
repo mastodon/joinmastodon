@@ -1,16 +1,13 @@
 import Head from "next/head"
-import { resolve } from "node:path"
-import { readdir, readFile } from "node:fs/promises"
 import { FormattedMessage, useIntl } from "react-intl"
-import matter from "gray-matter"
 import { InferGetStaticPropsType } from "next"
-import z from "zod"
 import Markdown from "react-markdown"
 
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import { RoadmapStatus } from "../components/RoadmapStatus"
 import { withDefaultStaticProps } from "../utils/defaultStaticProps"
+import { loadRoadmap } from "../utils/roadmap"
 
 const Roadmap = ({
   features,
@@ -102,27 +99,8 @@ const allowedElements: ReadonlyArray<string> = [
   "li",
 ]
 
-const featureSchema = z.object({
-  data: z.object({
-    title: z.string(),
-    status: z.enum(["exploring", "working", "next", "released"]),
-  }),
-  content: z.string().trim(),
-})
-
 export const getStaticProps = withDefaultStaticProps(async () => {
-  const files = await readdir(resolve(process.cwd(), "data/roadmap"))
-  const features = await Promise.all(
-    files
-      .filter((file) => file.endsWith(".md"))
-      .map(async (file) => {
-        const contents = await readFile(
-          resolve(process.cwd(), "data/roadmap", file),
-          "utf-8"
-        )
-        return featureSchema.parse(matter(contents))
-      })
-  )
+  const features = await loadRoadmap()
   return {
     props: { features },
   }

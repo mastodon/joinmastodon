@@ -9,8 +9,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "yarn typecheck && yarn lint-js",
+    "lint": "yarn typecheck && yarn lint-js && yarn lint-roadmap",
     "lint-js": "eslint .",
+    "lint-roadmap": "tsx scripts/lint-roadmap.ts",
     "fix": "yarn lint --fix",
     "format": "prettier --write --log-level warn --ignore-unknown .",
     "update-sponsors": "node --experimental-fetch patreon.mjs",
@@ -49,7 +50,7 @@
     "@tanstack/react-query-devtools": "^5.75.2",
     "@types/lodash": "^4.17.16",
     "@types/node": "^22.15.6",
-    "@types/react": "18.3.25",
+    "@types/react": "^19.2.2",
     "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.32.0",
@@ -64,6 +65,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
     "tailwindcss-logical": "^3.0.1",
+    "tsx": "^4.20.6",
     "typescript": "^5.8.3"
   },
   "packageManager": "yarn@4.9.1"
