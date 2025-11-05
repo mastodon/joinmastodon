@@ -43,7 +43,7 @@ const Roadmap = ({
                   <h2 className="font-bold text-b1 col-start-2">
                     {data.title}
                   </h2>
-                  <div className="col-start-2 flex flex-col gap-1">
+                  <div className="col-start-2 flex flex-col gap-1 body-text">
                     <Markdown allowedElements={allowedElements}>
                       {content}
                     </Markdown>

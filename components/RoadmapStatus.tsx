@@ -13,12 +13,12 @@ interface RoadmapStatusProps {
 const messages = defineMessages({
   exploring: {
     id: "roadmap.status.exploring",
-    defaultMessage: "Exploring...",
+    defaultMessage: "Exploring",
     icon: ExploringIcon,
   },
   working: {
     id: "roadmap.status.working",
-    defaultMessage: "Working...",
+    defaultMessage: "Working",
     icon: WorkingIcon,
   },
   next: {
