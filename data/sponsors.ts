@@ -96,6 +96,11 @@ const sponsors = {
       logo: require("../public/sponsors/veepn.png"),
       name: "Download VPN for PC by VeePN super simple, fast and trustful VPN for all family.",
     }, // Custom
+    {
+      url: "https://www.softorbits.net/",
+      logo: require("../public/sponsors/softorbits.png"),
+      name: "SoftOrbits",
+    }, // Patreon
   ] as Sponsor[],
   gold: [
     {
