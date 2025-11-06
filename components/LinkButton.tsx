@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link, { LinkProps } from "next/link"
 import classnames from "classnames"
 
 type LinkButtonProps = {
@@ -14,6 +14,8 @@ type LinkButtonProps = {
   light?: boolean
   /** Buttons size, using `b3` typically, or `b1` on `large` */
   size: "small" | "medium" | "large"
+  /** Whether to allow a referrer to be passed */
+  allowReferrer?: boolean
 }
 
 /**
@@ -26,16 +28,14 @@ const LinkButton = ({
   href,
   light,
   size,
+  allowReferrer = false,
 }: LinkButtonProps) => {
-  let linkAttrs: {
-    target?: string
-    rel?: string
-  } = {}
+  let linkAttrs: React.JSX.IntrinsicElements["a"] = {}
 
   // check if absolute url
   if (href.indexOf("http://") === 0 || href.indexOf("https://") === 0) {
     linkAttrs.target = "_blank"
-    linkAttrs.rel = "noopener noreferrer"
+    linkAttrs.rel = allowReferrer ? "noopener" : "noopener noreferrer"
   }
 
   return (

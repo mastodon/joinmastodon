@@ -5,7 +5,6 @@ import { Blurhash } from "react-blurhash"
 import LinkButton from "./LinkButton"
 import type { Server } from "../types/api"
 import { categoriesMessages } from "../data/categories"
-import { formatNumber } from "../utils/numbers"
 import SkeletonText from "./SkeletonText"
 
 /**
@@ -59,7 +58,18 @@ const ServerCard = ({ server }: { server?: Server }) => {
           )}
         </p>
         <p className="b1 !font-700 mb-2">
-          {server ? server.domain : <SkeletonText className="w-[14ch]" />}
+          {server ? (
+            <a
+              href={`https://${server.domain}`}
+              target="_blank"
+              rel="noopener" // Deliberately including referrer so servers can see where people are coming from.
+              className="hover:underline"
+            >
+              {server.domain}
+            </a>
+          ) : (
+            <SkeletonText className="w-[14ch]" />
+          )}
         </p>
         <p className="b3 line-clamp-5 [unicode-bidi:plaintext] break-words break-all overflow-hidden">
           {server ? (
@@ -81,6 +91,7 @@ const ServerCard = ({ server }: { server?: Server }) => {
             light={server.approval_required}
             fullWidth
             size="small"
+            allowReferrer
           >
             {server.approval_required ? (
               <FormattedMessage
