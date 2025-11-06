@@ -137,4 +137,14 @@
   .carousel__dot.carousel__dot--selected {
     @apply bg-blurple-500;
   }
+
+  .body-text {
+    a {
+      @apply text-blurple-500;
+
+      &:hover {
+        text-decoration-line: revert;
+      }
+    }
+  }
 }
