@@ -11,6 +11,7 @@ import gitHubLogo from "../public/logos/github.svg"
 import patreonLogo from "../public/logos/patreon.svg"
 import stripeLogo from "../public/logos/stripe.svg"
 import benevityLogo from "../public/logos/benevity.svg"
+import sponsorshipIcon from "../public/icons/corporate-sponsorship.svg"
 
 import LinkButton from "./LinkButton"
 
@@ -228,6 +229,7 @@ export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
             copy={intl.formatMessage(cardMessages.corpSponsorCopy)}
             cta={intl.formatMessage(cardMessages.corpSponsorButton)}
             ctaAction="https://sponsor.joinmastodon.org/"
+            imageSrc={sponsorshipIcon}
           />
           <DonateCard
             title={intl.formatMessage(cardMessages.corpMatchTitle)}
