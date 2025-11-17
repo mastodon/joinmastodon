@@ -14,6 +14,8 @@ import benevityLogo from "../public/logos/benevity.svg"
 import sponsorshipIcon from "../public/icons/corporate-sponsorship.svg"
 
 import LinkButton from "./LinkButton"
+import { useMediaQuery } from "usehooks-ts"
+import classNames from "classnames"
 
 const cardMessages = defineMessages({
   giveButterTitle: {
@@ -122,7 +124,14 @@ const cardMessages = defineMessages({
 })
 
 export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
-  const intl = useIntl()
+  const isMobile = useMediaQuery("(max-width: 768px")
+  if (isMobile) {
+    return (
+      <div className={classNames(className, "flex flex-col gap-4")}>
+        <DonateCards plain />
+      </div>
+    )
+  }
   return (
     <TabGroup className={className}>
       <TabList className="flex mb-4">
@@ -146,102 +155,7 @@ export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
         </StyledTab>
       </TabList>
       <TabPanels className="border border-gray-3 p-8 rounded-2xl">
-        <StyledTabPanel
-          title={
-            <FormattedMessage
-              id="sponsors.donate_header.tax_deductible"
-              defaultMessage="Tax-deductible donations"
-            />
-          }
-          footer={
-            <FormattedMessage
-              id="sponsors.donate_footer.tax_disclaimer"
-              defaultMessage="*Tax exemptions vary according to the laws of each country. We strongly recommend that you contact a tax consultant in your country if you have any questions about tax exemptions or reductions."
-            />
-          }
-        >
-          <DonateCard
-            title={intl.formatMessage(cardMessages.giveButterTitle)}
-            copy={intl.formatMessage(cardMessages.giveButterCopy)}
-            cta={intl.formatMessage(cardMessages.giveButterButton)}
-            ctaAction="https://givebutter.com/nAk74p"
-            imageSrc={usFlagIcon}
-            imageAlt={intl.formatMessage(cardMessages.giveButterImageAlt)}
-          />
-          <DonateCard
-            title={intl.formatMessage(cardMessages.weAidTitle)}
-            copy={intl.formatMessage(cardMessages.weAidCopy)}
-            cta={intl.formatMessage(cardMessages.weAidButton)}
-            ctaAction="https://donate.stripe.com/14A4gAfACaLg76zfKB1ZS07"
-            imageSrc={deFlagIcon}
-            imageAlt={intl.formatMessage(cardMessages.weAidImageAlt)}
-          />
-        </StyledTabPanel>
-        <StyledTabPanel
-          title={
-            <FormattedMessage
-              id="sponsors.donate_header.individual_options"
-              defaultMessage="More individual donation options"
-            />
-          }
-        >
-          <DonateCard
-            title={intl.formatMessage(cardMessages.stripeTitle)}
-            copy={intl.formatMessage(cardMessages.stripeCopy)}
-            cta={intl.formatMessage(cardMessages.stripeButton)}
-            ctaAction="popup"
-            imageSrc={stripeLogo}
-            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
-              name: "Stripe",
-            })}
-          />
-          <DonateCard
-            title={intl.formatMessage(cardMessages.patreonTitle)}
-            copy={intl.formatMessage(cardMessages.patreonCopy)}
-            cta={intl.formatMessage(cardMessages.patreonButton)}
-            ctaAction="https://www.patreon.com/mastodon"
-            imageSrc={patreonLogo}
-            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
-              name: "Patreon",
-            })}
-          />
-          <DonateCard
-            title={intl.formatMessage(cardMessages.gitHubTitle)}
-            copy={intl.formatMessage(cardMessages.gitHubCopy)}
-            cta={intl.formatMessage(cardMessages.gitHubButton)}
-            ctaAction="https://github.com/sponsors/mastodon"
-            imageSrc={gitHubLogo}
-            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
-              name: "GitHub",
-            })}
-          />
-        </StyledTabPanel>
-        <StyledTabPanel
-          title={
-            <FormattedMessage
-              id="sponsors.donate_header.corporate"
-              defaultMessage="Corporate gifts & matching"
-            />
-          }
-        >
-          <DonateCard
-            title={intl.formatMessage(cardMessages.corpSponsorTitle)}
-            copy={intl.formatMessage(cardMessages.corpSponsorCopy)}
-            cta={intl.formatMessage(cardMessages.corpSponsorButton)}
-            ctaAction="https://sponsor.joinmastodon.org/"
-            imageSrc={sponsorshipIcon}
-          />
-          <DonateCard
-            title={intl.formatMessage(cardMessages.corpMatchTitle)}
-            copy={intl.formatMessage(cardMessages.corpMatchCopy)}
-            cta={intl.formatMessage(cardMessages.corpMatchButton)}
-            ctaAction="https://causes.benevity.org/causes/276-5575947211653_d7e4"
-            imageSrc={benevityLogo}
-            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
-              name: "Benevity",
-            })}
-          />
-        </StyledTabPanel>
+        <DonateCards />
       </TabPanels>
     </TabGroup>
   )
@@ -253,17 +167,133 @@ const StyledTab: FC<PropsWithChildren> = ({ children }) => (
   </Tab>
 )
 
+const DonateCards: FC<{ plain?: boolean }> = ({ plain }) => {
+  const intl = useIntl()
+  return (
+    <>
+      <StyledTabPanel
+        title={
+          <FormattedMessage
+            id="sponsors.donate_header.tax_deductible"
+            defaultMessage="Tax-deductible donations"
+          />
+        }
+        footer={
+          <FormattedMessage
+            id="sponsors.donate_footer.tax_disclaimer"
+            defaultMessage="*Tax exemptions vary according to the laws of each country. We strongly recommend that you contact a tax consultant in your country if you have any questions about tax exemptions or reductions."
+          />
+        }
+        plain={plain}
+      >
+        <DonateCard
+          title={intl.formatMessage(cardMessages.giveButterTitle)}
+          copy={intl.formatMessage(cardMessages.giveButterCopy)}
+          cta={intl.formatMessage(cardMessages.giveButterButton)}
+          ctaAction="https://givebutter.com/nAk74p"
+          imageSrc={usFlagIcon}
+          imageAlt={intl.formatMessage(cardMessages.giveButterImageAlt)}
+        />
+        <DonateCard
+          title={intl.formatMessage(cardMessages.weAidTitle)}
+          copy={intl.formatMessage(cardMessages.weAidCopy)}
+          cta={intl.formatMessage(cardMessages.weAidButton)}
+          ctaAction="https://donate.stripe.com/14A4gAfACaLg76zfKB1ZS07"
+          imageSrc={deFlagIcon}
+          imageAlt={intl.formatMessage(cardMessages.weAidImageAlt)}
+        />
+      </StyledTabPanel>
+      <StyledTabPanel
+        title={
+          <FormattedMessage
+            id="sponsors.donate_header.individual_options"
+            defaultMessage="More individual donation options"
+          />
+        }
+        plain={plain}
+      >
+        <DonateCard
+          title={intl.formatMessage(cardMessages.stripeTitle)}
+          copy={intl.formatMessage(cardMessages.stripeCopy)}
+          cta={intl.formatMessage(cardMessages.stripeButton)}
+          ctaAction="popup"
+          imageSrc={stripeLogo}
+          imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+            name: "Stripe",
+          })}
+        />
+        <DonateCard
+          title={intl.formatMessage(cardMessages.patreonTitle)}
+          copy={intl.formatMessage(cardMessages.patreonCopy)}
+          cta={intl.formatMessage(cardMessages.patreonButton)}
+          ctaAction="https://www.patreon.com/mastodon"
+          imageSrc={patreonLogo}
+          imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+            name: "Patreon",
+          })}
+        />
+        <DonateCard
+          title={intl.formatMessage(cardMessages.gitHubTitle)}
+          copy={intl.formatMessage(cardMessages.gitHubCopy)}
+          cta={intl.formatMessage(cardMessages.gitHubButton)}
+          ctaAction="https://github.com/sponsors/mastodon"
+          imageSrc={gitHubLogo}
+          imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+            name: "GitHub",
+          })}
+        />
+      </StyledTabPanel>
+      <StyledTabPanel
+        title={
+          <FormattedMessage
+            id="sponsors.donate_header.corporate"
+            defaultMessage="Corporate gifts & matching"
+          />
+        }
+        plain={plain}
+      >
+        <DonateCard
+          title={intl.formatMessage(cardMessages.corpSponsorTitle)}
+          copy={intl.formatMessage(cardMessages.corpSponsorCopy)}
+          cta={intl.formatMessage(cardMessages.corpSponsorButton)}
+          ctaAction="https://sponsor.joinmastodon.org/"
+          imageSrc={sponsorshipIcon}
+        />
+        <DonateCard
+          title={intl.formatMessage(cardMessages.corpMatchTitle)}
+          copy={intl.formatMessage(cardMessages.corpMatchCopy)}
+          cta={intl.formatMessage(cardMessages.corpMatchButton)}
+          ctaAction="https://causes.benevity.org/causes/276-5575947211653_d7e4"
+          imageSrc={benevityLogo}
+          imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+            name: "Benevity",
+          })}
+        />
+      </StyledTabPanel>
+    </>
+  )
+}
+
 const StyledTabPanel: FC<
-  PropsWithChildren<{ title: ReactNode; footer?: ReactNode }>
-> = ({ children, title, footer }) => (
-  <TabPanel>
-    <h2 className="text-h5 font-semibold mb-8 text-center">{title}</h2>
-    <div className="flex gap-4 justify-center">{children}</div>
-    {footer && (
-      <div className="mt-8 p-4 bg-gray-4 text-gray-1 rounded-lg">{footer}</div>
-    )}
-  </TabPanel>
-)
+  PropsWithChildren<{ title: ReactNode; footer?: ReactNode; plain?: boolean }>
+> = ({ children, title, footer, plain }) => {
+  const Wrapper = plain ? "div" : TabPanel
+  return (
+    <Wrapper
+      className={classNames(plain && "border border-gray-3 p-4 rounded-2xl")}
+    >
+      <h2 className="text-h5 font-semibold mb-8 text-center">{title}</h2>
+      <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+        {children}
+      </div>
+      {footer && (
+        <div className="mt-8 p-4 bg-gray-4 text-gray-1 rounded-lg">
+          {footer}
+        </div>
+      )}
+    </Wrapper>
+  )
+}
 
 interface DonateCardProps {
   title: string
