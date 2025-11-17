@@ -2,11 +2,17 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react"
 import Image from "next/image"
 import { FC, PropsWithChildren, ReactNode } from "react"
 import { defineMessages, FormattedMessage, useIntl } from "react-intl"
-import LinkButton from "./LinkButton"
+
 import { DonatePopup } from "../donate/DonatePopup"
-import usFlagIcon from "../public/united_states_flag_icon_round.svg"
-import deFlagIcon from "../public/german_flag_icon_round.svg"
 import ExternalLinkIcon from "../public/ui/external-link.svg?inline"
+import deFlagIcon from "../public/german_flag_icon_round.svg"
+import usFlagIcon from "../public/united_states_flag_icon_round.svg"
+import gitHubLogo from "../public/logos/github.svg"
+import patreonLogo from "../public/logos/patreon.svg"
+import stripeLogo from "../public/logos/stripe.svg"
+import benevityLogo from "../public/logos/benevity.svg"
+
+import LinkButton from "./LinkButton"
 
 const cardMessages = defineMessages({
   giveButterTitle: {
@@ -22,6 +28,10 @@ const cardMessages = defineMessages({
     id: "sponsors.donate_card.givebutter.button",
     defaultMessage: "Donate through GiveButter",
   },
+  giveButterImageAlt: {
+    id: "sponsors.donate_card.givebutter.image_alt",
+    defaultMessage: "USA Flag",
+  },
   weAidTitle: {
     id: "sponsors.donate_card.weaid.title",
     defaultMessage: "From Germany",
@@ -34,6 +44,10 @@ const cardMessages = defineMessages({
   weAidButton: {
     id: "sponsors.donate_card.weaid.button",
     defaultMessage: "Donate through WE AID",
+  },
+  weAidImageAlt: {
+    id: "sponsors.donate_card.weaid.image_alt",
+    defaultMessage: "German Flag",
   },
   patreonTitle: {
     id: "sponsors.donate_card.patreon.title",
@@ -100,6 +114,10 @@ const cardMessages = defineMessages({
     id: "sponsors.donate_card.corporate_matching.button",
     defaultMessage: "Donate on Benevity",
   },
+  logoAlt: {
+    id: "sponsors.donate_card.logo.alt",
+    defaultMessage: "{name} Logo",
+  },
 })
 
 export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
@@ -142,18 +160,20 @@ export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
           }
         >
           <DonateCard
-            imageSrc={usFlagIcon}
             title={intl.formatMessage(cardMessages.giveButterTitle)}
             copy={intl.formatMessage(cardMessages.giveButterCopy)}
             cta={intl.formatMessage(cardMessages.giveButterButton)}
             ctaAction="https://givebutter.com/nAk74p"
+            imageSrc={usFlagIcon}
+            imageAlt={intl.formatMessage(cardMessages.giveButterImageAlt)}
           />
           <DonateCard
-            imageSrc={deFlagIcon}
             title={intl.formatMessage(cardMessages.weAidTitle)}
             copy={intl.formatMessage(cardMessages.weAidCopy)}
             cta={intl.formatMessage(cardMessages.weAidButton)}
             ctaAction="https://donate.stripe.com/14A4gAfACaLg76zfKB1ZS07"
+            imageSrc={deFlagIcon}
+            imageAlt={intl.formatMessage(cardMessages.weAidImageAlt)}
           />
         </StyledTabPanel>
         <StyledTabPanel
@@ -169,18 +189,30 @@ export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
             copy={intl.formatMessage(cardMessages.patreonCopy)}
             cta={intl.formatMessage(cardMessages.patreonButton)}
             ctaAction="https://www.patreon.com/mastodon"
+            imageSrc={patreonLogo}
+            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+              name: "Patreon",
+            })}
           />
           <DonateCard
             title={intl.formatMessage(cardMessages.gitHubTitle)}
             copy={intl.formatMessage(cardMessages.gitHubCopy)}
             cta={intl.formatMessage(cardMessages.gitHubButton)}
             ctaAction="https://github.com/sponsors/mastodon"
+            imageSrc={gitHubLogo}
+            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+              name: "GitHub",
+            })}
           />
           <DonateCard
             title={intl.formatMessage(cardMessages.stripeTitle)}
             copy={intl.formatMessage(cardMessages.stripeCopy)}
             cta={intl.formatMessage(cardMessages.stripeButton)}
             ctaAction="popup"
+            imageSrc={stripeLogo}
+            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+              name: "Stripe",
+            })}
           />
         </StyledTabPanel>
         <StyledTabPanel
@@ -202,6 +234,10 @@ export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
             copy={intl.formatMessage(cardMessages.corpMatchCopy)}
             cta={intl.formatMessage(cardMessages.corpMatchButton)}
             ctaAction="https://causes.benevity.org/causes/276-5575947211653_d7e4"
+            imageSrc={benevityLogo}
+            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+              name: "Benevity",
+            })}
           />
         </StyledTabPanel>
       </TabPanels>
@@ -210,7 +246,7 @@ export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
 }
 
 const StyledTab: FC<PropsWithChildren> = ({ children }) => (
-  <Tab className="grow py-2 data-[selected]:pb-[calc(0.5rem-2px)] transition-colors font-semibold box-border border-b-2 border-gray-3 data-[selected]:border-b-4 data-[selected]:border-blurple-500">
+  <Tab className="grow py-2 data-[selected]:pb-[calc(0.5rem-3px)] transition-colors font-semibold box-border border-b border-gray-3 data-[selected]:border-b-4 data-[selected]:border-blurple-500">
     {children}
   </Tab>
 )
@@ -230,6 +266,7 @@ const StyledTabPanel: FC<
 interface DonateCardProps {
   title: string
   imageSrc?: string
+  imageAlt?: string
   copy: string
   cta: string
   ctaAction: string | "popup"
@@ -238,6 +275,7 @@ interface DonateCardProps {
 const DonateCard = ({
   title,
   imageSrc,
+  imageAlt = "",
   copy,
   cta,
   ctaAction,
@@ -246,10 +284,10 @@ const DonateCard = ({
     {imageSrc && (
       <Image
         src={imageSrc}
-        className="aspect-square"
+        className="aspect-square bg-gray-5 rounded-full"
         width="40"
         height="40"
-        alt=""
+        alt={imageAlt}
       />
     )}
     <h3 className="text-b1 font-semibold mt-5 mb-2">{title}</h3>
