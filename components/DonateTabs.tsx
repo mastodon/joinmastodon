@@ -186,6 +186,16 @@ export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
           }
         >
           <DonateCard
+            title={intl.formatMessage(cardMessages.stripeTitle)}
+            copy={intl.formatMessage(cardMessages.stripeCopy)}
+            cta={intl.formatMessage(cardMessages.stripeButton)}
+            ctaAction="popup"
+            imageSrc={stripeLogo}
+            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+              name: "Stripe",
+            })}
+          />
+          <DonateCard
             title={intl.formatMessage(cardMessages.patreonTitle)}
             copy={intl.formatMessage(cardMessages.patreonCopy)}
             cta={intl.formatMessage(cardMessages.patreonButton)}
@@ -203,16 +213,6 @@ export const DonateTabs: FC<{ className?: string }> = ({ className }) => {
             imageSrc={gitHubLogo}
             imageAlt={intl.formatMessage(cardMessages.logoAlt, {
               name: "GitHub",
-            })}
-          />
-          <DonateCard
-            title={intl.formatMessage(cardMessages.stripeTitle)}
-            copy={intl.formatMessage(cardMessages.stripeCopy)}
-            cta={intl.formatMessage(cardMessages.stripeButton)}
-            ctaAction="popup"
-            imageSrc={stripeLogo}
-            imageAlt={intl.formatMessage(cardMessages.logoAlt, {
-              name: "Stripe",
             })}
           />
         </StyledTabPanel>
