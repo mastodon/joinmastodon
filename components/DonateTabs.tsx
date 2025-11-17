@@ -284,7 +284,7 @@ const DonateCard = ({
     {imageSrc && (
       <Image
         src={imageSrc}
-        className="aspect-square bg-gray-5 rounded-full"
+        className="aspect-square"
         width="40"
         height="40"
         alt={imageAlt}
