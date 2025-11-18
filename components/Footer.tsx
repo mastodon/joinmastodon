@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl"
 import Image from "next/legacy/image"
 import footerImage from "../public/illustrations/footer.png"
 import LogoWhite from "../public/logos/logo-white.svg?inline"
-import GitHub from "../public/ui/github.svg?inline"
+import GitHub from "../public/logos/github.svg?inline"
 
 /** Sitewide footer component */
 export const Footer = () => (
