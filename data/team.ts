@@ -11,26 +11,34 @@ export type TeamMember = {
 
 const team: TeamMember[] = [
   {
-    name: "Eugen Rochko",
-    position: "Founder, CEO",
+    name: "Felix Hlatky",
+    position: "Executive Director",
     socials: {
-      mastodon: "https://mastodon.social/@Gargron",
+      mastodon: "https://mastodon.social/@mellifluousbox",
     },
   },
 
   {
     name: "Renaud Chaput",
-    position: "CTO",
+    position: "Technical Director",
     socials: {
       mastodon: "https://oisaur.com/@renchap",
     },
   },
 
   {
-    name: "Felix Hlatky",
-    position: "CFO",
+    name: "Hannah Aubry",
+    position: "Community Director",
     socials: {
-      mastodon: "https://mastodon.social/@mellifluousbox",
+      mastodon: "https://hachyderm.io/@haubles",
+    },
+  },
+
+  {
+    name: "Eugen Rochko",
+    position: "Executive Strategy & Product Advisor",
+    socials: {
+      mastodon: "https://mastodon.social/@Gargron",
     },
   },
 
@@ -40,6 +48,19 @@ const team: TeamMember[] = [
     socials: {
       mastodon: "https://macaw.social/@andypiper",
     },
+  },
+
+  {
+    name: "Philip Schröpel",
+    position: "Chief of Staff",
+    socials: {
+      mastodon: "https://mastodon.social/@philipkristians",
+    },
+  },
+
+  {
+    name: "Amelia Rochko",
+    position: "Customer Service",
   },
 
   {
@@ -75,26 +96,18 @@ const team: TeamMember[] = [
   },
 
   {
-    name: "Shannon Hughes",
-    position: "Engineering (iOS)",
-    socials: {
-      mastodon: "https://mastodon.social/@whattherestimefor",
-    },
-  },
-
-  {
-    name: "Gregory Klyushnikov",
-    position: "Engineering (Android)",
-    socials: {
-      mastodon: "https://mastodon.social/@grishka",
-    },
-  },
-
-  {
     name: "Imani Joy",
     position: "Product Designer",
     socials: {
       mastodon: "https://mastodon.social/@imanijoy",
+    },
+  },
+
+  {
+    name: "Shannon Hughes",
+    position: "Engineering (iOS)",
+    socials: {
+      mastodon: "https://mastodon.social/@whattherestimefor",
     },
   },
 
@@ -107,23 +120,18 @@ const team: TeamMember[] = [
   },
 
   {
-    name: "Amelia Rochko",
-    position: "Customer Service",
-  },
-
-  {
-    name: "Philip Schröpel",
-    position: "Chief of Staff",
-    socials: {
-      mastodon: "https://mastodon.social/@philipkristians",
-    },
-  },
-
-  {
     name: "Zora Steiner",
     position: "Operations",
     socials: {
       mastodon: "https://mastodon.social/@zoraxzora",
+    },
+  },
+
+  {
+    name: "Gregory Klyushnikov",
+    position: "Engineering (Android)",
+    socials: {
+      mastodon: "https://mastodon.social/@grishka",
     },
   },
 

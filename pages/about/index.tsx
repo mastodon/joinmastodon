@@ -60,7 +60,10 @@ const About = () => (
               </p>
               <p className="b1 mb-6">
                 The project was officially incorporated as a gGmbH (a German
-                form of non-profit LLC) in 2021.
+                form of non-profit LLC) in 2021 but lost its non-profit status
+                when Germany removed software projects from eligibility. In
+                2025, the team began the process of moving the project to a new
+                foundation, and began implementing community governance.
               </p>
 
               <ul className="b1 space-y-4">
@@ -496,7 +499,7 @@ const About = () => (
 
                 <div className="col-span-12 mb-4">
                   <dt className="font-bold">Vertretungsberechtigt:</dt>
-                  <dd>Eugen Rochko (Geschäftsführer)</dd>
+                  <dd>Felix Hlatky (Geschäftsführer)</dd>
                 </div>
               </dl>
             </div>
