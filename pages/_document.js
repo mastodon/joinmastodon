@@ -18,6 +18,7 @@ class MyDocument extends Document {
         <body className="bg-white">
           <Main />
           <NextScript />
+          <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         </body>
       </Html>
     )
