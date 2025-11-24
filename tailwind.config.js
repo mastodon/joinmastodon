@@ -105,6 +105,7 @@ const config = {
       },
       backgroundImage: {
         "blurple-gradient": `linear-gradient(0deg, #563acc 12.87%, #6364ff 88.62%)`,
+        "overlay-gradient": `linear-gradient(180deg, rgba(29,0,35, 0) 12.87%, rgba(29,0,35, 1) 100%)`,
       },
       gap: {
         gutter: "var(--gutter-width)",
