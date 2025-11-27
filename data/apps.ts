@@ -56,6 +56,7 @@ import odous from "../public/apps/odous.png"
 import dowstodon from "../public/apps/dowstodon.png"
 import fread from "../public/apps/fread.png"
 import plfe from "../public/apps/pl-fe.png"
+import fursona from "../public/apps/fursona.png"
 
 import type { StaticImageData } from "next/legacy/image"
 
