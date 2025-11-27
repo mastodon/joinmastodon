@@ -323,6 +323,14 @@ export const apps: appsList = {
       paid: true,
       open: false,
     },
+    {
+      released_on: "Nov 27, 2025",
+      name: "Fursona (for Furry)",
+      icon: fursona,
+      url: "https://apps.apple.com/us/app/fursona-furry-social-app/id6754586637",
+      paid: false,
+      open: false,
+    },
   ],
   web: [
     {
