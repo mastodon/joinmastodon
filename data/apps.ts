@@ -286,7 +286,7 @@ export const apps: appsList = {
       released_on: "Aug 10, 2023",
       name: "SoraSNS",
       icon: sora,
-      url: "https://apps.apple.com/app/sora-for-mastodon-bluesky/id6450969760?platform=iphone",
+      url: "https://apps.apple.com/us/app/sorasns-for-mastodon-bluesky/id6754866904",
       paid: false,
       open: false,
     },
