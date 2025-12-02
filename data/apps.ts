@@ -57,6 +57,7 @@ import dowstodon from "../public/apps/dowstodon.png"
 import fread from "../public/apps/fread.png"
 import plfe from "../public/apps/pl-fe.png"
 
+import { z } from "zod"
 import type { StaticImageData } from "next/legacy/image"
 
 export type appsList = {
@@ -81,6 +82,53 @@ export type appsList = {
     /** The link to the application's source code if known */
     source_url?: string
   }[]
+}
+
+// Zod schema for runtime validation
+const appSchema = z
+  .object({
+    name: z.string().min(1, "App name is required"),
+    icon: z.any(), 
+    url: z.string().url("App URL must be a valid URL"),
+    released_on: z.string().optional(),
+    paid: z.boolean().optional(),
+    hidden_from_all: z.boolean().optional(),
+    categoryLabel: z.string().optional(),
+    open: z.boolean().optional(),
+    source_url: z.string().url("Source URL must be a valid URL").optional(),
+  })
+  .refine(
+    (data) => {
+      // If open source, source_url must be provided
+      if (data.open === true && !data.source_url) {
+        return false
+      }
+      return true
+    },
+    {
+      message: "Open source apps (open: true) must have a source_url",
+    }
+  )
+
+const appsListSchema = z.record(z.string(), z.array(appSchema))
+
+/**
+ * Validates the apps data structure at runtime.
+ * Throws an error if validation fails.
+ */
+function validateApps(appsData: appsList): void {
+  try {
+    appsListSchema.parse(appsData)
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      const errors = error.errors.map(
+        (err) =>
+          `${err.path.join(".")}: ${err.message} ${err.code === "custom" ? `(${JSON.stringify(err.params)})` : ""}`
+      )
+      throw new Error(`Apps validation failed:\n${errors.join("\n")}`)
+    }
+    throw error
+  }
 }
 export const apps: appsList = {
   android: [
@@ -123,6 +171,8 @@ export const apps: appsList = {
       icon: fedilab,
       url: "https://play.google.com/store/apps/details?id=app.fedilab.android",
       paid: false,
+      open: true,
+      source_url: "https://codeberg.org/tom79/Fedilab",
     },
     {
       released_on: "Jan 26, 2023",
@@ -193,6 +243,8 @@ export const apps: appsList = {
       name: "iMast",
       icon: imast,
       url: "https://apps.apple.com/app/imast/id1229461703",
+      open: true,
+      source_url: "https://github.com/cinderella-project/iMast",
     },
     {
       released_on: "Jan 19, 2023",
@@ -221,7 +273,7 @@ export const apps: appsList = {
       released_on: "Mar 24, 2023",
       name: "Woolly",
       icon: woolly,
-      url: "https://apps.apple.com/us/app/woolly-for-mastodon/id6444360628",
+      url: "https://apps.apple.com/app/woolly-for-mastodon/id6444360628",
       paid: true,
       open: false,
     },
@@ -286,7 +338,7 @@ export const apps: appsList = {
       released_on: "Aug 10, 2023",
       name: "SoraSNS",
       icon: sora,
-      url: "https://apps.apple.com/us/app/sorasns-for-mastodon-bluesky/id6754866904",
+      url: "https://apps.apple.com/app/sorasns-for-mastodon-bluesky/id6754866904",
       paid: false,
       open: false,
     },
@@ -302,12 +354,12 @@ export const apps: appsList = {
       released_on: "Jun 3, 2024",
       name: "Oxpecker (watchOS)",
       icon: oxpecker,
-      url: "https://apps.apple.com/app/oxpecker-for-mastodon/id6474893905?platform=appleWatch",
+      url: "https://apps.apple.com/app/oxpecker-for-mastodon/id6474893905",
       paid: true,
       open: false,
     },
     {
-      released_on: "July 10th, 2024",
+      released_on: "Jul 10, 2024",
       name: "Bubble",
       icon: bubble,
       url: "https://apps.apple.com/app/bubble/id6477757490",
@@ -319,7 +371,7 @@ export const apps: appsList = {
       released_on: "Jan 1, 2024",
       name: "Odous (watchOS)",
       icon: odous,
-      url: "https://apps.apple.com/us/app/id6446084064",
+      url: "https://apps.apple.com/app/id6446084064",
       paid: true,
       open: false,
     },
@@ -372,7 +424,7 @@ export const apps: appsList = {
       icon: tooty,
       url: "https://n1k0.github.io/tooty/v2/",
       open: true,
-      source_url: "https://github.com/n1k0/tooty ",
+      source_url: "https://github.com/n1k0/tooty",
     },
     {
       name: "Mastodeck",
@@ -509,6 +561,7 @@ export const apps: appsList = {
       icon: amidon,
       url: "https://github.com/BlitterStudio/amidon",
       open: true,
+      source_url: "https://github.com/BlitterStudio/amidon",
     },
     {
       released_on: "Feb 5, 2023",
@@ -516,6 +569,7 @@ export const apps: appsList = {
       icon: brexxtodon,
       url: "https://github.com/mainframed/BREXXTODON",
       open: true,
+      source_url: "https://github.com/mainframed/BREXXTODON",
     },
     {
       released_on: "Nov 14, 2022",
@@ -523,6 +577,7 @@ export const apps: appsList = {
       icon: dostodon,
       url: "https://github.com/SuperIlu/DOStodon",
       open: true,
+      source_url: "https://github.com/SuperIlu/DOStodon",
     },
     {
       released_on: "Nov 20, 2022",
@@ -530,6 +585,7 @@ export const apps: appsList = {
       icon: macstodon,
       url: "https://github.com/smallsco/macstodon",
       open: true,
+      source_url: "https://github.com/smallsco/macstodon",
     },
     {
       released_on: "Apr 14, 2023",
@@ -537,6 +593,7 @@ export const apps: appsList = {
       icon: mastonine,
       url: "https://sr.ht/~julienxx/Masto9/",
       open: true,
+      source_url: "https://sr.ht/~julienxx/Masto9/",
     },
     {
       released_on: "Mar 6, 2023",
@@ -552,6 +609,7 @@ export const apps: appsList = {
       icon: mastodonforworkgroups,
       url: "https://github.com/meyskens/mastodon-for-workgroups",
       open: true,
+      source_url: "https://github.com/meyskens/mastodon-for-workgroups",
     },
     {
       released_on: "Sep 12, 2023",
@@ -559,6 +617,7 @@ export const apps: appsList = {
       icon: heffalump,
       url: "https://github.com/knickish/heffalump",
       open: true,
+      source_url: "https://github.com/knickish/heffalump",
     },
     {
       released_on: "Sep 17, 2023",
@@ -567,6 +626,7 @@ export const apps: appsList = {
       url: "https://github.com/Havoc6502/MOStodon",
       paid: false,
       open: true,
+      source_url: "https://github.com/Havoc6502/MOStodon",
     },
     {
       released_on: "Jan 06, 2018",
@@ -579,3 +639,6 @@ export const apps: appsList = {
     },
   ],
 }
+
+// Validate apps data at module load time
+validateApps(apps)
