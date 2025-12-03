@@ -69,5 +69,5 @@
     "tsx": "^4.20.6",
     "typescript": "^5.8.3"
   },
-  "packageManager": "yarn@4.9.1"
+  "packageManager": "yarn@4.12.0"
 }
