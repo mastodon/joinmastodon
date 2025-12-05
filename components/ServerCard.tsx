@@ -71,7 +71,7 @@ const ServerCard = ({ server }: { server?: Server }) => {
             <SkeletonText className="w-[14ch]" />
           )}
         </p>
-        <p className="b3 line-clamp-5 [unicode-bidi:plaintext] break-words break-all overflow-hidden">
+        <p className="b3 line-clamp-5 [unicode-bidi:plaintext] [word-break:break-word]">
           {server ? (
             server.description
           ) : (
