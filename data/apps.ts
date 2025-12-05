@@ -56,6 +56,7 @@ import odous from "../public/apps/odous.png"
 import dowstodon from "../public/apps/dowstodon.png"
 import fread from "../public/apps/fread.png"
 import plfe from "../public/apps/pl-fe.png"
+import fursona from "../public/apps/fursona.png"
 
 import { z } from "zod"
 import type { StaticImageData } from "next/legacy/image"
@@ -373,6 +374,14 @@ export const apps: appsList = {
       icon: odous,
       url: "https://apps.apple.com/app/id6446084064",
       paid: true,
+      open: false,
+    },
+    {
+      released_on: "Nov 27, 2025",
+      name: "Fursona (for Furry)",
+      icon: fursona,
+      url: "https://apps.apple.com/us/app/fursona-furry-social-app/id6754586637",
+      paid: false,
       open: false,
     },
   ],
