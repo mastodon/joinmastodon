@@ -233,7 +233,7 @@ const About = () => (
                     className="b2 block hover:text-blurple-500"
                   >
                     <span className="h5 block">2024</span>
-                    <span className="text-gray-2">PDF, 4.4 MB</span>
+                    <span className="text-gray-2">PDF, 4.2 MB</span>
                   </a>
                 </li>
                 <li>
