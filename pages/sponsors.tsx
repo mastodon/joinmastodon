@@ -220,7 +220,7 @@ function Sponsors() {
               <div className="flex gap-4 items-center">
                 <LinkButton
                   size="large"
-                  href="https://joinmastodon.org/reports/Mastodon%20Annual%20Report%202023.pdf"
+                  href="https://joinmastodon.org/reports/Mastodon%20Annual%20Report%202024.pdf"
                 >
                   <FormattedMessage
                     id="sponsors.cta.annual_reports"
