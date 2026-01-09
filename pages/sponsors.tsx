@@ -226,7 +226,7 @@ function Sponsors() {
                     id="sponsors.cta.annual_reports"
                     defaultMessage="Annual Report"
                   />{" "}
-                  — 2023
+                  — 2024
                 </LinkButton>
                 <span className="font-semibold">PDF, 4MB</span>
               </div>
