@@ -57,6 +57,7 @@ import dowstodon from "../public/apps/dowstodon.png"
 import fread from "../public/apps/fread.png"
 import plfe from "../public/apps/pl-fe.png"
 import fursona from "../public/apps/fursona.png"
+import mastui from "../public/apps/mastui.png"
 
 import { z } from "zod"
 import type { StaticImageData } from "next/legacy/image"
@@ -561,6 +562,15 @@ export const apps: appsList = {
       url: "https://www.microsoft.com/store/productId/9PHNV45JVR2S",
       paid: false,
       open: false,
+    },
+    {
+      released_on: "Aug 13, 2025",
+      name: "Mastui",
+      icon: mastui,
+      url: "https://mastui.app",
+      paid: false,
+      open: true,
+      source_url: "https://github.com/kimusan/mastui/",
     },
   ],
   retro: [
