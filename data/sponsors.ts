@@ -101,6 +101,11 @@ const sponsors = {
       logo: require("../public/sponsors/softorbits.png"),
       name: "SoftOrbits",
     }, // Patreon
+    {
+      url: "https://freecrash.game/",
+      logo: require("../public/sponsors/Free-Crash-Game.png"),
+      name: "Free Crash Game",
+    }, // Custom
   ] as Sponsor[],
   gold: [
     {
