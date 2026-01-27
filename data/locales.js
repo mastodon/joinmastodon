@@ -6,6 +6,7 @@ const locales = [
   { code: "ca", language: "Català" },
   { code: "cs", language: "Čeština" },
   { code: "cy", language: "Cymraeg" },
+  { code: "da", language: "Dansk" },
   { code: "de", language: "Deutsch" },
   { code: "el", language: "Ελληνικά" },
   { code: "en", language: "English" },
@@ -55,6 +56,7 @@ const locales = [
 // for now
 const locales_disabled = [
   { code: "bn", language: "বাংলা" },
+  { code: "et", language: "Eesti" },
   { code: "ga", language: "Gaeilge" },
   { code: "he", language: "עברית", dir: "rtl" },
   { code: "kab", language: "Taqbaylit" },
