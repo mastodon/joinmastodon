@@ -2436,10 +2436,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stripe/stripe-js@npm:^7.3.0":
-  version: 7.9.0
-  resolution: "@stripe/stripe-js@npm:7.9.0"
-  checksum: 10c0/ca7dd386df944ed05be115422dde9f5a2b04846e508f482d996db273d95bf8ac8ab5078e58480534b8bc6e29c26c67e16c7e75e478c3112813f971ec6aba49f8
+"@stripe/stripe-js@npm:^8.0.0":
+  version: 8.7.0
+  resolution: "@stripe/stripe-js@npm:8.7.0"
+  checksum: 10c0/47f7071a7549f94f3bfcc0cf3d7fe4992abdb2d3eb0a1fb712552da1bd0f2b1cb2c1e34ec9c5921d86a8d9e01bb7fff915faa5fa31130ffc40d8872ada94e92d
   languageName: node
   linkType: hard
 
@@ -5841,7 +5841,7 @@ __metadata:
     "@formatjs/cli": "npm:^6.7.1"
     "@headlessui/react": "npm:^2.2.2"
     "@stripe/react-stripe-js": "npm:^3.7.0"
-    "@stripe/stripe-js": "npm:^7.3.0"
+    "@stripe/stripe-js": "npm:^8.0.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-query": "npm:^5.75.2"
     "@tanstack/react-query-devtools": "npm:^5.75.2"
