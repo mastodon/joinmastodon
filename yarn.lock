@@ -2019,10 +2019,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:15.5.10":
-  version: 15.5.10
-  resolution: "@next/env@npm:15.5.10"
-  checksum: 10c0/fb26c299ff388a3a0b2d14379616e3e59fe7960002e5aa67be4d195a377b9803fb93dd90067a5eb7d889d6f437aff091171701eec0e8d201666160269dda4e95
+"@next/env@npm:15.5.11":
+  version: 15.5.11
+  resolution: "@next/env@npm:15.5.11"
+  checksum: 10c0/c39975896cac734d4535bbd1af1e58c52932f1f681d9c2b85caf963071e65a62cb19e3b66653d0127a3c0a647cd9ee96dcde6a4e0d0fbb17a9940ed378fdd3b1
   languageName: node
   linkType: hard
 
@@ -6803,10 +6803,10 @@ __metadata:
   linkType: hard
 
 "next@npm:^15.5":
-  version: 15.5.10
-  resolution: "next@npm:15.5.10"
+  version: 15.5.11
+  resolution: "next@npm:15.5.11"
   dependencies:
-    "@next/env": "npm:15.5.10"
+    "@next/env": "npm:15.5.11"
     "@next/swc-darwin-arm64": "npm:15.5.7"
     "@next/swc-darwin-x64": "npm:15.5.7"
     "@next/swc-linux-arm64-gnu": "npm:15.5.7"
@@ -6857,7 +6857,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/ebf358cfc13e856ac2d60f6b1eb166560c541796d3422d6719712c0e8038626407f6075cb0d2805d9d6392404a5b0e63e501515982d78d7e934b721ea9753b17
+  checksum: 10c0/a025661541e56ea5402d173941b84f771796d400bae4b8068a68b8347228b1544269737645a95be1c8cfc34bf862fdd1b899767b7c350ce62368be666048cdf0
   languageName: node
   linkType: hard
 
