@@ -2,7 +2,6 @@ import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
 
 import mastodonLogo from "../public/logos/wordmark-white-text.svg"
-import merch from "../public/merch.jpg"
 import Image from "next/legacy/image"
 import NewImage from "next/image"
 import { useState, useEffect, useRef, useId } from "react"
@@ -128,21 +127,34 @@ const Header = ({ transparent = true }: HeaderProps) => {
             />
           ),
         },
-      ],
-      banner: <div className="md:px-3">
-        <a href="https://shop.joinmastodon.org/" className="block relative overflow-hidden rounded-md inset-ring">
-          <NewImage src={merch} fill={true} className='absolute z-0 object-cover' alt='' />
-
-          <div className="relative pt-32 text-white py-3 px-5 md:px-4 bg-overlay-gradient">
-            <span className="block font-extrabold"><FormattedMessage id="nav.merch.title" defaultMessage="Merch" /></span>
-
-            <span className="mt-1 block font-extranormal"><FormattedMessage
+        {
+          value: "/branding",
+          label: (
+            <FormattedMessage
+              id="nav.branding.title"
+              defaultMessage="Branding"
+            />
+          ),
+          description: (
+            <FormattedMessage
+              id="nav.branding.description"
+              defaultMessage="Our logos, colours, and promo materials."
+            />
+          ),
+        },
+        {
+          value: "https://shop.joinmastodon.org/",
+          label: (
+            <FormattedMessage id="nav.merch.title" defaultMessage="Merch" />
+          ),
+          description: (
+            <FormattedMessage
               id="nav.merch.description"
-              defaultMessage="Support your friends building Mastodon."
-            /></span>
-          </div>
-        </a>
-      </div>,
+              defaultMessage="Support our mission in a fun way."
+            />
+          ),
+        },
+      ],
       footer: {
         value: "https://github.com/mastodon/mastodon",
         label: (
@@ -295,8 +307,6 @@ const Header = ({ transparent = true }: HeaderProps) => {
                           </li>
                         ))}
                       </ul>
-
-                      {item.banner}
 
                       {item.footer && (
                         <div className="md:bg-gray-4 md:p-4">
