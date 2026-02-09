@@ -8,11 +8,11 @@ import heroImage from "../public/illustrations/apps_hero_desktop.png"
 import Image from "next/legacy/image"
 import colors from "../data/colors"
 
-import screenshotComposeLight from "../public/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png"
-import screenshotHomeLight from "../public/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png"
-import screenshotProfileLight from "../public/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png"
-import screenshotServerRulesLight from "../public/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png"
-import screenshotThreadLight from "../public/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png"
+import screenshotComposeLight from "../public/screenshots/android/Compose-0b1ddc94-d84d-4376-b957-9f676e851964.png"
+import screenshotHomeLight from "../public/screenshots/android/HomeTimeline-add072f5-fb82-41d6-a1b1-b42707d46cac.png"
+import screenshotProfileLight from "../public/screenshots/android/Profile-1a3889e8-43a3-4607-88cf-448ace95859a.png"
+import screenshotServerRulesLight from "../public/screenshots/android/InstanceRules-99b01960-0551-4f26-bd69-eee3c0d9bcf5.png"
+import screenshotThreadLight from "../public/screenshots/android/Thread-e4976e5a-7766-4ffa-bab1-7e26f54cf47c.png"
 
 import CheckIcon from "../public/icons/check.svg?inline"
 import LogoPurple from "../public/logos/logo-purple.svg?inline"
@@ -268,48 +268,73 @@ const Branding = () => (
           }
         />
         <BrandSection
-          title="Product screenshots"
-          copy="Need some screenshots? We've got you covered."
-          preview={
+          title="Posters and flyers"
+          copy="Organising an event? We've got you covered."
+          preview={(
             <div className="mb-16 flex gap-gutter">
+              <div className="flex max-w-full items-start">
+                <div className="relative w-[50%] shrink-0">
+                  <Image
+                    src={require("../public/promotional/poster_a4_en.jpg")}
+                    alt=""
+                    className="rounded-md"
+                  />
+                </div>
+
+                <div className="px-4 text-start">
+                  <p className="mb-4"><strong className="font-black">Printing instructions:</strong></p>
+
+                  <ul className="list-disc pl-3 mb-8">
+                    <li>A4 paper</li>
+                    <li>CMYK color space</li>
+                    <li>3mm bleed</li>
+                  </ul>
+
+                  <p className="mb-4"><strong className="font-black">Download:</strong></p>
+
+                  <ul className="list-disc pl-3">
+                    <li><a className="text-blurple-600 hover:underline" href="/promotional/poster_a4_en.pdf">English (PDF)</a></li>
+                    <li><a className="text-blurple-600 hover:underline" href="/promotional/poster_a4_de.pdf">Deutsch (PDF)</a></li>
+                    <li><a className="text-blurple-600 hover:underline" href="/promotional/poster_a4_es.pdf">Español (PDF)</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+        />
+
+        <BrandSection
+          title="Product screenshots"
+          copy="Need some screenshots? Here is a selection."
+          preview={
+            <div className="mb-16 grid grid-cols-5 gap-gutter">
               {[
                 {
                   src: screenshotComposeLight,
-                  download:
-                    "/screenshots/iphone-13-pro-max/Compose.light.1.iPhone 13 Pro Max_1_FB1EB7D6-DEF2-462D-9F4F-D622DF75032C.png",
-                  title: "Compose, light mode, iPhone 13 Pro Max",
+                  title: "Compose, light mode, Android",
                 },
                 {
                   src: screenshotHomeLight,
-                  download:
-                    "/screenshots/iphone-13-pro-max/Home.light.1.iPhone 13 Pro Max_1_E97CFEC9-A24C-4B12-87ED-D2CCD8F17A69.png",
-                  title: "Home, light mode, iPhone 13 Pro Max",
+                  title: "Home, light mode, Android",
                 },
                 {
                   src: screenshotProfileLight,
-                  download:
-                    "/screenshots/iphone-13-pro-max/Profile.light.1.iPhone 13 Pro Max_1_EB8AD280-7875-47A1-A556-D433BE7590E7.png",
-                  title: "Profile, light mode, iPhone 13 Pro Max",
+                  title: "Profile, light mode, Android",
                 },
                 {
                   src: screenshotServerRulesLight,
-                  download:
-                    "/screenshots/iphone-13-pro-max/ServerRules.light.1.iPhone 13 Pro Max_1_9B7DD752-9F56-4CA5-8A92-4E19B9FEB281.png",
-                  title: "Server rules, light mode, iPhone 13 Pro Max",
+                  title: "Server rules, light mode, Android",
                 },
                 {
                   src: screenshotThreadLight,
-                  download:
-                    "/screenshots/iphone-13-pro-max/Thread.light.1.iPhone 13 Pro Max_1_3C6768BF-C8B6-452B-8DD0-4C7919FBBE2F.png",
-                  title: "Thread, light mode, iPhone 13 Pro Max",
+                  title: "Thread, light mode, Android",
                 },
               ].map((screenshot) => (
                 <a
                   key={screenshot.title}
-                  href={screenshot.download}
+                  href={screenshot.src.src}
                   title={screenshot.title}
-                  download
-                  className="block overflow-hidden rounded border border-gray-4 ring-blurple-500 hocus:ring"
+                  className="block col-span-1 overflow-hidden rounded border border-gray-4 ring-blurple-500 hocus:ring"
                 >
                   <Image src={screenshot.src} alt="" />
                 </a>
