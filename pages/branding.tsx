@@ -296,6 +296,7 @@ const Branding = () => (
                     <li><a className="text-blurple-600 hover:underline" href="/promotional/poster_a4_en.pdf">English (PDF)</a></li>
                     <li><a className="text-blurple-600 hover:underline" href="/promotional/poster_a4_de.pdf">Deutsch (PDF)</a></li>
                     <li><a className="text-blurple-600 hover:underline" href="/promotional/poster_a4_es.pdf">Español (PDF)</a></li>
+                    <li><a className="text-blurple-600 hover:underline" href="/promotional/poster_a4_it.pdf">Italiano (PDF)</a></li>
                   </ul>
                 </div>
               </div>
