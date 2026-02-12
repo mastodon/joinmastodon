@@ -1560,8 +1560,8 @@ __metadata:
   linkType: hard
 
 "@formatjs/cli@npm:^6.7.1":
-  version: 6.12.0
-  resolution: "@formatjs/cli@npm:6.12.0"
+  version: 6.12.2
+  resolution: "@formatjs/cli@npm:6.12.2"
   peerDependencies:
     "@glimmer/syntax": ^0.84.3 || ^0.95.0
     "@vue/compiler-core": 3.5.27
@@ -1584,7 +1584,7 @@ __metadata:
       optional: true
   bin:
     formatjs: bin/formatjs
-  checksum: 10c0/dcd1f1b286be41e2528dedcb8187a4aa1ea99a780cc071530fb661a5bb37f8d9d4c0755d9f1938c36a9348cd34e36c44e1fca245b852d901dc52b1c6444c5959
+  checksum: 10c0/d22123027a7137ea0c3075e188f20c56201084f0dc93fd0a8a6c0c456ee0fb7ab3e8b053546d3493d83d2680a9a3e528b5a8fce0a66addce4af323d3c3d0ca07
   languageName: node
   linkType: hard
 
@@ -2624,22 +2624,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-devtools@npm:5.92.0":
-  version: 5.92.0
-  resolution: "@tanstack/query-devtools@npm:5.92.0"
-  checksum: 10c0/3e41da3c47881b6190d954b60cc0f93f11251ff3066b68b7312eee5696ff114ce078309ed7ec80cd85a5b7a56ed0360fb2048d204ec459ab05f4a3c11268f6ce
+"@tanstack/query-devtools@npm:5.93.0":
+  version: 5.93.0
+  resolution: "@tanstack/query-devtools@npm:5.93.0"
+  checksum: 10c0/0024cef103f48c50f3932f6bfe5d77b4fde25be49d43486f8ef7ec7108d2c1bd999ebc7a46309f0504bf081daa7217b36637e9436d67f9a1599c89a385d078ee
   languageName: node
   linkType: hard
 
 "@tanstack/react-query-devtools@npm:^5.75.2":
-  version: 5.91.2
-  resolution: "@tanstack/react-query-devtools@npm:5.91.2"
+  version: 5.91.3
+  resolution: "@tanstack/react-query-devtools@npm:5.91.3"
   dependencies:
-    "@tanstack/query-devtools": "npm:5.92.0"
+    "@tanstack/query-devtools": "npm:5.93.0"
   peerDependencies:
-    "@tanstack/react-query": ^5.90.14
+    "@tanstack/react-query": ^5.90.20
     react: ^18 || ^19
-  checksum: 10c0/afb267583d5df1311cf184095f97211df8d769be22cf5966d9ba0defbe341cdd728d035213df7b377483f8721f86dbaff9fab809c97b587c7d97620953e40d68
+  checksum: 10c0/cbd9ce85698511e80955f2c7d0fa7395f3230b34a8cbfb6be1712d49393fc4e06a0a2b5ecd734dff9e803834a7c2c347c954ca4b76f961ccf4c31be39e7ac0bc
   languageName: node
   linkType: hard
 
@@ -3348,11 +3348,11 @@ __metadata:
   linkType: hard
 
 "autoprefixer@npm:^10.4.21":
-  version: 10.4.23
-  resolution: "autoprefixer@npm:10.4.23"
+  version: 10.4.24
+  resolution: "autoprefixer@npm:10.4.24"
   dependencies:
     browserslist: "npm:^4.28.1"
-    caniuse-lite: "npm:^1.0.30001760"
+    caniuse-lite: "npm:^1.0.30001766"
     fraction.js: "npm:^5.3.4"
     picocolors: "npm:^1.1.1"
     postcss-value-parser: "npm:^4.2.0"
@@ -3360,7 +3360,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: 10c0/3765c5d0fa3e95fb2ebe9d5a6d4da0156f5d346c7ec9ac0fbf5c97c8139d0ca1e8743bf5dc1b4aa954467be6929fddf8498a3b6202d468d70b5f359f3b6af90f
+  checksum: 10c0/16737dfc865afed338f3166718ece0f77539e53c1ba9f064f2e6369b9dec9ea0542f3fb98bcb7ab37e64897dc3304bae6b2004fbf79ada8b2aeaa3db336e4b77
   languageName: node
   linkType: hard
 
@@ -3602,10 +3602,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001759, caniuse-lite@npm:^1.0.30001760":
+"caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001759":
   version: 1.0.30001766
   resolution: "caniuse-lite@npm:1.0.30001766"
   checksum: 10c0/cecc8f9a3758c486fc68434a3cca5f4ca7077db5ac9cdb1689786abf63c4aa9891bf70f2df2c3e549d5e284e8da36a218d0e131ebb26dd59280bc99db49640f6
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001766":
+  version: 1.0.30001769
+  resolution: "caniuse-lite@npm:1.0.30001769"
+  checksum: 10c0/161b8c30ab967371807d45d361f0d5bc06e38ef2dbf811493d70cd97c21e1522f5b91fd944c419a00047ee09c931ca64627f125a9ffa7a17a9fdff8dad9765b0
   languageName: node
   linkType: hard
 
@@ -5869,7 +5876,7 @@ __metadata:
     node-gyp: "npm:^11.2.0"
     postcss: "npm:^8.5.3"
     prettier: "npm:^3.5.3"
-    prettier-plugin-tailwindcss: "npm:^0.6.11"
+    prettier-plugin-tailwindcss: "npm:^0.7.0"
     react: "npm:^18.3.1"
     react-blurhash: "npm:^0.3.0"
     react-dom: "npm:^18.3.1"
@@ -7417,9 +7424,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.6.11":
-  version: 0.6.14
-  resolution: "prettier-plugin-tailwindcss@npm:0.6.14"
+"prettier-plugin-tailwindcss@npm:^0.7.0":
+  version: 0.7.2
+  resolution: "prettier-plugin-tailwindcss@npm:0.7.2"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-hermes": "*"
@@ -7431,14 +7438,12 @@ __metadata:
     prettier: ^3.0
     prettier-plugin-astro: "*"
     prettier-plugin-css-order: "*"
-    prettier-plugin-import-sort: "*"
     prettier-plugin-jsdoc: "*"
     prettier-plugin-marko: "*"
     prettier-plugin-multiline-arrays: "*"
     prettier-plugin-organize-attributes: "*"
     prettier-plugin-organize-imports: "*"
     prettier-plugin-sort-imports: "*"
-    prettier-plugin-style-order: "*"
     prettier-plugin-svelte: "*"
   peerDependenciesMeta:
     "@ianvs/prettier-plugin-sort-imports":
@@ -7459,8 +7464,6 @@ __metadata:
       optional: true
     prettier-plugin-css-order:
       optional: true
-    prettier-plugin-import-sort:
-      optional: true
     prettier-plugin-jsdoc:
       optional: true
     prettier-plugin-marko:
@@ -7473,11 +7476,9 @@ __metadata:
       optional: true
     prettier-plugin-sort-imports:
       optional: true
-    prettier-plugin-style-order:
-      optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10c0/1bf635be28b30b3f171a184497eecf512601d19328e402dd2eb1ede52aa57b4f5b605eae2929f4916de9ba22526f3d730d9afa90334db09d17c59f463f7b26d8
+  checksum: 10c0/072fb79be58ba6b9743eb4b85be7da06f7d719764e293fdaf6515f15b21af2d22ab0e6476c636c69983949e42c4382e9566b17e3b123a2df6cf5100336729f3c
   languageName: node
   linkType: hard
 
