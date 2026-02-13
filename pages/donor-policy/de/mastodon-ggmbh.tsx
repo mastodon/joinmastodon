@@ -14,10 +14,10 @@ const MastodonGGmbHDonorPolicy = () => (
     <div dir="ltr" className="[unicode-bidi:plaintext]">
       <Hero desktopImage={heroImage} mobileImage={heroImage}>
         <h1 className="h2 mb-4" lang="de">
-          Mastodon gGmbH Spendenannahme-Richtlinie
+          Mastodon GmbH Spendenannahme-Richtlinie
         </h1>
         <p className="sh1" lang="de">
-          Zuletzt aktualisiert: 14. Oktober 2024
+          Zuletzt aktualisiert: 13. Februar 2026
         </p>
       </Hero>
     </div>
@@ -55,7 +55,7 @@ const MastodonGGmbHDonorPolicy = () => (
           fördern.
         </p>
         <p className="mt-4">
-          Alle finanziellen Mittel, die die Mastodon gGmbH erhält, müssen im
+          Alle finanziellen Mittel, die die Mastodon GmbH erhält, müssen im
           Einklang mit unserer Mission und unseren Zielen stehen. Die Wahrung
           unserer Unabhängigkeit hat dabei höchste Priorität.
         </p>
@@ -90,9 +90,9 @@ const MastodonGGmbHDonorPolicy = () => (
           </li>
         </ul>
         <p className="mt-4">
-          Die Mastodon gGmbH nimmt die Einhaltung dieser Spendenrichtlinien sehr
+          Die Mastodon GmbH nimmt die Einhaltung dieser Spendenrichtlinien sehr
           ernst. Finanzierungen sind entscheidend, um das Wachstum der von
-          Mastodon gGmbH zu unterstützen, dürfen jedoch nicht die Werte der
+          Mastodon GmbH zu unterstützen, dürfen jedoch nicht die Werte der
           Organisation gefährden. Entscheidungen werden nach Prüfung jeder
           GeldgeberIn und jeder Finanzierungsquelle getroffen. Wenn eine
           SpenderIn oder ein Unternehmen nicht den oben genannten Kriterien
@@ -103,11 +103,10 @@ const MastodonGGmbHDonorPolicy = () => (
       <section lang="de" className="mt-8">
         <h4 className="h4 mb-6">Steuerliche Konsequenzen</h4>
         <p>
-          Mastodon gGmbH ist nicht in der Lage, potenziellen Spendern
+          Mastodon GmbH ist nicht in der Lage, potenziellen Spendern
           steuerliche Beratung zu bieten. SpenderInnen sollten sich bezüglich
           der steuerlichen Abzugsfähigkeit von Spenden an einen Steuerberater
-          wenden. Die Organisation wurde 2021 offiziell als gGmbH (eine deutsche
-          Form der gemeinnützigen GmbH) eingetragen.
+          wenden.
         </p>
       </section>
       <section lang="de" className="mt-8">
@@ -121,11 +120,11 @@ const MastodonGGmbHDonorPolicy = () => (
 
       <Head>
         <title lang="de">
-          Mastodon gGmbH Spendenannahme-Richtlinie - Mastodon
+          Mastodon GmbH Spendenannahme-Richtlinie - Mastodon
         </title>
         <meta
           property="og:title"
-          content="Mastodon gGmbH Spendenannahme-Richtlinie"
+          content="Mastodon GmbH Spendenannahme-Richtlinie"
         />
       </Head>
     </PolicyPage>

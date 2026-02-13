@@ -8,7 +8,7 @@ export function DonateFooter() {
       <LogoPurple className="size-6" />
       <FormattedMessage
         id="donate_widget.footer"
-        defaultMessage="Donations go to Mastodon gGmbH"
+        defaultMessage="Donations go to Mastodon GmbH"
       />
     </footer>
   )

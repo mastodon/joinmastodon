@@ -332,9 +332,9 @@ function Guide(props) {
                   ? undefined
                   : {
                       domain: "mastodon.social",
-                      version: "3.5.3",
+                      version: "4.5.6",
                       description:
-                        "The original server maintained by the Mastodon gGmbH non-profit.",
+                        "The original server maintained by the Mastodon GmbH non-profit.",
                       languages: ["en"],
                       region: "",
                       categories: ["general"],
