@@ -37,7 +37,7 @@ const About = () => (
 
               <p className="b1 mb-4">
                 <strong>
-                  Mastodon gGmbH is a non-profit from Germany that develops the
+                  Mastodon is a non-profit that develops the
                   Mastodon software.
                 </strong>{" "}
                 Mastodon started in 2016 as an open-source project by Eugen
@@ -465,7 +465,7 @@ const About = () => (
                 <div className="col-span-6">
                   <div className="mb-4">
                     <dt className="font-bold">Firmenname:</dt>
-                    <dd>Mastodon gGmbH</dd>
+                    <dd>Mastodon GmbH</dd>
                   </div>
 
                   <div className="mb-4">
@@ -509,6 +509,7 @@ const About = () => (
                 <div className="col-span-12 mb-4">
                   <dt className="font-bold">Vertretungsberechtigt:</dt>
                   <dd>Felix Hlatky (Geschäftsführer)</dd>
+                  <dd>Dr. Marius Rothermund (Geschäftsführer)</dd>
                 </div>
               </dl>
             </div>

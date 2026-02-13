@@ -216,7 +216,7 @@ export const Footer = () => (
 
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-center text-nightshade-100 md:text-start">
-          Copyright © 2025 Mastodon gGmbH.{" "}
+          Copyright © 2026 Mastodon GmbH.{" "}
           <Link
             href="/trademark"
             className="border-nightshade-600 hover:underline sm:ml-4 sm:border-l sm:pl-4"

@@ -14,10 +14,10 @@ const MastodonGGmbHDonorPolicy = () => (
     <div dir="ltr" className="[unicode-bidi:plaintext]">
       <Hero desktopImage={heroImage} mobileImage={heroImage}>
         <h1 lang="en" className="h2 mb-4">
-          Mastodon gGmbH Donor Policy
+          Mastodon GmbH Donor Policy
         </h1>
         <p lang="en" className="sh1">
-          Last updated October 14, 2024
+          Last updated February 13, 2026
         </p>
       </Hero>
     </div>
@@ -53,7 +53,7 @@ const MastodonGGmbHDonorPolicy = () => (
           of gifts and grants to further its mission.
         </p>
         <p className="mt-4">
-          Any funding towards Mastodon gGmbH must be consistent with the
+          Any funding towards Mastodon GmbH must be consistent with the
           organisation’s stated mission and purposes which prioritises its
           independence.
         </p>
@@ -86,7 +86,7 @@ const MastodonGGmbHDonorPolicy = () => (
           </li>
         </ul>
         <p className="mt-4">
-          Mastodon gGmbH takes compliance and origin of funding sources very
+          Mastodon GmbH takes compliance and origin of funding sources very
           seriously. Funding is essential to adequately support its growth, but
           will not be allowed to compromise its values. Decisions are taken
           after examination of each funder and funding source. If a donor does
@@ -97,10 +97,9 @@ const MastodonGGmbHDonorPolicy = () => (
       <section lang="en" className="mt-8">
         <h4 className="h4 mb-6">Tax Consequences</h4>
         <p>
-          Mastodon gGmbH is unable to offer tax advice to would-be donors.
+          Mastodon GmbH is unable to offer tax advice to would-be donors.
           Donors who are concerned about tax-deductibility of donations should
-          consult with their own tax advisers. The organisation was officially
-          incorporated as a gGmbH (a German form of non-profit LLC) in 2021.
+          consult with their own tax advisers.
         </p>
       </section>
       <section lang="en" className="mt-8">
@@ -113,8 +112,8 @@ const MastodonGGmbHDonorPolicy = () => (
       </section>
 
       <Head>
-        <title lang="en">Mastodon gGmbH Donor Policy - Mastodon</title>
-        <meta property="og:title" content="Mastodon gGmbH Donor Policy" />
+        <title lang="en">Mastodon GmbH Donor Policy - Mastodon</title>
+        <meta property="og:title" content="Mastodon GmbH Donor Policy" />
       </Head>
     </PolicyPage>
   </Layout>

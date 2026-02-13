@@ -168,7 +168,7 @@ function Sponsors() {
               <div className="b4 mt-4 text-gray-2 italic pr-4 text-left md:text-right">
                 <FormattedMessage
                   id="sponsors.donate.footer.donor_policy"
-                  defaultMessage={`To ensure you qualify to make a donation, please refer to our donor policies: <link_mastodon_inc>Mastodon, Inc</link_mastodon_inc> <middot></middot> <link_mastodon_ggmbh>Mastodon gGmbH</link_mastodon_ggmbh>`}
+                  defaultMessage={`To ensure you qualify to make a donation, please refer to our donor policies: <link_mastodon_inc>Mastodon, Inc</link_mastodon_inc> <middot></middot> <link_mastodon_ggmbh>Mastodon GmbH</link_mastodon_ggmbh>`}
                   values={{
                     link_mastodon_inc: (text) => (
                       <Link
