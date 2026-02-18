@@ -1,6 +1,6 @@
 ---
-title: Moderation tools
-status: exploring
+title: Profiles redesign
+status: next
 ---
 
-Looking at ways to make moderation easier, e.g. shared block lists.
+Version 4.6: Easier profile editing with greater control, including on mobile.
