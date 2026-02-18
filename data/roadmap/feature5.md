@@ -3,4 +3,4 @@ title: Better onboarding
 status: next
 ---
 
-Version 4.6: Make improvements to how new users first arrive on Mastodon so they understand what that can do easily.
+Version 4.6: Improve the onboarding experience so new users easily understand what they can do on Mastodon.

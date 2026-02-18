@@ -1,6 +1,6 @@
 ---
-title: Simplify Private Mentions
+title: Moderation tools
 status: exploring
 ---
 
-Make Private Mentions calmer, more like chat messages. Remove them from the public feed (which scares people) and have better notifications.
+Looking at ways to make moderation easier, e.g. shared block lists.
