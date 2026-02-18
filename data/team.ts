@@ -11,34 +11,10 @@ export type TeamMember = {
 
 const team: TeamMember[] = [
   {
-    name: "Felix Hlatky",
-    position: "Executive Director",
+    name: "Amelia Rochko",
+    position: "Customer Service",
     socials: {
-      mastodon: "https://mastodon.social/@mellifluousbox",
-    },
-  },
-
-  {
-    name: "Renaud Chaput",
-    position: "Technical Director",
-    socials: {
-      mastodon: "https://oisaur.com/@renchap",
-    },
-  },
-
-  {
-    name: "Hannah Aubry",
-    position: "Community Director",
-    socials: {
-      mastodon: "https://hachyderm.io/@haubles",
-    },
-  },
-
-  {
-    name: "Eugen Rochko",
-    position: "Executive Strategy & Product Advisor",
-    socials: {
-      mastodon: "https://mastodon.social/@Gargron",
+      mastodon: "https://mastodon.social/@Ameboid",
     },
   },
 
@@ -48,19 +24,6 @@ const team: TeamMember[] = [
     socials: {
       mastodon: "https://macaw.social/@andypiper",
     },
-  },
-
-  {
-    name: "Philip Schröpel",
-    position: "Chief of Staff",
-    socials: {
-      mastodon: "https://mastodon.social/@philipkristians",
-    },
-  },
-
-  {
-    name: "Amelia Rochko",
-    position: "Customer Service",
   },
 
   {
@@ -88,6 +51,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Dopatwo",
+    position: "Illustrations",
+    socials: {
+      mastodon: "https://mastodon.social/@dopatwo",
+    },
+  },
+
+  {
     name: "Echo",
     position: "Engineering (web)",
     socials: {
@@ -96,10 +67,66 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Eugen Rochko",
+    position: "Executive Strategy & Product Advisor",
+    socials: {
+      mastodon: "https://mastodon.social/@Gargron",
+    },
+  },
+
+  {
+    name: "Felix Hlatky",
+    position: "Executive Director",
+    socials: {
+      mastodon: "https://mastodon.social/@mellifluousbox",
+    },
+  },
+
+  {
+    name: "Gregory Klyushnikov",
+    position: "Engineering (Android)",
+    socials: {
+      mastodon: "https://mastodon.social/@grishka",
+    },
+  },
+
+  {
+    name: "Hannah Aubry",
+    position: "Community Director",
+    socials: {
+      mastodon: "https://hachyderm.io/@haubles",
+    },
+  },
+
+  {
     name: "Imani Joy",
     position: "Product Designer",
     socials: {
       mastodon: "https://mastodon.social/@imanijoy",
+    },
+  },
+
+  {
+    name: "Philip Schröpel",
+    position: "Chief of Staff",
+    socials: {
+      mastodon: "https://mastodon.social/@philipkristians",
+    },
+  },
+
+  {
+    name: "Renaud Chaput",
+    position: "Technical Director",
+    socials: {
+      mastodon: "https://oisaur.com/@renchap",
+    },
+  },
+
+  {
+    name: "Scott Jenson",
+    position: "Product Strategy Adviser",
+    socials: {
+      mastodon: "https://social.coop/@scottjenson",
     },
   },
 
@@ -124,30 +151,6 @@ const team: TeamMember[] = [
     position: "Operations",
     socials: {
       mastodon: "https://mastodon.social/@zoraxzora",
-    },
-  },
-
-  {
-    name: "Gregory Klyushnikov",
-    position: "Engineering (Android)",
-    socials: {
-      mastodon: "https://mastodon.social/@grishka",
-    },
-  },
-
-  {
-    name: "Scott Jenson",
-    position: "Product Strategy Adviser",
-    socials: {
-      mastodon: "https://social.coop/@scottjenson",
-    },
-  },
-
-  {
-    name: "Dopatwo",
-    position: "Illustrations",
-    socials: {
-      mastodon: "https://mastodon.social/@dopatwo",
     },
   },
 ]
