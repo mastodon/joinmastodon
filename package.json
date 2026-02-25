@@ -26,7 +26,7 @@
     "blurhash": "^2.0.5",
     "classnames": "^2.5.1",
     "cookie": "^1.0.2",
-    "dotenv": "^16.5.0",
+    "dotenv": "^17.0.0",
     "gray-matter": "^4.0.3",
     "javascript-stringify": "^2.1.0",
     "keen-slider": "^6.8.6",
