@@ -21,9 +21,9 @@ const testimonials: Testimonial[] = [
   {
     text: "Mastodon does an amazing job at giving communities the autonomy necessary to thrive by giving them the keys to federate and moderate their own servers. But don't let that alone overshadow the fact that it simply does features that the major social networks try to do (e.g. image captioning, content warnings) astoundingly better.",
     name: "Jenn Schiffer",
-    username: "jenn@pixel.kitchen",
+    username: "jenn@gardenstate.social",
     avatar: "/testimonials/avatar_jennschiffer.jpeg",
-    profile_url: "https://pixel.kitchen/@jenn",
+    profile_url: "https://gardenstate.social/@jenn",
   },
   {
     text: "Mastodon has changed my opinion of social media, it's a refreshing take on microblogging with a focus on privacy and safety.",
