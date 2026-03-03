@@ -178,6 +178,11 @@ const sponsors = {
       logo: require("../public/sponsors/les-tilleuls-coop.png"),
       name: "Les-Tilleuls.coop",
     }, // Custom
+    {
+      url: "https://lutra-it.eu/",
+      logo: require("../public/sponsors/lutra-it.png"),
+      name: "Lutra IT",
+    }, // Custom
   ] as Sponsor[],
   silver: [
     {
