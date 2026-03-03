@@ -80,6 +80,18 @@ export const Footer = () => (
                     defaultMessage="Roadmap"
                   />
                 </Link>,
+                <a
+                  className="inline-block py-2 hover:underline"
+                  key="mastodon/merch"
+                  target="_blank"
+                  rel="noopener"
+                  href="https://shop.joinmastodon.org"
+                >
+                  <FormattedMessage
+                    id="nav.merch.title"
+                    defaultMessage="Merch"
+                  />
+                </a>,
               ],
             },
             {
@@ -94,7 +106,7 @@ export const Footer = () => (
                   className="inline-block py-2 hover:underline"
                   key="mastodon/mastodon"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   href="https://github.com/mastodon/mastodon"
                 >
                   <FormattedMessage
@@ -105,7 +117,7 @@ export const Footer = () => (
                 <a
                   className="inline-block py-2 hover:underline"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   key="https://blog.joinmastodon.org"
                   href="https://blog.joinmastodon.org/"
                 >
@@ -115,7 +127,7 @@ export const Footer = () => (
                   className="inline-block py-2 hover:underline"
                   key="joinmastodon.org"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   href="https://docs.joinmastodon.org"
                 >
                   <FormattedMessage
@@ -127,12 +139,24 @@ export const Footer = () => (
                   className="inline-block py-2 hover:underline"
                   key="mastodon/discussions"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   href="https://github.com/mastodon/mastodon/discussions"
                 >
                   <FormattedMessage
                     id="nav.support.title"
                     defaultMessage="Support"
+                  />
+                </a>,
+                <a
+                  className="inline-block py-2 hover:underline"
+                  key="mastodon/share"
+                  target="_blank"
+                  rel="noopener"
+                  href="https://share.joinmastodon.org"
+                >
+                  <FormattedMessage
+                    id="nav.share.title"
+                    defaultMessage="Share button"
                   />
                 </a>,
               ],
@@ -175,18 +199,16 @@ export const Footer = () => (
                     defaultMessage="Branding"
                   />
                 </Link>,
-                // temporarily removed from footer
-                // to retain balance of columns
-                // <Link
-                //   key="/careers"
-                //   href="/careers"
-                //   className="inline-block py-2 hover:underline"
-                // >
-                //   <FormattedMessage
-                //     id="nav.careers.title"
-                //     defaultMessage="Careers"
-                //   />
-                // </Link>,
+                <Link
+                  key="/careers"
+                  href="/careers"
+                  className="inline-block py-2 hover:underline"
+                >
+                  <FormattedMessage
+                    id="nav.careers.title"
+                    defaultMessage="Careers"
+                  />
+                </Link>,
                 <Link
                   key="/impressum"
                   href="/about#impressum"
