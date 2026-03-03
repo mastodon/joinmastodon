@@ -2,6 +2,7 @@ import Link from "next/link"
 import { FormattedMessage, useIntl } from "react-intl"
 
 import mastodonLogo from "../public/logos/wordmark-white-text.svg"
+import merch from "../public/merch.jpg"
 import Image from "next/legacy/image"
 import NewImage from "next/image"
 import { useState, useEffect, useRef, useId } from "react"
@@ -143,18 +144,32 @@ const Header = ({ transparent = true }: HeaderProps) => {
           ),
         },
         {
-          value: "https://shop.joinmastodon.org/",
+          value: "https://share.joinmastodon.org/",
           label: (
-            <FormattedMessage id="nav.merch.title" defaultMessage="Merch" />
+            <FormattedMessage id="nav.share.title" defaultMessage="Share button" />
           ),
           description: (
             <FormattedMessage
-              id="nav.merch.description"
-              defaultMessage="Support our mission in a fun way."
+              id="nav.share.description"
+              defaultMessage="Add a social sharing button to your website."
             />
           ),
         },
       ],
+      banner: <div className="px-3">
+        <a href="https://shop.joinmastodon.org/" className="flex relative overflow-hidden md:rounded-md group ring-blurple-500 md:hover:ring-2">
+          <NewImage src={merch} fill={true} className='hidden md:block absolute z-0 object-cover' alt='' />
+
+          <div className="relative flex flex-col min-w-0 md:rounded-md md:m-2 md:mt-24 text-white py-2 px-2 md:py-3 md:px-4 md:bg-nightshade-900/[0.7] md:backdrop-blur">
+            <span className="min-w-0 block font-extrabold"><FormattedMessage id="nav.merch.title" defaultMessage="Merch" /></span>
+
+            <span className="min-w-0 mt-1 block font-extranormal text-gray-1 md:text-white"><FormattedMessage
+              id="nav.merch.description"
+              defaultMessage="Support our mission in a fun way."
+            /></span>
+          </div>
+        </a>
+      </div>,
       footer: {
         value: "https://github.com/mastodon/mastodon",
         label: (
@@ -272,7 +287,7 @@ const Header = ({ transparent = true }: HeaderProps) => {
                         className={classNames(
                           item.compact
                             ? "py-2 md:px-2"
-                            : "w-screen max-w-md py-2 md:grid md:max-w-lg md:grid-cols-2 md:gap-6 md:px-3 md:py-4"
+                            : "w-screen max-w-md py-2 md:grid md:max-w-lg md:grid-cols-2 md:gap-1 md:px-3 md:py-4"
                         )}
                       >
                         {item.childItems.map((child, childIndex) => (
@@ -307,6 +322,8 @@ const Header = ({ transparent = true }: HeaderProps) => {
                           </li>
                         ))}
                       </ul>
+
+                      {item.banner}
 
                       {item.footer && (
                         <div className="md:bg-gray-4 md:p-4">
