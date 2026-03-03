@@ -82,7 +82,7 @@ const Covenant = () => (
             },
             {
               heading: "Contact information",
-              text: `Have a valid and reachable e-mail address for inquiries ("business e-mail"). We may contact you through that address. And in cases of legal matters, it is generally preferable to receive e-mails through your own address rather than through your web host's abuse contact. You shoud also have a contact account ("Contact username") though it does not have to be your personal account.`,
+              text: `Have a valid and reachable e-mail address for inquiries ("business e-mail"). We may contact you through that address. And in cases of legal matters, it is generally preferable to receive e-mails through your own address rather than through your web host's abuse contact. You should also have a contact account ("Contact username") though it does not have to be your personal account.`,
             },
           ]}
         />
