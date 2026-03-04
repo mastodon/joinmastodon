@@ -19,6 +19,7 @@ export const board: BoardMember[] = [
   {
     name: "Hannah Aubry",
     position: BOARD_POSITION_DIRECTOR,
+    otherTitle: "Community Director",
     socials: {
       mastodon: "https://hachyderm.io/@haubles",
     },
@@ -39,7 +40,7 @@ export const board: BoardMember[] = [
     name: "Felix Hlatky",
     position: BOARD_POSITION_DIRECTOR,
     title: "Treasurer",
-    otherTitle: "CFO",
+    otherTitle: "Executive Director",
     socials: {
       mastodon: "https://mastodon.social/@mellifluousbox",
     },
@@ -67,6 +68,7 @@ export const board: BoardMember[] = [
   {
     name: "Eugen Rochko",
     position: BOARD_POSITION_OBSERVER,
+    otherTitle: "Founder & Strategic Advisor",
     socials: {
       mastodon: "https://mastodon.social/@Gargron",
     },
@@ -74,6 +76,7 @@ export const board: BoardMember[] = [
   {
     name: "Renaud Chaput",
     position: BOARD_POSITION_OBSERVER,
+    otherTitle: "Technical Director",
     socials: {
       mastodon: "https://oisaur.com/@renchap",
     },
