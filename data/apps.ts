@@ -55,7 +55,7 @@ import bubble from "../public/apps/bubble.png"
 import odous from "../public/apps/odous.png"
 import dowstodon from "../public/apps/dowstodon.png"
 import fread from "../public/apps/fread.png"
-import plfe from "../public/apps/pl-fe.png"
+import nicolium from "../public/apps/nicolium.png"
 import fursona from "../public/apps/fursona.png"
 import mastui from "../public/apps/mastui.png"
 
@@ -450,11 +450,11 @@ export const apps: appsList = {
       source_url: "https://github.com/NicolasConstant/sengi",
     },
     {
-      name: "pl-fe",
-      icon: plfe,
-      url: "https://pl.mkljczk.pl/",
+      name: "Nicolium",
+      icon: nicolium,
+      url: "https://web.nicolium.app/",
       open: true,
-      source_url: "https://github.com/mkljczk/pl-fe",
+      source_url: "https://codeberg.org/mkljczk/nicolium",
     },
   ],
   desktop: [
