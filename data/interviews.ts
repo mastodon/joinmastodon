@@ -1,5 +1,37 @@
 const interviews = [
   {
+    url: "https://www.europeanspodcast.com/all-episodes/europes-anti-elon",
+    title:
+      "Europe's anti-Elon",
+    show: "The Europeans",
+    date: "2026-03-12",
+    icon: require("../public/press/europeans.png"),
+  },
+  {
+    url: "https://tubefree.org/w/fMAwa3pjuSmQTnU49ZGFuT",
+    title:
+      "Scott Jenson on Mastodon, Big Tech & UX",
+    show: "Fireside Fedi",
+    date: "2026-02-12",
+    icon: require("../public/press/fireside.png"),
+  },
+  {
+    url: "https://tubefree.org/w/x715zm1Nkvqd8xYWtgVGB9",
+    title:
+      "The People‑First Platform: Hannah Aubry on Mastodon and the Fediverse",
+    show: "Fireside Fedi",
+    date: "2026-02-11",
+    icon: require("../public/press/fireside.png"),
+  },
+  {
+    url: "https://coywolf.com/podcast/episode-15-interview-with-mastodon-creator-eugen-rochko/",
+    title:
+      "Interview with Mastodon creator Eugen Rochko",
+    show: "Coywolf",
+    date: "2025-11-30",
+    icon: require("../public/press/coywolf.png"),
+  },
+  {
     url: "https://techcrunch.com/podcast/social-media-should-be-built-on-protocols-not-platforms-says-mastodon-ceo-eugen-rochko/",
     title:
       "Social media should be built on protocols, not platforms says Mastodon CEO Eugen Rochko",
