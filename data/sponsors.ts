@@ -27,6 +27,11 @@ const sponsors = {
       name: "Postmark",
     }, // Custom/other
     {
+      url: "https://formbricks.com/",
+      logo: require("../public/sponsors/formbricks.svg"),
+      name: "Formbricks",
+    }, // Custom/other
+    {
       url: "https://mask.io/",
       logo: require("../public/sponsors/mask-network.png"),
       name: "Mask Network",
