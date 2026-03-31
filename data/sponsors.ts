@@ -111,6 +111,11 @@ const sponsors = {
       logo: require("../public/sponsors/Free-Crash-Game.png"),
       name: "Free Crash Game",
     }, // Custom
+    {
+      url: "https://spinthewheel.io",
+      logo: require("../public/sponsors/Spin the Wheel Cropped Thick.png"),
+      name: "Spin the Wheel",
+    }, // Custom
   ] as Sponsor[],
   gold: [
     {
