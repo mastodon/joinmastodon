@@ -23,7 +23,7 @@
   "browse_apps.title2": "Sfoglia app di terze parti",
   "browse_apps.web": "Web",
   "browse_apps.you_can_use_it_from_desktop": "Puoi sempre usare Mastodon dal browser sul tuo desktop o telefono! Puoi aggiungerlo alla tua schermata iniziale e alcuni browser supportano anche le notifiche push, proprio come un'app nativa!",
-  "covenant.learn_more": "Tutti i server elencati qui di seguito hanno aderito all' <link>Accordo sui server Mastodon </link>.",
+  "covenant.learn_more": "Tutti i server elencati qui hanno aderito all'<link>Accordo sui server di Mastodon</link>.",
   "donate_widget.amount_button": "Seleziona {amount}",
   "donate_widget.amount_error": "Per favore, inserisci un importo superiore a 1",
   "donate_widget.amount_select": "Importo da donare",
