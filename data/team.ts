@@ -145,14 +145,6 @@ const team: TeamMember[] = [
       mastodon: "https://mastodon.social/@timetinytim",
     },
   },
-
-  {
-    name: "Zora Steiner",
-    position: "Operations",
-    socials: {
-      mastodon: "https://mastodon.social/@zoraxzora",
-    },
-  },
 ]
 
 export default team
