@@ -269,7 +269,7 @@ const About = () => (
             </div>
 
             <div className="col-span-12 md:col-span-6">
-              <h2 className="h3 mb-4">Podcast interviews</h2>
+              <h2 className="h3 mb-4" id="podcast-interviews">Podcast interviews</h2>
 
               <div className="space-y-4">
                 {interviews
@@ -310,7 +310,7 @@ const About = () => (
             </div>
 
             <div className="col-span-12">
-              <h2 className="h3 mb-4">In the press</h2>
+              <h2 className="h3 mb-4" id="in-the-press">In the press</h2>
               <p className="sh1 mb-8 text-gray-2">
                 What others write about us.
               </p>
