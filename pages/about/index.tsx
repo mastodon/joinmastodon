@@ -456,6 +456,36 @@ const About = () => (
                   </a>
                 </dd>
               </div>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Single point of contact for users and recipients of the service:</dt>
+                <dd className="b3">
+                  For Mastodon GmbH products (mastodon.social and mastodon.online) per Article 11 of the EU Digital Services Act
+                </dd>
+                <dd>
+                  <a
+                    href="https://help.joinmastodon.org/article/17-point-of-contact-for-users"
+                    className="text-blurple-500 hover:underline"
+                  >
+                    More information
+                  </a>
+                </dd>
+              </div>
+
+              <div className="b1 mb-4">
+                <dt className="font-bold">Single point of contact for EU Member States&rsquo; authorities, the EU Commission and the EU Board for digital services:</dt>
+                <dd className="b3">
+                  For Mastodon GmbH products (mastodon.social and mastodon.online) per Article 11 of the EU Digital Services Act
+                </dd>
+                <dd>
+                  <a
+                    href="https://help.joinmastodon.org/article/16-point-of-contact-for-authorities"
+                    className="text-blurple-500 hover:underline"
+                  >
+                    More information
+                  </a>
+                </dd>
+              </div>
             </div>
 
             <div className="col-span-12 md:col-span-6" id="impressum">
