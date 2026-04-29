@@ -28,7 +28,7 @@ export const Footer = () => (
           <p className="mt-2 max-w-[28ch]">
             <FormattedMessage
               id="footer.quip"
-              defaultMessage="Free, open-source decentralized social media platform."
+              defaultMessage="Free, open-source decentralised social media platform."
             />
           </p>
         </div>
