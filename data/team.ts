@@ -92,7 +92,7 @@ const team: TeamMember[] = [
 
   {
     name: "Imani Joy",
-    position: "Product Designer",
+    position: "Head of Product",
     socials: {
       mastodon: "https://mastodon.social/@imanijoy",
     },
@@ -103,6 +103,14 @@ const team: TeamMember[] = [
     position: "Engineering (web)",
     socials: {
       mastodon: "https://mastodon.social/@pia_ranha",
+    },
+  },
+
+  {
+    name: "Poonam Swami",
+    position: "Finance Specialist",
+    socials: {
+      mastodon: "https://mastodon.social/@poonamswami",
     },
   },
 
