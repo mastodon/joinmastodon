@@ -1,6 +1,6 @@
 const interviews = [
   {
-    url: "https://dot-social.simplecast.com/episodes/felix-hlatky/transcript",
+    url: "https://dot-social.simplecast.com/episodes/felix-hlatky/",
     title:
       "Mastodon’s First and Next 10 Years, with Executive Director Felix Hlatky",
     show: "dotSocial",
