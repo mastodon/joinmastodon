@@ -99,6 +99,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Juan Hernández",
+    position: "Engineering (web)",
+    socials: {
+      mastodon: "https://hachyderm.io/@jhbabon",
+    },
+  },
+
+  {
     name: "Pia Bregulla",
     position: "Engineering (web)",
     socials: {
