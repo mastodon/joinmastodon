@@ -9,40 +9,47 @@ const Trademark = () => (
   <Layout>
     <div dir="ltr" className="[unicode-bidi:plaintext]">
       <Hero homepage>
-        <h1 className="h2 mb-8 pt-16 text-center">Trademark Policy</h1>
-        <p className="sh1 text-center">Last updated December 21, 2022</p>
+        <h1 className="h2 mb-8 pt-16 text-center">Trade Mark Policy</h1>
+        <p className="sh1 text-center">Last updated August 12, 2026</p>
       </Hero>
 
       <BasicPage>
         <p className="b1 mb-4">
-          The Mastodon name and logos are trademarks of Mastodon gGmbH. As such,
+          The Mastodon name and logos are trade marks of Mastodon gGmbH. As such,
           their use is restricted and protected by intellectual property law.
           While the software we create is available under a free and open source
           software license, the copyright license does not include an implied
-          right or license to use our trademarks.
+          right or license to use our trade marks.
         </p>
         <p className="b1 mb-4">
-          The role of trademarks is to prevent the exploitation of the good name
+          Note that this policy grants additional rights (in certain 
+          circumstances), and does not remove any rights that you have in law.
+          This policy applies only to uses of the Mastodon trade marks which 
+          are restricted or reserved to Mastodon GmbH (the trade marks owner),
+          by law.
+        </p>
+        <p className="b1 mb-4">
+          The role of trade marks is to prevent the exploitation of the good name
           and reputation of Mastodon by other people and organizations, and to
           provide assurance about the quality of the products and services
           associated with it.
         </p>
         <p className="b1 mb-4">
-          To use our trademarks beyond what is considered &quot;fair&quot; or
+          To use our trade marks beyond what is considered &quot;fair&quot; or
           &quot;nominative&quot; use, you must follow these guidelines. By
-          making use of our trademarks, you agree to abide by the following
+          making use of our trade marks, you agree to abide by the following
           terms and conditions. You further agree that any dispute arising in
-          connection with your use of our trademarks or under these terms and
+          connection with your use of our trade marks or under these terms and
           conditions shall be under the exclusive jurisdiction of the state and
           federal courts of New York in the United States of America and that
           the state and federal courts of New York shall have personal
           jurisdiction over you for the purposes of adjudicating any dispute
-          concerning the use of our trademarks or these terms and conditions.
+          concerning the use of our trade marks or these terms and conditions.
         </p>
         <p className="b1 mb-4">
-          You agree to defend and indemnify Mastodon gGmbH from and against any
+          You agree to defend and indemnify Mastodon GmbH from and against any
           and all claims and losses brought by a third party in connection with
-          your use of the Mastodon trademarks.
+          your use of the Mastodon trade marks.
         </p>
         <p className="b1 mb-4">
           To request the use of the Mastodon name and logos in a way not covered
@@ -73,12 +80,19 @@ const Trademark = () => (
           </li>
           <li>
             Do not use or register, in whole or in part, the Mastodon marks as
-            part of your own or any other trademark, service mark, domain name,
+            part of your own or any other trade mark, service mark,
             company name, trade name, product name, or service name.
+          </li>
+            Do not use the Mastodon marks in a server's, service's, or product's
+            name or branding without our permission.
+          <li>
+          <li>
+            
+          </li>
           </li>
           <li>
             Do not use the Mastodon marks in a manner that disparages or defames
-            the marks, Mastodon gGmbH, or Mastodon’s products.
+            the marks, Mastodon GmbH, or Mastodon’s products.
           </li>
           <li>
             Do not use the Mastodon marks in connection with any illegal
@@ -98,7 +112,7 @@ const Trademark = () => (
           <li>
             Any all use of the Mastodon marks, and any goodwill accrued as a
             result of that use, belongs entirely to, and shall inure for the
-            benefit of, Mastodon gGmbH.
+            benefit of, Mastodon GmbH.
           </li>
         </ul>
 
@@ -113,13 +127,49 @@ const Trademark = () => (
 
         <ul className="b1 list-disc space-y-4 pl-5">
           <li>
-            You may not use the Mastodon word mark, or any similar mark, in your
-            domain name, unless you have written permission from Mastodon gGmbH.
+            You may not use the Mastodon word mark, or any similar mark, in the
+            top or second-level domain name. The top and second-level domain
+            names form the end of the full domain name, e.g. "example.com". Use
+            of the Mastodon word mark, or any similar mark, as a third (or 
+            deeper) level in the domain name, or as an identifier elsewhere in 
+            the URL for the server is permitted, as long as the use is not part
+            of the top or second-level domain name. 
           </li>
           <li>
-            As long as you abide by the terms and conditions of this agreement,
-            you may use the Mastodon marks included in the Mastodon server
-            software for the purposes of running the server.
+            If your domain name uses the Mastodon word mark, or any similar 
+            mark, in a permissible way, as described by this policy, you are 
+            required to include a disclaimer (in a footer or otherwise 
+            user-visible location) which states that "This [server/site] is 
+            not affiliated with or endorsed by Mastodon GmbH or Mastodon Inc."
+          </li>
+          <li>
+            A special exception to the rule regarding the use of the Mastodon 
+            word mark, or any similar mark, in the domain name applies to 
+            servers which existed and were using the Mastodon word mark, or 
+            a similar mark, before May 13, 2026. Those servers are permitted 
+            to continue using their existing domain name, as long as they also 
+            properly include the disclaimer specified in the previous point of
+            this policy.
+          </li>
+          <li>
+            Any other use of the Mastodon word mark, or any similar mark, in 
+            your domain name that is not covered by this policy is not 
+            permitted unless you have express written permission from 
+            Mastodon GmbH. If you are not sure if your usage is appropriate, 
+            please reach out to us directly at <a href="mailto:legal@joinmastodon.org">legal@joinmastodon.org</a>.
+          </li>
+          <li>
+            Apart from the previously specified policy relating to domain 
+            names and URLs, you may not use the Mastodon marks, or any 
+            similar marks, in a server, service, or product name or 
+            branding without our express written permission. To request 
+            permission from Mastodon GmbH, email us at 
+            <a href="mailto:legal@joinmastodon.org>legal@joinmastodon.org</a>.
+            We will consider requests on a case-by-case basis.
+          </li>
+          <li>
+              Mastodon reserves the right to revoke permission to use the 
+              Mastodon marks at any time and for any reason.
           </li>
         </ul>
 
@@ -133,7 +183,7 @@ const Trademark = () => (
 
         <ul className="b1 list-disc space-y-4 pl-5">
           <li>
-            You must choose your own branding, logos, and trademarks that denote
+            You must choose your own branding, logos, and trade marks that denote
             your unique identity so as to clearly signal to users that there is
             no affiliation with or endorsement by Mastodon gGmbH.
           </li>
