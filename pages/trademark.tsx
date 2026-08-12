@@ -83,13 +83,6 @@ const Trademark = () => (
             part of your own or any other trade mark, service mark,
             company name, trade name, product name, or service name.
           </li>
-            Do not use the Mastodon marks in a server's, service's, or product's
-            name or branding without our permission.
-          <li>
-          <li>
-            
-          </li>
-          </li>
           <li>
             Do not use the Mastodon marks in a manner that disparages or defames
             the marks, Mastodon GmbH, or Mastodon’s products.
