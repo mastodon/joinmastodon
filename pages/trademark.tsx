@@ -22,16 +22,16 @@ const Trademark = () => (
           right or license to use our trade marks.
         </p>
         <p className="b1 mb-4">
-          Note that this policy grants additional rights (in certain 
+          Note that this policy grants additional rights (in certain
           circumstances), and does not remove any rights that you have in law.
-          This policy applies only to uses of the Mastodon trade marks which 
-          are restricted or reserved to Mastodon GmbH (the trade marks owner),
-          by law.
+          This policy applies only to uses of the Mastodon trade marks which are
+          restricted or reserved to Mastodon GmbH (the trade marks owner), by
+          law.
         </p>
         <p className="b1 mb-4">
-          The role of trade marks is to prevent the exploitation of the good name
-          and reputation of Mastodon by other people and organizations, and to
-          provide assurance about the quality of the products and services
+          The role of trade marks is to prevent the exploitation of the good
+          name and reputation of Mastodon by other people and organizations, and
+          to provide assurance about the quality of the products and services
           associated with it.
         </p>
         <p className="b1 mb-4">
@@ -80,8 +80,8 @@ const Trademark = () => (
           </li>
           <li>
             Do not use or register, in whole or in part, the Mastodon marks as
-            part of your own or any other trade mark, service mark,
-            company name, trade name, product name, or service name.
+            part of your own or any other trade mark, service mark, company
+            name, trade name, product name, or service name.
           </li>
           <li>
             Do not use the Mastodon marks in a manner that disparages or defames
@@ -122,47 +122,49 @@ const Trademark = () => (
           <li>
             You may not use the Mastodon word mark, or any similar mark, in the
             top or second-level domain name. The top and second-level domain
-            names form the end of the full domain name, e.g. "example.com". Use
-            of the Mastodon word mark, or any similar mark, as a third (or 
-            deeper) level in the domain name, or as an identifier elsewhere in 
-            the URL for the server is permitted, as long as the use is not part
-            of the top or second-level domain name. 
+            names form the end of the full domain name, e.g.
+            &quot;example.com&quot;. Use of the Mastodon word mark, or any
+            similar mark, as a third (or deeper) level in the domain name, or as
+            an identifier elsewhere in the URL for the server is permitted, as
+            long as the use is not part of the top or second-level domain name.
           </li>
           <li>
-            If your domain name uses the Mastodon word mark, or any similar 
-            mark, in a permissible way, as described by this policy, you are 
-            required to include a disclaimer (in a footer or otherwise 
-            user-visible location) which states that "This [server/site] is 
-            not affiliated with or endorsed by Mastodon GmbH or Mastodon Inc."
+            If your domain name uses the Mastodon word mark, or any similar
+            mark, in a permissible way, as described by this policy, you are
+            required to include a disclaimer (in a footer or otherwise
+            user-visible location) which states that &quot;This [server/site] is
+            not affiliated with or endorsed by Mastodon GmbH or Mastodon
+            Inc.&quot;
           </li>
           <li>
-            A special exception to the rule regarding the use of the Mastodon 
-            word mark, or any similar mark, in the domain name applies to 
-            servers which existed and were using the Mastodon word mark, or 
-            a similar mark, before May 13, 2026. Those servers are permitted 
-            to continue using their existing domain name, as long as they also 
+            A special exception to the rule regarding the use of the Mastodon
+            word mark, or any similar mark, in the domain name applies to
+            servers which existed and were using the Mastodon word mark, or a
+            similar mark, before May 13, 2026. Those servers are permitted to
+            continue using their existing domain name, as long as they also
             properly include the disclaimer specified in the previous point of
             this policy.
           </li>
           <li>
-            Any other use of the Mastodon word mark, or any similar mark, in 
-            your domain name that is not covered by this policy is not 
-            permitted unless you have express written permission from 
-            Mastodon GmbH. If you are not sure if your usage is appropriate, 
-            please reach out to us directly at <a href="mailto:legal@joinmastodon.org">legal@joinmastodon.org</a>.
+            Any other use of the Mastodon word mark, or any similar mark, in
+            your domain name that is not covered by this policy is not permitted
+            unless you have express written permission from Mastodon GmbH. If
+            you are not sure if your usage is appropriate, please reach out to
+            us directly at{" "}
+            <a href="mailto:legal@joinmastodon.org">legal@joinmastodon.org</a>.
           </li>
           <li>
-            Apart from the previously specified policy relating to domain 
-            names and URLs, you may not use the Mastodon marks, or any 
-            similar marks, in a server, service, or product name or 
-            branding without our express written permission. To request 
-            permission from Mastodon GmbH, email us at 
-            <a href="mailto:legal@joinmastodon.org>legal@joinmastodon.org</a>.
+            Apart from the previously specified policy relating to domain names
+            and URLs, you may not use the Mastodon marks, or any similar marks,
+            in a server, service, or product name or branding without our
+            express written permission. To request permission from Mastodon
+            GmbH, email us at
+            <a href="mailto:legal@joinmastodon.org">legal@joinmastodon.org</a>.
             We will consider requests on a case-by-case basis.
           </li>
           <li>
-              Mastodon reserves the right to revoke permission to use the 
-              Mastodon marks at any time and for any reason.
+            Mastodon reserves the right to revoke permission to use the Mastodon
+            marks at any time and for any reason.
           </li>
         </ul>
 
@@ -176,9 +178,9 @@ const Trademark = () => (
 
         <ul className="b1 list-disc space-y-4 pl-5">
           <li>
-            You must choose your own branding, logos, and trade marks that denote
-            your unique identity so as to clearly signal to users that there is
-            no affiliation with or endorsement by Mastodon GmbH.
+            You must choose your own branding, logos, and trade marks that
+            denote your unique identity so as to clearly signal to users that
+            there is no affiliation with or endorsement by Mastodon GmbH.
           </li>
           <li>
             You may use word marks, but not our logos, in truthful statements
