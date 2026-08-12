@@ -15,7 +15,7 @@ const Trademark = () => (
 
       <BasicPage>
         <p className="b1 mb-4">
-          The Mastodon name and logos are trade marks of Mastodon gGmbH. As such,
+          The Mastodon name and logos are trade marks of Mastodon GmbH. As such,
           their use is restricted and protected by intellectual property law.
           While the software we create is available under a free and open source
           software license, the copyright license does not include an implied
@@ -178,7 +178,7 @@ const Trademark = () => (
           <li>
             You must choose your own branding, logos, and trade marks that denote
             your unique identity so as to clearly signal to users that there is
-            no affiliation with or endorsement by Mastodon gGmbH.
+            no affiliation with or endorsement by Mastodon GmbH.
           </li>
           <li>
             You may use word marks, but not our logos, in truthful statements
