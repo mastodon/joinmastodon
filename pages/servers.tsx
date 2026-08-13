@@ -48,6 +48,10 @@ interface FilterState {
   registrations: string
 }
 
+function capitalize(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
 const Servers = () => {
   const intl = useIntl()
   const { locale } = useRouter()
@@ -58,6 +62,16 @@ const Servers = () => {
     ownership: "",
     registrations: "",
   })
+
+  const intlLanguageTranslator = useMemo(
+    () => new Intl.DisplayNames(locale, { type: "language", style: "short" }),
+    [locale]
+  )
+
+  const intlCollator = useMemo(
+    () => new Intl.Collator(locale, { sensitivity: "base" }),
+    [locale]
+  )
 
   const params = new URLSearchParams(Object.entries(filters))
 
@@ -154,11 +168,15 @@ const Servers = () => {
 
     select: (data) => {
       const updated = data
-        .filter((language) => language.language && language.locale)
+        .filter((language) => !!language.locale)
         .map((language) => ({
-          label: language.language,
+          label:
+            capitalize(intlLanguageTranslator.of(language.locale)) ||
+            language.language,
           value: language.locale,
         }))
+        .filter((d) => !!d.label)
+        .toSorted((a, b) => intlCollator.compare(a.label, b.label))
       return [defaultLanguageOption, ...updated]
     },
   })
