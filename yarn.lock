@@ -5963,7 +5963,7 @@ __metadata:
     tsx: "npm:^4.23.12"
     typescript: "npm:^5.9.3"
     usehooks-ts: "npm:^3.1.1"
-    zod: "npm:^3.25.76"
+    zod: "npm:^4.0.0"
   languageName: unknown
   linkType: soft
 
@@ -9195,10 +9195,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.76":
-  version: 3.25.76
-  resolution: "zod@npm:3.25.76"
-  checksum: 10c0/5718ec35e3c40b600316c5b4c5e4976f7fee68151bc8f8d90ec18a469be9571f072e1bbaace10f1e85cf8892ea12d90821b200e980ab46916a6166a4260a983c
+"zod@npm:^4.0.0":
+  version: 4.4.3
+  resolution: "zod@npm:4.4.3"
+  checksum: 10c0/7ea31b558e88f9faf44f31dd185e2e1cbf51fed3081787fb96cc2534749b50c0acfc6da7f0922a7353ed092dd358c7d50c28ea96c94d04af64191bd33152eca3
   languageName: node
   linkType: hard
 
