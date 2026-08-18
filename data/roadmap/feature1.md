@@ -1,6 +1,6 @@
 ---
-title: Quote Posts
+title: Profiles redesign
 status: released
 ---
 
-Version 4.5: Users can now quote others posts. Users can opt out entirely from all quoting or remove themselves from a quoted post if they wish. [Learn more.](https://blog.joinmastodon.org/2025/09/introducing-quote-posts/)
+Version 4.6: Easier profile editing with greater control, including on mobile. [Learn More.](https://blog.joinmastodon.org/2026/03/a-redesign-for-profiles/)

@@ -1,6 +1,6 @@
 ---
-title: Collections
-status: next
+title: Email newsletters and institution landing page
+status: released
 ---
 
-Version 4.6: Users and admins can create a collection of accounts they recommend. This allows new and existing users to follow a range of curated users quickly and easily. [Learn more.](https://blog.joinmastodon.org/2025/10/our-ideas-about-packs/)
+Version 4.6: Allow institutions more control over the landing page, and allow visitors to sign up for their updates with an email account.

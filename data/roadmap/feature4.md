@@ -1,6 +1,6 @@
 ---
-title: Institution support
+title: Navigation rework
 status: next
 ---
 
-Version 4.6: Allow institutions more control over the landing page, and allow visitors to sign up for their updates with an email account.
+Version 5.0: A new visual look for Mastodon, with a refreshed and calmer layout. [Learn more.](https://blog/joinmastodon.org/2026/08/5.0-laying-the-foundation/)

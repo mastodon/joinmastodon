@@ -1,6 +1,6 @@
 ---
-title: Moderation tools
+title: Better onboarding
 status: exploring
 ---
 
-Looking at ways to make moderation easier, e.g. shared block lists.
+Improve the onboarding experience so new users easily understand what they can do on Mastodon.
