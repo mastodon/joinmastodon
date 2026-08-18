@@ -169,14 +169,22 @@ const Servers = () => {
     select: (data) => {
       const updated = data
         .filter((language) => !!language.locale)
-        .map((language) => ({
-          label:
-            capitalize(intlLanguageTranslator.of(language.locale)) ||
-            language.language,
+        .map((language) => {
+          let label: string = language.language
+
+          try {
+            label = intlLanguageTranslator.of(language.locale)
+          } catch (e) {
+            console.error("Error translating language name", language.locale, e)
+          }
+
+          return ({
+          label,
           value: language.locale,
-        }))
+        })})
         .filter((d) => !!d.label)
         .toSorted((a, b) => intlCollator.compare(a.label, b.label))
+
       return [defaultLanguageOption, ...updated]
     },
   })
