@@ -1,5 +1,13 @@
 const interviews = [
   {
+    url: "https://dot-social.simplecast.com/episodes/felix-hlatky/",
+    title:
+      "Mastodon’s First and Next 10 Years, with Executive Director Felix Hlatky",
+    show: "dotSocial",
+    date: "2026-05-27",
+    icon: require("../public/press/dotsocial.jpg"),
+  },
+  {
     url: "https://www.europeanspodcast.com/all-episodes/europes-anti-elon",
     title:
       "Europe's anti-Elon",
