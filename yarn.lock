@@ -5957,7 +5957,7 @@ __metadata:
     react-markdown: "npm:^10.1.0"
     sass: "npm:^1.102.0"
     sharp: "npm:^0.35.3"
-    stripe: "npm:^18.5.0"
+    stripe: "npm:^22.0.0"
     tailwindcss: "npm:^3.4.19"
     tailwindcss-logical: "npm:^3.0.1"
     tsx: "npm:^4.23.12"
@@ -7384,16 +7384,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qs@npm:^6.11.0":
-  version: 6.15.3
-  resolution: "qs@npm:6.15.3"
-  dependencies:
-    es-define-property: "npm:^1.0.1"
-    side-channel: "npm:^1.1.1"
-  checksum: 10c0/8f3f6e45ece255347d57696628401cde29e9ec649fff698b53bd3150dea7cefdf33036e1bc1826b9f110bfa7cb0ec4ab9f5297eca628ce216c55af82c304e08e
-  languageName: node
-  linkType: hard
-
 "queue-microtask@npm:^1.2.2":
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
@@ -8129,7 +8119,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"side-channel@npm:^1.1.0, side-channel@npm:^1.1.1":
+"side-channel@npm:^1.1.0":
   version: 1.1.1
   resolution: "side-channel@npm:1.1.1"
   dependencies:
@@ -8375,17 +8365,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stripe@npm:^18.5.0":
-  version: 18.5.0
-  resolution: "stripe@npm:18.5.0"
-  dependencies:
-    qs: "npm:^6.11.0"
+"stripe@npm:^22.0.0":
+  version: 22.5.0
+  resolution: "stripe@npm:22.5.0"
   peerDependencies:
-    "@types/node": ">=12.x.x"
+    "@types/node": ">=18"
   peerDependenciesMeta:
     "@types/node":
       optional: true
-  checksum: 10c0/59dfab7310f10fe579766f6f2d3572818437e4adcc7291704ad4f362d74dc422128c0fdaae8ebfcdef6448c235da674cb4684d041a56199739afd81d2a33f999
+  checksum: 10c0/c70e25a409edea80a907c62fdcc9467d568a3dac2f91ec0b14c272b40f26b11f6794b04f915d25df25a9635815a717bdc2226797b212f1f33f53cff4317394b3
   languageName: node
   linkType: hard
 
