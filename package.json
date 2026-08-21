@@ -21,7 +21,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.10",
     "@stripe/react-stripe-js": "^3.10.0",
-    "@stripe/stripe-js": "^7.9.0",
+    "@stripe/stripe-js": "^9.0.0",
     "@tanstack/react-query": "^5.101.4",
     "blurhash": "^2.0.5",
     "classnames": "^2.5.1",
