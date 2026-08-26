@@ -60,6 +60,7 @@ import fursona from "../public/apps/fursona.png"
 import mastui from "../public/apps/mastui.png"
 import tootcli from "../public/apps/tootcli.png"
 import mastodonel from "../public/apps/mastodonel.png"
+import mastodino from "../public/apps/mastodino.png"
 
 import { z } from "zod"
 
@@ -362,6 +363,14 @@ export const apps: AppsList = {
       name: "Fursona (for Furry)",
       icon: fursona,
       url: "https://apps.apple.com/us/app/fursona-furry-social-app/id6754586637",
+      paid: false,
+      open: false,
+    },
+    {
+      released_on: "Aug 25, 2026",
+      name: "MastoDino",
+      icon: mastodino,
+      url: "https://apps.apple.com/app/mastodino/id6788018589",
       paid: false,
       open: false,
     },
