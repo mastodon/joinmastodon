@@ -83,14 +83,6 @@ const team: TeamMember[] = [
   },
 
   {
-    name: "Hannah Aubry",
-    position: "Community Director",
-    socials: {
-      mastodon: "https://hachyderm.io/@haubles",
-    },
-  },
-
-  {
     name: "Imani Joy",
     position: "Head of Product",
     socials: {
