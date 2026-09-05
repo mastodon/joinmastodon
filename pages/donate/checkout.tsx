@@ -89,7 +89,6 @@ export default function DonateCheckoutPage({
           backUrl={backUrl}
         />
       </CheckoutProvider>
-      <DonateFooter />
     </DonateWrapper>
   )
 }

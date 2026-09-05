@@ -2118,6 +2118,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kurkle/color@npm:^0.3.0":
+  version: 0.3.4
+  resolution: "@kurkle/color@npm:0.3.4"
+  checksum: 10c0/0e9fd55c614b005c5f0c4c755bca19ec0293bc7513b4ea3ec1725234f9c2fa81afbc78156baf555c8b9cb0d305619253c3f5bca016067daeebb3d00ebb4ea683
+  languageName: node
+  linkType: hard
+
 "@napi-rs/wasm-runtime@npm:^1.1.4":
   version: 1.2.3
   resolution: "@napi-rs/wasm-runtime@npm:1.2.3"
@@ -3589,6 +3596,15 @@ __metadata:
   version: 2.0.1
   resolution: "character-reference-invalid@npm:2.0.1"
   checksum: 10c0/2ae0dec770cd8659d7e8b0ce24392d83b4c2f0eb4a3395c955dce5528edd4cc030a794cfa06600fcdd700b3f2de2f9b8e40e309c0011c4180e3be64a0b42e6a1
+  languageName: node
+  linkType: hard
+
+"chart.js@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "chart.js@npm:4.5.1"
+  dependencies:
+    "@kurkle/color": "npm:^0.3.0"
+  checksum: 10c0/3f2a11dcaae9079e8e6b8ad077e2ae311f04996f9da14815730891e66215ee8b5f2c0eb70b5a156e5bde0f89a41bae13506dc6153e50fd22dcb282b21eec706f
   languageName: node
   linkType: hard
 
@@ -5644,6 +5660,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^8.67.0"
     autoprefixer: "npm:^10.5.4"
     blurhash: "npm:^2.0.5"
+    chart.js: "npm:^4.5.1"
     classnames: "npm:^2.5.1"
     cookie: "npm:^1.1.1"
     dotenv: "npm:^17.0.0"
@@ -5663,6 +5680,7 @@ __metadata:
     prettier-plugin-tailwindcss: "npm:^0.8.1"
     react: "npm:^19.0.0"
     react-blurhash: "npm:^0.3.0"
+    react-chartjs-2: "npm:^5.3.1"
     react-dom: "npm:^19.0.0"
     react-intl: "npm:^7.1.14"
     react-markdown: "npm:^10.1.0"
@@ -7105,6 +7123,16 @@ __metadata:
     blurhash: ^2.0.3
     react: ">=15"
   checksum: 10c0/9eb9a52ab599a0c73baa15085006bbe06a21b0c8525980f1f77b5cfbd5e0aa4f9594ee3d5f5c179273b6673127622cb65822d9bf11f6cbf3dd5240d66e6a66f7
+  languageName: node
+  linkType: hard
+
+"react-chartjs-2@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "react-chartjs-2@npm:5.3.1"
+  peerDependencies:
+    chart.js: ^4.1.1
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/40fac3fe23a163232d952bf5cd2a14d7baceadea326b57909d5e556ed2481b7cfb177582ac8f39b8dc51ac11f3d19a6127784746f35f5771181ab700110e7326
   languageName: node
   linkType: hard
 

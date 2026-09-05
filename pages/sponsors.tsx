@@ -1,8 +1,15 @@
+import { useState } from "react"
 import Head from "next/head"
 import Image from "next/legacy/image"
+import NewImage from "next/image"
 import classNames from "classnames"
 import Link from "next/link"
-import { FormattedMessage, useIntl } from "react-intl"
+import { FormattedMessage, useIntl, defineMessages } from "react-intl"
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale,
+  LinearScale,
+  BarElement,
+  Title, } from "chart.js"
+import { Doughnut, Bar } from 'react-chartjs-2';
 
 import Hero from "../components/Hero"
 import SponsorCard from "../components/SponsorCard"
@@ -13,210 +20,268 @@ import sponsorData from "../data/sponsors"
 import { DonatePopup } from "../donate/DonatePopup"
 import Layout from "../components/Layout"
 import LinkButton from "../components/LinkButton"
+import { DonateWidget } from "../components/donate/DonateWidget"
 
+import appsHeroDesktop from "../public/illustrations/apps_hero_desktop.png"
+import appsHeroMobile from "../public/illustrations/apps_hero_mobile.png"
 import MastodonInTheCloudsIllustration from "../public/illustrations/mastodon_in_the_clouds.png"
 import MastodonWithLaptopIllustration from "../public/illustrations/mastodon_with_laptop.png"
 import MasotodonFediverseIllustration from "../public/illustrations/mastodon_fediverse.png"
 import MastodonsCheeringIllustration from "../public/illustrations/mastodons_cheering.png"
+import dpga from "../public/logos/dpga.png"
+import w3c from "../public/logos/w3c-member.png"
 import previewImage from "../public/sponsors_preview.png"
+import deFlagIcon from "../public/german_flag_icon_round.svg"
+import usFlagIcon from "../public/united_states_flag_icon_round.svg"
+import gitHubLogo from "../public/logos/github.svg"
+import patreonLogo from "../public/logos/patreon.svg"
+import stripeLogo from "../public/logos/stripe.svg"
+import benevityLogo from "../public/logos/benevity.svg"
+import sponsorshipIcon from "../public/icons/corporate-sponsorship.svg"
+import ExternalLinkIcon from "../public/ui/external-link.svg?inline"
+import DropdownArrowIcon from "../public/icons/dropdown-arrow.svg?inline"
 import { DonateTabs } from "../components/DonateTabs"
 
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  ArcElement,
+  Tooltip,
+  Legend
+);
+
+const budgetAllocationData = {
+  labels: ['Technical hosting', 'Personnel', 'Other'],
+  datasets: [{
+    data: [84_000, 585_000, 106_000],
+    rotation: 34,
+    backgroundColor: [
+      '#2f0c7a',
+      '#858afa',
+      '#563acc'
+    ],
+  }],
+}
+
+const competitorComparisonData = {
+  labels: ['Mastodon', 'Bluesky', 'X', 'Threads'],
+  datasets: [{
+    label: 'Annual budget',
+    data: [2_000_000, 30_000_000, 1_450_000_000, 2_000_000_000],
+    backgroundColor: [
+      '#2f0c7a',
+      '#858afa',
+      '#563acc',
+    ],
+  }],
+}
+
+const cardMessages = defineMessages({
+  giveButterTitle: {
+    id: "sponsors.donate_card.givebutter.title",
+    defaultMessage: "From the United States",
+  },
+  giveButterCopy: {
+    id: "sponsors.donate_card.givebutter.copy",
+    defaultMessage:
+      "Make a one-time or recurring donation to Mastodon Inc, our US 501c3 non-profit. Tax deductible for eligible US tax residents.*",
+  },
+  giveButterButton: {
+    id: "sponsors.donate_card.givebutter.button",
+    defaultMessage: "Donate through GiveButter",
+  },
+  giveButterImageAlt: {
+    id: "sponsors.donate_card.givebutter.image_alt",
+    defaultMessage: "USA Flag",
+  },
+  weAidTitle: {
+    id: "sponsors.donate_card.weaid.title",
+    defaultMessage: "From Germany",
+  },
+  weAidCopy: {
+    id: "sponsors.donate_card.weaid.copy",
+    defaultMessage:
+      "Make a one-time donation through WE AID gGmbH, our German fiscal host. Tax deductible for eligible German tax residents.*",
+  },
+  weAidButton: {
+    id: "sponsors.donate_card.weaid.button",
+    defaultMessage: "Donate through WE AID",
+  },
+  weAidImageAlt: {
+    id: "sponsors.donate_card.weaid.image_alt",
+    defaultMessage: "German Flag",
+  },
+  patreonTitle: {
+    id: "sponsors.donate_card.patreon.title",
+    defaultMessage: "Patreon",
+  },
+  patreonCopy: {
+    id: "sponsors.donate_card.patreon.copy",
+    defaultMessage:
+      "Patreon donors gain access to Mastodon’s Discord for developers, server admins, and social web supporters.",
+  },
+  patreonButton: {
+    id: "sponsors.donate_card.patreon.button",
+    defaultMessage: "Donate through Patreon",
+  },
+  gitHubTitle: {
+    id: "sponsors.donate_card.github.title",
+    defaultMessage: "GitHub",
+  },
+  gitHubCopy: {
+    id: "sponsors.donate_card.github.copy",
+    defaultMessage:
+      "GitHub Sponsors receive a Mastodon badge to their Org or Personal profile. Plus we don’t pay fees!",
+  },
+  gitHubButton: {
+    id: "sponsors.donate_card.github.button",
+    defaultMessage: "Donate through GitHub",
+  },
+  stripeTitle: {
+    id: "sponsors.donate_card.stripe.title",
+    defaultMessage: "Stripe",
+  },
+  stripeCopy: {
+    id: "sponsors.donate_card.stripe.copy",
+    defaultMessage:
+      "Make a one-time or recurring direct donation to Mastodon GmbH, from anywhere in the world.",
+  },
+  stripeButton: {
+    id: "sponsors.donate_card.stripe.button",
+    defaultMessage: "Donate through Stripe",
+  },
+  corpSponsorTitle: {
+    id: "sponsors.donate_card.corporate_sponsor.title",
+    defaultMessage: "Corporate sponsorship",
+  },
+  corpSponsorCopy: {
+    id: "sponsors.donate_card.corporate_sponsor.copy",
+    defaultMessage:
+      "We welcome corporate sponsors! We’ll feature your company’s logo and a link to your website.",
+  },
+  corpSponsorButton: {
+    id: "sponsors.donate_card.corporate_sponsor.button",
+    defaultMessage: "Become a sponsor",
+  },
+  corpMatchTitle: {
+    id: "sponsors.donate_card.corporate_matching.title",
+    defaultMessage: "Corporate matching",
+  },
+  corpMatchCopy: {
+    id: "sponsors.donate_card.corporate_matching.copy",
+    defaultMessage:
+      "Does your company provide corporate matching? If so, you can use Benevity to donate!",
+  },
+  corpMatchButton: {
+    id: "sponsors.donate_card.corporate_matching.button",
+    defaultMessage: "Donate on Benevity",
+  },
+  logoAlt: {
+    id: "sponsors.donate_card.logo.alt",
+    defaultMessage: "{name} Logo",
+  },
+})
+
+const Emphasis = ({ children }) => <span className="font-bold">{children}</span>
+
 interface DonateCardProps {
-  title: React.ReactNode
-  titleClassName?: string
-  titleInnerClassName?: string
-  className?: string
-  copy: React.ReactNode
-  cta: React.ReactNode
-  ctaLink?: string
-  ctaLight?: boolean
-  isPopup?: boolean
+  title: string
+  imageSrc?: string
+  imageAlt?: string
+  copy: string
+  cta: string
+  ctaAction: string | "popup"
 }
 
 const DonateCard = ({
   title,
-  titleClassName = "",
-  titleInnerClassName = "",
-  className,
+  imageSrc,
+  imageAlt = "",
   copy,
   cta,
-  ctaLink,
-  ctaLight = false,
-  isPopup = false,
+  ctaAction,
 }: DonateCardProps) => (
-  <div
-    className={classNames(
-      "flex flex-col items-center text-center sm:items-start sm:text-left",
-      className
+  <Link href={ctaAction} className="bg-white flex flex-col items-center text-center p-4 py-8 rounded-xl border-2 border-white hover:border-blurple-500">
+    {imageSrc && (
+      <Image
+        src={imageSrc}
+        className="aspect-square"
+        width="40"
+        height="40"
+        alt={imageAlt}
+      />
     )}
-  >
-    <h3
-      className={classNames(
-        "h5 mb-5 flex flex-col max-sm:items-center md:items-start",
-        "after:block after:h-1 after:rounded-md after:w-32 after:mt-2 after:bg-blurple-500",
-        titleClassName
-      )}
-    >
-      <span className={titleInnerClassName}>{title}</span>
-    </h3>
-    <p className="b2 mb-8 text-gray-1 grow">{copy}</p>
-    {!!ctaLink && (
-      <LinkButton light={ctaLight} size="medium" href={ctaLink}>
-        {cta}
-      </LinkButton>
-    )}
-    {isPopup && (
-      <DonatePopup dark={!ctaLight} size="medium">
-        {cta}
-      </DonatePopup>
-    )}
-  </div>
+    <h3 className="text-b1 font-semibold mt-5 mb-2">{title}</h3>
+    <p className="b2 grow text-gray-1">{copy}</p>
+  </Link>
 )
 
-const Emphasis = ({ children }) => <span className="font-bold">{children}</span>
+const FAQ = ({ question, children }: { question: string; children: string }) => {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <div className="b1 border-b border-gray-3">
+      <button className="w-full py-4 font-bold cursor-pointer flex items-center justify-between gap-8" type="button" onClick={() => setOpen(x => !x)}>
+        <div className="text-start">{question}</div>
+        <DropdownArrowIcon className={`shrink-0 ${open && "rotate-180"}`} width={28} height={28} />
+      </button>
+
+      {open && (
+        <div className="pb-4">
+          {children}
+        </div>
+      )}
+    </div>
+  )
+}
 
 function Sponsors() {
   const intl = useIntl()
   return (
     <Layout previewImage={previewImage}>
-      <Hero>
-        <h1 className="h2 xl:mt-8 mb-5 lg:col-start-2">
-          <FormattedMessage
-            id="sponsors.hero.title"
-            defaultMessage="Reimagining online discourse"
-          />
-        </h1>
-        <p className="sh1 pb-20 lg:col-start-2 lg:col-end-6">
-          <FormattedMessage
-            id="sponsors.hero.body"
-            defaultMessage="We develop and maintain software for the decentralized social web. No billionaires or mega-corporations here — we rely entirely on your support."
-          />
-        </p>
-        <div className="flex gap-6">
-          <LinkButton size="large" href="#donate">
-            <FormattedMessage
-              id="sponsors.hero.cta.donate"
-              defaultMessage="Donate"
-            />
-          </LinkButton>
-          <LinkButton size="large" light borderless href="#supported_by">
-            <FormattedMessage
-              id="sponsors.hero.cta.view_sponsors"
-              defaultMessage="View our sponsors"
-            />
-          </LinkButton>
+      <Hero desktopImage={appsHeroDesktop} mobileImage={appsHeroMobile} homepage>
+        <div className="grid gap-x-gutter grid-cols-12">
+          <div className="col-span-7 text-start">
+            <h1 className="h1 mb-11">
+              Support a better social web, today
+            </h1>
+            <p className="sh1">
+              Since 2016, we're building social media that does what you want it to do instead of making you do what it wants. No billionaires, investors, or mega-corporations here—<Emphasis>we are a small team that relies entirely on your support.</Emphasis>
+            </p>
+          </div>
+          <div className="col-span-5">
+            <iframe
+              className="w-full h-[40rem] bg-white rounded-xl"
+              src="/donate"
+            ></iframe>
+          </div>
         </div>
       </Hero>
 
-      <div className="full-width-bg">
+      <section className="full-width-bg">
         <div className="full-width-bg__inner">
-          <section className="md:grid md:grid-cols-2 items-start md:gap-gutter lg:grid-cols-12 pb-16 lg:pb-20  lg:pt-8 xl:pt-0">
-            <div className="row-span-full lg:col-span-6 lg:col-start-1 xl:col-span-5 xl:col-start-2 mx-auto pb-6 px-16 max-w-md md:pb-0 md:px-8 md:pt-20 lg:pt-0 lg:pr-8 lg:pl-0">
-              <Image src={MastodonInTheCloudsIllustration} alt="" />
+          <section className="pt-14 pb-[4.5rem] grid items-center gap-x-gutter grid-cols-12">
+            <div className="row-span-full col-span-5 col-start-8 flex gap-10 items-center justify-center">
+              <Link className='flex' href='https://www.w3.org/' target='_blank'><NewImage src={w3c} alt="W3C Member" className="w-auto h-20" /></Link>
+              <Link className='flex gap-3 items-center text-end font-semibold' href='https://digitalpublicgoods.net/' target='_blank'><span>A Registered Digital<br />Public Good</span><NewImage src={dpga} alt="Digital Public Goods Alliance" className="w-auto h-20" /></Link>
             </div>
-            <div className="row-span-full lg:col-span-6 lg:col-start-7 xl:col-span-5">
-              <h2 className="h4 md:h3 mb-5">
-                <FormattedMessage
-                  id="sponsors.support_us.title"
-                  defaultMessage="Support us"
-                />
-              </h2>
-              <p className="sh1 text-gray-1 whitespace-pre-line">
-                <FormattedMessage
-                  id="sponsors.support_us.body"
-                  defaultMessage={`We’re rebuilding social media so everyone can build healthy communities locally, connect globally, and own their online presence.\n\nAs a nonprofit we lead development of Mastodon. We’re part of a vast network of organizations building on social web technology. Together, we’re retaking the digital town square for the people.\n\nHelp us build the social web for everyone.`}
-                />
+
+            <div className="row-span-full col-span-6 col-start-1">
+              <p className="b1 mb-4">
+                Using this money we:
               </p>
-            </div>
-          </section>
-        </div>
-      </div>
 
-      <div className="full-width-bg">
-        <div className="full-width-bg__inner">
-          <a id="donate" className="invisible block relative -top-32" />
-          <section className="md:grid md:items-center md:gap-gutter md:grid-cols-12 pb-8 lg:pb-12">
-            <div className="md:col-start-1 md:col-span-5 xl:col-start-2 xl:col-span-4">
-              <h2 className="h4 md:h3 mb-5">
-                <FormattedMessage
-                  id="sponsors.donate.title"
-                  defaultMessage="Donate today"
-                />
-              </h2>
-              <p className="sh1 text-gray-1 whitespace-pre-line">
-                <FormattedMessage
-                  id="sponsors.donate.body"
-                  defaultMessage={`All donations go directly to Mastodon's development and operation. Recurring donations help us plan for the long term.\n\nWe're forever grateful for every dollar we receive — Thank you!`}
-                />
-              </p>
-            </div>
+              <ul className="b1 mb-4 list-disc pl-5 space-y-2">
+                <li>Develop <Emphasis>open-source software</Emphasis> powering over 8,000 independent Mastodon servers&mdash;fixing bugs, patching security vulnerabilities, and delivering brand new features</li>
+                <li>Develop <Emphasis>free official apps</Emphasis> on iOS and Android, ensuring that our latest features are available on mobile</li>
+                <li>Provide a <Emphasis>free Mastodon service</Emphasis> at mastodon.social, so that there is always a trustworthy and safe place for new users to land</li>
+                <li>Provide multiple auxillery <Emphasis>services for the ecosystem</Emphasis>, supporting third-party Mastodon app developers, fediverse platform developers, and administrators</li>
+              </ul>
 
-            <div className="row-span-full md:col-start-6 md:col-span-6 mx-auto pt-8 md:pt-0 px-12 max-w-md md:pb-0 md:px-0">
-              <Image src={MastodonsCheeringIllustration} alt="" />
-            </div>
-          </section>
-        </div>
-      </div>
+              <p className="b1 mb-4">Want more details? We publish a report every year:</p>
 
-      <div className="full-width-bg">
-        <div className="full-width-bg__inner">
-          <div className="md:grid md:items-center md:gap-gutter md:grid-cols-12 pb-1">
-            <DonateTabs className="md:col-span-12 md:col-start-1 xl:col-span-10 xl:col-start-2" />
-          </div>
-          <div className="md:grid md:items-center md:gap-gutter md:grid-cols-12 pb-16">
-            <div className="md:col-span-12 md:col-start-1 xl:col-span-10 xl:col-start-2">
-              <div className="b4 mt-4 text-gray-2 italic pr-4 text-left md:text-right">
-                <FormattedMessage
-                  id="sponsors.donate.footer.donor_policy"
-                  defaultMessage={`To ensure you qualify to make a donation, please refer to our donor policies: <link_mastodon_inc>Mastodon, Inc</link_mastodon_inc> <middot></middot> <link_mastodon_ggmbh>Mastodon GmbH</link_mastodon_ggmbh>`}
-                  values={{
-                    link_mastodon_inc: (text) => (
-                      <Link
-                        className="hover:text-blurple-600 ml-0.5"
-                        href="/donor-policy/mastodon-inc"
-                        target="_blank"
-                      >
-                        {text}
-                      </Link>
-                    ),
-                    link_mastodon_ggmbh: (text) => (
-                      <Link
-                        className="hover:text-blurple-600"
-                        href="/donor-policy/mastodon-ggmbh"
-                        target="_blank"
-                      >
-                        {text}
-                      </Link>
-                    ),
-                    middot: () => <span className="px-0.5">&middot;</span>,
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="full-width-bg bg-gray-5">
-        <div className="full-width-bg__inner">
-          <section className="pt-14 pb-[4.5rem] md:grid md:items-center md:gap-gutter md:grid-cols-12">
-            <div className="row-span-full xl:col-span-4 xl:col-start-8 lg:col-span-5 lg:col-start-8 md:col-span-6 mx-auto pb-6 px-16 max-w-md md:max-w-none md:pb-0 md:px-8 md:col-start-7 lg:p-0">
-              <Image src={MastodonWithLaptopIllustration} alt="" />
-            </div>
-
-            <div className="row-span-full xl:col-span-5 xl:col-start-2 md:col-span-6 md:col-start-1">
-              <h2 className="h4 md:h3 mb-2 md:mb-5">
-                <FormattedMessage
-                  id="sponsors.how_we_use_donations.title"
-                  defaultMessage="How we use donations"
-                />
-              </h2>
-              <p className="sh1 mb-8 text-gray-1 whitespace-pre-line">
-                <FormattedMessage
-                  id="sponsors.how_we_use_donations.body"
-                  defaultMessage={`Donations go towards software development, paying essential contributors like web developers, mobile app developers, and designers. Your donations also support legal and marketing expenses to advocate for and raise awareness about the social web and Mastodon. Additionally, we operate the two largest Mastodon servers, maintained through financial and in-kind contributions.\n\nFor details, take a look at our latest annual report.`}
-                />
-              </p>
               <div className="flex gap-4 items-center">
                 <LinkButton
                   size="large"
@@ -233,61 +298,175 @@ function Sponsors() {
             </div>
           </section>
         </div>
-      </div>
+      </section>
 
-      <div className="full-width-bg ">
+      <section className="full-width-bg bg-gray-5 pt-20 pb-20">
         <div className="full-width-bg__inner">
-          <section className="pt-14 pb-16 md:grid md:items-center md:gap-gutter md:grid-cols-12">
-            <div className="row-span-full xl:col-span-4 xl:col-start-2 lg:col-span-5 md:col-span-6 md:col-start-1 mx-auto pb-6 px-16 max-w-md md:max-w-none md:pb-0 md:px-8 lg:p-0">
-              <Image src={MasotodonFediverseIllustration} alt="" />
-            </div>
+          <h2 className="h4 mb-10 text-center">
+            Other ways to give
+          </h2>
 
-            <div className="row-span-full xl:col-span-5 xl:col-start-7 md:col-span-6 md:col-start-7">
-              <h2 className="h4 md:h3 mb-2 md:mb-5">
-                <FormattedMessage
-                  id="sponsors.build_the_social_web.title"
-                  defaultMessage="Build the social web"
-                />
-              </h2>
-              <p className="sh1 mb-8 text-gray-1 whitespace-pre-line">
-                <FormattedMessage
-                  id="sponsors.build_the_social_web.body"
-                  defaultMessage={`We’re looking for developers to help build the future of online communities with Mastodon. There’s a lot to do — we need help with new features, scaling operations, improving documentation, and more — but the work doesn’t stop here. We contribute to the decentralized social media protocol underlying Mastodon, ActivityPub, and collaborate with the social web community that uses it.\n\nJoin the social web revolution!`}
-                />
-              </p>
-              <LinkButton
-                size="large"
-                href={
-                  "https://github.com/mastodon/.github/blob/main/CONTRIBUTING.md"
-                }
-              >
-                <FormattedMessage
-                  id="sponsors.cta.contribute_to_mastodon"
-                  defaultMessage="Contribute to Mastodon"
-                />
-              </LinkButton>
-            </div>
-          </section>
+          <div className="grid gap-4 grid-cols-3">
+            <DonateCard
+              title="Donate to our US non-profit"
+              copy={intl.formatMessage(cardMessages.giveButterCopy)}
+              cta={intl.formatMessage(cardMessages.giveButterButton)}
+              ctaAction="https://givebutter.com/nAk74p"
+              imageSrc={usFlagIcon}
+              imageAlt={intl.formatMessage(cardMessages.giveButterImageAlt)}
+            />
+            <DonateCard
+              title="Donate to our German non-profit"
+              copy={intl.formatMessage(cardMessages.weAidCopy)}
+              cta={intl.formatMessage(cardMessages.weAidButton)}
+              ctaAction="https://donate.stripe.com/14A4gAfACaLg76zfKB1ZS07"
+              imageSrc={deFlagIcon}
+              imageAlt={intl.formatMessage(cardMessages.weAidImageAlt)}
+            />
+            <DonateCard
+              title="Donate through Patreon"
+              copy="Unlock various perks by supporting us on Patreon, such as access to our development Discord server or having your name listed on this page."
+              cta={intl.formatMessage(cardMessages.patreonButton)}
+              ctaAction="https://www.patreon.com/mastodon"
+              imageSrc={patreonLogo}
+              imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+                name: "Patreon",
+              })}
+            />
+            <DonateCard
+              title="Donate through GitHub"
+              copy="Unlock a Mastodon badge on your GitHub personal or organization profile by donating to us through GitHub."
+              cta={intl.formatMessage(cardMessages.gitHubButton)}
+              ctaAction="https://github.com/sponsors/mastodon"
+              imageSrc={gitHubLogo}
+              imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+                name: "GitHub",
+              })}
+            />
+            <DonateCard
+              title={intl.formatMessage(cardMessages.corpSponsorTitle)}
+              copy="Want to see your company or organization's logo on this page, or the very front page of this website, and get a VAT invoice for it?"
+              cta={intl.formatMessage(cardMessages.corpSponsorButton)}
+              ctaAction="https://sponsor.joinmastodon.org/"
+              imageSrc={sponsorshipIcon}
+            />
+            <DonateCard
+              title={intl.formatMessage(cardMessages.corpMatchTitle)}
+              copy={intl.formatMessage(cardMessages.corpMatchCopy)}
+              cta={intl.formatMessage(cardMessages.corpMatchButton)}
+              ctaAction="https://causes.benevity.org/causes/276-5575947211653_d7e4"
+              imageSrc={benevityLogo}
+              imageAlt={intl.formatMessage(cardMessages.logoAlt, {
+                name: "Benevity",
+              })}
+            />
+          </div>
         </div>
-      </div>
+      </section>
 
-      <section className="platinum-gold-sponsors mb-32 pt-16">
-        <a id="supported_by" className="invisible block relative -top-32" />
-        <h2 className="h4 mb-10 text-center">
-          <FormattedMessage
-            id="sponsors.supported_by"
-            defaultMessage="Supported by"
+      <section className="full-width-bg py-16">
+        <div className="full-width-bg__inner">
+          <h2 className="h4 mb-10">
+            Where your donation goes
+          </h2>
+
+          <div className="grid grid-cols-12 gap-x-gutter">
+            <div className="col-span-6">
+              <div className="bg-nightshade-50 p-8 rounded-xl min-h-full">
+                <h3 className="h6 mb-4">Our budget allocation</h3>
+
+                <p className="b1 mb-10">In the spirit of transparency, we publish an annual report of what we spend money on every year.</p>
+
+                <div className="flex gap-8 items-center">
+                  <div className="w-[250px]">
+                    <Doughnut data={budgetAllocationData} options={{ plugins: { legend: { display: false } } }} />
+                  </div>
+
+                  <dl className="flex flex-col gap-4 b2">
+                    <div className="flex flex-col gap-2">
+                      <dt className="w-full flex items-center gap-2 font-bold"><div className="block w-4 h-4 rounded-full bg-blurple-300" /> Personnel<div className="flex-grow" />75%</dt>
+                      <dd>We pay a staff of full-time employees and contractors to work on Mastodon. Even though Mastodon is open-source, most of the contributions come from our team.</dd>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <dt className="w-full flex items-center gap-2 font-bold"><div className="block w-4 h-4 rounded-full bg-blurple-900" /> Technical hosting<div className="flex-grow" />10%</dt>
+                      <dd>We host a free Mastodon service at mastodon.social for more than 263K monthly users. We also host a bunch of services that serve the ecosystem.</dd>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <dt className="w-full flex items-center gap-2 font-bold"><div className="block w-4 h-4 rounded-full bg-blurple-600" /> Other<div className="flex-grow" />15%</dt>
+                      <dd>We sometimes have to pay for legal counsel or other administrative costs.</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-span-6">
+              <div className="bg-nightshade-50 p-8 rounded-xl min-h-full">
+                <h3 className="h6 mb-4">Compared to competitors</h3>
+
+                <p className="b1 mb-10">We accomplish what we do with a fraction of our competitors' resources* (* according to publicly available data).</p>
+
+                <div className="w-full">
+                  <Bar data={competitorComparisonData} options={{ indexAxis: 'y' as const, plugins: { legend: { display: false } } }} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="full-width-bg pb-16">
+        <div className="full-width-bg__inner">
+          <h2 className="h4 mb-10">
+            Still have questions?
+          </h2>
+
+          <div className="space-y-2 divide-solid">
+            <FAQ question="Are my donations tax-deductible?">
+              <p>This depends on your location and method of donation. If you are a US tax resident, you can donate to our US 501c3 to make a tax-deductible donation. If you are a German tax resident, you can donate through our fiscal sponsor WE AID gGmbH to make a tax-deductible donation. Tax exemptions vary according to the laws of each country. We strongly recommend that you contact a tax consultant in your country if you have any questions about tax exemptions or reductions.</p>
+            </FAQ>
+
+            <FAQ question="What is your donor policy?">
+              <p>TBD</p>
+            </FAQ>
+
+            <FAQ question="Can I donate to a specific activity only?">
+              <p>TBD</p>
+            </FAQ>
+
+            <FAQ question="Is Mastodon a non-profit?">
+              <p>TBD</p>
+            </FAQ>
+
+            <FAQ question="How does Mastodon make money?">
+              <p>TBD</p>
+            </FAQ>
+
+            <FAQ question="How can I update or cancel a recurring donation?">
+              <p>TBD</p>
+            </FAQ>
+          </div>
+        </div>
+      </section>
+
+      <section className="platinum-gold-sponsors full-width-bg bg-gray-5 mb-16 py-16">
+        <div className="full-width-bg__inner">
+          <a id="supported_by" className="invisible block relative -top-32" />
+          <h2 className="h4 mb-4 text-center">
+            With thanks to
+          </h2>
+          <p className="text-center b1 mb-10">These organizations are supporting Mastodon through our <Link className="text-blurple-600 hocus:underline" href="https://sponsor.joinmastodon.org/">corporate sponsorship</Link> option.</p>
+          <SponsorLogoGroup
+            sponsors={[...sponsorData.platinum, ...sponsorData.gold]}
           />
-        </h2>
-        <SponsorLogoGroup
-          sponsors={[...sponsorData.platinum, ...sponsorData.gold]}
-        />
+        </div>
       </section>
 
       <section className="silver-sponsors mb-32" id="sponsors">
-        <h2 className="h5 mb-8">
-          <FormattedMessage id="sponsors" defaultMessage="Sponsors" />
+        <h2 className="h4 mb-4 text-center">
+          And thanks to
         </h2>
+        <p className="text-center b1 mb-10">These people are supporting Mastodon through our <Link className="text-blurple-600 hocus:underline" href="https://www.patreon.com/mastodon">Patreon</Link> on the "Silver" tier.</p>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-gutter">
           {sponsorData.silver.map((sponsor, i) => {
             if (sponsor.url) {
@@ -317,12 +496,13 @@ function Sponsors() {
       </section>
 
       <section className="general-sponsors mb-96">
-        <h2 className="h5 mb-8">
+        <h2 className="h4 mb-4 text-center">
           <FormattedMessage
             id="sponsors.additional_thanks_to"
             defaultMessage="Additional thanks to"
           />
         </h2>
+        <p className="text-center b1 mb-10">These people are supporting Mastodon through our <Link className="text-blurple-600 hocus:underline" href="https://www.patreon.com/mastodon">Patreon</Link> on the "Sponsor" tier or above.</p>
         <div className="grid grid-cols-[repeat(auto-fill,minmax(11rem,1fr))] gap-1">
           {sponsors.generalHighlighted.map((sponsor) => {
             return (
@@ -343,13 +523,6 @@ function Sponsors() {
             )
           })}
         </div>
-
-        <p className="mt-8 text-gray-2 lg:mt-16">
-          <FormattedMessage
-            id="sponsors.sponsorship.statement"
-            defaultMessage="Sponsorship does not equal influence. Mastodon is fully independent."
-          />
-        </p>
       </section>
       <Head>
         <title>

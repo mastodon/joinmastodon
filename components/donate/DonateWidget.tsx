@@ -180,8 +180,8 @@ export function DonateWidget({
           >
             <CheckIcon
               className={classNames(
-                "fill-black w-auto h-4 transition-opacity",
-                frequency !== freq && "opacity-0 group-hover:opacity-100"
+                "fill-black w-auto h-4",
+                frequency !== freq && "opacity-0"
               )}
             />
             {intl.formatMessage(messages[freq])}
@@ -191,7 +191,7 @@ export function DonateWidget({
 
       <div className="flex focus-within:shadow-input rounded-md">
         <span className="relative">
-          <DropdownArrowIcon className="absolute left-0 top-[9px] fill-white pointer-events-none" />
+          <DropdownArrowIcon className="absolute left-0 top-[9px] fill-[white] pointer-events-none" />
           <Select
             className={classNames(
               "h-full p-2 pl-6 rounded-l-md outline-none transition-colors cursor-pointer disabled:cursor-default font-medium",

@@ -56,7 +56,6 @@ export default function DonatePage({
         defaultAmount={defaultAmount}
         defaultFrequency={defaultFrequency}
       />
-      <DonateFooter />
     </DonateWrapper>
   )
 }

@@ -213,16 +213,6 @@ const DonateCards: FC<{ plain?: boolean }> = ({ plain }) => {
         plain={plain}
       >
         <DonateCard
-          title={intl.formatMessage(cardMessages.stripeTitle)}
-          copy={intl.formatMessage(cardMessages.stripeCopy)}
-          cta={intl.formatMessage(cardMessages.stripeButton)}
-          ctaAction="popup"
-          imageSrc={stripeLogo}
-          imageAlt={intl.formatMessage(cardMessages.logoAlt, {
-            name: "Stripe",
-          })}
-        />
-        <DonateCard
           title={intl.formatMessage(cardMessages.patreonTitle)}
           copy={intl.formatMessage(cardMessages.patreonCopy)}
           cta={intl.formatMessage(cardMessages.patreonButton)}

@@ -14,7 +14,7 @@ const SponsorLogoGroup = ({ sponsors }) => {
             key={i}
             className={classnames(
               "group relative inline-flex items-center justify-center rounded px-4 py-3",
-              sponsor.light ? "bg-nightshade-900" : "bg-gray-5"
+              sponsor.light ? "bg-nightshade-900" : "bg-white"
             )}
             target="_blank"
             rel="noopener noreferrer"
