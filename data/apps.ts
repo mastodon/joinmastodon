@@ -365,6 +365,14 @@ export const apps: AppsList = {
       paid: false,
       open: false,
     },
+    {
+      released_on: "Nov 1, 2025",
+      name: "ZonePane",
+      icon: zonepane,
+      url: "https://apps.apple.com/jp/app/zonepane-mastodon-bluesky/id6747976082",
+      paid: false,
+      hidden_from_all: true,
+    },
   ],
   web: [
     {
