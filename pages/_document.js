@@ -18,8 +18,6 @@ class MyDocument extends Document {
         <body className="bg-white">
           <Main />
           <NextScript />
-          <script data-mode="hash" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-          <script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
         </body>
       </Html>
     )

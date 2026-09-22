@@ -8,6 +8,7 @@ function notIfProduction(param) {
 }
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   reactStrictMode: true,
   i18n: {
     locales: locales.map((l) => l.code),
@@ -60,21 +61,16 @@ const nextConfig: NextConfig = {
                   "proxy.joinmastodon.org",
                   "blob:",
                   "data:",
-                  "https://queue.simpleanalyticscdn.com",
-                  "https://simpleanalyticsbadges.com",
                 ],
                 "style-src": ["self", "unsafe-inline"],
                 "script-src": [
                   "self",
                   notIfProduction("unsafe-inline"),
                   notIfProduction("unsafe-eval"),
-                  "https://scripts.simpleanalyticscdn.com",
                 ],
                 "connect-src": [
                   "self",
                   "api.joinmastodon.org",
-                  "https://queue.simpleanalyticscdn.com",
-                  "https://scripts.simpleanalyticscdn.com",
                 ],
                 "block-all-mixed-content": [],
               }),
@@ -95,8 +91,6 @@ const nextConfig: NextConfig = {
                   "https://*.stripe.com",
                   "blob:",
                   "data:",
-                  "https://queue.simpleanalyticscdn.com",
-                  "https://simpleanalyticsbadges.com",
                 ],
                 "style-src": ["self", "unsafe-inline"],
                 "script-src": [
@@ -107,7 +101,6 @@ const nextConfig: NextConfig = {
                   "https://js.stripe.com",
                   "https://*.js.stripe.com",
                   "https://maps.googleapis.com",
-                  "https://scripts.simpleanalyticscdn.com",
                 ],
                 "block-all-mixed-content": [],
                 "frame-src": [
@@ -120,8 +113,6 @@ const nextConfig: NextConfig = {
                   "self",
                   "https://api.stripe.com",
                   "https://maps.googleapis.com",
-                  "https://queue.simpleanalyticscdn.com",
-                  "https://scripts.simpleanalyticscdn.com",
                 ],
               }),
             },
@@ -150,41 +141,28 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  webpack(config) {
-    // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find(
-      (rule) => rule.test && rule.test.test?.(".svg")
-    )
-
-    config.module.rules.push({
-      oneOf: [
-        // warning: do not specify `issuer` key here, it is broken with dynamic require
-        // see https://github.com/webpack/webpack/issues/9309
-        //     https://github.com/vercel/next.js/discussions/15437
-        {
-          test: /\.svg$/i,
-          resourceQuery: /inline/, // Only for *.svg?inline
-          use: [{ loader: "@svgr/webpack", options: { svgo: false } }],
+  turbopack: {
+    rules: {
+      '*.svg': {
+        condition: {
+          all: [
+            { query: /[?&]inline/ },
+          ],
         },
-
-        // we need to add this, as the previous rule disabled the default SVG loader
-        {
-          ...fileLoaderRule,
-          test: /\.svg$/i,
-          resourceQuery: { not: [/inline/] },
-        },
-      ],
-    })
-
-    // Modify the file loader rule to ignore *.svg, since we have it handled now.
-    fileLoaderRule.exclude = /\.svg$/i
-    return config
+        loaders: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              svgo: false,
+            },
+          }
+        ],
+        as: '*.js',
+      },
+    },
   },
   poweredByHeader: false,
   output: "standalone",
-  eslint: {
-    dirs: ["."], // Check all files in the project
-  },
 }
 
 function cspMapToString(map: Record<string, string[]>) {
