@@ -107,9 +107,9 @@ const sponsors = {
       name: "SoftOrbits",
     }, // Patreon
     {
-      url: "https://freecrash.game/",
-      logo: require("../public/sponsors/Free-Crash-Game.png"),
-      name: "Free Crash Game",
+      url: "https://plinko.free",
+      logo: require("../public/sponsors/plinko-free.png"),
+      name: "Plinko Free",
     }, // Custom
     {
       url: "https://spinthewheel.io",
