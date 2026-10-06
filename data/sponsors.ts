@@ -116,6 +116,11 @@ const sponsors = {
       logo: require("../public/sponsors/Spin the Wheel Cropped Thick.png"),
       name: "Spin the Wheel",
     }, // Custom
+    {
+      url: "https://youtube.4kdownload.com",
+      logo: require("../public/sponsors/video-downloader.png"),
+      name: "YouTube Downloader",
+    }, // Custom
   ] as Sponsor[],
   gold: [
     {
