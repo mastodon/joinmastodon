@@ -502,9 +502,13 @@ const About = () => (
                     <dt className="font-bold">Anschrift:</dt>
                     <dd>
                       <address className="not-italic">
-                        Mühlenstraße 8a
+                        Mastodon GmbH
                         <br />
-                        14167 Berlin
+                        c/o Blitzstart Services GmbH
+                        <br />
+                        Neue Mainzer Straße 20
+                        <br />
+                        60311 Frankfurt am Main
                         <br />
                         Germany
                       </address>
