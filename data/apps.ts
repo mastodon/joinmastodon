@@ -60,6 +60,8 @@ import fursona from "../public/apps/fursona.png"
 import mastui from "../public/apps/mastui.png"
 import tootcli from "../public/apps/tootcli.png"
 import mastodonel from "../public/apps/mastodonel.png"
+import snowdrop_android from "../public/apps/snowdrop_android.png"
+import snowdrop_ios from "../public/apps/snowdrop_ios.png"
 
 import { z } from "zod"
 
@@ -204,6 +206,13 @@ export const apps: AppsList = {
       url: "https://play.google.com/store/apps/details?id=com.zhangke.fread",
       paid: false,
       open: false,
+    },
+    {
+      name: "Snowdrop",
+      icon: snowdrop_android,
+      url: "https://github.com/ihateblueb/snowdrop/releases",
+      open: true,
+      source_url: "https://github.com/ihateblueb/snowdrop",
     },
   ],
   ios: [
@@ -364,6 +373,14 @@ export const apps: AppsList = {
       url: "https://apps.apple.com/us/app/fursona-furry-social-app/id6754586637",
       paid: false,
       open: false,
+    },
+    {
+      name: "Snowdrop",
+      icon: snowdrop_ios,
+      url: "https://testflight.apple.com/join/2KngGNBu",
+      open: true,
+      source_url: "https://github.com/ihateblueb/snowdrop",
+      hidden_from_all: true,
     },
   ],
   web: [
