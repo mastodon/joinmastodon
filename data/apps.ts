@@ -60,6 +60,7 @@ import fursona from "../public/apps/fursona.png"
 import mastui from "../public/apps/mastui.png"
 import tootcli from "../public/apps/tootcli.png"
 import mastodonel from "../public/apps/mastodonel.png"
+import neon from "../public/apps/neon.png"
 
 import { z } from "zod"
 
@@ -205,6 +206,15 @@ export const apps: AppsList = {
       paid: false,
       open: false,
     },
+    {
+      released_on: "Jul 28, 2026",
+      name: "Neon ",
+      icon: neon,
+      url: "https://play.google.com/store/apps/details?id=com.gigapingu.neon",
+      open: true,
+      paid: false,
+      source_url: "https://github.com/grycmat/neon",
+    }
   ],
   ios: [
     {
