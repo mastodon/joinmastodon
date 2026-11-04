@@ -59,6 +59,14 @@ const team: TeamMember[] = [
   },
 
   {
+    name: "Emily Omier",
+    position: "Interim Commercial Director",
+    socials: {
+      mastodon: "https://mastodon.social/@emilyomier",
+    },
+  },
+
+  {
     name: "Eugen Rochko",
     position: "Executive Strategy & Product Advisor",
     socials: {
