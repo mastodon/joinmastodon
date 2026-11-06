@@ -2460,15 +2460,15 @@ __metadata:
   linkType: hard
 
 "@stripe/react-stripe-js@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "@stripe/react-stripe-js@npm:3.10.0"
+  version: 3.11.0
+  resolution: "@stripe/react-stripe-js@npm:3.11.0"
   dependencies:
     prop-types: "npm:^15.7.2"
   peerDependencies:
     "@stripe/stripe-js": ">=1.44.1 <8.0.0"
     react: ">=16.8.0 <20.0.0"
     react-dom: ">=16.8.0 <20.0.0"
-  checksum: 10c0/d7629436629571883e1ab44b1fdbdd5bc002c9020400bbad212caccddad5eaedefbdb171e970bd34276b72d9c23deac86d1e0898db11961de2a7e8951bf9711a
+  checksum: 10c0/003feeb0fbbecdcbceacf0ef104831303376d99f49c79f776e48ae31b1e61f6a353f14f7a066b06562634509efe0cfd42b9fc8d5f43cad5148482976d2203b39
   languageName: node
   linkType: hard
 
