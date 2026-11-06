@@ -2459,16 +2459,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stripe/react-stripe-js@npm:^3.10.0":
-  version: 3.10.0
-  resolution: "@stripe/react-stripe-js@npm:3.10.0"
+"@stripe/react-stripe-js@npm:^7.0.0":
+  version: 7.0.1
+  resolution: "@stripe/react-stripe-js@npm:7.0.1"
   dependencies:
     prop-types: "npm:^15.7.2"
   peerDependencies:
-    "@stripe/stripe-js": ">=1.44.1 <8.0.0"
+    "@stripe/stripe-js": ">=10.0.0 <11.0.0"
     react: ">=16.8.0 <20.0.0"
     react-dom: ">=16.8.0 <20.0.0"
-  checksum: 10c0/d7629436629571883e1ab44b1fdbdd5bc002c9020400bbad212caccddad5eaedefbdb171e970bd34276b72d9c23deac86d1e0898db11961de2a7e8951bf9711a
+  checksum: 10c0/27f95f489793b4968ed1e1dc775afad05f85a978c2b0c71093d3d6b48080c504ed7f138af7bd8c506f2de4e7baa4a6b46aad534910e43f39ab1f5964487d391f
   languageName: node
   linkType: hard
 
@@ -5595,7 +5595,7 @@ __metadata:
     "@eslint/eslintrc": "npm:^3.3.6"
     "@formatjs/cli": "npm:^6.16.16"
     "@headlessui/react": "npm:^2.2.10"
-    "@stripe/react-stripe-js": "npm:^3.10.0"
+    "@stripe/react-stripe-js": "npm:^7.0.0"
     "@stripe/stripe-js": "npm:^7.9.0"
     "@svgr/webpack": "npm:^8.1.0"
     "@tanstack/react-query": "npm:^5.101.4"
