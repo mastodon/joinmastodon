@@ -15,6 +15,7 @@ import bitlbee from "../public/apps/bitlbee.png"
 import icecubes from "../public/apps/icecubes.png"
 import elk from "../public/apps/elk.png"
 import buffer from "../public/apps/buffer.png"
+import octopost from "../public/apps/octopost.png"
 import ivory from "../public/apps/ivory.png"
 import statuzer from "../public/apps/statuzer.png"
 import woolly from "../public/apps/woolly.png"
@@ -389,6 +390,13 @@ export const apps: AppsList = {
       open: false,
     },
     { name: "Fedica", icon: fedica, url: "https://fedica.com", open: false },
+    {
+      name: "Octopost",
+      icon: octopost,
+      url: "https://octopost.ink/?ref=joinmastodon",
+      paid: true,
+      open: false,
+    },
     {
       name: "Phanpy",
       icon: phanpy,
