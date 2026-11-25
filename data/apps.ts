@@ -58,6 +58,7 @@ import fread from "../public/apps/fread.png"
 import nicolium from "../public/apps/nicolium.png"
 import fursona from "../public/apps/fursona.png"
 import mastui from "../public/apps/mastui.png"
+import skyscraper from "../public/apps/skyscraper.png"
 import tootcli from "../public/apps/tootcli.png"
 import mastodonel from "../public/apps/mastodonel.png"
 
@@ -365,6 +366,14 @@ export const apps: AppsList = {
       paid: false,
       open: false,
     },
+    {
+      released_on: "Oct 31, 2026",
+      name: "Skyscraper Social",
+      icon: skyscraper,
+      url: "https://apps.apple.com/app/id6754198379",
+      paid: true,
+      open: false,
+    },
   ],
   web: [
     {
@@ -533,6 +542,15 @@ export const apps: AppsList = {
       icon: ivory,
       url: "https://apps.apple.com/app/ivory-for-mastodon-by-tapbots/id6444602274",
       paid: true,
+      hidden_from_all: true,
+    },
+    {
+      released_on: "Oct 31, 2026",
+      name: "Skyscraper Social",
+      icon: skyscraper,
+      url: "https://apps.apple.com/app/id6754198379",
+      paid: true,
+      open: false,
       hidden_from_all: true,
     },
     {
