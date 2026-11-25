@@ -84,7 +84,7 @@ const messages = defineMessages({
   },
 })
 
-export const SalesScheduleLink = "https://tally.so/r/woJ2EX"
+export const SalesScheduleLink = "https://joinmastodon.notion.site/d2e357a8aebc4d1bbebd54143d9e4410?pvs=105"
 
 type MessageOrString = string | MessageDescriptor
 type SVGComponent = (props: SVGProps<SVGSVGElement>) => ReactElement
