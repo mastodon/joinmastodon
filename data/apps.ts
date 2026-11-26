@@ -60,6 +60,7 @@ import fursona from "../public/apps/fursona.png"
 import mastui from "../public/apps/mastui.png"
 import tootcli from "../public/apps/tootcli.png"
 import mastodonel from "../public/apps/mastodonel.png"
+import schedchie from "../public/apps/schedchie.png"
 
 import { z } from "zod"
 
@@ -389,6 +390,13 @@ export const apps: AppsList = {
       open: false,
     },
     { name: "Fedica", icon: fedica, url: "https://fedica.com", open: false },
+    {
+      name: "Schedchie",
+      icon: schedchie,
+      url: "https://www.schedchie.com",
+      paid: true,
+      open: false,
+    },
     {
       name: "Phanpy",
       icon: phanpy,
