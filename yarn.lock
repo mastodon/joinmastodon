@@ -2473,9 +2473,9 @@ __metadata:
   linkType: hard
 
 "@stripe/stripe-js@npm:^7.9.0":
-  version: 7.9.0
-  resolution: "@stripe/stripe-js@npm:7.9.0"
-  checksum: 10c0/ca7dd386df944ed05be115422dde9f5a2b04846e508f482d996db273d95bf8ac8ab5078e58480534b8bc6e29c26c67e16c7e75e478c3112813f971ec6aba49f8
+  version: 7.10.0
+  resolution: "@stripe/stripe-js@npm:7.10.0"
+  checksum: 10c0/b14614393917ddf84ef780b1f4193aeedbc9c3553b2306d53ece932cc5d59ff4f198c1a07f486400695ca40ef19b23cf607d920993a978e84556e5cb2840a6e4
   languageName: node
   linkType: hard
 
