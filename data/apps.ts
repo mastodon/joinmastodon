@@ -22,6 +22,7 @@ import tuba from "../public/apps/tuba.png"
 import dawn from "../public/apps/dawn.png"
 import mona from "../public/apps/mona.png"
 import fedica from "../public/apps/fedica.png"
+import influence from "../public/apps/influence.png"
 import feather from "../public/apps/feather.png"
 import focus from "../public/apps/focus.png"
 import radiant from "../public/apps/radiant.png"
@@ -367,6 +368,13 @@ export const apps: AppsList = {
     },
   ],
   web: [
+    {
+      name: "Influence",
+      icon: influence,
+      url: "https://influence.so",
+      paid: true,
+      open: false,
+    },
     {
       name: "Pinafore",
       icon: pinafore,
